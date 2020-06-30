@@ -27,10 +27,6 @@ module.exports = {
     "format-message": {
       source: "src/format-message.js",
       format: "cjs"
-    },
-    "eo-locale-core": {
-      source: "src/eo-locale-core.js",
-      format: "cjs"
     }
   },
   rollup(crafty, bundle, rollupConfig) {

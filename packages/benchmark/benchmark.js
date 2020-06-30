@@ -86,9 +86,6 @@ register("format-message-parse", require("./dist/js/format-message.min.js"));
 register("intl-messageformat", require("./dist/js/intl-messageformat.min.js"));
 register("messageformat", require("./dist/js/messageformat.min.js"));
 
-// Can't parse test messages, excluded from benchmark
-//register("@eo-locale/core", require("./dist/js/eo-locale-core.min.js"));
-
 runAll("String", instances, string_msg);
 runAll("Message with one variable", instances, simple_msg);
 runAll("Let's get more creative", instances, normal_msg);

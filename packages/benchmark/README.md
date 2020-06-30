@@ -15,7 +15,6 @@ Sources can be found in `src`, measure taken on 25/06/2020 With latest available
 
 | Npm Package             | Version | Size   | Size w/o formatters | Comment                                                 |
 | ----------------------- | ------- | ------ | ------------------- | ------------------------------------------------------- |
-| @eo-locale/core         | 1.3.9   | 4.17K  | 4.17K               | Can't parse the test messages, excluded from benchmark. |
 | @onigoetz/messageformat | 0.1.0   | 6.78K  | 3.79K               |                                                         |
 | @ffz/icu-msgparser      | 1.0.2   | 8.79K  | 6.5K                |                                                         |
 | format-message-parse    | 6.2.3   | 20.02K | 7.67K               | Uses peg.js                                             |
@@ -29,6 +28,9 @@ since it provided no renderer by default, I put an early version of `@onigoetz/m
 The Size w/o formatters column counts only the parser and renderer, without any plural generator or date/number formatter
 I added this number as a comparison if you want to use `@onigoetz/messageformat` only for variable subsitution.
 Or if in your application you already have formatters for dates/numbers and plurals or just want to use the `Intl` implementation those come at virtually no cost.
+
+> Special mention for `@eo-locale/core` Which provides a very small package, 
+> however it provides no package that runs on Node.js 10 and crashes on our test strings.
 
 ## Benchmark
 
