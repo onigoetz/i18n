@@ -1,5 +1,18 @@
 {
   "extends": [
     "config:base"
+  ],
+  "schedule": "before 11pm on Monday",
+  "packageRules": [
+    {
+      "groupName": "@types",
+      "packagePatterns": [
+        "@types/*"
+      ],
+      "rangeStrategy": "update-lockfile"
+    }
+  ],
+  "ignoreDeps": [
+    "lerna"
   ]
 }
