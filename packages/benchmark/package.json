@@ -1,0 +1,28 @@
+{
+  "name": "@onigoetz/messageformat-benchmark",
+  "private": true,
+  "version": "0.1.0",
+  "devDependencies": {
+    "@eo-locale/core": "^1.2.1",
+    "@ffz/icu-msgparser": "^1.0.2",
+    "@onigoetz/make-plural": "0.1.0",
+    "@onigoetz/messageformat": "0.1.0",
+    "@phensley/messageformat": "^1.0.0",
+    "@phensley/plurals": "^1.0.0",
+    "@swissquote/crafty": "1.11.1",
+    "@swissquote/crafty-preset-babel": "1.11.1",
+    "@swissquote/crafty-runner-rollup": "1.11.1",
+    "benchmark": "^2.1.4",
+    "format-message-interpret": "^6.2.3",
+    "format-message-parse": "^6.2.3",
+    "intl-messageformat": "^8.3.4",
+    "intl-messageformat-parser": "^5.1.4",
+    "messageformat": "^2.3.0",
+    "speedscope": "^1.5.3"
+  },
+  "scripts": {
+    "lint": "crafty jsLint --fix src/*.js src/**/*.js",
+    "build": "crafty run",
+    "benchmark": "node benchmark.js"
+  }
+}
