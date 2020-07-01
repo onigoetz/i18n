@@ -1,5 +1,5 @@
 {
-  "name": "@onigoetz/messageformat-parent",
+  "name": "@onigoetz/i18n-parent",
   "version": "0.1.0",
   "private": true,
   "workspaces": {
@@ -10,6 +10,9 @@
   "scripts": {
     "build": "rm -rf packages/*/dist && oao run-script build --tree",
     "test": "oao run-script test",
+    "test:ci": "oao run-script test:ci",
+    "lint": "oao run-script lint",
+    "lint:ci": "oao run-script lint:ci",
     "deploy": "node deploy.js"
   },
   "dependencies": {

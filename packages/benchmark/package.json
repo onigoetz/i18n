@@ -21,6 +21,7 @@
   },
   "scripts": {
     "lint": "crafty jsLint --fix src/*.js src/**/*.js",
+    "lint:ci": "crafty jsLint src/*.js src/**/*.js",
     "build": "crafty run",
     "benchmark": "node benchmark.js"
   }
