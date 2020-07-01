@@ -1,13 +1,13 @@
 import * as plurals from "test-cldr-data/supplemental_plurals.json";
 import makePlural from "./index";
 
-const cardinal_en = {
+const enCardinal = {
   "pluralRule-count-one": "i = 1 and v = 0 @integer 1",
   "pluralRule-count-other":
     " @integer 0, 2~16, 100, 1000, 10000, 100000, 1000000, … @decimal 0.0~1.5, 10.0, 100.0, 1000.0, 10000.0, 100000.0, 1000000.0, …"
 };
 
-const ordinal_en = {
+const enOrdinal = {
   "pluralRule-count-one":
     "n % 10 = 1 and n % 100 != 11 @integer 1, 21, 31, 41, 51, 61, 71, 81, 101, 1001, …",
   "pluralRule-count-two":
@@ -18,13 +18,10 @@ const ordinal_en = {
     " @integer 0, 4~18, 100, 1000, 10000, 100000, 1000000, …"
 };
 
-const ordinal_reduced_en = {
-  "pluralRule-count-one":
-    "n % 10 = 1 and n % 100 != 11",
-  "pluralRule-count-two":
-    "n % 10 = 2 and n % 100 != 12",
-  "pluralRule-count-few":
-    "n % 10 = 3 and n % 100 != 13"
+const enOrdinalReduced = {
+  "pluralRule-count-one": "n % 10 = 1 and n % 100 != 11",
+  "pluralRule-count-two": "n % 10 = 2 and n % 100 != 12",
+  "pluralRule-count-few": "n % 10 = 3 and n % 100 != 13"
 };
 
 it("Answer with 'other' in case of no data", () => {
@@ -38,7 +35,7 @@ it("Answer with 'other' in case of no data", () => {
 });
 
 it("EN Cardinal Plurals", () => {
-  const m = makePlural(cardinal_en);
+  const m = makePlural(enCardinal);
 
   expect(m(1)).toEqual("one");
   expect(m(2)).toEqual("other");
@@ -46,7 +43,7 @@ it("EN Cardinal Plurals", () => {
 });
 
 it("EN Ordinal Plurals", () => {
-  const m = makePlural(ordinal_en);
+  const m = makePlural(enOrdinal);
 
   expect(m(1)).toEqual("one");
   expect(m(21)).toEqual("one");
@@ -56,7 +53,7 @@ it("EN Ordinal Plurals", () => {
 });
 
 it("EN Ordinal Plurals, Reduced CLDR data", () => {
-  const m = makePlural(ordinal_reduced_en);
+  const m = makePlural(enOrdinalReduced);
 
   expect(m(1)).toEqual("one");
   expect(m(21)).toEqual("one");
@@ -121,8 +118,7 @@ it("IS Cardinal Plurals", () => {
   expect(m(100)).toEqual("other");
 });
 
-
-it ("FIL Cardinal Plurals", () => {
+it("FIL Cardinal Plurals", () => {
   const m = makePlural(plurals.supplemental["plurals-type-cardinal"].fil);
 
   expect(m(0)).toEqual("one");
