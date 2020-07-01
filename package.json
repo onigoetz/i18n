@@ -8,11 +8,11 @@
     ]
   },
   "scripts": {
-    "build": "rm -rf packages/*/dist && lerna run build",
-    "test": "lerna run test",
+    "build": "rm -rf packages/*/dist && oao run-script build --tree",
+    "test": "oao run-script test",
     "deploy": "node deploy.js"
   },
   "dependencies": {
-    "lerna": "2.11.0"
+    "oao": "^1.10.0"
   }
 }
