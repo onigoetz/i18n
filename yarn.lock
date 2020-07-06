@@ -5578,7 +5578,7 @@ nwsapi@^2.2.0:
   resolved "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.2.0.tgz#204879a9e3d068ff2a55139c2c772780681a38b7"
   integrity sha512-h2AatdwYH+JHiZpv7pt/gSX1XoRGb7L/qSIeuqA6GwYoF9w1vP1cw42TO0aI2pNyshRK5893hNSl+1//vHK7hQ==
 
-oao@^1.10.0:
+oao@1.10.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/oao/-/oao-1.10.0.tgz#184d8f43a8ca5f35a5047c69959514b145813b31"
   integrity sha512-n+gIWTYklFmYJZIXWfmDFatMza4C6VJGmnW6zB4nJtlJJFG6dNbRzSCC7ITdq65KZIuszPv/YeOgzBBe2dUcCw==

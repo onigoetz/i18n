@@ -16,6 +16,6 @@
     "deploy": "node deploy.js"
   },
   "dependencies": {
-    "oao": "^1.10.0"
+    "oao": "1.10.0"
   }
 }
