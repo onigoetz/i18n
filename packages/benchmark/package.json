@@ -15,7 +15,7 @@
     "format-message-interpret": "6.2.3",
     "format-message-parse": "6.2.3",
     "intl-messageformat": "8.3.26",
-    "intl-messageformat-parser": "5.1.6",
+    "intl-messageformat-parser": "5.2.4",
     "messageformat": "2.3.0",
     "speedscope": "1.6.0"
   },

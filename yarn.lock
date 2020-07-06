@@ -1041,10 +1041,24 @@
   dependencies:
     "@formatjs/intl-utils" "^3.4.1"
 
+"@formatjs/intl-numberformat@^5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-numberformat/-/intl-numberformat-5.0.2.tgz#c99c48300ba1c97ce3b3babee1896411bd99a05f"
+  integrity sha512-Mok7ZcEkm0ShfIPQLykPMWDDa6zuWiVflp6yfsMF2IorilEZx0dzl7/5x4fhs2XN1fOpss54H9MtlyPpcW1VXw==
+  dependencies:
+    "@formatjs/intl-utils" "^3.6.0"
+
 "@formatjs/intl-utils@^3.4.1":
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/@formatjs/intl-utils/-/intl-utils-3.4.1.tgz#705646e3be11e5851c33c44448dc3d828997ac41"
   integrity sha512-4rdSTl+ki74ncP0GsdqoKczVWHZQKAemW9YRkhbvpcJrAFDLSEMIagQ+YPy+25plyLfgE/iOYManLdpdUF2IcA==
+  dependencies:
+    emojis-list "^3.0.0"
+
+"@formatjs/intl-utils@^3.6.0":
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-utils/-/intl-utils-3.6.0.tgz#25c11a099c01ac9b7b904dda84cb840417893fa3"
+  integrity sha512-KojfGYH3b0HbyN8H+HRHxEYOctC9tOne8jU1MNw7O+g8QyIPK9y0y1cyXlj6FoLsHRi26u9jR1CJg5XrRfArug==
   dependencies:
     emojis-list "^3.0.0"
 
@@ -4142,7 +4156,14 @@ intl-format-cache@^4.2.41:
   resolved "https://registry.yarnpkg.com/intl-format-cache/-/intl-format-cache-4.2.41.tgz#a8bc569bba9802714236a271c8cc8a25519967ea"
   integrity sha512-iWArZcbzMmHJCrRUNMq+3HxysFTpzq5rUuNNnzCwN4uMzlKV+xbZmqrDy2Lovnq0IyeoztpXiufU8l1Ywq2zSQ==
 
-intl-messageformat-parser@5.1.6, intl-messageformat-parser@^5.1.6:
+intl-messageformat-parser@5.2.4:
+  version "5.2.4"
+  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-5.2.4.tgz#d1a002c498f6f7f27cd9d309d2353e866875e0fa"
+  integrity sha512-vwuG+rYawjr73UFD60x1coJaU0u0cWEHT8s2XhfYqxQv7cJEj7CIZhCZLldzjUO2IKZgWkvOOP6krSfMTJBuRA==
+  dependencies:
+    "@formatjs/intl-numberformat" "^5.0.2"
+
+intl-messageformat-parser@^5.1.6:
   version "5.1.6"
   resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-5.1.6.tgz#0c63c1828e3ea09344420d882daeb4e3c53f45e0"
   integrity sha512-gGbR2GbaQt7L9+edO/zL5CUmnBOnkTn8AT+mujxo05h7ofNChcN8DLAMynVOLehgtU40Ycrj+SrGTYetXWrYAw==
