@@ -9,7 +9,7 @@
     "@phensley/messageformat": "1.2.1",
     "@phensley/plurals": "1.2.1",
     "@swissquote/crafty": "1.11.1",
-    "@swissquote/crafty-preset-babel": "1.11.1",
+    "@swissquote/crafty-preset-babel": "1.12.0",
     "@swissquote/crafty-runner-rollup": "1.11.1",
     "benchmark": "2.1.4",
     "format-message-interpret": "6.2.3",
