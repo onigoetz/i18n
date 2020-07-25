@@ -1,0 +1,21 @@
+{
+  "exclude": [
+    "node_modules",
+    "node",
+    "css",
+    "etc"
+  ],
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "dist",
+    "moduleResolution": "node",
+    "charset": "UTF-8",
+    "jsx": "react",
+    "module": "esnext", // Using an ES6 module with an ES5 target allows to leverage tree shaking
+    "sourceMap": true,
+    "target": "es5",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["dom", "es2017", "dom.iterable", "scripthost"]
+  }
+}

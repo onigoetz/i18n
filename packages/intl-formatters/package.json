@@ -1,0 +1,24 @@
+{
+  "name": "@onigoetz/intl-formatters",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "./dist/cjs.min.js",
+  "module": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "sideEffects": false,
+  "devDependencies": {
+    "@onigoetz/i18n-types": "0.1.0",
+    "@swissquote/crafty": "1.11.1",
+    "@swissquote/crafty-preset-jest": "1.11.1",
+    "@swissquote/crafty-preset-typescript": "1.11.1",
+    "@swissquote/crafty-runner-gulp": "1.11.1",
+    "@swissquote/crafty-runner-rollup": "1.11.1",
+    "@types/jest": "^26.0.3"
+  },
+  "scripts": {
+    "build": "crafty run",
+    "watch": "crafty watch",
+    "lint": "crafty jsLint --fix src/*.ts src/**/*.ts",
+    "lint:ci": "crafty jsLint src/*.ts src/**/*.ts"
+  }
+}

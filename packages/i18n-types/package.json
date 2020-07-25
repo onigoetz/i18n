@@ -1,0 +1,17 @@
+{
+  "name": "@onigoetz/i18n-types",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "devDependencies": {
+    "@swissquote/crafty": "1.11.1",
+    "@swissquote/crafty-preset-typescript": "1.11.1",
+    "@swissquote/crafty-runner-gulp": "1.11.1"
+  },
+  "scripts": {
+    "build": "crafty run",
+    "lint": "crafty jsLint --fix *.ts",
+    "lint:ci": "crafty jsLint *.ts"
+  }
+}
