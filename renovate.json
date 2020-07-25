@@ -12,8 +12,5 @@
       ],
       "rangeStrategy": "update-lockfile"
     }
-  ],
-  "ignoreDeps": [
-    "lerna"
   ]
 }
