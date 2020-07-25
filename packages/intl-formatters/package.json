@@ -8,11 +8,11 @@
   "sideEffects": false,
   "devDependencies": {
     "@onigoetz/i18n-types": "0.1.0",
-    "@swissquote/crafty": "1.11.1",
-    "@swissquote/crafty-preset-jest": "1.11.1",
-    "@swissquote/crafty-preset-typescript": "1.11.1",
-    "@swissquote/crafty-runner-gulp": "1.11.1",
-    "@swissquote/crafty-runner-rollup": "1.11.1",
+    "@swissquote/crafty": "1.12.0",
+    "@swissquote/crafty-preset-jest": "1.12.0",
+    "@swissquote/crafty-preset-typescript": "1.12.0",
+    "@swissquote/crafty-runner-gulp": "1.12.0",
+    "@swissquote/crafty-runner-rollup": "1.12.0",
     "@types/jest": "^26.0.3"
   },
   "scripts": {

@@ -14,8 +14,8 @@
     "benchmark": "2.1.4",
     "format-message-interpret": "6.2.3",
     "format-message-parse": "6.2.3",
-    "intl-messageformat": "9.1.5",
-    "intl-messageformat-parser": "5.3.5",
+    "intl-messageformat": "9.1.7",
+    "intl-messageformat-parser": "5.3.7",
     "messageformat": "2.3.0",
     "speedscope": "1.8.0"
   },

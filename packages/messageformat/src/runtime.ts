@@ -24,7 +24,7 @@ export interface DateFormatterOptions {
   datetime?: "full" | "long" | "medium" | "short";
 }
 
-type Variables = {} | [];
+type Variables = Record<string, any> | [];
 
 const validDateOptions = {
   full: "full",
