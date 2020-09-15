@@ -1,12 +1,13 @@
 import { parse, createRenderer } from "@onigoetz/messageformat";
 
-import { dateFormatter, numberFormatter, currencyFormatter, pluralGenerator } from "./index";
+import { dateFormatter, numberFormatter, pluralGenerator } from "./index";
 
 function getRenderer<T extends string>(locale: T) {
   return createRenderer(
     locale,
     (locale: T, type) => pluralGenerator(locale, { type }),
-    (locale: T, options, value: number) => numberFormatter(locale, options)(value),
+    (locale: T, options, value: number) =>
+      numberFormatter(locale, options)(value),
     (locale: T, options, value: Date) => dateFormatter(locale, options)(value)
   );
 }
@@ -32,18 +33,14 @@ describe("parse()", () => {
   });
 
   it("parses vars with number and format", () => {
-    expect(render(parse("{test, number}"), { test: 24.5 })).toEqual(
-      "24.5"
-    );
+    expect(render(parse("{test, number}"), { test: 24.5 })).toEqual("24.5");
     expect(
       render(parse("{ test,    number, percent }"), { test: 0.5 })
     ).toEqual("50%");
   });
 
   it("renders vars with date and format", () => {
-    expect(render(parse("{test, date}"), { test: date })).toEqual(
-      "12/24/1989"
-    );
+    expect(render(parse("{test, date}"), { test: date })).toEqual("12/24/1989");
     expect(render(parse("{test, date, short}"), { test: date })).toEqual(
       "12/24/1989"
     );
@@ -59,9 +56,7 @@ describe("parse()", () => {
   });
 
   it("renders vars with time and format", () => {
-    expect(render(parse("{test, time}"), { test: date })).toEqual(
-      "04:52 AM"
-    );
+    expect(render(parse("{test, time}"), { test: date })).toEqual("04:52 AM");
     expect(render(parse("{test, time, short}"), { test: date })).toEqual(
       "04:52 AM"
     );

@@ -64,53 +64,53 @@ it("Formats number", () => {
   //expect(numberFormatter("zh-u-nu-native")(pi)).toEqual( "三.一四二");
   expect(numberFormatter("en")(99999999.99)).toEqual("99,999,999.99");
   expect(numberFormatter("en")(NaN)).toEqual("0");
-  expect(numberFormatter("en", {round: "round"})(NaN)).toEqual("0");
+  expect(numberFormatter("en", { round: "round" })(NaN)).toEqual("0");
 
   expect(
     numberFormatter("en", {
       minimumIntegerDigits: 2,
       minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
+      maximumFractionDigits: 2
     })(pi)
   ).toEqual("03.14");
 
   expect(
     numberFormatter("en", {
-      maximumFractionDigits: 0,
+      maximumFractionDigits: 0
     })(pi)
   ).toEqual("3");
 
   expect(
     numberFormatter("en", {
-      minimumFractionDigits: 3,
+      minimumFractionDigits: 3
     })(1.1)
   ).toEqual("1.100");
 
   expect(
     numberFormatter("en", {
       minimumSignificantDigits: 1,
-      maximumSignificantDigits: 3,
+      maximumSignificantDigits: 3
     })(pi)
   ).toEqual("3.14");
 
   expect(
     numberFormatter("en", {
       minimumSignificantDigits: 1,
-      maximumSignificantDigits: 3,
+      maximumSignificantDigits: 3
     })(12345)
   ).toEqual("12,300");
 
   expect(
     numberFormatter("en", {
       minimumSignificantDigits: 1,
-      maximumSignificantDigits: 3,
+      maximumSignificantDigits: 3
     })(0.00012345)
   ).toEqual("0.000123");
 
   expect(
     numberFormatter("en", {
       minimumSignificantDigits: 1,
-      maximumSignificantDigits: 3,
+      maximumSignificantDigits: 3
     })(0.00010001)
   ).toEqual("0.0001");
 
