@@ -10,8 +10,9 @@ const SUB_VAR = "#";
 const ESCAPE = "'";
 const OFFSET = compile(/offset:-?\d+/.source);
 const MULTI_SPACE = compile("\\s+");
-// Matches [^[[:Pattern_Syntax:][:Pattern_White_Space:]]]+
 
+// Matches [^[[:Pattern_Syntax:][:Pattern_White_Space:]]]+
+// could be replaced in the future with [^\p{Pattern_Syntax}\p{Pattern_White_Space}]+ once crafty includes babel when compiling TypeScript
 const IDENTIFIER = compile(
   // eslint-disable-next-line no-control-regex
   /[^\u0009-\u000d \u0085\u200e\u200f\u2028\u2029\u0021-\u002f\u003a-\u0040\u005b-\u005e\u0060\u007b-\u007e\u00a1-\u00a7\u00a9\u00ab\u00ac\u00ae\u00b0\u00b1\u00b6\u00bb\u00bf\u00d7\u00f7\u2010-\u2027\u2030-\u203e\u2041-\u2053\u2055-\u205e\u2190-\u245f\u2500-\u2775\u2794-\u2bff\u2e00-\u2e7f\u3001-\u3003\u3008-\u3020\u3030\ufd3e\ufd3f\ufe45\ufe46]+/

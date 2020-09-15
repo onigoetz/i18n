@@ -2,14 +2,6 @@ export function hasOwnProperty(object: object, property: string) {
   return Object.prototype.hasOwnProperty.call(object, property);
 }
 
-export function alwaysArray(stringOrArray: string | string[]): string[] {
-  if (Array.isArray(stringOrArray)) {
-    return stringOrArray;
-  }
-
-  return stringOrArray ? [stringOrArray] : [];
-}
-
 export function objectExtend(destination, ...sources);
 export function objectExtend(destination) {
   // eslint-disable-next-line prefer-rest-params

@@ -44,7 +44,7 @@ function numberRound(
 
     // If the value is not a number, return NaN.
     if (isNaN(value)) {
-      return NaN;
+      return 0;
     }
 
     // Return original value if no rounding method is specified.

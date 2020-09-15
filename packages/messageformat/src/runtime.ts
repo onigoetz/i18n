@@ -46,7 +46,7 @@ export default function createRenderer<T>(
   ) => (number) => string,
   numberFormatter: (
     localeHolder: T,
-    options: { style: string },
+    options: { style: "decimal" | "percent" },
     value: number
   ) => string,
   dateFormatter: (

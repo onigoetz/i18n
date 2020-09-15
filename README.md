@@ -20,7 +20,22 @@ A suite of packages to ease your translation needs.
 ## Example
 
 ```typescript
-// Coming soon
+import { parse, createRenderer } from "@onigoetz/messageformat";
+import { dateFormatter, numberFormatter, pluralGenerator } from "@onigoetz/intl-formatters";
+
+// Parse the MessageFormat to a renderable format
+const parsed = parse("{test, plural, offset:3 one{one test} other {# test} }");
+
+// Create a localized renderer
+const render = createRenderer(
+    "en",
+    (locale: T, type) => pluralGenerator(locale, { type }),
+    (locale: T, options, value: number) => numberFormatter(locale, options)(value),
+    (locale: T, options, value: Date) => dateFormatter(locale, options)(value)
+);
+
+render(parsed, { test: 4 }); // => "one test"
+render(parsed, { test: 7 }); // => "4 test"
 ```
 
 ## Who is the audience for this library ?

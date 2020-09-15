@@ -8,6 +8,7 @@
   "sideEffects": false,
   "devDependencies": {
     "@onigoetz/i18n-types": "0.1.0",
+    "@onigoetz/messageformat": "0.1.0",
     "@swissquote/crafty": "1.12.0",
     "@swissquote/crafty-preset-jest": "1.12.0",
     "@swissquote/crafty-preset-typescript": "1.12.0",
@@ -18,6 +19,8 @@
   "scripts": {
     "build": "crafty run",
     "watch": "crafty watch",
+    "test": "crafty test",
+    "test:ci": "crafty test --coverage",
     "lint": "crafty jsLint --fix src/*.ts src/**/*.ts",
     "lint:ci": "crafty jsLint src/*.ts src/**/*.ts"
   }
