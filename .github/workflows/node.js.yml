@@ -27,4 +27,4 @@ jobs:
     - run: yarn install
     - run: yarn lint:ci
     - run: yarn build
-    - run: export NODE_ICU_DATA="$PWD/node_modules/full-icu" && yarn test
+    - run: yarn test
