@@ -48,7 +48,9 @@ it("Formats currencies", () => {
   expect(currencyFormatter("en", "USD", name)(teslaS)).toEqual(
     "69,900.00 US dollars"
   );
-  expect(currencyFormatter("de", "USD", name)(teslaS)).toEqual("69.900,00 US-Dollar");
+  expect(currencyFormatter("de", "USD", name)(teslaS)).toEqual(
+    "69.900,00 US-Dollar"
+  );
   expect(currencyFormatter("zh", "USD", name)(teslaS)).toEqual("69,900.00美元");
 
   /*expect(currencyFormatter("en", "USD", { style: "accounting" })(-1)).toEqual(
