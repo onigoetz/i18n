@@ -13,7 +13,7 @@ function getRenderer<T extends string>(locale: T) {
 }
 
 describe("parse()", () => {
-  const date = new Date("1989-12-24T04:52:00+01:00");
+  const date = new Date("1989-12-24T04:52");
 
   const render = getRenderer("en");
   it("accepts strings", () => {
