@@ -20,7 +20,7 @@ function getRenderer<T extends string>(locale: T) {
 }
 
 describe("parse()", () => {
-  const date = new Date("1989-12-24T04:52");
+  const date = new Date(Date.UTC(1989, 11, 24, 3, 52, 0, 0));
 
   const render = getRenderer("en");
   it("accepts strings", () => {
