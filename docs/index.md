@@ -1,12 +1,14 @@
+# I18n
+
 # @onigoetz/i18n
 
 A suite of packages to ease your translation needs.
 
 ## Packages
 
-- `@onigoetz/messageformat` a MessageFormat parsing and rendering library
-- `@onigoetz/make-plural` a lighter fork of `make-plural` meant for browser usage
-- `@onigoetz/intl-formatters` default formatters if you don't already have formatters for dates and numbers, uses the standard `Intl` API
+- [`@onigoetz/messageformat`](./02_Packages/messageformat.md) a MessageFormat parsing and rendering library
+- [`@onigoetz/make-plural`](./02_Packages/make-plural.md) a lighter fork of `make-plural` meant for browser usage
+- [`@onigoetz/intl-formatters`](./02_Packages/intl-formatters.md) default formatters if you don't already have formatters for dates and numbers, uses the standard `Intl` API
 
 ## Features
 
@@ -21,22 +23,17 @@ A suite of packages to ease your translation needs.
 
 ```typescript
 import { parse, createRenderer } from "@onigoetz/messageformat";
-import {
-  dateFormatter,
-  numberFormatter,
-  pluralGenerator,
-} from "@onigoetz/intl-formatters";
+import { dateFormatter, numberFormatter, pluralGenerator } from "@onigoetz/intl-formatters";
 
 // Parse the MessageFormat to a renderable format
 const parsed = parse("{test, plural, offset:3 one{one test} other {# test} }");
 
 // Create a localized renderer
 const render = createRenderer(
-  "en",
-  (locale: T, type) => pluralGenerator(locale, { type }),
-  (locale: T, options, value: number) =>
-    numberFormatter(locale, options)(value),
-  (locale: T, options, value: Date) => dateFormatter(locale, options)(value)
+    "en",
+    (locale: T, type) => pluralGenerator(locale, { type }),
+    (locale: T, options, value: number) => numberFormatter(locale, options)(value),
+    (locale: T, options, value: Date) => dateFormatter(locale, options)(value)
 );
 
 render(parsed, { test: 4 }); // => "one test"
@@ -58,5 +55,5 @@ This library is very interesting as a lightweight runtime because of its small f
 This suite of packages certainly wouldn't exist without the previous work in the field.
 
 This package forked [https://www.npmjs.com/package/make-plural](`make-plural`) at version 4 to make it smaller.
-Took inspiration for the MessageFormat parser from [https://www.npmjs.com/package/@ffz/icu-msgparser](`@ffz/icu-msgparser`)
+Took inspiration for the MessageFormat parser from [https://www.npmjs.com/package/@ffz/icu-msgparser](`@ffz/icu-msgparser`) 
 for its small size and [https://www.npmjs.com/package/@phensley/messageformat](`@phensley/messageformat`) for its parsing speed.

@@ -1,0 +1,14 @@
+{
+    "title": "I18N",
+    "tagline": "Simple I18N library",
+    "author": "Stéphane Goetz",
+    "html": {
+      "repo": "onigoetz/i18n",
+      "toggle_code": false, 
+      "links": {
+        "GitHub": "http://github.com/onigoetz/i18n"
+      },
+      "powered_by": "© 2020 Stéphane Goetz. Powered by Daux.io."
+    }
+  }
+  

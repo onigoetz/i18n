@@ -1,3 +1,10 @@
+This is an overview of the specification of MessageFormat.
+It seems that each language has a different specification for how MessageFormat needs to be parsed and rendered.
+
+This page will try to make a recap of what I understand and how that translate in practical usage.
+
+> The rest of this page is in progress
+
 
 ```
 message = messageText (argument messageText)*

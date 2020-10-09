@@ -1,5 +1,3 @@
-# `@onigoetz/make-plural`
-
 This package is a fork of [https://www.npmjs.com/package/make-plural](`make-plural`) version 4.
 
 It provided a compiler for CLDR plurals, but it also contained a lot of methods to test them.
