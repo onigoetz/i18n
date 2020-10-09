@@ -39,6 +39,7 @@ jobs:
       with:
         node-version: 12.x
     - run: yarn install
+    - run: yarn build
     - run: yarn test:ci
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@v1.1
