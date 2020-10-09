@@ -1,7 +1,5 @@
 const path = require("path");
 
-const MODULES = path.join(__dirname, "..", "..", "node_modules");
-
 module.exports = {
   presets: [
     "@swissquote/crafty-preset-jest",
@@ -27,6 +25,6 @@ module.exports = {
    * @param {Object} options - The Jest configuration object
    */
   jest(crafty, options) {
-    options.moduleDirectories.push(MODULES);
+    options.reporters = ['default', 'jest-sonar'];
   }
 };
