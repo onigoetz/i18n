@@ -7,6 +7,7 @@ on:
   push:
     branches: [ master ]
   pull_request:
+    types: [ opened, synchronize, reopened ]
     branches: [ master ]
 
 jobs:
@@ -31,9 +32,12 @@ jobs:
 
   sonarcloud:
     runs-on: ubuntu-latest
-    if: github.repository == 'onigoetz/i18n' && github.event_name != 'pull_request'
+    if: github.repository == 'onigoetz/i18n'
     steps:
     - uses: actions/checkout@v2
+      with:
+        # Disabling shallow clone is recommended for improving relevancy of reporting
+        fetch-depth: 0
     - name: Use Node.js 12.x
       uses: actions/setup-node@v1
       with:
@@ -42,31 +46,7 @@ jobs:
     - run: yarn build
     - run: yarn test:ci
     - name: SonarCloud Scan
-      uses: SonarSource/sonarcloud-github-action@v1.1
+      uses: SonarSource/sonarcloud-github-action@v1.4
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        
-  documentation:
-    runs-on: ubuntu-latest
-    if: github.repository == 'onigoetz/i18n' && github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
-    steps:
-    - uses: actions/checkout@v1
-    - name: Get Composer Cache Directory
-      id: composer-cache
-      run: echo "::set-output name=dir::$(composer config cache-files-dir)"
-    - name: Cache vendor
-      uses: actions/cache@v1
-      with:
-        path: ${{ steps.composer-cache.outputs.dir }}
-        key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
-        restore-keys: ${{ runner.os }}-composer-
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress --no-suggest
-    - name: Generate documentation
-      run: vendor/bin/daux generate
-    - uses: JamesIves/github-pages-deploy-action@2.0.3
-      env:
-        FOLDER: "static"
-        BRANCH: gh-pages
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
