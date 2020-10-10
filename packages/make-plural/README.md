@@ -1,4 +1,4 @@
-This package is a fork of [https://www.npmjs.com/package/make-plural](`make-plural`) version 4.
+This package is a fork of [`make-plural`](https://www.npmjs.com/package/make-plural) version 4.
 
 It provided a compiler for CLDR plurals, but it also contained a lot of methods to test them.
 I stripped the test methods and kept the conversion code to make it smaller.
