@@ -5,9 +5,9 @@
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "devDependencies": {
-    "@swissquote/crafty": "1.13.4",
-    "@swissquote/crafty-preset-typescript": "1.13.4",
-    "@swissquote/crafty-runner-gulp": "1.13.4"
+    "@swissquote/crafty": "1.13.5",
+    "@swissquote/crafty-preset-typescript": "1.13.5",
+    "@swissquote/crafty-runner-gulp": "1.13.5"
   },
   "scripts": {
     "build": "crafty run",
