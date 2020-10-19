@@ -6806,10 +6806,10 @@ spdx-license-ids@^3.0.0:
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-3.0.6.tgz#c80757383c28abf7296744998cbc106ae8b854ce"
   integrity sha512-+orQK83kyMva3WyPf59k1+Y525csj5JejicWut55zeTWANuN17qSiSLUXWtzHeNWORSvT7GLDJ/E/XiIWoXBTw==
 
-speedscope@1.10.0:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/speedscope/-/speedscope-1.10.0.tgz#cf6cd31c8445d79b6c921e2cf66cb296acb102ff"
-  integrity sha512-w8dC/q/9VSVoxkbFYRpknKpmlG1GofLL5rODuGyUCEnOmx/PjZ995jFfbdB3IBPc8TQLT4vhhlwBxDCS+7k5OQ==
+speedscope@1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/speedscope/-/speedscope-1.11.0.tgz#c5ee4905a635138d92cc9a707a1659c517778263"
+  integrity sha512-ojRGWoLWxHfuq6hSd4ihOzyaH7AozSVyTA4pac284M7FcW/Gh6ZPX/nt/kFn5Y35vEx8Xv6HcRJ93+TdqBv8Ng==
   dependencies:
     open "7.2.0"
 
