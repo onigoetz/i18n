@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <title>I18N </title>
+    <meta name="description" content="Simple I18N library">
+    <meta name="author" content="Stéphane Goetz">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" href="themes/daux/img/favicon-blue.png" type="image/x-icon">
+
+    <!-- Mobile -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JS -->
+    <script>
+        window.base_url = "";
+        document.documentElement.classList.remove('no-js');
+    </script>
+
+    <!-- Font -->
+    
+    <!-- CSS -->
+            <link href='themes/daux/css/theme-blue.min.css' rel='stylesheet' type='text/css'>
+            <link href='daux_libraries/search.css' rel='stylesheet' type='text/css'>
+    </head>
+<body class="homepage">
+    
+
+<div class="Navbar NoPrint">
+    <div class="Container">
+        <a class="Brand" href="index.html">I18N</a>
+
+    <form role='search' action="/" method="get" class="Search" id="search_form">
+        <label for="search_input">
+            <span class='u-visuallyHidden'>Search</span>
+        </label>
+        <input
+            type="search"
+            id="search_input"
+            class="Search__field"
+            placeholder="Search..."
+            aria-label="Search..."
+            autocomplete="on"
+            results=25
+            autosave=text_search
+        >
+        <label>
+            <input type="submit" class='u-visuallyHidden' />
+            <span class='u-visuallyHidden'>Search...</span>
+            <svg class="Search__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 451 451">
+                <path d="M447.05 428l-109.6-109.6c29.4-33.8 47.2-77.9 47.2-126.1C384.65 86.2 298.35 0 192.35 0 86.25 0 .05 86.3.05 192.3s86.3 192.3 192.3 192.3c48.2 0 92.3-17.8 126.1-47.2L428.05 447c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.2-5.2 5.2-13.8 0-19zM26.95 192.3c0-91.2 74.2-165.3 165.3-165.3 91.2 0 165.3 74.2 165.3 165.3s-74.1 165.4-165.3 165.4c-91.1 0-165.3-74.2-165.3-165.4z"/>
+            </svg>
+        </label>
+    </form>
+    </div>
+</div>
+
+<div class="Homepage">
+    <div class="HomepageTitle Container">
+        <h2>Simple I18N library</h2>    </div>
+
+    <div class="HomepageImage Container">
+            </div>
+
+    <div class="HomepageButtons">
+        <div class="Container">
+                           <a href="https://github.com/onigoetz/i18n" class="Button Button--secondary Button--hero" rel="noopener noreferrer">
+                   View On GitHub               </a>
+            <a href="Specification.html" class="Button Button--primary Button--hero">View Documentation</a>        </div>
+    </div>
+</div>
+
+<div class="HomepageContent">
+    <div class="Container">
+        <div class="Container--inner">
+            <div class="doc_content s-content">
+                <h1 id="page_I18n">I18n</h1>
+<h1 id="page_onigoetzi18n">@onigoetz/i18n</h1>
+<p>A suite of packages to ease your translation needs.</p>
+<h2 id="page_Packages">Packages</h2>
+<ul>
+<li>
+<a href="Packages/messageformat.html"><code>@onigoetz/messageformat</code></a> a MessageFormat parsing and rendering library</li>
+<li>
+<a href="Packages/make_plural.html"><code>@onigoetz/make-plural</code></a> a lighter fork of <code>make-plural</code> meant for browser usage</li>
+<li>
+<a href="Packages/intl_formatters.html"><code>@onigoetz/intl-formatters</code></a> default formatters if you don’t already have formatters for dates and numbers, uses the standard <code>Intl</code> API</li>
+</ul>
+<h2 id="page_Features">Features</h2>
+<ul>
+<li>Small, Fast and no NPM dependencies</li>
+<li>TypeScript ❤️</li>
+<li>Fully tested</li>
+<li>Flexible; Use one package, or two, bring your own formatters, or use the embedded ones, use on Node.js, or in the browser. You choose !</li>
+<li>ICU MessageFormat compatible</li>
+<li>CLDR compatible</li>
+</ul>
+<h2 id="page_Example">Example</h2>
+<pre><code class="hljs typescript"><span class="hljs-keyword">import</span> { parse, createRenderer } <span class="hljs-keyword">from</span> <span class="hljs-string">"@onigoetz/messageformat"</span>;
+<span class="hljs-keyword">import</span> { dateFormatter, numberFormatter, pluralGenerator } <span class="hljs-keyword">from</span> <span class="hljs-string">"@onigoetz/intl-formatters"</span>;
+
+<span class="hljs-comment">// Parse the MessageFormat to a renderable format</span>
+<span class="hljs-keyword">const</span> parsed = parse(<span class="hljs-string">"{test, plural, offset:3 one{one test} other {# test} }"</span>);
+
+<span class="hljs-comment">// Create a localized renderer</span>
+<span class="hljs-keyword">const</span> render = createRenderer(
+    <span class="hljs-string">"en"</span>,
+    <span class="hljs-function">(<span class="hljs-params"><span class="hljs-params">locale</span>: <span class="hljs-params">T</span>, <span class="hljs-params">type</span></span>) =&gt;</span> pluralGenerator(locale, { <span class="hljs-keyword">type</span> }),
+    <span class="hljs-function">(<span class="hljs-params"><span class="hljs-params">locale</span>: <span class="hljs-params">T</span>, <span class="hljs-params">options</span>, <span class="hljs-params">value</span>: <span class="hljs-params">number</span></span>) =&gt;</span> numberFormatter(locale, options)(value),
+    <span class="hljs-function">(<span class="hljs-params"><span class="hljs-params">locale</span>: <span class="hljs-params">T</span>, <span class="hljs-params">options</span>, <span class="hljs-params">value</span>: <span class="hljs-params">Date</span></span>) =&gt;</span> dateFormatter(locale, options)(value)
+);
+
+render(parsed, { test: <span class="hljs-number">4</span> }); <span class="hljs-comment">// =&gt; "one test"</span>
+render(parsed, { test: <span class="hljs-number">7</span> }); <span class="hljs-comment">// =&gt; "4 test"</span>
+</code></pre>
+<h2 id="page_Who_is_the_audience_for_this_library">Who is the audience for this library ?</h2>
+<p>This library is meant for applications starting with medium scale, where you might have multiple libraries and frameworks inside.
+Since these libraries don’t make any assumption about your stack, you can integrate them in any kind of application.</p>
+<p>Most importantly, if you have an environment where pre-compiling translations isn’t possible,
+for example because your translation build process is separate from your app build process or you have a modular application / microfrontend.</p>
+<p>This library is very interesting as a lightweight runtime because of its small footprint and performant parsing.</p>
+<h2 id="page_Inspiration">Inspiration</h2>
+<p>This suite of packages certainly wouldn’t exist without the previous work in the field.</p>
+<p>This package forked <a href="https://www.npmjs.com/package/make-plural" class="Link--external" rel="noopener noreferrer"><code>make-plural</code></a> at version 4 to make it smaller.
+Took inspiration for the MessageFormat parser from <a href="https://www.npmjs.com/package/@ffz/icu-msgparser" class="Link--external" rel="noopener noreferrer"><code>@ffz/icu-msgparser</code></a>
+for its small size and <a href="https://www.npmjs.com/package/@phensley/messageformat" class="Link--external" rel="noopener noreferrer"><code>@phensley/messageformat</code></a> for its parsing speed.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="HomepageFooter">
+    <div class="Container">
+        <div class="Container--inner">
+                            <ul class="HomepageFooter__links">
+                                            <li><a href="http://github.com/onigoetz/i18n" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                                    </ul>
+            
+                    </div>
+    </div>
+</div>
+
+    
+    <!-- JS -->
+            <script src="themes/daux/js/daux.min.js"></script>
+    
+        <script>
+        
+        window.searchLanguage = "";
+        window.searchTranslation = {"Search_one_result":"1 result","Search_results":"!count results","Search_no_results":"Nothing found","Search_common_words_ignored":"Common words are largely ignored","Search_too_short":"Search too short","Search_one_character_or_more":"Should be one character or more","Search_should_be_x_or_more":"Should be !min characters or more","Link_previous":"Previous","Link_next":"Next"};
+    </script>
+
+    <!-- Search -->
+    <script type="text/javascript" src="daux_libraries/search.min.js"></script>
+
+    <script>
+        window.search({'base_url': ''})
+    </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <title>Specification - I18N</title>
+    <meta name="description" content="Simple I18N library">
+    <meta name="author" content="Stéphane Goetz">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" href="themes/daux/img/favicon-blue.png" type="image/x-icon">
+
+    <!-- Mobile -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JS -->
+    <script>
+        window.base_url = "";
+        document.documentElement.classList.remove('no-js');
+    </script>
+
+    <!-- Font -->
+    
+    <!-- CSS -->
+            <link href='themes/daux/css/theme-blue.min.css' rel='stylesheet' type='text/css'>
+            <link href='daux_libraries/search.css' rel='stylesheet' type='text/css'>
+    </head>
+<body class="">
+    <div class="Columns content">
+    <aside class="Columns__left Collapsible">
+        <button type="button" class="Button Collapsible__trigger" aria-controls="sidebar_content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="Collapsible__trigger__bar"></span>
+            <span class="Collapsible__trigger__bar"></span>
+            <span class="Collapsible__trigger__bar"></span>
+        </button>
+
+        <a class="Brand" href="index.html">I18N</a>
+
+    <form role='search' action="/" method="get" class="Search" id="search_form">
+        <label for="search_input">
+            <span class='u-visuallyHidden'>Search</span>
+        </label>
+        <input
+            type="search"
+            id="search_input"
+            class="Search__field"
+            placeholder="Search..."
+            aria-label="Search..."
+            autocomplete="on"
+            results=25
+            autosave=text_search
+        >
+        <label>
+            <input type="submit" class='u-visuallyHidden' />
+            <span class='u-visuallyHidden'>Search...</span>
+            <svg class="Search__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 451 451">
+                <path d="M447.05 428l-109.6-109.6c29.4-33.8 47.2-77.9 47.2-126.1C384.65 86.2 298.35 0 192.35 0 86.25 0 .05 86.3.05 192.3s86.3 192.3 192.3 192.3c48.2 0 92.3-17.8 126.1-47.2L428.05 447c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.2-5.2 5.2-13.8 0-19zM26.95 192.3c0-91.2 74.2-165.3 165.3-165.3 91.2 0 165.3 74.2 165.3 165.3s-74.1 165.4-165.3 165.4c-91.1 0-165.3-74.2-165.3-165.4z"/>
+            </svg>
+        </label>
+    </form>
+
+        <div class="Collapsible__content" id="sidebar_content">
+            <!-- Navigation -->
+            <ul class='Nav'><li class='Nav__item  has-children'><a href="#" class="Nav__item__link Nav__item__link--nopage"><i class="Nav__arrow">&nbsp;</i>Packages</a><ul class='Nav'><li class='Nav__item '><a href="Packages/intl_formatters.html">intl-formatters</a></li><li class='Nav__item '><a href="Packages/make_plural.html">make-plural</a></li><li class='Nav__item '><a href="Packages/messageformat.html">messageformat</a></li></ul></li><li class='Nav__item Nav__item--active'><a href="Specification.html">Specification</a></li><li class='Nav__item '><a href="Benchmark.html">Benchmark</a></li></ul>
+            <div class="Links">
+                                    <hr/>
+                                            <a href="http://github.com/onigoetz/i18n" target="_blank"  rel="noopener noreferrer">GitHub</a>
+                        <br />
+                                                </div>
+
+            
+                
+                                    <div class="PoweredBy">
+                        <hr/>
+                        © 2020 Stéphane Goetz. Powered by Daux.io.                    </div>
+                        </div>
+    </aside>
+    <div class="Columns__right">
+        <div class="Columns__right__content">
+            <div class="doc_content">
+                <article class="Page">
+
+    <div class="Page__header">
+        <h1><a href="Specification.html">Specification</a></h1>
+                    </div>
+
+    <div class="s-content">
+        <p>This is an overview of the specification of MessageFormat.
+It seems that each language has a different specification for how MessageFormat needs to be parsed and rendered.</p>
+<p>This page will try to make a recap of what I understand and how that translate in practical usage.</p>
+<blockquote>
+<p>The rest of this page is in progress</p>
+</blockquote>
+<pre><code>message = messageText (argument messageText)*
+argument = noneArg | simpleArg | complexArg
+complexArg = choiceArg | pluralArg | selectArg | selectordinalArg
+
+noneArg = '{' argNameOrNumber '}'
+simpleArg = '{' argNameOrNumber ',' argType [',' argStyle] '}'
+choiceArg = '{' argNameOrNumber ',' &quot;choice&quot; ',' choiceStyle '}'
+pluralArg = '{' argNameOrNumber ',' &quot;plural&quot; ',' pluralStyle '}'
+selectArg = '{' argNameOrNumber ',' &quot;select&quot; ',' selectStyle '}'
+selectordinalArg = '{' argNameOrNumber ',' &quot;selectordinal&quot; ',' pluralStyle '}'
+
+choiceStyle: see ChoiceFormat
+pluralStyle: see PluralFormat
+selectStyle: see SelectFormat
+
+argNameOrNumber = argName | argNumber
+argName = [^[[:Pattern_Syntax:][:Pattern_White_Space:]]]+
+argNumber = '0' | ('1'..'9' ('0'..'9')*)
+
+argType = &quot;number&quot; | &quot;date&quot; | &quot;time&quot; | &quot;spellout&quot; | &quot;ordinal&quot; | &quot;duration&quot;
+argStyle = &quot;short&quot; | &quot;medium&quot; | &quot;long&quot; | &quot;full&quot; | &quot;integer&quot; | &quot;currency&quot; | &quot;percent&quot; | argStyleText | &quot;::&quot; argSkeletonText
+</code></pre>
+<pre><code>messageText can contain quoted literal strings including syntax characters. A quoted literal string begins with an ASCII apostrophe and a syntax character (usually a {curly brace}) and continues until the next single apostrophe. A double ASCII apostrohpe inside or outside of a quoted string represents one literal apostrophe.
+Quotable syntax characters are the {curly braces} in all messageText parts, plus the '#' sign in a messageText immediately inside a pluralStyle, and the '|' symbol in a messageText immediately inside a choiceStyle.
+See also MessagePattern.ApostropheMode
+In argStyleText, every single ASCII apostrophe begins and ends quoted literal text, and unquoted {curly braces} must occur in matched pairs. 
+
+https://unicode-org.github.io/icu-docs/apidoc/released/icu4j/com/ibm/icu/text/MessageFormat.html
+https://github.com/unicode-org/icu/blob/2666d18e544271d0f756bf20ee251c2cb699e269/icu4j/main/classes/core/src/com/ibm/icu/text/MessagePattern.java
+https://github.com/unicode-org/icu/blob/2666d18e544271d0f756bf20ee251c2cb699e269/icu4j/main/classes/core/src/com/ibm/icu/impl/PatternProps.java
+</code></pre>
+    </div>
+
+        <nav>
+        <ul class="Pager">
+            <li class=Pager--prev><a href="Packages/messageformat.html">Previous</a></li>            <li class=Pager--next><a href="Benchmark.html">Next</a></li>        </ul>
+    </nav>
+    </article>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <!-- JS -->
+            <script src="themes/daux/js/daux.min.js"></script>
+    
+        <script>
+        
+        window.searchLanguage = "";
+        window.searchTranslation = {"Search_one_result":"1 result","Search_results":"!count results","Search_no_results":"Nothing found","Search_common_words_ignored":"Common words are largely ignored","Search_too_short":"Search too short","Search_one_character_or_more":"Should be one character or more","Search_should_be_x_or_more":"Should be !min characters or more","Link_previous":"Previous","Link_next":"Next"};
+    </script>
+
+    <!-- Search -->
+    <script type="text/javascript" src="daux_libraries/search.min.js"></script>
+
+    <script>
+        window.search({'base_url': ''})
+    </script>
+</body>
+</html>

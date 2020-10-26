@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <title>make-plural - I18N</title>
+    <meta name="description" content="Simple I18N library">
+    <meta name="author" content="Stéphane Goetz">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" href="../themes/daux/img/favicon-blue.png" type="image/x-icon">
+
+    <!-- Mobile -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JS -->
+    <script>
+        window.base_url = "../";
+        document.documentElement.classList.remove('no-js');
+    </script>
+
+    <!-- Font -->
+    
+    <!-- CSS -->
+            <link href='../themes/daux/css/theme-blue.min.css' rel='stylesheet' type='text/css'>
+            <link href='../daux_libraries/search.css' rel='stylesheet' type='text/css'>
+    </head>
+<body class="">
+    <div class="Columns content">
+    <aside class="Columns__left Collapsible">
+        <button type="button" class="Button Collapsible__trigger" aria-controls="sidebar_content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="Collapsible__trigger__bar"></span>
+            <span class="Collapsible__trigger__bar"></span>
+            <span class="Collapsible__trigger__bar"></span>
+        </button>
+
+        <a class="Brand" href="../index.html">I18N</a>
+
+    <form role='search' action="/" method="get" class="Search" id="search_form">
+        <label for="search_input">
+            <span class='u-visuallyHidden'>Search</span>
+        </label>
+        <input
+            type="search"
+            id="search_input"
+            class="Search__field"
+            placeholder="Search..."
+            aria-label="Search..."
+            autocomplete="on"
+            results=25
+            autosave=text_search
+        >
+        <label>
+            <input type="submit" class='u-visuallyHidden' />
+            <span class='u-visuallyHidden'>Search...</span>
+            <svg class="Search__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 451 451">
+                <path d="M447.05 428l-109.6-109.6c29.4-33.8 47.2-77.9 47.2-126.1C384.65 86.2 298.35 0 192.35 0 86.25 0 .05 86.3.05 192.3s86.3 192.3 192.3 192.3c48.2 0 92.3-17.8 126.1-47.2L428.05 447c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.2-5.2 5.2-13.8 0-19zM26.95 192.3c0-91.2 74.2-165.3 165.3-165.3 91.2 0 165.3 74.2 165.3 165.3s-74.1 165.4-165.3 165.4c-91.1 0-165.3-74.2-165.3-165.4z"/>
+            </svg>
+        </label>
+    </form>
+
+        <div class="Collapsible__content" id="sidebar_content">
+            <!-- Navigation -->
+            <ul class='Nav'><li class='Nav__item Nav__item--open has-children'><a href="#" class="Nav__item__link Nav__item__link--nopage"><i class="Nav__arrow">&nbsp;</i>Packages</a><ul class='Nav'><li class='Nav__item '><a href="../Packages/intl_formatters.html">intl-formatters</a></li><li class='Nav__item Nav__item--active'><a href="../Packages/make_plural.html">make-plural</a></li><li class='Nav__item '><a href="../Packages/messageformat.html">messageformat</a></li></ul></li><li class='Nav__item '><a href="../Specification.html">Specification</a></li><li class='Nav__item '><a href="../Benchmark.html">Benchmark</a></li></ul>
+            <div class="Links">
+                                    <hr/>
+                                            <a href="http://github.com/onigoetz/i18n" target="_blank"  rel="noopener noreferrer">GitHub</a>
+                        <br />
+                                                </div>
+
+            
+                
+                                    <div class="PoweredBy">
+                        <hr/>
+                        © 2020 Stéphane Goetz. Powered by Daux.io.                    </div>
+                        </div>
+    </aside>
+    <div class="Columns__right">
+        <div class="Columns__right__content">
+            <div class="doc_content">
+                <article class="Page">
+
+    <div class="Page__header">
+        <h1><a href="../Packages/intl_formatters.html">Packages</a> <svg class="Page__header--separator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.175 477.175"><path d="M360.73 229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1 0s-5.3 13.8 0 19.1l215.5 215.5-215.5 215.5c-5.3 5.3-5.3 13.8 0 19.1 2.6 2.6 6.1 4 9.5 4 3.4 0 6.9-1.3 9.5-4l225.1-225.1c5.3-5.2 5.3-13.8.1-19z"/></svg> <a href="../Packages/make_plural.html">make-plural</a></h1>
+                    </div>
+
+    <div class="s-content">
+        <p>This package is a fork of <a href="https://www.npmjs.com/package/make-plural" class="Link--external" rel="noopener noreferrer"><code>make-plural</code></a> version 4.</p>
+<p>It provided a compiler for CLDR plurals, but it also contained a lot of methods to test them.
+I stripped the test methods and kept the conversion code to make it smaller.</p>
+<h2 id="page_Usage">Usage</h2>
+<pre><code class="hljs javascript"><span class="hljs-keyword">import</span> makePlural <span class="hljs-keyword">from</span> <span class="hljs-string">"@onigoetz/make-plural"</span>;
+
+<span class="hljs-comment">// Original CLDR data</span>
+<span class="hljs-keyword">const</span> pluralRules = {
+  <span class="hljs-string">"plurals-type-cardinal"</span>: {
+    <span class="hljs-attr">en</span>: {
+      <span class="hljs-string">"pluralRule-count-one"</span>: <span class="hljs-string">"i = 1 and v = 0 @integer 1"</span>,
+      <span class="hljs-string">"pluralRule-count-other"</span>:
+        <span class="hljs-string">" @integer 0, 2~16, 100, 1000, 10000, 100000, 1000000, … @decimal 0.0~1.5, 10.0, 100.0, 1000.0, 10000.0, 100000.0, 1000000.0, …"</span>
+    }
+  },
+  <span class="hljs-string">"plurals-type-ordinal"</span>: {
+    <span class="hljs-attr">en</span>: {
+      <span class="hljs-string">"pluralRule-count-one"</span>:
+        <span class="hljs-string">"n % 10 = 1 and n % 100 != 11 @integer 1, 21, 31, 41, 51, 61, 71, 81, 101, 1001, …"</span>,
+      <span class="hljs-string">"pluralRule-count-two"</span>:
+        <span class="hljs-string">"n % 10 = 2 and n % 100 != 12 @integer 2, 22, 32, 42, 52, 62, 72, 82, 102, 1002, …"</span>,
+      <span class="hljs-string">"pluralRule-count-few"</span>:
+        <span class="hljs-string">"n % 10 = 3 and n % 100 != 13 @integer 3, 23, 33, 43, 53, 63, 73, 83, 103, 1003, …"</span>,
+      <span class="hljs-string">"pluralRule-count-other"</span>:
+        <span class="hljs-string">" @integer 0, 4~18, 100, 1000, 10000, 100000, 1000000, …"</span>
+    }
+  }
+};
+
+<span class="hljs-keyword">const</span> pluralGenerator = makePlural(pluralRules[<span class="hljs-string">"plurals-type-ordinal"</span>][<span class="hljs-string">"en"</span>]);
+
+<span class="hljs-built_in">console</span>.log(pluralGenerator(<span class="hljs-number">3</span>)) <span class="hljs-comment">// =&gt; few</span>
+
+</code></pre>
+<h2 id="page_Size_optimization">Size optimization</h2>
+<p>The original CLDR data is quite verbose and if you can preprocess it, a lot of data can be removed.
+You can remove anything after <code>@decimal</code> or <code>@integer</code> and the <code>other</code> rule, you can go from :</p>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"plurals-type-cardinal"</span>: {
+    <span class="hljs-attr">"en"</span>: {
+      <span class="hljs-attr">"pluralRule-count-one"</span>: <span class="hljs-string">"i = 1 and v = 0 @integer 1"</span>,
+      <span class="hljs-attr">"pluralRule-count-other"</span>:
+        <span class="hljs-string">" @integer 0, 2~16, 100, 1000, 10000, 100000, 1000000, … @decimal 0.0~1.5, 10.0, 100.0, 1000.0, 10000.0, 100000.0, 1000000.0, …"</span>
+    }
+  },
+  <span class="hljs-attr">"plurals-type-ordinal"</span>: {
+    <span class="hljs-attr">"en"</span>: {
+      <span class="hljs-attr">"pluralRule-count-one"</span>:
+        <span class="hljs-string">"n % 10 = 1 and n % 100 != 11 @integer 1, 21, 31, 41, 51, 61, 71, 81, 101, 1001, …"</span>,
+      <span class="hljs-attr">"pluralRule-count-two"</span>:
+        <span class="hljs-string">"n % 10 = 2 and n % 100 != 12 @integer 2, 22, 32, 42, 52, 62, 72, 82, 102, 1002, …"</span>,
+      <span class="hljs-attr">"pluralRule-count-few"</span>:
+        <span class="hljs-string">"n % 10 = 3 and n % 100 != 13 @integer 3, 23, 33, 43, 53, 63, 73, 83, 103, 1003, …"</span>,
+      <span class="hljs-attr">"pluralRule-count-other"</span>:
+        <span class="hljs-string">" @integer 0, 4~18, 100, 1000, 10000, 100000, 1000000, …"</span>
+    }
+  }
+}
+</code></pre>
+<p>to :</p>
+<pre><code class="hljs json">{
+  <span class="hljs-attr">"plurals-type-cardinal"</span>: {
+    <span class="hljs-attr">"en"</span>: {
+      <span class="hljs-attr">"pluralRule-count-one"</span>: <span class="hljs-string">"i = 1 and v = 0"</span>
+    }
+  },
+  <span class="hljs-attr">"plurals-type-ordinal"</span>: {
+    <span class="hljs-attr">"en"</span>: {
+      <span class="hljs-attr">"pluralRule-count-one"</span>: <span class="hljs-string">"n % 10 = 1 and n % 100 != 11"</span>,
+      <span class="hljs-attr">"pluralRule-count-two"</span>: <span class="hljs-string">"n % 10 = 2 and n % 100 != 12"</span>,
+      <span class="hljs-attr">"pluralRule-count-few"</span>: <span class="hljs-string">"n % 10 = 3 and n % 100 != 13"</span>
+    }
+  }
+}
+</code></pre>
+<h2 id="page_Efficient_pluralGenerator">Efficient pluralGenerator</h2>
+<p>If you need to create many plural generators, parsing the CLDR data many times isn’t efficient.
+You can create a small factory function like this:</p>
+<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> pluralRules = {}; <span class="hljs-comment">// CLDR data</span>
+<span class="hljs-keyword">const</span> pluralMemory = {};
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">pluralGenerator</span>(<span class="hljs-params">locale, type</span>) </span>{
+  <span class="hljs-keyword">const</span> key = <span class="hljs-string">`<span class="hljs-subst">${locale}</span>-<span class="hljs-subst">${type}</span>`</span>;
+
+  <span class="hljs-keyword">if</span> (!pluralMemory.hasOwnProperty(key)) {
+    pluralMemory[key] = makePlural(
+      pluralRules[<span class="hljs-string">`plurals-type-<span class="hljs-subst">${type}</span>`</span>][locale]
+    );
+  }
+
+  <span class="hljs-keyword">return</span> pluralMemory[key];
+}
+</code></pre>
+    </div>
+
+        <nav>
+        <ul class="Pager">
+            <li class=Pager--prev><a href="../Packages/intl_formatters.html">Previous</a></li>            <li class=Pager--next><a href="../Packages/messageformat.html">Next</a></li>        </ul>
+    </nav>
+    </article>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <!-- JS -->
+            <script src="../themes/daux/js/daux.min.js"></script>
+    
+        <script>
+        
+        window.searchLanguage = "";
+        window.searchTranslation = {"Search_one_result":"1 result","Search_results":"!count results","Search_no_results":"Nothing found","Search_common_words_ignored":"Common words are largely ignored","Search_too_short":"Search too short","Search_one_character_or_more":"Should be one character or more","Search_should_be_x_or_more":"Should be !min characters or more","Link_previous":"Previous","Link_next":"Next"};
+    </script>
+
+    <!-- Search -->
+    <script type="text/javascript" src="../daux_libraries/search.min.js"></script>
+
+    <script>
+        window.search({'base_url': '../'})
+    </script>
+</body>
+</html>
