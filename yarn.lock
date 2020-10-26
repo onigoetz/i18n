@@ -1120,13 +1120,6 @@
   resolved "https://registry.yarnpkg.com/@ffz/icu-msgparser/-/icu-msgparser-1.0.2.tgz#6d125b9d9ff7316775abd66373ff4f4e8ec7ca00"
   integrity sha512-LTtWOQ4fftxcC7Z86u9LTi1eZ4X07hQH5yvcURlYSpVTaY9dXXE/h5BdtJB0TIk7FkSiAuN/3sRkfHD0u3+S7Q==
 
-"@formatjs/ecma402-abstract@^1.2.5":
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/@formatjs/ecma402-abstract/-/ecma402-abstract-1.2.5.tgz#5a61ac1990ff2df8d1348ab12e186c1ca2a2bd71"
-  integrity sha512-k0fqS3LBNOHueAoMdgig8Ni6TchsH+zbzWBzX2gTFm50X9mxHwnuXdCk0XLlCIbvgVVlzcO254Men/mHAheMbg==
-  dependencies:
-    tslib "^2.0.1"
-
 "@formatjs/ecma402-abstract@^1.2.6":
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/@formatjs/ecma402-abstract/-/ecma402-abstract-1.2.6.tgz#8929525dcb49af31f348fcb4789263743872b57f"
@@ -4303,7 +4296,7 @@ interpret@^1.0.0:
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.4.0.tgz#665ab8bc4da27a774a40584e812e3e0fa45b1a1e"
   integrity sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==
 
-intl-messageformat-parser@6.0.11:
+intl-messageformat-parser@6.0.11, intl-messageformat-parser@^6.0.11:
   version "6.0.11"
   resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-6.0.11.tgz#b5769990f9eb8c015ef726cf4d782a9445544993"
   integrity sha512-0avgk5LN8KGpH6CC8OsDAttzkTtR/6Oy50dYaUpbulnNUDrSxPFMc79IJRktN8PT+HwOzhk26vvfJHXyPdf6ZA==
@@ -4311,21 +4304,13 @@ intl-messageformat-parser@6.0.11:
     "@formatjs/ecma402-abstract" "^1.2.6"
     tslib "^2.0.1"
 
-intl-messageformat-parser@^6.0.10:
-  version "6.0.10"
-  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-6.0.10.tgz#6202bd4e9b59eaa5bf34d4db2ef8c2af46d40037"
-  integrity sha512-xURB8PchDsdLEpedzPLzBmGCK996FPBl3yLQIUxcM3EAA3TdhXPArX6GY4LVXQNeq8V4WtwmgxaJOKtdOpA8pg==
-  dependencies:
-    "@formatjs/ecma402-abstract" "^1.2.5"
-    tslib "^2.0.1"
-
-intl-messageformat@9.3.11:
-  version "9.3.11"
-  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-9.3.11.tgz#f39d5aa96037ea210769c0b18c380387a3e254cd"
-  integrity sha512-eqnfSDa6oI/bBtPgzSAbsjUDUshhdLmMKOQds0xGhpcgp760Gq/Fk+f4HquO7VIGp9wSx7ej65e+NOJQTBe/YQ==
+intl-messageformat@9.3.12:
+  version "9.3.12"
+  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-9.3.12.tgz#a5a3f02b7cb275ac1f5bc8127a86763c24fc1255"
+  integrity sha512-+BrnExt/3ICcMVTQoN1aTueTvCblZ94UH/hQQ4sTFaN7E59BPqTN/vBF5W446JFWuYY0cGjuielBbjSsye+13w==
   dependencies:
     fast-memoize "^2.5.2"
-    intl-messageformat-parser "^6.0.10"
+    intl-messageformat-parser "^6.0.11"
     tslib "^2.0.1"
 
 ip-regex@^2.1.0:
