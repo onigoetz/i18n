@@ -7,12 +7,12 @@
   "typings": "./dist/index.d.ts",
   "sideEffects": false,
   "devDependencies": {
-    "@swissquote/crafty": "1.13.5",
-    "@swissquote/crafty-preset-jest": "1.13.5",
-    "@swissquote/crafty-preset-typescript": "1.13.5",
-    "@swissquote/crafty-runner-gulp": "1.13.5",
-    "@swissquote/crafty-runner-rollup": "1.13.5",
-    "@types/jest": "^26.0.10",
+    "@swissquote/crafty": "1.14.0-beta.1",
+    "@swissquote/crafty-preset-jest": "1.14.0-beta.1",
+    "@swissquote/crafty-preset-typescript": "1.14.0-beta.1",
+    "@swissquote/crafty-runner-gulp": "1.14.0-beta.1",
+    "@swissquote/crafty-runner-rollup": "1.14.0-beta.1",
+    "@types/jest": "^26.0.15",
     "jest-sonar": "0.2.11",
     "test-cldr-data": "0.1.0"
   },
