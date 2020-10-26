@@ -1127,6 +1127,13 @@
   dependencies:
     tslib "^2.0.1"
 
+"@formatjs/ecma402-abstract@^1.2.6":
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/@formatjs/ecma402-abstract/-/ecma402-abstract-1.2.6.tgz#8929525dcb49af31f348fcb4789263743872b57f"
+  integrity sha512-5/wUWuOFEaZeHhDvc+xgkFZxjYcij9/CjyUHngTfWhx+NwYqo8/xusVYv9SnTYDHAahek3OSCP93tzcv4M+7Xw==
+  dependencies:
+    tslib "^2.0.1"
+
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@gulp-sourcemaps/identity-map/-/identity-map-1.0.2.tgz#1e6fe5d8027b1f285dc0d31762f566bccd73d5a9"
@@ -4296,7 +4303,15 @@ interpret@^1.0.0:
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.4.0.tgz#665ab8bc4da27a774a40584e812e3e0fa45b1a1e"
   integrity sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==
 
-intl-messageformat-parser@6.0.10, intl-messageformat-parser@^6.0.10:
+intl-messageformat-parser@6.0.11:
+  version "6.0.11"
+  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-6.0.11.tgz#b5769990f9eb8c015ef726cf4d782a9445544993"
+  integrity sha512-0avgk5LN8KGpH6CC8OsDAttzkTtR/6Oy50dYaUpbulnNUDrSxPFMc79IJRktN8PT+HwOzhk26vvfJHXyPdf6ZA==
+  dependencies:
+    "@formatjs/ecma402-abstract" "^1.2.6"
+    tslib "^2.0.1"
+
+intl-messageformat-parser@^6.0.10:
   version "6.0.10"
   resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-6.0.10.tgz#6202bd4e9b59eaa5bf34d4db2ef8c2af46d40037"
   integrity sha512-xURB8PchDsdLEpedzPLzBmGCK996FPBl3yLQIUxcM3EAA3TdhXPArX6GY4LVXQNeq8V4WtwmgxaJOKtdOpA8pg==
@@ -6939,10 +6954,10 @@ spdx-license-ids@^3.0.0:
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-3.0.6.tgz#c80757383c28abf7296744998cbc106ae8b854ce"
   integrity sha512-+orQK83kyMva3WyPf59k1+Y525csj5JejicWut55zeTWANuN17qSiSLUXWtzHeNWORSvT7GLDJ/E/XiIWoXBTw==
 
-speedscope@1.11.0:
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/speedscope/-/speedscope-1.11.0.tgz#c5ee4905a635138d92cc9a707a1659c517778263"
-  integrity sha512-ojRGWoLWxHfuq6hSd4ihOzyaH7AozSVyTA4pac284M7FcW/Gh6ZPX/nt/kFn5Y35vEx8Xv6HcRJ93+TdqBv8Ng==
+speedscope@1.11.1:
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/speedscope/-/speedscope-1.11.1.tgz#37781d38f755c65cf2d4edb70126808e66228b51"
+  integrity sha512-7YVWhPfhuU/A/VXNlLYYftYu2Hu7MzIySANYPO3XCVXDaxGKxVOlbqScUh0n5UDdmj0XXtszCWL++PNTWW27vQ==
   dependencies:
     open "7.2.0"
 
