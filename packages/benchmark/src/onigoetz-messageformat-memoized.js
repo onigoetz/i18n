@@ -1,6 +1,7 @@
 import { parse, createRenderer } from "@onigoetz/messageformat";
 import makePlural from "@onigoetz/make-plural";
-import { dateFormatter, numberFormatter } from "@onigoetz/intl-formatters";
+import { dateFormatter , numberFormatter } from "@onigoetz/intl-formatters";
+import memoize from "nano-memoize";
 
 const pluralRules = {
   "plurals-type-cardinal": {
@@ -24,11 +25,21 @@ const pluralRules = {
   }
 };
 
+const memoizedPluralGenerator = memoize((cldr, type) =>
+  makePlural(pluralRules[`plurals-type-${type}`][cldr.locale])
+);
+const memoizedNumberFormatter = memoize((locale, options) =>
+  numberFormatter(locale, options)
+);
+const memoizedDateFormatter = memoize((locale, options) =>
+  dateFormatter(locale, options)
+);
+
 const renderer = createRenderer(
   { locale: "en" },
-  (cldr, type) => makePlural(pluralRules[`plurals-type-${type}`][cldr.locale]),
-  (locale, options, value) => numberFormatter(locale, options)(value),
-  (locale, options, value) => dateFormatter(locale, options)(value)
+  memoizedPluralGenerator,
+  (locale, options, value) => memoizedNumberFormatter(locale, options)(value),
+  (locale, options, value) => memoizedDateFormatter(locale, options)(value)
 );
 
 export default (string, options) => {

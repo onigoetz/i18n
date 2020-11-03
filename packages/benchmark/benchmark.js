@@ -67,7 +67,7 @@ function runAll(name, instances, string) {
   console.log("\n==>", name);
 
   let bench = new benchmark.Suite()
-    .on("cycle", event => console.log(String(event.target)))
+    .on("cycle", event => console.log("-", String(event.target)))
     .on("complete", function() {
       console.log("Fastest is " + this.filter("fastest").map("name"));
     });
@@ -79,6 +79,7 @@ function runAll(name, instances, string) {
   bench.run();
 }
 
+register("@onigoetz/messageformat (memoized)", require("./dist/js/onigoetz-messageformat-memoized.min.js"));
 register("@onigoetz/messageformat", require("./dist/js/onigoetz-messageformat.min.js"));
 register("@phensley/messageformat", require("./dist/js/phensley-messageformat.min.js"));
 register("@ffz/icu-msgparser", require("./dist/js/ffz-icu-msgparser.min.js"));

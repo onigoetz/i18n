@@ -1,278 +1,37 @@
 ## 1
 
-==> string_msg
-@ffz/icu-msgparser x 1,703,314 ops/sec ±0.45% (89 runs sampled)
-sq-messageformat x 2,505,147 ops/sec ±0.62% (94 runs sampled)
-intl-messageformat x 289,746 ops/sec ±0.85% (90 runs sampled)
-@phensley/messageformat x 4,807,236 ops/sec ±0.32% (95 runs sampled)
-Fastest is @phensley/messageformat
-
-==> simple_msg
-@ffz/icu-msgparser x 1,131,188 ops/sec ±0.25% (96 runs sampled)
-sq-messageformat x 1,301,079 ops/sec ±0.48% (96 runs sampled)
-intl-messageformat x 223,835 ops/sec ±0.78% (92 runs sampled)
-@phensley/messageformat x 2,054,959 ops/sec ±0.35% (97 runs sampled)
-Fastest is @phensley/messageformat
-
-==> normal_msg
-@ffz/icu-msgparser x 19,615 ops/sec ±1.61% (93 runs sampled)
-sq-messageformat x 200,127 ops/sec ±0.44% (97 runs sampled)
-intl-messageformat x 11,780 ops/sec ±2.30% (89 runs sampled)
-@phensley/messageformat x 351,782 ops/sec ±3.29% (93 runs sampled)
-Fastest is @phensley/messageformat
-
-==> complex_msg
-@ffz/icu-msgparser x 20,005 ops/sec ±0.40% (93 runs sampled)
-sq-messageformat x 43,282 ops/sec ±0.36% (94 runs sampled)
-intl-messageformat x 4,868 ops/sec ±2.07% (94 runs sampled)
-@phensley/messageformat x 35,138 ops/sec ±0.30% (97 runs sampled)
-Fastest is sq-messageformat
-
-## 2
-==> string_msg
-sq-messageformat x 2,513,245 ops/sec ±0.42% (92 runs sampled)
-@phensley/messageformat x 3,895,820 ops/sec ±0.55% (96 runs sampled)
-Fastest is @phensley/messageformat
-
-==> simple_msg
-sq-messageformat x 1,300,042 ops/sec ±0.41% (97 runs sampled)
-@phensley/messageformat x 399,630 ops/sec ±0.85% (95 runs sampled)
-Fastest is sq-messageformat
-
-==> normal_msg
-sq-messageformat x 195,087 ops/sec ±0.66% (94 runs sampled)
-@phensley/messageformat x 116,935 ops/sec ±0.36% (94 runs sampled)
-Fastest is sq-messageformat
-
-==> complex_msg
-sq-messageformat x 42,365 ops/sec ±0.81% (94 runs sampled)
-@phensley/messageformat x 26,450 ops/sec ±0.83% (89 runs sampled)
-Fastest is sq-messageformat
-
-
-## 3 : Parse only
-
-==> string_msg
-sq-messageformat x 4,903,600 ops/sec ±0.70% (93 runs sampled)
-@phensley/messageformat x 4,568,809 ops/sec ±0.54% (96 runs sampled)
-Fastest is sq-messageformat
-
-==> simple_msg
-sq-messageformat x 3,309,528 ops/sec ±0.47% (93 runs sampled)
-@phensley/messageformat x 2,796,378 ops/sec ±0.41% (95 runs sampled)
-Fastest is sq-messageformat
-
-==> normal_msg
-sq-messageformat x 323,096 ops/sec ±0.22% (96 runs sampled)
-@phensley/messageformat x 376,050 ops/sec ±0.47% (98 runs sampled)
-Fastest is @phensley/messageformat
-
-==> complex_msg
-sq-messageformat x 48,495 ops/sec ±0.21% (94 runs sampled)
-@phensley/messageformat x 37,921 ops/sec ±0.56% (97 runs sampled)
-Fastest is sq-messageformat
-
-
-## 4
-
-==> string_msg
-sq-messageformat x 4,908,390 ops/sec ±1.08% (93 runs sampled)
-@phensley/messageformat x 4,587,622 ops/sec ±0.85% (97 runs sampled)
-Fastest is sq-messageformat
-
-==> simple_msg
-sq-messageformat x 3,316,951 ops/sec ±0.48% (93 runs sampled)
-@phensley/messageformat x 2,776,871 ops/sec ±0.43% (94 runs sampled)
-Fastest is sq-messageformat
-
-==> normal_msg
-sq-messageformat x 325,093 ops/sec ±0.23% (94 runs sampled)
-@phensley/messageformat x 372,280 ops/sec ±0.44% (96 runs sampled)
-Fastest is @phensley/messageformat
-
-==> complex_msg
-sq-messageformat x 48,372 ops/sec ±0.38% (96 runs sampled)
-@phensley/messageformat x 37,130 ops/sec ±0.39% (96 runs sampled)
-Fastest is sq-messageformat
-
-
-## 5
-
-==> string_msg
-sq-messageformat x 4,908,061 ops/sec ±0.58% (92 runs sampled)
-@phensley/messageformat x 4,552,329 ops/sec ±0.52% (95 runs sampled)
-Fastest is sq-messageformat
-
-==> simple_msg
-sq-messageformat x 3,250,456 ops/sec ±0.56% (92 runs sampled)
-@phensley/messageformat x 2,817,582 ops/sec ±0.45% (94 runs sampled)
-Fastest is sq-messageformat
-
-==> normal_msg
-sq-messageformat x 319,640 ops/sec ±0.54% (96 runs sampled)
-@phensley/messageformat x 367,270 ops/sec ±0.90% (95 runs sampled)
-Fastest is @phensley/messageformat
-
-==> complex_msg
-sq-messageformat x 46,800 ops/sec ±1.54% (94 runs sampled)
-@phensley/messageformat x 35,675 ops/sec ±1.59% (90 runs sampled)
-Fastest is sq-messageformat
-
-
-## 6
-
-==> string_msg
-sq-messageformat x 4,832,853 ops/sec ±0.74% (89 runs sampled)
-@phensley/messageformat x 4,527,306 ops/sec ±0.79% (93 runs sampled)
-Fastest is sq-messageformat
-
-==> simple_msg
-sq-messageformat x 3,288,400 ops/sec ±0.87% (96 runs sampled)
-@phensley/messageformat x 2,790,376 ops/sec ±0.52% (96 runs sampled)
-Fastest is sq-messageformat
-
-==> normal_msg
-sq-messageformat x 322,941 ops/sec ±0.28% (92 runs sampled)
-@phensley/messageformat x 367,508 ops/sec ±1.52% (89 runs sampled)
-Fastest is @phensley/messageformat
-
-==> complex_msg
-sq-messageformat x 48,266 ops/sec ±0.44% (94 runs sampled)
-@phensley/messageformat x 37,169 ops/sec ±0.96% (94 runs sampled)
-Fastest is sq-messageformat
-
-
-## 7
-
-==> string_msg
-sq-messageformat x 4,883,739 ops/sec ±0.89% (92 runs sampled)
-@phensley/messageformat x 4,603,303 ops/sec ±0.40% (97 runs sampled)
-Fastest is sq-messageformat
-
-==> simple_msg
-sq-messageformat x 3,328,868 ops/sec ±0.59% (94 runs sampled)
-@phensley/messageformat x 2,798,061 ops/sec ±0.45% (96 runs sampled)
-Fastest is sq-messageformat
-
-==> normal_msg
-sq-messageformat x 326,128 ops/sec ±0.25% (97 runs sampled)
-@phensley/messageformat x 356,813 ops/sec ±1.61% (93 runs sampled)
-Fastest is @phensley/messageformat
-
-==> complex_msg
-sq-messageformat x 48,741 ops/sec ±0.18% (99 runs sampled)
-@phensley/messageformat x 36,234 ops/sec ±0.35% (96 runs sampled)
-Fastest is sq-messageformat
-
-
-## 8
-
-==> string_msg
-sq-messageformat x 4,897,076 ops/sec ±0.57% (92 runs sampled)
-@phensley/messageformat x 4,568,858 ops/sec ±0.64% (94 runs sampled)
-Fastest is sq-messageformat
-
-==> simple_msg
-sq-messageformat x 3,286,006 ops/sec ±0.37% (96 runs sampled)
-@phensley/messageformat x 2,755,989 ops/sec ±0.78% (94 runs sampled)
-Fastest is sq-messageformat
-
-==> normal_msg
-sq-messageformat x 321,557 ops/sec ±0.29% (97 runs sampled)
-@phensley/messageformat x 374,793 ops/sec ±0.52% (97 runs sampled)
-Fastest is @phensley/messageformat
-
-==> complex_msg
-sq-messageformat x 48,831 ops/sec ±0.37% (95 runs sampled)
-@phensley/messageformat x 38,747 ops/sec ±0.38% (98 runs sampled)
-Fastest is sq-messageformat
-
-## 9
-
-==> string_msg
-sq-messageformat x 4,836,960 ops/sec ±0.72% (91 runs sampled)
-@phensley/messageformat x 4,507,765 ops/sec ±0.42% (96 runs sampled)
-Fastest is sq-messageformat
-
-==> simple_msg
-sq-messageformat x 3,298,513 ops/sec ±0.43% (93 runs sampled)
-@phensley/messageformat x 2,801,812 ops/sec ±0.33% (95 runs sampled)
-Fastest is sq-messageformat
-
-==> normal_msg
-sq-messageformat x 338,247 ops/sec ±0.15% (99 runs sampled)
-@phensley/messageformat x 373,065 ops/sec ±0.42% (98 runs sampled)
-Fastest is @phensley/messageformat
-
-==> complex_msg
-sq-messageformat x 50,052 ops/sec ±1.69% (95 runs sampled)
-@phensley/messageformat x 37,758 ops/sec ±0.95% (95 runs sampled)
-Fastest is sq-messageformat
-
-
-## 10
-
-==> string_msg
-sq-messageformat x 4,915,582 ops/sec ±0.62% (88 runs sampled)
-@phensley/messageformat x 4,584,794 ops/sec ±0.46% (91 runs sampled)
-Fastest is sq-messageformat
-
-==> simple_msg
-sq-messageformat x 3,385,697 ops/sec ±0.48% (95 runs sampled)
-@phensley/messageformat x 2,827,310 ops/sec ±0.39% (96 runs sampled)
-Fastest is sq-messageformat
-
-==> normal_msg
-sq-messageformat x 349,088 ops/sec ±0.33% (97 runs sampled)
-@phensley/messageformat x 367,748 ops/sec ±0.51% (98 runs sampled)
-Fastest is @phensley/messageformat
-
-==> complex_msg
-sq-messageformat x 55,917 ops/sec ±0.45% (97 runs sampled)
-@phensley/messageformat x 37,064 ops/sec ±0.39% (96 runs sampled)
-Fastest is sq-messageformat
-
-## 11
-
-
-==> string_msg
-sq-messageformat x 4,888,377 ops/sec ±0.46% (94 runs sampled)
-@phensley/messageformat x 4,580,222 ops/sec ±0.34% (92 runs sampled)
-Fastest is sq-messageformat
-
-==> simple_msg
-sq-messageformat x 3,361,244 ops/sec ±0.52% (95 runs sampled)
-@phensley/messageformat x 2,785,504 ops/sec ±0.35% (96 runs sampled)
-Fastest is sq-messageformat
-
-==> normal_msg
-sq-messageformat x 341,053 ops/sec ±0.35% (96 runs sampled)
-@phensley/messageformat x 359,611 ops/sec ±0.43% (97 runs sampled)
-Fastest is @phensley/messageformat
-
-==> complex_msg
-sq-messageformat x 53,716 ops/sec ±0.39% (96 runs sampled)
-@phensley/messageformat x 36,606 ops/sec ±0.49% (95 runs sampled)
-Fastest is sq-messageformat
-
-## 12
-
-==> string_msg
-@onigoetz/messageformat x 4,803,626 ops/sec ±0.42% (92 runs sampled)
-@phensley/messageformat x 4,036,122 ops/sec ±0.33% (96 runs sampled)
+==> String
+@onigoetz/messageformat x 4,885,039 ops/sec ±0.59% (89 runs sampled)
+@phensley/messageformat x 4,660,653 ops/sec ±0.29% (94 runs sampled)
+@ffz/icu-msgparser x 2,521,413 ops/sec ±0.65% (90 runs sampled)
+format-message-parse x 3,927,048 ops/sec ±0.44% (94 runs sampled)
+intl-messageformat x 219,748 ops/sec ±0.98% (91 runs sampled)
+messageformat x 201,673 ops/sec ±0.81% (91 runs sampled)
 Fastest is @onigoetz/messageformat
 
-==> simple_msg
-@onigoetz/messageformat x 1,377,437 ops/sec ±0.29% (92 runs sampled)
-@phensley/messageformat x 394,935 ops/sec ±0.35% (92 runs sampled)
-Fastest is @onigoetz/messageformat
+==> Message with one variable
+@onigoetz/messageformat x 1,566,114 ops/sec ±0.65% (96 runs sampled)
+@phensley/messageformat x 2,001,930 ops/sec ±0.53% (95 runs sampled)
+@ffz/icu-msgparser x 1,474,988 ops/sec ±0.38% (98 runs sampled)
+format-message-parse x 2,014,542 ops/sec ±0.33% (94 runs sampled)
+intl-messageformat x 164,315 ops/sec ±1.15% (90 runs sampled)
+messageformat x 188,468 ops/sec ±0.46% (94 runs sampled)
+Fastest is format-message-parse,@phensley/messageformat
 
-==> normal_msg
-@onigoetz/messageformat x 224,041 ops/sec ±0.13% (97 runs sampled)
-@phensley/messageformat x 113,477 ops/sec ±0.32% (96 runs sampled)
-Fastest is @onigoetz/messageformat
+==> Let's get more creative
+@onigoetz/messageformat x 27,322 ops/sec ±1.45% (91 runs sampled)
+@phensley/messageformat x 342,004 ops/sec ±9.55% (95 runs sampled)
+@ffz/icu-msgparser x 28,776 ops/sec ±1.58% (96 runs sampled)
+format-message-parse x 18,569 ops/sec ±2.19% (90 runs sampled)
+intl-messageformat x 10,473 ops/sec ±3.85% (87 runs sampled)
+messageformat x 15,739 ops/sec ±1.57% (90 runs sampled)
+Fastest is @phensley/messageformat
 
-==> complex_msg
-@onigoetz/messageformat x 51,307 ops/sec ±0.18% (96 runs sampled)
-@phensley/messageformat x 26,248 ops/sec ±0.27% (96 runs sampled)
+==> Overly complex message
+@onigoetz/messageformat x 61,555 ops/sec ±1.86% (94 runs sampled)
+@phensley/messageformat x 36,332 ops/sec ±0.43% (93 runs sampled)
+@ffz/icu-msgparser x 32,669 ops/sec ±0.48% (94 runs sampled)
+format-message-parse x 8,308 ops/sec ±2.54% (91 runs sampled)
+intl-messageformat x 4,563 ops/sec ±2.81% (94 runs sampled)
+messageformat x 6,760 ops/sec ±0.71% (93 runs sampled)
 Fastest is @onigoetz/messageformat

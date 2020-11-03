@@ -5422,6 +5422,11 @@ mute-stream@0.0.7:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
   integrity sha1-MHXOk7whuPq0PhvE2n6BFe0ee6s=
 
+nano-memoize@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/nano-memoize/-/nano-memoize-1.2.0.tgz#cb48f837901564b8beaec1aa2dbf07bfd0c5a7b9"
+  integrity sha512-iNWfHsFJSXsGVqMXKS5RqdaEnQsWaxEApRmP3WdldI3NFqZTkQfmaZ28+U60/cAjEBK5AjFZZg5KwH9vhv+nvA==
+
 nanomatch@^1.2.9:
   version "1.2.13"
   resolved "https://registry.yarnpkg.com/nanomatch/-/nanomatch-1.2.13.tgz#b87a8aa4fc0de8fe6be88895b38983ff265bd119"

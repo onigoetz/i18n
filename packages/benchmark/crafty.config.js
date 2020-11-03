@@ -12,6 +12,10 @@ module.exports = {
       source: "src/onigoetz-messageformat.js",
       format: "cjs"
     },
+    "onigoetz-messageformat-memoized": {
+      source: "src/onigoetz-messageformat-memoized.js",
+      format: "cjs"
+    },
     "intl-messageformat": {
       source: "src/intl-messageformat.js",
       format: "cjs"
@@ -30,7 +34,7 @@ module.exports = {
     }
   },
   rollup(crafty, bundle, rollupConfig) {
-    // Disable minification for profiling
-    //delete rollupConfig.input.plugins.uglify;
+    // We want commonjs output, which means default exports are going to be mapped to `module.exports`
+    rollupConfig.output.exports = "auto";
   }
 };

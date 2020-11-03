@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "devDependencies": {
     "@ffz/icu-msgparser": "1.0.2",
+    "@onigoetz/intl-formatters": "0.1.0",
     "@onigoetz/make-plural": "0.1.0",
     "@onigoetz/messageformat": "0.1.0",
     "@phensley/messageformat": "1.2.2",
@@ -24,5 +25,8 @@
     "lint:ci": "crafty jsLint src/*.js src/**/*.js",
     "build": "crafty run",
     "benchmark": "node benchmark.js"
+  },
+  "dependencies": {
+    "nano-memoize": "^1.2.0"
   }
 }
