@@ -17,8 +17,8 @@ jobs:
     - name: Generate documentation
       run: vendor/bin/daux generate
     - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@2.0.3
-      env:
+      uses: JamesIves/github-pages-deploy-action@3.7.1
+      with:
         FOLDER: "static"
         BRANCH: gh-pages
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
