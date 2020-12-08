@@ -13,7 +13,8 @@ export function pluralGenerator(
   locale: string,
   options?: PluralGeneratorOptions
 ): (value: number) => "zero" | "one" | "two" | "few" | "many" | "other" {
-  const plural = new Intl.PluralRules(locale, { type: options.type });
+  const type = (options && options.type) || "cardinal";
+  const plural = new Intl.PluralRules(locale, { type });
   return value =>
     plural.select(value) as "zero" | "one" | "two" | "few" | "many" | "other";
 }

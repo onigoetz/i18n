@@ -2,7 +2,7 @@
 
 import { DateFormatterOptions } from "@onigoetz/i18n-types";
 
-import { hasOwnProperty } from "./utils";
+import { objectExtend } from "./utils";
 
 function convertDateToIntl(
   format: DateFormatterOptions["date"]
@@ -57,16 +57,10 @@ function convertToIntl(
     return convertTimeToIntl(options.time);
   }
 
-  const dateOptions = convertDateToIntl(options.datetime);
-  const timeOptions = convertTimeToIntl(options.datetime);
-
-  for (const opt in timeOptions) {
-    if (hasOwnProperty(timeOptions, opt)) {
-      dateOptions[opt] = timeOptions[opt];
-    }
-  }
-
-  return dateOptions;
+  return objectExtend(
+    convertDateToIntl(options.datetime),
+    convertTimeToIntl(options.datetime)
+  );
 }
 
 /**

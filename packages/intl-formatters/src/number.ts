@@ -35,9 +35,13 @@ function numberTruncate(value: number): number {
  *   Ref: #376
  */
 function numberRound(
-  method: "round" | "ceil" | "floor" | "truncate"
+  method: "round" | "ceil" | "floor" | "truncate" | undefined
 ): (value: number) => number {
-  const m = method === "truncate" ? numberTruncate : Math[method];
+  let m: (number: number) => number = v => v;
+
+  if (method) {
+    m = method === "truncate" ? numberTruncate : Math[method];
+  }
 
   return function(value: number) {
     value = +value;
@@ -48,7 +52,7 @@ function numberRound(
     }
 
     // Return original value if no rounding method is specified.
-    return m ? m(value) : value;
+    return m(value);
   };
 }
 
@@ -61,7 +65,7 @@ function getFormatter(
   const formatter = new Intl.NumberFormat(locale, options);
   const roundFn = numberRound(options.round);
 
-  return function(value) {
+  return function(value: number): string {
     return formatter.format(roundFn(value));
   };
 }
