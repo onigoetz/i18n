@@ -8,8 +8,10 @@ describe("parse()", () => {
   });
 
   it("coerces input to string", () => {
+    //eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/ban-ts-comment
     //@ts-ignore
     expect(parse()).toEqual({ t: "text", v: "undefined" });
+    //eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/ban-ts-comment
     //@ts-ignore
     expect(parse(null)).toEqual({ t: "text", v: "null" });
     expect(parse(12.34)).toEqual({ t: "text", v: "12.34" });
@@ -27,7 +29,10 @@ describe("parse()", () => {
   });
 
   it("parses vars with number", () => {
-    expect(parse("{test, number}")).toEqual({ v: "test", t: "number" } as Token);
+    expect(parse("{test, number}")).toEqual({
+      v: "test",
+      t: "number"
+    } as Token);
   });
 
   // TODO :: integer, currency, percent

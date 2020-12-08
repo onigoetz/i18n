@@ -21,8 +21,10 @@ describe("parse()", () => {
   });
 
   it("coerces input to string", () => {
+    //eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/ban-ts-comment
     //@ts-ignore
     expect(render(parse())).toEqual("undefined");
+    //eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/ban-ts-comment
     //@ts-ignore
     expect(render(parse(null))).toEqual("null");
     expect(render(parse(12.34))).toEqual("12.34");

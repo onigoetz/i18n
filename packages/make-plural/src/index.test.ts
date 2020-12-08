@@ -25,7 +25,7 @@ const enOrdinalReduced = {
 };
 
 it("Answer with 'other' in case of no data", () => {
-  const m = makePlural(undefined as unknown as Rules);
+  const m = makePlural((undefined as unknown) as Rules);
 
   expect(m(1)).toEqual("other");
   expect(m(21)).toEqual("other");
