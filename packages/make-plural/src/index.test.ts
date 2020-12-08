@@ -1,5 +1,5 @@
 import * as plurals from "test-cldr-data/supplemental_plurals.json";
-import makePlural from "./index";
+import makePlural, { Rules } from "./index";
 
 const enCardinal = {
   "pluralRule-count-one": "i = 1 and v = 0 @integer 1",
@@ -25,7 +25,7 @@ const enOrdinalReduced = {
 };
 
 it("Answer with 'other' in case of no data", () => {
-  const m = makePlural(undefined);
+  const m = makePlural(undefined as unknown as Rules);
 
   expect(m(1)).toEqual("other");
   expect(m(21)).toEqual("other");

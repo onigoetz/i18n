@@ -18,7 +18,7 @@
 
 type Context = { [key: string]: number };
 
-type Rules = { [key: string]: string };
+export type Rules = { [key: string]: string };
 
 // eslint-disable-next-line @swissquote/swissquote/sonarjs/cognitive-complexity
 function parse(cond: string, context: Context): string {
