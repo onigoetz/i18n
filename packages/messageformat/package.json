@@ -6,6 +6,9 @@
   "module": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "sideEffects": false,
+  "dependencies": {
+    "@onigoetz/i18n-types": "0.1.0"
+  },
   "devDependencies": {
     "@swissquote/crafty": "1.14.0-beta.1",
     "@swissquote/crafty-preset-jest": "1.14.0-beta.1",

@@ -1,7 +1,19 @@
 /* We'll deal with the complexity in a moment */
 /* eslint-disable @swissquote/swissquote/sonarjs/cognitive-complexity */
 import { compile, match } from "./matcher";
-import { Submessages, Token, Context } from "./types";
+import {
+  Submessages,
+  Token,
+  Context,
+  ArgToken,
+  DateTimeToken,
+  NumberToken,
+  PluralToken,
+  SelectOrdinalToken,
+  SelectToken,
+  ValueToken,
+  TextToken
+} from "./types";
 
 const OPEN = "{";
 const CLOSE = "}";
@@ -21,34 +33,21 @@ const IDENTIFIER = compile(
 const PLURAL = compile(/(=\d+(\.\d+)?)|zero|one|two|few|many|other/.source);
 
 /**
- * Internal type to simplify the code
- */
-type NaiveToken = {
-  t: string;
-  v?: string;
-  f?: number | string;
-  // Used by PluralToken, SelectOrdinalToken, SelectToken
-  o?: Submessages;
-  // Used only by BlockToken
-  n?: Token[];
-};
-
-/**
  * Transform an array of tokens into either
  * 1. a no-op Token if it's empty
  * 2. a single token if there is only one element
  * 3. a block Token if there is more inside
  *
- * @param n
+ * @param c
  */
-function flatten(n: Token[]): Token {
-  switch (n.length) {
+function flatten(c: Token[]): Token {
+  switch (c.length) {
     case 0:
       return { t: "noop" };
     case 1:
-      return n[0];
+      return c[0];
     default:
-      return { t: "block", n };
+      return { t: "block", c };
   }
 }
 
@@ -194,9 +193,9 @@ function isNot(context: Context, char: string) {
  */
 function parseSubmessage(
   context: Context,
-  parent: NaiveToken,
+  parent: ValueToken,
   specialHash: boolean
-): NaiveToken {
+): Token {
   skipSpace(context);
   if (isNot(context, OPEN)) {
     throw expected(OPEN, context);
@@ -232,7 +231,7 @@ function parseSubmessage(
  */
 function parseSubmessages(
   context: Context,
-  parent: NaiveToken,
+  parent: ValueToken,
   specialHash: boolean,
   matcher: RegExp
 ): Submessages {
@@ -291,7 +290,10 @@ function parseOffset(context: Context): number {
  * @param context
  * @param current The token we're preparing
  */
-function parsePlural(context: Context, current: NaiveToken) {
+function parsePlural(
+  context: Context,
+  current: PluralToken | SelectOrdinalToken
+) {
   const char = context.msg[context.i];
   if (char === CLOSE) {
     throw expected("sub-messages", context);
@@ -302,12 +304,12 @@ function parsePlural(context: Context, current: NaiveToken) {
   // Get offset if defined
   const offset = parseOffset(context);
   if (offset) {
-    current.f = offset;
+    current.o = offset;
     skipSpace(context);
   }
 
   // Parse available options
-  current.o = parseSubmessages(context, current, true, PLURAL);
+  current.s = parseSubmessages(context, current, true, PLURAL);
   return current;
 }
 
@@ -321,7 +323,7 @@ function parsePlural(context: Context, current: NaiveToken) {
  * @param context
  * @param current The token we're preparing
  */
-function parseSelect(context: Context, current: NaiveToken) {
+function parseSelect(context: Context, current: SelectToken) {
   const char = context.msg[context.i];
   if (char === CLOSE) {
     throw expected("sub-messages", context);
@@ -330,11 +332,11 @@ function parseSelect(context: Context, current: NaiveToken) {
   skipSeparator(char, context);
 
   // Parse available options
-  current.o = parseSubmessages(context, current, false, IDENTIFIER);
+  current.s = parseSubmessages(context, current, false, IDENTIFIER);
   return current;
 }
 
-function parseSimple(context: Context, current: NaiveToken) {
+function parseSimple(context: Context, current: DateTimeToken | NumberToken) {
   const char = context.msg[context.i];
   if (char === CLOSE) {
     return current;
@@ -359,7 +361,7 @@ function parseSimple(context: Context, current: NaiveToken) {
  * @param context
  * @param parent
  */
-function parseElement(context: Context, parent: NaiveToken): NaiveToken {
+function parseElement(context: Context, parent: Token): Token {
   ++context.i;
   skipSpace(context);
 
@@ -370,7 +372,7 @@ function parseElement(context: Context, parent: NaiveToken): NaiveToken {
   }
 
   // Let's prepare a simple argument block
-  const out: NaiveToken = { t: "arg", v: id } as NaiveToken;
+  const out: Token = { t: "arg", v: id } as Token;
 
   skipSpace(context);
 
@@ -389,22 +391,22 @@ function parseElement(context: Context, parent: NaiveToken): NaiveToken {
     throw expected("type", context);
   }
 
-  out.t = type;
+  out.t = type as Token["t"];
   skipSpace(context);
 
   // Some types have a special treatment
   switch (type) {
     case "plural":
     case "selectordinal":
-      parsePlural(context, out);
+      parsePlural(context, out as PluralToken);
       break;
 
     case "select":
-      parseSelect(context, out);
+      parseSelect(context, out as SelectToken);
       break;
 
     default:
-      parseSimple(context, out);
+      parseSimple(context, out as DateTimeToken);
       break;
   }
 
@@ -427,9 +429,9 @@ function parseElement(context: Context, parent: NaiveToken): NaiveToken {
  */
 function parseAST(
   context: Context,
-  parent: NaiveToken | null,
+  parent: ValueToken,
   specialHash: boolean
-): NaiveToken {
+): Token {
   const out = [];
 
   while (context.i < context.l) {
@@ -446,7 +448,13 @@ function parseAST(
     // If we're in a 'plural' or 'selectordinal', '#' refers to the parent variable, (plus or minus its offset)
     if (specialHash && char === SUB_VAR) {
       ++context.i;
-      out.push({ t: "arg", v: parent.v, f: parent.f });
+      // We can safely cast here as `specialHash` is only true if we are in a Plural or SelectOrdinal
+      // and both have an offset
+      out.push({
+        t: "arg",
+        v: parent.v,
+        o: (parent as PluralToken).o
+      } as ArgToken);
     } else if (char === OPEN) {
       // If we see a block start, we send it to `parseElement` and add it to the array if an element was found
       const element = parseElement(context, parent);
@@ -457,7 +465,7 @@ function parseAST(
       // Otherwise it's probably just text, which we add if it was found
       const text = parseText(context, specialHash);
       if (text) {
-        out.push({ t: "text", v: text });
+        out.push({ t: "text", v: text } as TextToken);
       }
     }
 
@@ -476,5 +484,9 @@ function parseAST(
  */
 export default function parse(message?: string | number): Token {
   const msg = String(message);
-  return parseAST({ msg, l: msg.length, i: 0 }, null, false) as Token;
+  return parseAST(
+    { msg, l: msg.length, i: 0 },
+    {} as ValueToken, // We could normally avoid this argument since parent is only used when the third parameter (specialHash) is used and thus not needed for the initial parse
+    false
+  ) as Token;
 }

@@ -18,44 +18,61 @@ export type Submessages = {
   other: Token;
 };
 
+/**
+ * Lexicon:
+ * t: Type
+ * v: Variable
+ * o: Offset
+ * s: Submessages
+ * c: children
+ * f: format
+ */
+
 export type TextToken = { t: "text"; v: string };
-export type ArgToken = { t: "arg"; v: string; f?: number };
+export type ArgToken = { t: "arg"; v: string; o?: number };
 export type SelectOrdinalToken = {
   t: "selectordinal";
   v: string;
-  f?: number;
-  o: Submessages;
+  o?: number;
+  s: Submessages;
 };
 export type PluralToken = {
   t: "plural";
   v: string;
-  f?: number;
-  o: Submessages;
+  o?: number;
+  s: Submessages;
 };
 export type SelectToken = {
   t: "select";
   v: string;
-  o: Submessages;
+  s: Submessages;
 };
-export type SimpleToken = {
-  t: "date" | "time" | "datetime" | "number";
-  f?: string;
+export type DateTimeToken = {
+  t: "date" | "time" | "datetime";
   v: string;
+  f?: string;
 };
+export type NumberToken = {
+  t: "number";
+  v: string;
+  f?: string;
+};
+
+export type ValueToken =
+  | TextToken
+  | ArgToken
+  | PluralToken
+  | SelectOrdinalToken
+  | SelectToken
+  | DateTimeToken
+  | NumberToken;
+
 export type BlockToken = {
   t: "block";
-  n: Token[];
+  c: Token[];
 };
 export type NOOPToken = {
   t: "noop";
 };
 
-export type Token =
-  | TextToken
-  | ArgToken
-  | BlockToken
-  | NOOPToken
-  | PluralToken
-  | SelectOrdinalToken
-  | SelectToken
-  | SimpleToken;
+export type Token = BlockToken | NOOPToken | ValueToken;

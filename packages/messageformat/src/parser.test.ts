@@ -1,4 +1,5 @@
 import parse from "./parser";
+import { Token } from "./types";
 
 describe("parse()", () => {
   it("accepts strings", () => {
@@ -8,23 +9,23 @@ describe("parse()", () => {
 
   it("coerces input to string", () => {
     expect(parse()).toEqual({ t: "text", v: "undefined" });
-    expect(parse(null)).toEqual({ t: "text", v: "null" });
+    expect(parse(null as unknown as string)).toEqual({ t: "text", v: "null" });
     expect(parse(12.34)).toEqual({ t: "text", v: "12.34" });
   });
 
   it("parses variables", () => {
     expect(parse("This is a {test}.")).toEqual({
       t: "block",
-      n: [
+      c: [
         { t: "text", v: "This is a " },
         { t: "arg", v: "test" },
         { t: "text", v: "." }
       ]
-    });
+    } as Token);
   });
 
   it("parses vars with number", () => {
-    expect(parse("{test, number}")).toEqual({ v: "test", t: "number" });
+    expect(parse("{test, number}")).toEqual({ v: "test", t: "number" } as Token);
   });
 
   // TODO :: integer, currency, percent
@@ -33,11 +34,11 @@ describe("parse()", () => {
       v: "test",
       t: "number",
       f: "percent"
-    });
+    } as Token);
   });
 
   it("parses vars with date", () => {
-    expect(parse("{test, date}")).toEqual({ v: "test", t: "date" });
+    expect(parse("{test, date}")).toEqual({ v: "test", t: "date" } as Token);
   });
 
   // TODO :: short, medium, long, full
@@ -46,11 +47,11 @@ describe("parse()", () => {
       v: "test",
       t: "date",
       f: "short"
-    });
+    } as Token);
   });
 
   it("parses vars with time", () => {
-    expect(parse("{test, time}")).toEqual({ v: "test", t: "time" });
+    expect(parse("{test, time}")).toEqual({ v: "test", t: "time" } as Token);
   });
 
   // TODO :: short, medium, long, full
@@ -59,24 +60,24 @@ describe("parse()", () => {
       v: "test",
       t: "time",
       f: "short"
-    });
+    } as Token);
   });
 
   it("parses plural tags", () => {
     expect(parse("{test, plural, one{one test} other {# test} }")).toEqual({
       v: "test",
       t: "plural",
-      o: {
+      s: {
         one: { t: "text", v: "one test" },
         other: {
           t: "block",
-          n: [
+          c: [
             { t: "arg", v: "test" },
             { t: "text", v: " test" }
           ]
         }
       }
-    });
+    } as Token);
 
     expect(
       parse(`{num_guests, plural, offset:1
@@ -88,18 +89,18 @@ describe("parse()", () => {
     ).toEqual({
       v: "num_guests",
       t: "plural",
-      f: 1,
-      o: {
+      o: 1,
+      s: {
         "=0": {
           t: "block",
-          n: [
+          c: [
             { t: "arg", v: "host" },
             { t: "text", v: " does not give a party." }
           ]
         },
         "=1": {
           t: "block",
-          n: [
+          c: [
             { t: "arg", v: "host" },
             { t: "text", v: " invites " },
             { t: "arg", v: "guest" },
@@ -111,7 +112,7 @@ describe("parse()", () => {
         },
         "=2": {
           t: "block",
-          n: [
+          c: [
             { t: "arg", v: "host" },
             { t: "text", v: " invites " },
             { t: "arg", v: "guest" },
@@ -123,7 +124,7 @@ describe("parse()", () => {
         },
         other: {
           t: "block",
-          n: [
+          c: [
             { t: "arg", v: "host" },
             { t: "text", v: " invites " },
             { t: "arg", v: "guest" },
@@ -131,12 +132,12 @@ describe("parse()", () => {
               t: "text",
               v: " and "
             },
-            { t: "arg", v: "num_guests", f: 1 },
+            { t: "arg", v: "num_guests", o: 1 },
             { t: "text", v: " other people to their party." }
           ]
         }
       }
-    });
+    } as Token);
   });
 
   it("parses plural with offset", () => {
@@ -145,18 +146,18 @@ describe("parse()", () => {
     ).toEqual({
       v: "test",
       t: "plural",
-      f: 3,
-      o: {
+      o: 3,
+      s: {
         one: { t: "text", v: "one test" },
         other: {
           t: "block",
-          n: [
-            { t: "arg", v: "test", f: 3 },
+          c: [
+            { t: "arg", v: "test", o: 3 },
             { t: "text", v: " test" }
           ]
         }
       }
-    });
+    } as Token);
   });
 
   it("parses selectordinal", () => {
@@ -165,17 +166,17 @@ describe("parse()", () => {
     ).toEqual({
       v: "test",
       t: "selectordinal",
-      o: {
+      s: {
         one: { t: "text", v: "one test" },
         other: {
           t: "block",
-          n: [
+          c: [
             { t: "arg", v: "test" },
             { t: "text", v: " test" }
           ]
         }
       }
-    });
+    } as Token);
   });
 
   it("parses select", () => {
@@ -184,84 +185,84 @@ describe("parse()", () => {
     ).toEqual({
       v: "test",
       t: "select",
-      o: {
+      s: {
         first: { t: "text", v: "yes" },
         second: { t: "text", v: "false" },
         other: { t: "text", v: "maybe" }
       }
-    });
+    } as Token);
   });
 
   it("escapes characters", () => {
     expect(parse("{0} {1} {2}")).toEqual({
       t: "block",
-      n: [
+      c: [
         { t: "arg", v: "0" },
         { t: "text", v: " " },
         { t: "arg", v: "1" },
         { t: "text", v: " " },
         { t: "arg", v: "2" }
       ]
-    });
+    } as Token);
     expect(parse("{0} '{1}' {2}")).toEqual({
       t: "block",
-      n: [
+      c: [
         { t: "arg", v: "0" },
         { t: "text", v: " {1} " },
         { t: "arg", v: "2" }
       ]
-    });
+    } as Token);
     expect(parse("{0} ''{1}'' {2}")).toEqual({
       t: "block",
-      n: [
+      c: [
         { t: "arg", v: "0" },
         { t: "text", v: " '" },
         { t: "arg", v: "1" },
         { t: "text", v: "' " },
         { t: "arg", v: "2" }
       ]
-    });
+    } as Token);
     expect(parse("{0} '''{1}''' {2}")).toEqual({
       t: "block",
-      n: [
+      c: [
         { t: "arg", v: "0" },
         { t: "text", v: " '{1}' " },
         { t: "arg", v: "2" }
       ]
-    });
+    } as Token);
     expect(parse("{0} '{1} {2}")).toEqual({
       t: "block",
-      n: [
+      c: [
         { t: "arg", v: "0" },
         { t: "text", v: " {1} {2}" }
       ]
-    });
+    } as Token);
     expect(parse("{0} ''{1} {2}")).toEqual({
       t: "block",
-      n: [
+      c: [
         { t: "arg", v: "0" },
         { t: "text", v: " '" },
         { t: "arg", v: "1" },
         { t: "text", v: " " },
         { t: "arg", v: "2" }
       ]
-    });
+    } as Token);
   });
 
   it("does not escape sometimes", () => {
     expect(parse("So, '{Mike''s Test}' is real.")).toEqual({
       t: "text",
       v: "So, {Mike's Test} is real."
-    });
+    } as Token);
 
     expect(parse("You've done it now, {name}.")).toEqual({
       t: "block",
-      n: [
+      c: [
         { t: "text", v: "You've done it now, " },
         { t: "arg", v: "name" },
         { t: "text", v: "." }
       ]
-    });
+    } as Token);
   });
 
   it("throws on empty variable", () => {

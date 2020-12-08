@@ -1,3 +1,4 @@
+import { DateFormatterOptions } from "@onigoetz/i18n-types";
 import {
   Token,
   TextToken,
@@ -5,45 +6,43 @@ import {
   PluralToken,
   SelectOrdinalToken,
   SelectToken,
-  SimpleToken,
-  BlockToken
+  NumberToken,
+  DateTimeToken,
+  BlockToken,
+  ValueToken
 } from "./types";
-
-export interface DateFormatterOptions {
-  /**
-   * One of the following String values: full, long, medium, or short, eg. { date: "full" }.
-   */
-  date?: "full" | "long" | "medium" | "short";
-  /**
-   * One of the following String values: full, long, medium, or short, eg. { time: "full" }.
-   */
-  time?: "full" | "long" | "medium" | "short";
-  /**
-   * One of the following String values: full, long, medium, or short, eg. { datetime: "full" }
-   */
-  datetime?: "full" | "long" | "medium" | "short";
-}
 
 type Variables = Record<string, any> | [];
 
-const validDateOptions = {
-  full: "full",
-  long: "long",
-  medium: "medium",
-  short: "short"
-};
+const validDateOptions: ("short" | "full" | "long" | "medium")[] = [
+  "short",
+  "full",
+  "long",
+  "medium"
+];
+const validNumberOptions: ("decimal" | "percent")[] = ["decimal", "percent"];
+function validOrFirst<T>(value: string | undefined, options: T[]): T {
+  if (options.indexOf((value as unknown) as T) > -1) {
+    return (value as unknown) as T;
+  }
 
-const validNumberTypes = {
-  decimal: "decimal",
-  percent: "percent"
-};
+  return options[0];
+}
+
+function get(variables: Variables, token: ValueToken): any {
+  // We recieve either an object or an array, both can be accessible as an index
+  // some keys won't be available, we can live with that.
+  // eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  return variables[token.v];
+}
 
 export default function createRenderer<T>(
   localeHolder: T,
   pluralGenerator: (
     localeHolder: T,
     type: "cardinal" | "ordinal"
-  ) => (number) => string,
+  ) => (number: number) => string,
   numberFormatter: (
     localeHolder: T,
     options: { style: "decimal" | "percent" },
@@ -54,43 +53,41 @@ export default function createRenderer<T>(
     options: DateFormatterOptions,
     value: Date
   ) => string
-) {
+): (token: Token, variables?: Variables) => string {
   const formatters: {
-    [key: string]: (token: Token, variables: Variables) => string;
+    [key: string]: (token: any, variables: Variables) => string;
   } = {
     text(token: TextToken, variables: Variables) {
       return token.v;
     },
     arg(token: ArgToken, variables: Variables) {
-      if (token.f) {
-        return variables[token.v] - token.f;
+      if (token.o) {
+        return get(variables, token) - token.o;
       }
-      return variables[token.v];
+      return get(variables, token);
     },
-    number(token: SimpleToken, variables: Variables) {
+    number(token: NumberToken, variables: Variables) {
       return numberFormatter(
         localeHolder,
-        { style: validNumberTypes[token.f] || "decimal" },
-        variables[token.v]
+        { style: validOrFirst(token.f, validNumberOptions) },
+        get(variables, token)
       );
     },
-    datetime(token: SimpleToken, variables: Variables) {
-      const options = {};
-      options[token.t] = validDateOptions[token.f] || "short";
+    datetime(token: DateTimeToken, variables: Variables) {
+      const options: DateFormatterOptions = {};
+      options[token.t] = validOrFirst(token.f, validDateOptions);
 
-      return dateFormatter(localeHolder, options, variables[token.v]);
+      return dateFormatter(localeHolder, options, get(variables, token));
     },
     select(token: SelectToken, variables: Variables) {
-      const value = variables[token.v];
-
       // eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/no-use-before-define
-      return render(token.o[value] || token.o.other, variables);
+      return render(token.s[get(variables, token)] || token.s.other, variables);
     },
     plural(token: PluralToken | SelectOrdinalToken, variables: Variables) {
-      const value = variables[token.v];
+      const value = get(variables, token);
       const pluralType = token.t === "plural" ? "cardinal" : "ordinal";
-      const offset = token.f || 0;
-      const children = token.o;
+      const offset = token.o || 0;
+      const children = token.s;
       const pluralRules = pluralGenerator(localeHolder, pluralType);
 
       // eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/no-use-before-define
@@ -103,16 +100,16 @@ export default function createRenderer<T>(
     },
     block(token: BlockToken, variables: Variables) {
       let final = "";
-      for (const i in token.n) {
-        if (token.n.hasOwnProperty(i)) {
+      for (const i in token.c) {
+        if (token.c.hasOwnProperty(i)) {
           // eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/no-use-before-define
-          final += render(token.n[i], variables);
+          final += render(token.c[i], variables);
         }
       }
 
       return final;
     },
-    custom(token: SimpleToken, variables: Variables) {
+    custom(token: Token, variables: Variables) {
       // TODO :: do something with this block
       return "";
     },
@@ -127,7 +124,7 @@ export default function createRenderer<T>(
   // "selectordinal" works the same as plural, except with ordinal plurals instead of cardinal
   formatters.selectordinal = formatters.plural;
 
-  function render(token: Token, variables?: Variables): string {
+  function render(token: Token, variables: Variables = {}): string {
     return (formatters[token.t] || formatters.custom)(token, variables);
   }
 
