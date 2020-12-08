@@ -482,11 +482,8 @@ function parseAST(
  * Parses a message, returns a renderable token (which most likely contains other tokens)
  * @param message
  */
-export default function parse(message?: string | number): Token {
+export default function parse(message: string | number): Token {
   const msg = String(message);
-  return parseAST(
-    { msg, l: msg.length, i: 0 },
-    {} as ValueToken, // We could normally avoid this argument since parent is only used when the third parameter (specialHash) is used and thus not needed for the initial parse
-    false
-  ) as Token;
+  //@ts-ignore
+  return parseAST({ msg, l: msg.length, i: 0 }, null, false) as Token;
 }

@@ -8,8 +8,10 @@ describe("parse()", () => {
   });
 
   it("coerces input to string", () => {
+    //@ts-ignore
     expect(parse()).toEqual({ t: "text", v: "undefined" });
-    expect(parse(null as unknown as string)).toEqual({ t: "text", v: "null" });
+    //@ts-ignore
+    expect(parse(null)).toEqual({ t: "text", v: "null" });
     expect(parse(12.34)).toEqual({ t: "text", v: "12.34" });
   });
 

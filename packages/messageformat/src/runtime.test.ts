@@ -28,8 +28,10 @@ describe("parse()", () => {
   });
 
   it("coerces input to string", () => {
+    //@ts-ignore
     expect(render(parse())).toEqual("undefined");
-    expect(render(parse(null as unknown as string))).toEqual("null");
+    //@ts-ignore
+    expect(render(parse(null))).toEqual("null");
     expect(render(parse(12.34))).toEqual("12.34");
   });
 

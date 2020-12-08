@@ -21,7 +21,9 @@ describe("parse()", () => {
   });
 
   it("coerces input to string", () => {
+    //@ts-ignore
     expect(render(parse())).toEqual("undefined");
+    //@ts-ignore
     expect(render(parse(null))).toEqual("null");
     expect(render(parse(12.34))).toEqual("12.34");
   });
