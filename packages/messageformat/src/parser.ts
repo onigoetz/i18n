@@ -484,6 +484,7 @@ function parseAST(
  */
 export default function parse(message: string | number): Token {
   const msg = String(message);
+  //eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/ban-ts-comment
   //@ts-ignore
   return parseAST({ msg, l: msg.length, i: 0 }, null, false) as Token;
 }
