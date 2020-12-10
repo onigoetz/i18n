@@ -81,13 +81,14 @@ function runAll(name, instances, string) {
 
 register("@onigoetz/messageformat (memoized)", require("./dist/js/onigoetz-messageformat-memoized.min.js"));
 register("@onigoetz/messageformat", require("./dist/js/onigoetz-messageformat.min.js"));
+register("@onigoetz/messageformat-alt", require("./dist/js/onigoetz-messageformat-alt.min.js"));
 register("@phensley/messageformat", require("./dist/js/phensley-messageformat.min.js"));
-register("@ffz/icu-msgparser", require("./dist/js/ffz-icu-msgparser.min.js"));
-register("format-message-parse", require("./dist/js/format-message.min.js"));
-register("intl-messageformat", require("./dist/js/intl-messageformat.min.js"));
-register("messageformat", require("./dist/js/messageformat.min.js"));
+//register("@ffz/icu-msgparser", require("./dist/js/ffz-icu-msgparser.min.js"));
+//register("format-message-parse", require("./dist/js/format-message.min.js"));
+//register("intl-messageformat", require("./dist/js/intl-messageformat.min.js"));
+//register("messageformat", require("./dist/js/messageformat.min.js"));
 
-runAll("String", instances, string_msg);
-runAll("Message with one variable", instances, simple_msg);
+//runAll("String", instances, string_msg);
+//runAll("Message with one variable", instances, simple_msg);
 runAll("Let's get more creative", instances, normal_msg);
-runAll("Overly complex message", instances, complex_msg);
+//runAll("Overly complex message", instances, complex_msg);

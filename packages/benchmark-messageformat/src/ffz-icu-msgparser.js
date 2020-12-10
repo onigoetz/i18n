@@ -73,6 +73,7 @@ class Renderer {
             final += this.renderSelectOrdinal(token, variables);
             break;
           default:
+            // eslint-disable-next-line no-console
             console.error("Don't know what this is: ", token);
         }
         continue;
@@ -88,6 +89,7 @@ class Renderer {
         continue;
       }
 
+      // eslint-disable-next-line no-console
       console.error("Don't know what this is: ", token);
     }
 

@@ -15,17 +15,19 @@ const FORMATTER_NAMES = Object.keys(FORMATTERS);
 
 const MATCHER = buildMessageMatcher(FORMATTER_NAMES);
 
+const CONVERTER = new DefaultMessageArgConverter();
+
 function parse(message) {
   return parseMessagePattern(message, MATCHER);
 }
 
-const CONVERTER = new DefaultMessageArgConverter();
-const plurals = (language, region) => pluralRules.get(language, region);
-const pluralFormatter = plurals("en");
+function plurals(language, region) {
+  return pluralRules.get(language, region);
+}
 
 export default (message, named) => {
   const engine = new MessageEngine(
-    pluralFormatter,
+    plurals("en"),
     CONVERTER,
     FORMATTERS,
     parse(message)

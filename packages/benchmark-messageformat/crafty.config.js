@@ -12,6 +12,10 @@ module.exports = {
       source: "src/onigoetz-messageformat.js",
       format: "cjs"
     },
+    "onigoetz-messageformat-alt": {
+      source: "src/onigoetz-messageformat-alt.js",
+      format: "cjs"
+    },
     "onigoetz-messageformat-memoized": {
       source: "src/onigoetz-messageformat-memoized.js",
       format: "cjs"
@@ -36,5 +40,6 @@ module.exports = {
   rollup(crafty, bundle, rollupConfig) {
     // We want commonjs output, which means default exports are going to be mapped to `module.exports`
     rollupConfig.output.exports = "auto";
+    rollupConfig.input.plugins.terser.options.mangle = false;
   }
 };
