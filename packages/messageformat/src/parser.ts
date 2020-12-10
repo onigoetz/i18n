@@ -6,13 +6,12 @@ import {
   Token,
   Context,
   ArgToken,
-  DateTimeToken,
-  NumberToken,
   PluralToken,
-  SelectOrdinalToken,
   SelectToken,
   ValueToken,
-  TextToken
+  TextToken,
+  MessageOpType,
+  SimpleToken
 } from "./types";
 
 const OPEN = "{";
@@ -43,11 +42,11 @@ const PLURAL = compile(/(=\d+(\.\d+)?)|zero|one|two|few|many|other/.source);
 function flatten(c: Token[]): Token {
   switch (c.length) {
     case 0:
-      return { t: "noop" };
+      return [MessageOpType.NOOP];
     case 1:
       return c[0];
     default:
-      return { t: "block", c };
+      return [MessageOpType.BLOCK, c];
   }
 }
 
@@ -290,10 +289,7 @@ function parseOffset(context: Context): number {
  * @param context
  * @param current The token we're preparing
  */
-function parsePlural(
-  context: Context,
-  current: PluralToken | SelectOrdinalToken
-) {
+function parsePlural(context: Context, current: PluralToken) {
   const char = context.msg[context.i];
   if (char === CLOSE) {
     throw expected("sub-messages", context);
@@ -304,12 +300,12 @@ function parsePlural(
   // Get offset if defined
   const offset = parseOffset(context);
   if (offset) {
-    current.o = offset;
+    current[2] = offset;
     skipSpace(context);
   }
 
   // Parse available options
-  current.s = parseSubmessages(context, current, true, PLURAL);
+  current[4] = parseSubmessages(context, current, true, PLURAL);
   return current;
 }
 
@@ -332,11 +328,11 @@ function parseSelect(context: Context, current: SelectToken) {
   skipSeparator(char, context);
 
   // Parse available options
-  current.s = parseSubmessages(context, current, false, IDENTIFIER);
+  current[2] = parseSubmessages(context, current, false, IDENTIFIER);
   return current;
 }
 
-function parseSimple(context: Context, current: DateTimeToken | NumberToken) {
+function parseSimple(context: Context, current: SimpleToken) {
   const char = context.msg[context.i];
   if (char === CLOSE) {
     return current;
@@ -344,6 +340,7 @@ function parseSimple(context: Context, current: DateTimeToken | NumberToken) {
 
   skipSeparator(char, context);
 
+  // TODO :: handle multiple options
   const format = parseText(context, false);
   if (!format) {
     throw expected("format", context);
@@ -351,7 +348,7 @@ function parseSimple(context: Context, current: DateTimeToken | NumberToken) {
 
   // Since we allow spaces mid-format, we should trim any
   // remaining spaces off the end.
-  current.f = format.trimRight();
+  current[3] = [format.trimRight()];
   return current;
 }
 
@@ -372,7 +369,7 @@ function parseElement(context: Context, parent: Token): Token {
   }
 
   // Let's prepare a simple argument block
-  const out: Token = { t: "arg", v: id } as Token;
+  const out: Token = ([MessageOpType.ARG, id] as unknown) as Token;
 
   skipSpace(context);
 
@@ -391,22 +388,27 @@ function parseElement(context: Context, parent: Token): Token {
     throw expected("type", context);
   }
 
-  out.t = type as Token["t"];
   skipSpace(context);
 
-  // Some types have a special treatment
+  // Some types has to be treated specially
+  // The rest (date, number ...) will be handled as simple tags
   switch (type) {
     case "plural":
     case "selectordinal":
+      out[0] = MessageOpType.PLURAL;
+      (out as PluralToken)[3] = type === "plural";
       parsePlural(context, out as PluralToken);
       break;
 
     case "select":
+      out[0] = MessageOpType.SELECT;
       parseSelect(context, out as SelectToken);
       break;
 
     default:
-      parseSimple(context, out as DateTimeToken);
+      out[0] = MessageOpType.SIMPLE;
+      (out as SimpleToken)[2] = type;
+      parseSimple(context, out as SimpleToken);
       break;
   }
 
@@ -450,11 +452,11 @@ function parseAST(
       ++context.i;
       // We can safely cast here as `specialHash` is only true if we are in a Plural or SelectOrdinal
       // and both have an offset
-      out.push({
-        t: "arg",
-        v: parent.v,
-        o: (parent as PluralToken).o
-      } as ArgToken);
+      out.push([
+        MessageOpType.ARG,
+        parent[1],
+        (parent as PluralToken)[2]
+      ] as ArgToken);
     } else if (char === OPEN) {
       // If we see a block start, we send it to `parseElement` and add it to the array if an element was found
       const element = parseElement(context, parent);
@@ -465,7 +467,7 @@ function parseAST(
       // Otherwise it's probably just text, which we add if it was found
       const text = parseText(context, specialHash);
       if (text) {
-        out.push({ t: "text", v: text } as TextToken);
+        out.push([MessageOpType.TEXT, text] as TextToken);
       }
     }
 

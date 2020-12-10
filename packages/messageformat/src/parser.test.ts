@@ -1,90 +1,104 @@
 import parse from "./parser";
-import { Token } from "./types";
+import { Token, MessageOpType } from "./types";
 
 describe("parse()", () => {
   it("accepts strings", () => {
     const msg = "This is a test.";
-    expect(parse(msg)).toEqual({ t: "text", v: msg });
+    expect(parse(msg)).toEqual([MessageOpType.TEXT, msg]);
   });
 
   it("coerces input to string", () => {
     //eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/ban-ts-comment
     //@ts-ignore
-    expect(parse()).toEqual({ t: "text", v: "undefined" });
+    expect(parse()).toEqual([MessageOpType.TEXT, "undefined"]);
     //eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/ban-ts-comment
     //@ts-ignore
-    expect(parse(null)).toEqual({ t: "text", v: "null" });
-    expect(parse(12.34)).toEqual({ t: "text", v: "12.34" });
+    expect(parse(null)).toEqual([MessageOpType.TEXT, "null"]);
+    expect(parse(12.34)).toEqual([MessageOpType.TEXT, "12.34"]);
   });
 
   it("parses variables", () => {
-    expect(parse("This is a {test}.")).toEqual({
-      t: "block",
-      c: [
-        { t: "text", v: "This is a " },
-        { t: "arg", v: "test" },
-        { t: "text", v: "." }
+    expect(parse("This is a {test}.")).toEqual([
+      MessageOpType.BLOCK,
+      [
+        [MessageOpType.TEXT, "This is a "],
+        [MessageOpType.ARG, "test"],
+        [MessageOpType.TEXT, "."]
       ]
-    } as Token);
+    ] as Token);
   });
 
   it("parses vars with number", () => {
-    expect(parse("{test, number}")).toEqual({
-      v: "test",
-      t: "number"
-    } as Token);
+    expect(parse("{test, number}")).toEqual([
+      MessageOpType.SIMPLE,
+      "test",
+      "number"
+    ] as Token);
   });
 
   // TODO :: integer, currency, percent
   it("parses vars with number and format", () => {
-    expect(parse("{ test,    number, percent }")).toEqual({
-      v: "test",
-      t: "number",
-      f: "percent"
-    } as Token);
+    expect(parse("{ test,    number, percent }")).toEqual([
+      MessageOpType.SIMPLE,
+      "test",
+      "number",
+      ["percent"]
+    ] as Token);
   });
 
   it("parses vars with date", () => {
-    expect(parse("{test, date}")).toEqual({ v: "test", t: "date" } as Token);
+    expect(parse("{test, date}")).toEqual([
+      MessageOpType.SIMPLE,
+      "test",
+      "date"
+    ] as Token);
   });
 
   // TODO :: short, medium, long, full
   it("parses vars with date and format", () => {
-    expect(parse("{test, date, short}")).toEqual({
-      v: "test",
-      t: "date",
-      f: "short"
-    } as Token);
+    expect(parse("{test, date, short}")).toEqual([
+      MessageOpType.SIMPLE,
+      "test",
+      "date",
+      ["short"]
+    ] as Token);
   });
 
   it("parses vars with time", () => {
-    expect(parse("{test, time}")).toEqual({ v: "test", t: "time" } as Token);
+    expect(parse("{test, time}")).toEqual([
+      MessageOpType.SIMPLE,
+      "test",
+      "time"
+    ] as Token);
   });
 
   // TODO :: short, medium, long, full
   it("parses vars with time and format", () => {
-    expect(parse("{test, time, short}")).toEqual({
-      v: "test",
-      t: "time",
-      f: "short"
-    } as Token);
+    expect(parse("{test, time, short}")).toEqual([
+      MessageOpType.SIMPLE,
+      "test",
+      "time",
+      ["short"]
+    ] as Token);
   });
 
   it("parses plural tags", () => {
-    expect(parse("{test, plural, one{one test} other {# test} }")).toEqual({
-      v: "test",
-      t: "plural",
-      s: {
-        one: { t: "text", v: "one test" },
-        other: {
-          t: "block",
-          c: [
-            { t: "arg", v: "test" },
-            { t: "text", v: " test" }
+    expect(parse("{test, plural, one{one test} other {# test} }")).toEqual([
+      MessageOpType.PLURAL,
+      "test",
+      undefined,
+      true,
+      {
+        one: [MessageOpType.TEXT, "one test"],
+        other: [
+          MessageOpType.BLOCK,
+          [
+            [MessageOpType.ARG, "test", undefined],
+            [MessageOpType.TEXT, " test"]
           ]
-        }
+        ]
       }
-    } as Token);
+    ] as Token);
 
     expect(
       parse(`{num_guests, plural, offset:1
@@ -93,183 +107,172 @@ describe("parse()", () => {
 			=2 {{host} invites {guest} and one other person to their party.}
 			other {{host} invites {guest} and # other people to their party.}
 	}`)
-    ).toEqual({
-      v: "num_guests",
-      t: "plural",
-      o: 1,
-      s: {
-        "=0": {
-          t: "block",
-          c: [
-            { t: "arg", v: "host" },
-            { t: "text", v: " does not give a party." }
+    ).toEqual([
+      MessageOpType.PLURAL,
+      "num_guests",
+      1,
+      true,
+      {
+        "=0": [
+          MessageOpType.BLOCK,
+          [
+            [MessageOpType.ARG, "host"],
+            [MessageOpType.TEXT, " does not give a party."]
           ]
-        },
-        "=1": {
-          t: "block",
-          c: [
-            { t: "arg", v: "host" },
-            { t: "text", v: " invites " },
-            { t: "arg", v: "guest" },
-            {
-              t: "text",
-              v: " to their party."
-            }
+        ],
+        "=1": [
+          MessageOpType.BLOCK,[
+            [MessageOpType.ARG, "host"],
+            [MessageOpType.TEXT, " invites "],
+            [MessageOpType.ARG, "guest"],
+            [MessageOpType.TEXT, " to their party."]
           ]
-        },
-        "=2": {
-          t: "block",
-          c: [
-            { t: "arg", v: "host" },
-            { t: "text", v: " invites " },
-            { t: "arg", v: "guest" },
-            {
-              t: "text",
-              v: " and one other person to their party."
-            }
+        ],
+        "=2": [
+          MessageOpType.BLOCK,[
+            [MessageOpType.ARG, "host"],
+            [MessageOpType.TEXT, " invites "],
+            [MessageOpType.ARG, "guest"],
+            [MessageOpType.TEXT, " and one other person to their party."]
           ]
-        },
-        other: {
-          t: "block",
-          c: [
-            { t: "arg", v: "host" },
-            { t: "text", v: " invites " },
-            { t: "arg", v: "guest" },
-            {
-              t: "text",
-              v: " and "
-            },
-            { t: "arg", v: "num_guests", o: 1 },
-            { t: "text", v: " other people to their party." }
+        ],
+        other: [
+          MessageOpType.BLOCK,[
+            [MessageOpType.ARG, "host"],
+            [MessageOpType.TEXT, " invites "],
+            [MessageOpType.ARG, "guest"],
+            [MessageOpType.TEXT, " and "],
+            [MessageOpType.ARG, "num_guests", 1],
+            [MessageOpType.TEXT, " other people to their party."]
           ]
-        }
+        ]
       }
-    } as Token);
+    ] as Token);
   });
 
   it("parses plural with offset", () => {
     expect(
       parse("{test, plural, offset:3 one{one test} other {# test} }")
-    ).toEqual({
-      v: "test",
-      t: "plural",
-      o: 3,
-      s: {
-        one: { t: "text", v: "one test" },
-        other: {
-          t: "block",
-          c: [
-            { t: "arg", v: "test", o: 3 },
-            { t: "text", v: " test" }
+    ).toEqual([
+      MessageOpType.PLURAL,
+      "test",
+      3,
+      true,
+      {
+        one: [MessageOpType.TEXT, "one test"],
+        other: [
+          MessageOpType.BLOCK,
+          [
+            [MessageOpType.ARG, "test", 3],
+            [MessageOpType.TEXT, " test"]
           ]
-        }
+        ]
       }
-    } as Token);
+    ] as Token);
   });
 
   it("parses selectordinal", () => {
     expect(
       parse("{test, selectordinal, one{one test} other {# test} }")
-    ).toEqual({
-      v: "test",
-      t: "selectordinal",
-      s: {
-        one: { t: "text", v: "one test" },
-        other: {
-          t: "block",
-          c: [
-            { t: "arg", v: "test" },
-            { t: "text", v: " test" }
+    ).toEqual([
+      MessageOpType.PLURAL,
+      "test",
+      undefined,
+      false,
+      {
+        one: [MessageOpType.TEXT, "one test"],
+        other: [
+          MessageOpType.BLOCK,
+          [
+            [MessageOpType.ARG, "test", undefined],
+            [MessageOpType.TEXT, " test"]
           ]
-        }
+        ]
       }
-    } as Token);
+    ] as Token);
   });
 
   it("parses select", () => {
     expect(
       parse("{test, select, first {yes} second {false} other {maybe}}")
-    ).toEqual({
-      v: "test",
-      t: "select",
-      s: {
-        first: { t: "text", v: "yes" },
-        second: { t: "text", v: "false" },
-        other: { t: "text", v: "maybe" }
+    ).toEqual([
+      MessageOpType.SELECT,
+      "test",
+      {
+        first: [MessageOpType.TEXT, "yes"],
+        second: [MessageOpType.TEXT, "false"],
+        other: [MessageOpType.TEXT, "maybe"]
       }
-    } as Token);
+    ] as Token);
   });
 
   it("escapes characters", () => {
-    expect(parse("{0} {1} {2}")).toEqual({
-      t: "block",
-      c: [
-        { t: "arg", v: "0" },
-        { t: "text", v: " " },
-        { t: "arg", v: "1" },
-        { t: "text", v: " " },
-        { t: "arg", v: "2" }
+    expect(parse("{0} {1} {2}")).toEqual([
+      MessageOpType.BLOCK,
+      [
+        [MessageOpType.ARG, "0"],
+        [MessageOpType.TEXT, " "],
+        [MessageOpType.ARG, "1"],
+        [MessageOpType.TEXT, " "],
+        [MessageOpType.ARG, "2"]
       ]
-    } as Token);
-    expect(parse("{0} '{1}' {2}")).toEqual({
-      t: "block",
-      c: [
-        { t: "arg", v: "0" },
-        { t: "text", v: " {1} " },
-        { t: "arg", v: "2" }
+    ] as Token);
+    expect(parse("{0} '{1}' {2}")).toEqual([
+      MessageOpType.BLOCK,
+      [
+        [MessageOpType.ARG, "0"],
+        [MessageOpType.TEXT, " {1} "],
+        [MessageOpType.ARG, "2"]
       ]
-    } as Token);
-    expect(parse("{0} ''{1}'' {2}")).toEqual({
-      t: "block",
-      c: [
-        { t: "arg", v: "0" },
-        { t: "text", v: " '" },
-        { t: "arg", v: "1" },
-        { t: "text", v: "' " },
-        { t: "arg", v: "2" }
+    ] as Token);
+    expect(parse("{0} ''{1}'' {2}")).toEqual([
+      MessageOpType.BLOCK,
+      [
+        [MessageOpType.ARG, "0"],
+        [MessageOpType.TEXT, " '"],
+        [MessageOpType.ARG, "1"],
+        [MessageOpType.TEXT, "' "],
+        [MessageOpType.ARG, "2"]
       ]
-    } as Token);
-    expect(parse("{0} '''{1}''' {2}")).toEqual({
-      t: "block",
-      c: [
-        { t: "arg", v: "0" },
-        { t: "text", v: " '{1}' " },
-        { t: "arg", v: "2" }
+    ] as Token);
+    expect(parse("{0} '''{1}''' {2}")).toEqual([
+      MessageOpType.BLOCK,
+      [
+        [MessageOpType.ARG, "0"],
+        [MessageOpType.TEXT, " '{1}' "],
+        [MessageOpType.ARG, "2"]
       ]
-    } as Token);
-    expect(parse("{0} '{1} {2}")).toEqual({
-      t: "block",
-      c: [
-        { t: "arg", v: "0" },
-        { t: "text", v: " {1} {2}" }
+    ] as Token);
+    expect(parse("{0} '{1} {2}")).toEqual([
+      MessageOpType.BLOCK,
+      [
+        [MessageOpType.ARG, "0"],
+        [MessageOpType.TEXT, " {1} {2}"]
       ]
-    } as Token);
-    expect(parse("{0} ''{1} {2}")).toEqual({
-      t: "block",
-      c: [
-        { t: "arg", v: "0" },
-        { t: "text", v: " '" },
-        { t: "arg", v: "1" },
-        { t: "text", v: " " },
-        { t: "arg", v: "2" }
+    ] as Token);
+    expect(parse("{0} ''{1} {2}")).toEqual([
+      MessageOpType.BLOCK,
+      [
+        [MessageOpType.ARG, "0"],
+        [MessageOpType.TEXT, " '"],
+        [MessageOpType.ARG, "1"],
+        [MessageOpType.TEXT, " "],
+        [MessageOpType.ARG, "2"]
       ]
-    } as Token);
+    ] as Token);
   });
 
   it("does not escape sometimes", () => {
-    expect(parse("So, '{Mike''s Test}' is real.")).toEqual({
-      t: "text",
-      v: "So, {Mike's Test} is real."
-    } as Token);
+    expect(parse("So, '{Mike''s Test}' is real.")).toEqual([MessageOpType.TEXT, "So, {Mike's Test} is real."] as Token);
 
-    expect(parse("You've done it now, {name}.")).toEqual({
-      t: "block",
-      c: [
-        { t: "text", v: "You've done it now, " },
-        { t: "arg", v: "name" },
-        { t: "text", v: "." }
+    expect(parse("You've done it now, {name}.")).toEqual([
+      MessageOpType.BLOCK,
+      [
+        [MessageOpType.TEXT, "You've done it now, "],
+        [MessageOpType.ARG, "name"],
+        [MessageOpType.TEXT, "."]
       ]
-    } as Token);
+    ] as Token);
   });
 
   it("throws on empty variable", () => {
