@@ -1,0 +1,20 @@
+{
+  "name": "@onigoetz/benchmark-plural",
+  "private": true,
+  "version": "0.1.0",
+  "devDependencies": {
+    "@onigoetz/make-plural": "0.1.0",
+    "@phensley/plurals": "1.2.2",
+    "@swissquote/crafty": "1.14.0-beta.1",
+    "@swissquote/crafty-preset-babel": "1.14.0-beta.1",
+    "@swissquote/crafty-runner-rollup": "1.14.0-beta.1",
+    "benchmark": "2.1.4",
+    "speedscope": "1.12.1"
+  },
+  "scripts": {
+    "lint": "crafty jsLint --fix src/*.js src/**/*.js",
+    "lint:ci": "crafty jsLint src/*.js src/**/*.js",
+    "build": "crafty run",
+    "benchmark": "node benchmark.js"
+  }
+}
