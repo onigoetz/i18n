@@ -16,6 +16,8 @@
  * or in connection with the use or performance of this software.
  */
 
+// The syntax is based on http://unicode.org/reports/tr35/tr35-numbers.html#Language_Plural_Rules
+
 type Context = { [key: string]: number };
 
 export type Rules = { [key: string]: string };
