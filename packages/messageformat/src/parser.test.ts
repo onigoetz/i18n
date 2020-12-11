@@ -121,7 +121,8 @@ describe("parse()", () => {
           ]
         ],
         "=1": [
-          MessageOpType.BLOCK,[
+          MessageOpType.BLOCK,
+          [
             [MessageOpType.ARG, "host"],
             [MessageOpType.TEXT, " invites "],
             [MessageOpType.ARG, "guest"],
@@ -129,7 +130,8 @@ describe("parse()", () => {
           ]
         ],
         "=2": [
-          MessageOpType.BLOCK,[
+          MessageOpType.BLOCK,
+          [
             [MessageOpType.ARG, "host"],
             [MessageOpType.TEXT, " invites "],
             [MessageOpType.ARG, "guest"],
@@ -137,7 +139,8 @@ describe("parse()", () => {
           ]
         ],
         other: [
-          MessageOpType.BLOCK,[
+          MessageOpType.BLOCK,
+          [
             [MessageOpType.ARG, "host"],
             [MessageOpType.TEXT, " invites "],
             [MessageOpType.ARG, "guest"],
@@ -263,7 +266,10 @@ describe("parse()", () => {
   });
 
   it("does not escape sometimes", () => {
-    expect(parse("So, '{Mike''s Test}' is real.")).toEqual([MessageOpType.TEXT, "So, {Mike's Test} is real."] as Token);
+    expect(parse("So, '{Mike''s Test}' is real.")).toEqual([
+      MessageOpType.TEXT,
+      "So, {Mike's Test} is real."
+    ] as Token);
 
     expect(parse("You've done it now, {name}.")).toEqual([
       MessageOpType.BLOCK,
