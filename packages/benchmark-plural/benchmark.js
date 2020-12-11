@@ -30,7 +30,11 @@ function runAll(name, instances, string) {
 }
 
 register("@onigoetz/make-plural", require("./dist/js/onigoetz-make-plural.min.js"));
-register("@onigoetz/make-plural-memoized", require("./dist/js/onigoetz-make-plural-memoized.min.js"));
+register("@onigoetz/make-plural-memo", require("./dist/js/onigoetz-make-plural-memo.min.js"));
+register("@onigoetz/intl", require("./dist/js/onigoetz-intl.min.js"));
+register("@onigoetz/intl-memo", require("./dist/js/onigoetz-intl-memo.min.js"));
 register("@phensley/plurals", require("./dist/js/phensley-plurals.min.js"));
+register("@phensley/plurals-memo", require("./dist/js/phensley-plurals-memo.min.js"));
+register("make-plural", require("./dist/js/make-plural.min.js"));
 
-runAll("Let's get more creative", instances, ["ordinal", "en", 2]);
+runAll("Benchmark", instances, ["ordinal", "en", 2]);
