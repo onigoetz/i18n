@@ -12,10 +12,6 @@ module.exports = {
       source: "src/onigoetz-messageformat.js",
       format: "cjs"
     },
-    "onigoetz-messageformat-alt": {
-      source: "src/onigoetz-messageformat-alt.js",
-      format: "cjs"
-    },
     "onigoetz-messageformat-memoized": {
       source: "src/onigoetz-messageformat-memoized.js",
       format: "cjs"

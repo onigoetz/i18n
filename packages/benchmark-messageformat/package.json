@@ -7,7 +7,6 @@
     "@onigoetz/intl-formatters": "0.1.0",
     "@onigoetz/make-plural": "0.1.0",
     "@onigoetz/messageformat": "0.1.0",
-    "@onigoetz/messageformat-alt": "0.1.0",
     "@phensley/messageformat": "1.2.2",
     "@phensley/plurals": "1.2.2",
     "@swissquote/crafty": "1.14.0-beta.1",
