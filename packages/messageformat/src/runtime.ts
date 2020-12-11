@@ -98,7 +98,10 @@ export default function createRenderer<T>(
     },
     [MessageOpType.SIMPLE](token: SimpleToken, variables: Variables) {
       // Find the formatter or fallback to NOOP
-      return (types[token[2]] || formatters[MessageOpType.NOOP])(token, variables);
+      return (types[token[2]] || formatters[MessageOpType.NOOP])(
+        token,
+        variables
+      );
     },
     [MessageOpType.SELECT](token: SelectToken, variables: Variables) {
       // eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/no-use-before-define

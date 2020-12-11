@@ -23,7 +23,7 @@
     "watch": "crafty watch",
     "test": "crafty test",
     "test:ci": "crafty test --coverage",
-    "lint": "crafty jsLint --fix old_src/*.ts old_src/**/*.ts",
-    "lint:ci": "crafty jsLint old_src/*.ts old_src/**/*.ts"
+    "lint": "crafty jsLint --fix src/*.ts src/**/*.ts",
+    "lint:ci": "crafty jsLint src/*.ts src/**/*.ts"
   }
 }
