@@ -12,6 +12,11 @@ jobs:
       with:
         persist-credentials: false
     - run: ls -la docs/02_Packages
+    - name: Setup PHP
+      uses: shivammathur/setup-php@2.9.0
+      with:
+        php-version: 7.4
+        extensions: mbstring, dom, intl
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
     - name: Generate documentation
