@@ -12,8 +12,7 @@
     "test": "oao run-script test",
     "test:ci": "oao run-script test:ci",
     "lint": "oao run-script lint",
-    "lint:ci": "oao run-script lint:ci",
-    "deploy": "node deploy.js"
+    "lint:ci": "oao run-script lint:ci"
   },
   "dependencies": {
     "oao": "2.0.0"
