@@ -10,11 +10,11 @@
     "@onigoetz/i18n-types": "0.1.0"
   },
   "devDependencies": {
-    "@swissquote/crafty": "1.14.0-beta.2",
-    "@swissquote/crafty-preset-jest": "1.14.0-beta.2",
-    "@swissquote/crafty-preset-typescript": "1.14.0-beta.2",
-    "@swissquote/crafty-runner-gulp": "1.14.0-beta.2",
-    "@swissquote/crafty-runner-rollup": "1.14.0-beta.2",
+    "@swissquote/crafty": "1.13.7",
+    "@swissquote/crafty-preset-jest": "1.13.7",
+    "@swissquote/crafty-preset-typescript": "1.13.7",
+    "@swissquote/crafty-runner-gulp": "1.13.7",
+    "@swissquote/crafty-runner-rollup": "1.13.7",
     "@types/jest": "^26.0.17",
     "jest-sonar": "0.2.11"
   },
