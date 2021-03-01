@@ -13,7 +13,7 @@
     "@swissquote/crafty-runner-gulp": "1.13.7",
     "@swissquote/crafty-runner-rollup": "1.13.7",
     "@types/jest": "^26.0.17",
-    "jest-sonar": "0.2.11",
+    "jest-sonar": "0.2.12",
     "test-cldr-data": "0.1.0"
   },
   "scripts": {
