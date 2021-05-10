@@ -17,6 +17,6 @@
     "publish:all": "oao publish --no-changelog --bump-dependent-reqs=exact"
   },
   "dependencies": {
-    "oao": "2.0.1"
+    "oao": "2.0.2"
   }
 }
