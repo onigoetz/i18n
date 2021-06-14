@@ -1171,10 +1171,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@ffz/icu-msgparser@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@ffz/icu-msgparser/-/icu-msgparser-1.0.2.tgz#6d125b9d9ff7316775abd66373ff4f4e8ec7ca00"
-  integrity sha512-LTtWOQ4fftxcC7Z86u9LTi1eZ4X07hQH5yvcURlYSpVTaY9dXXE/h5BdtJB0TIk7FkSiAuN/3sRkfHD0u3+S7Q==
+"@ffz/icu-msgparser@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@ffz/icu-msgparser/-/icu-msgparser-2.0.0.tgz#0f1950d9998a2700b5b1e00123fea1b1f09a0166"
+  integrity sha512-VYohS74qsdjZl9KMMlpHIKVGDVFy6kktz/rtvZgfWyngKiqJalHqfdhnQ9meu1hCFQZnTUNi+PUe5xoVAZgYGg==
 
 "@formatjs/ecma402-abstract@1.6.4":
   version "1.6.4"
