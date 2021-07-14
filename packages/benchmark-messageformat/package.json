@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "devDependencies": {
-    "@ffz/icu-msgparser": "1.0.2",
+    "@ffz/icu-msgparser": "2.0.0",
     "@onigoetz/intl-formatters": "0.1.0",
     "@onigoetz/make-plural": "0.1.0",
     "@onigoetz/messageformat": "0.1.0",
