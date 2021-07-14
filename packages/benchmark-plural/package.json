@@ -5,7 +5,7 @@
   "devDependencies": {
     "@onigoetz/intl-formatters": "0.1.0",
     "@onigoetz/make-plural": "0.1.0",
-    "@phensley/plurals": "1.2.5",
+    "@phensley/plurals": "1.2.6",
     "@swissquote/crafty": "1.15.0",
     "@swissquote/crafty-preset-babel": "1.15.0",
     "@swissquote/crafty-runner-rollup": "1.15.0",

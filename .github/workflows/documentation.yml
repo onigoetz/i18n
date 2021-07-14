@@ -13,7 +13,7 @@ jobs:
         persist-credentials: false
     - run: ls -la docs/02_Packages
     - name: Setup PHP
-      uses: shivammathur/setup-php@2.11.0
+      uses: shivammathur/setup-php@2.12.0
       with:
         php-version: 7.4
         extensions: mbstring, dom, intl
