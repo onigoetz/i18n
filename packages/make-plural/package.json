@@ -6,6 +6,9 @@
   "module": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@swissquote/crafty": "1.15.0",
     "@swissquote/crafty-preset-jest": "1.15.0",

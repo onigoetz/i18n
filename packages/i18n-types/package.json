@@ -4,6 +4,9 @@
   "license": "MIT",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@swissquote/crafty": "1.15.0",
     "@swissquote/crafty-preset-typescript": "1.15.0",
