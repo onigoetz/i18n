@@ -37,5 +37,8 @@ module.exports = {
     // We want commonjs output, which means default exports are going to be mapped to `module.exports`
     rollupConfig.output.exports = "auto";
     rollupConfig.input.plugins.terser.options.mangle = false;
+
+    // TODO :: fix this in Crafty
+    rollupConfig.input.plugins.babel.weight = 80;
   }
 };

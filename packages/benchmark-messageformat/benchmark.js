@@ -1,6 +1,17 @@
 #!/usr/bin/env node
 "use strict";
 
+/*
+This benchmark is a copy of the intl-messageformat-parser project.
+
+While the example strings are the same, we do compare many different
+libraries with it.
+
+intl-messageformat-parser is copyright 2019 Oath Inc. and licensed under
+the New BSD License. For more, please see the original source at:
+https://github.com/formatjs/formatjs/tree/master/packages/intl-messageformat-parser
+*/
+
 const benchmark = require("benchmark/benchmark");
 
 const complex_msg = [

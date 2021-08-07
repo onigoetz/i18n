@@ -15,13 +15,13 @@ Sources can be found in `src`, measure taken on 25/06/2020 With latest available
 
 | Npm Package                        | Version | Size   | Comment     |
 | ---------------------------------- | ------- | ------ | ----------- |
-| @onigoetz/messageformat            | 0.1.0   | 8.4K   |             |
-| @ffz/icu-msgparser                 | 1.0.2   | 9.38K  |             |
-| @onigoetz/messageformat (memoized) | 0.1.0   | 10.15K |             |
-| format-message-parse               | 6.2.3   | 20.64K | Uses peg.js |
-| intl-messageformat                 | 9.3.12  | 36.35K | Uses peg.js |
-| @phensley/messageformat            | 1.2.2   | 38.86K |             |
-| messageformat                      | 2.3.0   | 48.93K | Uses peg.js |
+| @onigoetz/messageformat            | 0.1.0   | 13.34K |             |
+| @ffz/icu-msgparser                 | 2.0.0   | 14.93K |             |
+| @onigoetz/messageformat (memoized) | 0.1.0   | 15.62K |             |
+| format-message-parse               | 6.2.3   | 27.54K | Uses peg.js |
+| intl-messageformat                 | 9.8.2   | 47.22K | Uses peg.js |
+| @phensley/messageformat            | 1.2.6   | 47.03K |             |
+| messageformat                      | 2.3.0   | 48.89K | Uses peg.js |
 
 In the case of `@ffz/icu-msgparser`. The source largely inspired `@onigoetz/messageformat` and
 since it provided no renderer by default, I put an early version of `@onigoetz/messageformat`'s renderer.
@@ -47,12 +47,13 @@ const variables = {};
 // Renders : Hello, world!
 ```
 
-- @onigoetz/messageformat x 4,885,039 ops/sec ±0.59% (89 runs sampled)
-- @phensley/messageformat x 4,660,653 ops/sec ±0.29% (94 runs sampled)
-- format-message-parse x 3,927,048 ops/sec ±0.44% (94 runs sampled)
-- @ffz/icu-msgparser x 2,521,413 ops/sec ±0.65% (90 runs sampled)
-- intl-messageformat x 219,748 ops/sec ±0.98% (91 runs sampled)
-- messageformat x 201,673 ops/sec ±0.81% (91 runs sampled)
+- @onigoetz/messageformat x 4,608,460 ops/sec ±1.50% (92 runs sampled)
+- @onigoetz/messageformat (memoized) x 4,536,394 ops/sec ±1.67% (85 runs sampled)
+- @phensley/messageformat x 4,529,047 ops/sec ±0.72% (88 runs sampled)
+- format-message-parse x 3,992,051 ops/sec ±0.23% (96 runs sampled)
+- @ffz/icu-msgparser x 1,583,621 ops/sec ±0.46% (95 runs sampled)
+- intl-messageformat x 454,716 ops/sec ±1.04% (85 runs sampled)
+- messageformat x 185,259 ops/sec ±0.36% (90 runs sampled)
 
 ### Message with one variable
 
@@ -63,12 +64,13 @@ const variables = { name: "John" };
 // Renders : Hello, John!
 ```
 
-- @phensley/messageformat x 2,001,930 ops/sec ±0.53% (95 runs sampled)
-- format-message-parse x 2,014,542 ops/sec ±0.33% (94 runs sampled)
-- @onigoetz/messageformat x 1,566,114 ops/sec ±0.65% (96 runs sampled)
-- @ffz/icu-msgparser x 1,474,988 ops/sec ±0.38% (98 runs sampled)
-- messageformat x 188,468 ops/sec ±0.46% (94 runs sampled)
-- intl-messageformat x 164,315 ops/sec ±1.15% (90 runs sampled)
+- format-message-parse x 1,941,376 ops/sec ±0.82% (95 runs sampled)
+- @phensley/messageformat x 1,872,103 ops/sec ±0.49% (93 runs sampled)
+- @onigoetz/messageformat (memoized) x 1,462,301 ops/sec ±0.86% (95 runs sampled)
+- @onigoetz/messageformat x 1,379,505 ops/sec ±0.47% (95 runs sampled)
+- @ffz/icu-msgparser x 1,009,608 ops/sec ±1.03% (95 runs sampled)
+- intl-messageformat x 300,560 ops/sec ±1.85% (83 runs sampled)
+- messageformat x 163,636 ops/sec ±1.40% (93 runs sampled)
 
 ### Let's get more creative
 
@@ -83,12 +85,13 @@ const variables = {
 // Renders:  Yo, John Constantine has 5 books.
 ```
 
-- @phensley/messageformat x 342,004 ops/sec ±9.55% (95 runs sampled)
-- @ffz/icu-msgparser x 28,776 ops/sec ±1.58% (96 runs sampled)
-- @onigoetz/messageformat x 27,322 ops/sec ±1.45% (91 runs sampled)
-- format-message-parse x 18,569 ops/sec ±2.19% (90 runs sampled)
-- intl-messageformat x 10,473 ops/sec ±3.85% (87 runs sampled)
-- messageformat x 15,739 ops/sec ±1.57% (90 runs sampled)
+- @phensley/messageformat x 339,274 ops/sec ±0.54% (94 runs sampled)
+- @ffz/icu-msgparser x 27,082 ops/sec ±1.78% (93 runs sampled)
+- @onigoetz/messageformat x 17,177 ops/sec ±3.25% (87 runs sampled)
+- format-message-parse x 16,956 ops/sec ±2.98% (90 runs sampled)
+- messageformat x 14,239 ops/sec ±3.57% (88 runs sampled)
+- intl-messageformat x 11,730 ops/sec ±4.34% (86 runs sampled)
+- @onigoetz/messageformat (memoized) x 4,702 ops/sec ±16.39% (29 runs sampled)
 
 ### Overly complex message
 
@@ -131,9 +134,10 @@ const variables = {
 // Renders : Lucifer invites John Constantine and 2 other people to his party.
 ```
 
-- @onigoetz/messageformat x 61,555 ops/sec ±1.86% (94 runs sampled)
-- @phensley/messageformat x 36,332 ops/sec ±0.43% (93 runs sampled)
-- @ffz/icu-msgparser x 32,669 ops/sec ±0.48% (94 runs sampled)
-- format-message-parse x 8,308 ops/sec ±2.54% (91 runs sampled)
-- intl-messageformat x 4,563 ops/sec ±2.81% (94 runs sampled)
-- messageformat x 6,760 ops/sec ±0.71% (93 runs sampled)
+- @onigoetz/messageformat (memoized) x 58,697 ops/sec ±2.56% (90 runs sampled)
+- @onigoetz/messageformat x 33,817 ops/sec ±0.80% (94 runs sampled)
+- @phensley/messageformat x 35,552 ops/sec ±0.27% (98 runs sampled)
+- @ffz/icu-msgparser x 14,154 ops/sec ±1.00% (96 runs sampled)
+- format-message-parse x 7,711 ops/sec ±4.12% (93 runs sampled)
+- intl-messageformat x 7,040 ops/sec ±4.26% (83 runs sampled)
+- messageformat x 6,428 ops/sec ±0.20% (97 runs sampled)
