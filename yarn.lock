@@ -1379,36 +1379,36 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@phensley/cldr-utils@^1.2.6":
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/@phensley/cldr-utils/-/cldr-utils-1.2.6.tgz#053328f7f81f0bf21813276d874f4ddd81e723be"
-  integrity sha512-cmqD/KPiqVoe7uvRMuF+9oLEu7xAkOb0JzfEOFpovs5mcNwJIGDKuPRyth9cyonJIVkTYwyhs9XFH3P5IyHADg==
+"@phensley/cldr-utils@^1.2.7":
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/@phensley/cldr-utils/-/cldr-utils-1.2.7.tgz#3799cb6705e8f7cb0aae6babc4238335a313c984"
+  integrity sha512-amcL57YnzW+x+7J05kWFTvyhJara1bp7SL7wnSvPjb3uOSa66+5fg69PSadd8Yke+m3iCylXyrjoTD48OKDz4g==
   dependencies:
     tslib "^1.13.0"
 
-"@phensley/decimal@^1.2.6":
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/@phensley/decimal/-/decimal-1.2.6.tgz#1b6bf86a7fb57e20da41c57989e3d5565530d1c2"
-  integrity sha512-qn6ozLCyqy++9fqV00+1kYljK63NGHAIE0KuDrt0r/kRIJQM5EGpYvgTYZbXAppaVpaESeBA3XOUH64G/iORvA==
+"@phensley/decimal@^1.2.7":
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/@phensley/decimal/-/decimal-1.2.7.tgz#2f8ecbca8af8ad8693d679de42a46cdd350c5114"
+  integrity sha512-HGmUZUap4rLijEiIOnvseN3c79NCktYS1Ep1GfIdoGjjbnokxYKS5SOXGTIWGUJGp3WeYNkclC27cdCOLhMgaw==
   dependencies:
     tslib "^1.13.0"
 
-"@phensley/messageformat@1.2.6":
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/@phensley/messageformat/-/messageformat-1.2.6.tgz#c774918108aed96d125e971eab5060b4f301a6d9"
-  integrity sha512-9vFqSvX9U6pS4zQowr9C8QYdozLZkbGEV3Ssv6Itsej7uU+CpNhTYSwecAdL3nBsK+gYr2KHt4/PeqwuQ0Cwhg==
+"@phensley/messageformat@1.2.7":
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/@phensley/messageformat/-/messageformat-1.2.7.tgz#c0032302db8b763e2f0a00900eb796e574df9cd4"
+  integrity sha512-nTgvA1r+UyWbVqWpe9qbFSzfMsU69Em/6zVtOa8fLWJIfvPLAZKOhHScZNUAW9a11diVSs6D7cZvxWL4AuXPSg==
   dependencies:
-    "@phensley/cldr-utils" "^1.2.6"
-    "@phensley/decimal" "^1.2.6"
-    "@phensley/plurals" "^1.2.6"
+    "@phensley/cldr-utils" "^1.2.7"
+    "@phensley/decimal" "^1.2.7"
+    "@phensley/plurals" "^1.2.7"
     tslib "^1.13.0"
 
-"@phensley/plurals@1.2.6", "@phensley/plurals@^1.2.6":
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/@phensley/plurals/-/plurals-1.2.6.tgz#4bf9685a8b3a6527ac579e454a5440632b160bca"
-  integrity sha512-XEbdl1lajt3WOrva24P8orOQ1AyCI+WE+B9XKGRorYs5nq16ZdNdEpj5ZtpdT6kbA1APTcZjSQDiXiMA05MPLw==
+"@phensley/plurals@1.2.7", "@phensley/plurals@^1.2.7":
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/@phensley/plurals/-/plurals-1.2.7.tgz#4ca4135b588d05ab49bc3458bff2c98247080492"
+  integrity sha512-8yvKvyvP87DDS65yNY/b1xQctPcA3FUsSUETFBhAOS1R3e4/L0N7Z916rKhWO2Nk9HnYjll6D0rAl7Y57hSmxQ==
   dependencies:
-    "@phensley/decimal" "^1.2.6"
+    "@phensley/decimal" "^1.2.7"
     tslib "^1.13.0"
 
 "@rollup/plugin-babel@5.3.0":
