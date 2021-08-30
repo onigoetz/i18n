@@ -22,7 +22,7 @@ jobs:
     - name: Generate documentation
       run: vendor/bin/daux generate
     - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@4.1.4
+      uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
         folder: "static"
         branch: gh-pages
