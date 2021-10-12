@@ -57,6 +57,7 @@ function parse(cond: string, context: Context): string {
       if (noteq) {
         return se + x.split(",").join(` && ${se}`);
       }
+      /* eslint-disable-next-line @swissquote/swissquote/sonarjs/no-nested-template-literals */
       return `(${se}${x.split(",").join(` || ${se}`)})`;
     })
     .replace(/(\w+) (!?)= ([0-9]+)\.\.([0-9]+)/g, (m, sym, noteq, x0, x1) => {
