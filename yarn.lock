@@ -751,27 +751,27 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@swissquote/babel-preset-swissquote@1.16.1":
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/@swissquote/babel-preset-swissquote/-/babel-preset-swissquote-1.16.1.tgz#423e3c8721b386985be262d06bb3c9cc3bdd194d"
-  integrity sha512-rlI8mQVgjwPJdA+ZWKkJTtMFf/XRpEfjlKD0V4xlt5X84dQD94/3HAfMiRFkv4/3T9uAm8Krpq+ca6JlGSkftQ==
+"@swissquote/babel-preset-swissquote@1.16.3":
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/babel-preset-swissquote/-/babel-preset-swissquote-1.16.3.tgz#d43b8696943c058f8beaec057d1968e0401734b2"
+  integrity sha512-A8bWFroNNo70kHb60r3vYzTUXVQqXvNEsJTFHcNsqATV1/XWebMzq7v/2BUn9y42SzeaUWjsTeqQEfeNExvh+A==
   dependencies:
     "@babel/core" "7.15.8"
     "@babel/runtime" "7.15.4"
     debug "^4.1.0"
     find-up "5.0.0"
 
-"@swissquote/crafty-preset-babel@1.16.1":
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-babel/-/crafty-preset-babel-1.16.1.tgz#3404c6efbe56f6f7a7d8a1a2f46db75a0fae8f1b"
-  integrity sha512-PiBs5n5U3GEesX8oNoR7rZjbwRItH5gM2DHWaT6njbf2+C4NDBYjw2J2JWFRbX6diliJAQQnYaGHO6ThV6fvAQ==
+"@swissquote/crafty-preset-babel@1.16.3":
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-babel/-/crafty-preset-babel-1.16.3.tgz#e6fc484dd7a4813cf4d51b17345ec65c7395973d"
+  integrity sha512-iZGzx4QIEywcHmYGqVS+wOueJsn4+bW5q4/PUhQKmgxUFBEochFcqhu+SvRc3DpmnEELX0sXL3ZOLkjhD151aQ==
   dependencies:
     "@babel/core" "7.15.8"
     "@babel/runtime" "7.15.4"
     "@rollup/plugin-babel" "5.3.0"
-    "@swissquote/babel-preset-swissquote" "1.16.1"
-    "@swissquote/crafty-preset-eslint" "1.16.1"
-    "@swissquote/crafty-preset-terser" "1.16.1"
+    "@swissquote/babel-preset-swissquote" "1.16.3"
+    "@swissquote/crafty-preset-eslint" "1.16.3"
+    "@swissquote/crafty-preset-terser" "1.16.3"
     babel-loader "8.2.2"
     gulp-babel "8.0.0"
     gulp-concat "2.6.1"
@@ -780,14 +780,14 @@
     gulp-sourcemaps "3.0.0"
     gulp-terser "2.1.0"
 
-"@swissquote/crafty-preset-eslint@1.16.1":
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-eslint/-/crafty-preset-eslint-1.16.1.tgz#9368ce6dcdf96ee54e7893f09aea18e66c1e8833"
-  integrity sha512-/52gemkctVSCpNrO5X7LNY5YuB74FWvQXRV86oxwfKmYNPjEGClKUvndNjqfxsjTPeYs65rdGT6iLGLVe0VLOw==
+"@swissquote/crafty-preset-eslint@1.16.3":
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-eslint/-/crafty-preset-eslint-1.16.3.tgz#251600f94edf6abbfaca4bae9e59b66ab2c14771"
+  integrity sha512-yTDRrpJho5E5Y5YQubVaph78JPYUtvqhiDDLp8uX4Hc3p0spOQHk6TyY5anhF5Kmwi+O3piY9kisqF7RmBIEYw==
   dependencies:
-    "@swissquote/crafty-preset-prettier" "1.16.1"
-    "@swissquote/eslint-plugin-swissquote" "1.16.1"
-    "@swissquote/rollup-plugin-eslint" "1.16.1"
+    "@swissquote/crafty-preset-prettier" "1.16.3"
+    "@swissquote/eslint-plugin-swissquote" "1.16.3"
+    "@swissquote/rollup-plugin-eslint" "1.16.3"
     copy-anything "2.0.3"
     debug "^4.1.0"
     eslint "7.32.0"
@@ -796,10 +796,10 @@
     resolve-from "5.0.0"
     tmp "0.2.1"
 
-"@swissquote/crafty-preset-jest@1.16.1":
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-jest/-/crafty-preset-jest-1.16.1.tgz#7806cb4e02c17825b875c17810ab19995ac47ae4"
-  integrity sha512-82sDlKdEmUuWAKcpAetXNw+3Gi0kZFmFvho5/U4VfWr8R266B/nbj5ivjaaAl2jgtYx/ebvVWQD6NJ9mquLW3A==
+"@swissquote/crafty-preset-jest@1.16.3":
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-jest/-/crafty-preset-jest-1.16.3.tgz#855032e7e76c463cda8bd1013541114b2abdaf18"
+  integrity sha512-If9mNSKkZiznC6E5FsJ8DeKzjB1Vj0V+OkBvuPpaOuiQa5TYb93ZguZO1goABHkSQXYQmOyQZObOhtW1/f54QA==
   dependencies:
     "@babel/core" "7.15.8"
     "@babel/plugin-transform-modules-commonjs" "7.15.4"
@@ -807,26 +807,26 @@
     cherow "1.6.9"
     jest-cli "27.2.5"
 
-"@swissquote/crafty-preset-prettier@1.16.1":
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-prettier/-/crafty-preset-prettier-1.16.1.tgz#bb002b1d63781a2e7144b16637531d89aa5d66b4"
-  integrity sha512-OlHVJ8A2cQOiVB4gPVNF5cCrIZg9rqcOMwL4KnuJalKwU7+mT3jUZqBzsAkcUmsd9pVvYZnA2RReEnJfGO1ZjA==
+"@swissquote/crafty-preset-prettier@1.16.3":
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-prettier/-/crafty-preset-prettier-1.16.3.tgz#6fdb3ac8bc68d79b074c227d94b505f9ff9f27bf"
+  integrity sha512-LeXJ7WQh9NGejg+5vN70xU5HWot0UEaYEtBPg2p3ITnO7sx6shOsQ+ncdJy1saj0Tg3MvfFXwATPg4V6gU0gMQ==
 
-"@swissquote/crafty-preset-terser@1.16.1":
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-terser/-/crafty-preset-terser-1.16.1.tgz#522ec4353159224a203383238049876a1f68a6fb"
-  integrity sha512-fDV2P4mRHdUGS1R9HXi6rMsek0jYhb65VWhJOjefwt3P75x4nBPYy0aDCNl0PXQFvTewMkZzj26BIEOFyOhzdw==
+"@swissquote/crafty-preset-terser@1.16.3":
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-terser/-/crafty-preset-terser-1.16.3.tgz#e6d9c3ae042f1c12d047b8089cca27a809f90253"
+  integrity sha512-6qrDYJ/Rt4JP5dGo9TV8k43Wo/fXjLfnQnMRNutXHDjRlIh2oOXma/o2xkDP2r935wi0WuBE2FpThEtWplI7UQ==
 
-"@swissquote/crafty-preset-typescript@1.16.1":
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-typescript/-/crafty-preset-typescript-1.16.1.tgz#ddfe3842f0e5f153b11b37530ff89883c0e63f39"
-  integrity sha512-04bhaz4MGxocz+ybAjZLAdPfBI/ZO6DW54rsr7MBwuSCCp7yXDeDeiK2ft/Ufh/N2/9+uTx6pV5PG89JeMVYBw==
+"@swissquote/crafty-preset-typescript@1.16.3":
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-typescript/-/crafty-preset-typescript-1.16.3.tgz#0715880a6dee7d5065f7b8a62fa7d065600db57a"
+  integrity sha512-oucHiSgcS34hJ5+kjMJBFH5zQvcQc8vKael7yAQ+/WFZt81D2/6ySnMsBdl2P6XOdGhUvTgiL1Wz0SFFKwC2RA==
   dependencies:
     "@babel/core" "7.15.8"
     "@babel/helper-module-imports" "7.15.4"
     "@babel/runtime" "7.15.4"
-    "@swissquote/babel-preset-swissquote" "1.16.1"
-    "@swissquote/crafty-preset-eslint" "1.16.1"
+    "@swissquote/babel-preset-swissquote" "1.16.3"
+    "@swissquote/crafty-preset-eslint" "1.16.3"
     find-up "5.0.0"
     fork-ts-checker-webpack-plugin "6.3.4"
     gulp-babel "8.0.0"
@@ -834,28 +834,28 @@
     gulp-sourcemaps "3.0.0"
     gulp-typescript "5.0.1"
     tmp "0.2.1"
-    typescript "4.4.3"
+    typescript "4.4.4"
 
-"@swissquote/crafty-runner-gulp@1.16.1":
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-runner-gulp/-/crafty-runner-gulp-1.16.1.tgz#8550205eecf3882fc96e4a3d13fdcfe44972d5dc"
-  integrity sha512-eWUAAByxyeQyoFiV792QvmWQmzPujsJu6aXY1CMDODYi308Cc9DeclcQjW7JjZfqA9nu2gv3zjW1sa9KstpqAw==
+"@swissquote/crafty-runner-gulp@1.16.3":
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-runner-gulp/-/crafty-runner-gulp-1.16.3.tgz#9fd33497522fe203c54eb1e989f1e4fe0f2d9f93"
+  integrity sha512-DHXmYSZ//3L2cOVBRod+Fw5uYqmstEfW8P/2v/45cVkXEoHI2DJ2Q1eKBG1eQtsdPI1hahT63IHEe2L0yU8u7Q==
   dependencies:
-    "@swissquote/crafty" "1.16.1"
+    "@swissquote/crafty" "1.16.3"
     debug "^4.1.0"
     gulp-plumber "1.2.1"
     vinyl-fs "3.0.3"
 
-"@swissquote/crafty-runner-rollup@1.16.1":
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-runner-rollup/-/crafty-runner-rollup-1.16.1.tgz#8fe29346081dda5d7dfcf75714da2d8b069ba837"
-  integrity sha512-5mgMBrYyVJDkCt+Bhmeyk2OH3ep5zk1lz2OjN4p4rvSQYMwo+JHp6mGJ30h13B11w+y6FKHqFbfg2fTtpaKNFQ==
+"@swissquote/crafty-runner-rollup@1.16.3":
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-runner-rollup/-/crafty-runner-rollup-1.16.3.tgz#602d817b0f0ec366ead6157078550617015b322e"
+  integrity sha512-AAiHkL9C2A9xH7kQcrS//7yHEpBS28rxEIR7BpRGOj8TgS8fWCb5FHupIorPeqrOgPB+tyvvM9hvTcRhE7yCxA==
   dependencies:
     "@rollup/plugin-commonjs" "21.0.0"
     "@rollup/plugin-json" "4.1.0"
     "@rollup/plugin-node-resolve" "13.0.5"
     "@rollup/plugin-replace" "3.0.0"
-    "@swissquote/crafty-preset-terser" "1.16.1"
+    "@swissquote/crafty-preset-terser" "1.16.3"
     ansi-colors "^4.0.0"
     debug "^4.1.0"
     pretty-hrtime "1.0.3"
@@ -863,10 +863,10 @@
     rollup-plugin-pnp-resolve "2.0.0"
     rollup-plugin-terser "7.0.2"
 
-"@swissquote/crafty@1.16.1":
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty/-/crafty-1.16.1.tgz#8933655c2ad9d97c9bb9cd2b5210a1049ab12a6d"
-  integrity sha512-LHuXn6YFnezsd/c0HYsCaq/7Vrwa7x1LKLqzD+868g4Rk2F0NeRi8UGORndnplI+BTaD844ZHFWE2vOU9GYFLw==
+"@swissquote/crafty@1.16.3":
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty/-/crafty-1.16.3.tgz#2c7daf1a0571e6239bffd691d982808985ae39ae"
+  integrity sha512-hLKJJCc77UGzQlS+7hrROy2wvuGxrM9Ya4g88RRti14npUEnP2RDWQZSdlDTPT1NuX/kzGJQfZ3BY/PmXT9vrA==
   dependencies:
     ansi-colors "^4.0.0"
     anymatch "3.1.2"
@@ -888,30 +888,30 @@
     undertaker "1.3.0"
     yargs-parser "20.2.9"
 
-"@swissquote/eslint-plugin-swissquote@1.16.1":
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/@swissquote/eslint-plugin-swissquote/-/eslint-plugin-swissquote-1.16.1.tgz#7147a4c1b5814d6a2a52cd1987d57fd1ea8d54ea"
-  integrity sha512-vWHcyBdzkVB2S3dtA8q97+vTfLYYnAMoyNuihjPdSV7VYwtfxlho0skenQsmEoFitV1ckimBK71Qy/pYR74+Ww==
+"@swissquote/eslint-plugin-swissquote@1.16.3":
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/eslint-plugin-swissquote/-/eslint-plugin-swissquote-1.16.3.tgz#ff2c15ec8dcdbc3e671855c6c2796d4340f5190f"
+  integrity sha512-6KxnIY+3B5CF/j1gP6RSdvVvFd0Lt2mEA9zQhKKz1X1lhVYgEXlzlU9yJOHA+I9L36fqq/rdwTGuL4f0TS3r1Q==
   dependencies:
     "@babel/eslint-parser" "7.15.8"
-    "@swissquote/babel-preset-swissquote" "1.16.1"
+    "@swissquote/babel-preset-swissquote" "1.16.3"
     "@typescript-eslint/eslint-plugin" "5.0.0"
     "@typescript-eslint/parser" "5.0.0"
     confusing-browser-globals "1.0.10"
     eslint-config-prettier "8.3.0"
     eslint-import-resolver-typescript "2.5.0"
-    eslint-plugin-import "2.25.1"
+    eslint-plugin-import "2.25.2"
     eslint-plugin-prettier "3.4.1"
     eslint-plugin-react "7.26.1"
     eslint-plugin-react-hooks "4.2.0"
     eslint-plugin-sonarjs "0.10.0"
     prettier "1.19.1"
-    typescript "4.4.3"
+    typescript "4.4.4"
 
-"@swissquote/rollup-plugin-eslint@1.16.1":
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/@swissquote/rollup-plugin-eslint/-/rollup-plugin-eslint-1.16.1.tgz#1ac8822b9b92ab2ceab69908c0f97c743d030bac"
-  integrity sha512-JteDLDe5tBtkrAL7SdCXRv9pDVR0XaJf7YDh7+MXAzAAuFQMta+cb70VzKENkJ5t3PtzvcCKnUyQZURI7G9rAg==
+"@swissquote/rollup-plugin-eslint@1.16.3":
+  version "1.16.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/rollup-plugin-eslint/-/rollup-plugin-eslint-1.16.3.tgz#13962cd17ebc1bfb95789572321e580eb07912ee"
+  integrity sha512-KI1sMoY/mJ4/+0C0SyEjA5Rp+gn0olSKFM7NmQQPnhofxxfwLTaFPdcx95nAHOd1cyzyjCDF3xlHudA90FS/8A==
   dependencies:
     "@rollup/pluginutils" "4.1.1"
     eslint "7.32.0"
@@ -2305,7 +2305,7 @@ eslint-import-resolver-typescript@2.5.0:
     resolve "^1.20.0"
     tsconfig-paths "^3.9.0"
 
-eslint-module-utils@^2.6.2:
+eslint-module-utils@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/eslint-module-utils/-/eslint-module-utils-2.7.0.tgz#9e97c12688113401259b39d960e6a1f09f966435"
   integrity sha512-hqSE88MmHl3ru9SYvDyGrlo0JwROlf9fiEMplEV7j/EAuq9iSlIlyCFbBT6pdULQBSnBYtYKiMLps+hKkyP7Gg==
@@ -2314,17 +2314,17 @@ eslint-module-utils@^2.6.2:
     find-up "^2.1.0"
     pkg-dir "^2.0.0"
 
-eslint-plugin-import@2.25.1:
-  version "2.25.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.25.1.tgz#b4b23bef08309f91303e528b13ecdffc42f8bb89"
-  integrity sha512-YiQtY+ehqQXb6dvdrFUVdl3hsTvl+g3aKoTLZFIy1j/mKxjrLcRISI2rA7dNmEReJdr5xzjLld6vJ8pC1bfCfw==
+eslint-plugin-import@2.25.2:
+  version "2.25.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.25.2.tgz#b3b9160efddb702fc1636659e71ba1d10adbe9e9"
+  integrity sha512-qCwQr9TYfoBHOFcVGKY9C9unq05uOxxdklmBXLVvcwo68y5Hta6/GzCZEMx2zQiu0woKNEER0LE7ZgaOfBU14g==
   dependencies:
     array-includes "^3.1.4"
     array.prototype.flat "^1.2.5"
     debug "^2.6.9"
     doctrine "^2.1.0"
     eslint-import-resolver-node "^0.3.6"
-    eslint-module-utils "^2.6.2"
+    eslint-module-utils "^2.7.0"
     has "^1.0.3"
     is-core-module "^2.7.0"
     is-glob "^4.0.3"
@@ -5893,10 +5893,10 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@4.4.3:
-  version "4.4.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.3.tgz#bdc5407caa2b109efd4f82fe130656f977a29324"
-  integrity sha512-4xfscpisVgqqDfPaJo5vkd+Qd/ItkoagnHpufr+i2QCHBsNYp+G7UAoyFl8aPtx879u38wPV65rZ8qbGZijalA==
+typescript@4.4.4:
+  version "4.4.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.4.tgz#2cd01a1a1f160704d3101fd5a58ff0f9fcb8030c"
+  integrity sha512-DqGhF5IKoBl8WNf8C1gu8q0xZSInh9j1kJJMqT3a94w1JzVaBU4EXOSMrz9yDqMT0xt3selp83fuFMQ0uzv6qA==
 
 unbox-primitive@^1.0.1:
   version "1.0.1"
