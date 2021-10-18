@@ -15,7 +15,7 @@
     "benchmark": "2.1.4",
     "format-message-interpret": "6.2.3",
     "format-message-parse": "6.2.3",
-    "intl-messageformat": "9.9.2",
+    "intl-messageformat": "9.9.3",
     "intl-messageformat-parser": "6.4.4",
     "messageformat": "2.3.0",
     "nano-memoize": "1.2.1",
