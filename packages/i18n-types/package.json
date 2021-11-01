@@ -8,9 +8,9 @@
     "access": "public"
   },
   "devDependencies": {
-    "@swissquote/crafty": "1.17.1",
-    "@swissquote/crafty-preset-typescript": "1.17.1",
-    "@swissquote/crafty-runner-gulp": "1.17.1"
+    "@swissquote/crafty": "1.17.2",
+    "@swissquote/crafty-preset-typescript": "1.17.2",
+    "@swissquote/crafty-runner-gulp": "1.17.2"
   },
   "scripts": {
     "build": "crafty run",
