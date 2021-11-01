@@ -12,11 +12,11 @@
   "devDependencies": {
     "@onigoetz/i18n-types": "0.1.0",
     "@onigoetz/messageformat": "0.1.0",
-    "@swissquote/crafty": "1.16.3",
-    "@swissquote/crafty-preset-jest": "1.16.3",
-    "@swissquote/crafty-preset-typescript": "1.16.3",
-    "@swissquote/crafty-runner-gulp": "1.16.3",
-    "@swissquote/crafty-runner-rollup": "1.16.3",
+    "@swissquote/crafty": "1.17.1",
+    "@swissquote/crafty-preset-jest": "1.17.1",
+    "@swissquote/crafty-preset-typescript": "1.17.1",
+    "@swissquote/crafty-runner-gulp": "1.17.1",
+    "@swissquote/crafty-runner-rollup": "1.17.1",
     "@types/jest": "^27.0.0",
     "full-icu": "1.4.0",
     "jest-sonar": "0.2.12"
