@@ -10,11 +10,11 @@
     "access": "public"
   },
   "devDependencies": {
-    "@swissquote/crafty": "1.17.1",
-    "@swissquote/crafty-preset-jest": "1.17.1",
-    "@swissquote/crafty-preset-typescript": "1.17.1",
-    "@swissquote/crafty-runner-gulp": "1.17.1",
-    "@swissquote/crafty-runner-rollup": "1.17.1",
+    "@swissquote/crafty": "1.17.2",
+    "@swissquote/crafty-preset-jest": "1.17.2",
+    "@swissquote/crafty-preset-typescript": "1.17.2",
+    "@swissquote/crafty-runner-gulp": "1.17.2",
+    "@swissquote/crafty-runner-rollup": "1.17.2",
     "@types/jest": "^27.0.0",
     "jest-sonar": "0.2.12",
     "test-cldr-data": "0.1.0"
