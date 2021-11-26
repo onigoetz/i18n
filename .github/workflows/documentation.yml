@@ -13,7 +13,7 @@ jobs:
         persist-credentials: false
     - run: ls -la docs/02_Packages
     - name: Setup PHP
-      uses: shivammathur/setup-php@2.15.0
+      uses: shivammathur/setup-php@2.16.0
       with:
         php-version: 7.4
         extensions: mbstring, dom, intl
@@ -22,7 +22,7 @@ jobs:
     - name: Generate documentation
       run: vendor/bin/daux generate
     - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@4.1.5
+      uses: JamesIves/github-pages-deploy-action@4.1.6
       with:
         folder: "static"
         branch: gh-pages
