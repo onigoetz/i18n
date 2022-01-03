@@ -14,7 +14,7 @@ jobs:
     - name: Generate documentation
       uses: docker://daux/daux.io:0.17.1
       with:
-        args: generate
+        args: daux generate
     - run: ls -la .
     - run: tree
     #- name: Deploy 🚀
