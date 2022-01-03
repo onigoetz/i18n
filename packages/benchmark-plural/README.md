@@ -1,4 +1,4 @@
-# MessageFormat parse and render benchmark
+# plural benchmarks
 
 In this benchmark we'll look at two metrics : Library size and speed.
 

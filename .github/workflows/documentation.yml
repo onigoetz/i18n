@@ -11,14 +11,17 @@ jobs:
     - uses: actions/checkout@v2
       with:
         persist-credentials: false
-    - name: Generate documentation
-      uses: docker://daux/daux.io:0.17.1
+    - name: Setup PHP
+      uses: shivammathur/setup-php@2.16.0
       with:
-        args: daux generate
-    - run: ls -la .
-    - run: tree
-    #- name: Deploy 🚀
-    #  uses: JamesIves/github-pages-deploy-action@4.1.8
-    #  with:
-    #    folder: "static"
-    #    branch: gh-pages
+        php-version: 8.1
+        extensions: mbstring, dom, intl
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest
+    - name: Generate documentation
+      run: vendor/bin/daux generate
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.8
+      with:
+        folder: "static"
+        branch: gh-pages
