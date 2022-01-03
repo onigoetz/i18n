@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-    <title>Benchmark - I18N</title>
+    <title>Benchmark plural - I18N</title>
     <meta name="description" content="Simple I18N library">
     <meta name="author" content="Stéphane Goetz">
     <meta charset="UTF-8">
@@ -61,7 +61,7 @@
 
         <div class="Collapsible__content" id="sidebar_content">
             <!-- Navigation -->
-            <ul class='Nav'><li class='Nav__item  has-children'><a href="#" class="Nav__item__link Nav__item__link--nopage"><i class="Nav__arrow">&nbsp;</i>Packages</a><ul class='Nav'><li class='Nav__item '><a href="Packages/intl_formatters.html">intl-formatters</a></li><li class='Nav__item '><a href="Packages/make_plural.html">make-plural</a></li><li class='Nav__item '><a href="Packages/messageformat.html">messageformat</a></li></ul></li><li class='Nav__item '><a href="Specification.html">Specification</a></li><li class='Nav__item Nav__item--active'><a href="Benchmark.html">Benchmark</a></li></ul>
+            <ul class='Nav'><li class='Nav__item  has-children'><a href="#" class="Nav__item__link Nav__item__link--nopage"><i class="Nav__arrow">&nbsp;</i>Packages</a><ul class='Nav'><li class='Nav__item '><a href="Packages/intl_formatters.html">intl-formatters</a></li><li class='Nav__item '><a href="Packages/make_plural.html">make-plural</a></li><li class='Nav__item '><a href="Packages/messageformat.html">messageformat</a></li></ul></li><li class='Nav__item '><a href="Specification.html">Specification</a></li><li class='Nav__item '><a href="Benchmark_messageformat.html">Benchmark messageformat</a></li><li class='Nav__item Nav__item--active'><a href="Benchmark_plural.html">Benchmark plural</a></li></ul>
             <div class="Links">
                                     <hr/>
                                             <a href="http://github.com/onigoetz/i18n" target="_blank"  rel="noopener noreferrer">GitHub</a>
@@ -81,15 +81,68 @@
                 <article class="Page">
 
     <div class="Page__header">
-        <h1><a href="Benchmark.html">Benchmark</a></h1>
+        <h1><a href="Benchmark_plural.html">Benchmark plural</a></h1>
                     </div>
 
     <div class="s-content">
-            </div>
+        <h1><a id="page_plural_benchmarks" href="#page_plural_benchmarks" class="Permalink" aria-hidden="true" title="Permalink">#</a>plural benchmarks</h1>
+<p>In this benchmark we’ll look at two metrics : Library size and speed.</p>
+<p>When doing the other benchmark in this repository I saw that what was taking most of the time wasn’t the
+parsing or rendering of messageformat but the different formatters and plurals generators.</p>
+<p>I was curious about how different they were.</p>
+<h2><a id="page_libraries_size" href="#page_libraries_size" class="Permalink" aria-hidden="true" title="Permalink">#</a>Libraries size</h2>
+<p>Sources can be found in <code>src</code>, measure taken on 25/06/2020 With latest available versions</p>
+<table>
+<thead>
+<tr>
+<th>Npm Package</th>
+<th>Version</th>
+<th>Size</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@onigoetz/intl-formatters</td>
+<td>0.1.0</td>
+<td>0.3K</td>
+<td>Embeds the formatters in the runtime</td>
+</tr>
+<tr>
+<td>@onigoetz/make-plural</td>
+<td>0.1.0</td>
+<td>3.8K</td>
+<td>Contains only the formatter for <code>en</code> in this example, have to be shipped separately.</td>
+</tr>
+<tr>
+<td>@phensley/plurals</td>
+<td>1.2.2</td>
+<td>37K</td>
+<td>Contains all locales</td>
+</tr>
+<tr>
+<td>make-plural</td>
+<td>4.3.0</td>
+<td>23K</td>
+<td>Contains all locales</td>
+</tr>
+</tbody>
+</table>
+<p>Raw results (11/12/2020)</p>
+<pre><code>- @phensley/plurals          x 6,462,507 ops/sec ±1.01% (89 runs sampled)
+- make-plural                x 4,378,805 ops/sec ±0.36% (93 runs sampled)
+- @phensley/plurals-memo     x 3,997,334 ops/sec ±1.75% (89 runs sampled)
+- @onigoetz/make-plural-memo x 3,179,610 ops/sec ±0.81% (93 runs sampled)
+- @onigoetz/intl-memo        x 1,120,271 ops/sec ±4.28% (93 runs sampled)
+- @onigoetz/make-plural      x 29,593 ops/sec ±0.97% (92 runs sampled)
+- @onigoetz/intl             x 28,386 ops/sec ±5.11% (82 runs sampled)
+</code></pre>
+<p>As you can see, using a pre-built, pre-optimized runtime gets way better results than generating on-the-fly, however <code>make-plural</code></p>
+    </div>
 
         <nav>
         <ul class="Pager">
-            <li class=Pager--prev><a href="Specification.html">Previous</a></li>                    </ul>
+            <li class=Pager--prev><a href="Benchmark_messageformat.html">Previous</a></li>                    </ul>
     </nav>
     </article>
 

@@ -76,10 +76,10 @@
     <div class="Container">
         <div class="Container--inner">
             <div class="doc_content s-content">
-                <h1 id="page_I18n">I18n</h1>
-<h1 id="page_onigoetzi18n">@onigoetz/i18n</h1>
+                <h1><a id="page_i18n" href="#page_i18n" class="Permalink" aria-hidden="true" title="Permalink">#</a>I18n</h1>
+<h1><a id="page_onigoetz_i18n" href="#page_onigoetz_i18n" class="Permalink" aria-hidden="true" title="Permalink">#</a>@onigoetz/i18n</h1>
 <p>A suite of packages to ease your translation needs.</p>
-<h2 id="page_Packages">Packages</h2>
+<h2><a id="page_packages" href="#page_packages" class="Permalink" aria-hidden="true" title="Permalink">#</a>Packages</h2>
 <ul>
 <li>
 <a href="Packages/messageformat.html"><code>@onigoetz/messageformat</code></a> a MessageFormat parsing and rendering library</li>
@@ -88,7 +88,7 @@
 <li>
 <a href="Packages/intl_formatters.html"><code>@onigoetz/intl-formatters</code></a> default formatters if you don’t already have formatters for dates and numbers, uses the standard <code>Intl</code> API</li>
 </ul>
-<h2 id="page_Features">Features</h2>
+<h2><a id="page_features" href="#page_features" class="Permalink" aria-hidden="true" title="Permalink">#</a>Features</h2>
 <ul>
 <li>Small, Fast and no NPM dependencies</li>
 <li>TypeScript ❤️</li>
@@ -97,7 +97,7 @@
 <li>ICU MessageFormat compatible</li>
 <li>CLDR compatible</li>
 </ul>
-<h2 id="page_Example">Example</h2>
+<h2><a id="page_example" href="#page_example" class="Permalink" aria-hidden="true" title="Permalink">#</a>Example</h2>
 <pre><code class="hljs typescript"><span class="hljs-keyword">import</span> { parse, createRenderer } <span class="hljs-keyword">from</span> <span class="hljs-string">"@onigoetz/messageformat"</span>;
 <span class="hljs-keyword">import</span> { dateFormatter, numberFormatter, pluralGenerator } <span class="hljs-keyword">from</span> <span class="hljs-string">"@onigoetz/intl-formatters"</span>;
 
@@ -115,13 +115,13 @@
 render(parsed, { test: <span class="hljs-number">4</span> }); <span class="hljs-comment">// =&gt; "one test"</span>
 render(parsed, { test: <span class="hljs-number">7</span> }); <span class="hljs-comment">// =&gt; "4 test"</span>
 </code></pre>
-<h2 id="page_Who_is_the_audience_for_this_library">Who is the audience for this library ?</h2>
+<h2><a id="page_who_is_the_audience_for_this_library" href="#page_who_is_the_audience_for_this_library" class="Permalink" aria-hidden="true" title="Permalink">#</a>Who is the audience for this library ?</h2>
 <p>This library is meant for applications starting with medium scale, where you might have multiple libraries and frameworks inside.
 Since these libraries don’t make any assumption about your stack, you can integrate them in any kind of application.</p>
 <p>Most importantly, if you have an environment where pre-compiling translations isn’t possible,
 for example because your translation build process is separate from your app build process or you have a modular application / microfrontend.</p>
 <p>This library is very interesting as a lightweight runtime because of its small footprint and performant parsing.</p>
-<h2 id="page_Inspiration">Inspiration</h2>
+<h2><a id="page_inspiration" href="#page_inspiration" class="Permalink" aria-hidden="true" title="Permalink">#</a>Inspiration</h2>
 <p>This suite of packages certainly wouldn’t exist without the previous work in the field.</p>
 <p>This package forked <a href="https://www.npmjs.com/package/make-plural" class="Link--external" rel="noopener noreferrer"><code>make-plural</code></a> at version 4 to make it smaller.
 Took inspiration for the MessageFormat parser from <a href="https://www.npmjs.com/package/@ffz/icu-msgparser" class="Link--external" rel="noopener noreferrer"><code>@ffz/icu-msgparser</code></a>

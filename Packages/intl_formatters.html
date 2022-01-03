@@ -61,7 +61,7 @@
 
         <div class="Collapsible__content" id="sidebar_content">
             <!-- Navigation -->
-            <ul class='Nav'><li class='Nav__item Nav__item--open has-children'><a href="#" class="Nav__item__link Nav__item__link--nopage"><i class="Nav__arrow">&nbsp;</i>Packages</a><ul class='Nav'><li class='Nav__item Nav__item--active'><a href="../Packages/intl_formatters.html">intl-formatters</a></li><li class='Nav__item '><a href="../Packages/make_plural.html">make-plural</a></li><li class='Nav__item '><a href="../Packages/messageformat.html">messageformat</a></li></ul></li><li class='Nav__item '><a href="../Specification.html">Specification</a></li><li class='Nav__item '><a href="../Benchmark.html">Benchmark</a></li></ul>
+            <ul class='Nav'><li class='Nav__item Nav__item--open has-children'><a href="#" class="Nav__item__link Nav__item__link--nopage"><i class="Nav__arrow">&nbsp;</i>Packages</a><ul class='Nav'><li class='Nav__item Nav__item--active'><a href="../Packages/intl_formatters.html">intl-formatters</a></li><li class='Nav__item '><a href="../Packages/make_plural.html">make-plural</a></li><li class='Nav__item '><a href="../Packages/messageformat.html">messageformat</a></li></ul></li><li class='Nav__item '><a href="../Specification.html">Specification</a></li><li class='Nav__item '><a href="../Benchmark_messageformat.html">Benchmark messageformat</a></li><li class='Nav__item '><a href="../Benchmark_plural.html">Benchmark plural</a></li></ul>
             <div class="Links">
                                     <hr/>
                                             <a href="http://github.com/onigoetz/i18n" target="_blank"  rel="noopener noreferrer">GitHub</a>
@@ -86,7 +86,7 @@
 
     <div class="s-content">
         <p>This package provides simple implementations for Messageformat using the Intl API.</p>
-<h2 id="page_Features">Features</h2>
+<h2><a id="page_features" href="#page_features" class="Permalink" aria-hidden="true" title="Permalink">#</a>Features</h2>
 <ul>
 <li>
 <strong>Numbers and currencies</strong>: <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Intl/NumberFormat" class="Link--external" rel="noopener noreferrer">https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Intl/NumberFormat</a>
@@ -101,7 +101,7 @@
 <strong>Plurals</strong>: <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Intl/PluralRules" class="Link--external" rel="noopener noreferrer">https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Intl/PluralRules</a>
 </li>
 </ul>
-<h2 id="page_How_to_use">How to use</h2>
+<h2><a id="page_how_to_use" href="#page_how_to_use" class="Permalink" aria-hidden="true" title="Permalink">#</a>How to use</h2>
 <p>These formatters are best used in conjunction with <code>@onigoetz/messageformat</code>.
 However they are fully Typed and you may use them for any other use.</p>
 <pre><code class="hljs typescript"><span class="hljs-keyword">import</span> { parse, createRenderer } <span class="hljs-keyword">from</span> <span class="hljs-string">"@onigoetz/messageformat"</span>;
@@ -126,14 +126,14 @@ However they are fully Typed and you may use them for any other use.</p>
 render(parsed, { test: <span class="hljs-number">4</span> }); <span class="hljs-comment">// =&gt; "one test"</span>
 render(parsed, { test: <span class="hljs-number">7</span> }); <span class="hljs-comment">// =&gt; "4 test"</span>
 </code></pre>
-<h3 id="page_For_NodeJS">For NodeJS</h3>
+<h3><a id="page_for_nodejs" href="#page_for_nodejs" class="Permalink" aria-hidden="true" title="Permalink">#</a>For NodeJS</h3>
 <p>If you do some generation using NodeJS and wish to use locales other than <code>en</code>.
 I strongly suggest you look at the following page : <a href="https://nodejs.org/api/intl.html#intl_providing_icu_data_at_runtime" class="Link--external" rel="noopener noreferrer">https://nodejs.org/api/intl.html#intl_providing_icu_data_at_runtime</a>
 This page explains how to make sure you have all the right locales loaded to make your formatting.</p>
-<h2 id="page_Browser_Support">Browser Support</h2>
-<h3 id="page_Intl_Base_API_(Dates,_Numbers,_Currencies,_Relative_Time)">Intl Base API (Dates, Numbers, Currencies, Relative Time)</h3>
+<h2><a id="page_browser_support" href="#page_browser_support" class="Permalink" aria-hidden="true" title="Permalink">#</a>Browser Support</h2>
+<h3><a id="page_intl_base_api_dates_numbers_currencies_relative_time" href="#page_intl_base_api_dates_numbers_currencies_relative_time" class="Permalink" aria-hidden="true" title="Permalink">#</a>Intl Base API (Dates, Numbers, Currencies, Relative Time)</h3>
 <p><a href="https://caniuse.com/mdn-javascript_builtins_intl" class="Link--external" rel="noopener noreferrer"><img src="https://caniuse.bitsofco.de/static/v1/mdn-javascript__builtins__Intl-1602274285145.jpg" alt="‘Can I use’ table" /></a></p>
-<h2 id="page_Plurals">Plurals</h2>
+<h2><a id="page_plurals" href="#page_plurals" class="Permalink" aria-hidden="true" title="Permalink">#</a>Plurals</h2>
 <p><a href="https://caniuse.com/intl-pluralrules" class="Link--external" rel="noopener noreferrer"><img src="https://caniuse.bitsofco.de/image/intl-pluralrules.png" alt="‘Can I use’ table" /></a></p>
     </div>
 

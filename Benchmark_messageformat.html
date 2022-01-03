@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <title>Benchmark messageformat - I18N</title>
+    <meta name="description" content="Simple I18N library">
+    <meta name="author" content="Stéphane Goetz">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" href="themes/daux/img/favicon-blue.png" type="image/x-icon">
+
+    <!-- Mobile -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JS -->
+    <script>
+        window.base_url = "";
+        document.documentElement.classList.remove('no-js');
+    </script>
+
+    <!-- Font -->
+    
+    <!-- CSS -->
+            <link href='themes/daux/css/theme-blue.min.css' rel='stylesheet' type='text/css'>
+            <link href='daux_libraries/search.css' rel='stylesheet' type='text/css'>
+    </head>
+<body class="">
+    <div class="Columns content">
+    <aside class="Columns__left Collapsible">
+        <button type="button" class="Button Collapsible__trigger" aria-controls="sidebar_content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="Collapsible__trigger__bar"></span>
+            <span class="Collapsible__trigger__bar"></span>
+            <span class="Collapsible__trigger__bar"></span>
+        </button>
+
+        <a class="Brand" href="index.html">I18N</a>
+
+    <form role='search' action="/" method="get" class="Search" id="search_form">
+        <label for="search_input">
+            <span class='u-visuallyHidden'>Search</span>
+        </label>
+        <input
+            type="search"
+            id="search_input"
+            class="Search__field"
+            placeholder="Search..."
+            aria-label="Search..."
+            autocomplete="on"
+            results=25
+            autosave=text_search
+        >
+        <label>
+            <input type="submit" class='u-visuallyHidden' />
+            <span class='u-visuallyHidden'>Search...</span>
+            <svg class="Search__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 451 451">
+                <path d="M447.05 428l-109.6-109.6c29.4-33.8 47.2-77.9 47.2-126.1C384.65 86.2 298.35 0 192.35 0 86.25 0 .05 86.3.05 192.3s86.3 192.3 192.3 192.3c48.2 0 92.3-17.8 126.1-47.2L428.05 447c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.2-5.2 5.2-13.8 0-19zM26.95 192.3c0-91.2 74.2-165.3 165.3-165.3 91.2 0 165.3 74.2 165.3 165.3s-74.1 165.4-165.3 165.4c-91.1 0-165.3-74.2-165.3-165.4z"/>
+            </svg>
+        </label>
+    </form>
+
+        <div class="Collapsible__content" id="sidebar_content">
+            <!-- Navigation -->
+            <ul class='Nav'><li class='Nav__item  has-children'><a href="#" class="Nav__item__link Nav__item__link--nopage"><i class="Nav__arrow">&nbsp;</i>Packages</a><ul class='Nav'><li class='Nav__item '><a href="Packages/intl_formatters.html">intl-formatters</a></li><li class='Nav__item '><a href="Packages/make_plural.html">make-plural</a></li><li class='Nav__item '><a href="Packages/messageformat.html">messageformat</a></li></ul></li><li class='Nav__item '><a href="Specification.html">Specification</a></li><li class='Nav__item Nav__item--active'><a href="Benchmark_messageformat.html">Benchmark messageformat</a></li><li class='Nav__item '><a href="Benchmark_plural.html">Benchmark plural</a></li></ul>
+            <div class="Links">
+                                    <hr/>
+                                            <a href="http://github.com/onigoetz/i18n" target="_blank"  rel="noopener noreferrer">GitHub</a>
+                        <br />
+                                                </div>
+
+            
+                
+                                    <div class="PoweredBy">
+                        <hr/>
+                        © 2020 Stéphane Goetz. Powered by Daux.io.                    </div>
+                        </div>
+    </aside>
+    <div class="Columns__right">
+        <div class="Columns__right__content">
+            <div class="doc_content">
+                <article class="Page">
+
+    <div class="Page__header">
+        <h1><a href="Benchmark_messageformat.html">Benchmark messageformat</a></h1>
+                    </div>
+
+    <div class="s-content">
+        <h1><a id="page_messageformat_parse_and_render_benchmark" href="#page_messageformat_parse_and_render_benchmark" class="Permalink" aria-hidden="true" title="Permalink">#</a>MessageFormat parse and render benchmark</h1>
+<p>In this benchmark we’ll look at two metrics : Library size and parsing/rendering speed.</p>
+<p>Like any synthetic benchmark these should be taken with a pinch of salt.
+I tried to compare apples with apples as much as possible, but some libraries do a bit more and some others do a bit less.</p>
+<p>Feel free to make a PR to help make these comparisons as fair as possible.</p>
+<p>As a final word, I made this comparison purely for fun and to learn a thing or two about performance optimization.</p>
+<h2><a id="page_libraries_size" href="#page_libraries_size" class="Permalink" aria-hidden="true" title="Permalink">#</a>Libraries size</h2>
+<p>Sources can be found in <code>src</code>, measure taken on 25/06/2020 With latest available versions</p>
+<table>
+<thead>
+<tr>
+<th>Npm Package</th>
+<th>Version</th>
+<th>Size</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@onigoetz/messageformat</td>
+<td>0.1.0</td>
+<td>13.34K</td>
+<td></td>
+</tr>
+<tr>
+<td>@ffz/icu-msgparser</td>
+<td>2.0.0</td>
+<td>14.93K</td>
+<td></td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (memoized)</td>
+<td>0.1.0</td>
+<td>15.62K</td>
+<td></td>
+</tr>
+<tr>
+<td>format-message-parse</td>
+<td>6.2.3</td>
+<td>27.54K</td>
+<td>Uses peg.js</td>
+</tr>
+<tr>
+<td>intl-messageformat</td>
+<td>9.8.2</td>
+<td>47.22K</td>
+<td>Uses peg.js</td>
+</tr>
+<tr>
+<td>@phensley/messageformat</td>
+<td>1.2.6</td>
+<td>47.03K</td>
+<td></td>
+</tr>
+<tr>
+<td>messageformat</td>
+<td>2.3.0</td>
+<td>48.89K</td>
+<td>Uses peg.js</td>
+</tr>
+</tbody>
+</table>
+<p>In the case of <code>@ffz/icu-msgparser</code>. The source largely inspired <code>@onigoetz/messageformat</code> and
+since it provided no renderer by default, I put an early version of <code>@onigoetz/messageformat</code>’s renderer.</p>
+<p>The Size w/o formatters column counts only the parser and renderer, without any plural generator or date/number formatter
+I added this number as a comparison if you want to use <code>@onigoetz/messageformat</code> only for variable subsitution.
+Or if in your application you already have formatters for dates/numbers and plurals or just want to use the <code>Intl</code> implementation those come at virtually no cost.</p>
+<blockquote>
+<p>Special mention for <code>@eo-locale/core</code> Which provides a very small package,
+however it provides no package that runs on Node.js 10 and crashes on our test strings.</p>
+</blockquote>
+<h2><a id="page_benchmark" href="#page_benchmark" class="Permalink" aria-hidden="true" title="Permalink">#</a>Benchmark</h2>
+<p>Since each application has different translation needs, I tried to make a somewhat representative representation of what translation strings look like.
+From the simple string to the complex nested plural in a select, there are four different tests.</p>
+<h3><a id="page_string" href="#page_string" class="Permalink" aria-hidden="true" title="Permalink">#</a>String</h3>
+<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> message = <span class="hljs-string">`Hello, world!`</span>;
+<span class="hljs-keyword">const</span> variables = {};
+
+<span class="hljs-comment">// Renders : Hello, world!</span>
+</code></pre>
+<ul>
+<li>@onigoetz/messageformat x 4,608,460 ops/sec ±1.50% (92 runs sampled)</li>
+<li>@onigoetz/messageformat (memoized) x 4,536,394 ops/sec ±1.67% (85 runs sampled)</li>
+<li>@phensley/messageformat x 4,529,047 ops/sec ±0.72% (88 runs sampled)</li>
+<li>format-message-parse x 3,992,051 ops/sec ±0.23% (96 runs sampled)</li>
+<li>@ffz/icu-msgparser x 1,583,621 ops/sec ±0.46% (95 runs sampled)</li>
+<li>intl-messageformat x 454,716 ops/sec ±1.04% (85 runs sampled)</li>
+<li>messageformat x 185,259 ops/sec ±0.36% (90 runs sampled)</li>
+</ul>
+<h3><a id="page_message_with_one_variable" href="#page_message_with_one_variable" class="Permalink" aria-hidden="true" title="Permalink">#</a>Message with one variable</h3>
+<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> message = <span class="hljs-string">`Hello, {name}!`</span>;
+<span class="hljs-keyword">const</span> variables = { <span class="hljs-attr">name</span>: <span class="hljs-string">"John"</span> };
+
+<span class="hljs-comment">// Renders : Hello, John!</span>
+</code></pre>
+<ul>
+<li>format-message-parse x 1,941,376 ops/sec ±0.82% (95 runs sampled)</li>
+<li>@phensley/messageformat x 1,872,103 ops/sec ±0.49% (93 runs sampled)</li>
+<li>@onigoetz/messageformat (memoized) x 1,462,301 ops/sec ±0.86% (95 runs sampled)</li>
+<li>@onigoetz/messageformat x 1,379,505 ops/sec ±0.47% (95 runs sampled)</li>
+<li>@ffz/icu-msgparser x 1,009,608 ops/sec ±1.03% (95 runs sampled)</li>
+<li>intl-messageformat x 300,560 ops/sec ±1.85% (83 runs sampled)</li>
+<li>messageformat x 163,636 ops/sec ±1.40% (93 runs sampled)</li>
+</ul>
+<h3><a id="page_let_s_get_more_creative" href="#page_let_s_get_more_creative" class="Permalink" aria-hidden="true" title="Permalink">#</a>Let’s get more creative</h3>
+<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> message = <span class="hljs-string">`Yo, {firstName} {lastName} has {numBooks, number, integer} {numBooks, plural, one {book} other {books}}.`</span>;
+<span class="hljs-keyword">const</span> variables = {
+  <span class="hljs-attr">firstName</span>: <span class="hljs-string">"John"</span>,
+  <span class="hljs-attr">lastName</span>: <span class="hljs-string">"Constantine"</span>,
+  <span class="hljs-attr">numBooks</span>: <span class="hljs-number">5</span>,
+};
+
+<span class="hljs-comment">// Renders:  Yo, John Constantine has 5 books.</span>
+</code></pre>
+<ul>
+<li>@phensley/messageformat x 339,274 ops/sec ±0.54% (94 runs sampled)</li>
+<li>@ffz/icu-msgparser x 27,082 ops/sec ±1.78% (93 runs sampled)</li>
+<li>@onigoetz/messageformat x 17,177 ops/sec ±3.25% (87 runs sampled)</li>
+<li>format-message-parse x 16,956 ops/sec ±2.98% (90 runs sampled)</li>
+<li>messageformat x 14,239 ops/sec ±3.57% (88 runs sampled)</li>
+<li>intl-messageformat x 11,730 ops/sec ±4.34% (86 runs sampled)</li>
+<li>@onigoetz/messageformat (memoized) x 4,702 ops/sec ±16.39% (29 runs sampled)</li>
+</ul>
+<h3><a id="page_overly_complex_message" href="#page_overly_complex_message" class="Permalink" aria-hidden="true" title="Permalink">#</a>Overly complex message</h3>
+<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> message = <span class="hljs-string">`
+{gender_of_host, select,
+    female {
+        {num_guests, plural, offset:1
+            =0 {{host} does not give a party.}
+            =1 {{host} invites {guest} to her party.}
+            =2 {{host} invites {guest} and one other person to her party.}
+            other {{host} invites {guest} and # other people to her party.}
+        }
+    }
+    male {
+        {num_guests, plural, offset:1
+            =0 {{host} does not give a party.}
+            =1 {{host} invites {guest} to his party.}
+            =2 {{host} invites {guest} and one other person to his party.}
+            other {{host} invites {guest} and # other people to his party.}
+        }
+    }
+    other {
+        {num_guests, plural, offset:1
+            =0 {{host} does not give a party.}
+            =1 {{host} invites {guest} to their party.}
+            =2 {{host} invites {guest} and one other person to their party.}
+            other {{host} invites {guest} and # other people to their party.}
+        }
+    }
+}
+`</span>;
+<span class="hljs-keyword">const</span> variables = {
+  <span class="hljs-attr">gender_of_host</span>: <span class="hljs-string">"male"</span>,
+  <span class="hljs-attr">num_guests</span>: <span class="hljs-number">3</span>,
+  <span class="hljs-attr">host</span>: <span class="hljs-string">"Lucifer"</span>,
+  <span class="hljs-attr">guest</span>: <span class="hljs-string">"John Constantine"</span>,
+};
+
+<span class="hljs-comment">// Renders : Lucifer invites John Constantine and 2 other people to his party.</span>
+</code></pre>
+<ul>
+<li>@onigoetz/messageformat (memoized) x 58,697 ops/sec ±2.56% (90 runs sampled)</li>
+<li>@onigoetz/messageformat x 33,817 ops/sec ±0.80% (94 runs sampled)</li>
+<li>@phensley/messageformat x 35,552 ops/sec ±0.27% (98 runs sampled)</li>
+<li>@ffz/icu-msgparser x 14,154 ops/sec ±1.00% (96 runs sampled)</li>
+<li>format-message-parse x 7,711 ops/sec ±4.12% (93 runs sampled)</li>
+<li>intl-messageformat x 7,040 ops/sec ±4.26% (83 runs sampled)</li>
+<li>messageformat x 6,428 ops/sec ±0.20% (97 runs sampled)</li>
+</ul>
+    </div>
+
+        <nav>
+        <ul class="Pager">
+            <li class=Pager--prev><a href="Specification.html">Previous</a></li>            <li class=Pager--next><a href="Benchmark_plural.html">Next</a></li>        </ul>
+    </nav>
+    </article>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <!-- JS -->
+            <script src="themes/daux/js/daux.min.js"></script>
+    
+        <script>
+        
+        window.searchLanguage = "";
+        window.searchTranslation = {"Search_one_result":"1 result","Search_results":"!count results","Search_no_results":"Nothing found","Search_common_words_ignored":"Common words are largely ignored","Search_too_short":"Search too short","Search_one_character_or_more":"Should be one character or more","Search_should_be_x_or_more":"Should be !min characters or more","Link_previous":"Previous","Link_next":"Next"};
+    </script>
+
+    <!-- Search -->
+    <script type="text/javascript" src="daux_libraries/search.min.js"></script>
+
+    <script>
+        window.search({'base_url': ''})
+    </script>
+</body>
+</html>
