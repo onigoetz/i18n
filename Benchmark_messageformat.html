@@ -85,13 +85,13 @@
                     </div>
 
     <div class="s-content">
-        <h1><a id="page_messageformat_parse_and_render_benchmark" href="#page_messageformat_parse_and_render_benchmark" class="Permalink" aria-hidden="true" title="Permalink">#</a>MessageFormat parse and render benchmark</h1>
+        <h1><a id="messageformat-parse-and-render-benchmark" href="#messageformat-parse-and-render-benchmark" class="Permalink" aria-hidden="true" title="Permalink">#</a>MessageFormat parse and render benchmark</h1>
 <p>In this benchmark we’ll look at two metrics : Library size and parsing/rendering speed.</p>
 <p>Like any synthetic benchmark these should be taken with a pinch of salt.
 I tried to compare apples with apples as much as possible, but some libraries do a bit more and some others do a bit less.</p>
 <p>Feel free to make a PR to help make these comparisons as fair as possible.</p>
 <p>As a final word, I made this comparison purely for fun and to learn a thing or two about performance optimization.</p>
-<h2><a id="page_libraries_size" href="#page_libraries_size" class="Permalink" aria-hidden="true" title="Permalink">#</a>Libraries size</h2>
+<h2><a id="libraries-size" href="#libraries-size" class="Permalink" aria-hidden="true" title="Permalink">#</a>Libraries size</h2>
 <p>Sources can be found in <code>src</code>, measure taken on 25/06/2020 With latest available versions</p>
 <table>
 <thead>
@@ -156,10 +156,10 @@ Or if in your application you already have formatters for dates/numbers and plur
 <p>Special mention for <code>@eo-locale/core</code> Which provides a very small package,
 however it provides no package that runs on Node.js 10 and crashes on our test strings.</p>
 </blockquote>
-<h2><a id="page_benchmark" href="#page_benchmark" class="Permalink" aria-hidden="true" title="Permalink">#</a>Benchmark</h2>
+<h2><a id="benchmark" href="#benchmark" class="Permalink" aria-hidden="true" title="Permalink">#</a>Benchmark</h2>
 <p>Since each application has different translation needs, I tried to make a somewhat representative representation of what translation strings look like.
 From the simple string to the complex nested plural in a select, there are four different tests.</p>
-<h3><a id="page_string" href="#page_string" class="Permalink" aria-hidden="true" title="Permalink">#</a>String</h3>
+<h3><a id="string" href="#string" class="Permalink" aria-hidden="true" title="Permalink">#</a>String</h3>
 <pre><code class="hljs javascript"><span class="hljs-keyword">const</span> message = <span class="hljs-string">`Hello, world!`</span>;
 <span class="hljs-keyword">const</span> variables = {};
 
@@ -174,7 +174,7 @@ From the simple string to the complex nested plural in a select, there are four 
 <li>intl-messageformat x 454,716 ops/sec ±1.04% (85 runs sampled)</li>
 <li>messageformat x 185,259 ops/sec ±0.36% (90 runs sampled)</li>
 </ul>
-<h3><a id="page_message_with_one_variable" href="#page_message_with_one_variable" class="Permalink" aria-hidden="true" title="Permalink">#</a>Message with one variable</h3>
+<h3><a id="message-with-one-variable" href="#message-with-one-variable" class="Permalink" aria-hidden="true" title="Permalink">#</a>Message with one variable</h3>
 <pre><code class="hljs javascript"><span class="hljs-keyword">const</span> message = <span class="hljs-string">`Hello, {name}!`</span>;
 <span class="hljs-keyword">const</span> variables = { <span class="hljs-attr">name</span>: <span class="hljs-string">"John"</span> };
 
@@ -189,7 +189,7 @@ From the simple string to the complex nested plural in a select, there are four 
 <li>intl-messageformat x 300,560 ops/sec ±1.85% (83 runs sampled)</li>
 <li>messageformat x 163,636 ops/sec ±1.40% (93 runs sampled)</li>
 </ul>
-<h3><a id="page_let_s_get_more_creative" href="#page_let_s_get_more_creative" class="Permalink" aria-hidden="true" title="Permalink">#</a>Let’s get more creative</h3>
+<h3><a id="let-s-get-more-creative" href="#let-s-get-more-creative" class="Permalink" aria-hidden="true" title="Permalink">#</a>Let’s get more creative</h3>
 <pre><code class="hljs javascript"><span class="hljs-keyword">const</span> message = <span class="hljs-string">`Yo, {firstName} {lastName} has {numBooks, number, integer} {numBooks, plural, one {book} other {books}}.`</span>;
 <span class="hljs-keyword">const</span> variables = {
   <span class="hljs-attr">firstName</span>: <span class="hljs-string">"John"</span>,
@@ -208,7 +208,7 @@ From the simple string to the complex nested plural in a select, there are four 
 <li>intl-messageformat x 11,730 ops/sec ±4.34% (86 runs sampled)</li>
 <li>@onigoetz/messageformat (memoized) x 4,702 ops/sec ±16.39% (29 runs sampled)</li>
 </ul>
-<h3><a id="page_overly_complex_message" href="#page_overly_complex_message" class="Permalink" aria-hidden="true" title="Permalink">#</a>Overly complex message</h3>
+<h3><a id="overly-complex-message" href="#overly-complex-message" class="Permalink" aria-hidden="true" title="Permalink">#</a>Overly complex message</h3>
 <pre><code class="hljs javascript"><span class="hljs-keyword">const</span> message = <span class="hljs-string">`
 {gender_of_host, select,
     female {

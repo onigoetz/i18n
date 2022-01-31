@@ -88,7 +88,7 @@
         <p>This package is a fork of <a href="https://www.npmjs.com/package/make-plural" class="Link--external" rel="noopener noreferrer"><code>make-plural</code></a> version 4.</p>
 <p>It provided a compiler for CLDR plurals, but it also contained a lot of methods to test them.
 I stripped the test methods and kept the conversion code to make it smaller.</p>
-<h2><a id="page_usage" href="#page_usage" class="Permalink" aria-hidden="true" title="Permalink">#</a>Usage</h2>
+<h2><a id="usage" href="#usage" class="Permalink" aria-hidden="true" title="Permalink">#</a>Usage</h2>
 <pre><code class="hljs javascript"><span class="hljs-keyword">import</span> makePlural <span class="hljs-keyword">from</span> <span class="hljs-string">"@onigoetz/make-plural"</span>;
 
 <span class="hljs-comment">// Original CLDR data</span>
@@ -119,7 +119,7 @@ I stripped the test methods and kept the conversion code to make it smaller.</p>
 <span class="hljs-built_in">console</span>.log(pluralGenerator(<span class="hljs-number">3</span>)) <span class="hljs-comment">// =&gt; few</span>
 
 </code></pre>
-<h2><a id="page_size_optimization" href="#page_size_optimization" class="Permalink" aria-hidden="true" title="Permalink">#</a>Size optimization</h2>
+<h2><a id="size-optimization" href="#size-optimization" class="Permalink" aria-hidden="true" title="Permalink">#</a>Size optimization</h2>
 <p>The original CLDR data is quite verbose and if you can preprocess it, a lot of data can be removed.
 You can remove anything after <code>@decimal</code> or <code>@integer</code> and the <code>other</code> rule, you can go from :</p>
 <pre><code class="hljs json">{
@@ -160,7 +160,7 @@ You can remove anything after <code>@decimal</code> or <code>@integer</code> and
   }
 }
 </code></pre>
-<h2><a id="page_efficient_pluralgenerator" href="#page_efficient_pluralgenerator" class="Permalink" aria-hidden="true" title="Permalink">#</a>Efficient pluralGenerator</h2>
+<h2><a id="efficient-pluralgenerator" href="#efficient-pluralgenerator" class="Permalink" aria-hidden="true" title="Permalink">#</a>Efficient pluralGenerator</h2>
 <p>If you need to create many plural generators, parsing the CLDR data many times isn’t efficient.
 You can create a small factory function like this:</p>
 <pre><code class="hljs javascript"><span class="hljs-keyword">const</span> pluralRules = {}; <span class="hljs-comment">// CLDR data</span>
