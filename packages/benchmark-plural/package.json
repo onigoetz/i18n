@@ -19,6 +19,6 @@
     "benchmark": "node benchmark.js"
   },
   "dependencies": {
-    "make-plural": "7.0.0"
+    "make-plural": "7.1.0"
   }
 }
