@@ -1,5 +1,3 @@
-/* We'll deal with the complexity in a moment */
-/* eslint-disable @swissquote/swissquote/sonarjs/cognitive-complexity */
 import { compile, match } from "./matcher";
 import {
   Submessages,
