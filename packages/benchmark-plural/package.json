@@ -10,7 +10,7 @@
     "@swissquote/crafty-preset-babel": "1.19.1",
     "@swissquote/crafty-runner-rollup": "1.19.1",
     "benchmark": "2.1.4",
-    "speedscope": "1.13.0"
+    "speedscope": "1.14.0"
   },
   "scripts": {
     "lint": "crafty jsLint --fix src/*.js src/**/*.js",
