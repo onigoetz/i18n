@@ -975,36 +975,36 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@phensley/cldr-utils@~1.5.2":
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/@phensley/cldr-utils/-/cldr-utils-1.5.2.tgz#6b163e7ff9bf054aee1656ac3b70f6e31f86863a"
-  integrity sha512-PD/proIM2LYaS3K2xvDiDr3UgUmj/etmQbdO1YUNtvzHe4XdcQAIoQ+owJCNdm+41Bv8jFMSMNVDV+QernINwg==
+"@phensley/cldr-utils@~1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@phensley/cldr-utils/-/cldr-utils-1.6.0.tgz#2c7dcdef4aaebe66372d71b0fe5cdec3e14710b5"
+  integrity sha512-Njt6SrIm7CXv8jAhZ4iSYWI1tgcSigCbGa3CwcClggECsImKc60/QZeqSzOHILIl6N8hGwOUPRsdndj43bnCNg==
   dependencies:
     tslib "^2.4.0"
 
-"@phensley/decimal@~1.5.2":
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/@phensley/decimal/-/decimal-1.5.2.tgz#a9a6a5f21258f60b080d0d353d6426f80799827a"
-  integrity sha512-zHCQqVXR632vxHaJYhfn3V+/FpQhcDH0LmxNfiS+Qy/4fUrVaarD6PpevSMLRwFPdkFUT/N5U+06ln5G4P479Q==
+"@phensley/decimal@~1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@phensley/decimal/-/decimal-1.6.0.tgz#d8b8d18769728c16f96e9ba7024fc8685aa0e2bc"
+  integrity sha512-9rTcReHDqNCU81AovcQbDF723m9Q98W/5ZMMmgr/Y9etbDlhFC/jqevLT6wKTZtoNVVF5LsyeWAWvhQIoS8UcA==
   dependencies:
     tslib "^2.4.0"
 
-"@phensley/messageformat@1.5.2":
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/@phensley/messageformat/-/messageformat-1.5.2.tgz#2ab4081fe871dbe0139b22cf01627af472e63360"
-  integrity sha512-0tdJf1ioJO51ubvFzoTETu0A7AZv1owXU1qCoXYivF/wlj12U4zz6DKE5l0GKxem3KwjrS4gyezF5HAZdDD+ag==
+"@phensley/messageformat@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@phensley/messageformat/-/messageformat-1.6.0.tgz#bf347c85c0edda9902f5eeaa8fd5ad5591f8e3fd"
+  integrity sha512-l5fG1X1FY8mwWIYGOZYblFjM9TrTHWolBg3PfLFzVcLB5rncj3FqyKGOxp6OxzojRmEGx+DyqMqXNmlbXS76JA==
   dependencies:
-    "@phensley/cldr-utils" "~1.5.2"
-    "@phensley/decimal" "~1.5.2"
-    "@phensley/plurals" "~1.5.2"
+    "@phensley/cldr-utils" "~1.6.0"
+    "@phensley/decimal" "~1.6.0"
+    "@phensley/plurals" "~1.6.0"
     tslib "^2.4.0"
 
-"@phensley/plurals@1.5.2", "@phensley/plurals@~1.5.2":
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/@phensley/plurals/-/plurals-1.5.2.tgz#fe6b820193a09b4db6bd96093ae5dad75e14a122"
-  integrity sha512-tkkiavtsoVELbQBAEzw25lsGrMjAU1fWnDC7hXZ5rKtyvsmlps5kt+MTXjdDefdt3RHVddd2JlEUBXGoeJYhMA==
+"@phensley/plurals@1.6.0", "@phensley/plurals@~1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@phensley/plurals/-/plurals-1.6.0.tgz#b0c8d8c34ae27765c683b4ad5dc389452850f0ec"
+  integrity sha512-FWdDwNKzqhhkS6nxi7TUwM5+7XXRaMaKr4XgCqPUauCgfhXjQ74eUew5M3c2zJjE/hPzLKbiF+SO7aMYcGH07Q==
   dependencies:
-    "@phensley/decimal" "~1.5.2"
+    "@phensley/decimal" "~1.6.0"
     tslib "^2.4.0"
 
 "@sinclair/typebox@^0.24.1":
@@ -3286,10 +3286,10 @@ mute-stream@0.0.7:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
   integrity sha1-MHXOk7whuPq0PhvE2n6BFe0ee6s=
 
-nano-memoize@1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/nano-memoize/-/nano-memoize-1.3.0.tgz#2d2d04ec000f9a7588f79f50d4e24685a8c586ad"
-  integrity sha512-yM/gMQHvA5EOtNGfEbJ8tmAveNjbckhzZ1hkNtMjY8zps3ocjPfp1kuJ1++OgtVHAhsGSTJttG3S6UV+FZZzxQ==
+nano-memoize@1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/nano-memoize/-/nano-memoize-1.3.1.tgz#4039b154e70f4c1f53d61f0416538aea069b2f94"
+  integrity sha512-wQiW3xHptgGlec/Zbo7oq6Zz4kKoK8TaIIs1irTO9iJOGTIG3lnQRUJfH73bJ/rn7MOE4sTdSU+ALPGEidaijQ==
 
 natural-compare@^1.4.0:
   version "1.4.0"
@@ -3888,10 +3888,10 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
-speedscope@1.14.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/speedscope/-/speedscope-1.14.0.tgz#e27ca710a949b8df7e160237a36e51f83906e1d3"
-  integrity sha512-qz5eGE1OfkjshWyI4OLmMI0yzFg3fzlHKM96oAFFAaF8od4g6O5DdVi5IlX67q84irdK2aNB4gL7XMGao9mI7Q==
+speedscope@1.15.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/speedscope/-/speedscope-1.15.0.tgz#6d2b3a795e9a49869a5c09e075c00f706cc83689"
+  integrity sha512-MHvlCBGi0arU8LG+rsz052r5Kph9xLfKiAL4psyp8Cp1rh9hpyey/bRHYR2wreQQqMpM/zeDlfXfHUSBwIpxCA==
   dependencies:
     open "7.2.0"
 
