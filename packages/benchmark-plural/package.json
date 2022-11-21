@@ -5,7 +5,7 @@
   "devDependencies": {
     "@onigoetz/intl-formatters": "0.1.0",
     "@onigoetz/make-plural": "0.1.0",
-    "@phensley/plurals": "1.6.3",
+    "@phensley/plurals": "1.6.4",
     "@swissquote/crafty": "1.20.0",
     "@swissquote/crafty-preset-babel": "1.20.0",
     "@swissquote/crafty-runner-rollup": "1.20.0",
@@ -19,6 +19,6 @@
     "benchmark": "node benchmark.js"
   },
   "dependencies": {
-    "make-plural": "7.1.0"
+    "make-plural": "7.2.0"
   }
 }
