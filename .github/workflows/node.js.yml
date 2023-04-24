@@ -45,9 +45,13 @@ jobs:
     - run: yarn install
     - run: yarn build
     - run: yarn test:ci
+    - id: node_path
+      run: echo "node=$(which node)" >> $GITHUB_OUTPUT
     - name: SonarCloud Scan
-      uses: sonarsource/sonarqube-scan-action@v1.2.0
+      uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: https://sonarcloud.io
+      with: 
+        args: >
+          -Dsonar.nodejs.executable=${{ steps.node_path.outputs.node }}
