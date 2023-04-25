@@ -96,7 +96,7 @@ register("@phensley/messageformat", require("./dist/js/phensley-messageformat.mi
 register("@ffz/icu-msgparser", require("./dist/js/ffz-icu-msgparser.min.js"));
 register("format-message-parse", require("./dist/js/format-message.min.js"));
 register("intl-messageformat", require("./dist/js/intl-messageformat.min.js"));
-register("messageformat", require("./dist/js/messageformat.min.js"));
+register("@messageformat/core", require("./dist/js/messageformat.min.js"));
 
 runAll("String", instances, string_msg);
 runAll("Message with one variable", instances, simple_msg);
