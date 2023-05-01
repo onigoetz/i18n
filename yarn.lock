@@ -770,71 +770,71 @@
   dependencies:
     "@sinonjs/commons" "^2.0.0"
 
-"@swc/core-darwin-arm64@1.3.53":
-  version "1.3.53"
-  resolved "https://registry.yarnpkg.com/@swc/core-darwin-arm64/-/core-darwin-arm64-1.3.53.tgz#0dabb2ecfeea3aea8e66f5cbf9736128169e7055"
-  integrity sha512-JvWwV/duzdQ60iwWYceDhDk75LmdrLoPC7myX3Src3gl/bJtETMq7uHS9uY8m0GQOqbct7XGR3q5Ff21YxkSzg==
+"@swc/core-darwin-arm64@1.3.55":
+  version "1.3.55"
+  resolved "https://registry.yarnpkg.com/@swc/core-darwin-arm64/-/core-darwin-arm64-1.3.55.tgz#bd7fdf838a8d27c3df98d279017710a2da6af6a3"
+  integrity sha512-UnHC8aPg/JvHhgXxTU6EhTtfnYNS7nhq8EKB8laNPxlHbwEyMBVQ2QuJHlNCtFtvSfX/uH5l04Ld1iGXnBTfdQ==
 
-"@swc/core-darwin-x64@1.3.53":
-  version "1.3.53"
-  resolved "https://registry.yarnpkg.com/@swc/core-darwin-x64/-/core-darwin-x64-1.3.53.tgz#01ef02573d2743478a5400a1f7b397901a13202a"
-  integrity sha512-UuIGZtCfUPJM2Q01bRIFzmucOMg8UZ+mY3kh5xB8kl/VrLltBlraSWGjjJzYmUeUxiF8+CtMfeSYav5QfU2v3g==
+"@swc/core-darwin-x64@1.3.55":
+  version "1.3.55"
+  resolved "https://registry.yarnpkg.com/@swc/core-darwin-x64/-/core-darwin-x64-1.3.55.tgz#da7e4076cce35e42f2688f7aae1fd26ecb5dcbef"
+  integrity sha512-VNJkFVARrktIqtaLrD1NFA54gqekH7eAUcUY2U2SdHwO67HYjfMXMxlugLP5PDasSKpTkrVooUdhkffoA5W50g==
 
-"@swc/core-linux-arm-gnueabihf@1.3.53":
-  version "1.3.53"
-  resolved "https://registry.yarnpkg.com/@swc/core-linux-arm-gnueabihf/-/core-linux-arm-gnueabihf-1.3.53.tgz#d76fdcf34e835244f670b1696b320287187da80f"
-  integrity sha512-LupAjTErteyLmowYIfiQeTz3uVh7/SPYv/EuG1PYrajNoUYomt7WA0rQUoyglF9VtwVyNqxptWEO5So32ApTHA==
+"@swc/core-linux-arm-gnueabihf@1.3.55":
+  version "1.3.55"
+  resolved "https://registry.yarnpkg.com/@swc/core-linux-arm-gnueabihf/-/core-linux-arm-gnueabihf-1.3.55.tgz#fd9214d5050987b312cbe9aa105d48365899c1d8"
+  integrity sha512-6OcohhIFKKNW/TpJt26Tpul8zyL7dmp1Lnyj2BX9ycsZZ5UnsNiGqn37mrqJgVTx/ansEmbyOmKu2mzm/Ct6cQ==
 
-"@swc/core-linux-arm64-gnu@1.3.53":
-  version "1.3.53"
-  resolved "https://registry.yarnpkg.com/@swc/core-linux-arm64-gnu/-/core-linux-arm64-gnu-1.3.53.tgz#00713c4477249192b23a39b30666043b47079eff"
-  integrity sha512-kREfZdiJH/O8GtJJ22wVN9DVzz/+CPAkw5Mn5te2KQg0xJHMWaESU5XeYMWvtwyOQVmb31b6zCGFy3pnBWWfGw==
+"@swc/core-linux-arm64-gnu@1.3.55":
+  version "1.3.55"
+  resolved "https://registry.yarnpkg.com/@swc/core-linux-arm64-gnu/-/core-linux-arm64-gnu-1.3.55.tgz#214a4c1c89d9bab9277843b526b32463a98c516b"
+  integrity sha512-MfZtXGBv21XWwvrSMP0CMxScDolT/iv5PRl9UBprYUehwWr7BNjA3V9W7QQ+kKoPyORWk7LX7OpJZF3FnO618Q==
 
-"@swc/core-linux-arm64-musl@1.3.53":
-  version "1.3.53"
-  resolved "https://registry.yarnpkg.com/@swc/core-linux-arm64-musl/-/core-linux-arm64-musl-1.3.53.tgz#f310ec81dc566f039520fe1dd583ce1c5a6ec636"
-  integrity sha512-VeAgomBr6BVuBRjZjRHmvp5gKp1nZgbbd441ca1AvsPd2c+ZyhyHLxTWeHOzBDa/vYnmi9BCwx3QJzFqbAFPVw==
+"@swc/core-linux-arm64-musl@1.3.55":
+  version "1.3.55"
+  resolved "https://registry.yarnpkg.com/@swc/core-linux-arm64-musl/-/core-linux-arm64-musl-1.3.55.tgz#21a11fd919883bc0dc0ceb686f2627c1dc279b71"
+  integrity sha512-iZJo+7L5lv10W0f0C6SlyteAyMJt5Tp+aH3+nlAwKdtc+VjyL1sGhR8DJMXp2/buBRZJ9tjEtpXKDaWUdSdF7Q==
 
-"@swc/core-linux-x64-gnu@1.3.53":
-  version "1.3.53"
-  resolved "https://registry.yarnpkg.com/@swc/core-linux-x64-gnu/-/core-linux-x64-gnu-1.3.53.tgz#a5e7113fbc778019960ca7276f104085adefd513"
-  integrity sha512-LFX5+QpQkESPkmx860C40pIiYf1utEqoA+WDtmKnUz3DucYvw3eGlXCBdyklP7UBWwJktKIcPlIqr7yROY5VlQ==
+"@swc/core-linux-x64-gnu@1.3.55":
+  version "1.3.55"
+  resolved "https://registry.yarnpkg.com/@swc/core-linux-x64-gnu/-/core-linux-x64-gnu-1.3.55.tgz#3cdf5e669e8d1ef3a1fd4249e535d53d4768a009"
+  integrity sha512-Rmc8ny/mslzzz0+wNK9/mLdyAWVbMZHRSvljhpzASmq48NBkmZ5vk9/WID6MnUz2e9cQ0JxJQs8t39KlFJtW3g==
 
-"@swc/core-linux-x64-musl@1.3.53":
-  version "1.3.53"
-  resolved "https://registry.yarnpkg.com/@swc/core-linux-x64-musl/-/core-linux-x64-musl-1.3.53.tgz#dacc29541f983e9b2d801bf80b1b9e9ac81d5673"
-  integrity sha512-O0lbJgeaM0VEsG8wFYvpF+Iuf0IENv+LnXHoygkAsv67sVW54+gFxav2sEdkftD5qYe9ku4tmtTVYRZlFgC84Q==
+"@swc/core-linux-x64-musl@1.3.55":
+  version "1.3.55"
+  resolved "https://registry.yarnpkg.com/@swc/core-linux-x64-musl/-/core-linux-x64-musl-1.3.55.tgz#099f75a04827afe59c8755498c749ac667635749"
+  integrity sha512-Ymoc4xxINzS93ZjVd2UZfLZk1jF6wHjdCbC1JF+0zK3IrNrxCIDoWoaAj0+Bbvyo3hD1Xg/cneSTsqX8amnnuQ==
 
-"@swc/core-win32-arm64-msvc@1.3.53":
-  version "1.3.53"
-  resolved "https://registry.yarnpkg.com/@swc/core-win32-arm64-msvc/-/core-win32-arm64-msvc-1.3.53.tgz#8d0b4cc7530512d9d390f6f90faecba8f4c93ada"
-  integrity sha512-7PgvPl0aNLaFZSK+rIi4DB1g0aW2qOsTIJQSJGRszsCP8pze/traXymyuSG2I3y9Hx7Z+bP5ycJydyAgCw88WA==
+"@swc/core-win32-arm64-msvc@1.3.55":
+  version "1.3.55"
+  resolved "https://registry.yarnpkg.com/@swc/core-win32-arm64-msvc/-/core-win32-arm64-msvc-1.3.55.tgz#e70b3cc06bbd6c04ebb7c1af1da1301d52dc5260"
+  integrity sha512-OhnmFstq2qRU2GI5I0G/8L+vc2rx8+w+IOA6EZBrY4FuMCbPIZKKzlnAIxYn2W+yD4gvBzYP3tgEcaDfQk6EkA==
 
-"@swc/core-win32-ia32-msvc@1.3.53":
-  version "1.3.53"
-  resolved "https://registry.yarnpkg.com/@swc/core-win32-ia32-msvc/-/core-win32-ia32-msvc-1.3.53.tgz#88fc90d99620bd2f18ccb2bc6ee36bcee6dcee44"
-  integrity sha512-T+OacGm69t8+1mt1sHlwhREiFiFgSeIGL3h11FIs8o2zKnOr5z2H9myzR432X8WuHGVQAOCMvDu53LCMBD0ZzQ==
+"@swc/core-win32-ia32-msvc@1.3.55":
+  version "1.3.55"
+  resolved "https://registry.yarnpkg.com/@swc/core-win32-ia32-msvc/-/core-win32-ia32-msvc-1.3.55.tgz#d2780198baec4aff1d01cb89a53dab53003e127c"
+  integrity sha512-3VR5rHZ6uoL/Vo3djV30GgX2oyDwWWsk+Yp+nyvYyBaKYiH2zeHfxdYRLSQV3W7kSlCAH3oDYpSljrWZ0t5XEQ==
 
-"@swc/core-win32-x64-msvc@1.3.53":
-  version "1.3.53"
-  resolved "https://registry.yarnpkg.com/@swc/core-win32-x64-msvc/-/core-win32-x64-msvc-1.3.53.tgz#6dda89cdaa5fad14a25a8e2ed0076497ba3a8906"
-  integrity sha512-uV1/GhROJ/SXzj+f+kKcVtR2GuAiggvbqepzZS46+G47okf6229hr2T1fjmiwYyA75w9R3Bj/wil4UhodohOLg==
+"@swc/core-win32-x64-msvc@1.3.55":
+  version "1.3.55"
+  resolved "https://registry.yarnpkg.com/@swc/core-win32-x64-msvc/-/core-win32-x64-msvc-1.3.55.tgz#6f9b9ac3f820f5a8476f93863b558c3b727be3d0"
+  integrity sha512-KBtMFtRwnbxBugYf6i2ePqEGdxsk715KcqGMjGhxNg7BTACnXnhj37irHu2e7A7wZffbkUVUYuj/JEgVkEjSxg==
 
-"@swc/core@1.3.53":
-  version "1.3.53"
-  resolved "https://registry.yarnpkg.com/@swc/core/-/core-1.3.53.tgz#22c20bbd328e4a091eb015285aeffca4c66fd32c"
-  integrity sha512-OM5nCfKDZXr1HjxD072Jlx5463tPX7xeY7NDSRE3X4KFlkRDFdyMWAyV3pet1oouOfUNrzzoVTAR4XSU8ytO6Q==
+"@swc/core@1.3.55":
+  version "1.3.55"
+  resolved "https://registry.yarnpkg.com/@swc/core/-/core-1.3.55.tgz#0886c07fb6d32803fee85cf135c1a3352142d51f"
+  integrity sha512-w/lN3OuJsuy868yJZKop+voZLVzI5pVSoopQVtgDNkEzejnPuRp9XaeAValvuMaWqKoTMtOjLzEPyv/xiAGYQQ==
   optionalDependencies:
-    "@swc/core-darwin-arm64" "1.3.53"
-    "@swc/core-darwin-x64" "1.3.53"
-    "@swc/core-linux-arm-gnueabihf" "1.3.53"
-    "@swc/core-linux-arm64-gnu" "1.3.53"
-    "@swc/core-linux-arm64-musl" "1.3.53"
-    "@swc/core-linux-x64-gnu" "1.3.53"
-    "@swc/core-linux-x64-musl" "1.3.53"
-    "@swc/core-win32-arm64-msvc" "1.3.53"
-    "@swc/core-win32-ia32-msvc" "1.3.53"
-    "@swc/core-win32-x64-msvc" "1.3.53"
+    "@swc/core-darwin-arm64" "1.3.55"
+    "@swc/core-darwin-x64" "1.3.55"
+    "@swc/core-linux-arm-gnueabihf" "1.3.55"
+    "@swc/core-linux-arm64-gnu" "1.3.55"
+    "@swc/core-linux-arm64-musl" "1.3.55"
+    "@swc/core-linux-x64-gnu" "1.3.55"
+    "@swc/core-linux-x64-musl" "1.3.55"
+    "@swc/core-win32-arm64-msvc" "1.3.55"
+    "@swc/core-win32-ia32-msvc" "1.3.55"
+    "@swc/core-win32-x64-msvc" "1.3.55"
 
 "@swc/helpers@0.5.0":
   version "0.5.0"
@@ -843,147 +843,147 @@
   dependencies:
     tslib "^2.4.0"
 
-"@swissquote/babel-preset-swissquote@1.22.2":
-  version "1.22.2"
-  resolved "https://registry.yarnpkg.com/@swissquote/babel-preset-swissquote/-/babel-preset-swissquote-1.22.2.tgz#75427d3f60c431be5cb5225653424f582fb808a0"
-  integrity sha512-CsSv4lHL03MChHozDFB7/3nDpYNIYeipw6MmlWjLynE6Q8a4POnPhPzVhXGhg2EBHzSU2OSkYWIn5br5wegF8g==
+"@swissquote/babel-preset-swissquote@1.22.3":
+  version "1.22.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/babel-preset-swissquote/-/babel-preset-swissquote-1.22.3.tgz#6c92b6c0e9f18b3b05235aeb85ee1117fba943b1"
+  integrity sha512-L2C61vGaMHVAjD+eZ3rIWnNlE2PddhiYgLksEzqZ46xGSHJ08vzbrWzLkCCDbPGV1BnvNGkMn3S7ctJ9Tv/rrA==
   dependencies:
     "@babel/core" "7.21.4"
     "@babel/runtime" "7.21.0"
-    "@swissquote/crafty-commons" "1.22.2"
+    "@swissquote/crafty-commons" "1.22.3"
 
-"@swissquote/crafty-commons-gulp@1.22.2":
-  version "1.22.2"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-commons-gulp/-/crafty-commons-gulp-1.22.2.tgz#1257063b2f19ea5346076592e55a437e9f987b78"
-  integrity sha512-jKmJHS/AGli5y3Y0sJt8LM7XiallYDJJZ0nC/NvH8d969L5rrXSTBHDgPjMad52VBqIjJtrnRGDzulOlT0o/pg==
+"@swissquote/crafty-commons-gulp@1.22.3":
+  version "1.22.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-commons-gulp/-/crafty-commons-gulp-1.22.3.tgz#1dd8f9bf53a143d9e681c4eb73302a59583657fa"
+  integrity sha512-XuaEQpRfBYMuTe0AuZaiQpUKcdZy045iqap7tfG5vEhigSzGyKTRetsMUkxqjblM28ukpWdyftiqqE8pQ+hMnw==
   dependencies:
-    "@swissquote/crafty-commons" "1.22.2"
+    "@swissquote/crafty-commons" "1.22.3"
 
-"@swissquote/crafty-commons-swc@1.22.2":
-  version "1.22.2"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-commons-swc/-/crafty-commons-swc-1.22.2.tgz#0281358ae43b41e025cacd0d5557a4f2ccf4e533"
-  integrity sha512-6ljZVWx+nEBvU2H6VZ0d0Ye5rGUkm7mbyUvpx5iV4d1l+wOWe79VEWOoA77kQXwey1iphhSw2LHp4O5YjITNAQ==
+"@swissquote/crafty-commons-swc@1.22.3":
+  version "1.22.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-commons-swc/-/crafty-commons-swc-1.22.3.tgz#bd87797dca1c1bb653b2f89c759c821381c5d27f"
+  integrity sha512-49gt3tWNZW1ompQUBAjh0UodqfnWc04W49Br1bUQ/E0aKyddzwJG+7E2ayNPHG0puHzK2mIlNGG5r18NWINbrw==
   dependencies:
-    "@swc/core" "1.3.53"
+    "@swc/core" "1.3.55"
     "@swc/helpers" "0.5.0"
-    "@swissquote/crafty-commons" "1.22.2"
-    "@swissquote/crafty-commons-gulp" "1.22.2"
-    "@swissquote/crafty-commons-webpack" "1.22.2"
+    "@swissquote/crafty-commons" "1.22.3"
+    "@swissquote/crafty-commons-gulp" "1.22.3"
+    "@swissquote/crafty-commons-webpack" "1.22.3"
 
-"@swissquote/crafty-commons-webpack@1.22.2":
-  version "1.22.2"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-commons-webpack/-/crafty-commons-webpack-1.22.2.tgz#fe9177d7a99489bc61800d1e641b81a95f31903e"
-  integrity sha512-VnM16IkzKd9t7Mk5bnALwv0/oP4b2hjmMWDZaeKTv/6oTUE4e/u8GzAM7g3orO8Lx4O52BzBR+kGOlN9wlBALA==
+"@swissquote/crafty-commons-webpack@1.22.3":
+  version "1.22.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-commons-webpack/-/crafty-commons-webpack-1.22.3.tgz#74e78a0d854f548218bf2adc35011be3d9b6731e"
+  integrity sha512-BRhjaURvmLtMutet8mON5dKreNN0jEy5MAU2R8Lbrw2rJKtPGiMvvn+KbJiySHcBrXwtnTYsWyVqMMhCgwrY7g==
   dependencies:
-    "@swissquote/crafty-commons" "1.22.2"
+    "@swissquote/crafty-commons" "1.22.3"
 
-"@swissquote/crafty-commons@1.22.2":
-  version "1.22.2"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-commons/-/crafty-commons-1.22.2.tgz#d228b2594e3b695c9cb9e9f32e2d9b17ac3d584e"
-  integrity sha512-5cY4l9/D0T7JAPGeBA2A5+mxDiQefgk02QgA8y31p2Pw2n/9HF7FTOHHmBfX0o1wVbm0W4iO1KkNm32A9LdOww==
+"@swissquote/crafty-commons@1.22.3":
+  version "1.22.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-commons/-/crafty-commons-1.22.3.tgz#bbec8dbf1a7e2853b473189e2ec0dffd0cbf3d96"
+  integrity sha512-LFj4lBdC5YhweVaGRGrzienhsQpUuOh9rmc4MbdyUm8/3RSJIC0vevl3FLEOtE5shsByXtWzr1ofS6/sPK9fjw==
   dependencies:
     caniuse-lite "^1.0.30001478"
 
-"@swissquote/crafty-preset-babel@1.22.2":
-  version "1.22.2"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-babel/-/crafty-preset-babel-1.22.2.tgz#4989a5d05d6694ef330dc937544f097430d4bba4"
-  integrity sha512-WnHrF0P2TDmHyhFeiFJreqQHrCmdbyDnsgtEC8ce6xmEYpm+WiZ/1YZeOK36wSmV/2NDsIfnTsKInpTZSLaF0g==
+"@swissquote/crafty-preset-babel@1.22.3":
+  version "1.22.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-babel/-/crafty-preset-babel-1.22.3.tgz#77fdb4429961cc16d6198ea64215223912c3abf3"
+  integrity sha512-T3KF/q692UKKtVmzCcVlY42zAkrveMjIV1hcKEUq6OHdSk29cJbLUj4AgnFXRhe6+AieX2UYYz8BCDFp6RK9OA==
   dependencies:
     "@babel/core" "7.21.4"
     "@babel/helper-module-imports" "7.21.4"
     "@babel/runtime" "7.21.0"
-    "@swissquote/babel-preset-swissquote" "1.22.2"
-    "@swissquote/crafty-commons-gulp" "1.22.2"
-    "@swissquote/crafty-commons-webpack" "1.22.2"
-    "@swissquote/crafty-preset-eslint" "1.22.2"
-    "@swissquote/crafty-preset-terser" "1.22.2"
+    "@swissquote/babel-preset-swissquote" "1.22.3"
+    "@swissquote/crafty-commons-gulp" "1.22.3"
+    "@swissquote/crafty-commons-webpack" "1.22.3"
+    "@swissquote/crafty-preset-eslint" "1.22.3"
+    "@swissquote/crafty-preset-terser" "1.22.3"
     schema-utils "4.0.1"
 
-"@swissquote/crafty-preset-eslint@1.22.2":
-  version "1.22.2"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-eslint/-/crafty-preset-eslint-1.22.2.tgz#6e014edda836643400e22f28b7133811f0e1f7a8"
-  integrity sha512-hMJTw6wjO6y+VATCDy6AdbjDx2aItDumu5u88IOBl04S4s9oyKez6DyJZzJQlDFjx0E/LCmdgDkOIzf4AFeNsw==
+"@swissquote/crafty-preset-eslint@1.22.3":
+  version "1.22.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-eslint/-/crafty-preset-eslint-1.22.3.tgz#6e11ee51cf52c71be349435b0d8fb7e5d86c265d"
+  integrity sha512-APc48f1n/u6USQ2erlTkZARssBUEgQNpuPFmjU8A09nm/E8qMRG7BwLw7n6O0sRdy6NiDwBfrGvqyI68Ykgeng==
   dependencies:
-    "@swissquote/crafty" "1.22.2"
-    "@swissquote/crafty-commons" "1.22.2"
-    "@swissquote/crafty-preset-prettier" "1.22.2"
-    "@swissquote/eslint-plugin-swissquote" "1.22.2"
+    "@swissquote/crafty" "1.22.3"
+    "@swissquote/crafty-commons" "1.22.3"
+    "@swissquote/crafty-preset-prettier" "1.22.3"
+    "@swissquote/eslint-plugin-swissquote" "1.22.3"
     eslint "8.39.0"
     schema-utils "4.0.1"
 
-"@swissquote/crafty-preset-jest@1.22.2":
-  version "1.22.2"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-jest/-/crafty-preset-jest-1.22.2.tgz#86d2855003326676d3af029cb1ef59df039e14c8"
-  integrity sha512-GgT9aGxdAQQi5Zc6MJxTEx3e+eosWD8vnbMTS1ZwIDpzMzUsT9jIF3IvLts2yeWFJ7DdKFFlVXklfieAUJ+hYA==
+"@swissquote/crafty-preset-jest@1.22.3":
+  version "1.22.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-jest/-/crafty-preset-jest-1.22.3.tgz#30b1b82d89780bd403fe15bae30fc9454034276b"
+  integrity sha512-HZtL0izV5yAyvj1i3Nm/SxTvrhmlcgX5XnNXzQfNhEkHPAUFTbg0rhMdIvAomBtPf4w8IJE2bRyYCVJ4yFeAAQ==
   dependencies:
     "@babel/core" "7.21.4"
     "@babel/plugin-transform-modules-commonjs" "7.21.2"
-    "@swissquote/crafty" "1.22.2"
+    "@swissquote/crafty" "1.22.3"
     jest-cli "29.5.0"
     jest-environment-jsdom "29.5.0"
 
-"@swissquote/crafty-preset-prettier@1.22.2":
-  version "1.22.2"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-prettier/-/crafty-preset-prettier-1.22.2.tgz#d42f0a0b8724205b1cc82b28bd36c0d3c4ef08fa"
-  integrity sha512-/aeskmUdWxkNoX7Ij+tsSgiVTgdFsRWB+Y8LF2yPteGFFHB69DMxHMMGfcW9rw80x8A3Cwmo5iacdyVc2b/F3w==
+"@swissquote/crafty-preset-prettier@1.22.3":
+  version "1.22.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-prettier/-/crafty-preset-prettier-1.22.3.tgz#f4d31c4bb03858c7142ee919d5cb38f3d7a073cd"
+  integrity sha512-1wHcT3z//nrUsie60KYZdusTzY5IU8jAjJV4Eevjvpc6V7jSsROS/hWe0W6Ja1nvgBx48cXMmHT+4Ap25T/Spw==
 
-"@swissquote/crafty-preset-terser@1.22.2":
-  version "1.22.2"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-terser/-/crafty-preset-terser-1.22.2.tgz#c6e19539940678e25e7df9383de507805301b114"
-  integrity sha512-XzHNVGjgb1w5UeB8HQifoxVMD2cw6q9t3l4hALSGG3m/ARLFErgGFilCC3kI+Ve5HD3bHUYzi40v4ced0v8Agg==
+"@swissquote/crafty-preset-terser@1.22.3":
+  version "1.22.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-terser/-/crafty-preset-terser-1.22.3.tgz#b5481210bcfc1376d9b787c437d2265f08c60b55"
+  integrity sha512-kuB5s0935hL1GNd1LZB1hCZAPbEh3ZYg21XCJDeLHxW5S2tJxmKONYoUS+bBewBB6AhK0CpBWKgz46xW11tUyw==
 
-"@swissquote/crafty-preset-typescript@1.22.2":
-  version "1.22.2"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-typescript/-/crafty-preset-typescript-1.22.2.tgz#d26fd3176df3dc814e7b22ca0ad0572db810c583"
-  integrity sha512-K7+6j9G+WlwfPzUycn9NGb/wP4hrg7HaRJBb3v62n/QbB+/T/j9xpGYfcUSljtRX/zXDDSSjiZsHhB9Jgi5NJQ==
+"@swissquote/crafty-preset-typescript@1.22.3":
+  version "1.22.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-preset-typescript/-/crafty-preset-typescript-1.22.3.tgz#b45ad270ba4eb8b1577359d0b38894ec1e789883"
+  integrity sha512-m1xce+vEX/hNX44yiW6PM54LZkO15N/xC19uKjphEzJaokJ5deEi2ndsF+FHEaGjKhWtwWbxETXPTHe9MDD9Nw==
   dependencies:
     "@babel/code-frame" "7.21.4"
-    "@swc/core" "1.3.53"
+    "@swc/core" "1.3.55"
     "@swc/helpers" "0.5.0"
-    "@swissquote/crafty-commons" "1.22.2"
-    "@swissquote/crafty-commons-gulp" "1.22.2"
-    "@swissquote/crafty-commons-swc" "1.22.2"
-    "@swissquote/crafty-commons-webpack" "1.22.2"
-    "@swissquote/crafty-preset-eslint" "1.22.2"
+    "@swissquote/crafty-commons" "1.22.3"
+    "@swissquote/crafty-commons-gulp" "1.22.3"
+    "@swissquote/crafty-commons-swc" "1.22.3"
+    "@swissquote/crafty-commons-webpack" "1.22.3"
+    "@swissquote/crafty-preset-eslint" "1.22.3"
     schema-utils "4.0.1"
     tslib "2.5.0"
     typescript "5.0.4"
 
-"@swissquote/crafty-runner-gulp@1.22.2":
-  version "1.22.2"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-runner-gulp/-/crafty-runner-gulp-1.22.2.tgz#f2629c47fabc1bed540308c922c77ed6c68e028d"
-  integrity sha512-N/CuHfueHiCTlencecTbsSmObtR1F5wNsdOT40w4T7s1vu1F7JHqkBq2HUxr89JxFhBxmmM0gRFyr80O2Abb+g==
+"@swissquote/crafty-runner-gulp@1.22.3":
+  version "1.22.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-runner-gulp/-/crafty-runner-gulp-1.22.3.tgz#44b27f4b0b246b9bf44591d94efdec1a3bb72046"
+  integrity sha512-l1ifuODXece57gQBZh5LKrUttgK3HCJdPXcbvurzpwfApaE3u0H5XJ/XU+joLyt9FA4gR8scCDaNR57p9rvxXw==
   dependencies:
-    "@swissquote/crafty" "1.22.2"
-    "@swissquote/crafty-commons" "1.22.2"
-    "@swissquote/crafty-commons-gulp" "1.22.2"
+    "@swissquote/crafty" "1.22.3"
+    "@swissquote/crafty-commons" "1.22.3"
+    "@swissquote/crafty-commons-gulp" "1.22.3"
 
-"@swissquote/crafty-runner-rollup@1.22.2":
-  version "1.22.2"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty-runner-rollup/-/crafty-runner-rollup-1.22.2.tgz#fa63f350a235ec1d2f87dd0798e8889047564ae1"
-  integrity sha512-+RUsHl2w2FTVR/WqgxBs4VXrfzdJQ+UOqSEM6ncE7FHsoGZJ4diKvIOsO8oWSlqo0O59nPxhtNyTPXUH8fdDlg==
+"@swissquote/crafty-runner-rollup@1.22.3":
+  version "1.22.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty-runner-rollup/-/crafty-runner-rollup-1.22.3.tgz#08303aae9ec14d1fdced211a1094e8bd93db6d58"
+  integrity sha512-B/89HDra5h1wtgCWAF0gn+hR7qRqqjlZD5QrHQdenTBKfgJurf0y2OSsJmwcmqFgkvi0i2k/nn+4wpluLZlQ6w==
   dependencies:
-    "@swissquote/crafty" "1.22.2"
-    "@swissquote/crafty-commons" "1.22.2"
-    "@swissquote/crafty-preset-terser" "1.22.2"
+    "@swissquote/crafty" "1.22.3"
+    "@swissquote/crafty-commons" "1.22.3"
+    "@swissquote/crafty-preset-terser" "1.22.3"
   optionalDependencies:
     fsevents "~2.3.2"
 
-"@swissquote/crafty@1.22.2":
-  version "1.22.2"
-  resolved "https://registry.yarnpkg.com/@swissquote/crafty/-/crafty-1.22.2.tgz#831616921d908cd4381df2ba9293bf06a3c02302"
-  integrity sha512-/m59zSlDGGVzpoLNfgEz/2Lk2SJOjdBaWNLjneYXV8Cg3iQ/HwaeXKwEg9tKb6zWys3c0mEUTK9c2CdQAzbG9w==
+"@swissquote/crafty@1.22.3":
+  version "1.22.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/crafty/-/crafty-1.22.3.tgz#e8a4af1247756866631e2902b7bd82d90b42822f"
+  integrity sha512-RSrT1ErUmmrOE3zKIychCSHGcU3KPm5L09DiNjiPAs9ZvAvKzRuaL1yHqzROweJAYIoSVq3jApf+MiqLsDSTCA==
   dependencies:
-    "@swissquote/crafty-commons" "1.22.2"
+    "@swissquote/crafty-commons" "1.22.3"
   optionalDependencies:
     fsevents "~2.3.2"
 
-"@swissquote/eslint-plugin-swissquote@1.22.2":
-  version "1.22.2"
-  resolved "https://registry.yarnpkg.com/@swissquote/eslint-plugin-swissquote/-/eslint-plugin-swissquote-1.22.2.tgz#46aad51647825c835b8ae72a379af9a7a4cafa2f"
-  integrity sha512-zqFxsIcHxW7ArzbYd9YAPe50YomvsV/TRprtWsRhuHQ/kSBewzE9aoq4q+qGyY2bppDqm32pKW9A7b0EHZ92Cw==
+"@swissquote/eslint-plugin-swissquote@1.22.3":
+  version "1.22.3"
+  resolved "https://registry.yarnpkg.com/@swissquote/eslint-plugin-swissquote/-/eslint-plugin-swissquote-1.22.3.tgz#e88ac999f5b74e857fab5051082c8e918052dfe4"
+  integrity sha512-RKSeOaBxjTcJIuTxrX1+aHhJE6Kt0wYKqLxqJiOVoEjR99pW4FzTrpN24QSqG02vjweY6siCLVxYpNb0A9kHGg==
   dependencies:
-    "@swissquote/crafty-commons" "1.22.2"
+    "@swissquote/crafty-commons" "1.22.3"
     typescript "5.0.4"
 
 "@tootallnate/once@2":

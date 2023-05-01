@@ -6,9 +6,9 @@
     "@onigoetz/intl-formatters": "0.1.0",
     "@onigoetz/make-plural": "0.1.0",
     "@phensley/plurals": "1.6.6",
-    "@swissquote/crafty": "1.22.2",
-    "@swissquote/crafty-preset-babel": "1.22.2",
-    "@swissquote/crafty-runner-rollup": "1.22.2",
+    "@swissquote/crafty": "1.22.3",
+    "@swissquote/crafty-preset-babel": "1.22.3",
+    "@swissquote/crafty-runner-rollup": "1.22.3",
     "benchmark": "2.1.4",
     "speedscope": "1.15.0"
   },
