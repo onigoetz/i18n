@@ -22,16 +22,19 @@ const pluralRules = {
   }
 };
 
-const pluralMemory = {};
+const pluralMemory = new Map();
 
 function pluralGenerator(locale, type) {
   const key = `${locale}-${type}`;
 
-  if (!pluralMemory.hasOwnProperty(key)) {
-    pluralMemory[key] = makePlural(pluralRules[`plurals-type-${type}`][locale]);
+  if (!pluralMemory.has(key)) {
+    pluralMemory.set(
+      key,
+      makePlural(pluralRules[`plurals-type-${type}`][locale])
+    );
   }
 
-  return pluralMemory[key];
+  return pluralMemory.get(key);
 }
 
 export default (type, locale, value) => {

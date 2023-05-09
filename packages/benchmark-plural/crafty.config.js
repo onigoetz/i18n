@@ -8,10 +8,6 @@ module.exports = {
       source: "src/onigoetz-intl.js",
       format: "cjs"
     },
-    "onigoetz-intl-memo": {
-      source: "src/onigoetz-intl-memo.js",
-      format: "cjs"
-    },
     "onigoetz-make-plural": {
       source: "src/onigoetz-make-plural.js",
       format: "cjs"
@@ -26,10 +22,6 @@ module.exports = {
     },
     "phensley-plurals": {
       source: "src/phensley-plurals.js",
-      format: "cjs"
-    },
-    "phensley-plurals-memo": {
-      source: "src/phensley-plurals-memo.js",
       format: "cjs"
     }
   },
