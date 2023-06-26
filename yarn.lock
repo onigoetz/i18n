@@ -3539,10 +3539,10 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
-speedscope@1.15.1:
-  version "1.15.1"
-  resolved "https://registry.yarnpkg.com/speedscope/-/speedscope-1.15.1.tgz#f8bb59bbc3fab8eb7d7f16667b59fa14b816821a"
-  integrity sha512-kyKmnn5w7knh6VV5tVDLI3ilD7uKopkrjNxL8iaU0PHTE6ENSK8Wpows+VGDYscMZFK3MhlbIso6hj6NXDwxaA==
+speedscope@1.15.2:
+  version "1.15.2"
+  resolved "https://registry.yarnpkg.com/speedscope/-/speedscope-1.15.2.tgz#911228730c5d2f90074a2ac4fc7aaaf0ee341cda"
+  integrity sha512-GSAYHUiMFWTTr5xgz1Al281oxBebi547RJQAtyNkbhma9698biE5phhgvdmY/1uBLPslZHO0Lc2wmFuva+Glxw==
   dependencies:
     open "7.2.0"
 
