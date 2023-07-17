@@ -11,7 +11,7 @@
     "@swissquote/crafty-runner-rollup": "1.22.3",
     "benchmark": "2.1.4",
     "make-plural": "7.3.0",
-    "speedscope": "1.15.2"
+    "speedscope": "1.16.0"
   },
   "scripts": {
     "lint": "crafty jsLint --fix src/*.js src/**/*.js",
