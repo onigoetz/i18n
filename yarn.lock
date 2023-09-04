@@ -2985,10 +2985,10 @@ mute-stream@0.0.7:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
   integrity sha512-r65nCZhrbXXb6dXOACihYApHw2Q6pV0M3V0PSxd74N0+D8nzAdEAITq2oAjA1jVnKI+tGvEBUpqiMh0+rW6zDQ==
 
-nano-memoize@3.0.13:
-  version "3.0.13"
-  resolved "https://registry.yarnpkg.com/nano-memoize/-/nano-memoize-3.0.13.tgz#4e088c9e5bcfc5fc153f9bc32d24ecf6406a2d3a"
-  integrity sha512-RZvCLr2lBemmqvKiS+2Fstv2Zan5+9py19fqHRHmowEuZ6CLB/J1fSZrEzJ3NsPf6mW+V5+pKU9QER8gx1/2Mg==
+nano-memoize@3.0.14:
+  version "3.0.14"
+  resolved "https://registry.yarnpkg.com/nano-memoize/-/nano-memoize-3.0.14.tgz#0cfcc32376f57663ed9f7f3e05be4b5a48597e60"
+  integrity sha512-wvW3zWL5sFTfaPvdLZJwzP7lCh2gXejMACAOUTtE91D0SLQqCt8nvkR+uJjYd5OkWQ4M893JKnWAaObdCj2ADw==
 
 natural-compare@^1.4.0:
   version "1.4.0"
