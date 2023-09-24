@@ -1,5 +1,12 @@
 # @onigoetz/i18n
 
+[![Latest version](https://img.shields.io/github/release/onigoetz/i18n.svg?style=flat-square)](https://github.com/onigoetz/i18n/releases)
+![License](https://img.shields.io/github/license/onigoetz/i18n?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/onigoetz/i18n/node.js.yml?style=flat-square&logo=github)
+[![Sonar Coverage](https://sonarcloud.io/api/project_badges/measure?project=onigoetz_i18n&metric=coverage)](https://sonarcloud.io/dashboard?id=onigoetz_i18n)
+[![Sonar Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=onigoetz_i18n&metric=alert_status)](https://sonarcloud.io/dashboard?id=onigoetz_i18n)
+[![NPM Downloads](https://img.shields.io/npm/dm/@onigoetz/messageformat?style=flat-square&logo=npm)](https://www.npmjs.com/package/@onigoetz/messageformat)
+
 A suite of packages to ease your translation needs.
 
 ## Packages
