@@ -120,52 +120,49 @@ I tried to compare apples with apples as much as possible, but some libraries do
 <tr>
 <td>@onigoetz/messageformat</td>
 <td>0.1.0</td>
-<td>13.34K</td>
+<td>13K</td>
 <td></td>
 </tr>
 <tr>
 <td>@ffz/icu-msgparser</td>
 <td>2.0.0</td>
-<td>14.93K</td>
+<td>13K</td>
 <td></td>
 </tr>
 <tr>
 <td>@onigoetz/messageformat (memoized)</td>
 <td>0.1.0</td>
-<td>15.62K</td>
+<td>14K</td>
 <td></td>
 </tr>
 <tr>
-<td>format-message-parse</td>
-<td>6.2.3</td>
-<td>27.54K</td>
+<td>format-message</td>
+<td>6.2.4</td>
+<td>28K</td>
 <td>Uses peg.js</td>
 </tr>
 <tr>
 <td>intl-messageformat</td>
 <td>9.8.2</td>
-<td>47.22K</td>
+<td>54K</td>
 <td>Uses peg.js</td>
 </tr>
 <tr>
 <td>@phensley/messageformat</td>
 <td>1.2.6</td>
-<td>47.03K</td>
+<td>48K</td>
 <td></td>
 </tr>
 <tr>
 <td>messageformat</td>
 <td>2.3.0</td>
-<td>48.89K</td>
+<td>103K</td>
 <td>Uses peg.js</td>
 </tr>
 </tbody>
 </table>
 <p>In the case of <code>@ffz/icu-msgparser</code>. The source largely inspired <code>@onigoetz/messageformat</code> and
 since it provided no renderer by default, I put an early version of <code>@onigoetz/messageformat</code>’s renderer.</p>
-<p>The Size w/o formatters column counts only the parser and renderer, without any plural generator or date/number formatter
-I added this number as a comparison if you want to use <code>@onigoetz/messageformat</code> only for variable subsitution.
-Or if in your application you already have formatters for dates/numbers and plurals or just want to use the <code>Intl</code> implementation those come at virtually no cost.</p>
 <blockquote>
 <p>Special mention for <code>@eo-locale/core</code> Which provides a very small package,
 however it provides no package that runs on Node.js 10 and crashes on our test strings.</p>
