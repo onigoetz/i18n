@@ -13,22 +13,18 @@ As a final word, I made this comparison purely for fun and to learn a thing or t
 
 Sources can be found in `src`, measure taken on 25/06/2020 With latest available versions
 
-| Npm Package                        | Version | Size   | Comment     |
-| ---------------------------------- | ------- | ------ | ----------- |
-| @onigoetz/messageformat            | 0.1.0   | 13.34K |             |
-| @ffz/icu-msgparser                 | 2.0.0   | 14.93K |             |
-| @onigoetz/messageformat (memoized) | 0.1.0   | 15.62K |             |
-| format-message-parse               | 6.2.3   | 27.54K | Uses peg.js |
-| intl-messageformat                 | 9.8.2   | 47.22K | Uses peg.js |
-| @phensley/messageformat            | 1.2.6   | 47.03K |             |
-| messageformat                      | 2.3.0   | 48.89K | Uses peg.js |
+| Npm Package                        | Version | Size | Comment     |
+| ---------------------------------- | ------- | ---- | ----------- |
+| @onigoetz/messageformat            | 0.1.0   | 13K  |             |
+| @ffz/icu-msgparser                 | 2.0.0   | 13K  |             |
+| @onigoetz/messageformat (memoized) | 0.1.0   | 14K  |             |
+| format-message                     | 6.2.4   | 28K  | Uses peg.js |
+| intl-messageformat                 | 9.8.2   | 54K  | Uses peg.js |
+| @phensley/messageformat            | 1.2.6   | 48K  |             |
+| messageformat                      | 2.3.0   | 103K | Uses peg.js |
 
 In the case of `@ffz/icu-msgparser`. The source largely inspired `@onigoetz/messageformat` and
 since it provided no renderer by default, I put an early version of `@onigoetz/messageformat`'s renderer.
-
-The Size w/o formatters column counts only the parser and renderer, without any plural generator or date/number formatter
-I added this number as a comparison if you want to use `@onigoetz/messageformat` only for variable subsitution.
-Or if in your application you already have formatters for dates/numbers and plurals or just want to use the `Intl` implementation those come at virtually no cost.
 
 > Special mention for `@eo-locale/core` Which provides a very small package,
 > however it provides no package that runs on Node.js 10 and crashes on our test strings.

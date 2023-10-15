@@ -11,13 +11,16 @@ export type Context = {
    * Original String
    */
   msg: string;
+
+  result: Token[];
+  nextIndex: number;
 };
 
 export type Argument = string | number;
 
 export type Submessages = {
-  [key: string]: Token;
-  other: Token;
+  [key: string]: number;
+  other: number;
 };
 
 /**
@@ -31,8 +34,7 @@ export const enum MessageOpType {
   PLURAL = 2,
   SELECT = 3,
   SIMPLE = 4,
-  NOOP = 5,
-  BLOCK = 6
+  END = 5
 }
 
 export interface TextToken {
@@ -43,7 +45,7 @@ export interface TextToken {
 export interface ArgToken {
   [0]: MessageOpType.ARG;
   [1]: Argument;
-  [2]: number; // offset
+  [2]?: number; // offset
 }
 
 export interface PluralToken {
@@ -52,12 +54,14 @@ export interface PluralToken {
   [2]?: number; // offset
   [3]?: boolean; // isCardinal
   [4]: Submessages;
+  [5]: number; // continue
 }
 
 export interface SelectToken {
   [0]: MessageOpType.SELECT;
   [1]: Argument;
   [2]: Submessages;
+  [3]: number; // continue
 }
 
 export interface SimpleToken {
@@ -74,13 +78,8 @@ export type ValueToken =
   | SelectToken
   | SimpleToken;
 
-export interface NOOPToken {
-  [0]: MessageOpType.NOOP;
+export interface EndToken {
+  [0]: MessageOpType.END;
 }
 
-export interface BlockToken {
-  [0]: MessageOpType.BLOCK;
-  [1]: Token[];
-}
-
-export type Token = BlockToken | NOOPToken | ValueToken;
+export type Token = EndToken | ValueToken;

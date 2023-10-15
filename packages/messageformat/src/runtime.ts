@@ -1,15 +1,5 @@
 import { DateFormatterOptions } from "@onigoetz/i18n-types";
-import {
-  Token,
-  TextToken,
-  ArgToken,
-  PluralToken,
-  SelectToken,
-  SimpleToken,
-  BlockToken,
-  ValueToken,
-  MessageOpType
-} from "./types";
+import { Token, SimpleToken, ValueToken, MessageOpType } from "./types";
 
 type Variables = Record<string, any> | [];
 
@@ -37,6 +27,10 @@ function get(variables: Variables, token: ValueToken): any {
   return variables[token[1]];
 }
 
+function noop(): string {
+  return "";
+}
+
 export default function createRenderer<T>(
   localeHolder: T,
   pluralGenerator: (
@@ -53,7 +47,7 @@ export default function createRenderer<T>(
     options: DateFormatterOptions,
     value: Date
   ) => string
-): (token: Token, variables?: Variables) => string {
+): (token: Token[], variables?: Variables) => string {
   function number(token: SimpleToken, variables: Variables) {
     return numberFormatter(
       localeHolder,
@@ -84,69 +78,71 @@ export default function createRenderer<T>(
 
   // TODO :: allow to add custom formatters to "types"
 
-  const formatters: {
-    [key: string]: (token: any, variables: Variables) => string;
-  } = {
-    [MessageOpType.TEXT](token: TextToken, variables: Variables) {
-      return token[1];
-    },
-    [MessageOpType.ARG](token: ArgToken, variables: Variables) {
-      if (token[2]) {
-        return get(variables, token) - token[2];
-      }
-      return get(variables, token);
-    },
-    [MessageOpType.SIMPLE](token: SimpleToken, variables: Variables) {
-      // Find the formatter or fallback to NOOP
-      return (types[token[2]] || formatters[MessageOpType.NOOP])(
-        token,
-        variables
-      );
-    },
-    [MessageOpType.SELECT](token: SelectToken, variables: Variables) {
-      // eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/no-use-before-define
-      return render(
-        token[2][get(variables, token)] || token[2].other,
-        variables
-      );
-    },
-    [MessageOpType.PLURAL](token: PluralToken, variables: Variables) {
-      const value = get(variables, token);
-      const pluralType = token[3] ? "cardinal" : "ordinal";
-      const offset = token[2] || 0;
-      const children = token[4];
-      const pluralRules = pluralGenerator(localeHolder, pluralType);
+  return (tokens: Token[], variables: Variables = {}): string => {
+    let result = "";
 
-      // eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/no-use-before-define
-      return render(
-        children[`=${value}`] ||
-          children[pluralRules(value - offset)] ||
-          children.other,
-        variables
-      );
-    },
-    [MessageOpType.BLOCK](token: BlockToken, variables: Variables) {
-      let final = "";
-      for (const i in token[1]) {
-        if (token[1].hasOwnProperty(i)) {
-          // eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/no-use-before-define
-          final += render(token[1][i], variables);
-        }
+    const stack: number[] = [];
+    const length = tokens.length;
+    let i = 0;
+    while (i < length) {
+      const token: Token = tokens[i];
+
+      switch (token[0]) {
+        case MessageOpType.TEXT:
+          result += token[1];
+          break;
+        case MessageOpType.ARG:
+          if (token[2]) {
+            result += get(variables, token) - token[2];
+          } else {
+            result += get(variables, token);
+          }
+          break;
+        case MessageOpType.SIMPLE:
+          // Find the formatter or fallback to NOOP
+          result += (types[token[2]] || noop)(token, variables);
+          break;
+        case MessageOpType.SELECT:
+          stack.push(token[3]);
+          i = token[2][get(variables, token)] || token[2].other;
+
+          continue; // skip the end of the loop
+        case MessageOpType.PLURAL:
+          {
+            stack.push(token[5]);
+            const value = get(variables, token);
+
+            const directJump = token[4][`=${value}`];
+
+            if (directJump) {
+              i = directJump;
+              continue;
+            }
+
+            const pluralType = token[3] ? "cardinal" : "ordinal";
+            const offset = token[2] || 0; // TODO :: should offset apply to direct jump ?
+
+            // TODO :: initialize pluralGenerator only if specific number isn't present
+            const pluralRules = pluralGenerator(localeHolder, pluralType);
+
+            const pluralJump = token[4][pluralRules(value - offset)];
+
+            if (pluralJump) {
+              i = pluralJump;
+            } else {
+              i = token[4].other;
+            }
+          }
+          continue; // skip the end of the loop
+
+        case MessageOpType.END:
+          i = stack.pop() as number;
+          continue; // skip the end of the loop
       }
 
-      return final;
-    },
-    [MessageOpType.NOOP]() {
-      return "";
+      i++;
     }
+
+    return result;
   };
-
-  function render(token: Token, variables: Variables = {}): string {
-    return (formatters[token[0]] || formatters[MessageOpType.NOOP])(
-      token,
-      variables
-    );
-  }
-
-  return render;
 }

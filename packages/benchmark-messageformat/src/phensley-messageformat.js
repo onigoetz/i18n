@@ -7,8 +7,7 @@ import {
 } from "@phensley/messageformat";
 
 const FORMATTERS = {
-  foo: (args, options) =>
-    options[0] === "upper" ? args[0].toUpperCase() : args[0].toLowerCase()
+  number: (args, options) => args[0]
 };
 
 const FORMATTER_NAMES = Object.keys(FORMATTERS);

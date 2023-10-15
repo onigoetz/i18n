@@ -30,25 +30,6 @@ const IDENTIFIER = compile(
 const PLURAL = compile(/(=\d+(\.\d+)?)|zero|one|two|few|many|other/.source);
 
 /**
- * Transform an array of tokens into either
- * 1. a no-op Token if it's empty
- * 2. a single token if there is only one element
- * 3. a block Token if there is more inside
- *
- * @param c
- */
-function flatten(c: Token[]): Token {
-  switch (c.length) {
-    case 0:
-      return [MessageOpType.NOOP];
-    case 1:
-      return c[0];
-    default:
-      return [MessageOpType.BLOCK, c];
-  }
-}
-
-/**
  * Writes a nice code frame to show where an error happened.
  *
  * @param context
@@ -116,6 +97,17 @@ function skipSeparator(char: string, context: Context) {
   }
   ++context.i;
   skipSpace(context);
+}
+
+/**
+ * Add a token and returns the next index
+ * @param context
+ * @param token
+ * @returns
+ */
+function add(context: Context, token: Token): number {
+  context.result.push(token);
+  return ++context.nextIndex;
 }
 
 /**
@@ -192,7 +184,8 @@ function parseSubmessage(
   context: Context,
   parent: ValueToken,
   specialHash: boolean
-): Token {
+): number {
+  const startAt = context.nextIndex;
   skipSpace(context);
   if (isNot(context, OPEN)) {
     throw expected(OPEN, context);
@@ -202,7 +195,7 @@ function parseSubmessage(
 
   // Eat the block until we reach its closing tag
   // eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/no-use-before-define
-  const out = parseAST(context, parent, specialHash);
+  parseAST(context, parent, specialHash);
 
   if (isNot(context, CLOSE)) {
     throw expected(CLOSE, context);
@@ -210,7 +203,10 @@ function parseSubmessage(
 
   ++context.i;
   skipSpace(context);
-  return out;
+
+  add(context, [MessageOpType.END]);
+
+  return startAt;
 }
 
 /**
@@ -232,7 +228,7 @@ function parseSubmessages(
   specialHash: boolean,
   matcher: RegExp
 ): Submessages {
-  const out: Submessages = {} as Submessages;
+  const submessages: Submessages = {} as Submessages;
 
   // Continue until we reach the end of the string or a block closing
   while (context.i < context.l && context.msg[context.i] !== CLOSE) {
@@ -241,14 +237,14 @@ function parseSubmessages(
       throw expected("sub-message selector", context);
     }
 
-    out[selector] = parseSubmessage(context, parent, specialHash) as Token;
+    submessages[selector] = parseSubmessage(context, parent, specialHash);
   }
 
-  if (!out.other) {
+  if (!submessages.other) {
     throw expected("other sub-message", context);
   }
 
-  return out as Submessages;
+  return submessages;
 }
 
 /**
@@ -356,7 +352,7 @@ function parseSimple(context: Context, current: SimpleToken) {
  * @param context
  * @param parent
  */
-function parseElement(context: Context, parent: Token): Token {
+function parseElement(context: Context) {
   ++context.i;
   skipSpace(context);
 
@@ -367,7 +363,7 @@ function parseElement(context: Context, parent: Token): Token {
   }
 
   // Let's prepare a simple argument block
-  const out: Token = ([MessageOpType.ARG, id] as unknown) as Token;
+  const token: Token = ([MessageOpType.ARG, id] as unknown) as Token;
 
   skipSpace(context);
 
@@ -375,7 +371,8 @@ function parseElement(context: Context, parent: Token): Token {
   const char = context.msg[context.i];
   if (char === CLOSE) {
     ++context.i;
-    return out;
+    add(context, token);
+    return;
   }
 
   skipSeparator(char, context);
@@ -393,20 +390,25 @@ function parseElement(context: Context, parent: Token): Token {
   switch (type) {
     case "plural":
     case "selectordinal":
-      out[0] = MessageOpType.PLURAL;
-      (out as PluralToken)[3] = type === "plural";
-      parsePlural(context, out as PluralToken);
+      token[0] = MessageOpType.PLURAL;
+      (token as PluralToken)[3] = type === "plural";
+      add(context, token);
+      parsePlural(context, token as PluralToken);
+      (token as PluralToken)[5] = context.nextIndex;
       break;
 
     case "select":
-      out[0] = MessageOpType.SELECT;
-      parseSelect(context, out as SelectToken);
+      token[0] = MessageOpType.SELECT;
+      add(context, token);
+      parseSelect(context, token as SelectToken);
+      (token as SelectToken)[3] = context.nextIndex;
       break;
 
     default:
-      out[0] = MessageOpType.SIMPLE;
-      (out as SimpleToken)[2] = type;
-      parseSimple(context, out as SimpleToken);
+      token[0] = MessageOpType.SIMPLE;
+      (token as SimpleToken)[2] = type;
+      parseSimple(context, token as SimpleToken);
+      add(context, token);
       break;
   }
 
@@ -418,7 +420,6 @@ function parseElement(context: Context, parent: Token): Token {
   }
 
   ++context.i;
-  return out;
 }
 
 /**
@@ -431,9 +432,7 @@ function parseAST(
   context: Context,
   parent: ValueToken,
   specialHash: boolean
-): Token {
-  const out = [];
-
+): Token[] {
   while (context.i < context.l) {
     const start = context.i,
       char = context.msg[start];
@@ -450,22 +449,19 @@ function parseAST(
       ++context.i;
       // We can safely cast here as `specialHash` is only true if we are in a Plural or SelectOrdinal
       // and both have an offset
-      out.push([
+      add(context, [
         MessageOpType.ARG,
         parent[1],
         (parent as PluralToken)[2]
       ] as ArgToken);
     } else if (char === OPEN) {
       // If we see a block start, we send it to `parseElement` and add it to the array if an element was found
-      const element = parseElement(context, parent);
-      if (element) {
-        out.push(element);
-      }
+      parseElement(context);
     } else {
       // Otherwise it's probably just text, which we add if it was found
       const text = parseText(context, specialHash);
       if (text) {
-        out.push([MessageOpType.TEXT, text] as TextToken);
+        add(context, [MessageOpType.TEXT, text] as TextToken);
       }
     }
 
@@ -475,16 +471,20 @@ function parseAST(
     }
   }
 
-  return flatten(out);
+  return context.result;
 }
 
 /**
  * Parses a message, returns a renderable token (which most likely contains other tokens)
  * @param message
  */
-export default function parse(message: string | number): Token {
+export default function parse(message: string | number): Token[] {
   const msg = String(message);
-  //eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/ban-ts-comment
-  //@ts-ignore
-  return parseAST({ msg, l: msg.length, i: 0 }, null, false) as Token;
+  return parseAST(
+    { msg, l: msg.length, i: 0, result: [], nextIndex: 0 },
+    //eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/ban-ts-comment
+    //@ts-ignore
+    null,
+    false
+  );
 }

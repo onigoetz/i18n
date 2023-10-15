@@ -16,6 +16,10 @@ module.exports = {
       source: "src/onigoetz-messageformat-memoized.js",
       format: "cjs"
     },
+    "onigoetz-messageformat-phensley-plurals": {
+      source: "src/onigoetz-messageformat-phensley-plurals.js",
+      format: "cjs"
+    },
     "intl-messageformat": {
       source: "src/intl-messageformat.js",
       format: "cjs"

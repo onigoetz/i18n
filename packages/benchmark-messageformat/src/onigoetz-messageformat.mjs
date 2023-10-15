@@ -1,5 +1,5 @@
 import { parse, createRenderer } from "@onigoetz/messageformat";
-import makePlural from "@onigoetz/make-plural";
+//import makePlural from "@onigoetz/make-plural";
 import { dateFormatter, numberFormatter } from "@onigoetz/intl-formatters";
 
 const pluralRules = {
@@ -26,7 +26,8 @@ const pluralRules = {
 
 const renderer = createRenderer(
   { locale: "en" },
-  (cldr, type) => makePlural(pluralRules[`plurals-type-${type}`][cldr.locale]),
+  //(cldr, type) => makePlural(pluralRules[`plurals-type-${type}`][cldr.locale]),
+  (cldr, type) => { return () => 'other'},
   (locale, options, value) => numberFormatter(locale, options)(value),
   (locale, options, value) => dateFormatter(locale, options)(value)
 );

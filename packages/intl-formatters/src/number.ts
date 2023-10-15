@@ -43,7 +43,7 @@ function numberRound(
     m = method === "truncate" ? numberTruncate : Math[method];
   }
 
-  return function(value: number) {
+  return function round(value: number) {
     value = +value;
 
     // If the value is not a number, return NaN.
