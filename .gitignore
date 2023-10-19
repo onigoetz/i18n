@@ -5,3 +5,6 @@ coverage
 # Documentation
 vendor
 static
+
+.yarn/cache
+.yarn/*.gz
