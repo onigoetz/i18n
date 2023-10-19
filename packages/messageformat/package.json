@@ -26,7 +26,7 @@
     "watch": "crafty watch",
     "test": "crafty test",
     "test:ci": "crafty test --coverage",
-    "lint": "crafty jsLint --fix src/*.ts src/**/*.ts",
-    "lint:ci": "crafty jsLint src/*.ts src/**/*.ts"
+    "format": "biome format src",
+    "check": "biome check src"
   }
 }

@@ -22,9 +22,9 @@
     "speedscope": "1.16.0"
   },
   "scripts": {
-    "lint": "crafty jsLint --fix src/*.js src/**/*.js",
-    "lint:ci": "crafty jsLint src/*.js src/**/*.js",
     "build": "crafty run",
-    "benchmark": "node benchmark.js"
+    "benchmark": "node benchmark.js",
+    "format": "biome format src",
+    "check": "biome check src"
   }
 }

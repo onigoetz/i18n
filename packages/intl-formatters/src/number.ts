@@ -2,7 +2,7 @@
 import {
   CommonNumberFormatterOptions,
   CurrencyFormatterOptions,
-  NumberFormatterOptions
+  NumberFormatterOptions,
 } from "@onigoetz/i18n-types";
 
 import { objectExtend } from "./utils";
@@ -35,9 +35,9 @@ function numberTruncate(value: number): number {
  *   Ref: #376
  */
 function numberRound(
-  method: "round" | "ceil" | "floor" | "truncate" | undefined
+  method: "round" | "ceil" | "floor" | "truncate" | undefined,
 ): (value: number) => number {
-  let m: (number: number) => number = v => v;
+  let m: (number: number) => number = (v) => v;
 
   if (method) {
     m = method === "truncate" ? numberTruncate : Math[method];
@@ -60,12 +60,12 @@ function getFormatter(
   locale: string,
   options: Intl.NumberFormatOptions & {
     round?: CommonNumberFormatterOptions["round"];
-  }
+  },
 ) {
   const formatter = new Intl.NumberFormat(locale, options);
   const roundFn = numberRound(options.round);
 
-  return function(value: number): string {
+  return function (value: number): string {
     return formatter.format(roundFn(value));
   };
 }
@@ -81,11 +81,11 @@ function getFormatter(
 export function currencyFormatter(
   locale: string,
   currency: string,
-  entryOptions?: CurrencyFormatterOptions
+  entryOptions?: CurrencyFormatterOptions,
 ): (value: number) => string {
   const options: Intl.NumberFormatOptions = objectExtend(
     {},
-    entryOptions || {}
+    entryOptions || {},
   ) as Intl.NumberFormatOptions;
   if (options.style) {
     options.currencyDisplay = options.style;
@@ -105,7 +105,7 @@ export function currencyFormatter(
  */
 export function numberFormatter(
   locale: string,
-  options?: NumberFormatterOptions
+  options?: NumberFormatterOptions,
 ): (value: number) => string {
   return getFormatter(locale, (options || {}) as Intl.NumberFormatOptions);
 }

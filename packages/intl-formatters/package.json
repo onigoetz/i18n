@@ -26,7 +26,7 @@
     "watch": "crafty watch",
     "test": "export NODE_ICU_DATA=../../node_modules/full-icu && crafty test",
     "test:ci": "export NODE_ICU_DATA=../../node_modules/full-icu && crafty test --coverage",
-    "lint": "crafty jsLint --fix src/*.ts src/**/*.ts",
-    "lint:ci": "crafty jsLint src/*.ts src/**/*.ts"
+    "format": "biome format src",
+    "check": "biome check src"
   }
 }

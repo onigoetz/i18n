@@ -5,8 +5,8 @@ import makePlural from "./index";
 const combined = {
   supplemental: {
     "plurals-type-cardinal": plurals.supplemental["plurals-type-cardinal"],
-    "plurals-type-ordinal": ordinals.supplemental["plurals-type-ordinal"]
-  }
+    "plurals-type-ordinal": ordinals.supplemental["plurals-type-ordinal"],
+  },
 };
 
 function getTestValues(rules: {
@@ -25,7 +25,7 @@ function getTestValues(rules: {
         .join(" ")
         .replace(/^[ ,]+|[ ,…]+$/g, "")
         .replace(/(0\.[0-9])~(1\.[1-9])/g, "$1 1.0 $2")
-        .split(/[ ,~…]+/)
+        .split(/[ ,~…]+/),
     ]);
   }
 
@@ -33,9 +33,8 @@ function getTestValues(rules: {
 }
 
 function testPluralData(type: "cardinal" | "ordinal", locale: string) {
-  const key:
-    | "plurals-type-cardinal"
-    | "plurals-type-ordinal" = `plurals-type-${type}` as any;
+  const key: "plurals-type-cardinal" | "plurals-type-ordinal" =
+    `plurals-type-${type}` as any;
   const rules: { [key: string]: string } =
     combined.supplemental[key][locale as "en"];
   const fn = makePlural(rules);
@@ -48,7 +47,7 @@ function testPluralData(type: "cardinal" | "ordinal", locale: string) {
       for (const value of values) {
         // eslint-disable-next-line no-loop-func
         it(value, () => {
-          expect(fn((value as unknown) as number)).toEqual(category);
+          expect(fn(value as unknown as number)).toEqual(category);
           if (!/\.0+$/.test(value)) {
             expect(fn(Number(value))).toEqual(category);
           }
@@ -60,7 +59,7 @@ function testPluralData(type: "cardinal" | "ordinal", locale: string) {
 
 describe("Cardinal rules", () => {
   for (const locale of Object.keys(
-    combined.supplemental["plurals-type-cardinal"]
+    combined.supplemental["plurals-type-cardinal"],
   )) {
     describe(locale, () => testPluralData("cardinal", locale));
   }
@@ -68,7 +67,7 @@ describe("Cardinal rules", () => {
 
 describe("Ordinal rules", () => {
   for (const locale of Object.keys(
-    combined.supplemental["plurals-type-ordinal"]
+    combined.supplemental["plurals-type-ordinal"],
   )) {
     describe(locale, () => testPluralData("ordinal", locale));
   }

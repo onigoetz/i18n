@@ -5,12 +5,12 @@ import { DateFormatterOptions } from "@onigoetz/i18n-types";
 import { objectExtend } from "./utils";
 
 function convertDateToIntl(
-  format: DateFormatterOptions["date"]
+  format: DateFormatterOptions["date"],
 ): Intl.DateTimeFormatOptions {
   const o: Intl.DateTimeFormatOptions = {
     day: "numeric",
     month: "short",
-    year: "numeric"
+    year: "numeric",
   };
   switch (format) {
     case "full":
@@ -27,7 +27,7 @@ function convertDateToIntl(
 }
 
 function convertTimeToIntl(
-  format: DateFormatterOptions["time"]
+  format: DateFormatterOptions["time"],
 ): Intl.DateTimeFormatOptions {
   const o: Intl.DateTimeFormatOptions = { hour: "2-digit", minute: "2-digit" };
 
@@ -47,7 +47,7 @@ function convertTimeToIntl(
 }
 
 function convertToIntl(
-  options: DateFormatterOptions
+  options: DateFormatterOptions,
 ): Intl.DateTimeFormatOptions {
   if (options.date) {
     return convertDateToIntl(options.date);
@@ -59,7 +59,7 @@ function convertToIntl(
 
   return objectExtend(
     convertDateToIntl(options.datetime),
-    convertTimeToIntl(options.datetime)
+    convertTimeToIntl(options.datetime),
   );
 }
 
@@ -73,14 +73,14 @@ function convertToIntl(
  */
 export function dateFormatter(
   locale: string,
-  options?: DateFormatterOptions
+  options?: DateFormatterOptions,
 ): (value: Date) => string {
   // eslint-disable-next-line no-param-reassign
   options = options || {};
 
   const formatter = new Intl.DateTimeFormat(locale, convertToIntl(options));
 
-  return function(value: Date) {
+  return function (value: Date) {
     return formatter.format(value);
   };
 }

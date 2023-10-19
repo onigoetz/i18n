@@ -21,46 +21,46 @@ describe("parse()", () => {
     expect(parse("This is a {test}.")).toEqual([
       [MessageOpType.TEXT, "This is a "],
       [MessageOpType.ARG, "test"],
-      [MessageOpType.TEXT, "."]
+      [MessageOpType.TEXT, "."],
     ] as Token[]);
   });
 
   it("parses vars with number", () => {
     expect(parse("{test, number}")).toEqual([
-      [MessageOpType.SIMPLE, "test", "number"]
+      [MessageOpType.SIMPLE, "test", "number"],
     ] as Token[]);
   });
 
   // TODO :: integer, currency, percent
   it("parses vars with number and format", () => {
     expect(parse("{ test,    number, percent }")).toEqual([
-      [MessageOpType.SIMPLE, "test", "number", ["percent"]]
+      [MessageOpType.SIMPLE, "test", "number", ["percent"]],
     ] as Token[]);
   });
 
   it("parses vars with date", () => {
     expect(parse("{test, date}")).toEqual([
-      [MessageOpType.SIMPLE, "test", "date"]
+      [MessageOpType.SIMPLE, "test", "date"],
     ] as Token[]);
   });
 
   // TODO :: short, medium, long, full
   it("parses vars with date and format", () => {
     expect(parse("{test, date, short}")).toEqual([
-      [MessageOpType.SIMPLE, "test", "date", ["short"]]
+      [MessageOpType.SIMPLE, "test", "date", ["short"]],
     ] as Token[]);
   });
 
   it("parses vars with time", () => {
     expect(parse("{test, time}")).toEqual([
-      [MessageOpType.SIMPLE, "test", "time"]
+      [MessageOpType.SIMPLE, "test", "time"],
     ] as Token[]);
   });
 
   // TODO :: short, medium, long, full
   it("parses vars with time and format", () => {
     expect(parse("{test, time, short}")).toEqual([
-      [MessageOpType.SIMPLE, "test", "time", ["short"]]
+      [MessageOpType.SIMPLE, "test", "time", ["short"]],
     ] as Token[]);
   });
 
@@ -73,15 +73,15 @@ describe("parse()", () => {
         true,
         {
           one: 1,
-          other: 3
+          other: 3,
         },
-        6
+        6,
       ],
       [MessageOpType.TEXT, "one test"],
       [MessageOpType.END],
       [MessageOpType.ARG, "test", undefined],
       [MessageOpType.TEXT, " test"],
-      [MessageOpType.END]
+      [MessageOpType.END],
     ] as Token[]);
 
     expect(
@@ -90,7 +90,7 @@ describe("parse()", () => {
 			=1 {{host} invites {guest} to their party.}
 			=2 {{host} invites {guest} and one other person to their party.}
 			other {{host} invites {guest} and # other people to their party.}
-	}`)
+	}`),
     ).toEqual([
       [
         MessageOpType.PLURAL,
@@ -101,9 +101,9 @@ describe("parse()", () => {
           "=0": 1,
           "=1": 4,
           "=2": 9,
-          other: 14
+          other: 14,
         },
-        21
+        21,
       ],
       [MessageOpType.ARG, "host"],
       [MessageOpType.TEXT, " does not give a party."],
@@ -127,13 +127,13 @@ describe("parse()", () => {
       [MessageOpType.TEXT, " and "],
       [MessageOpType.ARG, "num_guests", 1],
       [MessageOpType.TEXT, " other people to their party."],
-      [MessageOpType.END]
+      [MessageOpType.END],
     ] as Token[]);
   });
 
   it("parses plural with offset", () => {
     expect(
-      parse("{test, plural, offset:3 one{one test} other {# test} }")
+      parse("{test, plural, offset:3 one{one test} other {# test} }"),
     ).toEqual([
       [
         MessageOpType.PLURAL,
@@ -142,21 +142,21 @@ describe("parse()", () => {
         true,
         {
           one: 1,
-          other: 3
+          other: 3,
         },
-        6
+        6,
       ],
       [MessageOpType.TEXT, "one test"],
       [MessageOpType.END],
       [MessageOpType.ARG, "test", 3],
       [MessageOpType.TEXT, " test"],
-      [MessageOpType.END]
+      [MessageOpType.END],
     ] as Token[]);
   });
 
   it("parses selectordinal", () => {
     expect(
-      parse("{test, selectordinal, one{one test} other {# test} }")
+      parse("{test, selectordinal, one{one test} other {# test} }"),
     ).toEqual([
       [
         MessageOpType.PLURAL,
@@ -165,21 +165,21 @@ describe("parse()", () => {
         false,
         {
           one: 1,
-          other: 3
+          other: 3,
         },
-        6
+        6,
       ],
       [MessageOpType.TEXT, "one test"],
       [MessageOpType.END],
       [MessageOpType.ARG, "test", undefined],
       [MessageOpType.TEXT, " test"],
-      [MessageOpType.END]
+      [MessageOpType.END],
     ] as Token[]);
   });
 
   it("parses select", () => {
     expect(
-      parse("{test, select, first {yes} second {false} other {maybe}}")
+      parse("{test, select, first {yes} second {false} other {maybe}}"),
     ).toEqual([
       [
         MessageOpType.SELECT,
@@ -187,16 +187,16 @@ describe("parse()", () => {
         {
           first: 1,
           second: 3,
-          other: 5
+          other: 5,
         },
-        7
+        7,
       ],
       [MessageOpType.TEXT, "yes"],
       [MessageOpType.END],
       [MessageOpType.TEXT, "false"],
       [MessageOpType.END],
       [MessageOpType.TEXT, "maybe"],
-      [MessageOpType.END]
+      [MessageOpType.END],
     ] as Token[]);
   });
 
@@ -206,47 +206,47 @@ describe("parse()", () => {
       [MessageOpType.TEXT, " "],
       [MessageOpType.ARG, "1"],
       [MessageOpType.TEXT, " "],
-      [MessageOpType.ARG, "2"]
+      [MessageOpType.ARG, "2"],
     ] as Token[]);
     expect(parse("{0} '{1}' {2}")).toEqual([
       [MessageOpType.ARG, "0"],
       [MessageOpType.TEXT, " {1} "],
-      [MessageOpType.ARG, "2"]
+      [MessageOpType.ARG, "2"],
     ] as Token[]);
     expect(parse("{0} ''{1}'' {2}")).toEqual([
       [MessageOpType.ARG, "0"],
       [MessageOpType.TEXT, " '"],
       [MessageOpType.ARG, "1"],
       [MessageOpType.TEXT, "' "],
-      [MessageOpType.ARG, "2"]
+      [MessageOpType.ARG, "2"],
     ] as Token[]);
     expect(parse("{0} '''{1}''' {2}")).toEqual([
       [MessageOpType.ARG, "0"],
       [MessageOpType.TEXT, " '{1}' "],
-      [MessageOpType.ARG, "2"]
+      [MessageOpType.ARG, "2"],
     ] as Token[]);
     expect(parse("{0} '{1} {2}")).toEqual([
       [MessageOpType.ARG, "0"],
-      [MessageOpType.TEXT, " {1} {2}"]
+      [MessageOpType.TEXT, " {1} {2}"],
     ] as Token[]);
     expect(parse("{0} ''{1} {2}")).toEqual([
       [MessageOpType.ARG, "0"],
       [MessageOpType.TEXT, " '"],
       [MessageOpType.ARG, "1"],
       [MessageOpType.TEXT, " "],
-      [MessageOpType.ARG, "2"]
+      [MessageOpType.ARG, "2"],
     ] as Token[]);
   });
 
   it("does not escape sometimes", () => {
     expect(parse("So, '{Mike''s Test}' is real.")).toEqual([
-      [MessageOpType.TEXT, "So, {Mike's Test} is real."]
+      [MessageOpType.TEXT, "So, {Mike's Test} is real."],
     ] as Token[]);
 
     expect(parse("You've done it now, {name}.")).toEqual([
       [MessageOpType.TEXT, "You've done it now, "],
       [MessageOpType.ARG, "name"],
-      [MessageOpType.TEXT, "."]
+      [MessageOpType.TEXT, "."],
     ] as Token[]);
   });
 
@@ -290,31 +290,31 @@ describe("parse()", () => {
 
   it("throws on missing other sub-message", () => {
     expect(() => parse("{n,select, named {test}}")).toThrow(
-      "expected other sub-message"
+      "expected other sub-message",
     );
     expect(() => parse("{n,selectordinal,=0 {test}}")).toThrow(
-      "expected other sub-message"
+      "expected other sub-message",
     );
     expect(() => parse("{n,plural,=0 {test}}")).toThrow(
-      "expected other sub-message"
+      "expected other sub-message",
     );
   });
 
   it("throws on missing sub-message selector", () => {
     expect(() => parse("{n,select,{n}")).toThrow(
-      "expected sub-message selector"
+      "expected sub-message selector",
     );
     expect(() => parse("{n,selectordinal,{n}")).toThrow(
-      "expected sub-message selector"
+      "expected sub-message selector",
     );
     expect(() => parse("{n,plural,{n}")).toThrow(
-      "expected sub-message selector"
+      "expected sub-message selector",
     );
   });
 
   it("throws on missing offset number", () => {
     expect(() => parse("{n,plural,offset: other{n}")).toThrow(
-      "expected sub-message selector at position 10 but found o."
+      "expected sub-message selector at position 10 but found o.",
     );
   });
 });

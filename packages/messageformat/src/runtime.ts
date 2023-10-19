@@ -7,13 +7,13 @@ const validDateOptions: ("short" | "full" | "long" | "medium")[] = [
   "short",
   "full",
   "long",
-  "medium"
+  "medium",
 ];
 const validNumberOptions: ("decimal" | "percent")[] = ["decimal", "percent"];
 function validOrFirst<T>(value: string[] | undefined, options: T[]): T {
   const firstParam: string | undefined = value && value[0];
-  if (options.indexOf((firstParam as unknown) as T) > -1) {
-    return (firstParam as unknown) as T;
+  if (options.indexOf(firstParam as unknown as T) > -1) {
+    return firstParam as unknown as T;
   }
 
   return options[0];
@@ -35,24 +35,24 @@ export default function createRenderer<T>(
   localeHolder: T,
   pluralGenerator: (
     localeHolder: T,
-    type: "cardinal" | "ordinal"
+    type: "cardinal" | "ordinal",
   ) => (number: number) => string,
   numberFormatter: (
     localeHolder: T,
     options: { style: "decimal" | "percent" },
-    value: number
+    value: number,
   ) => string,
   dateFormatter: (
     localeHolder: T,
     options: DateFormatterOptions,
-    value: Date
-  ) => string
+    value: Date,
+  ) => string,
 ): (token: Token[], variables?: Variables) => string {
   function number(token: SimpleToken, variables: Variables) {
     return numberFormatter(
       localeHolder,
       { style: validOrFirst(token[3], validNumberOptions) },
-      get(variables, token)
+      get(variables, token),
     );
   }
 
@@ -60,7 +60,7 @@ export default function createRenderer<T>(
     const options: DateFormatterOptions = {};
     options[token[2] as "date" | "time" | "datetime"] = validOrFirst(
       token[3],
-      validDateOptions
+      validDateOptions,
     );
 
     return dateFormatter(localeHolder, options, get(variables, token));
@@ -73,7 +73,7 @@ export default function createRenderer<T>(
     time: datetime,
     date: datetime,
     datetime,
-    number
+    number,
   };
 
   // TODO :: allow to add custom formatters to "types"
@@ -107,33 +107,32 @@ export default function createRenderer<T>(
           i = token[2][get(variables, token)] || token[2].other;
 
           continue; // skip the end of the loop
-        case MessageOpType.PLURAL:
-          {
-            stack.push(token[5]);
-            const value = get(variables, token);
+        case MessageOpType.PLURAL: {
+          stack.push(token[5]);
+          const value = get(variables, token);
 
-            const directJump = token[4][`=${value}`];
+          const directJump = token[4][`=${value}`];
 
-            if (directJump) {
-              i = directJump;
-              continue;
-            }
-
-            const pluralType = token[3] ? "cardinal" : "ordinal";
-            const offset = token[2] || 0; // TODO :: should offset apply to direct jump ?
-
-            // TODO :: initialize pluralGenerator only if specific number isn't present
-            const pluralRules = pluralGenerator(localeHolder, pluralType);
-
-            const pluralJump = token[4][pluralRules(value - offset)];
-
-            if (pluralJump) {
-              i = pluralJump;
-            } else {
-              i = token[4].other;
-            }
+          if (directJump) {
+            i = directJump;
+            continue;
           }
-          continue; // skip the end of the loop
+
+          const pluralType = token[3] ? "cardinal" : "ordinal";
+          const offset = token[2] || 0; // TODO :: should offset apply to direct jump ?
+
+          // TODO :: initialize pluralGenerator only if specific number isn't present
+          const pluralRules = pluralGenerator(localeHolder, pluralType);
+
+          const pluralJump = token[4][pluralRules(value - offset)];
+
+          if (pluralJump) {
+            i = pluralJump;
+          } else {
+            i = token[4].other;
+          }
+        }
+        continue; // skip the end of the loop
 
         case MessageOpType.END:
           i = stack.pop() as number;

@@ -34,7 +34,7 @@ export const enum MessageOpType {
   PLURAL = 2,
   SELECT = 3,
   SIMPLE = 4,
-  END = 5
+  END = 5,
 }
 
 export interface TextToken {

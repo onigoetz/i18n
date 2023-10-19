@@ -4,7 +4,7 @@ import makePlural, { Rules } from "./index";
 const enCardinal = {
   "pluralRule-count-one": "i = 1 and v = 0 @integer 1",
   "pluralRule-count-other":
-    " @integer 0, 2~16, 100, 1000, 10000, 100000, 1000000, … @decimal 0.0~1.5, 10.0, 100.0, 1000.0, 10000.0, 100000.0, 1000000.0, …"
+    " @integer 0, 2~16, 100, 1000, 10000, 100000, 1000000, … @decimal 0.0~1.5, 10.0, 100.0, 1000.0, 10000.0, 100000.0, 1000000.0, …",
 };
 
 const enOrdinal = {
@@ -15,17 +15,17 @@ const enOrdinal = {
   "pluralRule-count-few":
     "n % 10 = 3 and n % 100 != 13 @integer 3, 23, 33, 43, 53, 63, 73, 83, 103, 1003, …",
   "pluralRule-count-other":
-    " @integer 0, 4~18, 100, 1000, 10000, 100000, 1000000, …"
+    " @integer 0, 4~18, 100, 1000, 10000, 100000, 1000000, …",
 };
 
 const enOrdinalReduced = {
   "pluralRule-count-one": "n % 10 = 1 and n % 100 != 11",
   "pluralRule-count-two": "n % 10 = 2 and n % 100 != 12",
-  "pluralRule-count-few": "n % 10 = 3 and n % 100 != 13"
+  "pluralRule-count-few": "n % 10 = 3 and n % 100 != 13",
 };
 
 it("Answer with 'other' in case of no data", () => {
-  const m = makePlural((undefined as unknown) as Rules);
+  const m = makePlural(undefined as unknown as Rules);
 
   expect(m(1)).toEqual("other");
   expect(m(21)).toEqual("other");

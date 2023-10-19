@@ -9,7 +9,7 @@ import {
   ValueToken,
   TextToken,
   MessageOpType,
-  SimpleToken
+  SimpleToken,
 } from "./types";
 
 const OPEN = "{";
@@ -25,7 +25,7 @@ const MULTI_SPACE = compile("\\s+");
 const IDENTIFIER = compile(
   // eslint-disable-next-line no-control-regex
   /[^\u0009-\u000d \u0085\u200e\u200f\u2028\u2029\u0021-\u002f\u003a-\u0040\u005b-\u005e\u0060\u007b-\u007e\u00a1-\u00a7\u00a9\u00ab\u00ac\u00ae\u00b0\u00b1\u00b6\u00bb\u00bf\u00d7\u00f7\u2010-\u2027\u2030-\u203e\u2041-\u2053\u2055-\u205e\u2190-\u245f\u2500-\u2775\u2794-\u2bff\u2e00-\u2e7f\u3001-\u3003\u3008-\u3020\u3030\ufd3e\ufd3f\ufe45\ufe46]+/
-    .source
+    .source,
 );
 const PLURAL = compile(/(=\d+(\.\d+)?)|zero|one|two|few|many|other/.source);
 
@@ -39,7 +39,7 @@ function codeFrame(context: Context) {
 
   const before = context.msg.substr(
     beforeLength,
-    Math.min(context.i - beforeLength, 5)
+    Math.min(context.i - beforeLength, 5),
   );
   const current = context.msg[context.i];
   const after = context.msg.substr(context.i + 1, 5);
@@ -68,8 +68,9 @@ function expected(char: string, context: Context): SyntaxError {
   const found = context.msg[index];
 
   return new SyntaxError(
-    `expected ${char} at position ${index} but found ${found ||
-      "eof"}. ${codeFrame(context)}`
+    `expected ${char} at position ${index} but found ${
+      found || "eof"
+    }. ${codeFrame(context)}`,
   );
 }
 
@@ -183,7 +184,7 @@ function isNot(context: Context, char: string) {
 function parseSubmessage(
   context: Context,
   parent: ValueToken,
-  specialHash: boolean
+  specialHash: boolean,
 ): number {
   const startAt = context.nextIndex;
   skipSpace(context);
@@ -226,7 +227,7 @@ function parseSubmessages(
   context: Context,
   parent: ValueToken,
   specialHash: boolean,
-  matcher: RegExp
+  matcher: RegExp,
 ): Submessages {
   const submessages: Submessages = {} as Submessages;
 
@@ -363,7 +364,7 @@ function parseElement(context: Context) {
   }
 
   // Let's prepare a simple argument block
-  const token: Token = ([MessageOpType.ARG, id] as unknown) as Token;
+  const token: Token = [MessageOpType.ARG, id] as unknown as Token;
 
   skipSpace(context);
 
@@ -431,7 +432,7 @@ function parseElement(context: Context) {
 function parseAST(
   context: Context,
   parent: ValueToken,
-  specialHash: boolean
+  specialHash: boolean,
 ): Token[] {
   while (context.i < context.l) {
     const start = context.i,
@@ -452,7 +453,7 @@ function parseAST(
       add(context, [
         MessageOpType.ARG,
         parent[1],
-        (parent as PluralToken)[2]
+        (parent as PluralToken)[2],
       ] as ArgToken);
     } else if (char === OPEN) {
       // If we see a block start, we send it to `parseElement` and add it to the array if an element was found
@@ -485,6 +486,6 @@ export default function parse(message: string | number): Token[] {
     //eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/ban-ts-comment
     //@ts-ignore
     null,
-    false
+    false,
   );
 }

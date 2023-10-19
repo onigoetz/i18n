@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "crafty run",
-    "lint": "crafty jsLint --fix *.ts",
-    "lint:ci": "crafty jsLint *.ts"
+    "format": "biome format index.ts",
+    "check": "biome check index.ts"
   }
 }

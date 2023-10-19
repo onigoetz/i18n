@@ -8,12 +8,15 @@
     ]
   },
   "scripts": {
-    "build": "rm -rf packages/*/dist && yarn workspaces foreach --topological-dev run build",
+    "build": "rm -rf packages/*/dist && yarn workspaces foreach -v --topological-dev run build",
     "test": "yarn workspaces foreach --topological-dev run test",
     "test:ci": "yarn workspaces foreach --topological-dev run test:ci",
-    "lint": "yarn workspaces foreach -pt run lint",
-    "lint:ci": "yarn workspaces foreach -t run lint:ci",
+    "format": "yarn workspaces foreach -v run format",
+    "check": "yarn workspaces foreach -v run check",
     "publish:canary": "oao publish --no-git-commit --no-check-uncommitted --no-changelog --publish-tag canary --bump-dependent-reqs=exact",
     "publish:all": "oao publish --no-changelog --bump-dependent-reqs=exact"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.3.0"
   }
 }

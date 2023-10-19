@@ -6,7 +6,7 @@ function getRenderer<T extends string>(locale: T) {
     locale,
     (locale: T, type) => {
       const plural = new Intl.PluralRules(locale, { type });
-      return value => plural.select(value);
+      return (value) => plural.select(value);
     },
     (locale: T, options, value: number) => {
       return `${value} (${options.style})`;
@@ -15,7 +15,7 @@ function getRenderer<T extends string>(locale: T) {
       return `${value.toJSON().replace(/\..*$/g, "")} (${options.date}/${
         options.time
       }/${options.datetime})`;
-    }
+    },
   );
 }
 
@@ -39,49 +39,49 @@ describe("parse()", () => {
 
   it("parses variables", () => {
     expect(render(parse("This is a {test}."), { test: "Potato" })).toEqual(
-      "This is a Potato."
+      "This is a Potato.",
     );
   });
 
   it("parses vars with number and format", () => {
     expect(render(parse("{test, number}"), { test: 24.5 })).toEqual(
-      "24.5 (decimal)"
+      "24.5 (decimal)",
     );
     expect(
-      render(parse("{ test,    number, percent }"), { test: 0.5 })
+      render(parse("{ test,    number, percent }"), { test: 0.5 }),
     ).toEqual("0.5 (percent)");
   });
 
   it("renders vars with date and format", () => {
     expect(render(parse("{test, date}"), { test: date })).toEqual(
-      "1989-12-24T03:52:00 (short/undefined/undefined)"
+      "1989-12-24T03:52:00 (short/undefined/undefined)",
     );
     expect(render(parse("{test, date, short}"), { test: date })).toEqual(
-      "1989-12-24T03:52:00 (short/undefined/undefined)"
+      "1989-12-24T03:52:00 (short/undefined/undefined)",
     );
     expect(render(parse("{test, date, long}"), { test: date })).toEqual(
-      "1989-12-24T03:52:00 (long/undefined/undefined)"
+      "1989-12-24T03:52:00 (long/undefined/undefined)",
     );
     expect(render(parse("{test, date, full}"), { test: date })).toEqual(
-      "1989-12-24T03:52:00 (full/undefined/undefined)"
+      "1989-12-24T03:52:00 (full/undefined/undefined)",
     );
     expect(
-      render(parse("{test, date, invalid stuff}"), { test: date })
+      render(parse("{test, date, invalid stuff}"), { test: date }),
     ).toEqual("1989-12-24T03:52:00 (short/undefined/undefined)");
   });
 
   it("renders vars with time and format", () => {
     expect(render(parse("{test, time}"), { test: date })).toEqual(
-      "1989-12-24T03:52:00 (undefined/short/undefined)"
+      "1989-12-24T03:52:00 (undefined/short/undefined)",
     );
     expect(render(parse("{test, time, short}"), { test: date })).toEqual(
-      "1989-12-24T03:52:00 (undefined/short/undefined)"
+      "1989-12-24T03:52:00 (undefined/short/undefined)",
     );
     expect(render(parse("{test, time, medium}"), { test: date })).toEqual(
-      "1989-12-24T03:52:00 (undefined/medium/undefined)"
+      "1989-12-24T03:52:00 (undefined/medium/undefined)",
     );
     expect(
-      render(parse("{test, time, invalid stuff}"), { test: date })
+      render(parse("{test, time, invalid stuff}"), { test: date }),
     ).toEqual("1989-12-24T03:52:00 (undefined/short/undefined)");
   });
 
@@ -93,7 +93,7 @@ describe("parse()", () => {
 
   it("parses plural with offset", () => {
     const parsed = parse(
-      "{test, plural, offset:3 one{one test} other {# test} }"
+      "{test, plural, offset:3 one{one test} other {# test} }",
     );
     expect(render(parsed, { test: 4 })).toEqual("one test");
     expect(render(parsed, { test: 7 })).toEqual("4 test");
@@ -101,7 +101,7 @@ describe("parse()", () => {
 
   it("parses selectordinal", () => {
     const parsed = parse(
-      "{test, selectordinal, one{one test} other {# test} }"
+      "{test, selectordinal, one{one test} other {# test} }",
     );
     expect(render(parsed, { test: 1 })).toEqual("one test");
     expect(render(parsed, { test: 6 })).toEqual("6 test");
@@ -109,7 +109,7 @@ describe("parse()", () => {
 
   it("parses select", () => {
     const parsed = parse(
-      "{test, select, first {yes} second {false} other {maybe}}"
+      "{test, select, first {yes} second {false} other {maybe}}",
     );
     expect(render(parsed, { test: "first" })).toEqual("yes");
     expect(render(parsed, { test: "second" })).toEqual("false");
@@ -128,11 +128,11 @@ describe("parse()", () => {
 
   it("does not escape sometimes", () => {
     expect(render(parse("So, '{Mike''s Test}' is real."), {})).toEqual(
-      "So, {Mike's Test} is real."
+      "So, {Mike's Test} is real.",
     );
 
     expect(
-      render(parse("You've done it now, {name}."), { name: "Mike" })
+      render(parse("You've done it now, {name}."), { name: "Mike" }),
     ).toEqual("You've done it now, Mike.");
   });
 
@@ -170,11 +170,11 @@ describe("parse()", () => {
       gender_of_host: "male",
       num_guests: 3,
       host: "Lucifer",
-      guest: "John Constantine"
+      guest: "John Constantine",
     };
 
     expect(render(parse(message), variables)).toEqual(
-      "\n\n\t\tLucifer invites John Constantine and 2 other people to his party.\n\t\n"
+      "\n\n\t\tLucifer invites John Constantine and 2 other people to his party.\n\t\n",
     );
   });
 });

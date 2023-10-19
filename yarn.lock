@@ -480,6 +480,77 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@biomejs/biome@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "@biomejs/biome@npm:1.3.0"
+  dependencies:
+    "@biomejs/cli-darwin-arm64": 1.3.0
+    "@biomejs/cli-darwin-x64": 1.3.0
+    "@biomejs/cli-linux-arm64": 1.3.0
+    "@biomejs/cli-linux-x64": 1.3.0
+    "@biomejs/cli-win32-arm64": 1.3.0
+    "@biomejs/cli-win32-x64": 1.3.0
+  dependenciesMeta:
+    "@biomejs/cli-darwin-arm64":
+      optional: true
+    "@biomejs/cli-darwin-x64":
+      optional: true
+    "@biomejs/cli-linux-arm64":
+      optional: true
+    "@biomejs/cli-linux-x64":
+      optional: true
+    "@biomejs/cli-win32-arm64":
+      optional: true
+    "@biomejs/cli-win32-x64":
+      optional: true
+  bin:
+    biome: bin/biome
+  checksum: 64f0b8c7969e447989a5421005d4bde919752914ddc21cc6a20bb374fa121d7ea234ffe2acebb448c327b53854b223a9d0fa64624b26f91e7226b7d4e4b9b78c
+  languageName: node
+  linkType: hard
+
+"@biomejs/cli-darwin-arm64@npm:1.3.0":
+  version: 1.3.0
+  resolution: "@biomejs/cli-darwin-arm64@npm:1.3.0"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@biomejs/cli-darwin-x64@npm:1.3.0":
+  version: 1.3.0
+  resolution: "@biomejs/cli-darwin-x64@npm:1.3.0"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@biomejs/cli-linux-arm64@npm:1.3.0":
+  version: 1.3.0
+  resolution: "@biomejs/cli-linux-arm64@npm:1.3.0"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@biomejs/cli-linux-x64@npm:1.3.0":
+  version: 1.3.0
+  resolution: "@biomejs/cli-linux-x64@npm:1.3.0"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@biomejs/cli-win32-arm64@npm:1.3.0":
+  version: 1.3.0
+  resolution: "@biomejs/cli-win32-arm64@npm:1.3.0"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@biomejs/cli-win32-x64@npm:1.3.0":
+  version: 1.3.0
+  resolution: "@biomejs/cli-win32-x64@npm:1.3.0"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@eslint-community/eslint-utils@npm:^4.2.0":
   version: 4.4.0
   resolution: "@eslint-community/eslint-utils@npm:4.4.0"
@@ -1026,6 +1097,8 @@ __metadata:
 "@onigoetz/i18n-parent@workspace:.":
   version: 0.0.0-use.local
   resolution: "@onigoetz/i18n-parent@workspace:."
+  dependencies:
+    "@biomejs/biome": ^1.3.0
   languageName: unknown
   linkType: soft
 

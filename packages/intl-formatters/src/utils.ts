@@ -6,9 +6,11 @@ interface IObject {
   [key: string]: any;
 }
 
-type TUnionToIntersection<U> = (U extends any
-? (k: U) => void
-: never) extends (k: infer I) => void
+type TUnionToIntersection<U> = (
+  U extends any
+    ? (k: U) => void
+    : never
+) extends (k: infer I) => void
   ? I
   : never;
 
@@ -25,7 +27,7 @@ export function objectExtend<T extends IObject[]>(
   // eslint-disable-next-line prefer-rest-params
   const sources = [].slice.call(arguments, 1);
 
-  sources.forEach(source => {
+  sources.forEach((source) => {
     for (const prop in source) {
       if (hasOwnProperty(source, prop)) {
         destination[prop] = source[prop];

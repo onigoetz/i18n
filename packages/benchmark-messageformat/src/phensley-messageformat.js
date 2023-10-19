@@ -3,11 +3,11 @@ import {
   buildMessageMatcher,
   parseMessagePattern,
   DefaultMessageArgConverter,
-  MessageEngine
+  MessageEngine,
 } from "@phensley/messageformat";
 
 const FORMATTERS = {
-  number: (args, options) => args[0]
+  number: (args, options) => args[0],
 };
 
 const FORMATTER_NAMES = Object.keys(FORMATTERS);
@@ -29,7 +29,7 @@ export default (message, named) => {
     plurals("en"),
     CONVERTER,
     FORMATTERS,
-    parse(message)
+    parse(message),
   );
   return engine.evaluate([], named);
 };

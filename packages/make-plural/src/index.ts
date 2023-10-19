@@ -39,7 +39,7 @@ function parse(cond: string, context: Context): string {
       context[sn] = 1;
       return noteq ? `!${sn}` : sn;
     })
-    .replace(/\b[fintv]\b/g, m => {
+    .replace(/\b[fintv]\b/g, (m) => {
       context[m] = 1;
       return m;
     })
@@ -136,13 +136,13 @@ function compile(context: Context, rules: Rules): string {
   }
 
   return cases
-    .map(c => `(${c[0]}) ? '${c[1]}'`)
+    .map((c) => `(${c[0]}) ? '${c[1]}'`)
     .concat(["'other'"])
     .join("\n   : ");
 }
 
 export default function makePlural(
-  rules: Rules
+  rules: Rules,
 ): (value: number) => "zero" | "one" | "two" | "few" | "many" | "other" {
   if (!rules) {
     return () => "other";
@@ -152,12 +152,12 @@ export default function makePlural(
   const compiled = compile(context, rules);
 
   const body = [foldVars(printVars(context)), foldCond(`return ${compiled}`)]
-    .filter(line => !/^[\s;]*$/.test(line))
-    .map(line => line.replace(/\s+$/gm, ""))
+    .filter((line) => !/^[\s;]*$/.test(line))
+    .map((line) => line.replace(/\s+$/gm, ""))
     .join("\n");
 
   // eslint-disable-next-line no-new-func
   return new Function("n", body) as (
-    value: number
+    value: number,
   ) => "zero" | "one" | "two" | "few" | "many" | "other";
 }

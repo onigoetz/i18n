@@ -8,7 +8,7 @@ function pluralFactory(cldr, type) {
 
   if (!pluralMemory.has(key)) {
     const rules = pluralRules.get(cldr.locale);
-    pluralMemory.set(key, val => rules[type](val));
+    pluralMemory.set(key, (val) => rules[type](val));
   }
 
   return pluralMemory.get(key);
@@ -18,7 +18,7 @@ const renderer = createRenderer(
   { locale: "en" },
   pluralFactory,
   (locale, options, value) => numberFormatter(locale, options)(value),
-  (locale, options, value) => dateFormatter(locale, options)(value)
+  (locale, options, value) => dateFormatter(locale, options)(value),
 );
 
 export default (string, options) => {
