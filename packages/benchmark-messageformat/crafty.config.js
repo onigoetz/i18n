@@ -9,7 +9,7 @@ module.exports = {
       format: "cjs"
     },
     "onigoetz-messageformat": {
-      source: "src/onigoetz-messageformat.js",
+      source: "src/onigoetz-messageformat.mjs",
       format: "cjs"
     },
     "onigoetz-messageformat-memoized": {
@@ -17,7 +17,7 @@ module.exports = {
       format: "cjs"
     },
     "onigoetz-messageformat-phensley-plurals": {
-      source: "src/onigoetz-messageformat-phensley-plurals.js",
+      source: "src/onigoetz-messageformat-phensley-plurals.mjs",
       format: "cjs"
     },
     "intl-messageformat": {
