@@ -47,7 +47,7 @@ function numberRound(
     value = +value;
 
     // If the value is not a number, return NaN.
-    if (isNaN(value)) {
+    if (Number.isNaN(value)) {
       return 0;
     }
 

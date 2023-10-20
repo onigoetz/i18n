@@ -1,6 +1,6 @@
-import { parse, createRenderer } from "@onigoetz/messageformat";
-import { pluralRules } from "@phensley/plurals";
 import { dateFormatter, numberFormatter } from "@onigoetz/intl-formatters";
+import { createRenderer, parse } from "@onigoetz/messageformat";
+import { pluralRules } from "@phensley/plurals";
 
 const pluralMemory = new Map();
 function pluralFactory(cldr, type) {

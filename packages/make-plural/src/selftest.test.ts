@@ -1,5 +1,5 @@
-import * as plurals from "test-cldr-data/supplemental_plurals.json";
 import * as ordinals from "test-cldr-data/supplemental_ordinals.json";
+import * as plurals from "test-cldr-data/supplemental_plurals.json";
 import makePlural from "./index";
 
 const combined = {

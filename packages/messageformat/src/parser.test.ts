@@ -1,5 +1,5 @@
 import parse from "./parser";
-import { Token, MessageOpType } from "./types";
+import { MessageOpType, Token } from "./types";
 
 describe("parse()", () => {
   it("accepts strings", () => {

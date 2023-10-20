@@ -1,5 +1,5 @@
 import { DateFormatterOptions } from "@onigoetz/i18n-types";
-import { Token, SimpleToken, ValueToken, MessageOpType } from "./types";
+import { MessageOpType, SimpleToken, Token, ValueToken } from "./types";
 
 type Variables = Record<string, any> | [];
 
@@ -11,7 +11,7 @@ const validDateOptions: ("short" | "full" | "long" | "medium")[] = [
 ];
 const validNumberOptions: ("decimal" | "percent")[] = ["decimal", "percent"];
 function validOrFirst<T>(value: string[] | undefined, options: T[]): T {
-  const firstParam: string | undefined = value && value[0];
+  const firstParam: string | undefined = value?.[0];
   if (options.indexOf(firstParam as unknown as T) > -1) {
     return firstParam as unknown as T;
   }

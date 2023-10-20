@@ -1,15 +1,15 @@
 import { compile, match } from "./matcher";
 import {
-  Submessages,
-  Token,
-  Context,
   ArgToken,
+  Context,
+  MessageOpType,
   PluralToken,
   SelectToken,
-  ValueToken,
-  TextToken,
-  MessageOpType,
   SimpleToken,
+  Submessages,
+  TextToken,
+  Token,
+  ValueToken,
 } from "./types";
 
 const OPEN = "{";
@@ -435,8 +435,8 @@ function parseAST(
   specialHash: boolean,
 ): Token[] {
   while (context.i < context.l) {
-    const start = context.i,
-      char = context.msg[start];
+    const start = context.i;
+    const char = context.msg[start];
 
     if (char === CLOSE) {
       if (!parent) {

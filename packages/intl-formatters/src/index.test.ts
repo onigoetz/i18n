@@ -1,4 +1,4 @@
-import { parse, createRenderer } from "@onigoetz/messageformat";
+import { createRenderer, parse } from "@onigoetz/messageformat";
 
 import { dateFormatter, numberFormatter, pluralGenerator } from "./index";
 

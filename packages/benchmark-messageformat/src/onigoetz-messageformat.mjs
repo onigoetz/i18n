@@ -1,6 +1,6 @@
-import { parse, createRenderer } from "@onigoetz/messageformat";
 //import makePlural from "@onigoetz/make-plural";
 import { dateFormatter, numberFormatter } from "@onigoetz/intl-formatters";
+import { createRenderer, parse } from "@onigoetz/messageformat";
 
 const pluralRules = {
   "plurals-type-cardinal": {

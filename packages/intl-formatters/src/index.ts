@@ -1,5 +1,5 @@
 import { dateFormatter } from "./date";
-import { numberFormatter, currencyFormatter } from "./number";
+import { currencyFormatter, numberFormatter } from "./number";
 import { pluralGenerator } from "./plural";
 
 export { dateFormatter };

@@ -1,10 +1,10 @@
-import { pluralRules } from "@phensley/plurals";
 import {
-  buildMessageMatcher,
-  parseMessagePattern,
   DefaultMessageArgConverter,
   MessageEngine,
+  buildMessageMatcher,
+  parseMessagePattern,
 } from "@phensley/messageformat";
+import { pluralRules } from "@phensley/plurals";
 
 const FORMATTERS = {
   number: (args, options) => args[0],

@@ -1,5 +1,5 @@
-import { currencyFormatter, numberFormatter } from "./number";
 import { CurrencyFormatterOptions } from "@onigoetz/i18n-types";
+import { currencyFormatter, numberFormatter } from "./number";
 
 it("Formats currencies", () => {
   const code: CurrencyFormatterOptions = { style: "code" };
@@ -65,7 +65,7 @@ it("Formats currencies", () => {
 });
 
 it("Formats number", () => {
-  var pi = 3.14159265359;
+  const pi = 3.14159265359;
   expect(numberFormatter("en")(pi)).toEqual("3.142");
   expect(numberFormatter("es")(pi)).toEqual("3,142");
   //expect(numberFormatter("ar")(pi)).toEqual( "٣٫١٤٢");

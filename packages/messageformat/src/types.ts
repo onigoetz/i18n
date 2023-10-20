@@ -28,7 +28,7 @@ export type Submessages = {
  *
  * @public
  */
-export const enum MessageOpType {
+export enum MessageOpType {
   TEXT = 0,
   ARG = 1,
   PLURAL = 2,

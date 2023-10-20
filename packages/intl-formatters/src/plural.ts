@@ -31,7 +31,7 @@ export function pluralGenerator(
   locale: string,
   options?: PluralGeneratorOptions,
 ): (value: number) => ValidPlurals {
-  const type = (options && options.type) || "cardinal";
+  const type = options?.type || "cardinal";
 
   return getPluralSelector(locale, type);
 }

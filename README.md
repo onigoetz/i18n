@@ -67,3 +67,12 @@ This suite of packages certainly wouldn't exist without the previous work in the
 This package forked [`make-plural`](https://www.npmjs.com/package/make-plural) at version 4 to make it smaller.
 Took inspiration for the MessageFormat parser from [`@ffz/icu-msgparser`](https://www.npmjs.com/package/@ffz/icu-msgparser)
 for its small size and [`@phensley/messageformat`](https://www.npmjs.com/package/@phensley/messageformat) for its parsing speed.
+
+## Building
+
+- `yarn build`
+- `yarn test`
+
+## Linting
+- `yarn format --write`
+- `yarn check --apply`
