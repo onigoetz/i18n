@@ -11,8 +11,8 @@
   "devDependencies": {
     "@parcel/packager-ts": "2.10.0",
     "@parcel/transformer-typescript-types": "2.10.0",
-    "@swissquote/crafty": "1.22.3",
-    "@swissquote/crafty-preset-typescript": "1.22.3",
+    "@swissquote/crafty": "1.23.0",
+    "@swissquote/crafty-preset-typescript": "1.23.0",
     "parcel": "^2.10.0",
     "typescript": "5.2.2"
   },
