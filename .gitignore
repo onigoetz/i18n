@@ -8,3 +8,5 @@ static
 
 .yarn/cache
 .yarn/*.gz
+
+.parcel-cache/

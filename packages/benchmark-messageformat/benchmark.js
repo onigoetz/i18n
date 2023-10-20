@@ -66,10 +66,10 @@ const instances = [];
 
 function register(name, run) {
   console.log("\n==>", name);
-  console.log("Simple String:", run(string_msg[0], string_msg[1]));
-  console.log("With one variable:", run(simple_msg[0], simple_msg[1]));
-  console.log("With number formatting and plurals:", run(normal_msg[0], normal_msg[1]));
-  console.log("With select and plurals:", run(complex_msg[0], complex_msg[1]));
+  console.log("Simple String:", run.default(string_msg[0], string_msg[1]));
+  console.log("With one variable:", run.default(simple_msg[0], simple_msg[1]));
+  console.log("With number formatting and plurals:", run.default(normal_msg[0], normal_msg[1]));
+  console.log("With select and plurals:", run.default(complex_msg[0], complex_msg[1]));
 
   instances.push({ name, run });
 }
@@ -84,20 +84,20 @@ function runAll(name, instances, string) {
     });
 
   instances.forEach(instance => {
-    bench.add(instance.name, () => instance.run(string[0], string[1]));
+    bench.add(instance.name, () => instance.run.default(string[0], string[1]));
   });
 
   bench.run();
 }
 
-register("@onigoetz/messageformat (memoized)", require("./dist/js/onigoetz-messageformat-memoized.min.js"));
-register("@onigoetz/messageformat", require("./dist/js/onigoetz-messageformat.min.js"));
-register("@onigoetz/messageformat (phensley/plurals)", require("./dist/js/onigoetz-messageformat-phensley-plurals.min.js"));
-register("@phensley/messageformat", require("./dist/js/phensley-messageformat.min.js"));
-register("@ffz/icu-msgparser", require("./dist/js/ffz-icu-msgparser.min.js"));
-register("format-message-parse", require("./dist/js/format-message.min.js"));
-register("intl-messageformat", require("./dist/js/intl-messageformat.min.js"));
-register("@messageformat/core", require("./dist/js/messageformat.min.js"));
+register("@onigoetz/messageformat (memoized)", require("./dist/onigoetz-messageformat-memoized.js"));
+register("@onigoetz/messageformat", require("./dist/onigoetz-messageformat.js"));
+register("@onigoetz/messageformat (phensley/plurals)", require("./dist/onigoetz-messageformat-phensley-plurals.js"));
+register("@phensley/messageformat", require("./dist/phensley-messageformat.js"));
+register("@ffz/icu-msgparser", require("./dist/ffz-icu-msgparser.js"));
+register("format-message-parse", require("./dist/format-message.js"));
+register("intl-messageformat", require("./dist/intl-messageformat.js"));
+register("@messageformat/core", require("./dist/messageformat.js"));
 
 runAll("Simple String", instances, string_msg);
 runAll("With one variable", instances, simple_msg);

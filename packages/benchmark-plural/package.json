@@ -5,16 +5,15 @@
   "devDependencies": {
     "@onigoetz/intl-formatters": "0.1.0",
     "@onigoetz/make-plural": "0.1.0",
+    "@parcel/config-default": "^2.10.0",
+    "@parcel/core": "^2.10.0",
     "@phensley/plurals": "1.7.2",
-    "@swissquote/crafty": "1.22.3",
-    "@swissquote/crafty-preset-babel": "1.22.3",
-    "@swissquote/crafty-runner-rollup": "1.22.3",
     "benchmark": "2.1.4",
     "make-plural": "7.3.0",
     "speedscope": "1.16.0"
   },
   "scripts": {
-    "build": "crafty run",
+    "build": "node build.mjs",
     "benchmark": "node benchmark.js",
     "format": "biome format src",
     "check": "biome check src"

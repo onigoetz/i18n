@@ -2,26 +2,29 @@
   "name": "@onigoetz/make-plural",
   "version": "0.1.0",
   "license": "MIT",
+  "source": "src/index.ts",
   "main": "./dist/cjs.min.js",
   "module": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
+  "types": "./dist/index.d.ts",
   "sideEffects": false,
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
+    "@parcel/packager-ts": "2.10.0",
+    "@parcel/transformer-typescript-types": "2.10.0",
     "@swissquote/crafty": "1.22.3",
     "@swissquote/crafty-preset-jest": "1.22.3",
     "@swissquote/crafty-preset-typescript": "1.22.3",
-    "@swissquote/crafty-runner-gulp": "1.22.3",
-    "@swissquote/crafty-runner-rollup": "1.22.3",
     "@types/jest": "^29.0.0",
     "jest-sonar": "0.2.16",
-    "test-cldr-data": "0.1.0"
+    "parcel": "^2.10.0",
+    "test-cldr-data": "0.1.0",
+    "typescript": "5.2.2"
   },
   "scripts": {
-    "build": "crafty run",
-    "watch": "crafty watch",
+    "build": "parcel build",
+    "watch": "parcel watch",
     "test": "crafty test",
     "test:ci": "crafty test --coverage",
     "format": "biome format src",

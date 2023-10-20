@@ -8,7 +8,7 @@
     ]
   },
   "scripts": {
-    "build": "rm -rf packages/*/dist && yarn workspaces foreach -v --topological-dev run build",
+    "build": "yarn workspaces foreach -v --topological-dev run build",
     "test": "yarn workspaces foreach --topological-dev run test",
     "test:ci": "yarn workspaces foreach --topological-dev run test:ci",
     "format": "yarn workspaces foreach -v run format",
