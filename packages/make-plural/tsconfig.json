@@ -1,19 +1,15 @@
 {
-  "exclude": [
-    "node_modules",
-    "node",
-    "css",
-    "etc"
+  "include": [
+    "src/*",
+    "test.ts"
   ],
   "compilerOptions": {
     "declaration": true,
-    "moduleResolution": "node",
-    "jsx": "react",
+    "moduleResolution": "Bundler",
     "module": "esnext", // Using an ES6 module with an ES5 target allows to leverage tree shaking
     "sourceMap": true,
     "strict": true,
     "target": "es5",
-    "resolveJsonModule": true,
     "esModuleInterop": true,
     // Upgrade types to more recents of ES, although we shouldn't use them for the moment for compatibilty reasons
     // one @types dependency relies on them

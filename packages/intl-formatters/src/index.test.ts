@@ -1,6 +1,8 @@
+import { test } from "@japa/runner";
+
 import { createRenderer, parse } from "@onigoetz/messageformat";
 
-import { dateFormatter, numberFormatter, pluralGenerator } from "./index";
+import { dateFormatter, numberFormatter, pluralGenerator } from "./index.js";
 
 function getRenderer<T extends string>(locale: T) {
   return createRenderer(
@@ -12,15 +14,15 @@ function getRenderer<T extends string>(locale: T) {
   );
 }
 
-describe("parse()", () => {
+test.group("parse()", () => {
   const date = new Date("1989-12-24T04:52");
 
   const render = getRenderer("en");
-  it("accepts strings", () => {
+  test("accepts strings", ({expect}) => {
     expect(render(parse("This is a test."))).toEqual("This is a test.");
   });
 
-  it("coerces input to string", () => {
+  test("coerces input to string", ({expect}) => {
     //eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/ban-ts-comment
     //@ts-ignore
     expect(render(parse())).toEqual("undefined");
@@ -30,20 +32,20 @@ describe("parse()", () => {
     expect(render(parse(12.34))).toEqual("12.34");
   });
 
-  it("parses variables", () => {
+  test("parses variables", ({expect}) => {
     expect(render(parse("This is a {test}."), { test: "Potato" })).toEqual(
       "This is a Potato.",
     );
   });
 
-  it("parses vars with number and format", () => {
+  test("parses vars with number and format", ({expect}) => {
     expect(render(parse("{test, number}"), { test: 24.5 })).toEqual("24.5");
     expect(
       render(parse("{ test,    number, percent }"), { test: 0.5 }),
     ).toEqual("50%");
   });
 
-  it("renders vars with date and format", () => {
+  test("renders vars with date and format", ({expect}) => {
     expect(render(parse("{test, date}"), { test: date })).toEqual("12/24/1989");
     expect(render(parse("{test, date, short}"), { test: date })).toEqual(
       "12/24/1989",
@@ -59,7 +61,7 @@ describe("parse()", () => {
     ).toEqual("12/24/1989");
   });
 
-  it("renders vars with time and format", () => {
+  test("renders vars with time and format", ({expect}) => {
     expect(render(parse("{test, time}"), { test: date })).toEqual("04:52 AM");
     expect(render(parse("{test, time, short}"), { test: date })).toEqual(
       "04:52 AM",
@@ -72,13 +74,13 @@ describe("parse()", () => {
     ).toEqual("04:52 AM");
   });
 
-  it("parses plural tags", () => {
+  test("parses plural tags", ({expect}) => {
     const parsed = parse("{test, plural, one{one test} other {# test} }");
     expect(render(parsed, { test: 1 })).toEqual("one test");
     expect(render(parsed, { test: 4 })).toEqual("4 test");
   });
 
-  it("parses plural with offset", () => {
+  test("parses plural with offset", ({expect}) => {
     const parsed = parse(
       "{test, plural, offset:3 one{one test} other {# test} }",
     );
@@ -86,7 +88,7 @@ describe("parse()", () => {
     expect(render(parsed, { test: 7 })).toEqual("4 test");
   });
 
-  it("parses selectordinal", () => {
+  test("parses selectordinal", ({expect}) => {
     const parsed = parse(
       "{test, selectordinal, one{one test} other {# test} }",
     );
@@ -94,7 +96,7 @@ describe("parse()", () => {
     expect(render(parsed, { test: 6 })).toEqual("6 test");
   });
 
-  it("parses select", () => {
+  test("parses select", ({expect}) => {
     const parsed = parse(
       "{test, select, first {yes} second {false} other {maybe}}",
     );
@@ -103,7 +105,7 @@ describe("parse()", () => {
     expect(render(parsed, { test: "prout" })).toEqual("maybe");
   });
 
-  it("escapes characters", () => {
+  test("escapes characters", ({expect}) => {
     const vars = ["zero", "one", "two"];
     expect(render(parse("{0} {1} {2}"), vars)).toEqual("zero one two");
     expect(render(parse("{0} '{1}' {2}"), vars)).toEqual("zero {1} two");
@@ -113,7 +115,7 @@ describe("parse()", () => {
     expect(render(parse("{0} ''{1} {2}"), vars)).toEqual("zero 'one two");
   });
 
-  it("does not escape sometimes", () => {
+  test("does not escape sometimes", ({expect}) => {
     expect(render(parse("So, '{Mike''s Test}' is real."), {})).toEqual(
       "So, {Mike's Test} is real.",
     );
@@ -123,7 +125,7 @@ describe("parse()", () => {
     ).toEqual("You've done it now, Mike.");
   });
 
-  it("renders complex nested messages", () => {
+  test("renders complex nested messages", ({expect}) => {
     const message = `
 {gender_of_host, select,
 	female {

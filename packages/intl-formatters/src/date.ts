@@ -2,7 +2,7 @@
 
 import { DateFormatterOptions } from "@onigoetz/i18n-types";
 
-import { objectExtend } from "./utils";
+import { objectExtend } from "./utils.js";
 
 function convertDateToIntl(
   format: DateFormatterOptions["date"],

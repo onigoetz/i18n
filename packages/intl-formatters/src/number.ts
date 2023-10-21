@@ -5,7 +5,7 @@ import {
   NumberFormatterOptions,
 } from "@onigoetz/i18n-types";
 
-import { objectExtend } from "./utils";
+import { objectExtend } from "./utils.js";
 
 function numberTruncate(value: number): number {
   return Math[value < 0 ? "ceil" : "floor"](value);

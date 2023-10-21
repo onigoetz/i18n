@@ -1,6 +1,7 @@
-import * as ordinals from "test-cldr-data/supplemental_ordinals.json";
-import * as plurals from "test-cldr-data/supplemental_plurals.json";
-import makePlural from "./index";
+import { test } from '@japa/runner'
+import ordinals from "test-cldr-data/supplemental_ordinals.json" assert { type: "json" };
+import plurals from "test-cldr-data/supplemental_plurals.json" assert { type: "json" };
+import makePlural from "./index.js";
 
 const combined = {
   supplemental: {
@@ -42,33 +43,30 @@ function testPluralData(type: "cardinal" | "ordinal", locale: string) {
   const testValues = getTestValues(rules);
 
   for (const [category, condition, values] of testValues) {
-    // eslint-disable-next-line no-loop-func
-    describe(`${condition} = ${category}`, () => {
       for (const value of values) {
         // eslint-disable-next-line no-loop-func
-        it(value, () => {
+        test(`${locale}: ${condition} = ${category}, ${value}`, ({expect}) => {
           expect(fn(value as unknown as number)).toEqual(category);
           if (!/\.0+$/.test(value)) {
             expect(fn(Number(value))).toEqual(category);
           }
         });
       }
-    });
   }
 }
 
-describe("Cardinal rules", () => {
+test.group("Cardinal rules", () => {
   for (const locale of Object.keys(
     combined.supplemental["plurals-type-cardinal"],
   )) {
-    describe(locale, () => testPluralData("cardinal", locale));
+    testPluralData("cardinal", locale);
   }
 });
 
-describe("Ordinal rules", () => {
+test.group("Ordinal rules", () => {
   for (const locale of Object.keys(
     combined.supplemental["plurals-type-ordinal"],
   )) {
-    describe(locale, () => testPluralData("ordinal", locale));
+    testPluralData("ordinal", locale);
   }
 });

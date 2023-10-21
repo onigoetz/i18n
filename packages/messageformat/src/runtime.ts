@@ -1,5 +1,5 @@
 import { DateFormatterOptions } from "@onigoetz/i18n-types";
-import { MessageOpType, SimpleToken, Token, ValueToken } from "./types";
+import { MessageOpType, SimpleToken, Token, ValueToken } from "./types.js";
 
 type Variables = Record<string, any> | [];
 

@@ -1,6 +1,6 @@
-import parse from "./parser";
-import createRenderer from "./runtime";
+import parse from "./parser.js";
+import createRenderer from "./runtime.js";
 
-export * from "./types";
+export * from "./types.js";
 
 export { parse, createRenderer };

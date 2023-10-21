@@ -1,4 +1,4 @@
-import { compile, match } from "./matcher";
+import { compile, match } from "./matcher.js";
 import {
   ArgToken,
   Context,
@@ -10,7 +10,7 @@ import {
   TextToken,
   Token,
   ValueToken,
-} from "./types";
+} from "./types.js";
 
 const OPEN = "{";
 const CLOSE = "}";
