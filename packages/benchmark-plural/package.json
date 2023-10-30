@@ -5,8 +5,8 @@
   "devDependencies": {
     "@onigoetz/intl-formatters": "0.1.0",
     "@onigoetz/make-plural": "0.1.0",
-    "@parcel/config-default": "2.10.0",
-    "@parcel/core": "2.10.0",
+    "@parcel/config-default": "2.10.1",
+    "@parcel/core": "2.10.1",
     "@phensley/plurals": "1.7.2",
     "benchmark": "2.1.4",
     "make-plural": "7.3.0",
