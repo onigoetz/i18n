@@ -25,10 +25,8 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-    - name: 📥 Monorepo install
-      uses: ./.github/actions/yarn-nm-install
-      with:
-        enable-corepack: false
+        cache: 'yarn'
+    - run: yarn install
     - run: yarn format
     - run: yarn build
     - run: yarn test
@@ -45,10 +43,8 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: 18.x
-    - name: 📥 Monorepo install
-      uses: ./.github/actions/yarn-nm-install
-      with:
-        enable-corepack: false
+        cache: 'yarn'
+    - run: yarn install
     - run: yarn build
     - run: yarn test:ci
     - id: node_path
