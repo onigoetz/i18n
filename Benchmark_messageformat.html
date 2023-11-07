@@ -106,7 +106,7 @@ I tried to compare apples with apples as much as possible, but some libraries do
 <p>Feel free to make a PR to help make these comparisons as fair as possible.</p>
 <p>As a final word, I made this comparison purely for fun and to learn a thing or two about performance optimization.</p>
 <h2><a id="libraries-size" href="#libraries-size" class="Permalink" aria-hidden="true" title="Permalink">#</a>Libraries size</h2>
-<p>Sources can be found in <code>src</code>, measure taken on 07/11/2023 With latest available versions</p>
+<p>Sources can be found in <code>src</code>, measure taken on 07/11/2023 with latest available versions</p>
 <table>
 <thead>
 <tr>
@@ -118,21 +118,21 @@ I tried to compare apples with apples as much as possible, but some libraries do
 </thead>
 <tbody>
 <tr>
-<td>@ffz/icu-msgparser</td>
+<td>@ffz/icu-msgparser (+ custom renderer)</td>
 <td>2.0.0</td>
 <td>13K</td>
 <td></td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat</td>
+<td>@onigoetz/messageformat (+ @onigoetz/intl)</td>
 <td>0.1.0</td>
-<td>16K</td>
+<td>17K</td>
 <td></td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat (memoized)</td>
+<td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
 <td>0.1.0</td>
-<td>23K</td>
+<td>20K</td>
 <td></td>
 </tr>
 <tr>
@@ -142,7 +142,7 @@ I tried to compare apples with apples as much as possible, but some libraries do
 <td>Uses peg.js</td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat (@phensley/plurals)</td>
+<td>@onigoetz/messageformat (+ @phensley/plurals)</td>
 <td>0.1.0</td>
 <td>62K</td>
 <td></td>
@@ -155,7 +155,7 @@ I tried to compare apples with apples as much as possible, but some libraries do
 </tr>
 <tr>
 <td>@phensley/messageformat</td>
-<td>1.2.6</td>
+<td>1.7.3</td>
 <td>81K</td>
 <td></td>
 </tr>
@@ -167,14 +167,25 @@ I tried to compare apples with apples as much as possible, but some libraries do
 </tr>
 </tbody>
 </table>
-<p><code>@onigoetz/messageformat</code> is originally a fork of <code>@ffz/icu-msgparser</code> but it contained no renderer. So I put an early version of my own renderer in for comparison purposes.</p>
-<blockquote>
-<p>Special mention for <code>@eo-locale/core</code> Which provides a very small package,
-however it provides no package that runs on Node.js 10 and crashes on our test strings.</p>
-</blockquote>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>
+<code>@ffz/icu-msgparser</code> is only a parser, I added a renderer to it but did not add any number/date formatter (hence the comparatively small size).</li>
+<li>
+<code>@eo-locale/core</code> was excluded from this list as it crashes on our valid test strings. It would be a strong contender as it has a very small footprint (6.7KB).</li>
+</ul>
 <h2><a id="benchmark" href="#benchmark" class="Permalink" aria-hidden="true" title="Permalink">#</a>Benchmark</h2>
-<p>Since each application has different translation needs, I tried to make a somewhat representative representation of what translation strings look like.
-From the simple string to the complex nested plural in a select, there are four different tests.</p>
+<p>To make the benchmark compareable I tried to apply the same rules to all libraries.
+Each libraries must follow the same rules:</p>
+<ul>
+<li>Parse and format a string.</li>
+<li>Properly handles plurals.</li>
+<li>Do not perform any number or date formatting since not all libraries support them and it would give a serious boost to those.</li>
+<li>Give the same output as all other implementations.</li>
+<li>Compiled with the same tools and options.</li>
+<li>Use an identical method signature for all libraries.</li>
+</ul>
+<p>The benchmark is applied to 4 different strings, which for the simple cases should be fairly common in applications and more advanced case are probably not as common but should still be performant.</p>
 <blockquote>
 <p>Benchmarks run on</p>
 <ul>
@@ -199,52 +210,52 @@ From the simple string to the complex nested plural in a select, there are four 
 </thead>
 <tbody>
 <tr>
-<td><strong>@onigoetz/messageformat (@phensley/plurals)</strong></td>
-<td align="right">8,821,744</td>
-<td>± 0.51%</td>
-<td>99</td>
+<td><strong>@onigoetz/messageformat (+ @onigoetz/intl)</strong></td>
+<td align="right">8,858,921</td>
+<td>± 0.37%</td>
+<td>96</td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat</td>
-<td align="right">8,723,468</td>
-<td>± 0.53%</td>
-<td>95</td>
+<td>@onigoetz/messageformat (+ @phensley/plurals)</td>
+<td align="right">8,771,570</td>
+<td>± 0.27%</td>
+<td>97</td>
 </tr>
 <tr>
-<td>format-message-parse</td>
-<td align="right">7,816,226</td>
+<td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
+<td align="right">7,731,610</td>
 <td>± 0.26%</td>
 <td>99</td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat (memoized)</td>
-<td align="right">7,770,656</td>
-<td>± 0.41%</td>
-<td>99</td>
+<td>format-message-parse</td>
+<td align="right">7,755,763</td>
+<td>± 0.71%</td>
+<td>93</td>
 </tr>
 <tr>
-<td>@ffz/icu-msgparser</td>
-<td align="right">5,762,734</td>
-<td>± 0.17%</td>
-<td>97</td>
+<td>@ffz/icu-msgparser (+ custom renderer)</td>
+<td align="right">5,634,717</td>
+<td>± 0.83%</td>
+<td>100</td>
 </tr>
 <tr>
 <td>@phensley/messageformat</td>
-<td align="right">5,489,417</td>
-<td>± 0.44%</td>
-<td>99</td>
-</tr>
-<tr>
-<td>@messageformat/core</td>
-<td align="right">1,192,907</td>
-<td>± 0.14%</td>
+<td align="right">5,411,679</td>
+<td>± 0.09%</td>
 <td>98</td>
 </tr>
 <tr>
+<td>@messageformat/core</td>
+<td align="right">1,201,810</td>
+<td>± 0.13%</td>
+<td>99</td>
+</tr>
+<tr>
 <td>intl-messageformat</td>
-<td align="right">224,986</td>
-<td>± 1.77%</td>
-<td>86</td>
+<td align="right">227,801</td>
+<td>± 1.13%</td>
+<td>90</td>
 </tr>
 </tbody>
 </table>
@@ -266,57 +277,57 @@ From the simple string to the complex nested plural in a select, there are four 
 </thead>
 <tbody>
 <tr>
-<td>@onigoetz/messageformat</td>
-<td align="right">4,217,050</td>
-<td>± 0.43%</td>
-<td>100</td>
-</tr>
-<tr>
-<td>@onigoetz/messageformat (@phensley/plurals)</td>
-<td align="right">4,211,371</td>
-<td>± 0.35%</td>
-<td>94</td>
-</tr>
-<tr>
-<td>@onigoetz/messageformat (memoized)</td>
-<td align="right">4,063,960</td>
-<td>± 0.08%</td>
-<td>103</td>
-</tr>
-<tr>
-<td>format-message-parse</td>
-<td align="right">3,485,649</td>
-<td>± 0.15%</td>
+<td><strong>@onigoetz/messageformat (+ @phensley/plurals)</strong></td>
+<td align="right">4,235,594</td>
+<td>± 0.11%</td>
 <td>99</td>
 </tr>
 <tr>
-<td>@ffz/icu-msgparser</td>
-<td align="right">3,381,008</td>
-<td>± 0.10%</td>
+<td>@onigoetz/messageformat (+ @onigoetz/intl)</td>
+<td align="right">4,218,973</td>
+<td>± 0.18%</td>
+<td>99</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
+<td align="right">4,050,269</td>
+<td>± 0.13%</td>
+<td>99</td>
+</tr>
+<tr>
+<td>format-message-parse</td>
+<td align="right">3,483,847</td>
+<td>± 0.15%</td>
 <td>100</td>
 </tr>
 <tr>
+<td>@ffz/icu-msgparser (+ custom renderer)</td>
+<td align="right">3,310,961</td>
+<td>± 3.14%</td>
+<td>94</td>
+</tr>
+<tr>
 <td>@phensley/messageformat</td>
-<td align="right">2,789,067</td>
-<td>± 0.18%</td>
-<td>101</td>
+<td align="right">2,753,537</td>
+<td>± 0.27%</td>
+<td>98</td>
 </tr>
 <tr>
 <td>@messageformat/core</td>
-<td align="right">710,608</td>
-<td>± 0.09%</td>
-<td>95</td>
+<td align="right">697,507</td>
+<td>± 0.17%</td>
+<td>98</td>
 </tr>
 <tr>
 <td>intl-messageformat</td>
-<td align="right">199,823</td>
-<td>± 1.04%</td>
-<td>93</td>
+<td align="right">204,849</td>
+<td>± 0.89%</td>
+<td>96</td>
 </tr>
 </tbody>
 </table>
-<h2><a id="with-number-formatting-and-plurals" href="#with-number-formatting-and-plurals" class="Permalink" aria-hidden="true" title="Permalink">#</a>With number formatting and plurals</h2>
-<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> input = [<span class="hljs-string">`Yo, {firstName} {lastName} has {numBooks, number, integer} {numBooks, plural, one {book} other {books}}.`</span>, {
+<h2><a id="with-plurals" href="#with-plurals" class="Permalink" aria-hidden="true" title="Permalink">#</a>With plurals</h2>
+<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> input = [<span class="hljs-string">`Yo, {firstName} {lastName} has {numBooks} {numBooks, plural, one {book} other {books}}.`</span>, {
   <span class="hljs-string">"firstName"</span>: <span class="hljs-string">"John"</span>,
   <span class="hljs-string">"lastName"</span>: <span class="hljs-string">"Constantine"</span>,
   <span class="hljs-string">"numBooks"</span>: <span class="hljs-number">5</span>
@@ -335,52 +346,52 @@ From the simple string to the complex nested plural in a select, there are four 
 </thead>
 <tbody>
 <tr>
-<td><strong>@phensley/messageformat</strong></td>
-<td align="right">434,546</td>
-<td>± 0.07%</td>
+<td><strong>@onigoetz/messageformat (+ @phensley/plurals)</strong></td>
+<td align="right">591,221</td>
+<td>± 0.15%</td>
 <td>100</td>
 </tr>
 <tr>
-<td>@messageformat/core</td>
-<td align="right">130,397</td>
+<td>@onigoetz/messageformat (+ @onigoetz/intl)</td>
+<td align="right">529,547</td>
 <td>± 0.09%</td>
-<td>96</td>
-</tr>
-<tr>
-<td>@ffz/icu-msgparser</td>
-<td align="right">70,374</td>
-<td>± 1.53%</td>
 <td>98</td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat</td>
-<td align="right">56,143</td>
-<td>± 1.39%</td>
-<td>96</td>
+<td>@phensley/messageformat</td>
+<td align="right">519,950</td>
+<td>± 0.08%</td>
+<td>97</td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat (@phensley/plurals)</td>
-<td align="right">55,681</td>
-<td>± 1.26%</td>
+<td>@messageformat/core</td>
+<td align="right">170,877</td>
+<td>± 0.10%</td>
+<td>95</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
+<td align="right">139,906</td>
+<td>± 0.08%</td>
 <td>98</td>
+</tr>
+<tr>
+<td>@ffz/icu-msgparser (+ custom renderer)</td>
+<td align="right">129,603</td>
+<td>± 0.16%</td>
+<td>100</td>
 </tr>
 <tr>
 <td>format-message-parse</td>
-<td align="right">38,069</td>
-<td>± 2.86%</td>
-<td>96</td>
+<td align="right">82,489</td>
+<td>± 0.16%</td>
+<td>97</td>
 </tr>
 <tr>
 <td>intl-messageformat</td>
-<td align="right">26,878</td>
-<td>± 3.67%</td>
-<td>90</td>
-</tr>
-<tr>
-<td>@onigoetz/messageformat (memoized)</td>
-<td align="right">7,276</td>
-<td>± 22.89%</td>
-<td>20</td>
+<td align="right">47,011</td>
+<td>± 1.86%</td>
+<td>85</td>
 </tr>
 </tbody>
 </table>
@@ -436,52 +447,52 @@ From the simple string to the complex nested plural in a select, there are four 
 </thead>
 <tbody>
 <tr>
-<td>@onigoetz/messageformat (@phensley/plurals)</td>
-<td align="right">91,784</td>
-<td>± 0.56%</td>
+<td><strong>@onigoetz/messageformat (+ @phensley/plurals)</strong></td>
+<td align="right">93,573</td>
+<td>± 0.14%</td>
 <td>97</td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat (memoized)</td>
-<td align="right">92,364</td>
-<td>± 1.41%</td>
+<td>@onigoetz/messageformat (+ @onigoetz/intl)</td>
+<td align="right">92,139</td>
+<td>± 0.26%</td>
 <td>97</td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat</td>
-<td align="right">90,122</td>
-<td>± 1.20%</td>
-<td>94</td>
+<td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
+<td align="right">61,462</td>
+<td>± 0.08%</td>
+<td>98</td>
 </tr>
 <tr>
 <td>@phensley/messageformat</td>
-<td align="right">50,998</td>
-<td>± 1.19%</td>
-<td>95</td>
-</tr>
-<tr>
-<td>@ffz/icu-msgparser</td>
-<td align="right">35,812</td>
-<td>± 1.15%</td>
-<td>94</td>
+<td align="right">52,596</td>
+<td>± 0.07%</td>
+<td>101</td>
 </tr>
 <tr>
 <td>@messageformat/core</td>
-<td align="right">29,900</td>
-<td>± 0.16%</td>
-<td>100</td>
+<td align="right">30,348</td>
+<td>± 0.07%</td>
+<td>99</td>
+</tr>
+<tr>
+<td>@ffz/icu-msgparser (+ custom renderer)</td>
+<td align="right">29,229</td>
+<td>± 1.05%</td>
+<td>99</td>
 </tr>
 <tr>
 <td>format-message-parse</td>
-<td align="right">16,528</td>
-<td>± 3.61%</td>
-<td>94</td>
+<td align="right">16,911</td>
+<td>± 2.77%</td>
+<td>96</td>
 </tr>
 <tr>
 <td>intl-messageformat</td>
-<td align="right">16,098</td>
-<td>± 2.28%</td>
-<td>90</td>
+<td align="right">16,581</td>
+<td>± 1.08%</td>
+<td>92</td>
 </tr>
 </tbody>
 </table>
