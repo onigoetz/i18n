@@ -15,7 +15,7 @@
     "@phensley/plurals": "1.7.3",
     "format-message-interpret": "6.2.4",
     "format-message-parse": "6.2.4",
-    "intl-messageformat": "10.5.4",
+    "intl-messageformat": "10.5.5",
     "speedscope": "1.16.0"
   },
   "scripts": {

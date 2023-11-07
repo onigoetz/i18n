@@ -141,13 +141,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/ecma402-abstract@npm:1.17.2":
-  version: 1.17.2
-  resolution: "@formatjs/ecma402-abstract@npm:1.17.2"
+"@formatjs/ecma402-abstract@npm:1.17.3":
+  version: 1.17.3
+  resolution: "@formatjs/ecma402-abstract@npm:1.17.3"
   dependencies:
-    "@formatjs/intl-localematcher": "npm:0.4.2"
+    "@formatjs/intl-localematcher": "npm:0.5.0"
     tslib: "npm:^2.4.0"
-  checksum: 7086962b6f6fd517188e9640e8439062e125e7bd60852ae91ceadb259fceaa3f73f7403a77411a7c82b1ae60be4bf4b27f793acc4059214adc91b00682d880fe
+  checksum: 00eb87301272d22dcdb0f2de74df22fa96c0062a9c1b1d718da5b8d8a4d9841aa59f909da624bd7f99db97d19c8a0338e511ad57a01d6fcfc02e67c6627035ce
   languageName: node
   linkType: hard
 
@@ -160,33 +160,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/icu-messageformat-parser@npm:2.7.0":
-  version: 2.7.0
-  resolution: "@formatjs/icu-messageformat-parser@npm:2.7.0"
+"@formatjs/icu-messageformat-parser@npm:2.7.1":
+  version: 2.7.1
+  resolution: "@formatjs/icu-messageformat-parser@npm:2.7.1"
   dependencies:
-    "@formatjs/ecma402-abstract": "npm:1.17.2"
-    "@formatjs/icu-skeleton-parser": "npm:1.6.2"
+    "@formatjs/ecma402-abstract": "npm:1.17.3"
+    "@formatjs/icu-skeleton-parser": "npm:1.6.3"
     tslib: "npm:^2.4.0"
-  checksum: f671d3dfcfa8ada17d14388f21be4cf1c535cbad8aba9cd6a3132d3120424cb7fb090f67b27e44ffbd0c7d4bba9f20e76b74cfca87f4ab945939e7ea3acb878c
+  checksum: 4bfc01538ef385e8bcc7c86f08b20ab87ce22c355cf3ea322c8f8d941260e00484f10aa43266f5eea096879f782fa6cdb8fe649dcb13d2745868beea36316ecb
   languageName: node
   linkType: hard
 
-"@formatjs/icu-skeleton-parser@npm:1.6.2":
-  version: 1.6.2
-  resolution: "@formatjs/icu-skeleton-parser@npm:1.6.2"
+"@formatjs/icu-skeleton-parser@npm:1.6.3":
+  version: 1.6.3
+  resolution: "@formatjs/icu-skeleton-parser@npm:1.6.3"
   dependencies:
-    "@formatjs/ecma402-abstract": "npm:1.17.2"
+    "@formatjs/ecma402-abstract": "npm:1.17.3"
     tslib: "npm:^2.4.0"
-  checksum: 2a2a56f49a15e8122b37237d5e09a817e01149ae353e1b5fe8721d1789dbaee85995c897d3aa9e5b400e3ee05b5fd4c0721b3ad49b1d128954dfed873a793153
+  checksum: 97a05fef16c93d9d663c5d7dadf9dcc72217d7a8afedda3a441ceedf085d45e500022dd67d3c578a1a508dd334538e4eca07129a9994c39c0c36e205e567c04b
   languageName: node
   linkType: hard
 
-"@formatjs/intl-localematcher@npm:0.4.2":
-  version: 0.4.2
-  resolution: "@formatjs/intl-localematcher@npm:0.4.2"
+"@formatjs/intl-localematcher@npm:0.5.0":
+  version: 0.5.0
+  resolution: "@formatjs/intl-localematcher@npm:0.5.0"
   dependencies:
     tslib: "npm:^2.4.0"
-  checksum: 2521fa48a95a80e3bedc0d444fb2ef67e1215e0bf9e6d16020c4a22af6973849a71c7a29a10cb74fc67b818967e9f8672062760e808e70873132277830e0ec67
+  checksum: adc82cad4c37dfff2ba1d00216e2056ce4c91b85fd39c60474849ccd74ec1262a8203d460d0ee863b71eb399297c3e087f5ccbbf3a874d682b021e6e3fd2c943
   languageName: node
   linkType: hard
 
@@ -628,7 +628,7 @@ __metadata:
     "@phensley/plurals": "npm:1.7.3"
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
-    intl-messageformat: "npm:10.5.4"
+    intl-messageformat: "npm:10.5.5"
     speedscope: "npm:1.16.0"
   languageName: unknown
   linkType: soft
@@ -3159,15 +3159,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"intl-messageformat@npm:10.5.4":
-  version: 10.5.4
-  resolution: "intl-messageformat@npm:10.5.4"
+"intl-messageformat@npm:10.5.5":
+  version: 10.5.5
+  resolution: "intl-messageformat@npm:10.5.5"
   dependencies:
-    "@formatjs/ecma402-abstract": "npm:1.17.2"
+    "@formatjs/ecma402-abstract": "npm:1.17.3"
     "@formatjs/fast-memoize": "npm:2.2.0"
-    "@formatjs/icu-messageformat-parser": "npm:2.7.0"
+    "@formatjs/icu-messageformat-parser": "npm:2.7.1"
     tslib: "npm:^2.4.0"
-  checksum: 109007787d270e8fdfce3347079b4d6277e1e2ba252170c3a31ad9cd36f0065eb15861db02c1056fdcff1b40b366d0407365ae2b5748a73f633ef883ace7607f
+  checksum: 223f48d719585b572f07012e2432c742e0acc371950c01a6fc9d7cb3e022d8486593ab8b7ed50849444035cdce119484e49f7c32b3646a8601a4d8f312395cf2
   languageName: node
   linkType: hard
 
