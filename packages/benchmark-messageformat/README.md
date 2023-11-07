@@ -11,20 +11,20 @@ As a final word, I made this comparison purely for fun and to learn a thing or t
 
 ## Libraries size
 
-Sources can be found in `src`, measure taken on 25/06/2020 With latest available versions
+Sources can be found in `src`, measure taken on 07/11/2023 With latest available versions
 
 | Npm Package                        | Version | Size | Comment     |
 | ---------------------------------- | ------- | ---- | ----------- |
-| @onigoetz/messageformat            | 0.1.0   | 13K  |             |
 | @ffz/icu-msgparser                 | 2.0.0   | 13K  |             |
-| @onigoetz/messageformat (memoized) | 0.1.0   | 14K  |             |
-| format-message                     | 6.2.4   | 28K  | Uses peg.js |
-| intl-messageformat                 | 9.8.2   | 54K  | Uses peg.js |
-| @phensley/messageformat            | 1.2.6   | 48K  |             |
-| messageformat                      | 2.3.0   | 103K | Uses peg.js |
+| @onigoetz/messageformat            | 0.1.0   | 16K  |             |
+| @onigoetz/messageformat (memoized) | 0.1.0   | 23K  |             |
+| format-message-parse               | 6.2.4   | 28K  | Uses peg.js |
+| @onigoetz/messageformat (@phensley/plurals) | 0.1.0   | 62K  |             |
+| intl-messageformat                 | 10.5.4  | 71K  | Uses peg.js |
+| @phensley/messageformat            | 1.2.6   | 81K  |             |
+| @messageformat/core                | 3.2.0   | 96K  | Uses peg.js |
 
-In the case of `@ffz/icu-msgparser`. The source largely inspired `@onigoetz/messageformat` and
-since it provided no renderer by default, I put an early version of `@onigoetz/messageformat`'s renderer.
+`@onigoetz/messageformat` is originally a fork of `@ffz/icu-msgparser` but it contained no renderer. So I put an early version of my own renderer in for comparison purposes.
 
 > Special mention for `@eo-locale/core` Which provides a very small package,
 > however it provides no package that runs on Node.js 10 and crashes on our test strings.
@@ -34,106 +34,121 @@ since it provided no renderer by default, I put an early version of `@onigoetz/m
 Since each application has different translation needs, I tried to make a somewhat representative representation of what translation strings look like.
 From the simple string to the complex nested plural in a select, there are four different tests.
 
-### String
+> Benchmarks run on
+> - Node.js v20.9.0
+> - Apple M2 CPU
+> - November 7, 2023
 
+## Simple String
 ```javascript
-const message = `Hello, world!`;
-const variables = {};
-
-// Renders : Hello, world!
+const input = [`Hello, world!`, {}];
+  
+// Renders: `Hello, world!`
 ```
 
-- @onigoetz/messageformat x 4,608,460 ops/sec ±1.50% (92 runs sampled)
-- @onigoetz/messageformat (memoized) x 4,536,394 ops/sec ±1.67% (85 runs sampled)
-- @phensley/messageformat x 4,529,047 ops/sec ±0.72% (88 runs sampled)
-- format-message-parse x 3,992,051 ops/sec ±0.23% (96 runs sampled)
-- @ffz/icu-msgparser x 1,583,621 ops/sec ±0.46% (95 runs sampled)
-- intl-messageformat x 454,716 ops/sec ±1.04% (85 runs sampled)
-- messageformat x 185,259 ops/sec ±0.36% (90 runs sampled)
+| Name | ops/sec | MoE | Runs sampled |
+| ---- | -------:| --- | ----------- |
+| __@onigoetz/messageformat (@phensley/plurals)__ | 8,821,744 | ± 0.51% | 99 |
+| @onigoetz/messageformat | 8,723,468 | ± 0.53% | 95 |
+| format-message-parse | 7,816,226 | ± 0.26% | 99 |
+| @onigoetz/messageformat (memoized) | 7,770,656 | ± 0.41% | 99 |
+| @ffz/icu-msgparser | 5,762,734 | ± 0.17% | 97 |
+| @phensley/messageformat | 5,489,417 | ± 0.44% | 99 |
+| @messageformat/core | 1,192,907 | ± 0.14% | 98 |
+| intl-messageformat | 224,986 | ± 1.77% | 86 |
 
-### Message with one variable
-
+## With one variable
 ```javascript
-const message = `Hello, {name}!`;
-const variables = { name: "John" };
-
-// Renders : Hello, John!
+const input = [`Hello, {name}!`, {
+  "name": "John"
+}];
+  
+// Renders: `Hello, John!`
 ```
 
-- format-message-parse x 1,941,376 ops/sec ±0.82% (95 runs sampled)
-- @phensley/messageformat x 1,872,103 ops/sec ±0.49% (93 runs sampled)
-- @onigoetz/messageformat (memoized) x 1,462,301 ops/sec ±0.86% (95 runs sampled)
-- @onigoetz/messageformat x 1,379,505 ops/sec ±0.47% (95 runs sampled)
-- @ffz/icu-msgparser x 1,009,608 ops/sec ±1.03% (95 runs sampled)
-- intl-messageformat x 300,560 ops/sec ±1.85% (83 runs sampled)
-- messageformat x 163,636 ops/sec ±1.40% (93 runs sampled)
+| Name | ops/sec | MoE | Runs sampled |
+| ---- | -------:| --- | ----------- |
+| @onigoetz/messageformat | 4,217,050 | ± 0.43% | 100 |
+| @onigoetz/messageformat (@phensley/plurals) | 4,211,371 | ± 0.35% | 94 |
+| @onigoetz/messageformat (memoized) | 4,063,960 | ± 0.08% | 103 |
+| format-message-parse | 3,485,649 | ± 0.15% | 99 |
+| @ffz/icu-msgparser | 3,381,008 | ± 0.10% | 100 |
+| @phensley/messageformat | 2,789,067 | ± 0.18% | 101 |
+| @messageformat/core | 710,608 | ± 0.09% | 95 |
+| intl-messageformat | 199,823 | ± 1.04% | 93 |
 
-### Let's get more creative
-
+## With number formatting and plurals
 ```javascript
-const message = `Yo, {firstName} {lastName} has {numBooks, number, integer} {numBooks, plural, one {book} other {books}}.`;
-const variables = {
-  firstName: "John",
-  lastName: "Constantine",
-  numBooks: 5,
-};
-
-// Renders:  Yo, John Constantine has 5 books.
+const input = [`Yo, {firstName} {lastName} has {numBooks, number, integer} {numBooks, plural, one {book} other {books}}.`, {
+  "firstName": "John",
+  "lastName": "Constantine",
+  "numBooks": 5
+}];
+  
+// Renders: `Yo, John Constantine has 5 books.`
 ```
 
-- @phensley/messageformat x 339,274 ops/sec ±0.54% (94 runs sampled)
-- @ffz/icu-msgparser x 27,082 ops/sec ±1.78% (93 runs sampled)
-- @onigoetz/messageformat x 17,177 ops/sec ±3.25% (87 runs sampled)
-- format-message-parse x 16,956 ops/sec ±2.98% (90 runs sampled)
-- messageformat x 14,239 ops/sec ±3.57% (88 runs sampled)
-- intl-messageformat x 11,730 ops/sec ±4.34% (86 runs sampled)
-- @onigoetz/messageformat (memoized) x 4,702 ops/sec ±16.39% (29 runs sampled)
+| Name | ops/sec | MoE | Runs sampled |
+| ---- | -------:| --- | ----------- |
+| __@phensley/messageformat__ | 434,546 | ± 0.07% | 100 |
+| @messageformat/core | 130,397 | ± 0.09% | 96 |
+| @ffz/icu-msgparser | 70,374 | ± 1.53% | 98 |
+| @onigoetz/messageformat | 56,143 | ± 1.39% | 96 |
+| @onigoetz/messageformat (@phensley/plurals) | 55,681 | ± 1.26% | 98 |
+| format-message-parse | 38,069 | ± 2.86% | 96 |
+| intl-messageformat | 26,878 | ± 3.67% | 90 |
+| @onigoetz/messageformat (memoized) | 7,276 | ± 22.89% | 20 |
 
-### Overly complex message
-
+## With select and plurals
 ```javascript
-const message = `
-{gender_of_host, select,
-    female {
-        {num_guests, plural, offset:1
-            =0 {{host} does not give a party.}
-            =1 {{host} invites {guest} to her party.}
-            =2 {{host} invites {guest} and one other person to her party.}
-            other {{host} invites {guest} and # other people to her party.}
-        }
-    }
-    male {
-        {num_guests, plural, offset:1
-            =0 {{host} does not give a party.}
-            =1 {{host} invites {guest} to his party.}
-            =2 {{host} invites {guest} and one other person to his party.}
-            other {{host} invites {guest} and # other people to his party.}
-        }
-    }
-    other {
-        {num_guests, plural, offset:1
-            =0 {{host} does not give a party.}
-            =1 {{host} invites {guest} to their party.}
-            =2 {{host} invites {guest} and one other person to their party.}
-            other {{host} invites {guest} and # other people to their party.}
-        }
-    }
-}
-`;
-const variables = {
-  gender_of_host: "male",
-  num_guests: 3,
-  host: "Lucifer",
-  guest: "John Constantine",
-};
-
-// Renders : Lucifer invites John Constantine and 2 other people to his party.
+const input = [`
+  {gender_of_host, select,
+	  female {
+		  {num_guests, plural, offset:1
+			  =0 {{host} does not give a party.}
+			  =1 {{host} invites {guest} to her party.}
+			  =2 {{host} invites {guest} and one other person to her party.}
+			  other {{host} invites {guest} and # other people to her party.}
+		  }
+	  }
+	  male {
+		  {num_guests, plural, offset:1
+			  =0 {{host} does not give a party.}
+			  =1 {{host} invites {guest} to his party.}
+			  =2 {{host} invites {guest} and one other person to his party.}
+			  other {{host} invites {guest} and # other people to his party.}
+		  }
+	  }
+	  other {
+		  {num_guests, plural, offset:1
+			  =0 {{host} does not give a party.}
+			  =1 {{host} invites {guest} to their party.}
+			  =2 {{host} invites {guest} and one other person to their party.}
+			  other {{host} invites {guest} and # other people to their party.}
+		  }
+	  }
+  }
+  `, {
+  "gender_of_host": "male",
+  "num_guests": 3,
+  "host": "Lucifer",
+  "guest": "John Constantine"
+}];
+  
+// Renders: `
+  
+		  Lucifer invites John Constantine and 2 other people to his party.
+	  
+  `
 ```
 
-- @onigoetz/messageformat (memoized) x 58,697 ops/sec ±2.56% (90 runs sampled)
-- @onigoetz/messageformat x 33,817 ops/sec ±0.80% (94 runs sampled)
-- @phensley/messageformat x 35,552 ops/sec ±0.27% (98 runs sampled)
-- @ffz/icu-msgparser x 14,154 ops/sec ±1.00% (96 runs sampled)
-- format-message-parse x 7,711 ops/sec ±4.12% (93 runs sampled)
-- intl-messageformat x 7,040 ops/sec ±4.26% (83 runs sampled)
-- messageformat x 6,428 ops/sec ±0.20% (97 runs sampled)
+| Name | ops/sec | MoE | Runs sampled |
+| ---- | -------:| --- | ----------- |
+| @onigoetz/messageformat (@phensley/plurals) | 91,784 | ± 0.56% | 97 |
+| @onigoetz/messageformat (memoized) | 92,364 | ± 1.41% | 97 |
+| @onigoetz/messageformat | 90,122 | ± 1.20% | 94 |
+| @phensley/messageformat | 50,998 | ± 1.19% | 95 |
+| @ffz/icu-msgparser | 35,812 | ± 1.15% | 94 |
+| @messageformat/core | 29,900 | ± 0.16% | 100 |
+| format-message-parse | 16,528 | ± 3.61% | 94 |
+| intl-messageformat | 16,098 | ± 2.28% | 90 |

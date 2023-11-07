@@ -8,7 +8,6 @@
     "@parcel/config-default": "2.10.2",
     "@parcel/core": "2.10.2",
     "@phensley/plurals": "1.7.3",
-    "benchmark": "2.1.4",
     "make-plural": "7.3.0",
     "speedscope": "1.16.0"
   },

@@ -12,7 +12,6 @@
     "@parcel/core": "2.10.2",
     "@phensley/messageformat": "1.7.3",
     "@phensley/plurals": "1.7.3",
-    "benchmark": "2.1.4",
     "format-message-interpret": "6.2.4",
     "format-message-parse": "6.2.4",
     "intl-messageformat": "10.5.4",

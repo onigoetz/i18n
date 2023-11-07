@@ -13,7 +13,11 @@ let bundler = new Parcel({
     "src/make-plural.js",
     "src/phensley-plurals.js",
   ],
-  defaultConfig: "@parcel/config-default"
+  defaultConfig: "@parcel/config-default",
+  defaultTargetOptions: {
+    shouldOptimize: true,
+    shouldScopeHoist: false
+  }
 });
 
 try {

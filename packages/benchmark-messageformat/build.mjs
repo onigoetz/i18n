@@ -17,6 +17,10 @@ let bundler = new Parcel({
     "src/format-message.js",
   ],
   defaultConfig: "@parcel/config-default",
+  defaultTargetOptions: {
+    shouldOptimize: true,
+    shouldScopeHoist: false
+  }
 });
 
 try {
