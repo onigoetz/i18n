@@ -106,7 +106,7 @@ I tried to compare apples with apples as much as possible, but some libraries do
 <p>Feel free to make a PR to help make these comparisons as fair as possible.</p>
 <p>As a final word, I made this comparison purely for fun and to learn a thing or two about performance optimization.</p>
 <h2><a id="libraries-size" href="#libraries-size" class="Permalink" aria-hidden="true" title="Permalink">#</a>Libraries size</h2>
-<p>Sources can be found in <code>src</code>, measure taken on 25/06/2020 With latest available versions</p>
+<p>Sources can be found in <code>src</code>, measure taken on 07/11/2023 With latest available versions</p>
 <table>
 <thead>
 <tr>
@@ -118,51 +118,56 @@ I tried to compare apples with apples as much as possible, but some libraries do
 </thead>
 <tbody>
 <tr>
-<td>@onigoetz/messageformat</td>
-<td>0.1.0</td>
-<td>13K</td>
-<td></td>
-</tr>
-<tr>
 <td>@ffz/icu-msgparser</td>
 <td>2.0.0</td>
 <td>13K</td>
 <td></td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat (memoized)</td>
+<td>@onigoetz/messageformat</td>
 <td>0.1.0</td>
-<td>14K</td>
+<td>16K</td>
 <td></td>
 </tr>
 <tr>
-<td>format-message</td>
+<td>@onigoetz/messageformat (memoized)</td>
+<td>0.1.0</td>
+<td>23K</td>
+<td></td>
+</tr>
+<tr>
+<td>format-message-parse</td>
 <td>6.2.4</td>
 <td>28K</td>
 <td>Uses peg.js</td>
 </tr>
 <tr>
+<td>@onigoetz/messageformat (@phensley/plurals)</td>
+<td>0.1.0</td>
+<td>62K</td>
+<td></td>
+</tr>
+<tr>
 <td>intl-messageformat</td>
-<td>9.8.2</td>
-<td>54K</td>
+<td>10.5.4</td>
+<td>71K</td>
 <td>Uses peg.js</td>
 </tr>
 <tr>
 <td>@phensley/messageformat</td>
 <td>1.2.6</td>
-<td>48K</td>
+<td>81K</td>
 <td></td>
 </tr>
 <tr>
-<td>messageformat</td>
-<td>2.3.0</td>
-<td>103K</td>
+<td>@messageformat/core</td>
+<td>3.2.0</td>
+<td>96K</td>
 <td>Uses peg.js</td>
 </tr>
 </tbody>
 </table>
-<p>In the case of <code>@ffz/icu-msgparser</code>. The source largely inspired <code>@onigoetz/messageformat</code> and
-since it provided no renderer by default, I put an early version of <code>@onigoetz/messageformat</code>’s renderer.</p>
+<p><code>@onigoetz/messageformat</code> is originally a fork of <code>@ffz/icu-msgparser</code> but it contained no renderer. So I put an early version of my own renderer in for comparison purposes.</p>
 <blockquote>
 <p>Special mention for <code>@eo-locale/core</code> Which provides a very small package,
 however it provides no package that runs on Node.js 10 and crashes on our test strings.</p>
@@ -170,102 +175,316 @@ however it provides no package that runs on Node.js 10 and crashes on our test s
 <h2><a id="benchmark" href="#benchmark" class="Permalink" aria-hidden="true" title="Permalink">#</a>Benchmark</h2>
 <p>Since each application has different translation needs, I tried to make a somewhat representative representation of what translation strings look like.
 From the simple string to the complex nested plural in a select, there are four different tests.</p>
-<h3><a id="string" href="#string" class="Permalink" aria-hidden="true" title="Permalink">#</a>String</h3>
-<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> message = <span class="hljs-string">`Hello, world!`</span>;
-<span class="hljs-keyword">const</span> variables = {};
-
-<span class="hljs-comment">// Renders : Hello, world!</span>
-</code></pre>
+<blockquote>
+<p>Benchmarks run on</p>
 <ul>
-<li>@onigoetz/messageformat x 4,608,460 ops/sec ±1.50% (92 runs sampled)</li>
-<li>@onigoetz/messageformat (memoized) x 4,536,394 ops/sec ±1.67% (85 runs sampled)</li>
-<li>@phensley/messageformat x 4,529,047 ops/sec ±0.72% (88 runs sampled)</li>
-<li>format-message-parse x 3,992,051 ops/sec ±0.23% (96 runs sampled)</li>
-<li>@ffz/icu-msgparser x 1,583,621 ops/sec ±0.46% (95 runs sampled)</li>
-<li>intl-messageformat x 454,716 ops/sec ±1.04% (85 runs sampled)</li>
-<li>messageformat x 185,259 ops/sec ±0.36% (90 runs sampled)</li>
+<li>Node.js v20.9.0</li>
+<li>Apple M2 CPU</li>
+<li>November 7, 2023</li>
 </ul>
-<h3><a id="message-with-one-variable" href="#message-with-one-variable" class="Permalink" aria-hidden="true" title="Permalink">#</a>Message with one variable</h3>
-<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> message = <span class="hljs-string">`Hello, {name}!`</span>;
-<span class="hljs-keyword">const</span> variables = { <span class="hljs-attr">name</span>: <span class="hljs-string">"John"</span> };
-
-<span class="hljs-comment">// Renders : Hello, John!</span>
+</blockquote>
+<h2><a id="simple-string" href="#simple-string" class="Permalink" aria-hidden="true" title="Permalink">#</a>Simple String</h2>
+<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> input = [<span class="hljs-string">`Hello, world!`</span>, {}];
+  
+<span class="hljs-comment">// Renders: `Hello, world!`</span>
 </code></pre>
-<ul>
-<li>format-message-parse x 1,941,376 ops/sec ±0.82% (95 runs sampled)</li>
-<li>@phensley/messageformat x 1,872,103 ops/sec ±0.49% (93 runs sampled)</li>
-<li>@onigoetz/messageformat (memoized) x 1,462,301 ops/sec ±0.86% (95 runs sampled)</li>
-<li>@onigoetz/messageformat x 1,379,505 ops/sec ±0.47% (95 runs sampled)</li>
-<li>@ffz/icu-msgparser x 1,009,608 ops/sec ±1.03% (95 runs sampled)</li>
-<li>intl-messageformat x 300,560 ops/sec ±1.85% (83 runs sampled)</li>
-<li>messageformat x 163,636 ops/sec ±1.40% (93 runs sampled)</li>
-</ul>
-<h3><a id="let-s-get-more-creative" href="#let-s-get-more-creative" class="Permalink" aria-hidden="true" title="Permalink">#</a>Let’s get more creative</h3>
-<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> message = <span class="hljs-string">`Yo, {firstName} {lastName} has {numBooks, number, integer} {numBooks, plural, one {book} other {books}}.`</span>;
-<span class="hljs-keyword">const</span> variables = {
-  <span class="hljs-attr">firstName</span>: <span class="hljs-string">"John"</span>,
-  <span class="hljs-attr">lastName</span>: <span class="hljs-string">"Constantine"</span>,
-  <span class="hljs-attr">numBooks</span>: <span class="hljs-number">5</span>,
-};
-
-<span class="hljs-comment">// Renders:  Yo, John Constantine has 5 books.</span>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th align="right">ops/sec</th>
+<th>MoE</th>
+<th>Runs sampled</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>@onigoetz/messageformat (@phensley/plurals)</strong></td>
+<td align="right">8,821,744</td>
+<td>± 0.51%</td>
+<td>99</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat</td>
+<td align="right">8,723,468</td>
+<td>± 0.53%</td>
+<td>95</td>
+</tr>
+<tr>
+<td>format-message-parse</td>
+<td align="right">7,816,226</td>
+<td>± 0.26%</td>
+<td>99</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (memoized)</td>
+<td align="right">7,770,656</td>
+<td>± 0.41%</td>
+<td>99</td>
+</tr>
+<tr>
+<td>@ffz/icu-msgparser</td>
+<td align="right">5,762,734</td>
+<td>± 0.17%</td>
+<td>97</td>
+</tr>
+<tr>
+<td>@phensley/messageformat</td>
+<td align="right">5,489,417</td>
+<td>± 0.44%</td>
+<td>99</td>
+</tr>
+<tr>
+<td>@messageformat/core</td>
+<td align="right">1,192,907</td>
+<td>± 0.14%</td>
+<td>98</td>
+</tr>
+<tr>
+<td>intl-messageformat</td>
+<td align="right">224,986</td>
+<td>± 1.77%</td>
+<td>86</td>
+</tr>
+</tbody>
+</table>
+<h2><a id="with-one-variable" href="#with-one-variable" class="Permalink" aria-hidden="true" title="Permalink">#</a>With one variable</h2>
+<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> input = [<span class="hljs-string">`Hello, {name}!`</span>, {
+  <span class="hljs-string">"name"</span>: <span class="hljs-string">"John"</span>
+}];
+  
+<span class="hljs-comment">// Renders: `Hello, John!`</span>
 </code></pre>
-<ul>
-<li>@phensley/messageformat x 339,274 ops/sec ±0.54% (94 runs sampled)</li>
-<li>@ffz/icu-msgparser x 27,082 ops/sec ±1.78% (93 runs sampled)</li>
-<li>@onigoetz/messageformat x 17,177 ops/sec ±3.25% (87 runs sampled)</li>
-<li>format-message-parse x 16,956 ops/sec ±2.98% (90 runs sampled)</li>
-<li>messageformat x 14,239 ops/sec ±3.57% (88 runs sampled)</li>
-<li>intl-messageformat x 11,730 ops/sec ±4.34% (86 runs sampled)</li>
-<li>@onigoetz/messageformat (memoized) x 4,702 ops/sec ±16.39% (29 runs sampled)</li>
-</ul>
-<h3><a id="overly-complex-message" href="#overly-complex-message" class="Permalink" aria-hidden="true" title="Permalink">#</a>Overly complex message</h3>
-<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> message = <span class="hljs-string">`
-{gender_of_host, select,
-    female {
-        {num_guests, plural, offset:1
-            =0 {{host} does not give a party.}
-            =1 {{host} invites {guest} to her party.}
-            =2 {{host} invites {guest} and one other person to her party.}
-            other {{host} invites {guest} and # other people to her party.}
-        }
-    }
-    male {
-        {num_guests, plural, offset:1
-            =0 {{host} does not give a party.}
-            =1 {{host} invites {guest} to his party.}
-            =2 {{host} invites {guest} and one other person to his party.}
-            other {{host} invites {guest} and # other people to his party.}
-        }
-    }
-    other {
-        {num_guests, plural, offset:1
-            =0 {{host} does not give a party.}
-            =1 {{host} invites {guest} to their party.}
-            =2 {{host} invites {guest} and one other person to their party.}
-            other {{host} invites {guest} and # other people to their party.}
-        }
-    }
-}
-`</span>;
-<span class="hljs-keyword">const</span> variables = {
-  <span class="hljs-attr">gender_of_host</span>: <span class="hljs-string">"male"</span>,
-  <span class="hljs-attr">num_guests</span>: <span class="hljs-number">3</span>,
-  <span class="hljs-attr">host</span>: <span class="hljs-string">"Lucifer"</span>,
-  <span class="hljs-attr">guest</span>: <span class="hljs-string">"John Constantine"</span>,
-};
-
-<span class="hljs-comment">// Renders : Lucifer invites John Constantine and 2 other people to his party.</span>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th align="right">ops/sec</th>
+<th>MoE</th>
+<th>Runs sampled</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@onigoetz/messageformat</td>
+<td align="right">4,217,050</td>
+<td>± 0.43%</td>
+<td>100</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (@phensley/plurals)</td>
+<td align="right">4,211,371</td>
+<td>± 0.35%</td>
+<td>94</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (memoized)</td>
+<td align="right">4,063,960</td>
+<td>± 0.08%</td>
+<td>103</td>
+</tr>
+<tr>
+<td>format-message-parse</td>
+<td align="right">3,485,649</td>
+<td>± 0.15%</td>
+<td>99</td>
+</tr>
+<tr>
+<td>@ffz/icu-msgparser</td>
+<td align="right">3,381,008</td>
+<td>± 0.10%</td>
+<td>100</td>
+</tr>
+<tr>
+<td>@phensley/messageformat</td>
+<td align="right">2,789,067</td>
+<td>± 0.18%</td>
+<td>101</td>
+</tr>
+<tr>
+<td>@messageformat/core</td>
+<td align="right">710,608</td>
+<td>± 0.09%</td>
+<td>95</td>
+</tr>
+<tr>
+<td>intl-messageformat</td>
+<td align="right">199,823</td>
+<td>± 1.04%</td>
+<td>93</td>
+</tr>
+</tbody>
+</table>
+<h2><a id="with-number-formatting-and-plurals" href="#with-number-formatting-and-plurals" class="Permalink" aria-hidden="true" title="Permalink">#</a>With number formatting and plurals</h2>
+<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> input = [<span class="hljs-string">`Yo, {firstName} {lastName} has {numBooks, number, integer} {numBooks, plural, one {book} other {books}}.`</span>, {
+  <span class="hljs-string">"firstName"</span>: <span class="hljs-string">"John"</span>,
+  <span class="hljs-string">"lastName"</span>: <span class="hljs-string">"Constantine"</span>,
+  <span class="hljs-string">"numBooks"</span>: <span class="hljs-number">5</span>
+}];
+  
+<span class="hljs-comment">// Renders: `Yo, John Constantine has 5 books.`</span>
 </code></pre>
-<ul>
-<li>@onigoetz/messageformat (memoized) x 58,697 ops/sec ±2.56% (90 runs sampled)</li>
-<li>@onigoetz/messageformat x 33,817 ops/sec ±0.80% (94 runs sampled)</li>
-<li>@phensley/messageformat x 35,552 ops/sec ±0.27% (98 runs sampled)</li>
-<li>@ffz/icu-msgparser x 14,154 ops/sec ±1.00% (96 runs sampled)</li>
-<li>format-message-parse x 7,711 ops/sec ±4.12% (93 runs sampled)</li>
-<li>intl-messageformat x 7,040 ops/sec ±4.26% (83 runs sampled)</li>
-<li>messageformat x 6,428 ops/sec ±0.20% (97 runs sampled)</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th align="right">ops/sec</th>
+<th>MoE</th>
+<th>Runs sampled</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>@phensley/messageformat</strong></td>
+<td align="right">434,546</td>
+<td>± 0.07%</td>
+<td>100</td>
+</tr>
+<tr>
+<td>@messageformat/core</td>
+<td align="right">130,397</td>
+<td>± 0.09%</td>
+<td>96</td>
+</tr>
+<tr>
+<td>@ffz/icu-msgparser</td>
+<td align="right">70,374</td>
+<td>± 1.53%</td>
+<td>98</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat</td>
+<td align="right">56,143</td>
+<td>± 1.39%</td>
+<td>96</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (@phensley/plurals)</td>
+<td align="right">55,681</td>
+<td>± 1.26%</td>
+<td>98</td>
+</tr>
+<tr>
+<td>format-message-parse</td>
+<td align="right">38,069</td>
+<td>± 2.86%</td>
+<td>96</td>
+</tr>
+<tr>
+<td>intl-messageformat</td>
+<td align="right">26,878</td>
+<td>± 3.67%</td>
+<td>90</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (memoized)</td>
+<td align="right">7,276</td>
+<td>± 22.89%</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<h2><a id="with-select-and-plurals" href="#with-select-and-plurals" class="Permalink" aria-hidden="true" title="Permalink">#</a>With select and plurals</h2>
+<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> input = [<span class="hljs-string">`
+  {gender_of_host, select,
+	  female {
+		  {num_guests, plural, offset:1
+			  =0 {{host} does not give a party.}
+			  =1 {{host} invites {guest} to her party.}
+			  =2 {{host} invites {guest} and one other person to her party.}
+			  other {{host} invites {guest} and # other people to her party.}
+		  }
+	  }
+	  male {
+		  {num_guests, plural, offset:1
+			  =0 {{host} does not give a party.}
+			  =1 {{host} invites {guest} to his party.}
+			  =2 {{host} invites {guest} and one other person to his party.}
+			  other {{host} invites {guest} and # other people to his party.}
+		  }
+	  }
+	  other {
+		  {num_guests, plural, offset:1
+			  =0 {{host} does not give a party.}
+			  =1 {{host} invites {guest} to their party.}
+			  =2 {{host} invites {guest} and one other person to their party.}
+			  other {{host} invites {guest} and # other people to their party.}
+		  }
+	  }
+  }
+  `</span>, {
+  <span class="hljs-string">"gender_of_host"</span>: <span class="hljs-string">"male"</span>,
+  <span class="hljs-string">"num_guests"</span>: <span class="hljs-number">3</span>,
+  <span class="hljs-string">"host"</span>: <span class="hljs-string">"Lucifer"</span>,
+  <span class="hljs-string">"guest"</span>: <span class="hljs-string">"John Constantine"</span>
+}];
+  
+<span class="hljs-comment">// Renders: `</span>
+  
+		  Lucifer invites John Constantine and <span class="hljs-number">2</span> other people to his party.
+	  
+  <span class="hljs-string">`
+</span></code></pre>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th align="right">ops/sec</th>
+<th>MoE</th>
+<th>Runs sampled</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@onigoetz/messageformat (@phensley/plurals)</td>
+<td align="right">91,784</td>
+<td>± 0.56%</td>
+<td>97</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (memoized)</td>
+<td align="right">92,364</td>
+<td>± 1.41%</td>
+<td>97</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat</td>
+<td align="right">90,122</td>
+<td>± 1.20%</td>
+<td>94</td>
+</tr>
+<tr>
+<td>@phensley/messageformat</td>
+<td align="right">50,998</td>
+<td>± 1.19%</td>
+<td>95</td>
+</tr>
+<tr>
+<td>@ffz/icu-msgparser</td>
+<td align="right">35,812</td>
+<td>± 1.15%</td>
+<td>94</td>
+</tr>
+<tr>
+<td>@messageformat/core</td>
+<td align="right">29,900</td>
+<td>± 0.16%</td>
+<td>100</td>
+</tr>
+<tr>
+<td>format-message-parse</td>
+<td align="right">16,528</td>
+<td>± 3.61%</td>
+<td>94</td>
+</tr>
+<tr>
+<td>intl-messageformat</td>
+<td align="right">16,098</td>
+<td>± 2.28%</td>
+<td>90</td>
+</tr>
+</tbody>
+</table>
     </div>
 
         <nav>
