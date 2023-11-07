@@ -7,14 +7,15 @@ const __dirname = dirname(__filename);
 
 let bundler = new Parcel({
   entries: [
+    "src/eo-locale-core.js",
     "src/ffz-icu-msgparser.js",
-    "src/onigoetz-messageformat.mjs",
-    "src/onigoetz-messageformat-memoized.js",
-    "src/onigoetz-messageformat-phensley-plurals.mjs",
-    "src/intl-messageformat.js",
-    "src/messageformat.js",
-    "src/phensley-messageformat.js",
     "src/format-message.js",
+    "src/intl-messageformat.js",
+    "src/messageformat-core.js",
+    "src/onigoetz-messageformat.mjs",
+    "src/onigoetz-messageformat-intl.mjs",
+    "src/onigoetz-messageformat-phensley-plurals.mjs",
+    "src/phensley-messageformat.js",
   ],
   defaultConfig: "@parcel/config-default",
   defaultTargetOptions: {

@@ -127,6 +127,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eo-locale/core@npm:1.7.2":
+  version: 1.7.2
+  resolution: "@eo-locale/core@npm:1.7.2"
+  checksum: 9cd8c3f5524dbd2a1a125d0935601b0d8371e082597472f4a30895249b7baeed159c19a2d1c7c9d8bf9677f0e0f58c0cb5faf546be7a96ee45cc67c6a2f29714
+  languageName: node
+  linkType: hard
+
 "@ffz/icu-msgparser@npm:2.0.0":
   version: 2.0.0
   resolution: "@ffz/icu-msgparser@npm:2.0.0"
@@ -141,15 +148,6 @@ __metadata:
     "@formatjs/intl-localematcher": "npm:0.4.2"
     tslib: "npm:^2.4.0"
   checksum: 7086962b6f6fd517188e9640e8439062e125e7bd60852ae91ceadb259fceaa3f73f7403a77411a7c82b1ae60be4bf4b27f793acc4059214adc91b00682d880fe
-  languageName: node
-  linkType: hard
-
-"@formatjs/ecma402-abstract@npm:1.6.4":
-  version: 1.6.4
-  resolution: "@formatjs/ecma402-abstract@npm:1.6.4"
-  dependencies:
-    tslib: "npm:^2.1.0"
-  checksum: 92ae0f5f771b771e8dad695d0bc99397bd5ede2a0e374555e31a1e04b008c57c1b38c70e34d30fc4185f044fbcd03478046f7c79662556f3d7f8110db8259c3b
   languageName: node
   linkType: hard
 
@@ -618,6 +616,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@onigoetz/messageformat-benchmark@workspace:packages/benchmark-messageformat"
   dependencies:
+    "@eo-locale/core": "npm:1.7.2"
     "@ffz/icu-msgparser": "npm:2.0.0"
     "@messageformat/core": "npm:3.2.0"
     "@onigoetz/intl-formatters": "npm:0.1.0"
@@ -630,8 +629,6 @@ __metadata:
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
     intl-messageformat: "npm:10.5.4"
-    intl-messageformat-parser: "npm:6.4.4"
-    nano-memoize: "npm:3.0.14"
     speedscope: "npm:1.16.0"
   languageName: unknown
   linkType: soft
@@ -3162,16 +3159,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"intl-messageformat-parser@npm:6.4.4":
-  version: 6.4.4
-  resolution: "intl-messageformat-parser@npm:6.4.4"
-  dependencies:
-    "@formatjs/ecma402-abstract": "npm:1.6.4"
-    tslib: "npm:^2.1.0"
-  checksum: 88d833f81b4c8b736c9fed3ce5fb2b055b15e11750bcb97dfdb16b7103eb138f1d1f5f55efc3a6626ef179c9875d5659a9a814f36eb9e217605a9b00ca6939e6
-  languageName: node
-  linkType: hard
-
 "intl-messageformat@npm:10.5.4":
   version: 10.5.4
   resolution: "intl-messageformat@npm:10.5.4"
@@ -3957,13 +3944,6 @@ __metadata:
   bin:
     mustache: bin/mustache
   checksum: 1f8197e8a19e63645a786581d58c41df7853da26702dbc005193e2437c98ca49b255345c173d50c08fe4b4dbb363e53cb655ecc570791f8deb09887248dd34a2
-  languageName: node
-  linkType: hard
-
-"nano-memoize@npm:3.0.14":
-  version: 3.0.14
-  resolution: "nano-memoize@npm:3.0.14"
-  checksum: ef38d0f71ca5cfa954b8390919fe0bd8dabd431508ee6d845a6b5ebfc0ba073a7511581a4ac9b25430bc6368794061b4f65f6223fb017e8fed9ccd01044a1ea0
   languageName: node
   linkType: hard
 
@@ -4935,7 +4915,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.1.0, tslib@npm:^2.4.0, tslib@npm:^2.6.0":
+"tslib@npm:^2.4.0, tslib@npm:^2.6.0":
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: e03a8a4271152c8b26604ed45535954c0a45296e32445b4b87f8a5abdb2421f40b59b4ca437c4346af0f28179780d604094eb64546bee2019d903d01c6c19bdb

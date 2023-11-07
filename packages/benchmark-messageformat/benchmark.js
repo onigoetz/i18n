@@ -14,34 +14,35 @@ https://github.com/formatjs/formatjs/tree/master/packages/intl-messageformat-par
 
 const { register, runAll } = require("../../benchmark-utils.js");
 
+//register("@eo-locale/core", require("./dist/eo-locale-core.js"));
 register(
-  "@onigoetz/messageformat (memoized)",
-  require("./dist/onigoetz-messageformat-memoized.js")
-);
-register(
-  "@onigoetz/messageformat",
+  "@onigoetz/messageformat (+ @onigoetz/make-plural)",
   require("./dist/onigoetz-messageformat.js")
 );
 register(
-  "@onigoetz/messageformat (@phensley/plurals)",
+  "@onigoetz/messageformat (+ @phensley/plurals)",
   require("./dist/onigoetz-messageformat-phensley-plurals.js")
 );
+register(
+  "@onigoetz/messageformat (+ @onigoetz/intl)",
+  require("./dist/onigoetz-messageformat-intl.js")
+)
 register(
   "@phensley/messageformat",
   require("./dist/phensley-messageformat.js")
 );
-register("@ffz/icu-msgparser", require("./dist/ffz-icu-msgparser.js"));
+register("@ffz/icu-msgparser (+ custom renderer)", require("./dist/ffz-icu-msgparser.js"));
 register("format-message-parse", require("./dist/format-message.js"));
 register("intl-messageformat", require("./dist/intl-messageformat.js"));
-register("@messageformat/core", require("./dist/messageformat.js"));
+register("@messageformat/core", require("./dist/messageformat-core.js"));
 
 runAll(
   { name: "Simple String", args: [`Hello, world!`, {}] },
   { name: "With one variable", args: [`Hello, {name}!`, { name: "John" }] },
   {
-    name: "With number formatting and plurals",
+    name: "With plurals",
     args: [
-      `Yo, {firstName} {lastName} has {numBooks, number, integer} {numBooks, plural, one {book} other {books}}.`,
+      `Yo, {firstName} {lastName} has {numBooks} {numBooks, plural, one {book} other {books}}.`,
       {
         firstName: "John",
         lastName: "Constantine",

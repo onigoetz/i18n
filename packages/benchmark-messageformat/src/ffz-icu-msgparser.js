@@ -119,16 +119,8 @@ const pluralRules = {
   },
 };
 
-const pluralMemory = {};
-
 function pluralGenerator(locale, type) {
-  const key = `${locale}-${type}`;
-
-  if (!pluralMemory.hasOwnProperty(key)) {
-    pluralMemory[key] = makePlural(pluralRules[`plurals-type-${type}`][locale]);
-  }
-
-  return pluralMemory[key];
+  return makePlural(pluralRules[`plurals-type-${type}`][locale]);
 }
 
 const parser = new Parser();

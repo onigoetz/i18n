@@ -11,28 +11,35 @@ As a final word, I made this comparison purely for fun and to learn a thing or t
 
 ## Libraries size
 
-Sources can be found in `src`, measure taken on 07/11/2023 With latest available versions
+Sources can be found in `src`, measure taken on 07/11/2023 with latest available versions
 
-| Npm Package                        | Version | Size | Comment     |
-| ---------------------------------- | ------- | ---- | ----------- |
-| @ffz/icu-msgparser                 | 2.0.0   | 13K  |             |
-| @onigoetz/messageformat            | 0.1.0   | 16K  |             |
-| @onigoetz/messageformat (memoized) | 0.1.0   | 23K  |             |
-| format-message-parse               | 6.2.4   | 28K  | Uses peg.js |
-| @onigoetz/messageformat (@phensley/plurals) | 0.1.0   | 62K  |             |
-| intl-messageformat                 | 10.5.4  | 71K  | Uses peg.js |
-| @phensley/messageformat            | 1.2.6   | 81K  |             |
-| @messageformat/core                | 3.2.0   | 96K  | Uses peg.js |
+| Npm Package                                       | Version | Size | Comment     |
+| ------------------------------------------------- | ------- | ---- | ----------- |
+| @ffz/icu-msgparser (+ custom renderer)            | 2.0.0   | 13K  |             |
+| @onigoetz/messageformat (+ @onigoetz/intl)        | 0.1.0   | 17K  |             |
+| @onigoetz/messageformat (+ @onigoetz/make-plural) | 0.1.0   | 20K  |             |
+| format-message-parse                              | 6.2.4   | 28K  | Uses peg.js |
+| @onigoetz/messageformat (+ @phensley/plurals)     | 0.1.0   | 62K  |             |
+| intl-messageformat                                | 10.5.4  | 71K  | Uses peg.js |
+| @phensley/messageformat                           | 1.7.3   | 81K  |             |
+| @messageformat/core                               | 3.2.0   | 96K  | Uses peg.js |
 
-`@onigoetz/messageformat` is originally a fork of `@ffz/icu-msgparser` but it contained no renderer. So I put an early version of my own renderer in for comparison purposes.
-
-> Special mention for `@eo-locale/core` Which provides a very small package,
-> however it provides no package that runs on Node.js 10 and crashes on our test strings.
+__Notes:__
+- `@ffz/icu-msgparser` is only a parser, I added a renderer to it but did not add any number/date formatter (hence the comparatively small size).
+- `@eo-locale/core` was excluded from this list as it crashes on our valid test strings. It would be a strong contender as it has a very small footprint (6.7KB).
 
 ## Benchmark
 
-Since each application has different translation needs, I tried to make a somewhat representative representation of what translation strings look like.
-From the simple string to the complex nested plural in a select, there are four different tests.
+To make the benchmark compareable I tried to apply the same rules to all libraries.
+Each libraries must follow the same rules:
+- Parse and format a string.
+- Properly handles plurals.
+- Do not perform any number or date formatting since not all libraries support them and it would give a serious boost to those.
+- Give the same output as all other implementations.
+- Compiled with the same tools and options.
+- Use an identical method signature for all libraries.
+
+The benchmark is applied to 4 different strings, which for the simple cases should be fairly common in applications and more advanced case are probably not as common but should still be performant.
 
 > Benchmarks run on
 > - Node.js v20.9.0
@@ -48,14 +55,14 @@ const input = [`Hello, world!`, {}];
 
 | Name | ops/sec | MoE | Runs sampled |
 | ---- | -------:| --- | ----------- |
-| __@onigoetz/messageformat (@phensley/plurals)__ | 8,821,744 | ± 0.51% | 99 |
-| @onigoetz/messageformat | 8,723,468 | ± 0.53% | 95 |
-| format-message-parse | 7,816,226 | ± 0.26% | 99 |
-| @onigoetz/messageformat (memoized) | 7,770,656 | ± 0.41% | 99 |
-| @ffz/icu-msgparser | 5,762,734 | ± 0.17% | 97 |
-| @phensley/messageformat | 5,489,417 | ± 0.44% | 99 |
-| @messageformat/core | 1,192,907 | ± 0.14% | 98 |
-| intl-messageformat | 224,986 | ± 1.77% | 86 |
+| __@onigoetz/messageformat (+ @onigoetz/intl)__ | 8,858,921 | ± 0.37% | 96 |
+| @onigoetz/messageformat (+ @phensley/plurals) | 8,771,570 | ± 0.27% | 97 |
+| @onigoetz/messageformat (+ @onigoetz/make-plural) | 7,731,610 | ± 0.26% | 99 |
+| format-message-parse | 7,755,763 | ± 0.71% | 93 |
+| @ffz/icu-msgparser (+ custom renderer) | 5,634,717 | ± 0.83% | 100 |
+| @phensley/messageformat | 5,411,679 | ± 0.09% | 98 |
+| @messageformat/core | 1,201,810 | ± 0.13% | 99 |
+| intl-messageformat | 227,801 | ± 1.13% | 90 |
 
 ## With one variable
 ```javascript
@@ -68,18 +75,18 @@ const input = [`Hello, {name}!`, {
 
 | Name | ops/sec | MoE | Runs sampled |
 | ---- | -------:| --- | ----------- |
-| @onigoetz/messageformat | 4,217,050 | ± 0.43% | 100 |
-| @onigoetz/messageformat (@phensley/plurals) | 4,211,371 | ± 0.35% | 94 |
-| @onigoetz/messageformat (memoized) | 4,063,960 | ± 0.08% | 103 |
-| format-message-parse | 3,485,649 | ± 0.15% | 99 |
-| @ffz/icu-msgparser | 3,381,008 | ± 0.10% | 100 |
-| @phensley/messageformat | 2,789,067 | ± 0.18% | 101 |
-| @messageformat/core | 710,608 | ± 0.09% | 95 |
-| intl-messageformat | 199,823 | ± 1.04% | 93 |
+| __@onigoetz/messageformat (+ @phensley/plurals)__ | 4,235,594 | ± 0.11% | 99 |
+| @onigoetz/messageformat (+ @onigoetz/intl) | 4,218,973 | ± 0.18% | 99 |
+| @onigoetz/messageformat (+ @onigoetz/make-plural) | 4,050,269 | ± 0.13% | 99 |
+| format-message-parse | 3,483,847 | ± 0.15% | 100 |
+| @ffz/icu-msgparser (+ custom renderer) | 3,310,961 | ± 3.14% | 94 |
+| @phensley/messageformat | 2,753,537 | ± 0.27% | 98 |
+| @messageformat/core | 697,507 | ± 0.17% | 98 |
+| intl-messageformat | 204,849 | ± 0.89% | 96 |
 
-## With number formatting and plurals
+## With plurals
 ```javascript
-const input = [`Yo, {firstName} {lastName} has {numBooks, number, integer} {numBooks, plural, one {book} other {books}}.`, {
+const input = [`Yo, {firstName} {lastName} has {numBooks} {numBooks, plural, one {book} other {books}}.`, {
   "firstName": "John",
   "lastName": "Constantine",
   "numBooks": 5
@@ -90,14 +97,14 @@ const input = [`Yo, {firstName} {lastName} has {numBooks, number, integer} {numB
 
 | Name | ops/sec | MoE | Runs sampled |
 | ---- | -------:| --- | ----------- |
-| __@phensley/messageformat__ | 434,546 | ± 0.07% | 100 |
-| @messageformat/core | 130,397 | ± 0.09% | 96 |
-| @ffz/icu-msgparser | 70,374 | ± 1.53% | 98 |
-| @onigoetz/messageformat | 56,143 | ± 1.39% | 96 |
-| @onigoetz/messageformat (@phensley/plurals) | 55,681 | ± 1.26% | 98 |
-| format-message-parse | 38,069 | ± 2.86% | 96 |
-| intl-messageformat | 26,878 | ± 3.67% | 90 |
-| @onigoetz/messageformat (memoized) | 7,276 | ± 22.89% | 20 |
+| __@onigoetz/messageformat (+ @phensley/plurals)__ | 591,221 | ± 0.15% | 100 |
+| @onigoetz/messageformat (+ @onigoetz/intl) | 529,547 | ± 0.09% | 98 |
+| @phensley/messageformat | 519,950 | ± 0.08% | 97 |
+| @messageformat/core | 170,877 | ± 0.10% | 95 |
+| @onigoetz/messageformat (+ @onigoetz/make-plural) | 139,906 | ± 0.08% | 98 |
+| @ffz/icu-msgparser (+ custom renderer) | 129,603 | ± 0.16% | 100 |
+| format-message-parse | 82,489 | ± 0.16% | 97 |
+| intl-messageformat | 47,011 | ± 1.86% | 85 |
 
 ## With select and plurals
 ```javascript
@@ -144,11 +151,11 @@ const input = [`
 
 | Name | ops/sec | MoE | Runs sampled |
 | ---- | -------:| --- | ----------- |
-| @onigoetz/messageformat (@phensley/plurals) | 91,784 | ± 0.56% | 97 |
-| @onigoetz/messageformat (memoized) | 92,364 | ± 1.41% | 97 |
-| @onigoetz/messageformat | 90,122 | ± 1.20% | 94 |
-| @phensley/messageformat | 50,998 | ± 1.19% | 95 |
-| @ffz/icu-msgparser | 35,812 | ± 1.15% | 94 |
-| @messageformat/core | 29,900 | ± 0.16% | 100 |
-| format-message-parse | 16,528 | ± 3.61% | 94 |
-| intl-messageformat | 16,098 | ± 2.28% | 90 |
+| __@onigoetz/messageformat (+ @phensley/plurals)__ | 93,573 | ± 0.14% | 97 |
+| @onigoetz/messageformat (+ @onigoetz/intl) | 92,139 | ± 0.26% | 97 |
+| @onigoetz/messageformat (+ @onigoetz/make-plural) | 61,462 | ± 0.08% | 98 |
+| @phensley/messageformat | 52,596 | ± 0.07% | 101 |
+| @messageformat/core | 30,348 | ± 0.07% | 99 |
+| @ffz/icu-msgparser (+ custom renderer) | 29,229 | ± 1.05% | 99 |
+| format-message-parse | 16,911 | ± 2.77% | 96 |
+| intl-messageformat | 16,581 | ± 1.08% | 92 |

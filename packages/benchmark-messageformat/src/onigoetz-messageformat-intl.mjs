@@ -1,13 +1,8 @@
-import { dateFormatter, numberFormatter } from "@onigoetz/intl-formatters";
+import { dateFormatter, numberFormatter, pluralGenerator } from "@onigoetz/intl-formatters";
 import { createRenderer, parse } from "@onigoetz/messageformat";
-import { pluralRules } from "@phensley/plurals";
 
 function pluralFactory(cldr, type) {
-  const rules = pluralRules.get(cldr.locale);
-
-  // Creating a new function everytime comes with a performance cost
-  // but just returning `rules[type]` fails
-  return (val) => rules[type](val);
+  return pluralGenerator(cldr.locale, {type});
 }
 
 const renderer = createRenderer(
