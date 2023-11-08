@@ -165,10 +165,18 @@ I tried to compare apples with apples as much as possible, but some libraries do
 <td>96K</td>
 <td>Uses peg.js</td>
 </tr>
+<tr>
+<td>globalize</td>
+<td>1.7.0</td>
+<td>208K</td>
+<td>Uses peg.js</td>
+</tr>
 </tbody>
 </table>
 <p><strong>Notes:</strong></p>
 <ul>
+<li>
+<code>globalize</code> comes with a bundled version of <code>messageformat</code> 0.3.0 and <code>make-plural</code> 3.0.0. Also, it requires ICU data to know how to format numbers, currencies, timezones and more. It also comes with a compiler to remove the parts that aren’t required, but for my use case I consider that we can’t know in advance what is going to be formatted.</li>
 <li>
 <code>@ffz/icu-msgparser</code> is only a parser, I added a renderer to it but did not add any number/date formatter (hence the comparatively small size).</li>
 <li>
@@ -191,7 +199,7 @@ Each libraries must follow the same rules:</p>
 <ul>
 <li>Node.js v20.9.0</li>
 <li>Apple M2 CPU</li>
-<li>November 7, 2023</li>
+<li>November 8, 2023</li>
 </ul>
 </blockquote>
 <h2><a id="simple-string" href="#simple-string" class="Permalink" aria-hidden="true" title="Permalink">#</a>Simple String</h2>
@@ -211,51 +219,57 @@ Each libraries must follow the same rules:</p>
 <tbody>
 <tr>
 <td><strong>@onigoetz/messageformat (+ @onigoetz/intl)</strong></td>
-<td align="right">8,858,921</td>
-<td>± 0.37%</td>
-<td>96</td>
+<td align="right">8,931,306</td>
+<td>± 0.21%</td>
+<td>101</td>
 </tr>
 <tr>
 <td>@onigoetz/messageformat (+ @phensley/plurals)</td>
-<td align="right">8,771,570</td>
-<td>± 0.27%</td>
-<td>97</td>
-</tr>
-<tr>
-<td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
-<td align="right">7,731,610</td>
-<td>± 0.26%</td>
-<td>99</td>
-</tr>
-<tr>
-<td>format-message-parse</td>
-<td align="right">7,755,763</td>
-<td>± 0.71%</td>
-<td>93</td>
-</tr>
-<tr>
-<td>@ffz/icu-msgparser (+ custom renderer)</td>
-<td align="right">5,634,717</td>
-<td>± 0.83%</td>
+<td align="right">8,864,387</td>
+<td>± 0.18%</td>
 <td>100</td>
 </tr>
 <tr>
+<td>format-message-parse</td>
+<td align="right">7,802,495</td>
+<td>± 0.27%</td>
+<td>99</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
+<td align="right">7,794,521</td>
+<td>± 0.22%</td>
+<td>100</td>
+</tr>
+<tr>
+<td>@ffz/icu-msgparser (+ custom renderer)</td>
+<td align="right">5,656,945</td>
+<td>± 0.30%</td>
+<td>99</td>
+</tr>
+<tr>
 <td>@phensley/messageformat</td>
-<td align="right">5,411,679</td>
-<td>± 0.09%</td>
+<td align="right">5,560,901</td>
+<td>± 0.59%</td>
 <td>98</td>
 </tr>
 <tr>
 <td>@messageformat/core</td>
-<td align="right">1,201,810</td>
-<td>± 0.13%</td>
+<td align="right">1,183,394</td>
+<td>± 0.40%</td>
 <td>99</td>
 </tr>
 <tr>
 <td>intl-messageformat</td>
-<td align="right">227,801</td>
-<td>± 1.13%</td>
-<td>90</td>
+<td align="right">228,133</td>
+<td>± 0.91%</td>
+<td>91</td>
+</tr>
+<tr>
+<td>globalize</td>
+<td align="right">37,145</td>
+<td>± 0.40%</td>
+<td>94</td>
 </tr>
 </tbody>
 </table>
@@ -278,51 +292,57 @@ Each libraries must follow the same rules:</p>
 <tbody>
 <tr>
 <td><strong>@onigoetz/messageformat (+ @phensley/plurals)</strong></td>
-<td align="right">4,235,594</td>
-<td>± 0.11%</td>
+<td align="right">4,181,899</td>
+<td>± 0.28%</td>
 <td>99</td>
 </tr>
 <tr>
 <td>@onigoetz/messageformat (+ @onigoetz/intl)</td>
-<td align="right">4,218,973</td>
-<td>± 0.18%</td>
-<td>99</td>
+<td align="right">4,113,443</td>
+<td>± 1.15%</td>
+<td>91</td>
 </tr>
 <tr>
 <td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
-<td align="right">4,050,269</td>
-<td>± 0.13%</td>
-<td>99</td>
+<td align="right">3,874,205</td>
+<td>± 2.09%</td>
+<td>89</td>
 </tr>
 <tr>
 <td>format-message-parse</td>
-<td align="right">3,483,847</td>
-<td>± 0.15%</td>
+<td align="right">3,687,949</td>
+<td>± 0.29%</td>
 <td>100</td>
 </tr>
 <tr>
 <td>@ffz/icu-msgparser (+ custom renderer)</td>
-<td align="right">3,310,961</td>
-<td>± 3.14%</td>
-<td>94</td>
+<td align="right">3,276,239</td>
+<td>± 0.61%</td>
+<td>96</td>
 </tr>
 <tr>
 <td>@phensley/messageformat</td>
-<td align="right">2,753,537</td>
-<td>± 0.27%</td>
-<td>98</td>
+<td align="right">2,837,812</td>
+<td>± 0.25%</td>
+<td>101</td>
 </tr>
 <tr>
 <td>@messageformat/core</td>
-<td align="right">697,507</td>
-<td>± 0.17%</td>
-<td>98</td>
+<td align="right">707,087</td>
+<td>± 0.22%</td>
+<td>91</td>
 </tr>
 <tr>
 <td>intl-messageformat</td>
-<td align="right">204,849</td>
-<td>± 0.89%</td>
-<td>96</td>
+<td align="right">200,359</td>
+<td>± 1.01%</td>
+<td>93</td>
+</tr>
+<tr>
+<td>globalize</td>
+<td align="right">36,318</td>
+<td>± 0.27%</td>
+<td>95</td>
 </tr>
 </tbody>
 </table>
@@ -347,51 +367,57 @@ Each libraries must follow the same rules:</p>
 <tbody>
 <tr>
 <td><strong>@onigoetz/messageformat (+ @phensley/plurals)</strong></td>
-<td align="right">591,221</td>
-<td>± 0.15%</td>
-<td>100</td>
-</tr>
-<tr>
-<td>@onigoetz/messageformat (+ @onigoetz/intl)</td>
-<td align="right">529,547</td>
-<td>± 0.09%</td>
-<td>98</td>
-</tr>
-<tr>
-<td>@phensley/messageformat</td>
-<td align="right">519,950</td>
+<td align="right">590,769</td>
 <td>± 0.08%</td>
-<td>97</td>
-</tr>
-<tr>
-<td>@messageformat/core</td>
-<td align="right">170,877</td>
-<td>± 0.10%</td>
 <td>95</td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
-<td align="right">139,906</td>
-<td>± 0.08%</td>
-<td>98</td>
-</tr>
-<tr>
-<td>@ffz/icu-msgparser (+ custom renderer)</td>
-<td align="right">129,603</td>
-<td>± 0.16%</td>
+<td>@onigoetz/messageformat (+ @onigoetz/intl)</td>
+<td align="right">523,642</td>
+<td>± 0.26%</td>
 <td>100</td>
 </tr>
 <tr>
+<td>@phensley/messageformat</td>
+<td align="right">520,757</td>
+<td>± 0.14%</td>
+<td>100</td>
+</tr>
+<tr>
+<td>@messageformat/core</td>
+<td align="right">170,850</td>
+<td>± 0.13%</td>
+<td>93</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
+<td align="right">139,840</td>
+<td>± 0.14%</td>
+<td>96</td>
+</tr>
+<tr>
+<td>@ffz/icu-msgparser (+ custom renderer)</td>
+<td align="right">130,186</td>
+<td>± 0.08%</td>
+<td>99</td>
+</tr>
+<tr>
 <td>format-message-parse</td>
-<td align="right">82,489</td>
-<td>± 0.16%</td>
-<td>97</td>
+<td align="right">81,207</td>
+<td>± 0.19%</td>
+<td>99</td>
 </tr>
 <tr>
 <td>intl-messageformat</td>
-<td align="right">47,011</td>
-<td>± 1.86%</td>
-<td>85</td>
+<td align="right">47,014</td>
+<td>± 2.04%</td>
+<td>88</td>
+</tr>
+<tr>
+<td>globalize</td>
+<td align="right">27,173</td>
+<td>± 0.64%</td>
+<td>95</td>
 </tr>
 </tbody>
 </table>
@@ -448,51 +474,57 @@ Each libraries must follow the same rules:</p>
 <tbody>
 <tr>
 <td><strong>@onigoetz/messageformat (+ @phensley/plurals)</strong></td>
-<td align="right">93,573</td>
-<td>± 0.14%</td>
-<td>97</td>
+<td align="right">92,894</td>
+<td>± 0.07%</td>
+<td>100</td>
 </tr>
 <tr>
 <td>@onigoetz/messageformat (+ @onigoetz/intl)</td>
-<td align="right">92,139</td>
-<td>± 0.26%</td>
-<td>97</td>
+<td align="right">90,918</td>
+<td>± 0.17%</td>
+<td>100</td>
 </tr>
 <tr>
 <td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
-<td align="right">61,462</td>
-<td>± 0.08%</td>
-<td>98</td>
+<td align="right">61,149</td>
+<td>± 0.17%</td>
+<td>99</td>
 </tr>
 <tr>
 <td>@phensley/messageformat</td>
-<td align="right">52,596</td>
-<td>± 0.07%</td>
-<td>101</td>
+<td align="right">52,854</td>
+<td>± 0.06%</td>
+<td>100</td>
 </tr>
 <tr>
 <td>@messageformat/core</td>
-<td align="right">30,348</td>
-<td>± 0.07%</td>
-<td>99</td>
+<td align="right">30,248</td>
+<td>± 0.25%</td>
+<td>95</td>
 </tr>
 <tr>
 <td>@ffz/icu-msgparser (+ custom renderer)</td>
-<td align="right">29,229</td>
-<td>± 1.05%</td>
+<td align="right">29,312</td>
+<td>± 0.79%</td>
 <td>99</td>
 </tr>
 <tr>
+<td>intl-messageformat</td>
+<td align="right">16,569</td>
+<td>± 0.96%</td>
+<td>94</td>
+</tr>
+<tr>
 <td>format-message-parse</td>
-<td align="right">16,911</td>
-<td>± 2.77%</td>
+<td align="right">16,799</td>
+<td>± 2.54%</td>
 <td>96</td>
 </tr>
 <tr>
-<td>intl-messageformat</td>
-<td align="right">16,581</td>
-<td>± 1.08%</td>
-<td>92</td>
+<td>globalize</td>
+<td align="right">8,764</td>
+<td>± 0.18%</td>
+<td>100</td>
 </tr>
 </tbody>
 </table>
