@@ -1,0 +1,3170 @@
+{
+    "supplemental": {
+      "version": { "_unicodeVersion": "12.1.0", "_cldrVersion": "36" },
+      "currencyData": {
+        "fractions": {
+          "ADP": { "_rounding": "0", "_digits": "0" },
+          "AFN": { "_rounding": "0", "_digits": "0" },
+          "ALL": { "_rounding": "0", "_digits": "0" },
+          "AMD": {
+            "_rounding": "0",
+            "_digits": "2",
+            "_cashRounding": "0",
+            "_cashDigits": "0"
+          },
+          "BHD": { "_rounding": "0", "_digits": "3" },
+          "BIF": { "_rounding": "0", "_digits": "0" },
+          "BYN": { "_rounding": "0", "_digits": "2" },
+          "BYR": { "_rounding": "0", "_digits": "0" },
+          "CAD": { "_rounding": "0", "_digits": "2", "_cashRounding": "5" },
+          "CHF": { "_rounding": "0", "_digits": "2", "_cashRounding": "5" },
+          "CLF": { "_rounding": "0", "_digits": "4" },
+          "CLP": { "_rounding": "0", "_digits": "0" },
+          "COP": {
+            "_rounding": "0",
+            "_digits": "2",
+            "_cashRounding": "0",
+            "_cashDigits": "0"
+          },
+          "CRC": {
+            "_rounding": "0",
+            "_digits": "2",
+            "_cashRounding": "0",
+            "_cashDigits": "0"
+          },
+          "CZK": {
+            "_rounding": "0",
+            "_digits": "2",
+            "_cashRounding": "0",
+            "_cashDigits": "0"
+          },
+          "DEFAULT": { "_rounding": "0", "_digits": "2" },
+          "DJF": { "_rounding": "0", "_digits": "0" },
+          "DKK": { "_rounding": "0", "_digits": "2", "_cashRounding": "50" },
+          "ESP": { "_rounding": "0", "_digits": "0" },
+          "GNF": { "_rounding": "0", "_digits": "0" },
+          "GYD": {
+            "_rounding": "0",
+            "_digits": "2",
+            "_cashRounding": "0",
+            "_cashDigits": "0"
+          },
+          "HUF": {
+            "_rounding": "0",
+            "_digits": "2",
+            "_cashRounding": "0",
+            "_cashDigits": "0"
+          },
+          "IDR": {
+            "_rounding": "0",
+            "_digits": "2",
+            "_cashRounding": "0",
+            "_cashDigits": "0"
+          },
+          "IQD": { "_rounding": "0", "_digits": "0" },
+          "IRR": { "_rounding": "0", "_digits": "0" },
+          "ISK": { "_rounding": "0", "_digits": "0" },
+          "ITL": { "_rounding": "0", "_digits": "0" },
+          "JOD": { "_rounding": "0", "_digits": "3" },
+          "JPY": { "_rounding": "0", "_digits": "0" },
+          "KMF": { "_rounding": "0", "_digits": "0" },
+          "KPW": { "_rounding": "0", "_digits": "0" },
+          "KRW": { "_rounding": "0", "_digits": "0" },
+          "KWD": { "_rounding": "0", "_digits": "3" },
+          "LAK": { "_rounding": "0", "_digits": "0" },
+          "LBP": { "_rounding": "0", "_digits": "0" },
+          "LUF": { "_rounding": "0", "_digits": "0" },
+          "LYD": { "_rounding": "0", "_digits": "3" },
+          "MGA": { "_rounding": "0", "_digits": "0" },
+          "MGF": { "_rounding": "0", "_digits": "0" },
+          "MMK": { "_rounding": "0", "_digits": "0" },
+          "MNT": {
+            "_rounding": "0",
+            "_digits": "2",
+            "_cashRounding": "0",
+            "_cashDigits": "0"
+          },
+          "MRO": { "_rounding": "0", "_digits": "0" },
+          "MUR": {
+            "_rounding": "0",
+            "_digits": "2",
+            "_cashRounding": "0",
+            "_cashDigits": "0"
+          },
+          "NOK": {
+            "_rounding": "0",
+            "_digits": "2",
+            "_cashRounding": "0",
+            "_cashDigits": "0"
+          },
+          "OMR": { "_rounding": "0", "_digits": "3" },
+          "PKR": {
+            "_rounding": "0",
+            "_digits": "2",
+            "_cashRounding": "0",
+            "_cashDigits": "0"
+          },
+          "PYG": { "_rounding": "0", "_digits": "0" },
+          "RSD": { "_rounding": "0", "_digits": "0" },
+          "RWF": { "_rounding": "0", "_digits": "0" },
+          "SEK": {
+            "_rounding": "0",
+            "_digits": "2",
+            "_cashRounding": "0",
+            "_cashDigits": "0"
+          },
+          "SLL": { "_rounding": "0", "_digits": "0" },
+          "SOS": { "_rounding": "0", "_digits": "0" },
+          "STD": { "_rounding": "0", "_digits": "0" },
+          "SYP": { "_rounding": "0", "_digits": "0" },
+          "TMM": { "_rounding": "0", "_digits": "0" },
+          "TND": { "_rounding": "0", "_digits": "3" },
+          "TRL": { "_rounding": "0", "_digits": "0" },
+          "TWD": {
+            "_rounding": "0",
+            "_digits": "2",
+            "_cashRounding": "0",
+            "_cashDigits": "0"
+          },
+          "TZS": {
+            "_rounding": "0",
+            "_digits": "2",
+            "_cashRounding": "0",
+            "_cashDigits": "0"
+          },
+          "UGX": { "_rounding": "0", "_digits": "0" },
+          "UYI": { "_rounding": "0", "_digits": "0" },
+          "UYW": { "_rounding": "0", "_digits": "4" },
+          "UZS": {
+            "_rounding": "0",
+            "_digits": "2",
+            "_cashRounding": "0",
+            "_cashDigits": "0"
+          },
+          "VEF": {
+            "_rounding": "0",
+            "_digits": "2",
+            "_cashRounding": "0",
+            "_cashDigits": "0"
+          },
+          "VND": { "_rounding": "0", "_digits": "0" },
+          "VUV": { "_rounding": "0", "_digits": "0" },
+          "XAF": { "_rounding": "0", "_digits": "0" },
+          "XOF": { "_rounding": "0", "_digits": "0" },
+          "XPF": { "_rounding": "0", "_digits": "0" },
+          "YER": { "_rounding": "0", "_digits": "0" },
+          "ZMK": { "_rounding": "0", "_digits": "0" },
+          "ZWD": { "_rounding": "0", "_digits": "0" }
+        }
+      },
+      "timeData": {
+        "AX": { "_allowed": "H", "_preferred": "H" },
+        "BQ": { "_allowed": "H", "_preferred": "H" },
+        "CP": { "_allowed": "H", "_preferred": "H" },
+        "CZ": { "_allowed": "H", "_preferred": "H" },
+        "DK": { "_allowed": "H", "_preferred": "H" },
+        "FI": { "_allowed": "H", "_preferred": "H" },
+        "ID": { "_allowed": "H", "_preferred": "H" },
+        "IS": { "_allowed": "H", "_preferred": "H" },
+        "ML": { "_allowed": "H", "_preferred": "H" },
+        "NE": { "_allowed": "H", "_preferred": "H" },
+        "RU": { "_allowed": "H", "_preferred": "H" },
+        "SE": { "_allowed": "H", "_preferred": "H" },
+        "SJ": { "_allowed": "H", "_preferred": "H" },
+        "SK": { "_allowed": "H", "_preferred": "H" },
+        "AS": { "_allowed": "h H", "_preferred": "h" },
+        "BT": { "_allowed": "h H", "_preferred": "h" },
+        "DJ": { "_allowed": "h H", "_preferred": "h" },
+        "ER": { "_allowed": "h H", "_preferred": "h" },
+        "GH": { "_allowed": "h H", "_preferred": "h" },
+        "IN": { "_allowed": "h H", "_preferred": "h" },
+        "LS": { "_allowed": "h H", "_preferred": "h" },
+        "PG": { "_allowed": "h H", "_preferred": "h" },
+        "PW": { "_allowed": "h H", "_preferred": "h" },
+        "SO": { "_allowed": "h H", "_preferred": "h" },
+        "TO": { "_allowed": "h H", "_preferred": "h" },
+        "VU": { "_allowed": "h H", "_preferred": "h" },
+        "WS": { "_allowed": "h H", "_preferred": "h" },
+        "001": { "_allowed": "H h", "_preferred": "H" },
+        "AL": { "_allowed": "h H hB", "_preferred": "h" },
+        "TD": { "_allowed": "h H hB", "_preferred": "h" },
+        "ca_ES": { "_allowed": "H h hB", "_preferred": "H" },
+        "CF": { "_allowed": "H h hB", "_preferred": "H" },
+        "CM": { "_allowed": "H h hB", "_preferred": "H" },
+        "fr_CA": { "_allowed": "H h hB", "_preferred": "H" },
+        "gl_ES": { "_allowed": "H h hB", "_preferred": "H" },
+        "it_CH": { "_allowed": "H h hB", "_preferred": "H" },
+        "it_IT": { "_allowed": "H h hB", "_preferred": "H" },
+        "LU": { "_allowed": "H h hB", "_preferred": "H" },
+        "NP": { "_allowed": "H h hB", "_preferred": "H" },
+        "PF": { "_allowed": "H h hB", "_preferred": "H" },
+        "SC": { "_allowed": "H h hB", "_preferred": "H" },
+        "SM": { "_allowed": "H h hB", "_preferred": "H" },
+        "SN": { "_allowed": "H h hB", "_preferred": "H" },
+        "TF": { "_allowed": "H h hB", "_preferred": "H" },
+        "VA": { "_allowed": "H h hB", "_preferred": "H" },
+        "CY": { "_allowed": "h H hb hB", "_preferred": "h" },
+        "GR": { "_allowed": "h H hb hB", "_preferred": "h" },
+        "CO": { "_allowed": "h H hB hb", "_preferred": "h" },
+        "DO": { "_allowed": "h H hB hb", "_preferred": "h" },
+        "KP": { "_allowed": "h H hB hb", "_preferred": "h" },
+        "KR": { "_allowed": "h H hB hb", "_preferred": "h" },
+        "NA": { "_allowed": "h H hB hb", "_preferred": "h" },
+        "PA": { "_allowed": "h H hB hb", "_preferred": "h" },
+        "PR": { "_allowed": "h H hB hb", "_preferred": "h" },
+        "VE": { "_allowed": "h H hB hb", "_preferred": "h" },
+        "AC": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "AI": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "BW": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "BZ": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "CC": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "CK": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "CX": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "DG": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "FK": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "GB": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "GG": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "GI": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "IE": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "IM": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "IO": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "JE": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "LT": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "MK": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "MN": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "MS": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "NF": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "NG": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "NR": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "NU": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "PN": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "SH": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "SX": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "TA": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "ZA": { "_allowed": "H h hb hB", "_preferred": "H" },
+        "af_ZA": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "AR": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "CL": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "CR": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "CU": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "EA": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "es_BO": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "es_BR": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "es_EC": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "es_ES": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "es_GQ": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "es_PE": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "GT": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "HN": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "IC": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "KG": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "KM": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "LK": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "MA": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "MX": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "NI": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "PY": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "SV": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "UY": { "_allowed": "H h hB hb", "_preferred": "H" },
+        "JP": { "_allowed": "H h K", "_preferred": "H" },
+        "AD": { "_allowed": "H hB", "_preferred": "H" },
+        "AM": { "_allowed": "H hB", "_preferred": "H" },
+        "AO": { "_allowed": "H hB", "_preferred": "H" },
+        "AT": { "_allowed": "H hB", "_preferred": "H" },
+        "AW": { "_allowed": "H hB", "_preferred": "H" },
+        "BE": { "_allowed": "H hB", "_preferred": "H" },
+        "BF": { "_allowed": "H hB", "_preferred": "H" },
+        "BJ": { "_allowed": "H hB", "_preferred": "H" },
+        "BL": { "_allowed": "H hB", "_preferred": "H" },
+        "BR": { "_allowed": "H hB", "_preferred": "H" },
+        "CG": { "_allowed": "H hB", "_preferred": "H" },
+        "CI": { "_allowed": "H hB", "_preferred": "H" },
+        "CV": { "_allowed": "H hB", "_preferred": "H" },
+        "DE": { "_allowed": "H hB", "_preferred": "H" },
+        "EE": { "_allowed": "H hB", "_preferred": "H" },
+        "FR": { "_allowed": "H hB", "_preferred": "H" },
+        "GA": { "_allowed": "H hB", "_preferred": "H" },
+        "GF": { "_allowed": "H hB", "_preferred": "H" },
+        "GN": { "_allowed": "H hB", "_preferred": "H" },
+        "GP": { "_allowed": "H hB", "_preferred": "H" },
+        "GW": { "_allowed": "H hB", "_preferred": "H" },
+        "HR": { "_allowed": "H hB", "_preferred": "H" },
+        "IL": { "_allowed": "H hB", "_preferred": "H" },
+        "IT": { "_allowed": "H hB", "_preferred": "H" },
+        "KZ": { "_allowed": "H hB", "_preferred": "H" },
+        "MC": { "_allowed": "H hB", "_preferred": "H" },
+        "MD": { "_allowed": "H hB", "_preferred": "H" },
+        "MF": { "_allowed": "H hB", "_preferred": "H" },
+        "MQ": { "_allowed": "H hB", "_preferred": "H" },
+        "MZ": { "_allowed": "H hB", "_preferred": "H" },
+        "NC": { "_allowed": "H hB", "_preferred": "H" },
+        "NL": { "_allowed": "H hB", "_preferred": "H" },
+        "PM": { "_allowed": "H hB", "_preferred": "H" },
+        "PT": { "_allowed": "H hB", "_preferred": "H" },
+        "RE": { "_allowed": "H hB", "_preferred": "H" },
+        "RO": { "_allowed": "H hB", "_preferred": "H" },
+        "SI": { "_allowed": "H hB", "_preferred": "H" },
+        "SR": { "_allowed": "H hB", "_preferred": "H" },
+        "ST": { "_allowed": "H hB", "_preferred": "H" },
+        "TG": { "_allowed": "H hB", "_preferred": "H" },
+        "TR": { "_allowed": "H hB", "_preferred": "H" },
+        "WF": { "_allowed": "H hB", "_preferred": "H" },
+        "YT": { "_allowed": "H hB", "_preferred": "H" },
+        "BD": { "_allowed": "h hB H", "_preferred": "h" },
+        "PK": { "_allowed": "h hB H", "_preferred": "h" },
+        "AZ": { "_allowed": "H hB h", "_preferred": "H" },
+        "BA": { "_allowed": "H hB h", "_preferred": "H" },
+        "BG": { "_allowed": "H hB h", "_preferred": "H" },
+        "CH": { "_allowed": "H hB h", "_preferred": "H" },
+        "GE": { "_allowed": "H hB h", "_preferred": "H" },
+        "LI": { "_allowed": "H hB h", "_preferred": "H" },
+        "ME": { "_allowed": "H hB h", "_preferred": "H" },
+        "RS": { "_allowed": "H hB h", "_preferred": "H" },
+        "UA": { "_allowed": "H hB h", "_preferred": "H" },
+        "UZ": { "_allowed": "H hB h", "_preferred": "H" },
+        "XK": { "_allowed": "H hB h", "_preferred": "H" },
+        "AG": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "AU": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "BB": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "BM": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "BS": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "CA": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "DM": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "en_001": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "FJ": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "FM": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "GD": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "GM": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "GU": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "GY": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "JM": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "KI": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "KN": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "KY": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "LC": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "LR": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "MH": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "MP": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "MW": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "NZ": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "SB": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "SG": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "SL": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "SS": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "SZ": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "TC": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "TT": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "UM": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "US": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "VC": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "VG": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "VI": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "ZM": { "_allowed": "h hb H hB", "_preferred": "h" },
+        "BO": { "_allowed": "H hB h hb", "_preferred": "H" },
+        "EC": { "_allowed": "H hB h hb", "_preferred": "H" },
+        "ES": { "_allowed": "H hB h hb", "_preferred": "H" },
+        "GQ": { "_allowed": "H hB h hb", "_preferred": "H" },
+        "PE": { "_allowed": "H hB h hb", "_preferred": "H" },
+        "AE": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "ar_001": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "BH": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "DZ": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "EG": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "EH": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "IQ": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "JO": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "KW": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "LB": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "LY": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "MR": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "OM": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "PH": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "PS": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "QA": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "SA": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "SD": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "SY": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "TN": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "YE": { "_allowed": "h hB hb H", "_preferred": "h" },
+        "AF": { "_allowed": "H hb hB h", "_preferred": "H" },
+        "LA": { "_allowed": "H hb hB h", "_preferred": "H" },
+        "LV": { "_allowed": "H hB hb h", "_preferred": "H" },
+        "TL": { "_allowed": "H hB hb h", "_preferred": "H" },
+        "zu_ZA": { "_allowed": "H hB hb h", "_preferred": "H" },
+        "CD": { "_allowed": "hB H", "_preferred": "H" },
+        "IR": { "_allowed": "hB H", "_preferred": "H" },
+        "hi_IN": { "_allowed": "hB h H", "_preferred": "h" },
+        "kn_IN": { "_allowed": "hB h H", "_preferred": "h" },
+        "ml_IN": { "_allowed": "hB h H", "_preferred": "h" },
+        "te_IN": { "_allowed": "hB h H", "_preferred": "h" },
+        "KH": { "_allowed": "hB h H hb", "_preferred": "h" },
+        "ta_IN": { "_allowed": "hB h hb H", "_preferred": "h" },
+        "BN": { "_allowed": "hb hB h H", "_preferred": "h" },
+        "MY": { "_allowed": "hb hB h H", "_preferred": "h" },
+        "CN": { "_allowed": "hB hb h H", "_preferred": "h" },
+        "ET": { "_allowed": "hB hb h H", "_preferred": "h" },
+        "gu_IN": { "_allowed": "hB hb h H", "_preferred": "h" },
+        "HK": { "_allowed": "hB hb h H", "_preferred": "h" },
+        "MO": { "_allowed": "hB hb h H", "_preferred": "h" },
+        "mr_IN": { "_allowed": "hB hb h H", "_preferred": "h" },
+        "pa_IN": { "_allowed": "hB hb h H", "_preferred": "h" },
+        "TW": { "_allowed": "hB hb h H", "_preferred": "h" },
+        "KE": { "_allowed": "hB hb H h", "_preferred": "H" },
+        "MM": { "_allowed": "hB hb H h", "_preferred": "H" },
+        "TZ": { "_allowed": "hB hb H h", "_preferred": "H" },
+        "UG": { "_allowed": "hB hb H h", "_preferred": "H" }
+      },
+      "weekData": {
+        "minDays": {
+          "001": "1",
+          "AD": "4",
+          "AN": "4",
+          "AT": "4",
+          "AX": "4",
+          "BE": "4",
+          "BG": "4",
+          "CH": "4",
+          "CZ": "4",
+          "DE": "4",
+          "DK": "4",
+          "EE": "4",
+          "ES": "4",
+          "FI": "4",
+          "FJ": "4",
+          "FO": "4",
+          "FR": "4",
+          "GB": "4",
+          "GF": "4",
+          "GG": "4",
+          "GI": "4",
+          "GP": "4",
+          "GR": "4",
+          "GU": "1",
+          "HU": "4",
+          "IE": "4",
+          "IM": "4",
+          "IS": "4",
+          "IT": "4",
+          "JE": "4",
+          "LI": "4",
+          "LT": "4",
+          "LU": "4",
+          "MC": "4",
+          "MQ": "4",
+          "NL": "4",
+          "NO": "4",
+          "PL": "4",
+          "PT": "4",
+          "RE": "4",
+          "RU": "4",
+          "SE": "4",
+          "SJ": "4",
+          "SK": "4",
+          "SM": "4",
+          "UM": "1",
+          "US": "1",
+          "VA": "4",
+          "VI": "1"
+        },
+        "firstDay": {
+          "001": "mon",
+          "AD": "mon",
+          "AE": "sat",
+          "AF": "sat",
+          "AG": "sun",
+          "AI": "mon",
+          "AL": "mon",
+          "AM": "mon",
+          "AN": "mon",
+          "AR": "mon",
+          "AS": "sun",
+          "AT": "mon",
+          "AU": "sun",
+          "AX": "mon",
+          "AZ": "mon",
+          "BA": "mon",
+          "BD": "sun",
+          "BE": "mon",
+          "BG": "mon",
+          "BH": "sat",
+          "BM": "mon",
+          "BN": "mon",
+          "BR": "sun",
+          "BS": "sun",
+          "BT": "sun",
+          "BW": "sun",
+          "BY": "mon",
+          "BZ": "sun",
+          "CA": "sun",
+          "CH": "mon",
+          "CL": "mon",
+          "CM": "mon",
+          "CN": "sun",
+          "CO": "sun",
+          "CR": "mon",
+          "CY": "mon",
+          "CZ": "mon",
+          "DE": "mon",
+          "DJ": "sat",
+          "DK": "mon",
+          "DM": "sun",
+          "DO": "sun",
+          "DZ": "sat",
+          "EC": "mon",
+          "EE": "mon",
+          "EG": "sat",
+          "ES": "mon",
+          "ET": "sun",
+          "FI": "mon",
+          "FJ": "mon",
+          "FO": "mon",
+          "FR": "mon",
+          "GB": "mon",
+          "GB-alt-variant": "sun",
+          "GE": "mon",
+          "GF": "mon",
+          "GP": "mon",
+          "GR": "mon",
+          "GT": "sun",
+          "GU": "sun",
+          "HK": "sun",
+          "HN": "sun",
+          "HR": "mon",
+          "HU": "mon",
+          "ID": "sun",
+          "IE": "mon",
+          "IL": "sun",
+          "IN": "sun",
+          "IQ": "sat",
+          "IR": "sat",
+          "IS": "mon",
+          "IT": "mon",
+          "JM": "sun",
+          "JO": "sat",
+          "JP": "sun",
+          "KE": "sun",
+          "KG": "mon",
+          "KH": "sun",
+          "KR": "sun",
+          "KW": "sat",
+          "KZ": "mon",
+          "LA": "sun",
+          "LB": "mon",
+          "LI": "mon",
+          "LK": "mon",
+          "LT": "mon",
+          "LU": "mon",
+          "LV": "mon",
+          "LY": "sat",
+          "MC": "mon",
+          "MD": "mon",
+          "ME": "mon",
+          "MH": "sun",
+          "MK": "mon",
+          "MM": "sun",
+          "MN": "mon",
+          "MO": "sun",
+          "MQ": "mon",
+          "MT": "sun",
+          "MV": "fri",
+          "MX": "sun",
+          "MY": "mon",
+          "MZ": "sun",
+          "NI": "sun",
+          "NL": "mon",
+          "NO": "mon",
+          "NP": "sun",
+          "NZ": "mon",
+          "OM": "sat",
+          "PA": "sun",
+          "PE": "sun",
+          "PH": "sun",
+          "PK": "sun",
+          "PL": "mon",
+          "PR": "sun",
+          "PT": "sun",
+          "PY": "sun",
+          "QA": "sat",
+          "RE": "mon",
+          "RO": "mon",
+          "RS": "mon",
+          "RU": "mon",
+          "SA": "sun",
+          "SD": "sat",
+          "SE": "mon",
+          "SG": "sun",
+          "SI": "mon",
+          "SK": "mon",
+          "SM": "mon",
+          "SV": "sun",
+          "SY": "sat",
+          "TH": "sun",
+          "TJ": "mon",
+          "TM": "mon",
+          "TR": "mon",
+          "TT": "sun",
+          "TW": "sun",
+          "UA": "mon",
+          "UM": "sun",
+          "US": "sun",
+          "UY": "mon",
+          "UZ": "mon",
+          "VA": "mon",
+          "VE": "sun",
+          "VI": "sun",
+          "VN": "mon",
+          "WS": "sun",
+          "XK": "mon",
+          "YE": "sun",
+          "ZA": "sun",
+          "ZW": "sun"
+        },
+        "weekendStart": {
+          "001": "sat",
+          "AE": "fri",
+          "AF": "thu",
+          "BH": "fri",
+          "DZ": "fri",
+          "EG": "fri",
+          "IL": "fri",
+          "IN": "sun",
+          "IQ": "fri",
+          "IR": "fri",
+          "JO": "fri",
+          "KW": "fri",
+          "LY": "fri",
+          "OM": "fri",
+          "QA": "fri",
+          "SA": "fri",
+          "SD": "fri",
+          "SY": "fri",
+          "UG": "sun",
+          "YE": "fri"
+        },
+        "weekendEnd": {
+          "001": "sun",
+          "AE": "sat",
+          "AF": "fri",
+          "BH": "sat",
+          "DZ": "sat",
+          "EG": "sat",
+          "IL": "sat",
+          "IQ": "sat",
+          "IR": "fri",
+          "JO": "sat",
+          "KW": "sat",
+          "LY": "sat",
+          "OM": "sat",
+          "QA": "sat",
+          "SA": "sat",
+          "SD": "sat",
+          "SY": "sat",
+          "YE": "sat"
+        },
+        "af": { "_ordering": "weekOfDate weekOfInterval weekOfMonth" },
+        "am az bs cs cy da el et hi ky lt mk sk ta th": {
+          "_ordering": "weekOfYear weekOfMonth"
+        },
+        "ar fil gu hu hy id kk ko": { "_ordering": "weekOfMonth" },
+        "be ro ru": { "_ordering": "weekOfInterval weekOfMonth" },
+        "bg de iw pt ur zh": {
+          "_ordering": "weekOfDate weekOfMonth weekOfInterval"
+        },
+        "ca es fr gl": { "_ordering": "weekOfDate" },
+        "en bn ja ka": { "_ordering": "weekOfDate weekOfMonth" },
+        "eu": { "_ordering": "weekOfMonth weekOfDate" },
+        "fa hr it lv pl si sr uk uz": {
+          "_ordering": "weekOfMonth weekOfInterval"
+        },
+        "fi zh-TW": { "_ordering": "weekOfYear weekOfDate weekOfMonth" },
+        "is mn no sv vi": {
+          "_ordering": "weekOfYear weekOfMonth weekOfInterval"
+        },
+        "km mr": { "_ordering": "weekOfMonth weekOfYear" },
+        "kn ml pa": { "_ordering": "weekOfMonth weekOfDate weekOfYear" },
+        "lo sq": {
+          "_ordering": "weekOfMonth weekOfInterval weekOfDate weekOfYear"
+        },
+        "ms tr": {
+          "_ordering": "weekOfMonth weekOfYear weekOfInterval weekOfDate"
+        },
+        "nl": { "_ordering": "weekOfDate weekOfYear weekOfMonth" },
+        "sl": { "_ordering": "weekOfInterval" },
+        "sw te": { "_ordering": "weekOfMonth weekOfInterval weekOfYear" },
+        "und": { "_ordering": "weekOfYear" },
+        "zu": { "_ordering": "weekOfYear weekOfInterval" }
+      },
+      "numberingSystems": {
+        "latn": { "_digits": "0123456789", "_type": "numeric" }
+      },
+      "plurals-type-cardinal": {
+        "en": {
+          "pluralRule-count-one": "i \u003d 1 and v \u003d 0 @integer 1",
+          "pluralRule-count-other": " @integer 0, 2~16, 100, 1000, 10000, 100000, 1000000, … @decimal 0.0~1.5, 10.0, 100.0, 1000.0, 10000.0, 100000.0, 1000000.0, …"
+        }
+      },
+      "plurals-type-ordinal": {
+        "en": {
+          "pluralRule-count-one": "n % 10 \u003d 1 and n % 100 !\u003d 11 @integer 1, 21, 31, 41, 51, 61, 71, 81, 101, 1001, …",
+          "pluralRule-count-two": "n % 10 \u003d 2 and n % 100 !\u003d 12 @integer 2, 22, 32, 42, 52, 62, 72, 82, 102, 1002, …",
+          "pluralRule-count-few": "n % 10 \u003d 3 and n % 100 !\u003d 13 @integer 3, 23, 33, 43, 53, 63, 73, 83, 103, 1003, …",
+          "pluralRule-count-other": " @integer 0, 4~18, 100, 1000, 10000, 100000, 1000000, …"
+        }
+      },
+      "likelySubtags": {
+        "den": "den-Latn-CA",
+        "en": "en-Latn-US",
+        "en-Shaw": "en-Shaw-GB",
+        "enn": "enn-Latn-ZZ",
+        "enq": "enq-Latn-ZZ",
+        "jen": "jen-Latn-ZZ",
+        "ken": "ken-Latn-CM",
+        "men": "men-Latn-SL",
+        "und-Beng": "bn-Beng-BD",
+        "und-Mend": "men-Mend-SL"
+      }
+    },
+    "main": {
+      "en-GB": {
+        "identity": {
+          "version": { "_cldrVersion": "36" },
+          "language": "en",
+          "territory": "GB"
+        },
+        "numbers": {
+          "defaultNumberingSystem": "latn",
+          "otherNumberingSystems": { "native": "latn" },
+          "minimumGroupingDigits": "1",
+          "symbols-numberSystem-latn": {
+            "decimal": ".",
+            "group": ",",
+            "list": ";",
+            "percentSign": "%",
+            "plusSign": "+",
+            "minusSign": "-",
+            "exponential": "E",
+            "superscriptingExponent": "×",
+            "perMille": "‰",
+            "infinity": "∞",
+            "nan": "NaN",
+            "timeSeparator": ":"
+          },
+          "decimalFormats-numberSystem-latn": {
+            "standard": "#,##0.###",
+            "long": {
+              "decimalFormat": {
+                "1000-count-one": "0 thousand",
+                "1000-count-other": "0 thousand",
+                "10000-count-one": "00 thousand",
+                "10000-count-other": "00 thousand",
+                "100000-count-one": "000 thousand",
+                "100000-count-other": "000 thousand",
+                "1000000-count-one": "0 million",
+                "1000000-count-other": "0 million",
+                "10000000-count-one": "00 million",
+                "10000000-count-other": "00 million",
+                "100000000-count-one": "000 million",
+                "100000000-count-other": "000 million",
+                "1000000000-count-one": "0 billion",
+                "1000000000-count-other": "0 billion",
+                "10000000000-count-one": "00 billion",
+                "10000000000-count-other": "00 billion",
+                "100000000000-count-one": "000 billion",
+                "100000000000-count-other": "000 billion",
+                "1000000000000-count-one": "0 trillion",
+                "1000000000000-count-other": "0 trillion",
+                "10000000000000-count-one": "00 trillion",
+                "10000000000000-count-other": "00 trillion",
+                "100000000000000-count-one": "000 trillion",
+                "100000000000000-count-other": "000 trillion"
+              }
+            },
+            "short": {
+              "decimalFormat": {
+                "1000-count-one": "0K",
+                "1000-count-other": "0K",
+                "10000-count-one": "00K",
+                "10000-count-other": "00K",
+                "100000-count-one": "000K",
+                "100000-count-other": "000K",
+                "1000000-count-one": "0M",
+                "1000000-count-other": "0M",
+                "10000000-count-one": "00M",
+                "10000000-count-other": "00M",
+                "100000000-count-one": "000M",
+                "100000000-count-other": "000M",
+                "1000000000-count-one": "0B",
+                "1000000000-count-other": "0B",
+                "10000000000-count-one": "00B",
+                "10000000000-count-other": "00B",
+                "100000000000-count-one": "000B",
+                "100000000000-count-other": "000B",
+                "1000000000000-count-one": "0T",
+                "1000000000000-count-other": "0T",
+                "10000000000000-count-one": "00T",
+                "10000000000000-count-other": "00T",
+                "100000000000000-count-one": "000T",
+                "100000000000000-count-other": "000T"
+              }
+            }
+          },
+          "scientificFormats-numberSystem-latn": { "standard": "#E0" },
+          "percentFormats-numberSystem-latn": { "standard": "#,##0%" },
+          "currencyFormats-numberSystem-latn": {
+            "currencySpacing": {
+              "beforeCurrency": {
+                "currencyMatch": "[:^S:]",
+                "surroundingMatch": "[:digit:]",
+                "insertBetween": " "
+              },
+              "afterCurrency": {
+                "currencyMatch": "[:^S:]",
+                "surroundingMatch": "[:digit:]",
+                "insertBetween": " "
+              }
+            },
+            "standard": "¤#,##0.00",
+            "accounting": "¤#,##0.00;(¤#,##0.00)",
+            "short": {
+              "standard": {
+                "1000-count-one": "¤0K",
+                "1000-count-other": "¤0K",
+                "10000-count-one": "¤00K",
+                "10000-count-other": "¤00K",
+                "100000-count-one": "¤000K",
+                "100000-count-other": "¤000K",
+                "1000000-count-one": "¤0M",
+                "1000000-count-other": "¤0M",
+                "10000000-count-one": "¤00M",
+                "10000000-count-other": "¤00M",
+                "100000000-count-one": "¤000M",
+                "100000000-count-other": "¤000M",
+                "1000000000-count-one": "¤0B",
+                "1000000000-count-other": "¤0B",
+                "10000000000-count-one": "¤00B",
+                "10000000000-count-other": "¤00B",
+                "100000000000-count-one": "¤000B",
+                "100000000000-count-other": "¤000B",
+                "1000000000000-count-one": "¤0T",
+                "1000000000000-count-other": "¤0T",
+                "10000000000000-count-one": "¤00T",
+                "10000000000000-count-other": "¤00T",
+                "100000000000000-count-one": "¤000T",
+                "100000000000000-count-other": "¤000T"
+              }
+            },
+            "unitPattern-count-one": "{0} {1}",
+            "unitPattern-count-other": "{0} {1}"
+          },
+          "miscPatterns-numberSystem-latn": {
+            "approximately": "~{0}",
+            "atLeast": "{0}+",
+            "atMost": "≤{0}",
+            "range": "{0}–{1}"
+          },
+          "minimalPairs": {
+            "pluralMinimalPairs-count-one": "{0} day",
+            "pluralMinimalPairs-count-other": "{0} days",
+            "few": "Take the {0}rd right.",
+            "one": "Take the {0}st right.",
+            "other": "Take the {0}th right.",
+            "two": "Take the {0}nd right."
+          }
+        },
+        "dates": {
+          "calendars": {
+            "gregorian": {
+              "months": {
+                "format": {
+                  "abbreviated": {
+                    "1": "Jan",
+                    "2": "Feb",
+                    "3": "Mar",
+                    "4": "Apr",
+                    "5": "May",
+                    "6": "Jun",
+                    "7": "Jul",
+                    "8": "Aug",
+                    "9": "Sep",
+                    "10": "Oct",
+                    "11": "Nov",
+                    "12": "Dec"
+                  },
+                  "narrow": {
+                    "1": "J",
+                    "2": "F",
+                    "3": "M",
+                    "4": "A",
+                    "5": "M",
+                    "6": "J",
+                    "7": "J",
+                    "8": "A",
+                    "9": "S",
+                    "10": "O",
+                    "11": "N",
+                    "12": "D"
+                  },
+                  "wide": {
+                    "1": "January",
+                    "2": "February",
+                    "3": "March",
+                    "4": "April",
+                    "5": "May",
+                    "6": "June",
+                    "7": "July",
+                    "8": "August",
+                    "9": "September",
+                    "10": "October",
+                    "11": "November",
+                    "12": "December"
+                  }
+                },
+                "stand-alone": {
+                  "abbreviated": {
+                    "1": "Jan",
+                    "2": "Feb",
+                    "3": "Mar",
+                    "4": "Apr",
+                    "5": "May",
+                    "6": "Jun",
+                    "7": "Jul",
+                    "8": "Aug",
+                    "9": "Sep",
+                    "10": "Oct",
+                    "11": "Nov",
+                    "12": "Dec"
+                  },
+                  "narrow": {
+                    "1": "J",
+                    "2": "F",
+                    "3": "M",
+                    "4": "A",
+                    "5": "M",
+                    "6": "J",
+                    "7": "J",
+                    "8": "A",
+                    "9": "S",
+                    "10": "O",
+                    "11": "N",
+                    "12": "D"
+                  },
+                  "wide": {
+                    "1": "January",
+                    "2": "February",
+                    "3": "March",
+                    "4": "April",
+                    "5": "May",
+                    "6": "June",
+                    "7": "July",
+                    "8": "August",
+                    "9": "September",
+                    "10": "October",
+                    "11": "November",
+                    "12": "December"
+                  }
+                }
+              },
+              "days": {
+                "format": {
+                  "abbreviated": {
+                    "sun": "Sun",
+                    "mon": "Mon",
+                    "tue": "Tue",
+                    "wed": "Wed",
+                    "thu": "Thu",
+                    "fri": "Fri",
+                    "sat": "Sat"
+                  },
+                  "narrow": {
+                    "sun": "S",
+                    "mon": "M",
+                    "tue": "T",
+                    "wed": "W",
+                    "thu": "T",
+                    "fri": "F",
+                    "sat": "S"
+                  },
+                  "short": {
+                    "sun": "Su",
+                    "mon": "Mo",
+                    "tue": "Tu",
+                    "wed": "We",
+                    "thu": "Th",
+                    "fri": "Fr",
+                    "sat": "Sa"
+                  },
+                  "wide": {
+                    "sun": "Sunday",
+                    "mon": "Monday",
+                    "tue": "Tuesday",
+                    "wed": "Wednesday",
+                    "thu": "Thursday",
+                    "fri": "Friday",
+                    "sat": "Saturday"
+                  }
+                },
+                "stand-alone": {
+                  "abbreviated": {
+                    "sun": "Sun",
+                    "mon": "Mon",
+                    "tue": "Tue",
+                    "wed": "Wed",
+                    "thu": "Thu",
+                    "fri": "Fri",
+                    "sat": "Sat"
+                  },
+                  "narrow": {
+                    "sun": "S",
+                    "mon": "M",
+                    "tue": "T",
+                    "wed": "W",
+                    "thu": "T",
+                    "fri": "F",
+                    "sat": "S"
+                  },
+                  "short": {
+                    "sun": "Su",
+                    "mon": "Mo",
+                    "tue": "Tu",
+                    "wed": "We",
+                    "thu": "Th",
+                    "fri": "Fr",
+                    "sat": "Sa"
+                  },
+                  "wide": {
+                    "sun": "Sunday",
+                    "mon": "Monday",
+                    "tue": "Tuesday",
+                    "wed": "Wednesday",
+                    "thu": "Thursday",
+                    "fri": "Friday",
+                    "sat": "Saturday"
+                  }
+                }
+              },
+              "quarters": {
+                "format": {
+                  "abbreviated": { "1": "Q1", "2": "Q2", "3": "Q3", "4": "Q4" },
+                  "narrow": { "1": "1", "2": "2", "3": "3", "4": "4" },
+                  "wide": {
+                    "1": "1st quarter",
+                    "2": "2nd quarter",
+                    "3": "3rd quarter",
+                    "4": "4th quarter"
+                  }
+                },
+                "stand-alone": {
+                  "abbreviated": { "1": "Q1", "2": "Q2", "3": "Q3", "4": "Q4" },
+                  "narrow": { "1": "1", "2": "2", "3": "3", "4": "4" },
+                  "wide": {
+                    "1": "1st quarter",
+                    "2": "2nd quarter",
+                    "3": "3rd quarter",
+                    "4": "4th quarter"
+                  }
+                }
+              },
+              "dayPeriods": {
+                "format": {
+                  "abbreviated": {
+                    "midnight": "midnight",
+                    "am": "am",
+                    "am-alt-variant": "am",
+                    "noon": "noon",
+                    "pm": "pm",
+                    "pm-alt-variant": "pm",
+                    "morning1": "in the morning",
+                    "afternoon1": "in the afternoon",
+                    "evening1": "in the evening",
+                    "night1": "at night"
+                  },
+                  "narrow": {
+                    "midnight": "mi",
+                    "am": "a",
+                    "am-alt-variant": "am",
+                    "noon": "n",
+                    "pm": "p",
+                    "pm-alt-variant": "pm",
+                    "morning1": "in the morning",
+                    "afternoon1": "in the afternoon",
+                    "evening1": "in the evening",
+                    "night1": "at night"
+                  },
+                  "wide": {
+                    "midnight": "midnight",
+                    "am": "am",
+                    "am-alt-variant": "am",
+                    "noon": "noon",
+                    "pm": "pm",
+                    "pm-alt-variant": "pm",
+                    "morning1": "in the morning",
+                    "afternoon1": "in the afternoon",
+                    "evening1": "in the evening",
+                    "night1": "at night"
+                  }
+                },
+                "stand-alone": {
+                  "abbreviated": {
+                    "midnight": "midnight",
+                    "am": "am",
+                    "am-alt-variant": "am",
+                    "noon": "noon",
+                    "pm": "pm",
+                    "pm-alt-variant": "pm",
+                    "morning1": "morning",
+                    "afternoon1": "afternoon",
+                    "evening1": "evening",
+                    "night1": "night"
+                  },
+                  "narrow": {
+                    "midnight": "midnight",
+                    "am": "am",
+                    "am-alt-variant": "am",
+                    "noon": "noon",
+                    "pm": "pm",
+                    "pm-alt-variant": "pm",
+                    "morning1": "morning",
+                    "afternoon1": "afternoon",
+                    "evening1": "evening",
+                    "night1": "night"
+                  },
+                  "wide": {
+                    "midnight": "midnight",
+                    "am": "am",
+                    "am-alt-variant": "am",
+                    "noon": "noon",
+                    "pm": "pm",
+                    "pm-alt-variant": "pm",
+                    "morning1": "morning",
+                    "afternoon1": "afternoon",
+                    "evening1": "evening",
+                    "night1": "night"
+                  }
+                }
+              },
+              "eras": {
+                "eraNames": {
+                  "0": "Before Christ",
+                  "0-alt-variant": "Before Common Era",
+                  "1": "Anno Domini",
+                  "1-alt-variant": "Common Era"
+                },
+                "eraAbbr": {
+                  "0": "BC",
+                  "0-alt-variant": "BCE",
+                  "1": "AD",
+                  "1-alt-variant": "CE"
+                },
+                "eraNarrow": {
+                  "0": "B",
+                  "0-alt-variant": "BCE",
+                  "1": "A",
+                  "1-alt-variant": "CE"
+                }
+              },
+              "dateFormats": {
+                "full": "EEEE, d MMMM y",
+                "long": "d MMMM y",
+                "medium": "d MMM y",
+                "short": "dd/MM/y"
+              },
+              "timeFormats": {
+                "full": "HH:mm:ss zzzz",
+                "long": "HH:mm:ss z",
+                "medium": "HH:mm:ss",
+                "short": "HH:mm"
+              },
+              "dateTimeFormats": {
+                "full": "{1} \u0027at\u0027 {0}",
+                "long": "{1} \u0027at\u0027 {0}",
+                "medium": "{1}, {0}",
+                "short": "{1}, {0}",
+                "availableFormats": {
+                  "Bh": "h B",
+                  "Bhm": "h:mm B",
+                  "Bhms": "h:mm:ss B",
+                  "d": "d",
+                  "E": "ccc",
+                  "EBhm": "E h:mm B",
+                  "EBhms": "E h:mm:ss B",
+                  "Ed": "E d",
+                  "Ehm": "E h:mm a",
+                  "EHm": "E HH:mm",
+                  "Ehms": "E h:mm:ss a",
+                  "EHms": "E HH:mm:ss",
+                  "Gy": "y G",
+                  "GyMMM": "MMM y G",
+                  "GyMMMd": "d MMM y G",
+                  "GyMMMEd": "E, d MMM y G",
+                  "h": "h a",
+                  "H": "HH",
+                  "hm": "h:mm a",
+                  "Hm": "HH:mm",
+                  "hms": "h:mm:ss a",
+                  "Hms": "HH:mm:ss",
+                  "hmsv": "h:mm:ss a v",
+                  "Hmsv": "HH:mm:ss v",
+                  "hmv": "h:mm a v",
+                  "Hmv": "HH:mm v",
+                  "M": "L",
+                  "Md": "dd/MM",
+                  "MEd": "E, dd/MM",
+                  "MMdd": "dd/MM",
+                  "MMM": "LLL",
+                  "MMMd": "d MMM",
+                  "MMMEd": "E, d MMM",
+                  "MMMMd": "d MMMM",
+                  "MMMMW-count-one": "\u0027week\u0027 W \u0027of\u0027 MMMM",
+                  "MMMMW-count-other": "\u0027week\u0027 W \u0027of\u0027 MMMM",
+                  "ms": "mm:ss",
+                  "y": "y",
+                  "yM": "MM/y",
+                  "yMd": "dd/MM/y",
+                  "yMEd": "E, dd/MM/y",
+                  "yMMM": "MMM y",
+                  "yMMMd": "d MMM y",
+                  "yMMMEd": "E, d MMM y",
+                  "yMMMM": "MMMM y",
+                  "yQQQ": "QQQ y",
+                  "yQQQQ": "QQQQ y",
+                  "yw-count-one": "\u0027week\u0027 w \u0027of\u0027 Y",
+                  "yw-count-other": "\u0027week\u0027 w \u0027of\u0027 Y"
+                },
+                "appendItems": {
+                  "Day": "{0} ({2}: {1})",
+                  "Day-Of-Week": "{0} {1}",
+                  "Era": "{0} {1}",
+                  "Hour": "{0} ({2}: {1})",
+                  "Minute": "{0} ({2}: {1})",
+                  "Month": "{0} ({2}: {1})",
+                  "Quarter": "{0} ({2}: {1})",
+                  "Second": "{0} ({2}: {1})",
+                  "Timezone": "{0} {1}",
+                  "Week": "{0} ({2}: {1})",
+                  "Year": "{0} {1}"
+                },
+                "intervalFormats": {
+                  "intervalFormatFallback": "{0} – {1}",
+                  "Bh": { "B": "h B – h B", "h": "h – h B" },
+                  "Bhm": {
+                    "B": "h:mm B – h:mm B",
+                    "h": "h:mm – h:mm B",
+                    "m": "h:mm – h:mm B"
+                  },
+                  "d": { "d": "d–d" },
+                  "Gy": { "G": "y G – y G", "y": "y – y G" },
+                  "GyM": {
+                    "G": "M/y GGGGG – M/y GGGGG",
+                    "M": "M/y – M/y GGGGG",
+                    "y": "M/y – M/y GGGGG"
+                  },
+                  "GyMd": {
+                    "d": "dd/MM/y – dd/MM/y GGGGG",
+                    "G": "dd/MM/y GGGGG – dd/MM/y GGGGG",
+                    "M": "dd/MM/y – dd/MM/y GGGGG",
+                    "y": "dd/MM/y – dd/MM/y GGGGG"
+                  },
+                  "GyMEd": {
+                    "d": "E, dd/MM/y – E, dd/MM/y GGGGG",
+                    "G": "E, dd/MM/y GGGGG – E, dd/MM/y GGGGG",
+                    "M": "E, dd/MM/y – E, dd/MM/y GGGGG",
+                    "y": "E, dd/MM/y – E, dd/MM/y GGGGG"
+                  },
+                  "GyMMM": {
+                    "G": "MMM y G – MMM y G",
+                    "M": "MMM – MMM y G",
+                    "y": "MMM y – MMM y G"
+                  },
+                  "GyMMMd": {
+                    "d": "d – d MMM y G",
+                    "G": "d MMM y G – d MMM y G",
+                    "M": "d MMM – d MMM y G",
+                    "y": "d MMM y – d MMM y G"
+                  },
+                  "GyMMMEd": {
+                    "d": "E, d MMM – E, d MMM y G",
+                    "G": "E, d MMM y G – E, d MMM y G",
+                    "M": "E, d MMM – E, d MMM y G",
+                    "y": "E, d MMM y – E, d MMM y G"
+                  },
+                  "h": { "a": "h a – h a", "h": "h–h a" },
+                  "H": { "H": "HH–HH" },
+                  "hm": {
+                    "a": "h:mm a – h:mm a",
+                    "h": "h:mm – h:mm a",
+                    "m": "h:mm – h:mm a"
+                  },
+                  "Hm": { "H": "HH:mm–HH:mm", "m": "HH:mm–HH:mm" },
+                  "hmv": {
+                    "a": "h:mm a – h:mm a v",
+                    "h": "h:mm – h:mm a v",
+                    "m": "h:mm – h:mm a v"
+                  },
+                  "Hmv": { "H": "HH:mm–HH:mm v", "m": "HH:mm–HH:mm v" },
+                  "hv": { "a": "h a – h a v", "h": "h–h a v" },
+                  "Hv": { "H": "HH–HH v" },
+                  "M": { "M": "M–M" },
+                  "Md": { "d": "dd/MM – dd/MM", "M": "dd/MM – dd/MM" },
+                  "MEd": { "d": "E dd/MM – E dd/MM", "M": "E dd/MM – E dd/MM" },
+                  "MMM": { "M": "MMM – MMM" },
+                  "MMMd": { "d": "d–d MMM", "M": "d MMM – d MMM" },
+                  "MMMEd": { "d": "E d MMM – E d MMM", "M": "E d MMM – E d MMM" },
+                  "y": { "y": "y–y" },
+                  "yM": { "M": "MM/y – MM/y", "y": "MM/y – MM/y" },
+                  "yMd": {
+                    "d": "dd/MM/y – dd/MM/y",
+                    "M": "dd/MM/y – dd/MM/y",
+                    "y": "dd/MM/y – dd/MM/y"
+                  },
+                  "yMEd": {
+                    "d": "E, dd/MM/y – E, dd/MM/y",
+                    "M": "E, dd/MM/y – E, dd/MM/y",
+                    "y": "E, dd/MM/y – E, dd/MM/y"
+                  },
+                  "yMMM": { "M": "MMM – MMM y", "y": "MMM y – MMM y" },
+                  "yMMMd": {
+                    "d": "d–d MMM y",
+                    "M": "d MMM – d MMM y",
+                    "y": "d MMM y – d MMM y"
+                  },
+                  "yMMMEd": {
+                    "d": "E, d MMM – E, d MMM y",
+                    "M": "E, d MMM – E, d MMM y",
+                    "y": "E, d MMM y – E, d MMM y"
+                  },
+                  "yMMMM": { "M": "MMMM – MMMM y", "y": "MMMM y – MMMM y" }
+                }
+              }
+            }
+          },
+          "timeZoneNames": {
+            "hourFormat": "+HH:mm;-HH:mm",
+            "gmtFormat": "GMT{0}",
+            "gmtZeroFormat": "GMT",
+            "regionFormat": "{0} Time",
+            "regionFormat-type-daylight": "{0} Daylight Time",
+            "regionFormat-type-standard": "{0} Standard Time",
+            "fallbackFormat": "{1} ({0})",
+            "zone": {
+              "America": {
+                "Adak": { "exemplarCity": "Adak" },
+                "Anchorage": { "exemplarCity": "Anchorage" },
+                "Anguilla": { "exemplarCity": "Anguilla" },
+                "Antigua": { "exemplarCity": "Antigua" },
+                "Araguaina": { "exemplarCity": "Araguaina" },
+                "Argentina": {
+                  "Rio_Gallegos": { "exemplarCity": "Rio Gallegos" },
+                  "San_Juan": { "exemplarCity": "San Juan" },
+                  "Ushuaia": { "exemplarCity": "Ushuaia" },
+                  "La_Rioja": { "exemplarCity": "La Rioja" },
+                  "San_Luis": { "exemplarCity": "San Luis" },
+                  "Salta": { "exemplarCity": "Salta" },
+                  "Tucuman": { "exemplarCity": "Tucuman" }
+                },
+                "Aruba": { "exemplarCity": "Aruba" },
+                "Asuncion": { "exemplarCity": "Asunción" },
+                "Bahia": { "exemplarCity": "Bahia" },
+                "Bahia_Banderas": { "exemplarCity": "Bahia Banderas" },
+                "Barbados": { "exemplarCity": "Barbados" },
+                "Belem": { "exemplarCity": "Belem" },
+                "Belize": { "exemplarCity": "Belize" },
+                "Blanc-Sablon": { "exemplarCity": "Blanc-Sablon" },
+                "Boa_Vista": { "exemplarCity": "Boa Vista" },
+                "Bogota": { "exemplarCity": "Bogota" },
+                "Boise": { "exemplarCity": "Boise" },
+                "Buenos_Aires": { "exemplarCity": "Buenos Aires" },
+                "Cambridge_Bay": { "exemplarCity": "Cambridge Bay" },
+                "Campo_Grande": { "exemplarCity": "Campo Grande" },
+                "Cancun": { "exemplarCity": "Cancun" },
+                "Caracas": { "exemplarCity": "Caracas" },
+                "Catamarca": { "exemplarCity": "Catamarca" },
+                "Cayenne": { "exemplarCity": "Cayenne" },
+                "Cayman": { "exemplarCity": "Cayman" },
+                "Chicago": { "exemplarCity": "Chicago" },
+                "Chihuahua": { "exemplarCity": "Chihuahua" },
+                "Coral_Harbour": { "exemplarCity": "Atikokan" },
+                "Cordoba": { "exemplarCity": "Cordoba" },
+                "Costa_Rica": { "exemplarCity": "Costa Rica" },
+                "Creston": { "exemplarCity": "Creston" },
+                "Cuiaba": { "exemplarCity": "Cuiaba" },
+                "Curacao": { "exemplarCity": "Curaçao" },
+                "Danmarkshavn": { "exemplarCity": "Danmarkshavn" },
+                "Dawson": { "exemplarCity": "Dawson" },
+                "Dawson_Creek": { "exemplarCity": "Dawson Creek" },
+                "Denver": { "exemplarCity": "Denver" },
+                "Detroit": { "exemplarCity": "Detroit" },
+                "Dominica": { "exemplarCity": "Dominica" },
+                "Edmonton": { "exemplarCity": "Edmonton" },
+                "Eirunepe": { "exemplarCity": "Eirunepe" },
+                "El_Salvador": { "exemplarCity": "El Salvador" },
+                "Fort_Nelson": { "exemplarCity": "Fort Nelson" },
+                "Fortaleza": { "exemplarCity": "Fortaleza" },
+                "Glace_Bay": { "exemplarCity": "Glace Bay" },
+                "Godthab": { "exemplarCity": "Nuuk" },
+                "Goose_Bay": { "exemplarCity": "Goose Bay" },
+                "Grand_Turk": { "exemplarCity": "Grand Turk" },
+                "Grenada": { "exemplarCity": "Grenada" },
+                "Guadeloupe": { "exemplarCity": "Guadeloupe" },
+                "Guatemala": { "exemplarCity": "Guatemala" },
+                "Guayaquil": { "exemplarCity": "Guayaquil" },
+                "Guyana": { "exemplarCity": "Guyana" },
+                "Halifax": { "exemplarCity": "Halifax" },
+                "Havana": { "exemplarCity": "Havana" },
+                "Hermosillo": { "exemplarCity": "Hermosillo" },
+                "Indiana": {
+                  "Vincennes": { "exemplarCity": "Vincennes, Indiana" },
+                  "Petersburg": { "exemplarCity": "Petersburg, Indiana" },
+                  "Tell_City": { "exemplarCity": "Tell City, Indiana" },
+                  "Knox": { "exemplarCity": "Knox, Indiana" },
+                  "Winamac": { "exemplarCity": "Winamac, Indiana" },
+                  "Marengo": { "exemplarCity": "Marengo, Indiana" },
+                  "Vevay": { "exemplarCity": "Vevay, Indiana" }
+                },
+                "Indianapolis": { "exemplarCity": "Indianapolis" },
+                "Inuvik": { "exemplarCity": "Inuvik" },
+                "Iqaluit": { "exemplarCity": "Iqaluit" },
+                "Jamaica": { "exemplarCity": "Jamaica" },
+                "Jujuy": { "exemplarCity": "Jujuy" },
+                "Juneau": { "exemplarCity": "Juneau" },
+                "Kentucky": {
+                  "Monticello": { "exemplarCity": "Monticello, Kentucky" }
+                },
+                "Kralendijk": { "exemplarCity": "Kralendijk" },
+                "La_Paz": { "exemplarCity": "La Paz" },
+                "Lima": { "exemplarCity": "Lima" },
+                "Los_Angeles": { "exemplarCity": "Los Angeles" },
+                "Louisville": { "exemplarCity": "Louisville" },
+                "Lower_Princes": { "exemplarCity": "Lower Prince’s Quarter" },
+                "Maceio": { "exemplarCity": "Maceio" },
+                "Managua": { "exemplarCity": "Managua" },
+                "Manaus": { "exemplarCity": "Manaus" },
+                "Marigot": { "exemplarCity": "Marigot" },
+                "Martinique": { "exemplarCity": "Martinique" },
+                "Matamoros": { "exemplarCity": "Matamoros" },
+                "Mazatlan": { "exemplarCity": "Mazatlan" },
+                "Mendoza": { "exemplarCity": "Mendoza" },
+                "Menominee": { "exemplarCity": "Menominee" },
+                "Merida": { "exemplarCity": "Merida" },
+                "Metlakatla": { "exemplarCity": "Metlakatla" },
+                "Mexico_City": { "exemplarCity": "Mexico City" },
+                "Miquelon": { "exemplarCity": "Miquelon" },
+                "Moncton": { "exemplarCity": "Moncton" },
+                "Monterrey": { "exemplarCity": "Monterrey" },
+                "Montevideo": { "exemplarCity": "Montevideo" },
+                "Montserrat": { "exemplarCity": "Montserrat" },
+                "Nassau": { "exemplarCity": "Nassau" },
+                "New_York": { "exemplarCity": "New York" },
+                "Nipigon": { "exemplarCity": "Nipigon" },
+                "Nome": { "exemplarCity": "Nome" },
+                "Noronha": { "exemplarCity": "Noronha" },
+                "North_Dakota": {
+                  "Beulah": { "exemplarCity": "Beulah, North Dakota" },
+                  "New_Salem": { "exemplarCity": "New Salem, North Dakota" },
+                  "Center": { "exemplarCity": "Center, North Dakota" }
+                },
+                "Ojinaga": { "exemplarCity": "Ojinaga" },
+                "Panama": { "exemplarCity": "Panama" },
+                "Pangnirtung": { "exemplarCity": "Pangnirtung" },
+                "Paramaribo": { "exemplarCity": "Paramaribo" },
+                "Phoenix": { "exemplarCity": "Phoenix" },
+                "Port-au-Prince": { "exemplarCity": "Port-au-Prince" },
+                "Port_of_Spain": { "exemplarCity": "Port of Spain" },
+                "Porto_Velho": { "exemplarCity": "Porto Velho" },
+                "Puerto_Rico": { "exemplarCity": "Puerto Rico" },
+                "Punta_Arenas": { "exemplarCity": "Punta Arenas" },
+                "Rainy_River": { "exemplarCity": "Rainy River" },
+                "Rankin_Inlet": { "exemplarCity": "Rankin Inlet" },
+                "Recife": { "exemplarCity": "Recife" },
+                "Regina": { "exemplarCity": "Regina" },
+                "Resolute": { "exemplarCity": "Resolute" },
+                "Rio_Branco": { "exemplarCity": "Rio Branco" },
+                "Santarem": { "exemplarCity": "Santarem" },
+                "Santiago": { "exemplarCity": "Santiago" },
+                "Santo_Domingo": { "exemplarCity": "Santo Domingo" },
+                "Sao_Paulo": { "exemplarCity": "Sao Paulo" },
+                "Scoresbysund": { "exemplarCity": "Ittoqqortoormiit" },
+                "Sitka": { "exemplarCity": "Sitka" },
+                "St_Barthelemy": { "exemplarCity": "St Barthélemy" },
+                "St_Johns": { "exemplarCity": "St John’s" },
+                "St_Kitts": { "exemplarCity": "St Kitts" },
+                "St_Lucia": { "exemplarCity": "St Lucia" },
+                "St_Thomas": { "exemplarCity": "St Thomas" },
+                "St_Vincent": { "exemplarCity": "St Vincent" },
+                "Swift_Current": { "exemplarCity": "Swift Current" },
+                "Tegucigalpa": { "exemplarCity": "Tegucigalpa" },
+                "Thule": { "exemplarCity": "Thule" },
+                "Thunder_Bay": { "exemplarCity": "Thunder Bay" },
+                "Tijuana": { "exemplarCity": "Tijuana" },
+                "Toronto": { "exemplarCity": "Toronto" },
+                "Tortola": { "exemplarCity": "Tortola" },
+                "Vancouver": { "exemplarCity": "Vancouver" },
+                "Whitehorse": { "exemplarCity": "Whitehorse" },
+                "Winnipeg": { "exemplarCity": "Winnipeg" },
+                "Yakutat": { "exemplarCity": "Yakutat" },
+                "Yellowknife": { "exemplarCity": "Yellowknife" }
+              },
+              "Atlantic": {
+                "Azores": { "exemplarCity": "Azores" },
+                "Bermuda": { "exemplarCity": "Bermuda" },
+                "Canary": { "exemplarCity": "Canary" },
+                "Cape_Verde": { "exemplarCity": "Cape Verde" },
+                "Faeroe": { "exemplarCity": "Faroe" },
+                "Madeira": { "exemplarCity": "Madeira" },
+                "Reykjavik": { "exemplarCity": "Reykjavik" },
+                "South_Georgia": { "exemplarCity": "South Georgia" },
+                "St_Helena": { "exemplarCity": "St Helena" },
+                "Stanley": { "exemplarCity": "Stanley" }
+              },
+              "Europe": {
+                "Amsterdam": { "exemplarCity": "Amsterdam" },
+                "Andorra": { "exemplarCity": "Andorra" },
+                "Astrakhan": { "exemplarCity": "Astrakhan" },
+                "Athens": { "exemplarCity": "Athens" },
+                "Belgrade": { "exemplarCity": "Belgrade" },
+                "Berlin": { "exemplarCity": "Berlin" },
+                "Bratislava": { "exemplarCity": "Bratislava" },
+                "Brussels": { "exemplarCity": "Brussels" },
+                "Bucharest": { "exemplarCity": "Bucharest" },
+                "Budapest": { "exemplarCity": "Budapest" },
+                "Busingen": { "exemplarCity": "Busingen" },
+                "Chisinau": { "exemplarCity": "Chisinau" },
+                "Copenhagen": { "exemplarCity": "Copenhagen" },
+                "Dublin": {
+                  "long": { "daylight": "Irish Standard Time" },
+                  "exemplarCity": "Dublin"
+                },
+                "Gibraltar": { "exemplarCity": "Gibraltar" },
+                "Guernsey": { "exemplarCity": "Guernsey" },
+                "Helsinki": { "exemplarCity": "Helsinki" },
+                "Isle_of_Man": { "exemplarCity": "Isle of Man" },
+                "Istanbul": { "exemplarCity": "Istanbul" },
+                "Jersey": { "exemplarCity": "Jersey" },
+                "Kaliningrad": { "exemplarCity": "Kaliningrad" },
+                "Kiev": {
+                  "exemplarCity": "Kiev",
+                  "exemplarCity-alt-formal": "Kyiv"
+                },
+                "Kirov": { "exemplarCity": "Kirov" },
+                "Lisbon": { "exemplarCity": "Lisbon" },
+                "Ljubljana": { "exemplarCity": "Ljubljana" },
+                "London": {
+                  "long": { "daylight": "British Summer Time" },
+                  "short": { "daylight": "BST" },
+                  "exemplarCity": "London"
+                },
+                "Luxembourg": { "exemplarCity": "Luxembourg" },
+                "Madrid": { "exemplarCity": "Madrid" },
+                "Malta": { "exemplarCity": "Malta" },
+                "Mariehamn": { "exemplarCity": "Mariehamn" },
+                "Minsk": { "exemplarCity": "Minsk" },
+                "Monaco": { "exemplarCity": "Monaco" },
+                "Moscow": { "exemplarCity": "Moscow" },
+                "Oslo": { "exemplarCity": "Oslo" },
+                "Paris": { "exemplarCity": "Paris" },
+                "Podgorica": { "exemplarCity": "Podgorica" },
+                "Prague": { "exemplarCity": "Prague" },
+                "Riga": { "exemplarCity": "Riga" },
+                "Rome": { "exemplarCity": "Rome" },
+                "Samara": { "exemplarCity": "Samara" },
+                "San_Marino": { "exemplarCity": "San Marino" },
+                "Sarajevo": { "exemplarCity": "Sarajevo" },
+                "Saratov": { "exemplarCity": "Saratov" },
+                "Simferopol": { "exemplarCity": "Simferopol" },
+                "Skopje": { "exemplarCity": "Skopje" },
+                "Sofia": { "exemplarCity": "Sofia" },
+                "Stockholm": { "exemplarCity": "Stockholm" },
+                "Tallinn": { "exemplarCity": "Tallinn" },
+                "Tirane": { "exemplarCity": "Tirane" },
+                "Ulyanovsk": { "exemplarCity": "Ulyanovsk" },
+                "Uzhgorod": { "exemplarCity": "Uzhhorod" },
+                "Vaduz": { "exemplarCity": "Vaduz" },
+                "Vatican": { "exemplarCity": "Vatican" },
+                "Vienna": { "exemplarCity": "Vienna" },
+                "Vilnius": { "exemplarCity": "Vilnius" },
+                "Volgograd": { "exemplarCity": "Volgograd" },
+                "Warsaw": { "exemplarCity": "Warsaw" },
+                "Zagreb": { "exemplarCity": "Zagreb" },
+                "Zaporozhye": { "exemplarCity": "Zaporozhye" },
+                "Zurich": { "exemplarCity": "Zurich" }
+              },
+              "Africa": {
+                "Abidjan": { "exemplarCity": "Abidjan" },
+                "Accra": { "exemplarCity": "Accra" },
+                "Addis_Ababa": { "exemplarCity": "Addis Ababa" },
+                "Algiers": { "exemplarCity": "Algiers" },
+                "Asmera": { "exemplarCity": "Asmara" },
+                "Bamako": { "exemplarCity": "Bamako" },
+                "Bangui": { "exemplarCity": "Bangui" },
+                "Banjul": { "exemplarCity": "Banjul" },
+                "Bissau": { "exemplarCity": "Bissau" },
+                "Blantyre": { "exemplarCity": "Blantyre" },
+                "Brazzaville": { "exemplarCity": "Brazzaville" },
+                "Bujumbura": { "exemplarCity": "Bujumbura" },
+                "Cairo": { "exemplarCity": "Cairo" },
+                "Casablanca": { "exemplarCity": "Casablanca" },
+                "Ceuta": { "exemplarCity": "Ceuta" },
+                "Conakry": { "exemplarCity": "Conakry" },
+                "Dakar": { "exemplarCity": "Dakar" },
+                "Dar_es_Salaam": { "exemplarCity": "Dar es Salaam" },
+                "Djibouti": { "exemplarCity": "Djibouti" },
+                "Douala": { "exemplarCity": "Douala" },
+                "El_Aaiun": { "exemplarCity": "El Aaiun" },
+                "Freetown": { "exemplarCity": "Freetown" },
+                "Gaborone": { "exemplarCity": "Gaborone" },
+                "Harare": { "exemplarCity": "Harare" },
+                "Johannesburg": { "exemplarCity": "Johannesburg" },
+                "Juba": { "exemplarCity": "Juba" },
+                "Kampala": { "exemplarCity": "Kampala" },
+                "Khartoum": { "exemplarCity": "Khartoum" },
+                "Kigali": { "exemplarCity": "Kigali" },
+                "Kinshasa": { "exemplarCity": "Kinshasa" },
+                "Lagos": { "exemplarCity": "Lagos" },
+                "Libreville": { "exemplarCity": "Libreville" },
+                "Lome": { "exemplarCity": "Lome" },
+                "Luanda": { "exemplarCity": "Luanda" },
+                "Lubumbashi": { "exemplarCity": "Lubumbashi" },
+                "Lusaka": { "exemplarCity": "Lusaka" },
+                "Malabo": { "exemplarCity": "Malabo" },
+                "Maputo": { "exemplarCity": "Maputo" },
+                "Maseru": { "exemplarCity": "Maseru" },
+                "Mbabane": { "exemplarCity": "Mbabane" },
+                "Mogadishu": { "exemplarCity": "Mogadishu" },
+                "Monrovia": { "exemplarCity": "Monrovia" },
+                "Nairobi": { "exemplarCity": "Nairobi" },
+                "Ndjamena": { "exemplarCity": "Ndjamena" },
+                "Niamey": { "exemplarCity": "Niamey" },
+                "Nouakchott": { "exemplarCity": "Nouakchott" },
+                "Ouagadougou": { "exemplarCity": "Ouagadougou" },
+                "Porto-Novo": { "exemplarCity": "Porto-Novo" },
+                "Sao_Tome": { "exemplarCity": "São Tomé" },
+                "Tripoli": { "exemplarCity": "Tripoli" },
+                "Tunis": { "exemplarCity": "Tunis" },
+                "Windhoek": { "exemplarCity": "Windhoek" }
+              },
+              "Asia": {
+                "Aden": { "exemplarCity": "Aden" },
+                "Almaty": { "exemplarCity": "Almaty" },
+                "Amman": { "exemplarCity": "Amman" },
+                "Anadyr": { "exemplarCity": "Anadyr" },
+                "Aqtau": { "exemplarCity": "Aqtau" },
+                "Aqtobe": { "exemplarCity": "Aqtobe" },
+                "Ashgabat": { "exemplarCity": "Ashgabat" },
+                "Atyrau": { "exemplarCity": "Atyrau" },
+                "Baghdad": { "exemplarCity": "Baghdad" },
+                "Bahrain": { "exemplarCity": "Bahrain" },
+                "Baku": { "exemplarCity": "Baku" },
+                "Bangkok": { "exemplarCity": "Bangkok" },
+                "Barnaul": { "exemplarCity": "Barnaul" },
+                "Beirut": { "exemplarCity": "Beirut" },
+                "Bishkek": { "exemplarCity": "Bishkek" },
+                "Brunei": { "exemplarCity": "Brunei" },
+                "Calcutta": { "exemplarCity": "Kolkata" },
+                "Chita": { "exemplarCity": "Chita" },
+                "Choibalsan": { "exemplarCity": "Choibalsan" },
+                "Colombo": { "exemplarCity": "Colombo" },
+                "Damascus": { "exemplarCity": "Damascus" },
+                "Dhaka": { "exemplarCity": "Dhaka" },
+                "Dili": { "exemplarCity": "Dili" },
+                "Dubai": { "exemplarCity": "Dubai" },
+                "Dushanbe": { "exemplarCity": "Dushanbe" },
+                "Famagusta": { "exemplarCity": "Famagusta" },
+                "Gaza": { "exemplarCity": "Gaza" },
+                "Hebron": { "exemplarCity": "Hebron" },
+                "Hong_Kong": { "exemplarCity": "Hong Kong" },
+                "Hovd": { "exemplarCity": "Hovd" },
+                "Irkutsk": { "exemplarCity": "Irkutsk" },
+                "Jakarta": { "exemplarCity": "Jakarta" },
+                "Jayapura": { "exemplarCity": "Jayapura" },
+                "Jerusalem": { "exemplarCity": "Jerusalem" },
+                "Kabul": { "exemplarCity": "Kabul" },
+                "Kamchatka": { "exemplarCity": "Kamchatka" },
+                "Karachi": { "exemplarCity": "Karachi" },
+                "Katmandu": { "exemplarCity": "Kathmandu" },
+                "Khandyga": { "exemplarCity": "Khandyga" },
+                "Krasnoyarsk": { "exemplarCity": "Krasnoyarsk" },
+                "Kuala_Lumpur": { "exemplarCity": "Kuala Lumpur" },
+                "Kuching": { "exemplarCity": "Kuching" },
+                "Kuwait": { "exemplarCity": "Kuwait" },
+                "Macau": { "exemplarCity": "Macao" },
+                "Magadan": { "exemplarCity": "Magadan" },
+                "Makassar": { "exemplarCity": "Makassar" },
+                "Manila": { "exemplarCity": "Manila" },
+                "Muscat": { "exemplarCity": "Muscat" },
+                "Nicosia": { "exemplarCity": "Nicosia" },
+                "Novokuznetsk": { "exemplarCity": "Novokuznetsk" },
+                "Novosibirsk": { "exemplarCity": "Novosibirsk" },
+                "Omsk": { "exemplarCity": "Omsk" },
+                "Oral": { "exemplarCity": "Oral" },
+                "Phnom_Penh": { "exemplarCity": "Phnom Penh" },
+                "Pontianak": { "exemplarCity": "Pontianak" },
+                "Pyongyang": { "exemplarCity": "Pyongyang" },
+                "Qatar": { "exemplarCity": "Qatar" },
+                "Qostanay": { "exemplarCity": "Kostanay" },
+                "Qyzylorda": { "exemplarCity": "Qyzylorda" },
+                "Rangoon": { "exemplarCity": "Yangon" },
+                "Riyadh": { "exemplarCity": "Riyadh" },
+                "Saigon": { "exemplarCity": "Ho Chi Minh City" },
+                "Sakhalin": { "exemplarCity": "Sakhalin" },
+                "Samarkand": { "exemplarCity": "Samarkand" },
+                "Seoul": { "exemplarCity": "Seoul" },
+                "Shanghai": { "exemplarCity": "Shanghai" },
+                "Singapore": { "exemplarCity": "Singapore" },
+                "Srednekolymsk": { "exemplarCity": "Srednekolymsk" },
+                "Taipei": { "exemplarCity": "Taipei" },
+                "Tashkent": { "exemplarCity": "Tashkent" },
+                "Tbilisi": { "exemplarCity": "Tbilisi" },
+                "Tehran": { "exemplarCity": "Tehran" },
+                "Thimphu": { "exemplarCity": "Thimphu" },
+                "Tokyo": { "exemplarCity": "Tokyo" },
+                "Tomsk": { "exemplarCity": "Tomsk" },
+                "Ulaanbaatar": { "exemplarCity": "Ulaanbaatar" },
+                "Urumqi": { "exemplarCity": "Urumqi" },
+                "Ust-Nera": { "exemplarCity": "Ust-Nera" },
+                "Vientiane": { "exemplarCity": "Vientiane" },
+                "Vladivostok": { "exemplarCity": "Vladivostok" },
+                "Yakutsk": { "exemplarCity": "Yakutsk" },
+                "Yekaterinburg": { "exemplarCity": "Yekaterinburg" },
+                "Yerevan": { "exemplarCity": "Yerevan" }
+              },
+              "Indian": {
+                "Antananarivo": { "exemplarCity": "Antananarivo" },
+                "Chagos": { "exemplarCity": "Chagos" },
+                "Christmas": { "exemplarCity": "Christmas" },
+                "Cocos": { "exemplarCity": "Cocos" },
+                "Comoro": { "exemplarCity": "Comoro" },
+                "Kerguelen": { "exemplarCity": "Kerguelen" },
+                "Mahe": { "exemplarCity": "Mahe" },
+                "Maldives": { "exemplarCity": "Maldives" },
+                "Mauritius": { "exemplarCity": "Mauritius" },
+                "Mayotte": { "exemplarCity": "Mayotte" },
+                "Reunion": { "exemplarCity": "Réunion" }
+              },
+              "Australia": {
+                "Adelaide": { "exemplarCity": "Adelaide" },
+                "Brisbane": { "exemplarCity": "Brisbane" },
+                "Broken_Hill": { "exemplarCity": "Broken Hill" },
+                "Currie": { "exemplarCity": "Currie" },
+                "Darwin": { "exemplarCity": "Darwin" },
+                "Eucla": { "exemplarCity": "Eucla" },
+                "Hobart": { "exemplarCity": "Hobart" },
+                "Lindeman": { "exemplarCity": "Lindeman" },
+                "Lord_Howe": { "exemplarCity": "Lord Howe" },
+                "Melbourne": { "exemplarCity": "Melbourne" },
+                "Perth": { "exemplarCity": "Perth" },
+                "Sydney": { "exemplarCity": "Sydney" }
+              },
+              "Pacific": {
+                "Apia": { "exemplarCity": "Apia" },
+                "Auckland": { "exemplarCity": "Auckland" },
+                "Bougainville": { "exemplarCity": "Bougainville" },
+                "Chatham": { "exemplarCity": "Chatham" },
+                "Easter": { "exemplarCity": "Easter" },
+                "Efate": { "exemplarCity": "Efate" },
+                "Enderbury": { "exemplarCity": "Enderbury" },
+                "Fakaofo": { "exemplarCity": "Fakaofo" },
+                "Fiji": { "exemplarCity": "Fiji" },
+                "Funafuti": { "exemplarCity": "Funafuti" },
+                "Galapagos": { "exemplarCity": "Galapagos" },
+                "Gambier": { "exemplarCity": "Gambier" },
+                "Guadalcanal": { "exemplarCity": "Guadalcanal" },
+                "Guam": { "exemplarCity": "Guam" },
+                "Johnston": { "exemplarCity": "Johnston" },
+                "Kiritimati": { "exemplarCity": "Kiritimati" },
+                "Kosrae": { "exemplarCity": "Kosrae" },
+                "Kwajalein": { "exemplarCity": "Kwajalein" },
+                "Majuro": { "exemplarCity": "Majuro" },
+                "Marquesas": { "exemplarCity": "Marquesas" },
+                "Midway": { "exemplarCity": "Midway" },
+                "Nauru": { "exemplarCity": "Nauru" },
+                "Niue": { "exemplarCity": "Niue" },
+                "Norfolk": { "exemplarCity": "Norfolk" },
+                "Noumea": { "exemplarCity": "Noumea" },
+                "Pago_Pago": { "exemplarCity": "Pago Pago" },
+                "Palau": { "exemplarCity": "Palau" },
+                "Pitcairn": { "exemplarCity": "Pitcairn" },
+                "Ponape": { "exemplarCity": "Pohnpei" },
+                "Port_Moresby": { "exemplarCity": "Port Moresby" },
+                "Rarotonga": { "exemplarCity": "Rarotonga" },
+                "Saipan": { "exemplarCity": "Saipan" },
+                "Tahiti": { "exemplarCity": "Tahiti" },
+                "Tarawa": { "exemplarCity": "Tarawa" },
+                "Tongatapu": { "exemplarCity": "Tongatapu" },
+                "Truk": { "exemplarCity": "Chuuk" },
+                "Wake": { "exemplarCity": "Wake" },
+                "Wallis": { "exemplarCity": "Wallis" }
+              },
+              "Arctic": { "Longyearbyen": { "exemplarCity": "Longyearbyen" } },
+              "Antarctica": {
+                "Casey": { "exemplarCity": "Casey" },
+                "Davis": { "exemplarCity": "Davis" },
+                "DumontDUrville": { "exemplarCity": "Dumont d’Urville" },
+                "Macquarie": { "exemplarCity": "Macquarie" },
+                "Mawson": { "exemplarCity": "Mawson" },
+                "McMurdo": { "exemplarCity": "McMurdo" },
+                "Palmer": { "exemplarCity": "Palmer" },
+                "Rothera": { "exemplarCity": "Rothera" },
+                "Syowa": { "exemplarCity": "Syowa" },
+                "Troll": { "exemplarCity": "Troll" },
+                "Vostok": { "exemplarCity": "Vostok" }
+              },
+              "Etc": {
+                "UTC": {
+                  "long": { "standard": "Coordinated Universal Time" },
+                  "short": { "standard": "UTC" }
+                },
+                "Unknown": { "exemplarCity": "Unknown City" }
+              }
+            },
+            "metazone": {
+              "Acre": {
+                "long": {
+                  "generic": "Acre Time",
+                  "standard": "Acre Standard Time",
+                  "daylight": "Acre Summer Time"
+                }
+              },
+              "Afghanistan": { "long": { "standard": "Afghanistan Time" } },
+              "Africa_Central": { "long": { "standard": "Central Africa Time" } },
+              "Africa_Eastern": { "long": { "standard": "East Africa Time" } },
+              "Africa_Southern": {
+                "long": { "standard": "South Africa Standard Time" }
+              },
+              "Africa_Western": {
+                "long": {
+                  "generic": "West Africa Time",
+                  "standard": "West Africa Standard Time",
+                  "daylight": "West Africa Summer Time"
+                }
+              },
+              "Alaska": {
+                "long": {
+                  "generic": "Alaska Time",
+                  "standard": "Alaska Standard Time",
+                  "daylight": "Alaska Daylight Time"
+                }
+              },
+              "Almaty": {
+                "long": {
+                  "generic": "Almaty Time",
+                  "standard": "Almaty Standard Time",
+                  "daylight": "Almaty Summer Time"
+                }
+              },
+              "Amazon": {
+                "long": {
+                  "generic": "Amazon Time",
+                  "standard": "Amazon Standard Time",
+                  "daylight": "Amazon Summer Time"
+                }
+              },
+              "America_Central": {
+                "long": {
+                  "generic": "Central Time",
+                  "standard": "Central Standard Time",
+                  "daylight": "Central Daylight Time"
+                }
+              },
+              "America_Eastern": {
+                "long": {
+                  "generic": "Eastern Time",
+                  "standard": "Eastern Standard Time",
+                  "daylight": "Eastern Daylight Time"
+                }
+              },
+              "America_Mountain": {
+                "long": {
+                  "generic": "Mountain Time",
+                  "standard": "Mountain Standard Time",
+                  "daylight": "Mountain Daylight Time"
+                }
+              },
+              "America_Pacific": {
+                "long": {
+                  "generic": "Pacific Time",
+                  "standard": "Pacific Standard Time",
+                  "daylight": "Pacific Daylight Time"
+                }
+              },
+              "Anadyr": {
+                "long": {
+                  "generic": "Anadyr Time",
+                  "standard": "Anadyr Standard Time",
+                  "daylight": "Anadyr Summer Time"
+                }
+              },
+              "Apia": {
+                "long": {
+                  "generic": "Apia Time",
+                  "standard": "Apia Standard Time",
+                  "daylight": "Apia Daylight Time"
+                }
+              },
+              "Aqtau": {
+                "long": {
+                  "generic": "Aqtau Time",
+                  "standard": "Aqtau Standard Time",
+                  "daylight": "Aqtau Summer Time"
+                }
+              },
+              "Aqtobe": {
+                "long": {
+                  "generic": "Aqtobe Time",
+                  "standard": "Aqtobe Standard Time",
+                  "daylight": "Aqtobe Summer Time"
+                }
+              },
+              "Arabian": {
+                "long": {
+                  "generic": "Arabian Time",
+                  "standard": "Arabian Standard Time",
+                  "daylight": "Arabian Daylight Time"
+                }
+              },
+              "Argentina": {
+                "long": {
+                  "generic": "Argentina Time",
+                  "standard": "Argentina Standard Time",
+                  "daylight": "Argentina Summer Time"
+                }
+              },
+              "Argentina_Western": {
+                "long": {
+                  "generic": "Western Argentina Time",
+                  "standard": "Western Argentina Standard Time",
+                  "daylight": "Western Argentina Summer Time"
+                }
+              },
+              "Armenia": {
+                "long": {
+                  "generic": "Armenia Time",
+                  "standard": "Armenia Standard Time",
+                  "daylight": "Armenia Summer Time"
+                }
+              },
+              "Atlantic": {
+                "long": {
+                  "generic": "Atlantic Time",
+                  "standard": "Atlantic Standard Time",
+                  "daylight": "Atlantic Daylight Time"
+                }
+              },
+              "Australia_Central": {
+                "long": {
+                  "generic": "Central Australia Time",
+                  "standard": "Australian Central Standard Time",
+                  "daylight": "Australian Central Daylight Time"
+                }
+              },
+              "Australia_CentralWestern": {
+                "long": {
+                  "generic": "Australian Central Western Time",
+                  "standard": "Australian Central Western Standard Time",
+                  "daylight": "Australian Central Western Daylight Time"
+                }
+              },
+              "Australia_Eastern": {
+                "long": {
+                  "generic": "Eastern Australia Time",
+                  "standard": "Australian Eastern Standard Time",
+                  "daylight": "Australian Eastern Daylight Time"
+                }
+              },
+              "Australia_Western": {
+                "long": {
+                  "generic": "Western Australia Time",
+                  "standard": "Australian Western Standard Time",
+                  "daylight": "Australian Western Daylight Time"
+                }
+              },
+              "Azerbaijan": {
+                "long": {
+                  "generic": "Azerbaijan Time",
+                  "standard": "Azerbaijan Standard Time",
+                  "daylight": "Azerbaijan Summer Time"
+                }
+              },
+              "Azores": {
+                "long": {
+                  "generic": "Azores Time",
+                  "standard": "Azores Standard Time",
+                  "daylight": "Azores Summer Time"
+                }
+              },
+              "Bangladesh": {
+                "long": {
+                  "generic": "Bangladesh Time",
+                  "standard": "Bangladesh Standard Time",
+                  "daylight": "Bangladesh Summer Time"
+                }
+              },
+              "Bhutan": { "long": { "standard": "Bhutan Time" } },
+              "Bolivia": { "long": { "standard": "Bolivia Time" } },
+              "Brasilia": {
+                "long": {
+                  "generic": "Brasilia Time",
+                  "standard": "Brasilia Standard Time",
+                  "daylight": "Brasilia Summer Time"
+                }
+              },
+              "Brunei": { "long": { "standard": "Brunei Darussalam Time" } },
+              "Cape_Verde": {
+                "long": {
+                  "generic": "Cape Verde Time",
+                  "standard": "Cape Verde Standard Time",
+                  "daylight": "Cape Verde Summer Time"
+                }
+              },
+              "Casey": { "long": { "standard": "Casey Time" } },
+              "Chamorro": { "long": { "standard": "Chamorro Standard Time" } },
+              "Chatham": {
+                "long": {
+                  "generic": "Chatham Time",
+                  "standard": "Chatham Standard Time",
+                  "daylight": "Chatham Daylight Time"
+                }
+              },
+              "Chile": {
+                "long": {
+                  "generic": "Chile Time",
+                  "standard": "Chile Standard Time",
+                  "daylight": "Chile Summer Time"
+                }
+              },
+              "China": {
+                "long": {
+                  "generic": "China Time",
+                  "standard": "China Standard Time",
+                  "daylight": "China Daylight Time"
+                }
+              },
+              "Choibalsan": {
+                "long": {
+                  "generic": "Choibalsan Time",
+                  "standard": "Choibalsan Standard Time",
+                  "daylight": "Choibalsan Summer Time"
+                }
+              },
+              "Christmas": { "long": { "standard": "Christmas Island Time" } },
+              "Cocos": { "long": { "standard": "Cocos Islands Time" } },
+              "Colombia": {
+                "long": {
+                  "generic": "Colombia Time",
+                  "standard": "Colombia Standard Time",
+                  "daylight": "Colombia Summer Time"
+                }
+              },
+              "Cook": {
+                "long": {
+                  "generic": "Cook Islands Time",
+                  "standard": "Cook Islands Standard Time",
+                  "daylight": "Cook Islands Half Summer Time"
+                }
+              },
+              "Cuba": {
+                "long": {
+                  "generic": "Cuba Time",
+                  "standard": "Cuba Standard Time",
+                  "daylight": "Cuba Daylight Time"
+                }
+              },
+              "Davis": { "long": { "standard": "Davis Time" } },
+              "DumontDUrville": {
+                "long": { "standard": "Dumont-d’Urville Time" }
+              },
+              "East_Timor": { "long": { "standard": "East Timor Time" } },
+              "Easter": {
+                "long": {
+                  "generic": "Easter Island Time",
+                  "standard": "Easter Island Standard Time",
+                  "daylight": "Easter Island Summer Time"
+                }
+              },
+              "Ecuador": { "long": { "standard": "Ecuador Time" } },
+              "Europe_Central": {
+                "long": {
+                  "generic": "Central European Time",
+                  "standard": "Central European Standard Time",
+                  "daylight": "Central European Summer Time"
+                },
+                "short": {
+                  "generic": "CET",
+                  "standard": "CET",
+                  "daylight": "CEST"
+                }
+              },
+              "Europe_Eastern": {
+                "long": {
+                  "generic": "Eastern European Time",
+                  "standard": "Eastern European Standard Time",
+                  "daylight": "Eastern European Summer Time"
+                },
+                "short": {
+                  "generic": "EET",
+                  "standard": "EET",
+                  "daylight": "EEST"
+                }
+              },
+              "Europe_Further_Eastern": {
+                "long": { "standard": "Further-eastern European Time" }
+              },
+              "Europe_Western": {
+                "long": {
+                  "generic": "Western European Time",
+                  "standard": "Western European Standard Time",
+                  "daylight": "Western European Summer Time"
+                },
+                "short": {
+                  "generic": "WET",
+                  "standard": "WET",
+                  "daylight": "WEST"
+                }
+              },
+              "Falkland": {
+                "long": {
+                  "generic": "Falkland Islands Time",
+                  "standard": "Falkland Islands Standard Time",
+                  "daylight": "Falkland Islands Summer Time"
+                }
+              },
+              "Fiji": {
+                "long": {
+                  "generic": "Fiji Time",
+                  "standard": "Fiji Standard Time",
+                  "daylight": "Fiji Summer Time"
+                }
+              },
+              "French_Guiana": { "long": { "standard": "French Guiana Time" } },
+              "French_Southern": {
+                "long": { "standard": "French Southern \u0026 Antarctic Time" }
+              },
+              "Galapagos": { "long": { "standard": "Galapagos Time" } },
+              "Gambier": { "long": { "standard": "Gambier Time" } },
+              "Georgia": {
+                "long": {
+                  "generic": "Georgia Time",
+                  "standard": "Georgia Standard Time",
+                  "daylight": "Georgia Summer Time"
+                }
+              },
+              "Gilbert_Islands": {
+                "long": { "standard": "Gilbert Islands Time" }
+              },
+              "GMT": {
+                "long": { "standard": "Greenwich Mean Time" },
+                "short": { "standard": "GMT" }
+              },
+              "Greenland_Eastern": {
+                "long": {
+                  "generic": "East Greenland Time",
+                  "standard": "East Greenland Standard Time",
+                  "daylight": "East Greenland Summer Time"
+                }
+              },
+              "Greenland_Western": {
+                "long": {
+                  "generic": "West Greenland Time",
+                  "standard": "West Greenland Standard Time",
+                  "daylight": "West Greenland Summer Time"
+                }
+              },
+              "Guam": { "long": { "standard": "Guam Standard Time" } },
+              "Gulf": { "long": { "standard": "Gulf Standard Time" } },
+              "Guyana": { "long": { "standard": "Guyana Time" } },
+              "Hawaii_Aleutian": {
+                "long": {
+                  "generic": "Hawaii-Aleutian Time",
+                  "standard": "Hawaii-Aleutian Standard Time",
+                  "daylight": "Hawaii-Aleutian Daylight Time"
+                }
+              },
+              "Hong_Kong": {
+                "long": {
+                  "generic": "Hong Kong Time",
+                  "standard": "Hong Kong Standard Time",
+                  "daylight": "Hong Kong Summer Time"
+                }
+              },
+              "Hovd": {
+                "long": {
+                  "generic": "Hovd Time",
+                  "standard": "Hovd Standard Time",
+                  "daylight": "Hovd Summer Time"
+                }
+              },
+              "India": { "long": { "standard": "India Standard Time" } },
+              "Indian_Ocean": { "long": { "standard": "Indian Ocean Time" } },
+              "Indochina": { "long": { "standard": "Indochina Time" } },
+              "Indonesia_Central": {
+                "long": { "standard": "Central Indonesia Time" }
+              },
+              "Indonesia_Eastern": {
+                "long": { "standard": "Eastern Indonesia Time" }
+              },
+              "Indonesia_Western": {
+                "long": { "standard": "Western Indonesia Time" }
+              },
+              "Iran": {
+                "long": {
+                  "generic": "Iran Time",
+                  "standard": "Iran Standard Time",
+                  "daylight": "Iran Daylight Time"
+                }
+              },
+              "Irkutsk": {
+                "long": {
+                  "generic": "Irkutsk Time",
+                  "standard": "Irkutsk Standard Time",
+                  "daylight": "Irkutsk Summer Time"
+                }
+              },
+              "Israel": {
+                "long": {
+                  "generic": "Israel Time",
+                  "standard": "Israel Standard Time",
+                  "daylight": "Israel Daylight Time"
+                }
+              },
+              "Japan": {
+                "long": {
+                  "generic": "Japan Time",
+                  "standard": "Japan Standard Time",
+                  "daylight": "Japan Daylight Time"
+                }
+              },
+              "Kamchatka": {
+                "long": {
+                  "generic": "Petropavlovsk-Kamchatski Time",
+                  "standard": "Petropavlovsk-Kamchatski Standard Time",
+                  "daylight": "Petropavlovsk-Kamchatski Summer Time"
+                }
+              },
+              "Kazakhstan_Eastern": {
+                "long": { "standard": "East Kazakhstan Time" }
+              },
+              "Kazakhstan_Western": {
+                "long": { "standard": "West Kazakhstan Time" }
+              },
+              "Korea": {
+                "long": {
+                  "generic": "Korean Time",
+                  "standard": "Korean Standard Time",
+                  "daylight": "Korean Daylight Time"
+                }
+              },
+              "Kosrae": { "long": { "standard": "Kosrae Time" } },
+              "Krasnoyarsk": {
+                "long": {
+                  "generic": "Krasnoyarsk Time",
+                  "standard": "Krasnoyarsk Standard Time",
+                  "daylight": "Krasnoyarsk Summer Time"
+                }
+              },
+              "Kyrgystan": { "long": { "standard": "Kyrgyzstan Time" } },
+              "Lanka": { "long": { "standard": "Lanka Time" } },
+              "Line_Islands": { "long": { "standard": "Line Islands Time" } },
+              "Lord_Howe": {
+                "long": {
+                  "generic": "Lord Howe Time",
+                  "standard": "Lord Howe Standard Time",
+                  "daylight": "Lord Howe Daylight Time"
+                }
+              },
+              "Macau": {
+                "long": {
+                  "generic": "Macao Time",
+                  "standard": "Macao Standard Time",
+                  "daylight": "Macao Summer Time"
+                }
+              },
+              "Macquarie": { "long": { "standard": "Macquarie Island Time" } },
+              "Magadan": {
+                "long": {
+                  "generic": "Magadan Time",
+                  "standard": "Magadan Standard Time",
+                  "daylight": "Magadan Summer Time"
+                }
+              },
+              "Malaysia": { "long": { "standard": "Malaysia Time" } },
+              "Maldives": { "long": { "standard": "Maldives Time" } },
+              "Marquesas": { "long": { "standard": "Marquesas Time" } },
+              "Marshall_Islands": {
+                "long": { "standard": "Marshall Islands Time" }
+              },
+              "Mauritius": {
+                "long": {
+                  "generic": "Mauritius Time",
+                  "standard": "Mauritius Standard Time",
+                  "daylight": "Mauritius Summer Time"
+                }
+              },
+              "Mawson": { "long": { "standard": "Mawson Time" } },
+              "Mexico_Northwest": {
+                "long": {
+                  "generic": "Northwest Mexico Time",
+                  "standard": "Northwest Mexico Standard Time",
+                  "daylight": "Northwest Mexico Daylight Time"
+                }
+              },
+              "Mexico_Pacific": {
+                "long": {
+                  "generic": "Mexican Pacific Time",
+                  "standard": "Mexican Pacific Standard Time",
+                  "daylight": "Mexican Pacific Daylight Time"
+                }
+              },
+              "Mongolia": {
+                "long": {
+                  "generic": "Ulaanbaatar Time",
+                  "standard": "Ulaanbaatar Standard Time",
+                  "daylight": "Ulaanbaatar Summer Time"
+                }
+              },
+              "Moscow": {
+                "long": {
+                  "generic": "Moscow Time",
+                  "standard": "Moscow Standard Time",
+                  "daylight": "Moscow Summer Time"
+                }
+              },
+              "Myanmar": { "long": { "standard": "Myanmar Time" } },
+              "Nauru": { "long": { "standard": "Nauru Time" } },
+              "Nepal": { "long": { "standard": "Nepal Time" } },
+              "New_Caledonia": {
+                "long": {
+                  "generic": "New Caledonia Time",
+                  "standard": "New Caledonia Standard Time",
+                  "daylight": "New Caledonia Summer Time"
+                }
+              },
+              "New_Zealand": {
+                "long": {
+                  "generic": "New Zealand Time",
+                  "standard": "New Zealand Standard Time",
+                  "daylight": "New Zealand Daylight Time"
+                }
+              },
+              "Newfoundland": {
+                "long": {
+                  "generic": "Newfoundland Time",
+                  "standard": "Newfoundland Standard Time",
+                  "daylight": "Newfoundland Daylight Time"
+                }
+              },
+              "Niue": { "long": { "standard": "Niue Time" } },
+              "Norfolk": { "long": { "standard": "Norfolk Island Time" } },
+              "Noronha": {
+                "long": {
+                  "generic": "Fernando de Noronha Time",
+                  "standard": "Fernando de Noronha Standard Time",
+                  "daylight": "Fernando de Noronha Summer Time"
+                }
+              },
+              "North_Mariana": {
+                "long": { "standard": "North Mariana Islands Time" }
+              },
+              "Novosibirsk": {
+                "long": {
+                  "generic": "Novosibirsk Time",
+                  "standard": "Novosibirsk Standard Time",
+                  "daylight": "Novosibirsk Summer Time"
+                }
+              },
+              "Omsk": {
+                "long": {
+                  "generic": "Omsk Time",
+                  "standard": "Omsk Standard Time",
+                  "daylight": "Omsk Summer Time"
+                }
+              },
+              "Pakistan": {
+                "long": {
+                  "generic": "Pakistan Time",
+                  "standard": "Pakistan Standard Time",
+                  "daylight": "Pakistan Summer Time"
+                }
+              },
+              "Palau": { "long": { "standard": "Palau Time" } },
+              "Papua_New_Guinea": {
+                "long": { "standard": "Papua New Guinea Time" }
+              },
+              "Paraguay": {
+                "long": {
+                  "generic": "Paraguay Time",
+                  "standard": "Paraguay Standard Time",
+                  "daylight": "Paraguay Summer Time"
+                }
+              },
+              "Peru": {
+                "long": {
+                  "generic": "Peru Time",
+                  "standard": "Peru Standard Time",
+                  "daylight": "Peru Summer Time"
+                }
+              },
+              "Philippines": {
+                "long": {
+                  "generic": "Philippine Time",
+                  "standard": "Philippine Standard Time",
+                  "daylight": "Philippine Summer Time"
+                }
+              },
+              "Phoenix_Islands": {
+                "long": { "standard": "Phoenix Islands Time" }
+              },
+              "Pierre_Miquelon": {
+                "long": {
+                  "generic": "St Pierre \u0026 Miquelon Time",
+                  "standard": "St Pierre \u0026 Miquelon Standard Time",
+                  "daylight": "St Pierre \u0026 Miquelon Daylight Time"
+                }
+              },
+              "Pitcairn": { "long": { "standard": "Pitcairn Time" } },
+              "Ponape": { "long": { "standard": "Ponape Time" } },
+              "Pyongyang": { "long": { "standard": "Pyongyang Time" } },
+              "Qyzylorda": {
+                "long": {
+                  "generic": "Qyzylorda Time",
+                  "standard": "Qyzylorda Standard Time",
+                  "daylight": "Qyzylorda Summer Time"
+                }
+              },
+              "Reunion": { "long": { "standard": "Réunion Time" } },
+              "Rothera": { "long": { "standard": "Rothera Time" } },
+              "Sakhalin": {
+                "long": {
+                  "generic": "Sakhalin Time",
+                  "standard": "Sakhalin Standard Time",
+                  "daylight": "Sakhalin Summer Time"
+                }
+              },
+              "Samara": {
+                "long": {
+                  "generic": "Samara Time",
+                  "standard": "Samara Standard Time",
+                  "daylight": "Samara Summer Time"
+                }
+              },
+              "Samoa": {
+                "long": {
+                  "generic": "Samoa Time",
+                  "standard": "Samoa Standard Time",
+                  "daylight": "Samoa Daylight Time"
+                }
+              },
+              "Seychelles": { "long": { "standard": "Seychelles Time" } },
+              "Singapore": { "long": { "standard": "Singapore Standard Time" } },
+              "Solomon": { "long": { "standard": "Solomon Islands Time" } },
+              "South_Georgia": { "long": { "standard": "South Georgia Time" } },
+              "Suriname": { "long": { "standard": "Suriname Time" } },
+              "Syowa": { "long": { "standard": "Syowa Time" } },
+              "Tahiti": { "long": { "standard": "Tahiti Time" } },
+              "Taipei": {
+                "long": {
+                  "generic": "Taipei Time",
+                  "standard": "Taipei Standard Time",
+                  "daylight": "Taipei Daylight Time"
+                }
+              },
+              "Tajikistan": { "long": { "standard": "Tajikistan Time" } },
+              "Tokelau": { "long": { "standard": "Tokelau Time" } },
+              "Tonga": {
+                "long": {
+                  "generic": "Tonga Time",
+                  "standard": "Tonga Standard Time",
+                  "daylight": "Tonga Summer Time"
+                }
+              },
+              "Truk": { "long": { "standard": "Chuuk Time" } },
+              "Turkmenistan": {
+                "long": {
+                  "generic": "Turkmenistan Time",
+                  "standard": "Turkmenistan Standard Time",
+                  "daylight": "Turkmenistan Summer Time"
+                }
+              },
+              "Tuvalu": { "long": { "standard": "Tuvalu Time" } },
+              "Uruguay": {
+                "long": {
+                  "generic": "Uruguay Time",
+                  "standard": "Uruguay Standard Time",
+                  "daylight": "Uruguay Summer Time"
+                }
+              },
+              "Uzbekistan": {
+                "long": {
+                  "generic": "Uzbekistan Time",
+                  "standard": "Uzbekistan Standard Time",
+                  "daylight": "Uzbekistan Summer Time"
+                }
+              },
+              "Vanuatu": {
+                "long": {
+                  "generic": "Vanuatu Time",
+                  "standard": "Vanuatu Standard Time",
+                  "daylight": "Vanuatu Summer Time"
+                }
+              },
+              "Venezuela": { "long": { "standard": "Venezuela Time" } },
+              "Vladivostok": {
+                "long": {
+                  "generic": "Vladivostok Time",
+                  "standard": "Vladivostok Standard Time",
+                  "daylight": "Vladivostok Summer Time"
+                }
+              },
+              "Volgograd": {
+                "long": {
+                  "generic": "Volgograd Time",
+                  "standard": "Volgograd Standard Time",
+                  "daylight": "Volgograd Summer Time"
+                }
+              },
+              "Vostok": { "long": { "standard": "Vostok Time" } },
+              "Wake": { "long": { "standard": "Wake Island Time" } },
+              "Wallis": { "long": { "standard": "Wallis \u0026 Futuna Time" } },
+              "Yakutsk": {
+                "long": {
+                  "generic": "Yakutsk Time",
+                  "standard": "Yakutsk Standard Time",
+                  "daylight": "Yakutsk Summer Time"
+                }
+              },
+              "Yekaterinburg": {
+                "long": {
+                  "generic": "Yekaterinburg Time",
+                  "standard": "Yekaterinburg Standard Time",
+                  "daylight": "Yekaterinburg Summer Time"
+                }
+              }
+            }
+          },
+          "fields": {
+            "era": { "displayName": "era" },
+            "era-short": { "displayName": "era" },
+            "era-narrow": { "displayName": "era" },
+            "year": {
+              "displayName": "year",
+              "relative-type--1": "last year",
+              "relative-type-0": "this year",
+              "relative-type-1": "next year",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} year",
+                "relativeTimePattern-count-other": "in {0} years"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} year ago",
+                "relativeTimePattern-count-other": "{0} years ago"
+              }
+            },
+            "year-short": {
+              "displayName": "yr",
+              "relative-type--1": "last yr",
+              "relative-type-0": "this yr",
+              "relative-type-1": "next yr",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} yr",
+                "relativeTimePattern-count-other": "in {0} yr"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} yr ago",
+                "relativeTimePattern-count-other": "{0} yr ago"
+              }
+            },
+            "year-narrow": {
+              "displayName": "yr",
+              "relative-type--1": "last yr",
+              "relative-type-0": "this yr",
+              "relative-type-1": "next yr",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} yr",
+                "relativeTimePattern-count-other": "in {0} yr"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} yr ago",
+                "relativeTimePattern-count-other": "{0} yr ago"
+              }
+            },
+            "quarter": {
+              "displayName": "quarter",
+              "relative-type--1": "last quarter",
+              "relative-type-0": "this quarter",
+              "relative-type-1": "next quarter",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} quarter",
+                "relativeTimePattern-count-other": "in {0} quarters"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} quarter ago",
+                "relativeTimePattern-count-other": "{0} quarters ago"
+              }
+            },
+            "quarter-short": {
+              "displayName": "qtr",
+              "relative-type--1": "last qtr.",
+              "relative-type-0": "this qtr.",
+              "relative-type-1": "next qtr.",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} qtr",
+                "relativeTimePattern-count-other": "in {0} qtr"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} qtr ago",
+                "relativeTimePattern-count-other": "{0} qtr ago"
+              }
+            },
+            "quarter-narrow": {
+              "displayName": "qtr",
+              "relative-type--1": "last qtr.",
+              "relative-type-0": "this qtr.",
+              "relative-type-1": "next qtr.",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} qtr",
+                "relativeTimePattern-count-other": "in {0} qtr"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} qtr ago",
+                "relativeTimePattern-count-other": "{0} qtr ago"
+              }
+            },
+            "month": {
+              "displayName": "month",
+              "relative-type--1": "last month",
+              "relative-type-0": "this month",
+              "relative-type-1": "next month",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} month",
+                "relativeTimePattern-count-other": "in {0} months"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} month ago",
+                "relativeTimePattern-count-other": "{0} months ago"
+              }
+            },
+            "month-short": {
+              "displayName": "mo",
+              "relative-type--1": "last mo",
+              "relative-type-0": "this mo",
+              "relative-type-1": "next mo",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} mo",
+                "relativeTimePattern-count-other": "in {0} mo"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} mo ago",
+                "relativeTimePattern-count-other": "{0} mo ago"
+              }
+            },
+            "month-narrow": {
+              "displayName": "mo",
+              "relative-type--1": "last mo",
+              "relative-type-0": "this mo",
+              "relative-type-1": "next mo",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} mo",
+                "relativeTimePattern-count-other": "in {0} mo"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} mo ago",
+                "relativeTimePattern-count-other": "{0} mo ago"
+              }
+            },
+            "week": {
+              "displayName": "week",
+              "relative-type--1": "last week",
+              "relative-type-0": "this week",
+              "relative-type-1": "next week",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} week",
+                "relativeTimePattern-count-other": "in {0} weeks"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} week ago",
+                "relativeTimePattern-count-other": "{0} weeks ago"
+              },
+              "relativePeriod": "the week of {0}"
+            },
+            "week-short": {
+              "displayName": "wk",
+              "relative-type--1": "last wk",
+              "relative-type-0": "this wk",
+              "relative-type-1": "next wk",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} wk",
+                "relativeTimePattern-count-other": "in {0} wk"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} wk ago",
+                "relativeTimePattern-count-other": "{0} wk ago"
+              },
+              "relativePeriod": "the week of {0}"
+            },
+            "week-narrow": {
+              "displayName": "wk",
+              "relative-type--1": "last wk",
+              "relative-type-0": "this wk",
+              "relative-type-1": "next wk",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} wk",
+                "relativeTimePattern-count-other": "in {0} wk"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} wk ago",
+                "relativeTimePattern-count-other": "{0} wk ago"
+              },
+              "relativePeriod": "the week of {0}"
+            },
+            "weekOfMonth": { "displayName": "week of month" },
+            "weekOfMonth-short": { "displayName": "wk of mo" },
+            "weekOfMonth-narrow": { "displayName": "wk of mo" },
+            "day": {
+              "displayName": "day",
+              "relative-type--1": "yesterday",
+              "relative-type-0": "today",
+              "relative-type-1": "tomorrow",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} day",
+                "relativeTimePattern-count-other": "in {0} days"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} day ago",
+                "relativeTimePattern-count-other": "{0} days ago"
+              }
+            },
+            "day-short": {
+              "displayName": "day",
+              "relative-type--1": "yesterday",
+              "relative-type-0": "today",
+              "relative-type-1": "tomorrow",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} day",
+                "relativeTimePattern-count-other": "in {0} days"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} day ago",
+                "relativeTimePattern-count-other": "{0} days ago"
+              }
+            },
+            "day-narrow": {
+              "displayName": "day",
+              "relative-type--1": "yesterday",
+              "relative-type-0": "today",
+              "relative-type-1": "tomorrow",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} day",
+                "relativeTimePattern-count-other": "in {0} days"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} day ago",
+                "relativeTimePattern-count-other": "{0} days ago"
+              }
+            },
+            "dayOfYear": { "displayName": "day of year" },
+            "dayOfYear-short": { "displayName": "day of yr" },
+            "dayOfYear-narrow": { "displayName": "day of yr" },
+            "weekday": { "displayName": "day of the week" },
+            "weekday-short": { "displayName": "day of wk" },
+            "weekday-narrow": { "displayName": "day of wk" },
+            "weekdayOfMonth": { "displayName": "weekday of the month" },
+            "weekdayOfMonth-short": { "displayName": "wkday of mo" },
+            "weekdayOfMonth-narrow": { "displayName": "wkday of mo" },
+            "sun": {
+              "relative-type--1": "last Sunday",
+              "relative-type-0": "this Sunday",
+              "relative-type-1": "next Sunday",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} Sunday",
+                "relativeTimePattern-count-other": "in {0} Sundays"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} Sunday ago",
+                "relativeTimePattern-count-other": "{0} Sundays ago"
+              }
+            },
+            "sun-short": {
+              "relative-type--1": "last Sun",
+              "relative-type-0": "this Sun",
+              "relative-type-1": "next Sun",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} Sun",
+                "relativeTimePattern-count-other": "in {0} Sun"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} Sun ago",
+                "relativeTimePattern-count-other": "{0} Sun ago"
+              }
+            },
+            "sun-narrow": {
+              "relative-type--1": "last Su",
+              "relative-type-0": "this Su",
+              "relative-type-1": "next Su",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} Su",
+                "relativeTimePattern-count-other": "in {0} Su"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} Su ago",
+                "relativeTimePattern-count-other": "{0} Su ago"
+              }
+            },
+            "mon": {
+              "relative-type--1": "last Monday",
+              "relative-type-0": "this Monday",
+              "relative-type-1": "next Monday",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} Monday",
+                "relativeTimePattern-count-other": "in {0} Mondays"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} Monday ago",
+                "relativeTimePattern-count-other": "{0} Mondays ago"
+              }
+            },
+            "mon-short": {
+              "relative-type--1": "last Mon",
+              "relative-type-0": "this Mon",
+              "relative-type-1": "next Mon",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} Mon",
+                "relativeTimePattern-count-other": "in {0} Mon"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} Mon ago",
+                "relativeTimePattern-count-other": "{0} Mon ago"
+              }
+            },
+            "mon-narrow": {
+              "relative-type--1": "last M",
+              "relative-type-0": "this M",
+              "relative-type-1": "next M",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} M",
+                "relativeTimePattern-count-other": "in {0} M"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} M ago",
+                "relativeTimePattern-count-other": "{0} M ago"
+              }
+            },
+            "tue": {
+              "relative-type--1": "last Tuesday",
+              "relative-type-0": "this Tuesday",
+              "relative-type-1": "next Tuesday",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} Tuesday",
+                "relativeTimePattern-count-other": "in {0} Tuesdays"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} Tuesday ago",
+                "relativeTimePattern-count-other": "{0} Tuesdays ago"
+              }
+            },
+            "tue-short": {
+              "relative-type--1": "last Tue",
+              "relative-type-0": "this Tue",
+              "relative-type-1": "next Tue",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} Tue",
+                "relativeTimePattern-count-other": "in {0} Tue"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} Tue ago",
+                "relativeTimePattern-count-other": "{0} Tue ago"
+              }
+            },
+            "tue-narrow": {
+              "relative-type--1": "last Tu",
+              "relative-type-0": "this Tu",
+              "relative-type-1": "next Tu",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} Tu",
+                "relativeTimePattern-count-other": "in {0} Tu"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} Tu ago",
+                "relativeTimePattern-count-other": "{0} Tu ago"
+              }
+            },
+            "wed": {
+              "relative-type--1": "last Wednesday",
+              "relative-type-0": "this Wednesday",
+              "relative-type-1": "next Wednesday",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} Wednesday",
+                "relativeTimePattern-count-other": "in {0} Wednesdays"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} Wednesday ago",
+                "relativeTimePattern-count-other": "{0} Wednesdays ago"
+              }
+            },
+            "wed-short": {
+              "relative-type--1": "last Wed",
+              "relative-type-0": "this Wed",
+              "relative-type-1": "next Wed",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} Wed",
+                "relativeTimePattern-count-other": "in {0} Wed"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} Wed ago",
+                "relativeTimePattern-count-other": "{0} Wed ago"
+              }
+            },
+            "wed-narrow": {
+              "relative-type--1": "last W",
+              "relative-type-0": "this W",
+              "relative-type-1": "next W",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} W",
+                "relativeTimePattern-count-other": "in {0} W"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} W ago",
+                "relativeTimePattern-count-other": "{0} W ago"
+              }
+            },
+            "thu": {
+              "relative-type--1": "last Thursday",
+              "relative-type-0": "this Thursday",
+              "relative-type-1": "next Thursday",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} Thursday",
+                "relativeTimePattern-count-other": "in {0} Thursdays"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} Thursday ago",
+                "relativeTimePattern-count-other": "{0} Thursdays ago"
+              }
+            },
+            "thu-short": {
+              "relative-type--1": "last Thu",
+              "relative-type-0": "this Thu",
+              "relative-type-1": "next Thu",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} Thu",
+                "relativeTimePattern-count-other": "in {0} Thu"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} Thu ago",
+                "relativeTimePattern-count-other": "{0} Thu ago"
+              }
+            },
+            "thu-narrow": {
+              "relative-type--1": "last Th",
+              "relative-type-0": "this Th",
+              "relative-type-1": "next Th",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} Th",
+                "relativeTimePattern-count-other": "in {0} Th"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} Th ago",
+                "relativeTimePattern-count-other": "{0} Th ago"
+              }
+            },
+            "fri": {
+              "relative-type--1": "last Friday",
+              "relative-type-0": "this Friday",
+              "relative-type-1": "next Friday",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} Friday",
+                "relativeTimePattern-count-other": "in {0} Fridays"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} Friday ago",
+                "relativeTimePattern-count-other": "{0} Fridays ago"
+              }
+            },
+            "fri-short": {
+              "relative-type--1": "last Fri",
+              "relative-type-0": "this Fri",
+              "relative-type-1": "next Fri",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} Fri",
+                "relativeTimePattern-count-other": "in {0} Fri"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} Fri ago",
+                "relativeTimePattern-count-other": "{0} Fri ago"
+              }
+            },
+            "fri-narrow": {
+              "relative-type--1": "last F",
+              "relative-type-0": "this F",
+              "relative-type-1": "next F",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} F",
+                "relativeTimePattern-count-other": "in {0} F"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} F ago",
+                "relativeTimePattern-count-other": "{0} F ago"
+              }
+            },
+            "sat": {
+              "relative-type--1": "last Saturday",
+              "relative-type-0": "this Saturday",
+              "relative-type-1": "next Saturday",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} Saturday",
+                "relativeTimePattern-count-other": "in {0} Saturdays"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} Saturday ago",
+                "relativeTimePattern-count-other": "{0} Saturdays ago"
+              }
+            },
+            "sat-short": {
+              "relative-type--1": "last Sat",
+              "relative-type-0": "this Sat",
+              "relative-type-1": "next Sat",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} Sat",
+                "relativeTimePattern-count-other": "in {0} Sat"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} Sat ago",
+                "relativeTimePattern-count-other": "{0} Sat ago"
+              }
+            },
+            "sat-narrow": {
+              "relative-type--1": "last Sa",
+              "relative-type-0": "this Sa",
+              "relative-type-1": "next Sa",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} Sa",
+                "relativeTimePattern-count-other": "in {0} Sa"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} Sa ago",
+                "relativeTimePattern-count-other": "{0} Sa ago"
+              }
+            },
+            "dayperiod-short": {
+              "displayName": "am/pm",
+              "displayName-alt-variant": "am/pm"
+            },
+            "dayperiod": {
+              "displayName": "am/pm",
+              "displayName-alt-variant": "am/pm"
+            },
+            "dayperiod-narrow": {
+              "displayName": "am/pm",
+              "displayName-alt-variant": "am/pm"
+            },
+            "hour": {
+              "displayName": "hour",
+              "relative-type-0": "this hour",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} hour",
+                "relativeTimePattern-count-other": "in {0} hours"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} hour ago",
+                "relativeTimePattern-count-other": "{0} hours ago"
+              }
+            },
+            "hour-short": {
+              "displayName": "hr",
+              "relative-type-0": "this hour",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} hr",
+                "relativeTimePattern-count-other": "in {0} hr"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} hr ago",
+                "relativeTimePattern-count-other": "{0} hr ago"
+              }
+            },
+            "hour-narrow": {
+              "displayName": "hr",
+              "relative-type-0": "this hour",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} hr",
+                "relativeTimePattern-count-other": "in {0} hr"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} hr ago",
+                "relativeTimePattern-count-other": "{0} hr ago"
+              }
+            },
+            "minute": {
+              "displayName": "minute",
+              "relative-type-0": "this minute",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} minute",
+                "relativeTimePattern-count-other": "in {0} minutes"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} minute ago",
+                "relativeTimePattern-count-other": "{0} minutes ago"
+              }
+            },
+            "minute-short": {
+              "displayName": "min",
+              "relative-type-0": "this minute",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} min",
+                "relativeTimePattern-count-other": "in {0} min"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} min ago",
+                "relativeTimePattern-count-other": "{0} min ago"
+              }
+            },
+            "minute-narrow": {
+              "displayName": "min",
+              "relative-type-0": "this minute",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} min",
+                "relativeTimePattern-count-other": "in {0} min"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} min ago",
+                "relativeTimePattern-count-other": "{0} min ago"
+              }
+            },
+            "second": {
+              "displayName": "second",
+              "relative-type-0": "now",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} second",
+                "relativeTimePattern-count-other": "in {0} seconds"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} second ago",
+                "relativeTimePattern-count-other": "{0} seconds ago"
+              }
+            },
+            "second-short": {
+              "displayName": "sec",
+              "relative-type-0": "now",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} sec",
+                "relativeTimePattern-count-other": "in {0} sec"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} sec ago",
+                "relativeTimePattern-count-other": "{0} sec ago"
+              }
+            },
+            "second-narrow": {
+              "displayName": "sec",
+              "relative-type-0": "now",
+              "relativeTime-type-future": {
+                "relativeTimePattern-count-one": "in {0} sec",
+                "relativeTimePattern-count-other": "in {0} sec"
+              },
+              "relativeTime-type-past": {
+                "relativeTimePattern-count-one": "{0} sec ago",
+                "relativeTimePattern-count-other": "{0} sec ago"
+              }
+            },
+            "zone": { "displayName": "time zone" },
+            "zone-short": { "displayName": "zone" },
+            "zone-narrow": { "displayName": "zone" }
+          }
+        }
+      }
+    }
+  }

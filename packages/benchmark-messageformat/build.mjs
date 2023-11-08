@@ -10,6 +10,7 @@ let bundler = new Parcel({
     "src/eo-locale-core.js",
     "src/ffz-icu-msgparser.js",
     "src/format-message.js",
+    "src/globalize.js",
     "src/intl-messageformat.js",
     "src/messageformat-core.js",
     "src/onigoetz-messageformat.mjs",

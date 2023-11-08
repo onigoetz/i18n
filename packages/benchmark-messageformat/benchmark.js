@@ -35,6 +35,7 @@ register("@ffz/icu-msgparser (+ custom renderer)", require("./dist/ffz-icu-msgpa
 register("format-message-parse", require("./dist/format-message.js"));
 register("intl-messageformat", require("./dist/intl-messageformat.js"));
 register("@messageformat/core", require("./dist/messageformat-core.js"));
+register("globalize", require("./dist/globalize.js"));
 
 runAll(
   { name: "Simple String", args: [`Hello, world!`, {}] },
