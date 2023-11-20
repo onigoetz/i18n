@@ -5,18 +5,18 @@
   "devDependencies": {
     "@eo-locale/core": "1.7.2",
     "@ffz/icu-msgparser": "2.0.0",
-    "@messageformat/core": "3.2.0",
+    "@messageformat/core": "3.3.0",
     "@onigoetz/intl-formatters": "0.1.0",
     "@onigoetz/make-plural": "0.1.0",
     "@onigoetz/messageformat": "0.1.0",
-    "@parcel/config-default": "2.10.3",
-    "@parcel/core": "2.10.3",
+    "@parcel/config-default": "2.10.2",
+    "@parcel/core": "2.10.2",
     "@phensley/messageformat": "1.7.3",
     "@phensley/plurals": "1.7.3",
     "format-message-interpret": "6.2.4",
     "format-message-parse": "6.2.4",
     "globalize": "1.7.0",
-    "intl-messageformat": "10.5.7",
+    "intl-messageformat": "10.5.8",
     "speedscope": "1.16.0"
   },
   "scripts": {
