@@ -38,48 +38,63 @@ export enum MessageOpType {
 }
 
 export interface TextToken {
-  [0]: MessageOpType.TEXT;
-  [1]: string;
+  /** Type */
+  t: MessageOpType.TEXT;
+  /** Content */
+  c: string;
 }
 
 export interface ArgToken {
-  [0]: MessageOpType.ARG;
-  [1]: Argument;
-  [2]?: number; // offset
+  /** Type */
+  t: MessageOpType.ARG;
+  /** Argument */
+  a: Argument;
+  /** Offset */
+  o?: number;
 }
 
 export interface PluralToken {
-  [0]: MessageOpType.PLURAL;
-  [1]: Argument;
-  [2]?: number; // offset
-  [3]?: boolean; // isCardinal
-  [4]: Submessages;
-  [5]: number; // continue
+  /** Type */
+  t: MessageOpType.PLURAL;
+  /** Argument */
+  a: Argument;
+  /** Offset */
+  o?: number;
+  /** is Cardinal */
+  c?: boolean;
+  /** Messages */
+  m: Submessages;
+  /** Jump to */
+  j: number;
 }
 
 export interface SelectToken {
-  [0]: MessageOpType.SELECT;
-  [1]: Argument;
-  [2]: Submessages;
-  [3]: number; // continue
+  /** Type */
+  t: MessageOpType.SELECT;
+  /** Argument */
+  a: Argument;
+  /** Messages */
+  m: Submessages;
+  /** Jump to */
+  j: number; // continue
 }
 
 export interface SimpleToken {
-  [0]: MessageOpType.SIMPLE;
-  [1]: Argument;
-  [2]: string; // type
-  [3]?: string[]; // style / options
+  /** Type */
+  t: MessageOpType.SIMPLE;
+  /** Argument */
+  a: Argument;
+  /** Formatter */
+  f: string;
+  /** Style / Options */
+  s?: string[];
 }
 
-export type ValueToken =
-  | TextToken
-  | ArgToken
-  | PluralToken
-  | SelectToken
-  | SimpleToken;
+export type VariableToken = ArgToken | PluralToken | SelectToken | SimpleToken;
 
 export interface EndToken {
-  [0]: MessageOpType.END;
+  /** Type */
+  t: MessageOpType.END;
 }
 
-export type Token = EndToken | ValueToken;
+export type Token = EndToken | TextToken | VariableToken;
