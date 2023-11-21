@@ -28,6 +28,12 @@ function run(name, args) {
   let bench = withCodSpeed(new benchmark.Suite())
     .on("cycle", (event) => console.log("-", String(event.target)))
     .on("complete", function () {
+
+      if (!this.filter) {
+        console.log("Skip report creation with codspeed");
+        return;
+      }
+
       const fastest = this.filter("fastest").map("name");
       console.log("Fastest is ", fastest);
 
