@@ -18,11 +18,11 @@ test.group("parse()", () => {
   const date = new Date("1989-12-24T04:52");
 
   const render = getRenderer("en");
-  test("accepts strings", ({expect}) => {
+  test("accepts strings", ({ expect }) => {
     expect(render(parse("This is a test."))).toEqual("This is a test.");
   });
 
-  test("coerces input to string", ({expect}) => {
+  test("coerces input to string", ({ expect }) => {
     //eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/ban-ts-comment
     //@ts-ignore
     expect(render(parse())).toEqual("undefined");
@@ -32,20 +32,20 @@ test.group("parse()", () => {
     expect(render(parse(12.34))).toEqual("12.34");
   });
 
-  test("parses variables", ({expect}) => {
+  test("parses variables", ({ expect }) => {
     expect(render(parse("This is a {test}."), { test: "Potato" })).toEqual(
       "This is a Potato.",
     );
   });
 
-  test("parses vars with number and format", ({expect}) => {
+  test("parses vars with number and format", ({ expect }) => {
     expect(render(parse("{test, number}"), { test: 24.5 })).toEqual("24.5");
     expect(
       render(parse("{ test,    number, percent }"), { test: 0.5 }),
     ).toEqual("50%");
   });
 
-  test("renders vars with date and format", ({expect}) => {
+  test("renders vars with date and format", ({ expect }) => {
     expect(render(parse("{test, date}"), { test: date })).toEqual("12/24/1989");
     expect(render(parse("{test, date, short}"), { test: date })).toEqual(
       "12/24/1989",
@@ -61,7 +61,7 @@ test.group("parse()", () => {
     ).toEqual("12/24/1989");
   });
 
-  test("renders vars with time and format", ({expect}) => {
+  test("renders vars with time and format", ({ expect }) => {
     expect(render(parse("{test, time}"), { test: date })).toEqual("04:52 AM");
     expect(render(parse("{test, time, short}"), { test: date })).toEqual(
       "04:52 AM",
@@ -74,13 +74,13 @@ test.group("parse()", () => {
     ).toEqual("04:52 AM");
   });
 
-  test("parses plural tags", ({expect}) => {
+  test("parses plural tags", ({ expect }) => {
     const parsed = parse("{test, plural, one{one test} other {# test} }");
     expect(render(parsed, { test: 1 })).toEqual("one test");
     expect(render(parsed, { test: 4 })).toEqual("4 test");
   });
 
-  test("parses plural with offset", ({expect}) => {
+  test("parses plural with offset", ({ expect }) => {
     const parsed = parse(
       "{test, plural, offset:3 one{one test} other {# test} }",
     );
@@ -88,7 +88,7 @@ test.group("parse()", () => {
     expect(render(parsed, { test: 7 })).toEqual("4 test");
   });
 
-  test("parses selectordinal", ({expect}) => {
+  test("parses selectordinal", ({ expect }) => {
     const parsed = parse(
       "{test, selectordinal, one{one test} other {# test} }",
     );
@@ -96,7 +96,7 @@ test.group("parse()", () => {
     expect(render(parsed, { test: 6 })).toEqual("6 test");
   });
 
-  test("parses select", ({expect}) => {
+  test("parses select", ({ expect }) => {
     const parsed = parse(
       "{test, select, first {yes} second {false} other {maybe}}",
     );
@@ -105,7 +105,7 @@ test.group("parse()", () => {
     expect(render(parsed, { test: "prout" })).toEqual("maybe");
   });
 
-  test("escapes characters", ({expect}) => {
+  test("escapes characters", ({ expect }) => {
     const vars = ["zero", "one", "two"];
     expect(render(parse("{0} {1} {2}"), vars)).toEqual("zero one two");
     expect(render(parse("{0} '{1}' {2}"), vars)).toEqual("zero {1} two");
@@ -115,7 +115,7 @@ test.group("parse()", () => {
     expect(render(parse("{0} ''{1} {2}"), vars)).toEqual("zero 'one two");
   });
 
-  test("does not escape sometimes", ({expect}) => {
+  test("does not escape sometimes", ({ expect }) => {
     expect(render(parse("So, '{Mike''s Test}' is real."), {})).toEqual(
       "So, {Mike's Test} is real.",
     );
@@ -125,7 +125,7 @@ test.group("parse()", () => {
     ).toEqual("You've done it now, Mike.");
   });
 
-  test("renders complex nested messages", ({expect}) => {
+  test("renders complex nested messages", ({ expect }) => {
     const message = `
 {gender_of_host, select,
 	female {

@@ -1,6 +1,10 @@
-import { test } from '@japa/runner'
-import ordinals from "test-cldr-data/supplemental_ordinals.json" assert { type: "json" };
-import plurals from "test-cldr-data/supplemental_plurals.json" assert { type: "json" };
+import { test } from "@japa/runner";
+import ordinals from "test-cldr-data/supplemental_ordinals.json" assert {
+  type: "json",
+};
+import plurals from "test-cldr-data/supplemental_plurals.json" assert {
+  type: "json",
+};
 import makePlural from "./index.js";
 
 const combined = {
@@ -43,15 +47,15 @@ function testPluralData(type: "cardinal" | "ordinal", locale: string) {
   const testValues = getTestValues(rules);
 
   for (const [category, condition, values] of testValues) {
-      for (const value of values) {
-        // eslint-disable-next-line no-loop-func
-        test(`${locale}: ${condition} = ${category}, ${value}`, ({expect}) => {
-          expect(fn(value as unknown as number)).toEqual(category);
-          if (!/\.0+$/.test(value)) {
-            expect(fn(Number(value))).toEqual(category);
-          }
-        });
-      }
+    for (const value of values) {
+      // eslint-disable-next-line no-loop-func
+      test(`${locale}: ${condition} = ${category}, ${value}`, ({ expect }) => {
+        expect(fn(value as unknown as number)).toEqual(category);
+        if (!/\.0+$/.test(value)) {
+          expect(fn(Number(value))).toEqual(category);
+        }
+      });
+    }
   }
 }
 

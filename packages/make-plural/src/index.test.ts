@@ -1,6 +1,8 @@
 import { test } from "@japa/runner";
 
-import plurals from "test-cldr-data/supplemental_plurals.json" assert { type: "json" };
+import plurals from "test-cldr-data/supplemental_plurals.json" assert {
+  type: "json",
+};
 import makePlural, { Rules } from "./index.js";
 
 const enCardinal = {
@@ -26,7 +28,7 @@ const enOrdinalReduced = {
   "pluralRule-count-few": "n % 10 = 3 and n % 100 != 13",
 };
 
-test("Answer with 'other' in case of no data", ({expect}) => {
+test("Answer with 'other' in case of no data", ({ expect }) => {
   const m = makePlural(undefined as unknown as Rules);
 
   expect(m(1)).toEqual("other");
@@ -36,7 +38,7 @@ test("Answer with 'other' in case of no data", ({expect}) => {
   expect(m(8)).toEqual("other");
 });
 
-test("EN Cardinal Plurals", ({expect}) => {
+test("EN Cardinal Plurals", ({ expect }) => {
   const m = makePlural(enCardinal);
 
   expect(m(1)).toEqual("one");
@@ -44,7 +46,7 @@ test("EN Cardinal Plurals", ({expect}) => {
   expect(m(3)).toEqual("other");
 });
 
-test("EN Ordinal Plurals", ({expect}) => {
+test("EN Ordinal Plurals", ({ expect }) => {
   const m = makePlural(enOrdinal);
 
   expect(m(1)).toEqual("one");
@@ -54,7 +56,7 @@ test("EN Ordinal Plurals", ({expect}) => {
   expect(m(8)).toEqual("other");
 });
 
-test("EN Ordinal Plurals, Reduced CLDR data", ({expect}) => {
+test("EN Ordinal Plurals, Reduced CLDR data", ({ expect }) => {
   const m = makePlural(enOrdinalReduced);
 
   expect(m(1)).toEqual("one");
@@ -64,7 +66,7 @@ test("EN Ordinal Plurals, Reduced CLDR data", ({expect}) => {
   expect(m(8)).toEqual("other");
 });
 
-test("AR Cardinal Plurals", ({expect}) => {
+test("AR Cardinal Plurals", ({ expect }) => {
   const m = makePlural(plurals.supplemental["plurals-type-cardinal"].ar);
 
   expect(m(0)).toEqual("zero");
@@ -78,7 +80,7 @@ test("AR Cardinal Plurals", ({expect}) => {
   expect(m(100)).toEqual("other");
 });
 
-test("SHI Cardinal Plurals", ({expect}) => {
+test("SHI Cardinal Plurals", ({ expect }) => {
   const m = makePlural(plurals.supplemental["plurals-type-cardinal"].shi);
 
   expect(m(0)).toEqual("one");
@@ -92,7 +94,7 @@ test("SHI Cardinal Plurals", ({expect}) => {
   expect(m(100)).toEqual("other");
 });
 
-test("FR Cardinal Plurals", ({expect}) => {
+test("FR Cardinal Plurals", ({ expect }) => {
   const m = makePlural(plurals.supplemental["plurals-type-cardinal"].fr);
 
   expect(m(0)).toEqual("one");
@@ -106,7 +108,7 @@ test("FR Cardinal Plurals", ({expect}) => {
   expect(m(100)).toEqual("other");
 });
 
-test("IS Cardinal Plurals", ({expect}) => {
+test("IS Cardinal Plurals", ({ expect }) => {
   const m = makePlural(plurals.supplemental["plurals-type-cardinal"].is);
 
   expect(m(0)).toEqual("other");
@@ -120,7 +122,7 @@ test("IS Cardinal Plurals", ({expect}) => {
   expect(m(100)).toEqual("other");
 });
 
-test("FIL Cardinal Plurals", ({expect}) => {
+test("FIL Cardinal Plurals", ({ expect }) => {
   const m = makePlural(plurals.supplemental["plurals-type-cardinal"].fil);
 
   expect(m(0)).toEqual("one");
@@ -135,7 +137,7 @@ test("FIL Cardinal Plurals", ({expect}) => {
   expect(m(100)).toEqual("one");
 });
 
-test("SI Cardinal Plurals", ({expect}) => {
+test("SI Cardinal Plurals", ({ expect }) => {
   const m = makePlural(plurals.supplemental["plurals-type-cardinal"].si);
 
   expect(m(0)).toEqual("one");
