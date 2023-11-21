@@ -1,4 +1,5 @@
 const benchmark = require("benchmark");
+const { withCodSpeed } = require("@codspeed/benchmark.js-plugin");
 const fs = require("fs");
 const si = require("systeminformation");
 
@@ -24,11 +25,11 @@ function formatValue(value) {
 function run(name, args) {
   console.log("\n==>", name);
 
-  let bench = new benchmark.Suite()
+  let bench = withCodSpeed(new benchmark.Suite())
     .on("cycle", (event) => console.log("-", String(event.target)))
     .on("complete", function () {
       const fastest = this.filter("fastest").map("name");
-      console.log("Fastest is " + fastest);
+      console.log("Fastest is ", fastest);
 
       out.push("");
       out.push(`| Name | ops/sec | MoE | Runs sampled |`);
@@ -43,7 +44,7 @@ function run(name, args) {
       let result;
       while ((result = bySpeed.pop())) {
         const name =
-          result.name == fastest ? `__${result.name}__` : result.name;
+          fastest.indexOf(result.name) > -1 ? `__${result.name}__` : result.name;
         const opsPerSecond = result.hz.toLocaleString("en-US", {
           maximumFractionDigits: 0,
         });

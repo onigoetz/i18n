@@ -1,0 +1,32 @@
+name: codspeed-benchmarks
+
+on:
+  push:
+    branches:
+      - "main" # or "master"
+  pull_request:
+  # `workflow_dispatch` allows CodSpeed to trigger backtest
+  # performance analysis in order to generate initial data.
+  workflow_dispatch:
+
+jobs:
+  benchmarks:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        # Disabling shallow clone is recommended for improving relevancy of reporting
+        fetch-depth: 0
+    - name: Use Node.js 18.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18.x
+        cache: 'yarn'
+    - run: yarn install
+    - run: yarn build
+    - run: yarn test:ci
+    - name: Run benchmarks
+      uses: CodSpeedHQ/action@v1
+      with:
+        run: cd packages/benchmark-messageformat && node benchmark.js
+        token: ${{ secrets.CODSPEED_TOKEN }}

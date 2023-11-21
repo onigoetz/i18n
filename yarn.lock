@@ -111,6 +111,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@codspeed/benchmark.js-plugin@npm:2.3.1":
+  version: 2.3.1
+  resolution: "@codspeed/benchmark.js-plugin@npm:2.3.1"
+  dependencies:
+    "@codspeed/core": "npm:^2.3.1"
+    lodash: "npm:^4.17.10"
+    stack-trace: "npm:1.0.0-pre2"
+  peerDependencies:
+    benchmark: ^2.1.0
+  checksum: 35e8f134fcdb2b021d586d6d0dbcce563ffac7e267139f3565ad93816d8ef45303be8023ba05faf22ec8563018c957afe4ece3af878de920067cd2f288e00749
+  languageName: node
+  linkType: hard
+
+"@codspeed/core@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "@codspeed/core@npm:2.3.1"
+  dependencies:
+    find-up: "npm:^6.3.0"
+    node-gyp-build: "npm:^4.6.0"
+  checksum: 341fffb3802048a69a95b4af5165ff04db143bc18fc153fc18150a21fedbb1552e0535c1b92e026531b943cae0dc0f1bf88ce248fcde4588233749a6b355ba47
+  languageName: node
+  linkType: hard
+
 "@colors/colors@npm:1.5.0":
   version: 1.5.0
   resolution: "@colors/colors@npm:1.5.0"
@@ -558,6 +581,7 @@ __metadata:
   resolution: "@onigoetz/i18n-parent@workspace:."
   dependencies:
     "@biomejs/biome": "npm:1.3.3"
+    "@codspeed/benchmark.js-plugin": "npm:2.3.1"
     benchmark: "npm:2.1.4"
     systeminformation: "npm:5.21.17"
   languageName: unknown
@@ -3644,7 +3668,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.4":
+"lodash@npm:^4.17.10, lodash@npm:^4.17.4":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: d8cbea072bb08655bb4c989da418994b073a608dffa608b09ac04b43a791b12aeae7cd7ad919aa4c925f33b48490b5cfe6c1f71d827956071dae2e7bb3a6b74c
@@ -4010,6 +4034,17 @@ __metadata:
     node-gyp-build-optional-packages-optional: optional.js
     node-gyp-build-optional-packages-test: build-test.js
   checksum: f9fad2061c48fb0fc90831cd11d6a7670d731d22a5b00c7d3441b43b4003543299ff64ff2729afe2cefd7d14928e560d469336e5bb00f613932ec2cd56b3665b
+  languageName: node
+  linkType: hard
+
+"node-gyp-build@npm:^4.6.0":
+  version: 4.7.0
+  resolution: "node-gyp-build@npm:4.7.0"
+  bin:
+    node-gyp-build: bin.js
+    node-gyp-build-optional: optional.js
+    node-gyp-build-test: build-test.js
+  checksum: fe158b20ef63394d7c95d1d5a5e1eb5284e9e2d85c6e0499052baacef2221ad5bc1da3c1d67ec9406c603f5ab41a13402891fc042f6f990ab245d30aa4471807
   languageName: node
   linkType: hard
 
@@ -4681,6 +4716,13 @@ __metadata:
   version: 0.1.8
   resolution: "stable@npm:0.1.8"
   checksum: df74b5883075076e78f8e365e4068ecd977af6c09da510cfc3148a303d4b87bc9aa8f7c48feb67ed4ef970b6140bd9eabba2129e28024aa88df5ea0114cba39d
+  languageName: node
+  linkType: hard
+
+"stack-trace@npm:1.0.0-pre2":
+  version: 1.0.0-pre2
+  resolution: "stack-trace@npm:1.0.0-pre2"
+  checksum: 00caccc88bebfa42068fe236d6427257ca9fb87fef4afdf7d8b145df52310ae529ae94849dcc190ce2a41420db6cde1bbfb993e82c64b2b818b5b2bcb5a4f462
   languageName: node
   linkType: hard
 
