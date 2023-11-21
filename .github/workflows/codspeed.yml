@@ -24,7 +24,6 @@ jobs:
         cache: 'yarn'
     - run: yarn install
     - run: yarn build
-    - run: yarn test:ci
     - name: Run benchmarks
       uses: CodSpeedHQ/action@v1
       with:
