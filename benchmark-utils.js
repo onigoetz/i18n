@@ -49,8 +49,9 @@ function run(name, args) {
 
       let result;
       while ((result = bySpeed.pop())) {
+        const shortName = result.name.split(/: /g)[1];
         const name =
-          fastest.indexOf(result.name) > -1 ? `__${result.name}__` : result.name;
+          fastest.indexOf(result.name) > -1 ? `__${shortName}__` : shortName;
         const opsPerSecond = result.hz.toLocaleString("en-US", {
           maximumFractionDigits: 0,
         });
@@ -69,7 +70,7 @@ function run(name, args) {
   instances.forEach((instance) => {
     console.log(`${instance.name}:`);
     console.log(instance.run.default(args[0], args[1], args[2]));
-    bench.add(instance.name, () =>
+    bench.add(`${name}: ${instance.name}`, () =>
       instance.run.default(args[0], args[1], args[2])
     );
   });
