@@ -22,5 +22,5 @@
     "benchmark": "2.1.4",
     "systeminformation": "5.21.17"
   },
-  "packageManager": "yarn@4.0.1"
+  "packageManager": "yarn@4.0.2"
 }

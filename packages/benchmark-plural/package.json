@@ -5,9 +5,9 @@
   "devDependencies": {
     "@onigoetz/intl-formatters": "0.1.0",
     "@onigoetz/make-plural": "0.1.0",
-    "@parcel/config-default": "2.10.2",
-    "@parcel/core": "2.10.2",
-    "@phensley/plurals": "1.7.3",
+    "@parcel/config-default": "2.10.3",
+    "@parcel/core": "2.10.3",
+    "@phensley/plurals": "1.8.0",
     "make-plural": "7.3.0",
     "speedscope": "1.16.0"
   },
