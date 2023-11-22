@@ -18,18 +18,18 @@
   },
   "devDependencies": {
     "@japa/expect": "3.0.0",
-    "@japa/runner": "3.0.5",
+    "@japa/runner": "3.1.0",
     "@onigoetz/i18n-types": "0.1.0",
     "@onigoetz/messageformat": "0.1.0",
-    "@parcel/packager-ts": "2.10.2",
-    "@parcel/transformer-typescript-types": "2.10.2",
+    "@parcel/packager-ts": "2.10.3",
+    "@parcel/transformer-typescript-types": "2.10.3",
     "c8": "8.0.1",
     "full-icu": "1.5.0",
     "japa": "4.0.0",
     "japa-sonarqube-reporter": "0.1.0",
-    "parcel": "2.10.2",
+    "parcel": "2.10.3",
     "ts-node": "10.9.1",
-    "typescript": "5.2.2"
+    "typescript": "5.3.2"
   },
   "scripts": {
     "build": "parcel build",
