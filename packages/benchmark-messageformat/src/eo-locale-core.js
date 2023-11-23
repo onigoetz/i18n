@@ -1,15 +1,15 @@
-import { Translator } from '@eo-locale/core';
+import { Translator } from "@eo-locale/core";
 
 export default (string, options) => {
   const locales = [
     {
-      language: 'en',
+      language: "en",
       messages: {
-        hello: string
-      }
-    }
+        hello: string,
+      },
+    },
   ];
 
-  const englishTranslator = new Translator('en', locales);
-  return englishTranslator.translate('hello', options);
+  const englishTranslator = new Translator("en", locales);
+  return englishTranslator.translate("hello", options);
 };

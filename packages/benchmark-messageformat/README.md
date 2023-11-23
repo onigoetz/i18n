@@ -11,19 +11,19 @@ As a final word, I made this comparison purely for fun and to learn a thing or t
 
 ## Libraries size
 
-Sources can be found in `src`, measure taken on 07/11/2023 with latest available versions
+Sources can be found in `src`, measure taken on 23/11/2023 with latest available versions
 
 | Npm Package                                       | Version | Size | Comment     |
 | ------------------------------------------------- | ------- | ---- | ----------- |
 | @ffz/icu-msgparser (+ custom renderer)            | 2.0.0   | 13K  |             |
 | @onigoetz/messageformat (+ @onigoetz/intl)        | 0.1.0   | 17K  |             |
 | @onigoetz/messageformat (+ @onigoetz/make-plural) | 0.1.0   | 20K  |             |
-| format-message-parse                              | 6.2.4   | 28K  | Uses peg.js |
+| format-message-parse                              | 6.2.4   | 29K  | Uses peg.js |
 | @onigoetz/messageformat (+ @phensley/plurals)     | 0.1.0   | 62K  |             |
-| intl-messageformat                                | 10.5.4  | 71K  | Uses peg.js |
-| @phensley/messageformat                           | 1.7.3   | 81K  |             |
-| @messageformat/core                               | 3.2.0   | 96K  | Uses peg.js |
-| globalize                                         | 1.7.0   | 208K | Uses peg.js |
+| intl-messageformat                                | 10.5.8  | 71K  | Uses peg.js |
+| @phensley/messageformat                           | 1.8.0   | 81K  |             |
+| @messageformat/core                               | 3.3.0   | 96K  | Uses peg.js |
+| globalize                                         | 1.7.0   | 202K | Uses peg.js |
 
 __Notes:__
 - `globalize` comes with a bundled version of `messageformat` 0.3.0 and `make-plural` 3.0.0. Also, it requires ICU data to know how to format numbers, currencies, timezones and more. It also comes with a compiler to remove the parts that aren't required, but for my use case I consider that we can't know in advance what is going to be formatted.
