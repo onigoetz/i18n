@@ -40,16 +40,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@biomejs/biome@npm:1.3.3":
-  version: 1.3.3
-  resolution: "@biomejs/biome@npm:1.3.3"
+"@biomejs/biome@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@biomejs/biome@npm:1.4.0"
   dependencies:
-    "@biomejs/cli-darwin-arm64": "npm:1.3.3"
-    "@biomejs/cli-darwin-x64": "npm:1.3.3"
-    "@biomejs/cli-linux-arm64": "npm:1.3.3"
-    "@biomejs/cli-linux-x64": "npm:1.3.3"
-    "@biomejs/cli-win32-arm64": "npm:1.3.3"
-    "@biomejs/cli-win32-x64": "npm:1.3.3"
+    "@biomejs/cli-darwin-arm64": "npm:1.4.0"
+    "@biomejs/cli-darwin-x64": "npm:1.4.0"
+    "@biomejs/cli-linux-arm64": "npm:1.4.0"
+    "@biomejs/cli-linux-x64": "npm:1.4.0"
+    "@biomejs/cli-win32-arm64": "npm:1.4.0"
+    "@biomejs/cli-win32-x64": "npm:1.4.0"
   dependenciesMeta:
     "@biomejs/cli-darwin-arm64":
       optional: true
@@ -65,48 +65,48 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: 6e9b9dfbf710898a855d149565f4f1536fb558134ede0934d3d5b06456fa4a91a77a97392f2c8f8bc7f17b7f13e7af464515a3ff858a53d759ca24a38e9e551b
+  checksum: a2a8172bbb60d2fe3edc835aaace10d61122cd81f0c511eea37eb1166e5cfa30b5efcd0dad5f3c224fd4420eb6632363545820c3cac5d84944b62fb5517cb668
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:1.3.3":
-  version: 1.3.3
-  resolution: "@biomejs/cli-darwin-arm64@npm:1.3.3"
+"@biomejs/cli-darwin-arm64@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@biomejs/cli-darwin-arm64@npm:1.4.0"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:1.3.3":
-  version: 1.3.3
-  resolution: "@biomejs/cli-darwin-x64@npm:1.3.3"
+"@biomejs/cli-darwin-x64@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@biomejs/cli-darwin-x64@npm:1.4.0"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:1.3.3":
-  version: 1.3.3
-  resolution: "@biomejs/cli-linux-arm64@npm:1.3.3"
+"@biomejs/cli-linux-arm64@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@biomejs/cli-linux-arm64@npm:1.4.0"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:1.3.3":
-  version: 1.3.3
-  resolution: "@biomejs/cli-linux-x64@npm:1.3.3"
+"@biomejs/cli-linux-x64@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@biomejs/cli-linux-x64@npm:1.4.0"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:1.3.3":
-  version: 1.3.3
-  resolution: "@biomejs/cli-win32-arm64@npm:1.3.3"
+"@biomejs/cli-win32-arm64@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@biomejs/cli-win32-arm64@npm:1.4.0"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:1.3.3":
-  version: 1.3.3
-  resolution: "@biomejs/cli-win32-x64@npm:1.3.3"
+"@biomejs/cli-win32-x64@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@biomejs/cli-win32-x64@npm:1.4.0"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -580,10 +580,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@onigoetz/i18n-parent@workspace:."
   dependencies:
-    "@biomejs/biome": "npm:1.3.3"
+    "@biomejs/biome": "npm:1.4.0"
     "@codspeed/benchmark.js-plugin": "npm:2.3.1"
     benchmark: "npm:2.1.4"
-    systeminformation: "npm:5.21.17"
+    systeminformation: "npm:5.21.18"
   languageName: unknown
   linkType: soft
 
@@ -4860,12 +4860,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"systeminformation@npm:5.21.17":
-  version: 5.21.17
-  resolution: "systeminformation@npm:5.21.17"
+"systeminformation@npm:5.21.18":
+  version: 5.21.18
+  resolution: "systeminformation@npm:5.21.18"
   bin:
     systeminformation: lib/cli.js
-  checksum: 738d564fbf6332eda3fd19d393d2658e003e5eb2f8be50c83070f1e3acda4be8a9943da6388b2d5c7e240ba30305be76fdb424c70404085fbd62f89b597c4f61
+  checksum: f5a72324a9e205d7d4ea2b2a8226ba2939b7de4adfb3aa2253cd7e3feecfe3cff6e7efc76b6498859fe939df3aea3718562071f56e1296d096069b4183513940
   conditions: (os=darwin | os=linux | os=win32 | os=freebsd | os=openbsd | os=netbsd | os=sunos | os=android)
   languageName: node
   linkType: hard
