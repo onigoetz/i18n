@@ -1,5 +1,5 @@
 import { DateFormatterOptions } from "@onigoetz/i18n-types";
-import { MessageOpType, SimpleToken, Token, ValueToken } from "./types.js";
+import { MessageOpType, SimpleToken, Token, VariableToken } from "./types.js";
 
 type Variables = Record<string, any> | [];
 
@@ -19,12 +19,12 @@ function validOrFirst<T>(value: string[] | undefined, options: T[]): T {
   return options[0];
 }
 
-function get(variables: Variables, token: ValueToken): any {
+function get(variables: Variables, token: VariableToken): any {
   // We recieve either an object or an array, both can be accessible as an index
   // some keys won't be available, we can live with that.
   // eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/ban-ts-comment
   // @ts-ignore
-  return variables[token[1]];
+  return variables[token.a];
 }
 
 function noop(): string {
@@ -51,15 +51,15 @@ export default function createRenderer<T>(
   function number(token: SimpleToken, variables: Variables) {
     return numberFormatter(
       localeHolder,
-      { style: validOrFirst(token[3], validNumberOptions) },
+      { style: validOrFirst(token.s, validNumberOptions) },
       get(variables, token),
     );
   }
 
   function datetime(token: SimpleToken, variables: Variables) {
     const options: DateFormatterOptions = {};
-    options[token[2] as "date" | "time" | "datetime"] = validOrFirst(
-      token[3],
+    options[token.f as "date" | "time" | "datetime"] = validOrFirst(
+      token.s,
       validDateOptions,
     );
 
@@ -87,49 +87,49 @@ export default function createRenderer<T>(
     while (i < length) {
       const token: Token = tokens[i];
 
-      switch (token[0]) {
+      switch (token.t) {
         case MessageOpType.TEXT:
-          result += token[1];
+          result += token.c;
           break;
         case MessageOpType.ARG:
-          if (token[2]) {
-            result += get(variables, token) - token[2];
+          if (token.o) {
+            result += get(variables, token) - token.o;
           } else {
             result += get(variables, token);
           }
           break;
         case MessageOpType.SIMPLE:
           // Find the formatter or fallback to NOOP
-          result += (types[token[2]] || noop)(token, variables);
+          result += (types[token.f] || noop)(token, variables);
           break;
         case MessageOpType.SELECT:
-          stack.push(token[3]);
-          i = token[2][get(variables, token)] || token[2].other;
+          stack.push(token.j);
+          i = token.m[get(variables, token)] || token.m.other;
 
           continue; // skip the end of the loop
         case MessageOpType.PLURAL: {
-          stack.push(token[5]);
+          stack.push(token.j);
           const value = get(variables, token);
 
-          const directJump = token[4][`=${value}`];
+          const directJump = token.m[`=${value}`];
 
           if (directJump) {
             i = directJump;
             continue;
           }
 
-          const pluralType = token[3] ? "cardinal" : "ordinal";
-          const offset = token[2] || 0; // TODO :: should offset apply to direct jump ?
+          const pluralType = token.c ? "cardinal" : "ordinal";
+          const offset = token.o || 0; // TODO :: should offset apply to direct jump ?
 
           // TODO :: initialize pluralGenerator only if specific number isn't present
           const pluralRules = pluralGenerator(localeHolder, pluralType);
 
-          const pluralJump = token[4][pluralRules(value - offset)];
+          const pluralJump = token.m[pluralRules(value - offset)];
 
           if (pluralJump) {
             i = pluralJump;
           } else {
-            i = token[4].other;
+            i = token.m.other;
           }
         }
         continue; // skip the end of the loop

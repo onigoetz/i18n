@@ -1,6 +1,5 @@
 import { compile, match } from "./matcher.js";
 import {
-  ArgToken,
   Context,
   MessageOpType,
   PluralToken,
@@ -9,7 +8,7 @@ import {
   Submessages,
   TextToken,
   Token,
-  ValueToken,
+  VariableToken,
 } from "./types.js";
 
 const OPEN = "{";
@@ -183,7 +182,7 @@ function isNot(context: Context, char: string) {
  */
 function parseSubmessage(
   context: Context,
-  parent: ValueToken,
+  parent: VariableToken,
   specialHash: boolean,
 ): number {
   const startAt = context.nextIndex;
@@ -205,7 +204,7 @@ function parseSubmessage(
   ++context.i;
   skipSpace(context);
 
-  add(context, [MessageOpType.END]);
+  add(context, { t: MessageOpType.END });
 
   return startAt;
 }
@@ -225,7 +224,7 @@ function parseSubmessage(
  */
 function parseSubmessages(
   context: Context,
-  parent: ValueToken,
+  parent: VariableToken,
   specialHash: boolean,
   matcher: RegExp,
 ): Submessages {
@@ -295,12 +294,12 @@ function parsePlural(context: Context, current: PluralToken) {
   // Get offset if defined
   const offset = parseOffset(context);
   if (offset) {
-    current[2] = offset;
+    current.o = offset;
     skipSpace(context);
   }
 
   // Parse available options
-  current[4] = parseSubmessages(context, current, true, PLURAL);
+  current.m = parseSubmessages(context, current, true, PLURAL);
   return current;
 }
 
@@ -323,7 +322,7 @@ function parseSelect(context: Context, current: SelectToken) {
   skipSeparator(char, context);
 
   // Parse available options
-  current[2] = parseSubmessages(context, current, false, IDENTIFIER);
+  current.m = parseSubmessages(context, current, false, IDENTIFIER);
   return current;
 }
 
@@ -343,7 +342,7 @@ function parseSimple(context: Context, current: SimpleToken) {
 
   // Since we allow spaces mid-format, we should trim any
   // remaining spaces off the end.
-  current[3] = [format.trimRight()];
+  current.s = [format.trimRight()];
   return current;
 }
 
@@ -364,7 +363,7 @@ function parseElement(context: Context) {
   }
 
   // Let's prepare a simple argument block
-  const token: Token = [MessageOpType.ARG, id] as unknown as Token;
+  const token: Token = { t: MessageOpType.ARG, a: id } as unknown as Token;
 
   skipSpace(context);
 
@@ -391,23 +390,23 @@ function parseElement(context: Context) {
   switch (type) {
     case "plural":
     case "selectordinal":
-      token[0] = MessageOpType.PLURAL;
-      (token as PluralToken)[3] = type === "plural";
+      token.t = MessageOpType.PLURAL;
+      (token as PluralToken).c = type === "plural";
       add(context, token);
       parsePlural(context, token as PluralToken);
-      (token as PluralToken)[5] = context.nextIndex;
+      (token as PluralToken).j = context.nextIndex;
       break;
 
     case "select":
-      token[0] = MessageOpType.SELECT;
+      token.t = MessageOpType.SELECT;
       add(context, token);
       parseSelect(context, token as SelectToken);
-      (token as SelectToken)[3] = context.nextIndex;
+      (token as SelectToken).j = context.nextIndex;
       break;
 
     default:
-      token[0] = MessageOpType.SIMPLE;
-      (token as SimpleToken)[2] = type;
+      token.t = MessageOpType.SIMPLE;
+      (token as SimpleToken).f = type;
       parseSimple(context, token as SimpleToken);
       add(context, token);
       break;
@@ -431,7 +430,7 @@ function parseElement(context: Context) {
  */
 function parseAST(
   context: Context,
-  parent: ValueToken,
+  parent: VariableToken,
   specialHash: boolean,
 ): Token[] {
   while (context.i < context.l) {
@@ -450,11 +449,11 @@ function parseAST(
       ++context.i;
       // We can safely cast here as `specialHash` is only true if we are in a Plural or SelectOrdinal
       // and both have an offset
-      add(context, [
-        MessageOpType.ARG,
-        parent[1],
-        (parent as PluralToken)[2],
-      ] as ArgToken);
+      add(context, {
+        t: MessageOpType.ARG,
+        a: parent.a,
+        o: (parent as PluralToken).o,
+      });
     } else if (char === OPEN) {
       // If we see a block start, we send it to `parseElement` and add it to the array if an element was found
       parseElement(context);
@@ -462,7 +461,7 @@ function parseAST(
       // Otherwise it's probably just text, which we add if it was found
       const text = parseText(context, specialHash);
       if (text) {
-        add(context, [MessageOpType.TEXT, text] as TextToken);
+        add(context, { t: MessageOpType.TEXT, c: text } as TextToken);
       }
     }
 
