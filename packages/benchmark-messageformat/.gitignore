@@ -1,0 +1,4 @@
+perf-*.map
+perf.*
+perfs*.out
+pprof-profile-*.pb.gz
