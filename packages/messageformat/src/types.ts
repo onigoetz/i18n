@@ -37,18 +37,29 @@ export enum MessageOpType {
   END = 5,
 }
 
+/**
+ * Lexicon:
+ * t: Type
+ * v: Variable / Value
+ * o: Offset
+ * m: Submessages
+ * f: Simple type formatter
+ * s: Simple type Options
+ * j: Jump to index
+ */
+
 export interface TextToken {
   /** Type */
   t: MessageOpType.TEXT;
   /** Content */
-  c: string;
+  v: string;
 }
 
 export interface ArgToken {
   /** Type */
   t: MessageOpType.ARG;
   /** Argument */
-  a: Argument;
+  v: Argument;
   /** Offset */
   o?: number;
 }
@@ -57,7 +68,7 @@ export interface PluralToken {
   /** Type */
   t: MessageOpType.PLURAL;
   /** Argument */
-  a: Argument;
+  v: Argument;
   /** Offset */
   o?: number;
   /** is Cardinal */
@@ -72,7 +83,7 @@ export interface SelectToken {
   /** Type */
   t: MessageOpType.SELECT;
   /** Argument */
-  a: Argument;
+  v: Argument;
   /** Messages */
   m: Submessages;
   /** Jump to */
@@ -83,7 +94,7 @@ export interface SimpleToken {
   /** Type */
   t: MessageOpType.SIMPLE;
   /** Argument */
-  a: Argument;
+  v: Argument;
   /** Formatter */
   f: string;
   /** Style / Options */

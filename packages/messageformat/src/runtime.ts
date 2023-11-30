@@ -24,7 +24,7 @@ function get(variables: Variables, token: VariableToken): any {
   // some keys won't be available, we can live with that.
   // eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/ban-ts-comment
   // @ts-ignore
-  return variables[token.a];
+  return variables[token.v];
 }
 
 function noop(): string {
@@ -89,7 +89,7 @@ export default function createRenderer<T>(
 
       switch (token.t) {
         case MessageOpType.TEXT:
-          result += token.c;
+          result += token.v;
           break;
         case MessageOpType.ARG:
           if (token.o) {

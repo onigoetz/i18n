@@ -363,7 +363,7 @@ function parseElement(context: Context) {
   }
 
   // Let's prepare a simple argument block
-  const token: Token = { t: MessageOpType.ARG, a: id } as unknown as Token;
+  const token: Token = { t: MessageOpType.ARG, v: id } as unknown as Token;
 
   skipSpace(context);
 
@@ -451,7 +451,7 @@ function parseAST(
       // and both have an offset
       add(context, {
         t: MessageOpType.ARG,
-        a: parent.a,
+        v: parent.v,
         o: (parent as PluralToken).o,
       });
     } else if (char === OPEN) {
@@ -461,7 +461,7 @@ function parseAST(
       // Otherwise it's probably just text, which we add if it was found
       const text = parseText(context, specialHash);
       if (text) {
-        add(context, { t: MessageOpType.TEXT, c: text } as TextToken);
+        add(context, { t: MessageOpType.TEXT, v: text } as TextToken);
       }
     }
 
