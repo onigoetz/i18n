@@ -15,9 +15,14 @@ https://github.com/formatjs/formatjs/tree/master/packages/intl-messageformat-par
 const { register, runAll } = require("../../benchmark-utils.js");
 
 //register("@eo-locale/core", require("./dist/eo-locale-core.js"));
+
+register(
+  "@onigoetz/messageformat (+ @onigoetz/intl-formatters)",
+  require("./dist/onigoetz-messageformat-intl.js")
+);
 register(
   "@onigoetz/messageformat (+ @onigoetz/make-plural)",
-  require("./dist/onigoetz-messageformat.js")
+  require("./dist/onigoetz-messageformat-make.js")
 );
 register(
   "@onigoetz/messageformat (+ @phensley/plurals)",
@@ -33,9 +38,9 @@ register(
 );
 register("@ffz/icu-msgparser (+ custom renderer)", require("./dist/ffz-icu-msgparser.js"));
 register("format-message-parse", require("./dist/format-message.js"));
+register("globalize", require("./dist/globalize.js"));
 register("intl-messageformat", require("./dist/intl-messageformat.js"));
 register("@messageformat/core", require("./dist/messageformat-core.js"));
-register("globalize", require("./dist/globalize.js"));
 
 runAll(
   { name: "Simple String", args: [`Hello, world!`, {}] },

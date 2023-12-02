@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "devDependencies": {
+    "@datadog/pprof": "4.0.1",
     "@eo-locale/core": "1.7.2",
     "@ffz/icu-msgparser": "2.0.0",
     "@messageformat/core": "3.3.0",
@@ -17,6 +18,7 @@
     "format-message-parse": "6.2.4",
     "globalize": "1.7.0",
     "intl-messageformat": "10.5.8",
+    "make-plural": "7.3.0",
     "speedscope": "1.16.0"
   },
   "scripts": {

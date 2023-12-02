@@ -1,5 +1,4 @@
 const benchmark = require("benchmark");
-const { withCodSpeed } = require("@codspeed/benchmark.js-plugin");
 const fs = require("fs");
 const si = require("systeminformation");
 
@@ -25,14 +24,9 @@ function formatValue(value) {
 function run(name, args) {
   console.log("\n==>", name);
 
-  let bench = withCodSpeed(new benchmark.Suite())
+  let bench = new benchmark.Suite()
     .on("cycle", (event) => console.log("-", String(event.target)))
     .on("complete", function () {
-
-      if (!this.filter) {
-        console.log("Skip report creation with codspeed");
-        return;
-      }
 
       const fastest = this.filter("fastest").map("name");
       console.log("Fastest is ", fastest);
@@ -49,9 +43,9 @@ function run(name, args) {
 
       let result;
       while ((result = bySpeed.pop())) {
-        const shortName = result.name.split(/: /g)[1];
+        const shortName = result.name;
         const name =
-          fastest.indexOf(result.name) > -1 ? `__${shortName}__` : shortName;
+          fastest.indexOf(result.name) > -1 ? `**${shortName}**` : shortName;
         const opsPerSecond = result.hz.toLocaleString("en-US", {
           maximumFractionDigits: 0,
         });
@@ -70,7 +64,7 @@ function run(name, args) {
   instances.forEach((instance) => {
     console.log(`${instance.name}:`);
     console.log(instance.run.default(args[0], args[1], args[2]));
-    bench.add(`${name}: ${instance.name}`, () =>
+    bench.add(instance.name, () =>
       instance.run.default(args[0], args[1], args[2])
     );
   });
