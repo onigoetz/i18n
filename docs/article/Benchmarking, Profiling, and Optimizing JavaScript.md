@@ -43,7 +43,7 @@ In 2020, I noticed that the library was huge: 77KB for the library + 79KB for th
 
 > Let’s be fair to Globalize; the library is meant to be used with another tool; The [globalize-compiler](https://github.com/globalizejs/globalize-compiler). The globalize-compiler embeds only the required parts of the library and CLDR data. Since we don’t know in advance what we’re going to translate or in which language, we cannot apply this optimization.
 
-Due to the breadth of topics our team handles, we couldn’t take the time to optimize the size of this library, but I was pretty curious to explore the field in my free time for three reasons:
+I was pretty curious to explore the field for three reasons:
 
 1. [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) APIs can now replace CLDR data, such as [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) (supported by some browsers in 2013) and [Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules#browser_compatibility) (added in 2017).
 2. Intl.MessageFormat does not exist yet. It is currently a draft but will support MessageFormat 2, which won’t be backward compatible.
@@ -82,7 +82,7 @@ At this stage, I was happy that the library was already small enough. The next s
 Benchmarking is difficult for quite a few reasons:
 
 1. Statistical significance of benchmarks.
-2. We tend to have a bias toward finding the test that puts your library in the best light.
+2. We tend to have a [confirmation bias](https://en.wikipedia.org/wiki/Confirmation_bias) toward finding the test that puts your library in the best light.
 3. We’re not always comparing the same thing
 
 Some libraries help with the first point, such as [benchmark](https://www.npmjs.com/package/benchmark).
@@ -214,6 +214,10 @@ This tells me two important things; I’m using the slowest plural library there
 
 At this stage, we didn’t change any code, we just replaced the plural library and jumped from 126,746 to 401,907 operations per second, not bad!
 
+## What is the next thing we can optimize?
+
+As said before, we can repeat the process as much as we want. Let’s do that go for a second round.
+
 ### 1. Measure how much each part takes
 
 We wanted to get the fastest library, not the second fastest, so let’s start a second round of optimization. Let’s get a new profile:
@@ -244,7 +248,7 @@ The first command collects the performance report in a raw format, and the secon
 
 Well, There is a lot of information here, but the execution of the code itself doesn’t even appear. Since each function runs in less than a millisecond, they don’t appear in the samples.
 
-### 1. Measure how much each part takes — second try
+### 1.1. Measure how much each part takes
 
 We’ll try another approach; [pprof](https://www.npmjs.com/package/pprof). pprof is a suite of profiling tools by Google that integrate nicely into Node.js and work cross-platform.
 
@@ -260,7 +264,7 @@ $ speedscope pprof-profile-84760.pb.gz
 
 As you can see, pprof has the same minimum resolution time of 2ms. There are also missing functions (`parse` still doesn’t appear), it also seems that the bars don’t have a precise size, they get extended to fill the 2ms minimum.
 
-### 1. Measure how much each part takes —  third try
+### 1.2. Measure how much each part takes
 
 It’s puzzling that Chrome and Firefox can give detailed performance traces of the code you run but Node.js can’t. But did you know that you can use Chrome Dev tools with Node.js?
 
