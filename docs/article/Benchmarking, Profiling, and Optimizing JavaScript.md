@@ -434,13 +434,13 @@ We’ve reached the end of this journey to optimize a JavaScript library, and he
 
 1. Optimizing the performance of a piece of code can be looked at through many different lenses: size, data organization, and many more we didn’t look at in this article.
 2. The performance of JavaScript is complex to look at because of the nature of its runtime. There might be more to the story than what you see in a flame graph.
-3. There is always “one more thing” to optimize; you must know when good enough is good enough, and don’t forget the big picture.
+3. There is always “one more thing” to optimize; you must know when good enough is good enough.
 
 But when is good enough good enough?
 
-Since there is always one more thing to optimize, is there a clear rule on when to stop?
+Since there is always one more thing to optimize, here are a few tips:
 1. When your LCP/FCP or other KPIs are improved. As you probably do this optimization for a reason, you can stop when you reach your target.
-2. Apply the [Pareto principle](https://en.wikipedia.org/wiki/Pareto_principle); 80% of the performance optimization will be done in 20% of the time. Meaning that each iteration of optimization will have a smaller return on investment.
+2. Apply the [Pareto principle](https://en.wikipedia.org/wiki/Pareto_principle); 80% of the performance optimization will be done in 20% of the time. Each iteration of optimization will have a smaller return on investment than the previous one.
 3. When your code becomes unreadable, sometimes you must trade readability for performance, so ensure you're not the only person who can understand what you wrote.
 
 Don’t forget the three key steps to optimize anything successfully:
