@@ -2,20 +2,20 @@
 
 ## Introduction
 
-I wish to bring you with me on a journey to learn about optimizing a library for localization, I want to share my learnings with you on benchmarking, profiling, and optimizing.
+I wish to bring you with me on a journey to learn about optimizing a library for localization, I would like to share my learnings with you on benchmarking, profiling, and optimizing.
 
-At Swissquote Bank, we use client-composed micro-frontends and our platforms are usually available in at least 8 languages. To support this requirement, we had to build a translation/localization library for our micro-frontend platform and chose an open-source library, [globalize](https://github.com/globalizejs/globalize).
+At Swissquote Bank, we use client-composed micro-frontends, and our platforms are usually available in at least 8 languages. To support this requirement, we had to build a translation/localization library for our micro-frontend platform and chose an open-source library, [globalize](https://github.com/globalizejs/globalize).
 
 We chose the library using the following criteria:
 
 - The library must support formatting numbers, dates, and plurals.
 - Since our micro-frontend plugins are client-composed, the library must support adding translation strings at runtime.
-- It should be easy to add locales if we wish to expand into a new market.
+- It should be easy to add locales to expand into new markets.
 - The library must support MessageFormat.
 
-Globalize fulfilled all the above needs and allowed us to load translations and CLDR data dynamically, and we were also able to reduce the size of the CLDR dataset to ship only the relevant parts to our clients.
+Globalize fulfilled all the above needs and allowed us to dynamically load translations and CLDR data. We also reduced the size of the CLDR dataset to ship only the relevant parts to our clients.
 
-> CLDR (short for [Unicode Common Locale Data Repository](https://cldr.unicode.org/)) is a dataset containing all formatting rules for numbers, for dates, for currencies, plurals and more.
+> CLDR (short for [Unicode Common Locale Data Repository](https://cldr.unicode.org/)) is a dataset containing all formatting rules for numbers, dates, currencies, plurals, and more.
 
 ## What is MessageFormat?
 
@@ -53,7 +53,8 @@ With this in mind, I wanted to build a library containing only the features we n
 
 ## Smaller, Faster, Stronger
 
-> This article is not meant to promote my library, it’s a toy project to explore some techniques. Here is the link to the repository if you want to have a look : [https://github.com/onigoetz/i18n](https://github.com/onigoetz/i18n).
+> This article is not meant to promote my library; it’s a toy project to explore some techniques and ideas and will be the subject of this exploration.
+> Here is the link to the repository if you want to have a look : [https://github.com/onigoetz/i18n](https://github.com/onigoetz/i18n).
 
 Since our initial choice, the landscape of MessageFormat libraries has become richer. There are many options available, and I needed to make a choice. I did not keep my initial analysis, but here is how it is on 30/11/2023:
 
@@ -97,8 +98,8 @@ It took me a while to understand why: the string contained a variable that requi
 
 Let’s have a look at the initial benchmark with all the contenders.
 
-> As said above, I made multiple benchmarks, but for the sake of brevity I will present the result of only one benchmark, I invite you to [check all results](https://github.com/onigoetz/i18n/blob/master/packages/benchmark-messageformat/README.md#benchmark) for more information.
-The test string is: `Yo, {firstName} {lastName} has {numBooks} {numBooks, plural, one {book} other {books}}.` As you can see it is one plural rule and three variable substitutions.
+> As said above, I made multiple benchmarks, but for the sake of brevity, I will present the result of only one benchmark. I invite you to [check all results](https://github.com/onigoetz/i18n/blob/master/packages/benchmark-messageformat/README.md#benchmark) for more information.
+The test string is: `Yo, {firstName} {lastName} has {numBooks} {numBooks, plural, one {book} other {books}}.` As you can see, it is one plural rule and three variable substitutions.
 
 |  | Name | Operations/second | Margin of Error | Runs sampled |
 | --- | --- | --- | --- | --- |
@@ -126,7 +127,7 @@ And you can repeat that as many times as you wish.
 
 You might have already used the Firefox Profiler or Google Chrome’s Dev tools, but have you already profiled in Node.js?
 
-Node.js comes with a built-in sampling profiler, which can be invoked with the `--prof` flag.
+Node.js has a built-in sampling profiler, which can be invoked with the `--prof` flag.
 
 We’ll try it with this code:
 
@@ -216,7 +217,7 @@ At this stage, we didn’t change any code, we just replaced the plural library 
 
 ## What is the next thing we can optimize?
 
-As said before, we can repeat the process as much as we want. Let’s do that go for a second round.
+As said before, we can repeat the process as much as we want. Let’s do that and go for a second round.
 
 ### 1. Measure how much each part takes
 
@@ -226,13 +227,13 @@ We wanted to get the fastest library, not the second fastest, so let’s start a
 
 Again, we have two stacks, and we can still ignore the right stack with the console.log and focus on the left one.
 
-Curiously, the “plural” part is still taking the entire length of that stack and it’s taking 6.25ms, which is longer than the 5ms we measured previously.
+Curiously, the “plural” part is still taking the entire length of that stack, and it’s taking 6.25ms, which is longer than the 5ms we measured previously.
 
-The reason for this surprising measurement is that Node.js’ profiler is a *sampling* profiler.
+This surprising measurement is because Node.js’ profiler is a *sampling* profiler.
 
 > A *sampling* profiler will take a snapshot of what’s currently running every few ms and will then try to fill in the gaps of what it didn’t see between the samples; if a function was running in sample 1 and sample 2, it will consider that it was running the whole time.
 
-Luckily, there is a lower level option `perf`. It is a command and a module to the Linux kernel that gathers samples on your machine’s processes, as I’m performing this research on a MacBook, I had to run the following within a Docker image.
+Luckily, there is a lower level option; `perf`. It is a command and a module to the Linux kernel that gathers samples on your machine’s processes. As I’m performing this research on a MacBook, I had to run the following within a Docker image.
 
 ```bash
 $ perf record -e cycles:u -g -- node --interpreted-frames-native-stack --perf-basic-prof --perf-prof-unwinding-info profile.mjs
@@ -250,7 +251,7 @@ Well, There is a lot of information here, but the execution of the code itself d
 
 ### 1.1. Measure how much each part takes
 
-We’ll try another approach; [pprof](https://www.npmjs.com/package/pprof). pprof is a suite of profiling tools by Google that integrate nicely into Node.js and work cross-platform.
+We’ll try another approach: [pprof](https://www.npmjs.com/package/pprof). pprof is a suite of profiling tools by Google that integrate nicely into Node.js and work cross-platform.
 
 ```bash
 $ node --require pprof profile.mjs
@@ -262,7 +263,7 @@ $ speedscope pprof-profile-84760.pb.gz
 
 ![Flame chart displayed in Speedscope](images/speedscope_pprof.png)
 
-As you can see, pprof has the same minimum resolution time of 2ms. There are also missing functions (`parse` still doesn’t appear), it also seems that the bars don’t have a precise size, they get extended to fill the 2ms minimum.
+As you can see, pprof has the same minimum resolution time of 2ms. There are also missing functions (`parse` still doesn’t appear). It also seems that the bars don’t have a precise size; they get extended to fill the 2ms minimum.
 
 ### 1.2. Measure how much each part takes
 
@@ -278,20 +279,19 @@ For help, see: https://nodejs.org/en/docs/inspector
 
 This will start nodeJS and wait for a debugger to be attached. 
 
-1. You can head to your favorite chromium based browser
+1. You can head to your favorite Chromium-based browser
 2. Open `chrome://inspect` 
-3. In the “Remote Target” section you should see a line that contains the path to the script you started. Click on “Inspect”
+3. In the “Remote Target” section, you should see a line that contains the path to the script you started. Click on “Inspect”.
 4. Go to the “Performance” tab and click on the record button
 5. Stop the recording when your script is finished
 
-> you might want to disable your browser extensions to remove noise from the final trace, head to `chrome://extensions/` to do so
-> 
+> You might want to disable your browser extensions to remove noise from the final trace. Head to `chrome://extensions/` to do so.
 
-Here is the result for the script, zoomed in on the rendering, the rest of the yellow bars around is the `console.log`.
+Here is the result for the script, zoomed in on the rendering. The part outside of the visible area is the `console.log` calls.
 
 ![Flame chart displayed in Chrome performance tab](images/chrome_profiler_tree-ast.png)
 
-This is the most precise output I got to profile my library. We can see that on the parsing side, we have a few longer bars, but they seem to be proportional to the size of the input we are treating, and on the rendering side it’s the plural rendering that is still the longest (as we saw, we’re not using the fastest option that exists, more on that later).
+This is the most precise output I got to profile my library. We can see that we have a few longer bars on the parsing side, but they seem to be proportional to the size of the input we are treating. On the rendering side, it’s the plural rendering that is still the longest (as we saw, we’re not using the fastest option that exists; more on that later).
 
 ### 2. Find the part that takes the longest to execute
 
@@ -372,7 +372,7 @@ Here is also the trace from that new data structure. As you can see, the overall
 
 ![Flame chart displayed in Chrome performance tab](images/chrome_profiler_flat-ast.png)
 
-Since we saw earlier that the pluralization library itself has a significant impact on the result of the benchmark, I decided to check the results with two more pluralization libraries, which are impressive.
+Since we saw earlier that the pluralization library itself significantly impacts the result of the benchmark, I decided to check the results with two more pluralization libraries, which are impressive.
 
 |  | Name | Operations/second | Margin of Error | Runs sampled |
 | --- | --- | --- | --- | --- |
@@ -381,7 +381,7 @@ Since we saw earlier that the pluralization library itself has a significant imp
 | 3 | @onigoetz/messageformat (+ @onigoetz/intl-formatters) flat AST | 540,343 | ± 0.06% | 99 |
 | 4 | @phensley/messageformat | 520,533 | ± 0.37% | 96 |
 
-And here is the trace of the fastest of all, which shows that if the plural is fast enough, the rendering is practically instantaneous and that leaves some margin of improvement for the parsing part.
+And here is the trace of the fastest of all, which shows that if the plural is fast enough, the rendering is practically instantaneous, leaving some margin of improvement for the parsing part.
 
 ![Flame chart displayed in Chrome performance tab](images/chrome_profiler_make-plural.png)
 
@@ -432,9 +432,16 @@ Deopt Explorer is a command line tool and a Visual Studio Code extension that al
 
 We’ve reached the end of this journey to optimize a JavaScript library, and here are the main things I take away from it:
 
-1. Optimizing the performance of a piece of code can be looked at through many different lenses: size, data organization and many more we didn’t look at in this article.
-2. The performance of JavaScript is complex to look at because of the nature of its runtime, there might be more to the story than what you see in a flame graph.
+1. Optimizing the performance of a piece of code can be looked at through many different lenses: size, data organization, and many more we didn’t look at in this article.
+2. The performance of JavaScript is complex to look at because of the nature of its runtime. There might be more to the story than what you see in a flame graph.
 3. There is always “one more thing” to optimize; you must know when good enough is good enough, and don’t forget the big picture.
+
+But when is good enough good enough?
+
+Since there is always one more thing to optimize, is there a clear rule on when to stop?
+1. When your LCP/FCP or other KPIs are improved. As you probably do this optimization for a reason, you can stop when you reach your target.
+2. Apply the [Pareto principle](https://en.wikipedia.org/wiki/Pareto_principle); 80% of the performance optimization will be done in 20% of the time. Meaning that each iteration of optimization will have a smaller return on investment.
+3. When your code becomes unreadable, sometimes you must trade readability for performance, so ensure you're not the only person who can understand what you wrote.
 
 Don’t forget the three key steps to optimize anything successfully:
 
@@ -446,10 +453,10 @@ Educated guesses might bring you to a wild goose chase down the wrong path.
 
 ### Tools
 
-Here are the most useful tools we looked into:
+Here are the most valuable tools we looked into:
 
 - `node --prof` is a very good start to profile your code
-- [speedscope](https://www.npmjs.com/package/speedscope) is a great tool for visualizing flame charts
+- [speedscope](https://www.npmjs.com/package/speedscope) is an excellent tool for visualizing flame charts
 - `node --inspect-brk` in combination with Google Chrome is even more detailed
 - [Deopt Explorer](https://github.com/microsoft/deoptexplorer-vscode) might be the tool you need if you want to go even further
 
@@ -460,4 +467,4 @@ And a few others that can be useful depending on your use case:
 
 ## Conclusion
 
-Thanks for reading me today. Thanks to all previous and future writers on the Perf Calendar for all the great reads. Thanks to Stoyan Stefanov for the opportunity and organization, and thanks to my colleague David Joaquim for all the time he dedicated to help me proofread this article.
+Thanks for reading me today. Thanks to all previous and future writers on the Perf Calendar for all the great reads. Thanks to Stoyan Stefanov for the opportunity and organization and my colleague David Joaquim for all the time he dedicated to proofreading this article with me.
