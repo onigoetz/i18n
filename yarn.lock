@@ -127,20 +127,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@datadog/pprof@npm:4.0.1":
-  version: 4.0.1
-  resolution: "@datadog/pprof@npm:4.0.1"
-  dependencies:
-    delay: "npm:^5.0.0"
-    node-gyp: "npm:latest"
-    node-gyp-build: "npm:<4.0"
-    p-limit: "npm:^3.1.0"
-    pprof-format: "npm:^2.0.7"
-    source-map: "npm:^0.7.4"
-  checksum: 195568cd1dfee8c065142252040cf6f69e00daa8cbdbc9d7843990e40b9160bc125531ce736598879e413f17d4de9046398f9af68f801aa2ff82b4d92e1ca4ff
-  languageName: node
-  linkType: hard
-
 "@eo-locale/core@npm:1.7.2":
   version: 1.7.2
   resolution: "@eo-locale/core@npm:1.7.2"
@@ -583,8 +569,9 @@ __metadata:
   dependencies:
     "@parcel/packager-ts": "npm:2.10.3"
     "@parcel/transformer-typescript-types": "npm:2.10.3"
+    "@parcel/validator-typescript": "npm:2.10.3"
     parcel: "npm:2.10.3"
-    typescript: "npm:5.3.2"
+    typescript: "npm:5.3.3"
   languageName: unknown
   linkType: soft
 
@@ -598,13 +585,14 @@ __metadata:
     "@onigoetz/messageformat": "npm:0.1.0"
     "@parcel/packager-ts": "npm:2.10.3"
     "@parcel/transformer-typescript-types": "npm:2.10.3"
+    "@parcel/validator-typescript": "npm:2.10.3"
     c8: "npm:8.0.1"
     full-icu: "npm:1.5.0"
     japa: "npm:4.0.0"
     japa-sonarqube-reporter: "npm:0.1.0"
     parcel: "npm:2.10.3"
     ts-node: "npm:10.9.1"
-    typescript: "npm:5.3.2"
+    typescript: "npm:5.3.3"
   languageName: unknown
   linkType: soft
 
@@ -616,13 +604,14 @@ __metadata:
     "@japa/runner": "npm:3.1.0"
     "@parcel/packager-ts": "npm:2.10.3"
     "@parcel/transformer-typescript-types": "npm:2.10.3"
+    "@parcel/validator-typescript": "npm:2.10.3"
     c8: "npm:8.0.1"
     japa: "npm:4.0.0"
     japa-sonarqube-reporter: "npm:0.1.0"
     parcel: "npm:2.10.3"
     test-cldr-data: "npm:0.1.0"
     ts-node: "npm:10.9.1"
-    typescript: "npm:5.3.2"
+    typescript: "npm:5.3.3"
   languageName: unknown
   linkType: soft
 
@@ -630,7 +619,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@onigoetz/messageformat-benchmark@workspace:packages/benchmark-messageformat"
   dependencies:
-    "@datadog/pprof": "npm:4.0.1"
     "@eo-locale/core": "npm:1.7.2"
     "@ffz/icu-msgparser": "npm:2.0.0"
     "@messageformat/core": "npm:3.3.0"
@@ -659,12 +647,13 @@ __metadata:
     "@onigoetz/i18n-types": "npm:0.1.0"
     "@parcel/packager-ts": "npm:2.10.3"
     "@parcel/transformer-typescript-types": "npm:2.10.3"
+    "@parcel/validator-typescript": "npm:2.10.3"
     c8: "npm:8.0.1"
     japa: "npm:4.0.0"
     japa-sonarqube-reporter: "npm:0.1.0"
     parcel: "npm:2.10.3"
     ts-node: "npm:10.9.1"
-    typescript: "npm:5.3.2"
+    typescript: "npm:5.3.3"
   languageName: unknown
   linkType: soft
 
@@ -1383,6 +1372,21 @@ __metadata:
     chalk: "npm:^4.1.0"
     nullthrows: "npm:^1.1.1"
   checksum: f8953f1bcf82e612ffeb518b775a666ec2f371e0615994dbb0ae486482b07a9951a26797514569dd8701ee1648155ed7de5114147b4c72cf319cad1798c75a36
+  languageName: node
+  linkType: hard
+
+"@parcel/validator-typescript@npm:2.10.3":
+  version: 2.10.3
+  resolution: "@parcel/validator-typescript@npm:2.10.3"
+  dependencies:
+    "@parcel/diagnostic": "npm:2.10.3"
+    "@parcel/plugin": "npm:2.10.3"
+    "@parcel/ts-utils": "npm:2.10.3"
+    "@parcel/types": "npm:2.10.3"
+    "@parcel/utils": "npm:2.10.3"
+  peerDependencies:
+    typescript: ">=3.0.0"
+  checksum: e610b07d96c548d1057ef36b1e46f6b35f78dc26e6691ad56af0f4bac2457482340ddf976e4711073b12dc34f80126ab951b253715e4a2a6e2520d0fc12fd649
   languageName: node
   linkType: hard
 
@@ -2525,13 +2529,6 @@ __metadata:
   dependencies:
     type-detect: "npm:^4.0.0"
   checksum: ff34e8605d8253e1bf9fe48056e02c6f347b81d9b5df1c6650a1b0f6f847b4a86453b16dc226b34f853ef14b626e85d04e081b022e20b00cd7d54f079ce9bbdd
-  languageName: node
-  linkType: hard
-
-"delay@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "delay@npm:5.0.0"
-  checksum: 01cdc4cd0cd35fb622518a3df848e67e09763a38e7cdada2232b6fda9ddda72eddcf74f0e24211200fbe718434f2335f2a2633875a6c96037fefa6de42896ad7
   languageName: node
   linkType: hard
 
@@ -4049,17 +4046,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-gyp-build@npm:<4.0":
-  version: 3.9.0
-  resolution: "node-gyp-build@npm:3.9.0"
-  bin:
-    node-gyp-build: ./bin.js
-    node-gyp-build-optional: ./optional.js
-    node-gyp-build-test: ./build-test.js
-  checksum: 0e7e39e5746728e6adf58803d9c3c732b6107f1af3df5128c4c2a6c9c0fb99a6c981ad0a7514d707adccbcfe303b4a92da7949408f1d3ec281f70d37bec29f60
-  languageName: node
-  linkType: hard
-
 "node-gyp@npm:latest":
   version: 9.4.0
   resolution: "node-gyp@npm:9.4.0"
@@ -4162,7 +4148,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"p-limit@npm:^3.0.2, p-limit@npm:^3.1.0":
+"p-limit@npm:^3.0.2":
   version: 3.1.0
   resolution: "p-limit@npm:3.1.0"
   dependencies:
@@ -4382,13 +4368,6 @@ __metadata:
     posthtml-parser: "npm:^0.11.0"
     posthtml-render: "npm:^3.0.0"
   checksum: 0505cb70ece051206ffa932394181372be6390a974fd2f50e4e6fdd5d11e41feffba9a5f5e22809ca42899f79bd489d53ceac1d7ad0d782db9521b578e5b7f5a
-  languageName: node
-  linkType: hard
-
-"pprof-format@npm:^2.0.7":
-  version: 2.0.7
-  resolution: "pprof-format@npm:2.0.7"
-  checksum: 9290f2f00d12eb024d9e59774539db0edf94b85f4aaf225756a8d37213512ec6e05a61385e30927d9c4eb9ec8a8d2bc4f7375cf63ac29e1ff5516ef9eb2d8060
   languageName: node
   linkType: hard
 
@@ -4701,13 +4680,6 @@ __metadata:
   version: 0.6.1
   resolution: "source-map@npm:0.6.1"
   checksum: ab55398007c5e5532957cb0beee2368529618ac0ab372d789806f5718123cc4367d57de3904b4e6a4170eb5a0b0f41373066d02ca0735a0c4d75c7d328d3e011
-  languageName: node
-  linkType: hard
-
-"source-map@npm:^0.7.4":
-  version: 0.7.4
-  resolution: "source-map@npm:0.7.4"
-  checksum: dc0cf3768fe23c345ea8760487f8c97ef6fca8a73c83cd7c9bf2fde8bc2c34adb9c0824d6feb14bc4f9e37fb522e18af621543f1289038a66ac7586da29aa7dc
   languageName: node
   linkType: hard
 
@@ -5028,23 +5000,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.3.2":
-  version: 5.3.2
-  resolution: "typescript@npm:5.3.2"
+"typescript@npm:5.3.3":
+  version: 5.3.3
+  resolution: "typescript@npm:5.3.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: d7dbe1fbe19039e36a65468ea64b5d338c976550394ba576b7af9c68ed40c0bc5d12ecce390e4b94b287a09a71bd3229f19c2d5680611f35b7c53a3898791159
+  checksum: e33cef99d82573624fc0f854a2980322714986bc35b9cb4d1ce736ed182aeab78e2cb32b385efa493b2a976ef52c53e20d6c6918312353a91850e2b76f1ea44f
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>":
-  version: 5.3.2
-  resolution: "typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"
+"typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>":
+  version: 5.3.3
+  resolution: "typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 73c8bad74e732d93211c9d77f28b03307e2f5fc6a0afc73f4b783261ab567686a16d6ae958bdaef383a00be1b0b8c8b6741dd6ca3d13af4963fa7e47456d49c7
+  checksum: 1d0a5f4ce496c42caa9a30e659c467c5686eae15d54b027ee7866744952547f1be1262f2d40de911618c242b510029d51d43ff605dba8fb740ec85ca2d3f9500
   languageName: node
   linkType: hard
 
