@@ -1,0 +1,17 @@
+{
+  "include": [
+    "src/*",
+    "test.ts"
+  ],
+  "compilerOptions": {
+    "declaration": true,
+    "moduleResolution": "Bundler",
+    "module": "esnext", // Using an ES6 module with an ES5 target allows to leverage tree shaking
+    "sourceMap": true,
+    "target": "es5",
+    "esModuleInterop": true,
+    // Upgrade types to more recents of ES, although we shouldn't use them for the moment for compatibilty reasons
+    // one @types dependency relies on them
+    "lib": ["dom", "es2019", "es2020.promise", "es2020.bigint", "es2020.string", "ES2020.Symbol.wellknown"]
+  }
+}

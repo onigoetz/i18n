@@ -1,4 +1,6 @@
-import run from "./src/onigoetz-messageformat-initial-make.mjs";
+import run from "./dist/onigoetz-messageformat-flat-make.js";
+
+console.log("Before");
 
 const message = `Yo, {firstName} {lastName} has {numBooks} {numBooks, plural, one {book} other {books}}.`;
 const options = {
@@ -7,7 +9,9 @@ const options = {
   numBooks: 5
 };
 
-console.log(run(message, options));
+const result = run.default(message, options);
+
+console.log(result);
 
 //const set = []
 //for (let i = 0; i < 10000; i++) {

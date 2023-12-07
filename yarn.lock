@@ -650,6 +650,43 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@onigoetz/messageformat-initial@workspace:previous-packages/messageformat-initial":
+  version: 0.0.0-use.local
+  resolution: "@onigoetz/messageformat-initial@workspace:previous-packages/messageformat-initial"
+  dependencies:
+    "@onigoetz/i18n-types": "npm:0.1.0"
+    "@parcel/packager-ts": "npm:2.10.3"
+    "@parcel/transformer-typescript-types": "npm:2.10.3"
+    parcel: "npm:2.10.3"
+    typescript: "npm:5.3.2"
+  languageName: unknown
+  linkType: soft
+
+"@onigoetz/messageformat-object-flat@workspace:previous-packages/messageformat-object-flat":
+  version: 0.0.0-use.local
+  resolution: "@onigoetz/messageformat-object-flat@workspace:previous-packages/messageformat-object-flat"
+  dependencies:
+    "@onigoetz/i18n-types": "npm:0.1.0"
+    "@parcel/packager-ts": "npm:2.10.3"
+    "@parcel/transformer-typescript-types": "npm:2.10.3"
+    parcel: "npm:2.10.3"
+    ts-node: "npm:10.9.1"
+    typescript: "npm:5.3.2"
+  languageName: unknown
+  linkType: soft
+
+"@onigoetz/messageformat-object-tree@workspace:previous-packages/messageformat-object-tree":
+  version: 0.0.0-use.local
+  resolution: "@onigoetz/messageformat-object-tree@workspace:previous-packages/messageformat-object-tree"
+  dependencies:
+    "@onigoetz/i18n-types": "npm:0.1.0"
+    "@parcel/packager-ts": "npm:2.10.3"
+    "@parcel/transformer-typescript-types": "npm:2.10.3"
+    parcel: "npm:2.10.3"
+    typescript: "npm:5.3.2"
+  languageName: unknown
+  linkType: soft
+
 "@onigoetz/messageformat@npm:0.1.0, @onigoetz/messageformat@workspace:packages/messageformat":
   version: 0.0.0-use.local
   resolution: "@onigoetz/messageformat@workspace:packages/messageformat"
