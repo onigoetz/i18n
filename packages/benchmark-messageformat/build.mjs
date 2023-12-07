@@ -15,12 +15,18 @@ let bundler = new Parcel({
     "src/messageformat-core.js",
     "src/onigoetz-messageformat-intl.mjs",
     "src/onigoetz-messageformat-make.mjs",
+    "src/onigoetz-messageformat-flat-intl.mjs",
+    "src/onigoetz-messageformat-flat-make.mjs",
+    "src/onigoetz-messageformat-flat-phensley-plurals.mjs",
+    "src/onigoetz-messageformat-initial-intl.mjs",
+    "src/onigoetz-messageformat-initial-oni-make.mjs",
+    "src/onigoetz-messageformat-tree-intl.mjs",
     "src/onigoetz-messageformat-phensley-plurals.mjs",
     "src/phensley-messageformat.js",
   ],
   defaultConfig: "@parcel/config-default",
   defaultTargetOptions: {
-    shouldOptimize: true,
+    shouldOptimize: false,
     shouldScopeHoist: false
   }
 });

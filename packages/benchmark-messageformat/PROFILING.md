@@ -9,6 +9,34 @@ node --prof profile.mjs
 node --prof-process --preprocess -j isolate*.log | speedscope -
 ```
 
+## Google Chrome dev tools
+
+```bash
+# node --inspect-brk profile.mjs
+Debugger listening on ws://127.0.0.1:9229/57f50d1c-51c0-4d55-9d38-64b21933af44
+For help, see: https://nodejs.org/en/docs/inspector
+```
+
+open chrome://inspect 
+
+
+### Direct export of cpuprofile
+
+> This currently doesn't compile with recent node versions
+
+```javascript
+var profiler = require('v8-profiler');
+profiler.startProfiling();
+
+// ...
+
+var cpuProfile = profiler.stopProfiling();
+require('fs').writeFileSync(__dirname + '/foo.cpuprofile', JSON.stringify(cpuProfile));
+```
+
+- https://www.npmjs.com/package/v8-profiler
+- https://www.npmjs.com/package/@risingstack/v8-profiler
+
 ## pprof
 
 - Seems to uses slices of minimum 2ms

@@ -16,6 +16,30 @@ const { register, runAll } = require("../../benchmark-utils.js");
 
 //register("@eo-locale/core", require("./dist/eo-locale-core.js"));
 
+// Flat with variants
+register(
+  "@onigoetz/messageformat (+ @onigoetz/intl-formatters) flat",
+  require("./dist/onigoetz-messageformat-flat-intl.js")
+);
+register(
+  "@onigoetz/messageformat (+ make-plural) flat",
+  require("./dist/onigoetz-messageformat-flat-make.js")
+);
+register(
+  "@onigoetz/messageformat (+ @phensley/plurals) flat",
+  require("./dist/onigoetz-messageformat-flat-phensley-plurals.js")
+);
+
+// Initial with variants
+register(
+  "@onigoetz/messageformat (+ @onigoetz/intl-formatters) initial",
+  require("./dist/onigoetz-messageformat-initial-intl.js")
+);
+register(
+  "@onigoetz/messageformat (+ @onigoetz/make-plural) initial",
+  require("./dist/onigoetz-messageformat-initial-oni-make.js")
+);
+
 register(
   "@onigoetz/messageformat (+ @onigoetz/intl-formatters)",
   require("./dist/onigoetz-messageformat-intl.js")
@@ -28,10 +52,13 @@ register(
   "@onigoetz/messageformat (+ @phensley/plurals)",
   require("./dist/onigoetz-messageformat-phensley-plurals.js")
 );
+
+// Tree
 register(
-  "@onigoetz/messageformat (+ @onigoetz/intl)",
-  require("./dist/onigoetz-messageformat-intl.js")
-)
+  "@onigoetz/messageformat (+ @onigoetz/intl-formatters) tree",
+  require("./dist/onigoetz-messageformat-tree-intl.js")
+);
+
 register(
   "@phensley/messageformat",
   require("./dist/phensley-messageformat.js")
