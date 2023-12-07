@@ -17,21 +17,21 @@ const { register, runAll } = require("../../benchmark-utils.js");
 //register("@eo-locale/core", require("./dist/eo-locale-core.js"));
 
 register(
+  "@onigoetz/messageformat (+ make-plural)",
+  require("./dist/onigoetz-messageformat-make.js")
+);
+register(
   "@onigoetz/messageformat (+ @onigoetz/intl-formatters)",
   require("./dist/onigoetz-messageformat-intl.js")
 );
 register(
   "@onigoetz/messageformat (+ @onigoetz/make-plural)",
-  require("./dist/onigoetz-messageformat-make.js")
+  require("./dist/onigoetz-messageformat-oni-make.js")
 );
 register(
   "@onigoetz/messageformat (+ @phensley/plurals)",
   require("./dist/onigoetz-messageformat-phensley-plurals.js")
 );
-register(
-  "@onigoetz/messageformat (+ @onigoetz/intl)",
-  require("./dist/onigoetz-messageformat-intl.js")
-)
 register(
   "@phensley/messageformat",
   require("./dist/phensley-messageformat.js")

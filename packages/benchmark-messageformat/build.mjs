@@ -15,6 +15,7 @@ let bundler = new Parcel({
     "src/messageformat-core.js",
     "src/onigoetz-messageformat-intl.mjs",
     "src/onigoetz-messageformat-make.mjs",
+    "src/onigoetz-messageformat-oni-make.mjs",
     "src/onigoetz-messageformat-phensley-plurals.mjs",
     "src/phensley-messageformat.js",
   ],
