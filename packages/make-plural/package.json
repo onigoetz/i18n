@@ -27,7 +27,7 @@
     "japa-sonarqube-reporter": "0.1.0",
     "parcel": "2.10.3",
     "test-cldr-data": "0.1.0",
-    "ts-node": "10.9.1",
+    "ts-node": "10.9.2",
     "typescript": "5.3.3"
   },
   "scripts": {
