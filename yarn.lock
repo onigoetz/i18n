@@ -211,59 +211,59 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@japa/core@npm:^8.1.2":
-  version: 8.1.2
-  resolution: "@japa/core@npm:8.1.2"
+"@japa/core@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "@japa/core@npm:9.0.0"
   dependencies:
-    "@poppinss/cliui": "npm:^6.2.1"
-    "@poppinss/hooks": "npm:^7.2.1"
-    "@poppinss/macroable": "npm:^1.0.0"
+    "@poppinss/cliui": "npm:^6.2.2"
+    "@poppinss/hooks": "npm:^7.2.2"
+    "@poppinss/macroable": "npm:^1.0.1"
     async-retry: "npm:^1.3.3"
     emittery: "npm:^1.0.1"
     string-width: "npm:^7.0.0"
     time-span: "npm:^5.1.0"
-  checksum: 985b503ddb1313d985b4be3fbf2608975e7024de190fb329e0bfd94e1d0dcaa653e41f6acf902b2b33bd17039ea68f61ae36c91723a1dce8c5d5bcae54c9255a
+  checksum: a5ace7ca10c187c68bca52336b757caedb3dfa513943831c9b89ac81741361da9b1c33f617df9bb0aa3988472e96fe16c3e9c766b0246d8b01ee43003fe4ee55
   languageName: node
   linkType: hard
 
-"@japa/errors-printer@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "@japa/errors-printer@npm:3.0.1"
+"@japa/errors-printer@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@japa/errors-printer@npm:3.0.2"
   dependencies:
-    "@poppinss/colors": "npm:^4.1.1"
+    "@poppinss/colors": "npm:^4.1.2"
     jest-diff: "npm:^29.7.0"
     youch: "npm:^3.3.3"
     youch-terminal: "npm:^2.2.3"
-  checksum: ffee3551f331f06afe87eff704e58eb6c284d17149862d519bca8d44589e599c7c495968857fe4a268d516b40b0e0abf480fcc1dba7465a981867793f21acb17
+  checksum: e45c272087605ee88665711be33de256a4d43a9501050b939cc03097192d514f7f7f0762724ea76dd436cd78a04b30d1adb0c655340ec7b40c7f96ec6ca13484
   languageName: node
   linkType: hard
 
-"@japa/expect@npm:3.0.0":
-  version: 3.0.0
-  resolution: "@japa/expect@npm:3.0.0"
+"@japa/expect@npm:3.0.1":
+  version: 3.0.1
+  resolution: "@japa/expect@npm:3.0.1"
   dependencies:
     expect: "npm:^29.5.0"
   peerDependencies:
     "@japa/runner": ^3.0.0
-  checksum: c70a50afe4342bacc0bedca6fef1c709938a14d4f1a961a481b7b8416dd164ae1ce2647462f8474c4c6805e1727b4d19ce4bb1bfcd39c4069d879db2db46474d
+  checksum: 7d172e7a5231703c728544014a51f7f8caca54eed13884c2dcbf98c9e9beb526a9acf0300f16eedd1b3d2137a168aa242039e9fb67b4833e9974ac4576bd734d
   languageName: node
   linkType: hard
 
-"@japa/runner@npm:3.1.0":
-  version: 3.1.0
-  resolution: "@japa/runner@npm:3.1.0"
+"@japa/runner@npm:3.1.1":
+  version: 3.1.1
+  resolution: "@japa/runner@npm:3.1.1"
   dependencies:
-    "@japa/core": "npm:^8.1.2"
-    "@japa/errors-printer": "npm:^3.0.1"
-    "@poppinss/colors": "npm:^4.1.1"
-    "@poppinss/hooks": "npm:^7.2.1"
+    "@japa/core": "npm:^9.0.0"
+    "@japa/errors-printer": "npm:^3.0.2"
+    "@poppinss/colors": "npm:^4.1.2"
+    "@poppinss/hooks": "npm:^7.2.2"
     fast-glob: "npm:^3.3.2"
     find-cache-dir: "npm:^5.0.0"
     getopts: "npm:^2.3.0"
     ms: "npm:^2.1.3"
     serialize-error: "npm:^11.0.3"
     slash: "npm:^5.1.0"
-  checksum: b39878cc89770de474086f4bd616ef5a8f66cc1a34a83af1916ee044bf20dc4aa1b40d7f71dbf531cfee0aa0ca55ce27780a755163dac3ee602d868bd516d309
+  checksum: 7469da9d6009bf1c645d1cfe553b0eebaa7a1e3499c48e022ec46739d77dfeefbafe908a631a0f069d38d7d2dd5dfa1173b8e8f44ee0ff8de7856a620e48d832
   languageName: node
   linkType: hard
 
@@ -572,7 +572,7 @@ __metadata:
   dependencies:
     "@biomejs/biome": "npm:1.4.1"
     benchmark: "npm:2.1.4"
-    systeminformation: "npm:5.21.20"
+    systeminformation: "npm:5.21.21"
   languageName: unknown
   linkType: soft
 
@@ -592,8 +592,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@onigoetz/intl-formatters@workspace:packages/intl-formatters"
   dependencies:
-    "@japa/expect": "npm:3.0.0"
-    "@japa/runner": "npm:3.1.0"
+    "@japa/expect": "npm:3.0.1"
+    "@japa/runner": "npm:3.1.1"
     "@onigoetz/i18n-types": "npm:0.1.0"
     "@onigoetz/messageformat": "npm:0.1.0"
     "@parcel/packager-ts": "npm:2.10.3"
@@ -613,8 +613,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@onigoetz/make-plural@workspace:packages/make-plural"
   dependencies:
-    "@japa/expect": "npm:3.0.0"
-    "@japa/runner": "npm:3.1.0"
+    "@japa/expect": "npm:3.0.1"
+    "@japa/runner": "npm:3.1.1"
     "@parcel/packager-ts": "npm:2.10.3"
     "@parcel/transformer-typescript-types": "npm:2.10.3"
     "@parcel/validator-typescript": "npm:2.10.3"
@@ -655,8 +655,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@onigoetz/messageformat@workspace:packages/messageformat"
   dependencies:
-    "@japa/expect": "npm:3.0.0"
-    "@japa/runner": "npm:3.1.0"
+    "@japa/expect": "npm:3.0.1"
+    "@japa/runner": "npm:3.1.1"
     "@onigoetz/i18n-types": "npm:0.1.0"
     "@parcel/packager-ts": "npm:2.10.3"
     "@parcel/transformer-typescript-types": "npm:2.10.3"
@@ -1600,11 +1600,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@poppinss/cliui@npm:^6.2.1":
-  version: 6.2.1
-  resolution: "@poppinss/cliui@npm:6.2.1"
+"@poppinss/cliui@npm:^6.2.2":
+  version: 6.2.3
+  resolution: "@poppinss/cliui@npm:6.2.3"
   dependencies:
-    "@poppinss/colors": "npm:^4.1.1"
+    "@poppinss/colors": "npm:^4.1.2"
     cli-boxes: "npm:^3.0.0"
     cli-table3: "npm:^0.6.3"
     cli-truncate: "npm:^4.0.0"
@@ -1612,32 +1612,32 @@ __metadata:
     pretty-hrtime: "npm:^1.0.3"
     string-width: "npm:^7.0.0"
     supports-color: "npm:^9.4.0"
-    term-size: "npm:^4.0.0"
+    terminal-size: "npm:^4.0.0"
     wordwrap: "npm:^1.0.0"
-  checksum: ad95d3616a6cf560b1b23e830c9fdf160c5530952163a9a54d1297d643c6c5b956215be4e50619be5e6dbad8f1c425b623090c9d3ef4b1b2590ca36b4f3c5ee5
+  checksum: 9ace3991c32043e6f1606a0aeea6914cf4ad3df9f7b22cf0d6b5f30ced773a9e7b97345f0389fd71bef14ba648dd87b8237d8be819c2ec477c2c95a2aeb77c71
   languageName: node
   linkType: hard
 
-"@poppinss/colors@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "@poppinss/colors@npm:4.1.1"
+"@poppinss/colors@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "@poppinss/colors@npm:4.1.2"
   dependencies:
     kleur: "npm:^4.1.5"
-  checksum: 5732758d264e8923e1ca4be999cc76949073a64b2b940d18980dae201a88a92e19369458bfc10f9136cb9f9c4dfbf6412589f374900889594a31e6b340b3513a
+  checksum: 7f320fcbfb59ca3609c333e4956169dcf1cac5b0f7b09970e8e2cda6c19036a8555eed40e4a2afe5a83890d4cf8ed8340c43bb01fcab8b60badebcaf287267c1
   languageName: node
   linkType: hard
 
-"@poppinss/hooks@npm:^7.2.1":
-  version: 7.2.1
-  resolution: "@poppinss/hooks@npm:7.2.1"
-  checksum: ec68558a1e8800037c36c9b24653355457f4aa7dc77ff009dd39d25d3bb2a25c58280ae24338c69b2010603dfd9b1baf60d373d1f9b5da79c3d6db62a73c7ee2
+"@poppinss/hooks@npm:^7.2.2":
+  version: 7.2.2
+  resolution: "@poppinss/hooks@npm:7.2.2"
+  checksum: c79c07535744a7f898c08e09a9094632cc4385f803f1a83e7a6d5fa67e3a121376f24a14277226be32a68935a9a7101d8b5d765a4a3a77bc48a775a2f9c0ace3
   languageName: node
   linkType: hard
 
-"@poppinss/macroable@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@poppinss/macroable@npm:1.0.0"
-  checksum: 28033abe74f9db373617b466c31a067f77211217907bd68976c8b7307ca470ea0e0b7bfbafd4f3302dcfe217701c7c1348ffd21f29f70337639a6749820dab67
+"@poppinss/macroable@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@poppinss/macroable@npm:1.0.1"
+  checksum: 73d06a49cfe04771c5b9a2997242da16f4d97033c27fcd666a2fcb837dc769ba9ebcbca78638b330b1f3c894d7a030c798eb58f0e2de0f16586f8182baaef4f6
   languageName: node
   linkType: hard
 
@@ -4702,12 +4702,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"systeminformation@npm:5.21.20":
-  version: 5.21.20
-  resolution: "systeminformation@npm:5.21.20"
+"systeminformation@npm:5.21.21":
+  version: 5.21.21
+  resolution: "systeminformation@npm:5.21.21"
   bin:
     systeminformation: lib/cli.js
-  checksum: 4d7ea2b0df75f122854cc964926dfb8f8fbe9297afcbf2fad1218cfb684163e9486f5c6032814fe528d5d39585b43f33c4af11e0ea07b8b591f18c27f791fbba
+  checksum: fd737370677e4efbafacd32fc2e577fdc308b8a1bb93a0f00396f45a40a449f8c65d111b5a3826f6115b21da32c84eaf1479d6ba8287ff13b6486afe3a9d8b5f
   conditions: (os=darwin | os=linux | os=win32 | os=freebsd | os=openbsd | os=netbsd | os=sunos | os=android)
   languageName: node
   linkType: hard
@@ -4733,10 +4733,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"term-size@npm:^4.0.0":
+"terminal-size@npm:^4.0.0":
   version: 4.0.0
-  resolution: "term-size@npm:4.0.0"
-  checksum: 0c5702f22f0a64f1e9375516b1f9bdb7ec9ca30120ab6a2d84dace104cacfc9b2d0183570065da287343ccbe9bc9040747005ba746c74e794b4bf9c8384307dc
+  resolution: "terminal-size@npm:4.0.0"
+  checksum: 642420db433a7753d2ca3b46c217fca9ff7c85c2cfbc964605f1c7fe3b46a98cf99a1815eef61111d1ed3bb99433cf64ae2107a359f3cc31dacba0a3adcbaadd
   languageName: node
   linkType: hard
 
