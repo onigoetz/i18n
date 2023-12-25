@@ -572,7 +572,7 @@ __metadata:
   dependencies:
     "@biomejs/biome": "npm:1.4.1"
     benchmark: "npm:2.1.4"
-    systeminformation: "npm:5.21.21"
+    systeminformation: "npm:5.21.22"
   languageName: unknown
   linkType: soft
 
@@ -4702,12 +4702,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"systeminformation@npm:5.21.21":
-  version: 5.21.21
-  resolution: "systeminformation@npm:5.21.21"
+"systeminformation@npm:5.21.22":
+  version: 5.21.22
+  resolution: "systeminformation@npm:5.21.22"
   bin:
     systeminformation: lib/cli.js
-  checksum: fd737370677e4efbafacd32fc2e577fdc308b8a1bb93a0f00396f45a40a449f8c65d111b5a3826f6115b21da32c84eaf1479d6ba8287ff13b6486afe3a9d8b5f
+  checksum: 483141ce10cd3e7e8f6734d9f7a63557ead5646530a955b2ed42057790b3338964eb365f89cbdf733a16192680de31a4f4f4a80b079d07ea093cb0d7fdb7967c
   conditions: (os=darwin | os=linux | os=win32 | os=freebsd | os=openbsd | os=netbsd | os=sunos | os=android)
   languageName: node
   linkType: hard
