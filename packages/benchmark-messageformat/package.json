@@ -18,7 +18,7 @@
     "globalize": "1.7.0",
     "intl-messageformat": "10.5.8",
     "make-plural": "7.3.0",
-    "speedscope": "1.16.0"
+    "speedscope": "1.19.0"
   },
   "scripts": {
     "build": "node build.mjs",

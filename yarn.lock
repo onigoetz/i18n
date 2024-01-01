@@ -562,7 +562,7 @@ __metadata:
     "@parcel/core": "npm:2.10.3"
     "@phensley/plurals": "npm:1.8.0"
     make-plural: "npm:7.3.0"
-    speedscope: "npm:1.16.0"
+    speedscope: "npm:1.19.0"
   languageName: unknown
   linkType: soft
 
@@ -647,7 +647,7 @@ __metadata:
     globalize: "npm:1.7.0"
     intl-messageformat: "npm:10.5.8"
     make-plural: "npm:7.3.0"
-    speedscope: "npm:1.16.0"
+    speedscope: "npm:1.19.0"
   languageName: unknown
   linkType: soft
 
@@ -4556,14 +4556,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"speedscope@npm:1.16.0":
-  version: 1.16.0
-  resolution: "speedscope@npm:1.16.0"
+"speedscope@npm:1.19.0":
+  version: 1.19.0
+  resolution: "speedscope@npm:1.19.0"
   dependencies:
     open: "npm:7.2.0"
   bin:
     speedscope: bin/cli.js
-  checksum: 57cbc2ba783a80db8482db248c8a143c11eba7208fcfc7e5dce52d910629a47d5983297da614c2f81123d305bfe6cb9784ce565ccb0152c9ddf3735dbd770761
+  checksum: bd160852140a224bd3979c4399d2c0f341d8e7a54d49af228a1adcd57344a5128484c66969f38e3bdf706f463f3689126e76e5ca53259f9685aaa69c43ab60b4
   languageName: node
   linkType: hard
 

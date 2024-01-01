@@ -9,7 +9,7 @@
     "@parcel/core": "2.10.3",
     "@phensley/plurals": "1.8.0",
     "make-plural": "7.3.0",
-    "speedscope": "1.16.0"
+    "speedscope": "1.19.0"
   },
   "scripts": {
     "build": "node build.mjs",
