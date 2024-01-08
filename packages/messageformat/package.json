@@ -22,13 +22,13 @@
   "devDependencies": {
     "@japa/expect": "3.0.1",
     "@japa/runner": "3.1.1",
-    "@parcel/packager-ts": "2.10.3",
-    "@parcel/transformer-typescript-types": "2.10.3",
-    "@parcel/validator-typescript": "2.10.3",
+    "@parcel/packager-ts": "2.11.0",
+    "@parcel/transformer-typescript-types": "2.11.0",
+    "@parcel/validator-typescript": "2.11.0",
     "c8": "8.0.1",
     "japa": "4.0.0",
     "japa-sonarqube-reporter": "0.1.0",
-    "parcel": "2.10.3",
+    "parcel": "2.11.0",
     "ts-node": "10.9.2",
     "typescript": "5.3.3"
   },
