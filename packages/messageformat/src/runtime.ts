@@ -107,32 +107,33 @@ export default function createRenderer<T>(
           i = token.m[get(variables, token)] || token.m.other;
 
           continue; // skip the end of the loop
-        case MessageOpType.PLURAL: {
-          stack.push(token.j);
-          const value = get(variables, token);
+        case MessageOpType.PLURAL:
+          {
+            stack.push(token.j);
+            const value = get(variables, token);
 
-          const directJump = token.m[`=${value}`];
+            const directJump = token.m[`=${value}`];
 
-          if (directJump) {
-            i = directJump;
-            continue;
+            if (directJump) {
+              i = directJump;
+              continue;
+            }
+
+            const pluralType = token.c ? "cardinal" : "ordinal";
+            const offset = token.o || 0; // TODO :: should offset apply to direct jump ?
+
+            // TODO :: initialize pluralGenerator only if specific number isn't present
+            const pluralRules = pluralGenerator(localeHolder, pluralType);
+
+            const pluralJump = token.m[pluralRules(value - offset)];
+
+            if (pluralJump) {
+              i = pluralJump;
+            } else {
+              i = token.m.other;
+            }
           }
-
-          const pluralType = token.c ? "cardinal" : "ordinal";
-          const offset = token.o || 0; // TODO :: should offset apply to direct jump ?
-
-          // TODO :: initialize pluralGenerator only if specific number isn't present
-          const pluralRules = pluralGenerator(localeHolder, pluralType);
-
-          const pluralJump = token.m[pluralRules(value - offset)];
-
-          if (pluralJump) {
-            i = pluralJump;
-          } else {
-            i = token.m.other;
-          }
-        }
-        continue; // skip the end of the loop
+          continue; // skip the end of the loop
 
         case MessageOpType.END:
           i = stack.pop() as number;
