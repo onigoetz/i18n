@@ -246,15 +246,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@japa/errors-printer@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@japa/errors-printer@npm:3.0.3"
+"@japa/errors-printer@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "@japa/errors-printer@npm:3.0.4"
   dependencies:
     "@poppinss/colors": "npm:^4.1.3"
     jest-diff: "npm:^29.7.0"
+    supports-color: "npm:^9.4.0"
     youch: "npm:^3.3.3"
     youch-terminal: "npm:^2.2.3"
-  checksum: 10c0/a25e89bab2711bce95c24a8dcde9198592a26e4683c3d89539a8a400be04fb9c18dca246426dd96cf7d4840023862d8ee8d7bd734ae84942cd5495f90c7419a7
+  checksum: 10c0/fc91c7e4970715c69a806c0df0807623d374ff1f0f0099e392fd78dcc047b6bd40d42749238712b3ad45aa0d931ad2ef771cbe4e2e5bdf642cca087257172f8c
   languageName: node
   linkType: hard
 
@@ -269,12 +270,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@japa/runner@npm:3.1.2":
-  version: 3.1.2
-  resolution: "@japa/runner@npm:3.1.2"
+"@japa/runner@npm:3.1.4":
+  version: 3.1.4
+  resolution: "@japa/runner@npm:3.1.4"
   dependencies:
     "@japa/core": "npm:^9.0.1"
-    "@japa/errors-printer": "npm:^3.0.3"
+    "@japa/errors-printer": "npm:^3.0.4"
     "@poppinss/colors": "npm:^4.1.3"
     "@poppinss/hooks": "npm:^7.2.3"
     fast-glob: "npm:^3.3.2"
@@ -283,7 +284,8 @@ __metadata:
     ms: "npm:^2.1.3"
     serialize-error: "npm:^11.0.3"
     slash: "npm:^5.1.0"
-  checksum: 10c0/6e24d1b1f37b90c4c572842574e96bd5c400eea3ceda2d3aa8e45a68646af0e48e0ae01235e7b0d38524650cd2359a37582f50b1b6bbb496850ce46a7d6dea96
+    supports-color: "npm:^9.4.0"
+  checksum: 10c0/81f47d6e2a6fa5d09b76f45cde3a2807a9c37d2661958d894cffa37fc0089d4fc3ac2271db63aa7d7d1de5cd85346efa1b9eec07fd8d72f7503f828422a2cb59
   languageName: node
   linkType: hard
 
@@ -613,7 +615,7 @@ __metadata:
   resolution: "@onigoetz/intl-formatters@workspace:packages/intl-formatters"
   dependencies:
     "@japa/expect": "npm:3.0.2"
-    "@japa/runner": "npm:3.1.2"
+    "@japa/runner": "npm:3.1.4"
     "@onigoetz/i18n-types": "npm:0.1.0"
     "@onigoetz/messageformat": "npm:0.1.0"
     "@parcel/packager-ts": "npm:2.12.0"
@@ -634,7 +636,7 @@ __metadata:
   resolution: "@onigoetz/make-plural@workspace:packages/make-plural"
   dependencies:
     "@japa/expect": "npm:3.0.2"
-    "@japa/runner": "npm:3.1.2"
+    "@japa/runner": "npm:3.1.4"
     "@parcel/packager-ts": "npm:2.12.0"
     "@parcel/transformer-typescript-types": "npm:2.12.0"
     "@parcel/validator-typescript": "npm:2.12.0"
@@ -676,7 +678,7 @@ __metadata:
   resolution: "@onigoetz/messageformat@workspace:packages/messageformat"
   dependencies:
     "@japa/expect": "npm:3.0.2"
-    "@japa/runner": "npm:3.1.2"
+    "@japa/runner": "npm:3.1.4"
     "@onigoetz/i18n-types": "npm:0.1.0"
     "@parcel/packager-ts": "npm:2.12.0"
     "@parcel/transformer-typescript-types": "npm:2.12.0"
