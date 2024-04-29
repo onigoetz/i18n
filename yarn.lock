@@ -583,7 +583,7 @@ __metadata:
     "@parcel/config-default": "npm:2.12.0"
     "@parcel/core": "npm:2.12.0"
     "@phensley/plurals": "npm:1.8.0"
-    make-plural: "npm:7.3.0"
+    make-plural: "npm:7.4.0"
     speedscope: "npm:1.20.0"
   languageName: unknown
   linkType: soft
@@ -668,7 +668,7 @@ __metadata:
     format-message-parse: "npm:6.2.4"
     globalize: "npm:1.7.0"
     intl-messageformat: "npm:10.5.11"
-    make-plural: "npm:7.3.0"
+    make-plural: "npm:7.4.0"
     speedscope: "npm:1.20.0"
   languageName: unknown
   linkType: soft
@@ -3685,7 +3685,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"make-plural@npm:7.3.0, make-plural@npm:^7.0.0":
+"make-plural@npm:7.4.0":
+  version: 7.4.0
+  resolution: "make-plural@npm:7.4.0"
+  checksum: 10c0/10f24e932865c88d4cdb14d4bb809ce8e615cae7d083c63ad008b3bcaf0d22941ca0bd76acd9cdd7ae4047563501104fff3c37ce8ad2bc5671facde1818fa57f
+  languageName: node
+  linkType: hard
+
+"make-plural@npm:^7.0.0":
   version: 7.3.0
   resolution: "make-plural@npm:7.3.0"
   checksum: 10c0/e04eaebffe0fdb9d551ef1566df8dfdf101152ad99fd510666f476038eb144f07849749a09b7054b6469a72be2dbbe966a80590f2dc382495492bd9c510de46d
