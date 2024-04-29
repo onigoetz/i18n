@@ -17,7 +17,7 @@
     "format-message-parse": "6.2.4",
     "globalize": "1.7.0",
     "intl-messageformat": "10.5.11",
-    "make-plural": "7.3.0",
+    "make-plural": "7.4.0",
     "speedscope": "1.20.0"
   },
   "scripts": {
