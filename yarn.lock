@@ -40,18 +40,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@biomejs/biome@npm:1.7.1":
-  version: 1.7.1
-  resolution: "@biomejs/biome@npm:1.7.1"
+"@biomejs/biome@npm:1.7.3":
+  version: 1.7.3
+  resolution: "@biomejs/biome@npm:1.7.3"
   dependencies:
-    "@biomejs/cli-darwin-arm64": "npm:1.7.1"
-    "@biomejs/cli-darwin-x64": "npm:1.7.1"
-    "@biomejs/cli-linux-arm64": "npm:1.7.1"
-    "@biomejs/cli-linux-arm64-musl": "npm:1.7.1"
-    "@biomejs/cli-linux-x64": "npm:1.7.1"
-    "@biomejs/cli-linux-x64-musl": "npm:1.7.1"
-    "@biomejs/cli-win32-arm64": "npm:1.7.1"
-    "@biomejs/cli-win32-x64": "npm:1.7.1"
+    "@biomejs/cli-darwin-arm64": "npm:1.7.3"
+    "@biomejs/cli-darwin-x64": "npm:1.7.3"
+    "@biomejs/cli-linux-arm64": "npm:1.7.3"
+    "@biomejs/cli-linux-arm64-musl": "npm:1.7.3"
+    "@biomejs/cli-linux-x64": "npm:1.7.3"
+    "@biomejs/cli-linux-x64-musl": "npm:1.7.3"
+    "@biomejs/cli-win32-arm64": "npm:1.7.3"
+    "@biomejs/cli-win32-x64": "npm:1.7.3"
   dependenciesMeta:
     "@biomejs/cli-darwin-arm64":
       optional: true
@@ -71,62 +71,62 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: 10c0/277421fc797d39a2185af6039bb8a77cb520458f151e0fa29328a0dc6f2102899d78874a623323aa83590f81bf95af3a33519c2452e16f50461bb055841f67ea
+  checksum: 10c0/05c95bb4b1fbf1b252cf2124f012f69a00ff5599ecac002b7e3004bfcd927e3d7b5f4935739096b5184653ec96b44ddcc36809d059682e5378bde20c836fb111
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:1.7.1":
-  version: 1.7.1
-  resolution: "@biomejs/cli-darwin-arm64@npm:1.7.1"
+"@biomejs/cli-darwin-arm64@npm:1.7.3":
+  version: 1.7.3
+  resolution: "@biomejs/cli-darwin-arm64@npm:1.7.3"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:1.7.1":
-  version: 1.7.1
-  resolution: "@biomejs/cli-darwin-x64@npm:1.7.1"
+"@biomejs/cli-darwin-x64@npm:1.7.3":
+  version: 1.7.3
+  resolution: "@biomejs/cli-darwin-x64@npm:1.7.3"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64-musl@npm:1.7.1":
-  version: 1.7.1
-  resolution: "@biomejs/cli-linux-arm64-musl@npm:1.7.1"
+"@biomejs/cli-linux-arm64-musl@npm:1.7.3":
+  version: 1.7.3
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:1.7.3"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:1.7.1":
-  version: 1.7.1
-  resolution: "@biomejs/cli-linux-arm64@npm:1.7.1"
+"@biomejs/cli-linux-arm64@npm:1.7.3":
+  version: 1.7.3
+  resolution: "@biomejs/cli-linux-arm64@npm:1.7.3"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64-musl@npm:1.7.1":
-  version: 1.7.1
-  resolution: "@biomejs/cli-linux-x64-musl@npm:1.7.1"
+"@biomejs/cli-linux-x64-musl@npm:1.7.3":
+  version: 1.7.3
+  resolution: "@biomejs/cli-linux-x64-musl@npm:1.7.3"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:1.7.1":
-  version: 1.7.1
-  resolution: "@biomejs/cli-linux-x64@npm:1.7.1"
+"@biomejs/cli-linux-x64@npm:1.7.3":
+  version: 1.7.3
+  resolution: "@biomejs/cli-linux-x64@npm:1.7.3"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:1.7.1":
-  version: 1.7.1
-  resolution: "@biomejs/cli-win32-arm64@npm:1.7.1"
+"@biomejs/cli-win32-arm64@npm:1.7.3":
+  version: 1.7.3
+  resolution: "@biomejs/cli-win32-arm64@npm:1.7.3"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:1.7.1":
-  version: 1.7.1
-  resolution: "@biomejs/cli-win32-x64@npm:1.7.1"
+"@biomejs/cli-win32-x64@npm:1.7.3":
+  version: 1.7.3
+  resolution: "@biomejs/cli-win32-x64@npm:1.7.3"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -582,7 +582,7 @@ __metadata:
     "@onigoetz/make-plural": "npm:0.1.0"
     "@parcel/config-default": "npm:2.12.0"
     "@parcel/core": "npm:2.12.0"
-    "@phensley/plurals": "npm:1.8.0"
+    "@phensley/plurals": "npm:1.8.1"
     make-plural: "npm:7.4.0"
     speedscope: "npm:1.20.0"
   languageName: unknown
@@ -592,9 +592,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@onigoetz/i18n-parent@workspace:."
   dependencies:
-    "@biomejs/biome": "npm:1.7.1"
+    "@biomejs/biome": "npm:1.7.3"
     benchmark: "npm:2.1.4"
-    systeminformation: "npm:5.22.7"
+    systeminformation: "npm:5.22.8"
   languageName: unknown
   linkType: soft
 
@@ -662,12 +662,12 @@ __metadata:
     "@onigoetz/messageformat": "npm:0.1.0"
     "@parcel/config-default": "npm:2.12.0"
     "@parcel/core": "npm:2.12.0"
-    "@phensley/messageformat": "npm:1.8.0"
-    "@phensley/plurals": "npm:1.8.0"
+    "@phensley/messageformat": "npm:1.8.1"
+    "@phensley/plurals": "npm:1.8.1"
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
     globalize: "npm:1.7.0"
-    intl-messageformat: "npm:10.5.11"
+    intl-messageformat: "npm:10.5.12"
     make-plural: "npm:7.4.0"
     speedscope: "npm:1.20.0"
   languageName: unknown
@@ -1577,43 +1577,43 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@phensley/cldr-utils@npm:~1.8.0":
-  version: 1.8.0
-  resolution: "@phensley/cldr-utils@npm:1.8.0"
+"@phensley/cldr-utils@npm:~1.8.1":
+  version: 1.8.1
+  resolution: "@phensley/cldr-utils@npm:1.8.1"
   dependencies:
     tslib: "npm:^2.6.2"
-  checksum: 10c0/b1f3ed52717ea3c9ee23f475a83bfd409dbe6e92877e7e25e3f2972bed526430d1a3994524410793d6d83c48252de31b2f011ad51f158225b1a82b2ec3df06e3
+  checksum: 10c0/3090110182ae737a7179d06b4d681fc4a2d9ed749b6799a744f790380bf12cc653b92e716f0d14eda4870a28891a27120ec13049dc308c07eacd09c68c6e67fc
   languageName: node
   linkType: hard
 
-"@phensley/decimal@npm:~1.8.0":
-  version: 1.8.0
-  resolution: "@phensley/decimal@npm:1.8.0"
+"@phensley/decimal@npm:~1.8.1":
+  version: 1.8.1
+  resolution: "@phensley/decimal@npm:1.8.1"
   dependencies:
     tslib: "npm:^2.6.2"
-  checksum: 10c0/357b7ed82a79ba7f2d10798278d874e80a1da8a6ebf31da0be33e556d4f8f612773962b52c8dfe5262d9c47cc70c1c99414477a315e2a9c66d0002fea6e03e79
+  checksum: 10c0/10e823b9ab54b53fa5b3b55031b0b24e5c3f4fd117099b8058e0df794c7acfc474c72e887542e7e1c6ef7f17c092d4727851f00387719fd7fdf4f7c15d8a05ac
   languageName: node
   linkType: hard
 
-"@phensley/messageformat@npm:1.8.0":
-  version: 1.8.0
-  resolution: "@phensley/messageformat@npm:1.8.0"
+"@phensley/messageformat@npm:1.8.1":
+  version: 1.8.1
+  resolution: "@phensley/messageformat@npm:1.8.1"
   dependencies:
-    "@phensley/cldr-utils": "npm:~1.8.0"
-    "@phensley/decimal": "npm:~1.8.0"
-    "@phensley/plurals": "npm:~1.8.0"
+    "@phensley/cldr-utils": "npm:~1.8.1"
+    "@phensley/decimal": "npm:~1.8.1"
+    "@phensley/plurals": "npm:~1.8.1"
     tslib: "npm:^2.6.2"
-  checksum: 10c0/eb541fa6a5429563f0c3dd32f97b688a863e4c6eb7ac953a695f61ec91155294fa0c8093b71ae8794ba3ce45da1dcbc11d84ffc1e04db3b717746f29d2a4b595
+  checksum: 10c0/2ed6492ccd55258dfc291ae4b8b85140b2f9e809c1b0a1afa34410ed1486f16386449b43da93275601f1407f5f2f56443b149603f613f1487dcf20aa2974e4f0
   languageName: node
   linkType: hard
 
-"@phensley/plurals@npm:1.8.0, @phensley/plurals@npm:~1.8.0":
-  version: 1.8.0
-  resolution: "@phensley/plurals@npm:1.8.0"
+"@phensley/plurals@npm:1.8.1, @phensley/plurals@npm:~1.8.1":
+  version: 1.8.1
+  resolution: "@phensley/plurals@npm:1.8.1"
   dependencies:
-    "@phensley/decimal": "npm:~1.8.0"
+    "@phensley/decimal": "npm:~1.8.1"
     tslib: "npm:^2.6.2"
-  checksum: 10c0/7f3197c4434df8c64bc990dd08fcb2bdd134b2e7d10b9f20d1fc19b19e1b423627e57ca3509e2bb338239e10155a657a168e09cb71a52e3a5d2d3f3b4feb1c0f
+  checksum: 10c0/dabbb3818ae87e2bc84582ce125f7f7712921dd56f72c0264d9aa1ed3e1c5ec4585b8b0ba475a1d14ada4f852d45b26fac25cb0ebd41fe4964ecb8d28fb105d0
   languageName: node
   linkType: hard
 
@@ -3123,15 +3123,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"intl-messageformat@npm:10.5.11":
-  version: 10.5.11
-  resolution: "intl-messageformat@npm:10.5.11"
+"intl-messageformat@npm:10.5.12":
+  version: 10.5.12
+  resolution: "intl-messageformat@npm:10.5.12"
   dependencies:
     "@formatjs/ecma402-abstract": "npm:1.18.2"
     "@formatjs/fast-memoize": "npm:2.2.0"
     "@formatjs/icu-messageformat-parser": "npm:2.7.6"
     tslib: "npm:^2.4.0"
-  checksum: 10c0/423f1c879ce2d0e7b9e0b4c1787a81ead7fe4d1734e0366a20fef56b06c09146e7ca3618e2e78b4f8b8f2b59cafe6237ceed21530fe0c16cfb47d915fc80222d
+  checksum: 10c0/f95734e98a05ef7f51de0c27904d3a994528e3a174963bd1b3a6db9416b5fd84bbd8f7d26d84fc547d51af69ccf46dd3f73a3f4f20a2ccef5c9cd90e946ad82c
   languageName: node
   linkType: hard
 
@@ -4722,12 +4722,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"systeminformation@npm:5.22.7":
-  version: 5.22.7
-  resolution: "systeminformation@npm:5.22.7"
+"systeminformation@npm:5.22.8":
+  version: 5.22.8
+  resolution: "systeminformation@npm:5.22.8"
   bin:
     systeminformation: lib/cli.js
-  checksum: 10c0/d649b89bd350a35f1be13ebcd47e25b81295a147661d5d449b8b577f4f5d34cc4194a8abe6e50458cea7dae3eae6afc874f89fd3d3d9fd4ccd1118a054c3e646
+  checksum: 10c0/817e6a9b0d4d96934f2b0aae667614b15f690537c79771e27fffae42c643c518bb6399065c778208fe5470ac12face8e016a76b959d26dc075d290cf499d1b57
   conditions: (os=darwin | os=linux | os=win32 | os=freebsd | os=openbsd | os=netbsd | os=sunos | os=android)
   languageName: node
   linkType: hard
