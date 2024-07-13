@@ -106,7 +106,7 @@ I tried to compare apples with apples as much as possible, but some libraries do
 <p>Feel free to make a PR to help make these comparisons as fair as possible.</p>
 <p>As a final word, I made this comparison purely for fun and to learn a thing or two about performance optimization.</p>
 <h2><a id="libraries-size" href="#libraries-size" class="Permalink" aria-hidden="true" title="Permalink">#</a>Libraries size</h2>
-<p>Sources can be found in <code>src</code>, measure taken on 23/11/2023 with latest available versions</p>
+<p>Sources can be found in <code>src</code>, measure taken on 07/12/2023 with latest available versions</p>
 <table>
 <thead>
 <tr>
@@ -120,55 +120,61 @@ I tried to compare apples with apples as much as possible, but some libraries do
 <tr>
 <td>@ffz/icu-msgparser (+ custom renderer)</td>
 <td>2.0.0</td>
-<td>13K</td>
+<td>10K</td>
 <td></td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat (+ @onigoetz/intl)</td>
+<td>@onigoetz/messageformat (+ @onigoetz/intl-formatters)</td>
 <td>0.1.0</td>
-<td>17K</td>
+<td>11K</td>
 <td></td>
 </tr>
 <tr>
 <td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
 <td>0.1.0</td>
-<td>20K</td>
+<td>13K</td>
 <td></td>
 </tr>
 <tr>
 <td>format-message-parse</td>
 <td>6.2.4</td>
-<td>29K</td>
+<td>22K</td>
 <td>Uses peg.js</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (+ make-plural)</td>
+<td>0.1.0</td>
+<td>28K</td>
+<td></td>
 </tr>
 <tr>
 <td>@onigoetz/messageformat (+ @phensley/plurals)</td>
 <td>0.1.0</td>
-<td>62K</td>
+<td>45K</td>
 <td></td>
 </tr>
 <tr>
 <td>intl-messageformat</td>
 <td>10.5.8</td>
-<td>71K</td>
+<td>58K</td>
 <td>Uses peg.js</td>
 </tr>
 <tr>
 <td>@phensley/messageformat</td>
 <td>1.8.0</td>
-<td>81K</td>
+<td>62K</td>
 <td></td>
 </tr>
 <tr>
 <td>@messageformat/core</td>
 <td>3.3.0</td>
-<td>96K</td>
+<td>74K</td>
 <td>Uses peg.js</td>
 </tr>
 <tr>
 <td>globalize</td>
 <td>1.7.0</td>
-<td>202K</td>
+<td>157K</td>
 <td>Uses peg.js</td>
 </tr>
 </tbody>
@@ -199,12 +205,12 @@ Each libraries must follow the same rules:</p>
 <ul>
 <li>Node.js v20.9.0</li>
 <li>Apple M2 CPU</li>
-<li>November 8, 2023</li>
+<li>December 7, 2023</li>
 </ul>
 </blockquote>
 <h2><a id="simple-string" href="#simple-string" class="Permalink" aria-hidden="true" title="Permalink">#</a>Simple String</h2>
 <pre><code class="hljs javascript"><span class="hljs-keyword">const</span> input = [<span class="hljs-string">`Hello, world!`</span>, {}];
-  
+
 <span class="hljs-comment">// Renders: `Hello, world!`</span>
 </code></pre>
 <table>
@@ -218,66 +224,75 @@ Each libraries must follow the same rules:</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>@onigoetz/messageformat (+ @onigoetz/intl)</strong></td>
-<td align="right">8,931,306</td>
-<td>± 0.21%</td>
+<td><strong>@onigoetz/messageformat (+ @onigoetz/make-plural)</strong></td>
+<td align="right">9,509,221</td>
+<td>± 0.06%</td>
 <td>101</td>
 </tr>
 <tr>
 <td>@onigoetz/messageformat (+ @phensley/plurals)</td>
-<td align="right">8,864,387</td>
-<td>± 0.18%</td>
-<td>100</td>
+<td align="right">9,495,148</td>
+<td>± 0.08%</td>
+<td>98</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (+ @onigoetz/intl-formatters)</td>
+<td align="right">9,391,095</td>
+<td>± 0.15%</td>
+<td>95</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (+ make-plural)</td>
+<td align="right">8,313,129</td>
+<td>± 0.16%</td>
+<td>101</td>
 </tr>
 <tr>
 <td>format-message-parse</td>
-<td align="right">7,802,495</td>
-<td>± 0.27%</td>
-<td>99</td>
-</tr>
-<tr>
-<td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
-<td align="right">7,794,521</td>
-<td>± 0.22%</td>
+<td align="right">7,876,460</td>
+<td>± 0.16%</td>
 <td>100</td>
 </tr>
 <tr>
 <td>@ffz/icu-msgparser (+ custom renderer)</td>
-<td align="right">5,656,945</td>
-<td>± 0.30%</td>
-<td>99</td>
+<td align="right">5,778,380</td>
+<td>± 0.06%</td>
+<td>101</td>
 </tr>
 <tr>
 <td>@phensley/messageformat</td>
-<td align="right">5,560,901</td>
-<td>± 0.59%</td>
-<td>98</td>
-</tr>
-<tr>
-<td>@messageformat/core</td>
-<td align="right">1,183,394</td>
-<td>± 0.40%</td>
+<td align="right">5,507,993</td>
+<td>± 0.20%</td>
 <td>99</td>
 </tr>
 <tr>
+<td>@messageformat/core</td>
+<td align="right">1,198,320</td>
+<td>± 0.22%</td>
+<td>98</td>
+</tr>
+<tr>
 <td>intl-messageformat</td>
-<td align="right">228,133</td>
-<td>± 0.91%</td>
-<td>91</td>
+<td align="right">226,912</td>
+<td>± 0.92%</td>
+<td>88</td>
 </tr>
 <tr>
 <td>globalize</td>
-<td align="right">37,145</td>
-<td>± 0.40%</td>
-<td>94</td>
+<td align="right">37,695</td>
+<td>± 0.29%</td>
+<td>93</td>
 </tr>
 </tbody>
 </table>
 <h2><a id="with-one-variable" href="#with-one-variable" class="Permalink" aria-hidden="true" title="Permalink">#</a>With one variable</h2>
-<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> input = [<span class="hljs-string">`Hello, {name}!`</span>, {
-  <span class="hljs-string">"name"</span>: <span class="hljs-string">"John"</span>
-}];
-  
+<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> input = [
+  <span class="hljs-string">`Hello, {name}!`</span>,
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">"John"</span>,
+  },
+];
+
 <span class="hljs-comment">// Renders: `Hello, John!`</span>
 </code></pre>
 <table>
@@ -291,68 +306,77 @@ Each libraries must follow the same rules:</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>@onigoetz/messageformat (+ @phensley/plurals)</strong></td>
-<td align="right">4,181,899</td>
-<td>± 0.28%</td>
+<td><strong>@onigoetz/messageformat (+ @onigoetz/intl-formatters)</strong></td>
+<td align="right">4,418,002</td>
+<td>± 0.09%</td>
 <td>99</td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat (+ @onigoetz/intl)</td>
-<td align="right">4,113,443</td>
-<td>± 1.15%</td>
-<td>91</td>
+<td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
+<td align="right">4,353,950</td>
+<td>± 0.19%</td>
+<td>101</td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
-<td align="right">3,874,205</td>
-<td>± 2.09%</td>
-<td>89</td>
+<td>@onigoetz/messageformat (+ @phensley/plurals)</td>
+<td align="right">4,343,249</td>
+<td>± 0.18%</td>
+<td>100</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (+ make-plural)</td>
+<td align="right">4,242,189</td>
+<td>± 0.07%</td>
+<td>102</td>
 </tr>
 <tr>
 <td>format-message-parse</td>
-<td align="right">3,687,949</td>
-<td>± 0.29%</td>
+<td align="right">3,423,637</td>
+<td>± 0.16%</td>
 <td>100</td>
 </tr>
 <tr>
 <td>@ffz/icu-msgparser (+ custom renderer)</td>
-<td align="right">3,276,239</td>
-<td>± 0.61%</td>
-<td>96</td>
+<td align="right">3,365,181</td>
+<td>± 0.20%</td>
+<td>102</td>
 </tr>
 <tr>
 <td>@phensley/messageformat</td>
-<td align="right">2,837,812</td>
-<td>± 0.25%</td>
-<td>101</td>
+<td align="right">2,819,977</td>
+<td>± 0.08%</td>
+<td>100</td>
 </tr>
 <tr>
 <td>@messageformat/core</td>
-<td align="right">707,087</td>
-<td>± 0.22%</td>
-<td>91</td>
+<td align="right">713,582</td>
+<td>± 0.20%</td>
+<td>98</td>
 </tr>
 <tr>
 <td>intl-messageformat</td>
-<td align="right">200,359</td>
-<td>± 1.01%</td>
-<td>93</td>
+<td align="right">199,774</td>
+<td>± 1.12%</td>
+<td>92</td>
 </tr>
 <tr>
 <td>globalize</td>
-<td align="right">36,318</td>
-<td>± 0.27%</td>
-<td>95</td>
+<td align="right">36,924</td>
+<td>± 0.13%</td>
+<td>98</td>
 </tr>
 </tbody>
 </table>
 <h2><a id="with-plurals" href="#with-plurals" class="Permalink" aria-hidden="true" title="Permalink">#</a>With plurals</h2>
-<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> input = [<span class="hljs-string">`Yo, {firstName} {lastName} has {numBooks} {numBooks, plural, one {book} other {books}}.`</span>, {
-  <span class="hljs-string">"firstName"</span>: <span class="hljs-string">"John"</span>,
-  <span class="hljs-string">"lastName"</span>: <span class="hljs-string">"Constantine"</span>,
-  <span class="hljs-string">"numBooks"</span>: <span class="hljs-number">5</span>
-}];
-  
+<pre><code class="hljs javascript"><span class="hljs-keyword">const</span> input = [
+  <span class="hljs-string">`Yo, {firstName} {lastName} has {numBooks} {numBooks, plural, one {book} other {books}}.`</span>,
+  {
+    <span class="hljs-attr">firstName</span>: <span class="hljs-string">"John"</span>,
+    <span class="hljs-attr">lastName</span>: <span class="hljs-string">"Constantine"</span>,
+    <span class="hljs-attr">numBooks</span>: <span class="hljs-number">5</span>,
+  },
+];
+
 <span class="hljs-comment">// Renders: `Yo, John Constantine has 5 books.`</span>
 </code></pre>
 <table>
@@ -367,57 +391,63 @@ Each libraries must follow the same rules:</p>
 <tbody>
 <tr>
 <td><strong>@onigoetz/messageformat (+ @phensley/plurals)</strong></td>
-<td align="right">590,769</td>
+<td align="right">611,423</td>
+<td>± 0.06%</td>
+<td>98</td>
+</tr>
+<tr>
+<td><strong>@onigoetz/messageformat (+ make-plural)</strong></td>
+<td align="right">611,052</td>
+<td>± 0.12%</td>
+<td>97</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (+ @onigoetz/intl-formatters)</td>
+<td align="right">551,116</td>
 <td>± 0.08%</td>
-<td>95</td>
-</tr>
-<tr>
-<td>@onigoetz/messageformat (+ @onigoetz/intl)</td>
-<td align="right">523,642</td>
-<td>± 0.26%</td>
-<td>100</td>
-</tr>
-<tr>
-<td>@phensley/messageformat</td>
-<td align="right">520,757</td>
-<td>± 0.14%</td>
-<td>100</td>
-</tr>
-<tr>
-<td>@messageformat/core</td>
-<td align="right">170,850</td>
-<td>± 0.13%</td>
-<td>93</td>
-</tr>
-<tr>
-<td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
-<td align="right">139,840</td>
-<td>± 0.14%</td>
 <td>96</td>
 </tr>
 <tr>
+<td>@phensley/messageformat</td>
+<td align="right">519,670</td>
+<td>± 0.15%</td>
+<td>97</td>
+</tr>
+<tr>
+<td>@messageformat/core</td>
+<td align="right">170,824</td>
+<td>± 0.13%</td>
+<td>95</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
+<td align="right">140,027</td>
+<td>± 0.20%</td>
+<td>101</td>
+</tr>
+<tr>
 <td>@ffz/icu-msgparser (+ custom renderer)</td>
-<td align="right">130,186</td>
-<td>± 0.08%</td>
-<td>99</td>
+<td align="right">129,570</td>
+<td>± 0.10%</td>
+<td>96</td>
 </tr>
 <tr>
 <td>format-message-parse</td>
-<td align="right">81,207</td>
+<td align="right">81,600</td>
 <td>± 0.19%</td>
-<td>99</td>
+<td>97</td>
 </tr>
 <tr>
 <td>intl-messageformat</td>
-<td align="right">47,014</td>
-<td>± 2.04%</td>
-<td>88</td>
+<td align="right">46,911</td>
+<td>± 1.88%</td>
+<td>92</td>
 </tr>
 <tr>
 <td>globalize</td>
-<td align="right">27,173</td>
-<td>± 0.64%</td>
-<td>95</td>
+<td align="right">27,326</td>
+<td>± 0.20%</td>
+<td>96</td>
 </tr>
 </tbody>
 </table>
@@ -455,11 +485,11 @@ Each libraries must follow the same rules:</p>
   <span class="hljs-string">"host"</span>: <span class="hljs-string">"Lucifer"</span>,
   <span class="hljs-string">"guest"</span>: <span class="hljs-string">"John Constantine"</span>
 }];
-  
+
 <span class="hljs-comment">// Renders: `</span>
-  
+
 		  Lucifer invites John Constantine and <span class="hljs-number">2</span> other people to his party.
-	  
+
   <span class="hljs-string">`
 </span></code></pre>
 <table>
@@ -474,57 +504,63 @@ Each libraries must follow the same rules:</p>
 <tbody>
 <tr>
 <td><strong>@onigoetz/messageformat (+ @phensley/plurals)</strong></td>
-<td align="right">92,894</td>
-<td>± 0.07%</td>
+<td align="right">94,310</td>
+<td>± 0.06%</td>
+<td>98</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (+ make-plural)</td>
+<td align="right">94,325</td>
+<td>± 0.20%</td>
 <td>100</td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat (+ @onigoetz/intl)</td>
-<td align="right">90,918</td>
-<td>± 0.17%</td>
-<td>100</td>
+<td>@onigoetz/messageformat (+ @onigoetz/intl-formatters)</td>
+<td align="right">92,259</td>
+<td>± 0.10%</td>
+<td>101</td>
 </tr>
 <tr>
 <td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
-<td align="right">61,149</td>
-<td>± 0.17%</td>
-<td>99</td>
+<td align="right">61,412</td>
+<td>± 0.32%</td>
+<td>100</td>
 </tr>
 <tr>
 <td>@phensley/messageformat</td>
-<td align="right">52,854</td>
+<td align="right">52,901</td>
 <td>± 0.06%</td>
-<td>100</td>
+<td>98</td>
 </tr>
 <tr>
 <td>@messageformat/core</td>
-<td align="right">30,248</td>
-<td>± 0.25%</td>
-<td>95</td>
+<td align="right">30,031</td>
+<td>± 0.08%</td>
+<td>98</td>
 </tr>
 <tr>
 <td>@ffz/icu-msgparser (+ custom renderer)</td>
-<td align="right">29,312</td>
-<td>± 0.79%</td>
-<td>99</td>
-</tr>
-<tr>
-<td>intl-messageformat</td>
-<td align="right">16,569</td>
-<td>± 0.96%</td>
-<td>94</td>
+<td align="right">29,234</td>
+<td>± 0.73%</td>
+<td>98</td>
 </tr>
 <tr>
 <td>format-message-parse</td>
-<td align="right">16,799</td>
-<td>± 2.54%</td>
-<td>96</td>
+<td align="right">17,066</td>
+<td>± 2.83%</td>
+<td>93</td>
+</tr>
+<tr>
+<td>intl-messageformat</td>
+<td align="right">16,619</td>
+<td>± 0.93%</td>
+<td>94</td>
 </tr>
 <tr>
 <td>globalize</td>
-<td align="right">8,764</td>
-<td>± 0.18%</td>
-<td>100</td>
+<td align="right">8,723</td>
+<td>± 0.90%</td>
+<td>99</td>
 </tr>
 </tbody>
 </table>
