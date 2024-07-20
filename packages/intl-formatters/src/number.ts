@@ -87,8 +87,8 @@ export function currencyFormatter(
     {},
     entryOptions || {},
   ) as Intl.NumberFormatOptions;
-  if (options.style) {
-    options.currencyDisplay = options.style;
+  if (entryOptions?.style) {
+    options.currencyDisplay = entryOptions.style;
   }
   options.style = "currency";
   options.currency = currency;
