@@ -1,6 +1,6 @@
 {
   "name": "@onigoetz/messageformat",
-  "version": "0.1.0",
+  "version": "1.0.0-rc.2",
   "license": "MIT",
   "source": "src/index.ts",
   "main": "./dist/index.cjs",
@@ -20,7 +20,7 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "@onigoetz/i18n-types": "0.1.0"
+    "@onigoetz/i18n-types": "1.0.0-rc.2"
   },
   "devDependencies": {
     "@japa/expect": "3.0.2",
@@ -30,7 +30,7 @@
     "@parcel/validator-typescript": "2.12.0",
     "c8": "10.1.2",
     "japa": "4.0.0",
-    "japa-sonarqube-reporter": "0.1.0",
+    "japa-sonarqube-reporter": "1.0.0-rc.2",
     "parcel": "2.12.0",
     "ts-node": "10.9.2",
     "typescript": "5.5.4"

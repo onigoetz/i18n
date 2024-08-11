@@ -579,8 +579,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@onigoetz/benchmark-plural@workspace:packages/benchmark-plural"
   dependencies:
-    "@onigoetz/intl-formatters": "npm:0.1.0"
-    "@onigoetz/make-plural": "npm:0.1.0"
+    "@onigoetz/intl-formatters": "npm:1.0.0-rc.2"
+    "@onigoetz/make-plural": "npm:1.0.0-rc.2"
     "@parcel/config-default": "npm:2.12.0"
     "@parcel/core": "npm:2.12.0"
     "@phensley/plurals": "npm:1.8.1"
@@ -599,7 +599,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@onigoetz/i18n-types@npm:0.1.0, @onigoetz/i18n-types@workspace:packages/i18n-types":
+"@onigoetz/i18n-types@npm:1.0.0-rc.2, @onigoetz/i18n-types@workspace:packages/i18n-types":
   version: 0.0.0-use.local
   resolution: "@onigoetz/i18n-types@workspace:packages/i18n-types"
   dependencies:
@@ -611,28 +611,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@onigoetz/intl-formatters@npm:0.1.0, @onigoetz/intl-formatters@workspace:packages/intl-formatters":
+"@onigoetz/intl-formatters@npm:1.0.0-rc.2, @onigoetz/intl-formatters@workspace:packages/intl-formatters":
   version: 0.0.0-use.local
   resolution: "@onigoetz/intl-formatters@workspace:packages/intl-formatters"
   dependencies:
     "@japa/expect": "npm:3.0.2"
     "@japa/runner": "npm:3.1.4"
-    "@onigoetz/i18n-types": "npm:0.1.0"
-    "@onigoetz/messageformat": "npm:0.1.0"
+    "@onigoetz/i18n-types": "npm:1.0.0-rc.2"
+    "@onigoetz/messageformat": "npm:1.0.0-rc.2"
     "@parcel/packager-ts": "npm:2.12.0"
     "@parcel/transformer-typescript-types": "npm:2.12.0"
     "@parcel/validator-typescript": "npm:2.12.0"
     c8: "npm:10.1.2"
     full-icu: "npm:1.5.0"
     japa: "npm:4.0.0"
-    japa-sonarqube-reporter: "npm:0.1.0"
+    japa-sonarqube-reporter: "npm:1.0.0-rc.2"
     parcel: "npm:2.12.0"
     ts-node: "npm:10.9.2"
     typescript: "npm:5.5.4"
   languageName: unknown
   linkType: soft
 
-"@onigoetz/make-plural@npm:0.1.0, @onigoetz/make-plural@workspace:packages/make-plural":
+"@onigoetz/make-plural@npm:1.0.0-rc.2, @onigoetz/make-plural@workspace:packages/make-plural":
   version: 0.0.0-use.local
   resolution: "@onigoetz/make-plural@workspace:packages/make-plural"
   dependencies:
@@ -643,9 +643,9 @@ __metadata:
     "@parcel/validator-typescript": "npm:2.12.0"
     c8: "npm:10.1.2"
     japa: "npm:4.0.0"
-    japa-sonarqube-reporter: "npm:0.1.0"
+    japa-sonarqube-reporter: "npm:1.0.0-rc.2"
     parcel: "npm:2.12.0"
-    test-cldr-data: "npm:0.1.0"
+    test-cldr-data: "npm:1.0.0-rc.2"
     ts-node: "npm:10.9.2"
     typescript: "npm:5.5.4"
   languageName: unknown
@@ -658,9 +658,9 @@ __metadata:
     "@eo-locale/core": "npm:1.7.2"
     "@ffz/icu-msgparser": "npm:2.0.0"
     "@messageformat/core": "npm:3.3.0"
-    "@onigoetz/intl-formatters": "npm:0.1.0"
-    "@onigoetz/make-plural": "npm:0.1.0"
-    "@onigoetz/messageformat": "npm:0.1.0"
+    "@onigoetz/intl-formatters": "npm:1.0.0-rc.2"
+    "@onigoetz/make-plural": "npm:1.0.0-rc.2"
+    "@onigoetz/messageformat": "npm:1.0.0-rc.2"
     "@parcel/config-default": "npm:2.12.0"
     "@parcel/core": "npm:2.12.0"
     "@phensley/messageformat": "npm:1.8.1"
@@ -674,19 +674,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@onigoetz/messageformat@npm:0.1.0, @onigoetz/messageformat@workspace:packages/messageformat":
+"@onigoetz/messageformat@npm:1.0.0-rc.2, @onigoetz/messageformat@workspace:packages/messageformat":
   version: 0.0.0-use.local
   resolution: "@onigoetz/messageformat@workspace:packages/messageformat"
   dependencies:
     "@japa/expect": "npm:3.0.2"
     "@japa/runner": "npm:3.1.4"
-    "@onigoetz/i18n-types": "npm:0.1.0"
+    "@onigoetz/i18n-types": "npm:1.0.0-rc.2"
     "@parcel/packager-ts": "npm:2.12.0"
     "@parcel/transformer-typescript-types": "npm:2.12.0"
     "@parcel/validator-typescript": "npm:2.12.0"
     c8: "npm:10.1.2"
     japa: "npm:4.0.0"
-    japa-sonarqube-reporter: "npm:0.1.0"
+    japa-sonarqube-reporter: "npm:1.0.0-rc.2"
     parcel: "npm:2.12.0"
     ts-node: "npm:10.9.2"
     typescript: "npm:5.5.4"
@@ -3269,7 +3269,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"japa-sonarqube-reporter@npm:0.1.0, japa-sonarqube-reporter@workspace:packages/japa-sonarqube-reporter":
+"japa-sonarqube-reporter@npm:1.0.0-rc.2, japa-sonarqube-reporter@workspace:packages/japa-sonarqube-reporter":
   version: 0.0.0-use.local
   resolution: "japa-sonarqube-reporter@workspace:packages/japa-sonarqube-reporter"
   languageName: unknown
@@ -4702,7 +4702,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"test-cldr-data@npm:0.1.0, test-cldr-data@workspace:packages/test-cldr-data":
+"test-cldr-data@npm:1.0.0-rc.2, test-cldr-data@workspace:packages/test-cldr-data":
   version: 0.0.0-use.local
   resolution: "test-cldr-data@workspace:packages/test-cldr-data"
   languageName: unknown
