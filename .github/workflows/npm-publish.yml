@@ -16,6 +16,6 @@ jobs:
       - run: yarn install
       - run: yarn build
       - run: yarn test
-      - run: yarn workspaces foreach -W --no-private npm publish --access public
+      - run: yarn workspaces foreach -A --no-private run publish_to_npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

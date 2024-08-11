@@ -41,6 +41,7 @@
     "test": "NODE_ICU_DATA=../../node_modules/full-icu && node --loader=ts-node/esm test.ts",
     "test:ci": "NODE_ICU_DATA=../../node_modules/full-icu && c8 -r lcov -r text node --loader=ts-node/esm test.ts",
     "format": "biome format src",
-    "check": "biome check src"
+    "check": "biome check src",
+    "publish_to_npm": "npm publish"
   }
 }

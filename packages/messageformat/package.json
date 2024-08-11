@@ -41,6 +41,7 @@
     "test": "node --loader=ts-node/esm test.ts",
     "test:ci": "c8 -r lcov -r text node --loader=ts-node/esm test.ts",
     "format": "biome format src",
-    "check": "biome check src"
+    "check": "biome check src",
+    "publish_to_npm": "npm publish"
   }
 }

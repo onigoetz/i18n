@@ -21,6 +21,7 @@
   "scripts": {
     "build": "parcel build",
     "format": "biome format index.ts",
-    "check": "biome check index.ts"
+    "check": "biome check index.ts",
+    "publish_to_npm": "npm publish"
   }
 }
