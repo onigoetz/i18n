@@ -41,18 +41,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@biomejs/biome@npm:1.8.3":
-  version: 1.8.3
-  resolution: "@biomejs/biome@npm:1.8.3"
+"@biomejs/biome@npm:1.9.0":
+  version: 1.9.0
+  resolution: "@biomejs/biome@npm:1.9.0"
   dependencies:
-    "@biomejs/cli-darwin-arm64": "npm:1.8.3"
-    "@biomejs/cli-darwin-x64": "npm:1.8.3"
-    "@biomejs/cli-linux-arm64": "npm:1.8.3"
-    "@biomejs/cli-linux-arm64-musl": "npm:1.8.3"
-    "@biomejs/cli-linux-x64": "npm:1.8.3"
-    "@biomejs/cli-linux-x64-musl": "npm:1.8.3"
-    "@biomejs/cli-win32-arm64": "npm:1.8.3"
-    "@biomejs/cli-win32-x64": "npm:1.8.3"
+    "@biomejs/cli-darwin-arm64": "npm:1.9.0"
+    "@biomejs/cli-darwin-x64": "npm:1.9.0"
+    "@biomejs/cli-linux-arm64": "npm:1.9.0"
+    "@biomejs/cli-linux-arm64-musl": "npm:1.9.0"
+    "@biomejs/cli-linux-x64": "npm:1.9.0"
+    "@biomejs/cli-linux-x64-musl": "npm:1.9.0"
+    "@biomejs/cli-win32-arm64": "npm:1.9.0"
+    "@biomejs/cli-win32-x64": "npm:1.9.0"
   dependenciesMeta:
     "@biomejs/cli-darwin-arm64":
       optional: true
@@ -72,62 +72,62 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: 10c0/95fe99ce82cd8242f1be51cbf3ac26043b253f5a369d3dc24df09bdb32ec04dba679b1d4fa8b9d602b1bf2c30ecd80af14aa8f5c92d6e0cd6214a99a1099a65b
+  checksum: 10c0/b07ad2c8dc3d52c0a4eea37f98d36399b33a13759903aa65f9678db916810b773fe94937c304899158479bccd8c3c90f0f30af22b34d6dc5963774f1acc5e245
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:1.8.3":
-  version: 1.8.3
-  resolution: "@biomejs/cli-darwin-arm64@npm:1.8.3"
+"@biomejs/cli-darwin-arm64@npm:1.9.0":
+  version: 1.9.0
+  resolution: "@biomejs/cli-darwin-arm64@npm:1.9.0"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:1.8.3":
-  version: 1.8.3
-  resolution: "@biomejs/cli-darwin-x64@npm:1.8.3"
+"@biomejs/cli-darwin-x64@npm:1.9.0":
+  version: 1.9.0
+  resolution: "@biomejs/cli-darwin-x64@npm:1.9.0"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64-musl@npm:1.8.3":
-  version: 1.8.3
-  resolution: "@biomejs/cli-linux-arm64-musl@npm:1.8.3"
+"@biomejs/cli-linux-arm64-musl@npm:1.9.0":
+  version: 1.9.0
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:1.9.0"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:1.8.3":
-  version: 1.8.3
-  resolution: "@biomejs/cli-linux-arm64@npm:1.8.3"
+"@biomejs/cli-linux-arm64@npm:1.9.0":
+  version: 1.9.0
+  resolution: "@biomejs/cli-linux-arm64@npm:1.9.0"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64-musl@npm:1.8.3":
-  version: 1.8.3
-  resolution: "@biomejs/cli-linux-x64-musl@npm:1.8.3"
+"@biomejs/cli-linux-x64-musl@npm:1.9.0":
+  version: 1.9.0
+  resolution: "@biomejs/cli-linux-x64-musl@npm:1.9.0"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:1.8.3":
-  version: 1.8.3
-  resolution: "@biomejs/cli-linux-x64@npm:1.8.3"
+"@biomejs/cli-linux-x64@npm:1.9.0":
+  version: 1.9.0
+  resolution: "@biomejs/cli-linux-x64@npm:1.9.0"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:1.8.3":
-  version: 1.8.3
-  resolution: "@biomejs/cli-win32-arm64@npm:1.8.3"
+"@biomejs/cli-win32-arm64@npm:1.9.0":
+  version: 1.9.0
+  resolution: "@biomejs/cli-win32-arm64@npm:1.9.0"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:1.8.3":
-  version: 1.8.3
-  resolution: "@biomejs/cli-win32-x64@npm:1.8.3"
+"@biomejs/cli-win32-x64@npm:1.9.0":
+  version: 1.9.0
+  resolution: "@biomejs/cli-win32-x64@npm:1.9.0"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -583,7 +583,7 @@ __metadata:
     "@onigoetz/make-plural": "npm:1.0.0-rc.2"
     "@parcel/config-default": "npm:2.12.0"
     "@parcel/core": "npm:2.12.0"
-    "@phensley/plurals": "npm:1.8.2"
+    "@phensley/plurals": "npm:1.9.0"
     make-plural: "npm:7.4.0"
     speedscope: "npm:1.20.0"
   languageName: unknown
@@ -593,7 +593,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@onigoetz/i18n-parent@workspace:."
   dependencies:
-    "@biomejs/biome": "npm:1.8.3"
+    "@biomejs/biome": "npm:1.9.0"
     benchmark: "npm:2.1.4"
     systeminformation: "npm:5.23.5"
   languageName: unknown
@@ -607,7 +607,7 @@ __metadata:
     "@parcel/transformer-typescript-types": "npm:2.12.0"
     "@parcel/validator-typescript": "npm:2.12.0"
     parcel: "npm:2.12.0"
-    typescript: "npm:5.5.4"
+    typescript: "npm:5.6.2"
   languageName: unknown
   linkType: soft
 
@@ -628,7 +628,7 @@ __metadata:
     japa-sonarqube-reporter: "npm:1.0.0-rc.2"
     parcel: "npm:2.12.0"
     ts-node: "npm:10.9.2"
-    typescript: "npm:5.5.4"
+    typescript: "npm:5.6.2"
   languageName: unknown
   linkType: soft
 
@@ -647,7 +647,7 @@ __metadata:
     parcel: "npm:2.12.0"
     test-cldr-data: "npm:1.0.0-rc.2"
     ts-node: "npm:10.9.2"
-    typescript: "npm:5.5.4"
+    typescript: "npm:5.6.2"
   languageName: unknown
   linkType: soft
 
@@ -663,8 +663,8 @@ __metadata:
     "@onigoetz/messageformat": "npm:1.0.0-rc.2"
     "@parcel/config-default": "npm:2.12.0"
     "@parcel/core": "npm:2.12.0"
-    "@phensley/messageformat": "npm:1.8.2"
-    "@phensley/plurals": "npm:1.8.2"
+    "@phensley/messageformat": "npm:1.9.0"
+    "@phensley/plurals": "npm:1.9.0"
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
     globalize: "npm:1.7.0"
@@ -689,7 +689,7 @@ __metadata:
     japa-sonarqube-reporter: "npm:1.0.0-rc.2"
     parcel: "npm:2.12.0"
     ts-node: "npm:10.9.2"
-    typescript: "npm:5.5.4"
+    typescript: "npm:5.6.2"
   languageName: unknown
   linkType: soft
 
@@ -1578,43 +1578,43 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@phensley/cldr-utils@npm:~1.8.2":
-  version: 1.8.2
-  resolution: "@phensley/cldr-utils@npm:1.8.2"
+"@phensley/cldr-utils@npm:~1.9.0":
+  version: 1.9.0
+  resolution: "@phensley/cldr-utils@npm:1.9.0"
   dependencies:
-    tslib: "npm:^2.6.2"
-  checksum: 10c0/4e65728cc19a099b83a63881feccaf407046383fe5115464d0ab491ac036914bc7e2034d213ac46b5b52c83aa3f39eeae1f46d48b517a3572d287df636f274ca
+    tslib: "npm:^2.7.0"
+  checksum: 10c0/4521f0a55a29d6795d15ddfc2580fe119a6476db14eee5e89fee77d2eafade2495661355706d94fa13ee7e45e615f29e3219ace1c115832bd66171c15d07d0cf
   languageName: node
   linkType: hard
 
-"@phensley/decimal@npm:~1.8.2":
-  version: 1.8.2
-  resolution: "@phensley/decimal@npm:1.8.2"
+"@phensley/decimal@npm:~1.9.0":
+  version: 1.9.0
+  resolution: "@phensley/decimal@npm:1.9.0"
   dependencies:
-    tslib: "npm:^2.6.2"
-  checksum: 10c0/abebf5ff097d955698408f931f33e54f3f0f28d7a84d12bfea7b0f95c56441a2aed5a3cdd4ff0500136102061e6335949bd13734397587391b01bff3ef2ce9e1
+    tslib: "npm:^2.7.0"
+  checksum: 10c0/95ced05016e7b75995be4a2fd5a62eb7f0f8fea35d0e59d1df26fb757933182e6c0b589d23f8bb9e1e704858e67e552b12ba3224d0e5d34cbd8280b436caef20
   languageName: node
   linkType: hard
 
-"@phensley/messageformat@npm:1.8.2":
-  version: 1.8.2
-  resolution: "@phensley/messageformat@npm:1.8.2"
+"@phensley/messageformat@npm:1.9.0":
+  version: 1.9.0
+  resolution: "@phensley/messageformat@npm:1.9.0"
   dependencies:
-    "@phensley/cldr-utils": "npm:~1.8.2"
-    "@phensley/decimal": "npm:~1.8.2"
-    "@phensley/plurals": "npm:~1.8.2"
-    tslib: "npm:^2.6.2"
-  checksum: 10c0/dafa29441533b7d1081f2e3b08016c7604268f1c96902e9ab5fd73f48cd9f7fbbe28f05b15c38baee97bc1d9034548b23dc0921a7a3a0fa273525318700241fc
+    "@phensley/cldr-utils": "npm:~1.9.0"
+    "@phensley/decimal": "npm:~1.9.0"
+    "@phensley/plurals": "npm:~1.9.0"
+    tslib: "npm:^2.7.0"
+  checksum: 10c0/7bdfff82b8bb84001b8382a957208b844435b7b4070b1283b57b138218528d643e660d21c9bf68cb3858f889cf998141f3cb2b3c7156cb60a20fa9a2c5fbd0cc
   languageName: node
   linkType: hard
 
-"@phensley/plurals@npm:1.8.2, @phensley/plurals@npm:~1.8.2":
-  version: 1.8.2
-  resolution: "@phensley/plurals@npm:1.8.2"
+"@phensley/plurals@npm:1.9.0, @phensley/plurals@npm:~1.9.0":
+  version: 1.9.0
+  resolution: "@phensley/plurals@npm:1.9.0"
   dependencies:
-    "@phensley/decimal": "npm:~1.8.2"
-    tslib: "npm:^2.6.2"
-  checksum: 10c0/00b708060955e521cdf302ff6903825402bd8df676a8f822c886b1bcefafade28a8c353297bf76c9f336196b3b8a5fd66428df8e4c5f64ce85d4e17e55395af7
+    "@phensley/decimal": "npm:~1.9.0"
+    tslib: "npm:^2.7.0"
+  checksum: 10c0/0b0347465f0c35c62ea5b056aa1c75395add6af7fb47ea39258340b290e74ce3b9eabd257ca5e6c7bc0e4ec7aa09087993503beae26e0cb758c533ebd7424bc8
   languageName: node
   linkType: hard
 
@@ -4791,7 +4791,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.4.0, tslib@npm:^2.6.2":
+"tslib@npm:^2.4.0, tslib@npm:^2.7.0":
   version: 2.7.0
   resolution: "tslib@npm:2.7.0"
   checksum: 10c0/469e1d5bf1af585742128827000711efa61010b699cb040ab1800bcd3ccdd37f63ec30642c9e07c4439c1db6e46345582614275daca3e0f4abae29b0083f04a6
@@ -4819,23 +4819,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.5.4":
-  version: 5.5.4
-  resolution: "typescript@npm:5.5.4"
+"typescript@npm:5.6.2":
+  version: 5.6.2
+  resolution: "typescript@npm:5.6.2"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/422be60f89e661eab29ac488c974b6cc0a660fb2228003b297c3d10c32c90f3bcffc1009b43876a082515a3c376b1eefcce823d6e78982e6878408b9a923199c
+  checksum: 10c0/3ed8297a8c7c56b7fec282532503d1ac795239d06e7c4966b42d4330c6cf433a170b53bcf93a130a7f14ccc5235de5560df4f1045eb7f3550b46ebed16d3c5e5
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>":
-  version: 5.5.4
-  resolution: "typescript@patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"
+"typescript@patch:typescript@npm%3A5.6.2#optional!builtin<compat/typescript>":
+  version: 5.6.2
+  resolution: "typescript@patch:typescript@npm%3A5.6.2#optional!builtin<compat/typescript>::version=5.6.2&hash=8c6c40"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/73409d7b9196a5a1217b3aaad929bf76294d3ce7d6e9766dd880ece296ee91cf7d7db6b16c6c6c630ee5096eccde726c0ef17c7dfa52b01a243e57ae1f09ef07
+  checksum: 10c0/94eb47e130d3edd964b76da85975601dcb3604b0c848a36f63ac448d0104e93819d94c8bdf6b07c00120f2ce9c05256b8b6092d23cf5cf1c6fa911159e4d572f
   languageName: node
   linkType: hard
 
