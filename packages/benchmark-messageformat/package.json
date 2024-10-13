@@ -9,10 +9,9 @@
     "@onigoetz/intl-formatters": "1.0.0-rc.2",
     "@onigoetz/make-plural": "1.0.0-rc.2",
     "@onigoetz/messageformat": "1.0.0-rc.2",
-    "@parcel/config-default": "2.12.0",
-    "@parcel/core": "2.12.0",
     "@phensley/messageformat": "1.9.0",
     "@phensley/plurals": "1.9.0",
+    "@rslib/core": "^0.0.11",
     "format-message-interpret": "6.2.4",
     "format-message-parse": "6.2.4",
     "globalize": "1.7.0",
@@ -21,7 +20,7 @@
     "speedscope": "1.20.0"
   },
   "scripts": {
-    "build": "node build.mjs",
+    "build": "rslib build",
     "benchmark": "node benchmark.js",
     "format": "biome format src",
     "check": "biome check src"

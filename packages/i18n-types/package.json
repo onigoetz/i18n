@@ -3,8 +3,15 @@
   "version": "1.0.0-rc.2",
   "license": "MIT",
   "source": "index.ts",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "type": "module",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.cjs",
+    "types": "./dist/types/index.d.ts"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -12,14 +19,11 @@
     "node": ">=18.0.0"
   },
   "devDependencies": {
-    "@parcel/packager-ts": "2.12.0",
-    "@parcel/transformer-typescript-types": "2.12.0",
-    "@parcel/validator-typescript": "2.12.0",
-    "parcel": "2.12.0",
+    "@rslib/core": "^0.0.11",
     "typescript": "5.6.2"
   },
   "scripts": {
-    "build": "parcel build",
+    "build": "tsc --noEmit && rslib build",
     "format": "biome format index.ts",
     "check": "biome check index.ts",
     "publish_to_npm": "npm publish"
