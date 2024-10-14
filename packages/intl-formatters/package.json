@@ -30,7 +30,7 @@
     "japa": "4.0.0",
     "japa-sonarqube-reporter": "1.0.0-rc.2",
     "ts-node": "10.9.2",
-    "typescript": "5.6.2"
+    "typescript": "5.6.3"
   },
   "scripts": {
     "build": "tsc --noEmit && rslib build",
