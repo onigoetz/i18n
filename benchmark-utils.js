@@ -88,6 +88,7 @@ async function runAll(...suites) {
     dateStyle: "long"
   });
   out.push(`> Benchmarks run on`);
+  out.push(`>`);
   out.push(`> - Node.js ${process.version}`);
   out.push(`> - ${cpu.manufacturer} ${cpu.brand} CPU`);
   out.push(`> - ${f.format(new Date())}`);
@@ -97,7 +98,11 @@ async function runAll(...suites) {
     run(name, args);
   }
 
-  fs.writeFileSync("BENCHMARK.md", out.join("\n"));
+  const content = fs.readFileSync("README.md", {encoding: "utf-8"});
+
+  const splitContent = content.split("> Benchmarks run on");
+
+  fs.writeFileSync("README.md", splitContent[0] + out.join("\n"));
 }
 
 module.exports = { register, runAll };

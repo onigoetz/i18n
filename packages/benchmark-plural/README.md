@@ -2,7 +2,7 @@
 
 In this benchmark we'll look at two metrics : Library size and speed.
 
-When doing the other benchmark in this repository I saw that what was taking most of the time wasn't the 
+When doing the other benchmark in this repository I saw that what was taking most of the time wasn't the
 parsing or rendering of messageformat but the different formatters and plurals generators.
 
 I was curious about how different they were.
@@ -11,32 +11,35 @@ I was curious about how different they were.
 
 Sources can be found in `src`, measure taken on 25/06/2020 With latest available versions
 
-| Npm Package                | Version | Size | Comment                                                                              |
-| -------------------------- | ------- | ---- | ------------------------------------------------------------------------------------ |
-| @onigoetz/intl-formatters  | 0.1.0   | 3.9K | Embeds the formatters in the runtime                                                 |
-| @onigoetz/make-plural      | 0.1.0   | 6.6K | Contains only the formatter for `en` in this example, have to be shipped separately. |
-| make-plural                | 7.3.0   | 20K  | Contains all locales                                                                 |
-| @phensley/plurals          | 1.7.3   | 48K  | Contains all locales                                                                 |
+| Npm Package               | Version    | Size | Comment                                                                              |
+| ------------------------- | ---------- | ---- | ------------------------------------------------------------------------------------ |
+| @onigoetz/intl-formatters | 1.0.0-rc.2 | 2.6K | Embeds the formatters in the runtime                                                 |
+| @onigoetz/make-plural     | 1.0.0-rc.2 | 3.6K | Contains only the formatter for `en` in this example, have to be shipped separately. |
+| make-plural               | 7.4.0      | 16K  | Contains all locales                                                                 |
+| @phensley/plurals         | 1.9.0      | 33K  | Contains all locales                                                                 |
 
 > Benchmarks run on
+>
 > - Node.js v20.9.0
 > - Apple M2 CPU
-> - November 7, 2023
+> - October 17, 2024
 
 ## Ordinal
+
 ```javascript
 const input = [`ordinal`, `en`, 2];
-  
+
 // Renders: `two`
 ```
 
-| Name | ops/sec | MoE | Runs sampled |
-| ---- | -------:| --- | ----------- |
-| __make-plural__ | 14,310,209 | ± 0.71% | 96 |
-| @phensley/plurals | 12,529,550 | ± 0.24% | 102 |
-| @onigoetz/make-plural(memo) | 11,836,619 | ± 0.37% | 101 |
-| @onigoetz/intl | 2,143,555 | ± 0.35% | 98 |
-| @onigoetz/make-plural | 56,021 | ± 0.64% | 95 |
+| Name                        |    ops/sec | MoE     | Runs sampled |
+| --------------------------- | ---------: | ------- | ------------ |
+| **make-plural**             | 14,325,529 | ± 0.55% | 99           |
+| @phensley/plurals           | 13,854,078 | ± 0.62% | 95           |
+| @onigoetz/make-plural(memo) | 11,552,355 | ± 0.76% | 95           |
+| @onigoetz/intl              |  2,131,691 | ± 0.81% | 94           |
+| @onigoetz/make-plural       |     54,598 | ± 2.94% | 98           |
+
 
 ## Choosing a library for your use case
 

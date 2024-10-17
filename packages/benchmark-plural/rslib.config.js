@@ -16,6 +16,7 @@ export default defineConfig({
     format: "cjs",
     output: {
       target: "node",
+      minify: true,
     },
   })),
 });
