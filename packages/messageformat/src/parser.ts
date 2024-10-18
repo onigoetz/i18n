@@ -60,7 +60,7 @@ function expected(char: string, context: Context): SyntaxError {
   return new SyntaxError(
     `expected ${char} at position ${index} but found ${
       found || "eof"
-    }. ${codeFrame(context)}`
+    }. ${codeFrame(context)}`,
   );
 }
 
@@ -141,7 +141,7 @@ function skipSeparator(char: number, context: Context) {
   if (char !== CHAR_SEP) {
     throw expected(
       `${String.fromCharCode(CHAR_SEP)} or ${String.fromCharCode(CHAR_CLOSE)}`,
-      context
+      context,
     );
   }
   ++context.i;
@@ -233,7 +233,7 @@ function parseText(context: Context, specialHash = false): string {
 function parseSubmessage(
   context: Context,
   parent: VariableToken,
-  specialHash: boolean
+  specialHash: boolean,
 ): number {
   const startAt = context.nextIndex;
   skipSpace(context);
@@ -276,7 +276,7 @@ function parseSubmessages(
   context: Context,
   parent: VariableToken,
   specialHash: boolean,
-  isPlural: boolean
+  isPlural: boolean,
 ): Submessages {
   const submessages: Submessages = {} as Submessages;
 
@@ -290,7 +290,7 @@ function parseSubmessages(
     if (isPlural && !selector.match(PLURAL)) {
       throw expected(
         "selector to be one of 'zero', 'one', 'two', 'few', 'many', 'other' or '=' followed by a digit",
-        context
+        context,
       );
     }
 
@@ -305,7 +305,7 @@ function parseSubmessages(
 }
 
 function isDigit(char: number): boolean {
-  return (char >= CHAR_0 && char <= CHAR_9) || char === CHAR_MINUS
+  return (char >= CHAR_0 && char <= CHAR_9) || char === CHAR_MINUS;
 }
 
 /**
@@ -325,7 +325,10 @@ function parseOffset(context: Context): number {
     context.i += 7;
 
     const start = context.i;
-    while (context.i < context.l && isDigit(context.msg.charCodeAt(context.i))) {
+    while (
+      context.i < context.l &&
+      isDigit(context.msg.charCodeAt(context.i))
+    ) {
       ++context.i;
     }
 
@@ -504,7 +507,7 @@ function parseElement(context: Context) {
 function parseAST(
   context: Context,
   parent: VariableToken,
-  specialHash: boolean
+  specialHash: boolean,
 ): Token[] {
   while (context.i < context.l) {
     const start = context.i;
@@ -558,6 +561,6 @@ export default function parse(message: string | number): Token[] {
     //eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/ban-ts-comment
     //@ts-ignore
     null,
-    false
+    false,
   );
 }
