@@ -287,7 +287,7 @@ function parseSubmessages(
       throw expected("sub-message selector", context);
     }
 
-    if (isPlural && !selector.match(PLURAL)) {
+    if (isPlural && !PLURAL.exec(selector)) {
       throw expected(
         "selector to be one of 'zero', 'one', 'two', 'few', 'many', 'other' or '=' followed by a digit",
         context,
