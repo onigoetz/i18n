@@ -316,7 +316,7 @@ test.group("parse()", () => {
 
   test("throws on missing offset number", ({ expect }) => {
     expect(() => parse("{n,plural,offset: other{n}")).toThrow(
-      "expected sub-message selector at position 10 but found o.",
+      "expected offset number at position 17 but found  . \"…fset:[ ]other…\"",
     );
   });
 });

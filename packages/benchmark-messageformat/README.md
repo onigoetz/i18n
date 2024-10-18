@@ -16,11 +16,11 @@ Sources can be found in `src`, measure taken on 07/12/2023 with latest available
 | Npm Package                                           | Version    | Size | Comment     |
 | ----------------------------------------------------- | ---------- | ---- | ----------- |
 | @ffz/icu-msgparser (+ custom renderer)                | 2.0.0      | 9.4K |             |
-| @onigoetz/messageformat (+ @onigoetz/intl-formatters) | 1.0.0-rc.2 | 7.9K |             |
+| @onigoetz/messageformat (+ @onigoetz/intl-formatters) | 1.0.0-rc.2 | 8.1K |             |
 | @onigoetz/messageformat (+ @onigoetz/make-plural)     | 1.0.0-rc.2 | 11K  |             |
 | format-message-parse                                  | 6.2.4      | 22K  | Uses peg.js |
 | @onigoetz/messageformat (+ make-plural)               | 1.0.0-rc.2 | 23K  |             |
-| @onigoetz/messageformat (+ @phensley/plurals)         | 1.0.0-rc.2 | 40K  |             |
+| @onigoetz/messageformat (+ @phensley/plurals)         | 1.0.0-rc.2 | 41K  |             |
 | intl-messageformat                                    | 10.5.14    | 55K  | Uses peg.js |
 | @phensley/messageformat                               | 1.9.0      | 54K  |             |
 | @messageformat/core                                   | 3.4.0      | 74K  | Uses peg.js |
@@ -50,7 +50,7 @@ The benchmark is applied to 4 different strings, which for the simple cases shou
 >
 > - Node.js v20.9.0
 > - Apple M2 CPU
-> - October 17, 2024
+> - October 18, 2024
 
 ## Simple String
 
@@ -62,16 +62,16 @@ const input = [`Hello, world!`, {}];
 
 | Name                                                  |   ops/sec | MoE     | Runs sampled |
 | ----------------------------------------------------- | --------: | ------- | ------------ |
-| **format-message-parse**                              | 8,586,016 | ± 0.16% | 97           |
-| @onigoetz/messageformat (+ @onigoetz/make-plural)     | 8,321,701 | ± 0.78% | 95           |
-| @phensley/messageformat                               | 7,906,469 | ± 0.25% | 98           |
-| @onigoetz/messageformat (+ @onigoetz/intl-formatters) | 8,041,469 | ± 2.71% | 90           |
-| @onigoetz/messageformat (+ @phensley/plurals)         | 8,137,500 | ± 5.18% | 97           |
-| @onigoetz/messageformat (+ make-plural)               | 7,854,733 | ± 1.93% | 97           |
-| @ffz/icu-msgparser (+ custom renderer)                | 5,668,605 | ± 0.34% | 97           |
-| @messageformat/core                                   | 1,684,757 | ± 0.25% | 99           |
-| intl-messageformat                                    |   235,223 | ± 0.63% | 93           |
-| globalize                                             |    36,694 | ± 0.81% | 98           |
+| **format-message-parse**                              | 8,895,545 | ± 0.23% | 94           |
+| @onigoetz/messageformat (+ @phensley/plurals)         | 8,596,907 | ± 0.16% | 99           |
+| @onigoetz/messageformat (+ @onigoetz/make-plural)     | 8,583,838 | ± 0.14% | 101          |
+| @onigoetz/messageformat (+ @onigoetz/intl-formatters) | 8,396,261 | ± 2.03% | 94           |
+| @onigoetz/messageformat (+ make-plural)               | 8,222,727 | ± 1.48% | 97           |
+| @phensley/messageformat                               | 8,079,695 | ± 0.22% | 99           |
+| @ffz/icu-msgparser (+ custom renderer)                | 5,662,192 | ± 0.16% | 97           |
+| @messageformat/core                                   | 1,715,496 | ± 0.13% | 97           |
+| intl-messageformat                                    |   240,408 | ± 0.63% | 93           |
+| globalize                                             |    37,391 | ± 0.31% | 96           |
 
 ## With one variable
 
@@ -88,16 +88,16 @@ const input = [
 
 | Name                                                      |   ops/sec | MoE     | Runs sampled |
 | --------------------------------------------------------- | --------: | ------- | ------------ |
-| **@onigoetz/messageformat (+ @phensley/plurals)**         | 4,339,447 | ± 0.72% | 92           |
-| **@onigoetz/messageformat (+ @onigoetz/intl-formatters)** | 4,307,751 | ± 1.23% | 96           |
-| @onigoetz/messageformat (+ @onigoetz/make-plural)         | 4,277,114 | ± 0.64% | 100          |
-| @onigoetz/messageformat (+ make-plural)                   | 4,258,599 | ± 0.54% | 99           |
-| format-message-parse                                      | 3,828,913 | ± 1.50% | 98           |
-| @ffz/icu-msgparser (+ custom renderer)                    | 3,265,017 | ± 0.34% | 101          |
-| @phensley/messageformat                                   | 3,182,662 | ± 0.75% | 99           |
-| @messageformat/core                                       |   845,946 | ± 0.17% | 100          |
-| intl-messageformat                                        |   206,447 | ± 1.45% | 95           |
-| globalize                                                 |    36,014 | ± 0.23% | 95           |
+| **@onigoetz/messageformat (+ @onigoetz/intl-formatters)** | 6,414,862 | ± 0.11% | 98           |
+| @onigoetz/messageformat (+ make-plural)                   | 6,380,084 | ± 0.31% | 98           |
+| @onigoetz/messageformat (+ @phensley/plurals)             | 6,233,602 | ± 0.22% | 98           |
+| @onigoetz/messageformat (+ @onigoetz/make-plural)         | 6,228,841 | ± 0.20% | 100          |
+| format-message-parse                                      | 3,978,459 | ± 0.19% | 99           |
+| @phensley/messageformat                                   | 3,399,981 | ± 0.13% | 99           |
+| @ffz/icu-msgparser (+ custom renderer)                    | 3,361,547 | ± 0.27% | 100          |
+| @messageformat/core                                       |   880,358 | ± 0.26% | 100          |
+| intl-messageformat                                        |   216,110 | ± 0.54% | 95           |
+| globalize                                                 |    36,506 | ± 0.32% | 97           |
 
 ## With plurals
 
@@ -116,16 +116,16 @@ const input = [
 
 | Name                                                  | ops/sec | MoE     | Runs sampled |
 | ----------------------------------------------------- | ------: | ------- | ------------ |
-| **@onigoetz/messageformat (+ make-plural)**           | 618,628 | ± 0.20% | 100          |
-| @onigoetz/messageformat (+ @phensley/plurals)         | 614,416 | ± 0.56% | 100          |
-| @onigoetz/messageformat (+ @onigoetz/intl-formatters) | 546,253 | ± 0.88% | 99           |
-| @phensley/messageformat                               | 540,674 | ± 0.22% | 98           |
-| @messageformat/core                                   | 180,091 | ± 1.23% | 98           |
-| @onigoetz/messageformat (+ @onigoetz/make-plural)     | 139,554 | ± 0.62% | 96           |
-| @ffz/icu-msgparser (+ custom renderer)                | 127,049 | ± 0.83% | 99           |
-| format-message-parse                                  |  81,202 | ± 0.25% | 98           |
-| intl-messageformat                                    |  47,462 | ± 2.53% | 89           |
-| globalize                                             |  26,501 | ± 1.10% | 97           |
+| **@onigoetz/messageformat (+ @phensley/plurals)**     | 940,533 | ± 0.19% | 98           |
+| @onigoetz/messageformat (+ make-plural)               | 919,852 | ± 0.14% | 98           |
+| @onigoetz/messageformat (+ @onigoetz/intl-formatters) | 772,695 | ± 0.25% | 98           |
+| @phensley/messageformat                               | 551,128 | ± 0.13% | 96           |
+| @messageformat/core                                   | 185,781 | ± 0.11% | 98           |
+| @onigoetz/messageformat (+ @onigoetz/make-plural)     | 152,541 | ± 0.10% | 100          |
+| @ffz/icu-msgparser (+ custom renderer)                | 130,129 | ± 0.10% | 97           |
+| format-message-parse                                  |  81,703 | ± 0.28% | 97           |
+| intl-messageformat                                    |  48,687 | ± 2.22% | 92           |
+| globalize                                             |  27,151 | ± 0.17% | 97           |
 
 ## With select and plurals
 
@@ -171,15 +171,15 @@ const input = [`
   `
 ```
 
-| Name                                                  | ops/sec | MoE     | Runs sampled |
-| ----------------------------------------------------- | ------: | ------- | ------------ |
-| **@onigoetz/messageformat (+ @phensley/plurals)**     |  96,722 | ± 0.80% | 93           |
-| @onigoetz/messageformat (+ make-plural)               |  95,344 | ± 2.71% | 100          |
-| @onigoetz/messageformat (+ @onigoetz/intl-formatters) |  92,448 | ± 1.42% | 93           |
-| @onigoetz/messageformat (+ @onigoetz/make-plural)     |  62,556 | ± 0.74% | 96           |
-| @phensley/messageformat                               |  52,335 | ± 0.63% | 102          |
-| @messageformat/core                                   |  30,852 | ± 0.13% | 97           |
-| @ffz/icu-msgparser (+ custom renderer)                |  29,109 | ± 0.80% | 95           |
-| intl-messageformat                                    |  16,495 | ± 1.59% | 95           |
-| format-message-parse                                  |  16,293 | ± 3.06% | 93           |
-| globalize                                             |   8,606 | ± 0.15% | 99           |
+| Name                                                  | ops/sec | MoE      | Runs sampled |
+| ----------------------------------------------------- | ------: | -------- | ------------ |
+| **@onigoetz/messageformat (+ @phensley/plurals)**     | 140,415 | ± 0.07%  | 99           |
+| @onigoetz/messageformat (+ make-plural)               | 136,452 | ± 0.11%  | 98           |
+| @onigoetz/messageformat (+ @onigoetz/intl-formatters) | 135,955 | ± 0.11%  | 99           |
+| @onigoetz/messageformat (+ @onigoetz/make-plural)     |  79,580 | ± 0.07%  | 98           |
+| @phensley/messageformat                               |  53,396 | ± 0.16%  | 101          |
+| @ffz/icu-msgparser (+ custom renderer)                |  29,484 | ± 0.72%  | 95           |
+| @messageformat/core                                   |  29,510 | ± 0.93%  | 95           |
+| intl-messageformat                                    |  15,706 | ± 1.99%  | 89           |
+| format-message-parse                                  |  15,356 | ± 12.31% | 85           |
+| globalize                                             |   8,250 | ± 1.98%  | 91           |
