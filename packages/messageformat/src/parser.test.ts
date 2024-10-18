@@ -285,6 +285,12 @@ test.group("parse()", () => {
     expect(() => parse("{n,plural}")).toThrow("expected sub-messages");
   });
 
+  test("throws on incorrect sub-messages", ({ expect }) => {
+    expect(() => parse("{n,plural,zeroo {test} other {test}}")).toThrow(
+      "expected selector to be one of 'zero', 'one', 'two', 'few', 'many', 'other' or '=' followed by a digit at position 15 but found  . \"…zeroo[ ]{test…\"",
+    );
+  });
+
   test("throws on bad sub-messages", ({ expect }) => {
     expect(() => parse("{n,select,this thing}")).toThrow("expected {");
     expect(() => parse("{n,select,this {thing")).toThrow("expected }");
