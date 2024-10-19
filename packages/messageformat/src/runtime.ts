@@ -1,5 +1,11 @@
 import { DateFormatterOptions } from "@onigoetz/i18n-types";
-import { MessageOpType, SimpleToken, Token, VariableToken } from "./types.js";
+import {
+  MessageOpType,
+  PluralToken,
+  SimpleToken,
+  Token,
+  VariableToken,
+} from "./types.js";
 
 type Variables = Record<string, any> | [];
 
@@ -29,6 +35,37 @@ function get(variables: Variables, token: VariableToken): any {
 
 function noop(): string {
   return "";
+}
+
+function handlePlural<T>(
+  token: PluralToken,
+  variables: Variables,
+  pluralGenerator: (
+    localeHolder: T,
+    type: "cardinal" | "ordinal",
+  ) => (number: number) => string,
+  localeHolder: T,
+) {
+  const value = get(variables, token);
+
+  const directJump = token.m[`=${value}`];
+
+  if (directJump) {
+    return directJump;
+  }
+
+  const pluralType = token.c ? "cardinal" : "ordinal";
+  const offset = token.o ?? 0;
+
+  const pluralRules = pluralGenerator(localeHolder, pluralType);
+
+  const pluralJump = token.m[pluralRules(value - offset)];
+
+  if (pluralJump) {
+    return pluralJump;
+  } else {
+    return token.m.other;
+  }
 }
 
 export default function createRenderer<T>(
@@ -76,8 +113,6 @@ export default function createRenderer<T>(
     number,
   };
 
-  // TODO :: allow to add custom formatters to "types"
-
   return (tokens: Token[], variables: Variables = {}): string => {
     let result = "";
 
@@ -102,36 +137,15 @@ export default function createRenderer<T>(
           // Find the formatter or fallback to NOOP
           result += (types[token.f] || noop)(token, variables);
           break;
+
         case MessageOpType.SELECT:
           stack.push(token.j);
           i = token.m[get(variables, token)] || token.m.other;
-
           continue; // skip the end of the loop
+
         case MessageOpType.PLURAL:
-          {
-            stack.push(token.j);
-            const value = get(variables, token);
-
-            const directJump = token.m[`=${value}`];
-
-            if (directJump) {
-              i = directJump;
-              continue;
-            }
-
-            const pluralType = token.c ? "cardinal" : "ordinal";
-            const offset = token.o ?? 0;
-
-            const pluralRules = pluralGenerator(localeHolder, pluralType);
-
-            const pluralJump = token.m[pluralRules(value - offset)];
-
-            if (pluralJump) {
-              i = pluralJump;
-            } else {
-              i = token.m.other;
-            }
-          }
+          stack.push(token.j);
+          i = handlePlural(token, variables, pluralGenerator, localeHolder);
           continue; // skip the end of the loop
 
         case MessageOpType.END:

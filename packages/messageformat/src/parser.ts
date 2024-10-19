@@ -22,6 +22,13 @@ import {
 
 const PLURAL = /^(?:(=\d+(\.\d+)?)|zero|one|two|few|many|other)$/;
 
+// We should use trimEnd instead of trimRight, but need to fallback if it doesn't exits
+const trimEndFn = String.prototype.trimEnd ?? String.prototype.trimRight; // NOSONAR
+
+function trimEnd(str: string): string {
+  return trimEndFn.call(str);
+}
+
 /**
  * Writes a nice code frame to show where an error happened.
  *
@@ -426,7 +433,6 @@ function parseSimple(context: Context, current: SimpleToken) {
 
   skipSeparator(char, context);
 
-  // TODO :: handle multiple options
   const format = parseText(context, false);
   if (!format) {
     throw expected("format", context);
@@ -434,7 +440,7 @@ function parseSimple(context: Context, current: SimpleToken) {
 
   // Since we allow spaces mid-format, we should trim any
   // remaining spaces off the end.
-  current.s = [format.trimRight()];
+  current.s = [trimEnd(format)];
   return current;
 }
 
