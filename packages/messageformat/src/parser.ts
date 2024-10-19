@@ -1,4 +1,13 @@
-import { compile, match } from "./matcher.js";
+import {
+  CHAR_0,
+  CHAR_9,
+  CHAR_CLOSE,
+  CHAR_ESCAPE,
+  CHAR_MINUS,
+  CHAR_OPEN,
+  CHAR_SEP,
+  CHAR_SUB_VAR,
+} from "./chars.js";
 import {
   Context,
   MessageOpType,
@@ -11,22 +20,7 @@ import {
   VariableToken,
 } from "./types.js";
 
-const OPEN = "{";
-const CLOSE = "}";
-const SEP = ",";
-const SUB_VAR = "#";
-const ESCAPE = "'";
-const OFFSET = compile(/offset:-?\d+/.source);
-const MULTI_SPACE = compile("\\s+");
-
-// Matches [^[[:Pattern_Syntax:][:Pattern_White_Space:]]]+
-// could be replaced in the future with [^\p{Pattern_Syntax}\p{Pattern_White_Space}]+ once crafty includes babel when compiling TypeScript
-const IDENTIFIER = compile(
-  // eslint-disable-next-line no-control-regex
-  /[^\u0009-\u000d \u0085\u200e\u200f\u2028\u2029\u0021-\u002f\u003a-\u0040\u005b-\u005e\u0060\u007b-\u007e\u00a1-\u00a7\u00a9\u00ab\u00ac\u00ae\u00b0\u00b1\u00b6\u00bb\u00bf\u00d7\u00f7\u2010-\u2027\u2030-\u203e\u2041-\u2053\u2055-\u205e\u2190-\u245f\u2500-\u2775\u2794-\u2bff\u2e00-\u2e7f\u3001-\u3003\u3008-\u3020\u3030\ufd3e\ufd3f\ufe45\ufe46]+/
-    .source,
-);
-const PLURAL = compile(/(=\d+(\.\d+)?)|zero|one|two|few|many|other/.source);
+const PLURAL = /^(?:(=\d+(\.\d+)?)|zero|one|two|few|many|other)$/;
 
 /**
  * Writes a nice code frame to show where an error happened.
@@ -36,12 +30,9 @@ const PLURAL = compile(/(=\d+(\.\d+)?)|zero|one|two|few|many|other/.source);
 function codeFrame(context: Context) {
   const beforeLength = Math.max(0, context.i - 5);
 
-  const before = context.msg.substr(
-    beforeLength,
-    Math.min(context.i - beforeLength, 5),
-  );
+  const before = context.msg.substring(beforeLength, beforeLength + 5);
   const current = context.msg[context.i];
-  const after = context.msg.substr(context.i + 1, 5);
+  const after = context.msg.substring(context.i + 1, context.i + 6);
 
   return `"…${before}[${current}]${after}…"`;
 }
@@ -73,12 +64,67 @@ function expected(char: string, context: Context): SyntaxError {
   );
 }
 
+function peek(context: Context): number {
+  return context.msg.charCodeAt(context.i + 1);
+}
+
+function get(context: Context): number {
+  return context.msg.charCodeAt(context.i);
+}
+
+function isIdentifierChar(char: number): boolean {
+  return (
+    char !== CHAR_OPEN &&
+    char !== CHAR_CLOSE &&
+    char !== CHAR_SEP &&
+    char !== CHAR_SUB_VAR &&
+    char !== CHAR_ESCAPE &&
+    !isWhitespaceChar(char)
+  );
+}
+
+function readIdentifier(context: Context): string {
+  const start = context.i;
+
+  while (
+    context.i < context.l &&
+    isIdentifierChar(context.msg.charCodeAt(context.i))
+  ) {
+    ++context.i;
+  }
+
+  return context.msg.substring(start, context.i);
+}
+
+export function isWhitespaceChar(code: number): boolean {
+  return (
+    (code >= 0x09 && code <= 0x0d) ||
+    code === 0x20 || // space
+    code === 0x85 || // …
+    code === 0xa0 || // NBSP
+    code === 0x180e || // MONGOLIAN VOWEL SEPARATOR
+    (code >= 0x2000 && code <= 0x200d) || // en Quad, Em Quad, en Space, Em Space, Three-Per-Em space, Four-Per-Em Space, Six-Per-Em Space, Figure Space, Punctuation Space, Thin Space, Hair Space, Zero Width Space, Zero Width Non-Joiner, Zero-width Joiner
+    code === 0x2028 || // Line Separator
+    code === 0x2029 || // Paragraph Separator
+    code === 0x202f || // Narrow No-Break Space
+    code === 0x205f || // Medium Mathematical Space
+    code === 0x2060 || // Word Joiner
+    code === 0x3000 || // Ideographic Space
+    code === 0xfeff // Zero width no-break space
+  );
+}
+
 /**
  * Eat all available spaces and advance the context
  * @param context
  */
-function skipSpace(context: Context): boolean {
-  return match(MULTI_SPACE, context) !== undefined;
+function skipSpace(context: Context): void {
+  while (
+    context.i < context.l &&
+    isWhitespaceChar(context.msg.charCodeAt(context.i))
+  ) {
+    ++context.i;
+  }
 }
 
 /**
@@ -91,9 +137,12 @@ function skipSpace(context: Context): boolean {
  * @param char
  * @param context
  */
-function skipSeparator(char: string, context: Context) {
-  if (char !== SEP) {
-    throw expected(`${SEP} or ${CLOSE}`, context);
+function skipSeparator(char: number, context: Context) {
+  if (char !== CHAR_SEP) {
+    throw expected(
+      `${String.fromCharCode(CHAR_SEP)} or ${String.fromCharCode(CHAR_CLOSE)}`,
+      context,
+    );
   }
   ++context.i;
   skipSpace(context);
@@ -121,55 +170,56 @@ function parseText(context: Context, specialHash = false): string {
   let out = "";
 
   while (context.i < context.l) {
-    const char = context.msg[context.i];
-    if (char === OPEN || char === CLOSE || (specialHash && char === SUB_VAR)) {
+    const char = get(context);
+    if (
+      char === CHAR_OPEN ||
+      char === CHAR_CLOSE ||
+      (specialHash && char === CHAR_SUB_VAR)
+    ) {
       break;
     }
 
-    if (char === ESCAPE) {
-      let next = context.msg[++context.i];
-      if (next === ESCAPE) {
+    if (char === CHAR_ESCAPE) {
+      ++context.i;
+      let next = get(context);
+      if (next === CHAR_ESCAPE) {
         // Escaped Escape Character
-        out += next;
+        out += String.fromCharCode(next);
         ++context.i;
       } else if (
-        next === OPEN ||
-        next === CLOSE ||
-        (specialHash && next === SUB_VAR)
+        next === CHAR_OPEN ||
+        next === CHAR_CLOSE ||
+        (specialHash && next === CHAR_SUB_VAR)
       ) {
         // Special Character
-        out += next;
+        out += String.fromCharCode(next);
         while (++context.i < context.l) {
-          next = context.msg[context.i];
-          if (next === ESCAPE) {
+          next = get(context);
+          if (next === CHAR_ESCAPE) {
             // Check for an escaped escape character, and don't
             // stop if we encounter one.
-            next = context.msg[context.i + 1];
-            if (next === ESCAPE) {
-              out += next;
+            next = peek(context);
+            if (next === CHAR_ESCAPE) {
+              out += String.fromCharCode(next);
               ++context.i;
             } else {
               ++context.i;
               break;
             }
           } else {
-            out += next;
+            out += String.fromCharCode(next);
           }
         }
       } else {
-        out += char;
+        out += String.fromCharCode(char);
       }
     } else {
       ++context.i;
-      out += char;
+      out += String.fromCharCode(char);
     }
   }
 
   return out;
-}
-
-function isNot(context: Context, char: string) {
-  return context.msg[context.i] !== char;
 }
 
 /**
@@ -187,8 +237,8 @@ function parseSubmessage(
 ): number {
   const startAt = context.nextIndex;
   skipSpace(context);
-  if (isNot(context, OPEN)) {
-    throw expected(OPEN, context);
+  if (get(context) !== CHAR_OPEN) {
+    throw expected(String.fromCharCode(CHAR_OPEN), context);
   }
 
   ++context.i;
@@ -197,8 +247,8 @@ function parseSubmessage(
   // eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/no-use-before-define
   parseAST(context, parent, specialHash);
 
-  if (isNot(context, CLOSE)) {
-    throw expected(CLOSE, context);
+  if (get(context) !== CHAR_CLOSE) {
+    throw expected(String.fromCharCode(CHAR_CLOSE), context);
   }
 
   ++context.i;
@@ -226,15 +276,22 @@ function parseSubmessages(
   context: Context,
   parent: VariableToken,
   specialHash: boolean,
-  matcher: RegExp,
+  isPlural: boolean,
 ): Submessages {
   const submessages: Submessages = {} as Submessages;
 
   // Continue until we reach the end of the string or a block closing
-  while (context.i < context.l && context.msg[context.i] !== CLOSE) {
-    const selector = match(matcher, context);
+  while (context.i < context.l && get(context) !== CHAR_CLOSE) {
+    const selector = readIdentifier(context);
     if (!selector) {
       throw expected("sub-message selector", context);
+    }
+
+    if (isPlural && !PLURAL.exec(selector)) {
+      throw expected(
+        "selector to be one of 'zero', 'one', 'two', 'few', 'many', 'other' or '=' followed by a digit",
+        context,
+      );
     }
 
     submessages[selector] = parseSubmessage(context, parent, specialHash);
@@ -245,6 +302,10 @@ function parseSubmessages(
   }
 
   return submessages;
+}
+
+function isDigit(char: number): boolean {
+  return (char >= CHAR_0 && char <= CHAR_9) || char === CHAR_MINUS;
 }
 
 /**
@@ -259,11 +320,26 @@ function parseSubmessages(
  */
 function parseOffset(context: Context): number {
   let n = 0;
-  const m = match(OFFSET, context);
-  if (m) {
-    // This must parse successfully since it is constrained by the regexp match
-    n = parseInt(m.split(":")[1], 10);
+
+  if (context.msg.substring(context.i, context.i + 7) === "offset:") {
+    context.i += 7;
+
+    const start = context.i;
+    while (
+      context.i < context.l &&
+      isDigit(context.msg.charCodeAt(context.i))
+    ) {
+      ++context.i;
+    }
+
+    const extracted = context.msg.substring(start, context.i);
+    if (!extracted) {
+      throw expected("offset number", context);
+    }
+
+    n = parseInt(extracted, 10);
   }
+
   return n;
 }
 
@@ -284,8 +360,8 @@ function parseOffset(context: Context): number {
  * @param current The token we're preparing
  */
 function parsePlural(context: Context, current: PluralToken) {
-  const char = context.msg[context.i];
-  if (char === CLOSE) {
+  const char = get(context);
+  if (char === CHAR_CLOSE) {
     throw expected("sub-messages", context);
   }
 
@@ -299,7 +375,7 @@ function parsePlural(context: Context, current: PluralToken) {
   }
 
   // Parse available options
-  current.m = parseSubmessages(context, current, true, PLURAL);
+  current.m = parseSubmessages(context, current, true, true);
   return current;
 }
 
@@ -314,21 +390,21 @@ function parsePlural(context: Context, current: PluralToken) {
  * @param current The token we're preparing
  */
 function parseSelect(context: Context, current: SelectToken) {
-  const char = context.msg[context.i];
-  if (char === CLOSE) {
+  const char = get(context);
+  if (char === CHAR_CLOSE) {
     throw expected("sub-messages", context);
   }
 
   skipSeparator(char, context);
 
   // Parse available options
-  current.m = parseSubmessages(context, current, false, IDENTIFIER);
+  current.m = parseSubmessages(context, current, false, false);
   return current;
 }
 
 function parseSimple(context: Context, current: SimpleToken) {
-  const char = context.msg[context.i];
-  if (char === CLOSE) {
+  const char = get(context);
+  if (char === CHAR_CLOSE) {
     return current;
   }
 
@@ -357,7 +433,7 @@ function parseElement(context: Context) {
   skipSpace(context);
 
   // Get the variable this block refers to
-  const id = match(IDENTIFIER, context);
+  const id = readIdentifier(context);
   if (!id) {
     throw expected("placeholder id", context);
   }
@@ -368,8 +444,8 @@ function parseElement(context: Context) {
   skipSpace(context);
 
   // If we're at the end of the block this is a single argument
-  const char = context.msg[context.i];
-  if (char === CLOSE) {
+  const char = get(context);
+  if (char === CHAR_CLOSE) {
     ++context.i;
     add(context, token);
     return;
@@ -378,7 +454,7 @@ function parseElement(context: Context) {
   skipSeparator(char, context);
 
   // Since we're still in the block, it must have a type
-  const type = match(IDENTIFIER, context);
+  const type = readIdentifier(context);
   if (!type) {
     throw expected("type", context);
   }
@@ -415,8 +491,8 @@ function parseElement(context: Context) {
   skipSpace(context);
 
   // At this stage, we have to be at the end of the current block
-  if (isNot(context, CLOSE)) {
-    throw expected(CLOSE, context);
+  if (get(context) !== CHAR_CLOSE) {
+    throw expected(String.fromCharCode(CHAR_CLOSE), context);
   }
 
   ++context.i;
@@ -435,17 +511,17 @@ function parseAST(
 ): Token[] {
   while (context.i < context.l) {
     const start = context.i;
-    const char = context.msg[start];
+    const char = get(context);
 
-    if (char === CLOSE) {
+    if (char === CHAR_CLOSE) {
       if (!parent) {
-        throw unexpected(char, context.i);
+        throw unexpected(String.fromCharCode(char), context.i);
       }
       break;
     }
 
     // If we're in a 'plural' or 'selectordinal', '#' refers to the parent variable, (plus or minus its offset)
-    if (specialHash && char === SUB_VAR) {
+    if (specialHash && char === CHAR_SUB_VAR) {
       ++context.i;
       // We can safely cast here as `specialHash` is only true if we are in a Plural or SelectOrdinal
       // and both have an offset
@@ -454,7 +530,7 @@ function parseAST(
         v: parent.v,
         o: (parent as PluralToken).o,
       });
-    } else if (char === OPEN) {
+    } else if (char === CHAR_OPEN) {
       // If we see a block start, we send it to `parseElement` and add it to the array if an element was found
       parseElement(context);
     } else {
@@ -467,7 +543,7 @@ function parseAST(
 
     // Infinite Loop Protection
     if (context.i === start) {
-      throw unexpected(char, context.i);
+      throw unexpected(String.fromCharCode(char), context.i);
     }
   }
 
