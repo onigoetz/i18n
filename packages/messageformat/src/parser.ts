@@ -99,18 +99,18 @@ function readIdentifier(context: Context): string {
 export function isWhitespaceChar(code: number): boolean {
   return (
     (code >= 0x09 && code <= 0x0d) ||
-    code === 0x20 ||
-    code === 0x85 ||
-    code === 0xa0 ||
-    code === 0x180e ||
-    (code >= 0x2000 && code <= 0x200d) ||
-    code === 0x2028 ||
-    code === 0x2029 ||
-    code === 0x202f ||
-    code === 0x205f ||
-    code === 0x2060 ||
-    code === 0x3000 ||
-    code === 0xfeff
+    code === 0x20 || // space
+    code === 0x85 || // …
+    code === 0xa0 || // NBSP
+    code === 0x180e || // MONGOLIAN VOWEL SEPARATOR
+    (code >= 0x2000 && code <= 0x200d) || // en Quad, Em Quad, en Space, Em Space, Three-Per-Em space, Four-Per-Em Space, Six-Per-Em Space, Figure Space, Punctuation Space, Thin Space, Hair Space, Zero Width Space, Zero Width Non-Joiner, Zero-width Joiner
+    code === 0x2028 || // Line Separator
+    code === 0x2029 || // Paragraph Separator
+    code === 0x202f || // Narrow No-Break Space
+    code === 0x205f || // Medium Mathematical Space
+    code === 0x2060 || // Word Joiner
+    code === 0x3000 || // Ideographic Space
+    code === 0xfeff // Zero width no-break space
   );
 }
 
