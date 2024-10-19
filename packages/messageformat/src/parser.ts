@@ -64,10 +64,6 @@ function expected(char: string, context: Context): SyntaxError {
   );
 }
 
-function peek(context: Context): number {
-  return context.msg.charCodeAt(context.i + 1);
-}
-
 function get(context: Context): number {
   return context.msg.charCodeAt(context.i);
 }
@@ -160,17 +156,23 @@ function add(context: Context, token: Token): number {
 }
 
 /**
- * Parse text, stop or not at separators, stop or not at spaces, stop or not at #
- * Could use some cleanup :/
+ * Parse text
+ *
+ * Stops when it finds an open `{`, close `}` or sub-variable character `#` character. except if preceded by escape characters
+ *
+ * Returns string without escape characters
  *
  * @param context
  * @param specialHash
  */
 function parseText(context: Context, specialHash = false): string {
-  let out = "";
+  let start = context.i;
+
+  // Stores all the escape characters to remove once we reached the end of the text
+  const toRemove = [];
 
   while (context.i < context.l) {
-    const char = get(context);
+    let char = get(context);
     if (
       char === CHAR_OPEN ||
       char === CHAR_CLOSE ||
@@ -179,44 +181,58 @@ function parseText(context: Context, specialHash = false): string {
       break;
     }
 
+    if (char !== CHAR_ESCAPE) {
+      context.i++;
+      continue;
+    }
+
+    // Since it's an escape, jump to the next character
+    ++context.i;
+    char = get(context);
+
     if (char === CHAR_ESCAPE) {
+      // Escaped Escape Character
+      // Remove one of the two escape characters
+      toRemove.unshift(context.i - start);
       ++context.i;
-      let next = get(context);
-      if (next === CHAR_ESCAPE) {
-        // Escaped Escape Character
-        out += String.fromCharCode(next);
-        ++context.i;
-      } else if (
-        next === CHAR_OPEN ||
-        next === CHAR_CLOSE ||
-        (specialHash && next === CHAR_SUB_VAR)
-      ) {
-        // Special Character
-        out += String.fromCharCode(next);
-        while (++context.i < context.l) {
-          next = get(context);
-          if (next === CHAR_ESCAPE) {
-            // Check for an escaped escape character, and don't
-            // stop if we encounter one.
-            next = peek(context);
-            if (next === CHAR_ESCAPE) {
-              out += String.fromCharCode(next);
-              ++context.i;
-            } else {
-              ++context.i;
-              break;
-            }
-          } else {
-            out += String.fromCharCode(next);
+
+      console.log();
+    } else if (
+      char === CHAR_OPEN ||
+      char === CHAR_CLOSE ||
+      (specialHash && char === CHAR_SUB_VAR)
+    ) {
+      toRemove.unshift(context.i - start - 1);
+
+      // Special Character
+      // Escaping a special character will move forward the string until it finds the next
+      // escape character (unless it's an escaped escape character)
+      while (++context.i < context.l) {
+        char = get(context);
+
+        if (char === CHAR_ESCAPE) {
+          // Always ignore the escape character itself
+          toRemove.unshift(context.i - start);
+
+          // If we find a second escape character, we continue, otherwise we stop
+          ++context.i;
+          char = get(context);
+          if (char !== CHAR_ESCAPE) {
+            break;
           }
         }
-      } else {
-        out += String.fromCharCode(char);
       }
     } else {
+      // This is not escaping a special character, we keep it
       ++context.i;
-      out += String.fromCharCode(char);
     }
+  }
+
+  let out = context.msg.substring(start, context.i);
+
+  // Remove all escapes from the final string
+  for (const idx of toRemove) {
+    out = out.substring(0, idx) + out.substring(idx + 1);
   }
 
   return out;
