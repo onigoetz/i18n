@@ -1,9 +1,9 @@
-import { test } from "@japa/runner";
+import { test, expect } from "vitest";
 
 import { CurrencyFormatterOptions } from "@onigoetz/i18n-types";
 import { currencyFormatter, numberFormatter } from "./number.js";
 
-test("Formats currencies", ({ expect }) => {
+test("Formats currencies", () => {
   const code: CurrencyFormatterOptions = { style: "code" };
   const name: CurrencyFormatterOptions = { style: "name" };
   const teslaS = 69900;
@@ -66,7 +66,7 @@ test("Formats currencies", ({ expect }) => {
   );*/
 });
 
-test("Formats number", ({ expect }) => {
+test("Formats number", () => {
   const pi = 3.14159265359;
   expect(numberFormatter("en")(pi)).toEqual("3.142");
   expect(numberFormatter("es")(pi)).toEqual("3,142");

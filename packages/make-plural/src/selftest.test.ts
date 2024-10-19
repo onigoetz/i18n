@@ -1,4 +1,4 @@
-import { test } from "@japa/runner";
+import { describe, test, expect } from "vitest";
 import ordinals from "test-cldr-data/supplemental_ordinals.json" assert {
   type: "json",
 };
@@ -49,7 +49,7 @@ function testPluralData(type: "cardinal" | "ordinal", locale: string) {
   for (const [category, condition, values] of testValues) {
     for (const value of values) {
       // eslint-disable-next-line no-loop-func
-      test(`${locale}: ${condition} = ${category}, ${value}`, ({ expect }) => {
+      test(`${locale}: ${condition} = ${category}, ${value}`, () => {
         expect(fn(value as unknown as number)).toEqual(category);
         if (!/\.0+$/.test(value)) {
           expect(fn(Number(value))).toEqual(category);
@@ -59,7 +59,7 @@ function testPluralData(type: "cardinal" | "ordinal", locale: string) {
   }
 }
 
-test.group("Cardinal rules", () => {
+describe("Cardinal rules", () => {
   for (const locale of Object.keys(
     combined.supplemental["plurals-type-cardinal"],
   )) {
@@ -67,7 +67,7 @@ test.group("Cardinal rules", () => {
   }
 });
 
-test.group("Ordinal rules", () => {
+describe("Ordinal rules", () => {
   for (const locale of Object.keys(
     combined.supplemental["plurals-type-ordinal"],
   )) {

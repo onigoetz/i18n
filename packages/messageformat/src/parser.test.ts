@@ -1,15 +1,15 @@
-import { test } from "@japa/runner";
+import { describe, test, expect } from "vitest";
 
 import parse from "./parser.js";
 import { MessageOpType, Token } from "./types.js";
 
-test.group("parse()", () => {
-  test("accepts strings", ({ expect }) => {
+describe("parse()", () => {
+  test("accepts strings", () => {
     const msg = "This is a test.";
     expect(parse(msg)).toEqual([{ t: MessageOpType.TEXT, v: msg }]);
   });
 
-  test("coerces input to string", ({ expect }) => {
+  test("coerces input to string", () => {
     //eslint-disable-next-line @swissquote/swissquote/@typescript-eslint/ban-ts-comment
     //@ts-ignore
     expect(parse()).toEqual([{ t: MessageOpType.TEXT, v: "undefined" }]);
@@ -19,7 +19,7 @@ test.group("parse()", () => {
     expect(parse(12.34)).toEqual([{ t: MessageOpType.TEXT, v: "12.34" }]);
   });
 
-  test("parses variables", ({ expect }) => {
+  test("parses variables", () => {
     expect(parse("This is a {test}.")).toEqual([
       { t: MessageOpType.TEXT, v: "This is a " },
       { t: MessageOpType.ARG, v: "test" },
@@ -27,46 +27,46 @@ test.group("parse()", () => {
     ] as Token[]);
   });
 
-  test("parses vars with number", ({ expect }) => {
+  test("parses vars with number", () => {
     expect(parse("{test, number}")).toEqual([
       { t: MessageOpType.SIMPLE, v: "test", f: "number" },
     ] as Token[]);
   });
 
   // TODO :: integer, currency, percent
-  test("parses vars with number and format", ({ expect }) => {
+  test("parses vars with number and format", () => {
     expect(parse("{ test,    number, percent }")).toEqual([
       { t: MessageOpType.SIMPLE, v: "test", f: "number", s: ["percent"] },
     ] as Token[]);
   });
 
-  test("parses vars with date", ({ expect }) => {
+  test("parses vars with date", () => {
     expect(parse("{test, date}")).toEqual([
       { t: MessageOpType.SIMPLE, v: "test", f: "date" },
     ] as Token[]);
   });
 
   // TODO :: short, medium, long, full
-  test("parses vars with date and format", ({ expect }) => {
+  test("parses vars with date and format", () => {
     expect(parse("{test, date, short}")).toEqual([
       { t: MessageOpType.SIMPLE, v: "test", f: "date", s: ["short"] },
     ] as Token[]);
   });
 
-  test("parses vars with time", ({ expect }) => {
+  test("parses vars with time", () => {
     expect(parse("{test, time}")).toEqual([
       { t: MessageOpType.SIMPLE, v: "test", f: "time" },
     ] as Token[]);
   });
 
   // TODO :: short, medium, long, full
-  test("parses vars with time and format", ({ expect }) => {
+  test("parses vars with time and format", () => {
     expect(parse("{test, time, short}")).toEqual([
       { t: MessageOpType.SIMPLE, v: "test", f: "time", s: ["short"] },
     ] as Token[]);
   });
 
-  test("parses plural tags", ({ expect }) => {
+  test("parses plural tags", () => {
     expect(parse("{test, plural, one{one test} other {# test} }")).toEqual([
       {
         t: MessageOpType.PLURAL,
@@ -133,7 +133,7 @@ test.group("parse()", () => {
     ] as Token[]);
   });
 
-  test("parses plural with offset", ({ expect }) => {
+  test("parses plural with offset", () => {
     expect(
       parse("{test, plural, offset:3 one{one test} other {# test} }"),
     ).toEqual([
@@ -156,7 +156,7 @@ test.group("parse()", () => {
     ] as Token[]);
   });
 
-  test("parses selectordinal", ({ expect }) => {
+  test("parses selectordinal", () => {
     expect(
       parse("{test, selectordinal, one{one test} other {# test} }"),
     ).toEqual([
@@ -179,7 +179,7 @@ test.group("parse()", () => {
     ] as Token[]);
   });
 
-  test("parses select", ({ expect }) => {
+  test("parses select", () => {
     expect(
       parse("{test, select, first {yes} second {false} other {maybe}}"),
     ).toEqual([
@@ -202,7 +202,7 @@ test.group("parse()", () => {
     ] as Token[]);
   });
 
-  test("escapes characters", ({ expect }) => {
+  test("escapes characters", () => {
     expect(parse("{0} {1} {2}")).toEqual([
       { t: MessageOpType.ARG, v: "0" },
       { t: MessageOpType.TEXT, v: " " },
@@ -240,7 +240,7 @@ test.group("parse()", () => {
     ] as Token[]);
   });
 
-  test("does not escape sometimes", ({ expect }) => {
+  test("does not escape sometimes", () => {
     expect(parse("So, '{Mike''s Test}' is real.")).toEqual([
       { t: MessageOpType.TEXT, v: "So, {Mike's Test} is real." },
     ] as Token[]);
@@ -252,51 +252,51 @@ test.group("parse()", () => {
     ] as Token[]);
   });
 
-  test("throws on empty variable", ({ expect }) => {
+  test("throws on empty variable", () => {
     expect(() => parse("{}")).toThrow("expected placeholder id");
   });
 
-  test("throws on extra closing brace", ({ expect }) => {
+  test("throws on extra closing brace", () => {
     expect(() => parse("}")).toThrow("unexpected }");
   });
 
-  test("throws on unclosed variable", ({ expect }) => {
+  test("throws on unclosed variable", () => {
     expect(() => parse("{n")).toThrow("expected , or }");
   });
 
-  test("throws on open brace in variable", ({ expect }) => {
+  test("throws on open brace in variable", () => {
     expect(() => parse("{n{")).toThrow("expected , or }");
     expect(() => parse("{n,{")).toThrow("expected type");
     expect(() => parse("{n,n{")).toThrow("expected , or }");
     expect(() => parse("{n,n,{")).toThrow("expected format");
   });
 
-  test("throws on missing type", ({ expect }) => {
+  test("throws on missing type", () => {
     expect(() => parse("{n,}")).toThrow("expected type");
   });
 
-  test("throws on missing format", ({ expect }) => {
+  test("throws on missing format", () => {
     expect(() => parse("{n,n,}")).toThrow("expected format");
   });
 
-  test("throws on missing sub-messages", ({ expect }) => {
+  test("throws on missing sub-messages", () => {
     expect(() => parse("{n,select}")).toThrow("expected sub-messages");
     expect(() => parse("{n,selectordinal}")).toThrow("expected sub-messages");
     expect(() => parse("{n,plural}")).toThrow("expected sub-messages");
   });
 
-  test("throws on incorrect sub-messages", ({ expect }) => {
+  test("throws on incorrect sub-messages", () => {
     expect(() => parse("{n,plural,zeroo {test} other {test}}")).toThrow(
       "expected selector to be one of 'zero', 'one', 'two', 'few', 'many', 'other' or '=' followed by a digit at position 15 but found  . \"…zeroo[ ]{test…\"",
     );
   });
 
-  test("throws on bad sub-messages", ({ expect }) => {
+  test("throws on bad sub-messages", () => {
     expect(() => parse("{n,select,this thing}")).toThrow("expected {");
     expect(() => parse("{n,select,this {thing")).toThrow("expected }");
   });
 
-  test("throws on missing other sub-message", ({ expect }) => {
+  test("throws on missing other sub-message", () => {
     expect(() => parse("{n,select, named {test}}")).toThrow(
       "expected other sub-message",
     );
@@ -308,7 +308,7 @@ test.group("parse()", () => {
     );
   });
 
-  test("throws on missing sub-message selector", ({ expect }) => {
+  test("throws on missing sub-message selector", () => {
     expect(() => parse("{n,select,{n}")).toThrow(
       "expected sub-message selector",
     );
@@ -320,7 +320,7 @@ test.group("parse()", () => {
     );
   });
 
-  test("throws on missing offset number", ({ expect }) => {
+  test("throws on missing offset number", () => {
     expect(() => parse("{n,plural,offset: other{n}")).toThrow(
       'expected offset number at position 17 but found  . "…fset:[ ]other…"',
     );

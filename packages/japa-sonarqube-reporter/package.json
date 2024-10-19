@@ -1,8 +1,0 @@
-{
-    "name": "japa-sonarqube-reporter",
-    "version": "1.0.0-rc.2",
-    "main": "./SonarqubeReporter.js",
-    "types": "./SonarqubeReporter.d.ts",
-    "type": "module",
-    "private": true
-}

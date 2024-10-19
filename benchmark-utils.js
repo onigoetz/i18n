@@ -35,7 +35,7 @@ function run(name, args) {
       out.push(`| Name | ops/sec | MoE | Runs sampled |`);
       out.push(`| ---- | -------:| --- | ----------- |`);
 
-      var bySpeed = this.filter("successful").sort(function (a, b) {
+      const bySpeed = this.filter("successful").sort(function (a, b) {
         a = a.stats;
         b = b.stats;
         return a.mean + a.moe > b.mean + b.moe ? -1 : 1;

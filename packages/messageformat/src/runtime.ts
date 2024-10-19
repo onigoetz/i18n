@@ -120,9 +120,8 @@ export default function createRenderer<T>(
             }
 
             const pluralType = token.c ? "cardinal" : "ordinal";
-            const offset = token.o || 0; // TODO :: should offset apply to direct jump ?
+            const offset = token.o ?? 0;
 
-            // TODO :: initialize pluralGenerator only if specific number isn't present
             const pluralRules = pluralGenerator(localeHolder, pluralType);
 
             const pluralJump = token.m[pluralRules(value - offset)];
