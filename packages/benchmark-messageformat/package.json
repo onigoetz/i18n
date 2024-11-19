@@ -15,9 +15,9 @@
     "format-message-interpret": "6.2.4",
     "format-message-parse": "6.2.4",
     "globalize": "1.7.0",
-    "intl-messageformat": "10.7.6",
+    "intl-messageformat": "10.7.7",
     "make-plural": "7.4.0",
-    "speedscope": "1.20.0"
+    "speedscope": "1.21.0"
   },
   "scripts": {
     "build": "rslib build",
