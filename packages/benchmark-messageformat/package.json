@@ -11,7 +11,7 @@
     "@onigoetz/messageformat": "1.0.0-rc.2",
     "@phensley/messageformat": "1.9.2",
     "@phensley/plurals": "1.9.2",
-    "@rslib/core": "0.0.18",
+    "@rslib/core": "0.1.0",
     "format-message-interpret": "6.2.4",
     "format-message-parse": "6.2.4",
     "globalize": "1.7.0",
