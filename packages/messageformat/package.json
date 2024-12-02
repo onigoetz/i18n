@@ -24,9 +24,9 @@
   },
   "devDependencies": {
     "@rslib/core": "^0.1.0",
-    "@vitest/coverage-v8": "2.1.5",
+    "@vitest/coverage-v8": "2.1.6",
     "typescript": "5.7.2",
-    "vitest": "2.1.5",
+    "vitest": "2.1.6",
     "vitest-sonar-reporter": "2.0.0"
   },
   "scripts": {
