@@ -20,7 +20,7 @@
     "node": ">=18.0.0"
   },
   "devDependencies": {
-    "@rslib/core": "^0.1.0",
+    "@rslib/core": "^0.2.0",
     "@vitest/coverage-v8": "2.1.8",
     "test-cldr-data": "1.0.0-rc.2",
     "typescript": "5.7.2",
