@@ -23,7 +23,7 @@
     "@rslib/core": "^0.3.0",
     "@vitest/coverage-v8": "2.1.8",
     "test-cldr-data": "1.0.0-rc.2",
-    "typescript": "5.7.2",
+    "typescript": "5.7.3",
     "vitest": "2.1.8",
     "vitest-sonar-reporter": "2.0.0"
   },
