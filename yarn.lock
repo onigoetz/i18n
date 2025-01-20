@@ -359,14 +359,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/icu-messageformat-parser@npm:2.10.1":
-  version: 2.10.1
-  resolution: "@formatjs/icu-messageformat-parser@npm:2.10.1"
+"@formatjs/icu-messageformat-parser@npm:2.11.0":
+  version: 2.11.0
+  resolution: "@formatjs/icu-messageformat-parser@npm:2.11.0"
   dependencies:
     "@formatjs/ecma402-abstract": "npm:2.3.2"
     "@formatjs/icu-skeleton-parser": "npm:1.8.12"
     tslib: "npm:2"
-  checksum: 10c0/e6ae7005d8b4d60716fd392b2a45664002364d7d84ab1b9334286969de3bc733534726e41711ef3bb32e0389d9fd7ed587acb0fbad6b2c8af410cfeb6a23470b
+  checksum: 10c0/9ad43847cb4a5c13895af606c634dcf2ec034d484cbbce6566746b60920643f33cbc5e2e3fd1efe21bcfdb555e1ee527e4518768001c3b36bf2e76c171e4049f
   languageName: node
   linkType: hard
 
@@ -642,7 +642,7 @@ __metadata:
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
     globalize: "npm:1.7.0"
-    intl-messageformat: "npm:10.7.13"
+    intl-messageformat: "npm:10.7.14"
     make-plural: "npm:7.4.0"
     speedscope: "npm:1.22.0"
   languageName: unknown
@@ -1725,15 +1725,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"intl-messageformat@npm:10.7.13":
-  version: 10.7.13
-  resolution: "intl-messageformat@npm:10.7.13"
+"intl-messageformat@npm:10.7.14":
+  version: 10.7.14
+  resolution: "intl-messageformat@npm:10.7.14"
   dependencies:
     "@formatjs/ecma402-abstract": "npm:2.3.2"
     "@formatjs/fast-memoize": "npm:2.2.6"
-    "@formatjs/icu-messageformat-parser": "npm:2.10.1"
+    "@formatjs/icu-messageformat-parser": "npm:2.11.0"
     tslib: "npm:2"
-  checksum: 10c0/edf38c6670155f99e4df3ddb9bf3a7b3afb08a57384fb82b24913e5a4fe0925dbca9f88be900ec27bcaf3609d442e3ca70a5d6c42202dfbd0df35c12d43eabfc
+  checksum: 10c0/914c11118c47bb7d0163a7d54afebf52ae4fe9b250bba609b5db4c802a34f8bf758edbbc8c58094203205faf76948c7112399addb32e9b36e40483c4cf7c1cb7
   languageName: node
   linkType: hard
 
