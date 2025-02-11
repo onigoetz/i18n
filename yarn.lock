@@ -338,15 +338,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/ecma402-abstract@npm:2.3.2":
-  version: 2.3.2
-  resolution: "@formatjs/ecma402-abstract@npm:2.3.2"
+"@formatjs/ecma402-abstract@npm:2.3.3":
+  version: 2.3.3
+  resolution: "@formatjs/ecma402-abstract@npm:2.3.3"
   dependencies:
     "@formatjs/fast-memoize": "npm:2.2.6"
-    "@formatjs/intl-localematcher": "npm:0.5.10"
+    "@formatjs/intl-localematcher": "npm:0.6.0"
     decimal.js: "npm:10"
     tslib: "npm:2"
-  checksum: 10c0/364e9e7de974fed976e0e8142a0f888ee0af4a11a61899115e5761ed933e7c1f16379b7b54a01524fd3c5d58bf08b71308237ea969cd54889eaf7bb2d30ec776
+  checksum: 10c0/63de990c380a1800bc54d97c4aa13a88a92e73b1680f0f561d03f9bf3e23289b7aafd1a92037527c285bd587a44e20504258ac2cbd4564a4138ce2b4612c1495
   languageName: node
   linkType: hard
 
@@ -359,33 +359,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/icu-messageformat-parser@npm:2.11.0":
-  version: 2.11.0
-  resolution: "@formatjs/icu-messageformat-parser@npm:2.11.0"
+"@formatjs/icu-messageformat-parser@npm:2.11.1":
+  version: 2.11.1
+  resolution: "@formatjs/icu-messageformat-parser@npm:2.11.1"
   dependencies:
-    "@formatjs/ecma402-abstract": "npm:2.3.2"
-    "@formatjs/icu-skeleton-parser": "npm:1.8.12"
+    "@formatjs/ecma402-abstract": "npm:2.3.3"
+    "@formatjs/icu-skeleton-parser": "npm:1.8.13"
     tslib: "npm:2"
-  checksum: 10c0/9ad43847cb4a5c13895af606c634dcf2ec034d484cbbce6566746b60920643f33cbc5e2e3fd1efe21bcfdb555e1ee527e4518768001c3b36bf2e76c171e4049f
+  checksum: 10c0/2e4106d564ede73cc52c97fc4270002f2460c3ded10715a095ec6765c48f951b1e9744cc55679abe046e24e4e22c345e738f7477c43d440d1d10a0235b12df37
   languageName: node
   linkType: hard
 
-"@formatjs/icu-skeleton-parser@npm:1.8.12":
-  version: 1.8.12
-  resolution: "@formatjs/icu-skeleton-parser@npm:1.8.12"
+"@formatjs/icu-skeleton-parser@npm:1.8.13":
+  version: 1.8.13
+  resolution: "@formatjs/icu-skeleton-parser@npm:1.8.13"
   dependencies:
-    "@formatjs/ecma402-abstract": "npm:2.3.2"
+    "@formatjs/ecma402-abstract": "npm:2.3.3"
     tslib: "npm:2"
-  checksum: 10c0/03e743aa09acb2137e37d03b98578fcbbc949d056b8c151763778e885d04d621e69c82f7656547f0532351d2a987bffac0a8c4c3d81186f47a28047ba64385e2
+  checksum: 10c0/eddea5b7c43745d05178211b25641319e054747e40b42ffaa93ae9940fd42e6f5654d12d42e6998b91b4de4b67a24e3ed779a37394262ec1dd46e693c166729a
   languageName: node
   linkType: hard
 
-"@formatjs/intl-localematcher@npm:0.5.10":
-  version: 0.5.10
-  resolution: "@formatjs/intl-localematcher@npm:0.5.10"
+"@formatjs/intl-localematcher@npm:0.6.0":
+  version: 0.6.0
+  resolution: "@formatjs/intl-localematcher@npm:0.6.0"
   dependencies:
     tslib: "npm:2"
-  checksum: 10c0/362ec83aca9382165be575f1cefa477478339e6fead8ca8866185ce6e58427ea1487a811b12c73d1bcfa99fd4db0c24543b35c823451839f585576bfccb8c9cc
+  checksum: 10c0/90238e633426ff7237ab2bbe017be044fb2fb185a8d59a0652096ddab9cb1ddf64106d58fafd711ea19c4d3455bd966516ab93574ac3b169d9af2325875fae59
   languageName: node
   linkType: hard
 
@@ -572,7 +572,7 @@ __metadata:
   dependencies:
     "@onigoetz/intl-formatters": "npm:1.0.0-rc.2"
     "@onigoetz/make-plural": "npm:1.0.0-rc.2"
-    "@phensley/plurals": "npm:1.9.2"
+    "@phensley/plurals": "npm:1.10.1"
     "@rslib/core": "npm:^0.4.0"
     make-plural: "npm:7.4.0"
     speedscope: "npm:1.22.0"
@@ -636,13 +636,13 @@ __metadata:
     "@onigoetz/intl-formatters": "npm:1.0.0-rc.2"
     "@onigoetz/make-plural": "npm:1.0.0-rc.2"
     "@onigoetz/messageformat": "npm:1.0.0-rc.2"
-    "@phensley/messageformat": "npm:1.9.2"
-    "@phensley/plurals": "npm:1.9.2"
-    "@rslib/core": "npm:0.4.0"
+    "@phensley/messageformat": "npm:1.10.1"
+    "@phensley/plurals": "npm:1.10.1"
+    "@rslib/core": "npm:0.4.1"
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
     globalize: "npm:1.7.0"
-    intl-messageformat: "npm:10.7.14"
+    intl-messageformat: "npm:10.7.15"
     make-plural: "npm:7.4.0"
     speedscope: "npm:1.22.0"
   languageName: unknown
@@ -661,43 +661,43 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@phensley/cldr-utils@npm:~1.9.2":
-  version: 1.9.2
-  resolution: "@phensley/cldr-utils@npm:1.9.2"
+"@phensley/cldr-utils@npm:~1.10.1":
+  version: 1.10.1
+  resolution: "@phensley/cldr-utils@npm:1.10.1"
   dependencies:
-    tslib: "npm:^2.7.0"
-  checksum: 10c0/4f82fdfc38201300de5a2e738d43aa6e0db58d2ede025c53155e30d53a54c7b9a7fd6af81989a225453ad7a7b17e302a794717c449748d658eee04141eee203f
+    tslib: "npm:^2.8.1"
+  checksum: 10c0/aeb7afef5660640d5a008bb61df8aadbff6b6d71e5ec4c85ebbc68c2ede97de77610164815333bd64c73d7dbf8ecc51f8f46997acd8f3828a6f7f75baeaf39e1
   languageName: node
   linkType: hard
 
-"@phensley/decimal@npm:~1.9.2":
-  version: 1.9.2
-  resolution: "@phensley/decimal@npm:1.9.2"
+"@phensley/decimal@npm:~1.10.1":
+  version: 1.10.1
+  resolution: "@phensley/decimal@npm:1.10.1"
   dependencies:
-    tslib: "npm:^2.7.0"
-  checksum: 10c0/e805037d2e113057c5a524abeabe3b64d596b55b1bf2338676ffe63ba223a126ee6b0b0cefc22d2ee519f028e39e7ebfb65d7da2e6730cea377c368e69dadff0
+    tslib: "npm:^2.8.1"
+  checksum: 10c0/6b43a600522a543371a71a054d3a39d250477ef53f4084a10285df97f99985cf4e1d16b8c136d05947eedaa9c0612cbb79f5f1bf2ec28a5afdb19a660849ca4c
   languageName: node
   linkType: hard
 
-"@phensley/messageformat@npm:1.9.2":
-  version: 1.9.2
-  resolution: "@phensley/messageformat@npm:1.9.2"
+"@phensley/messageformat@npm:1.10.1":
+  version: 1.10.1
+  resolution: "@phensley/messageformat@npm:1.10.1"
   dependencies:
-    "@phensley/cldr-utils": "npm:~1.9.2"
-    "@phensley/decimal": "npm:~1.9.2"
-    "@phensley/plurals": "npm:~1.9.2"
-    tslib: "npm:^2.7.0"
-  checksum: 10c0/651fa45407a4c5e618f1e5da0f542a80bfe2a05c510165146e487e17e5ac5e4d863cb8ade005e794dfc087c13673d5bde189efcc2e380bf6b4c3f19e2a3ef452
+    "@phensley/cldr-utils": "npm:~1.10.1"
+    "@phensley/decimal": "npm:~1.10.1"
+    "@phensley/plurals": "npm:~1.10.1"
+    tslib: "npm:^2.8.1"
+  checksum: 10c0/5ddae080355b4c37f6420d16aa2b26b474d82d4b332a1533f210b8213e4169e88b627c6bb4e8cd5b94db7dd27c5363dac12689a955b986fe2e0cebcad67a6996
   languageName: node
   linkType: hard
 
-"@phensley/plurals@npm:1.9.2, @phensley/plurals@npm:~1.9.2":
-  version: 1.9.2
-  resolution: "@phensley/plurals@npm:1.9.2"
+"@phensley/plurals@npm:1.10.1, @phensley/plurals@npm:~1.10.1":
+  version: 1.10.1
+  resolution: "@phensley/plurals@npm:1.10.1"
   dependencies:
-    "@phensley/decimal": "npm:~1.9.2"
-    tslib: "npm:^2.7.0"
-  checksum: 10c0/dbd4c52a71a0da6c5189d49576394c470453b10b8fe69df8686b880c498ac064f177ef96384ddec630bbc6f399bd9f92876a2d5e257e0ddfa58db23a3036a31d
+    "@phensley/decimal": "npm:~1.10.1"
+    tslib: "npm:^2.8.1"
+  checksum: 10c0/eabc3e387cf43ce08ee91fdfe637905036061d224589a8f34f14bbae978c9e41174c728ef07f8bb88510729f8cc4685fc0c193567849c3c221b0dcce7528f6c4
   languageName: node
   linkType: hard
 
@@ -841,9 +841,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rsbuild/core@npm:~1.2.3":
-  version: 1.2.3
-  resolution: "@rsbuild/core@npm:1.2.3"
+"@rsbuild/core@npm:~1.2.4":
+  version: 1.2.5
+  resolution: "@rsbuild/core@npm:1.2.5"
   dependencies:
     "@rspack/core": "npm:1.2.2"
     "@rspack/lite-tapable": "npm:~1.0.1"
@@ -851,16 +851,16 @@ __metadata:
     core-js: "npm:~3.40.0"
   bin:
     rsbuild: bin/rsbuild.js
-  checksum: 10c0/12fdda36c76f4124495ccfe40a4bb14b64359a333cbf53ecc34bcc10702c3bfd025508beea99b63bcbe8054aa001c88379772615b94136fb1c535566233a848d
+  checksum: 10c0/57e68934728af6f61a00e00868300484b0c246d55fbe2ce80e3375651554d8ebcb3cb40edf6184853b1eec4753ab3fdcefb72cdce8c03655e8ab7fc516734d68
   languageName: node
   linkType: hard
 
-"@rslib/core@npm:0.4.0, @rslib/core@npm:^0.4.0":
-  version: 0.4.0
-  resolution: "@rslib/core@npm:0.4.0"
+"@rslib/core@npm:0.4.1, @rslib/core@npm:^0.4.0":
+  version: 0.4.1
+  resolution: "@rslib/core@npm:0.4.1"
   dependencies:
-    "@rsbuild/core": "npm:~1.2.3"
-    rsbuild-plugin-dts: "npm:0.4.0"
+    "@rsbuild/core": "npm:~1.2.4"
+    rsbuild-plugin-dts: "npm:0.4.1"
     tinyglobby: "npm:^0.2.10"
   peerDependencies:
     "@microsoft/api-extractor": ^7
@@ -872,7 +872,7 @@ __metadata:
       optional: true
   bin:
     rslib: bin/rslib.js
-  checksum: 10c0/69de5fb11d0aa07dbf902afee403c120c432fa54fef887f6bb07e985982b07352e430d2b39c289a779385488a3df66693cd15f812609ab6bfb6fb49e1f4fb378
+  checksum: 10c0/812627649952bef008ad03ef67e4f1a8065a7085033f567542459169f81ef949f37f41fd068a2e20dae5c388e1847ad8c8645cd7cbda3fa56bd6d6af5c4fdc8d
   languageName: node
   linkType: hard
 
@@ -1728,15 +1728,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"intl-messageformat@npm:10.7.14":
-  version: 10.7.14
-  resolution: "intl-messageformat@npm:10.7.14"
+"intl-messageformat@npm:10.7.15":
+  version: 10.7.15
+  resolution: "intl-messageformat@npm:10.7.15"
   dependencies:
-    "@formatjs/ecma402-abstract": "npm:2.3.2"
+    "@formatjs/ecma402-abstract": "npm:2.3.3"
     "@formatjs/fast-memoize": "npm:2.2.6"
-    "@formatjs/icu-messageformat-parser": "npm:2.11.0"
+    "@formatjs/icu-messageformat-parser": "npm:2.11.1"
     tslib: "npm:2"
-  checksum: 10c0/914c11118c47bb7d0163a7d54afebf52ae4fe9b250bba609b5db4c802a34f8bf758edbbc8c58094203205faf76948c7112399addb32e9b36e40483c4cf7c1cb7
+  checksum: 10c0/5759cd38718b7e4874fd6eb5e759e920227f993bdf17d71cd7474919098aafc13c8bbc63f5ccb2bafe13093f3a519fd7a03a47efc84bb3e9fbf9f25f88a408c9
   languageName: node
   linkType: hard
 
@@ -2308,9 +2308,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rsbuild-plugin-dts@npm:0.4.0":
-  version: 0.4.0
-  resolution: "rsbuild-plugin-dts@npm:0.4.0"
+"rsbuild-plugin-dts@npm:0.4.1":
+  version: 0.4.1
+  resolution: "rsbuild-plugin-dts@npm:0.4.1"
   dependencies:
     magic-string: "npm:^0.30.17"
     picocolors: "npm:1.1.1"
@@ -2324,7 +2324,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/f1a31eec5f9242666eac681787b0be7bf849453e9cba0f38e7d5f8da898defd6dffefd5ffe7cc80cdbd1dc63b3bf19553bd8ff7aad36a6b4a1dc370d1ec4f4ac
+  checksum: 10c0/5d5c32ee5da2137e6854bd891bd26aff7e135e85307bc2a9d6bb6bb09f34ab926e6cfa0d41e105f36e9d6037fe558f8e7eafef8419655aa312f0564a7dfc6523
   languageName: node
   linkType: hard
 
@@ -2606,14 +2606,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.7.0":
-  version: 2.7.0
-  resolution: "tslib@npm:2.7.0"
-  checksum: 10c0/469e1d5bf1af585742128827000711efa61010b699cb040ab1800bcd3ccdd37f63ec30642c9e07c4439c1db6e46345582614275daca3e0f4abae29b0083f04a6
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.8.0":
+"tslib@npm:^2.8.0, tslib@npm:^2.8.1":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
