@@ -8,7 +8,7 @@
     "@phensley/plurals": "1.10.1",
     "@rslib/core": "^0.4.0",
     "make-plural": "7.4.0",
-    "speedscope": "1.22.0"
+    "speedscope": "1.22.2"
   },
   "scripts": {
     "build": "rslib build",
