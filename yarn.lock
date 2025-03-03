@@ -671,7 +671,7 @@ __metadata:
   dependencies:
     "@onigoetz/intl-formatters": "npm:1.0.0-rc.2"
     "@onigoetz/make-plural": "npm:1.0.0-rc.2"
-    "@phensley/plurals": "npm:1.10.1"
+    "@phensley/plurals": "npm:1.10.2"
     "@rslib/core": "npm:^0.5.0"
     make-plural: "npm:7.4.0"
     speedscope: "npm:1.22.2"
@@ -693,7 +693,7 @@ __metadata:
   resolution: "@onigoetz/i18n-types@workspace:packages/i18n-types"
   dependencies:
     "@rslib/core": "npm:^0.5.0"
-    typescript: "npm:5.7.3"
+    typescript: "npm:5.8.2"
   languageName: unknown
   linkType: soft
 
@@ -706,7 +706,7 @@ __metadata:
     "@rslib/core": "npm:^0.5.0"
     "@vitest/coverage-v8": "npm:3.0.7"
     full-icu: "npm:1.5.0"
-    typescript: "npm:5.7.3"
+    typescript: "npm:5.8.2"
     vitest: "npm:3.0.7"
     vitest-sonar-reporter: "npm:2.0.0"
   languageName: unknown
@@ -719,7 +719,7 @@ __metadata:
     "@rslib/core": "npm:^0.5.0"
     "@vitest/coverage-v8": "npm:3.0.7"
     test-cldr-data: "npm:1.0.0-rc.2"
-    typescript: "npm:5.7.3"
+    typescript: "npm:5.8.2"
     vitest: "npm:3.0.7"
     vitest-sonar-reporter: "npm:2.0.0"
   languageName: unknown
@@ -735,9 +735,9 @@ __metadata:
     "@onigoetz/intl-formatters": "npm:1.0.0-rc.2"
     "@onigoetz/make-plural": "npm:1.0.0-rc.2"
     "@onigoetz/messageformat": "npm:1.0.0-rc.2"
-    "@phensley/messageformat": "npm:1.10.1"
-    "@phensley/plurals": "npm:1.10.1"
-    "@rslib/core": "npm:0.5.1"
+    "@phensley/messageformat": "npm:1.10.2"
+    "@phensley/plurals": "npm:1.10.2"
+    "@rslib/core": "npm:0.5.2"
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
     globalize: "npm:1.7.0"
@@ -754,49 +754,49 @@ __metadata:
     "@onigoetz/i18n-types": "npm:1.0.0-rc.2"
     "@rslib/core": "npm:^0.5.0"
     "@vitest/coverage-v8": "npm:3.0.7"
-    typescript: "npm:5.7.3"
+    typescript: "npm:5.8.2"
     vitest: "npm:3.0.7"
     vitest-sonar-reporter: "npm:2.0.0"
   languageName: unknown
   linkType: soft
 
-"@phensley/cldr-utils@npm:~1.10.1":
-  version: 1.10.1
-  resolution: "@phensley/cldr-utils@npm:1.10.1"
+"@phensley/cldr-utils@npm:~1.10.2":
+  version: 1.10.2
+  resolution: "@phensley/cldr-utils@npm:1.10.2"
   dependencies:
     tslib: "npm:^2.8.1"
-  checksum: 10c0/aeb7afef5660640d5a008bb61df8aadbff6b6d71e5ec4c85ebbc68c2ede97de77610164815333bd64c73d7dbf8ecc51f8f46997acd8f3828a6f7f75baeaf39e1
+  checksum: 10c0/3effcdb89bf761a93e70fecc58656fd93ab70836fe6b3de5a4ac8e04bb532b9463340e311d506149de57ddef30aac4a144ac92bbdd374087a66ae2af4f89a991
   languageName: node
   linkType: hard
 
-"@phensley/decimal@npm:~1.10.1":
-  version: 1.10.1
-  resolution: "@phensley/decimal@npm:1.10.1"
+"@phensley/decimal@npm:~1.10.2":
+  version: 1.10.2
+  resolution: "@phensley/decimal@npm:1.10.2"
   dependencies:
     tslib: "npm:^2.8.1"
-  checksum: 10c0/6b43a600522a543371a71a054d3a39d250477ef53f4084a10285df97f99985cf4e1d16b8c136d05947eedaa9c0612cbb79f5f1bf2ec28a5afdb19a660849ca4c
+  checksum: 10c0/93c01dc4e8acf6b41ad42b096b9231a02c0a660921a5c0dd9513ef44af3c71163374b237e33e8d94a9a1e3db4aeed0fd811a2d3b4490a3bb942f4d38a1e84d8a
   languageName: node
   linkType: hard
 
-"@phensley/messageformat@npm:1.10.1":
-  version: 1.10.1
-  resolution: "@phensley/messageformat@npm:1.10.1"
+"@phensley/messageformat@npm:1.10.2":
+  version: 1.10.2
+  resolution: "@phensley/messageformat@npm:1.10.2"
   dependencies:
-    "@phensley/cldr-utils": "npm:~1.10.1"
-    "@phensley/decimal": "npm:~1.10.1"
-    "@phensley/plurals": "npm:~1.10.1"
+    "@phensley/cldr-utils": "npm:~1.10.2"
+    "@phensley/decimal": "npm:~1.10.2"
+    "@phensley/plurals": "npm:~1.10.2"
     tslib: "npm:^2.8.1"
-  checksum: 10c0/5ddae080355b4c37f6420d16aa2b26b474d82d4b332a1533f210b8213e4169e88b627c6bb4e8cd5b94db7dd27c5363dac12689a955b986fe2e0cebcad67a6996
+  checksum: 10c0/ead1681ace5292d267cd24573e8a85f88af296cea7f2d9c8d437e3c1add200a56a29fc70bf1d1817bff4639f0041360c7da74b16c3163cba3e8b5281175fdaac
   languageName: node
   linkType: hard
 
-"@phensley/plurals@npm:1.10.1, @phensley/plurals@npm:~1.10.1":
-  version: 1.10.1
-  resolution: "@phensley/plurals@npm:1.10.1"
+"@phensley/plurals@npm:1.10.2, @phensley/plurals@npm:~1.10.2":
+  version: 1.10.2
+  resolution: "@phensley/plurals@npm:1.10.2"
   dependencies:
-    "@phensley/decimal": "npm:~1.10.1"
+    "@phensley/decimal": "npm:~1.10.2"
     tslib: "npm:^2.8.1"
-  checksum: 10c0/eabc3e387cf43ce08ee91fdfe637905036061d224589a8f34f14bbae978c9e41174c728ef07f8bb88510729f8cc4685fc0c193567849c3c221b0dcce7528f6c4
+  checksum: 10c0/6b07ef3ff8ff17728a919677f598cbc3b084e925fc8cdac8ebe094a6001b55dd84c283ab3cbe3096a729e97e40559acd8ae04c0691c472200ed666fc6b64b776
   languageName: node
   linkType: hard
 
@@ -954,12 +954,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rslib/core@npm:0.5.1, @rslib/core@npm:^0.5.0":
-  version: 0.5.1
-  resolution: "@rslib/core@npm:0.5.1"
+"@rslib/core@npm:0.5.2, @rslib/core@npm:^0.5.0":
+  version: 0.5.2
+  resolution: "@rslib/core@npm:0.5.2"
   dependencies:
     "@rsbuild/core": "npm:~1.2.10"
-    rsbuild-plugin-dts: "npm:0.5.1"
+    rsbuild-plugin-dts: "npm:0.5.2"
     tinyglobby: "npm:^0.2.12"
   peerDependencies:
     "@microsoft/api-extractor": ^7
@@ -971,7 +971,7 @@ __metadata:
       optional: true
   bin:
     rslib: bin/rslib.js
-  checksum: 10c0/f8a4ba26fc00c5ea40c8c14abb819cc3fa28c2f05eb19a98171bdf88a78b7272f72fc7714171d7b1f32d17c3af854950532aa67fcb4b4ee121d97e0058fde749
+  checksum: 10c0/0cce70a1e5b9e7c4ba50e15123ad765cbf9efb6b37048aa192c014b32ba256137dfe817003f792124177af6f1cfd576b5fdf4d85be5fbe5ee310dfda030fa612
   languageName: node
   linkType: hard
 
@@ -2476,9 +2476,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rsbuild-plugin-dts@npm:0.5.1":
-  version: 0.5.1
-  resolution: "rsbuild-plugin-dts@npm:0.5.1"
+"rsbuild-plugin-dts@npm:0.5.2":
+  version: 0.5.2
+  resolution: "rsbuild-plugin-dts@npm:0.5.2"
   dependencies:
     "@ast-grep/napi": "npm:^0.35.0"
     magic-string: "npm:^0.30.17"
@@ -2494,7 +2494,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/38957c012009c01270d5fe2f19c2fa778d9b2d271570a16fa0451b3bb4e492cc498501791693cd36fbb2f7e9e78cec5e699ea427f8e79cc36b4ff5ff103edbc5
+  checksum: 10c0/a62a0ca9d3dfa65faa9bb13c26486931ba411ac92bda6cec03163c661e2497c812f74f65bf40bd3cf918935e13af918abd5a0f1f6e451ac761547c4ecbd487f1
   languageName: node
   linkType: hard
 
@@ -2808,23 +2808,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.7.3":
-  version: 5.7.3
-  resolution: "typescript@npm:5.7.3"
+"typescript@npm:5.8.2":
+  version: 5.8.2
+  resolution: "typescript@npm:5.8.2"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/b7580d716cf1824736cc6e628ab4cd8b51877408ba2be0869d2866da35ef8366dd6ae9eb9d0851470a39be17cbd61df1126f9e211d8799d764ea7431d5435afa
+  checksum: 10c0/5c4f6fbf1c6389b6928fe7b8fcd5dc73bb2d58cd4e3883f1d774ed5bd83b151cbac6b7ecf11723de56d4676daeba8713894b1e9af56174f2f9780ae7848ec3c6
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>":
-  version: 5.7.3
-  resolution: "typescript@patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>::version=5.7.3&hash=5786d5"
+"typescript@patch:typescript@npm%3A5.8.2#optional!builtin<compat/typescript>":
+  version: 5.8.2
+  resolution: "typescript@patch:typescript@npm%3A5.8.2#optional!builtin<compat/typescript>::version=5.8.2&hash=5786d5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/6fd7e0ed3bf23a81246878c613423730c40e8bdbfec4c6e4d7bf1b847cbb39076e56ad5f50aa9d7ebd89877999abaee216002d3f2818885e41c907caaa192cc4
+  checksum: 10c0/5448a08e595cc558ab321e49d4cac64fb43d1fa106584f6ff9a8d8e592111b373a995a1d5c7f3046211c8a37201eb6d0f1566f15cdb7a62a5e3be01d087848e2
   languageName: node
   linkType: hard
 
