@@ -11,11 +11,11 @@
     "@onigoetz/messageformat": "1.0.0-rc.2",
     "@phensley/messageformat": "1.10.2",
     "@phensley/plurals": "1.10.2",
-    "@rslib/core": "0.5.4",
+    "@rslib/core": "0.5.5",
     "format-message-interpret": "6.2.4",
     "format-message-parse": "6.2.4",
     "globalize": "1.7.0",
-    "intl-messageformat": "10.7.15",
+    "intl-messageformat": "10.7.16",
     "make-plural": "7.4.0",
     "speedscope": "1.22.2"
   },
