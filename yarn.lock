@@ -746,7 +746,7 @@ __metadata:
     "@onigoetz/messageformat": "npm:1.0.0-rc.2"
     "@phensley/messageformat": "npm:1.10.2"
     "@phensley/plurals": "npm:1.10.2"
-    "@rslib/core": "npm:0.6.2"
+    "@rslib/core": "npm:0.6.3"
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
     globalize: "npm:1.7.0"
@@ -964,12 +964,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rslib/core@npm:0.6.2, @rslib/core@npm:^0.6.0":
-  version: 0.6.2
-  resolution: "@rslib/core@npm:0.6.2"
+"@rslib/core@npm:0.6.3, @rslib/core@npm:^0.6.0":
+  version: 0.6.3
+  resolution: "@rslib/core@npm:0.6.3"
   dependencies:
     "@rsbuild/core": "npm:1.3.5"
-    rsbuild-plugin-dts: "npm:0.6.2"
+    rsbuild-plugin-dts: "npm:0.6.3"
     tinyglobby: "npm:^0.2.12"
   peerDependencies:
     "@microsoft/api-extractor": ^7
@@ -981,7 +981,7 @@ __metadata:
       optional: true
   bin:
     rslib: bin/rslib.js
-  checksum: 10c0/afa8566526cc8081f962c547c28f94dac7ff026534e082fb0102fe6361199d4ac284149312f222adb22e5be01a1296d28f4c8d13c3cde6c34cba27a4dfb35376
+  checksum: 10c0/7463bdca224933f6790b79f9e6f8146474222d82a27006b7628c65a0f1b013150593af4c8aa0ab842567da9c616d8a256f9dfaab7345be699aaebd55c84f50a6
   languageName: node
   linkType: hard
 
@@ -2488,9 +2488,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rsbuild-plugin-dts@npm:0.6.2":
-  version: 0.6.2
-  resolution: "rsbuild-plugin-dts@npm:0.6.2"
+"rsbuild-plugin-dts@npm:0.6.3":
+  version: 0.6.3
+  resolution: "rsbuild-plugin-dts@npm:0.6.3"
   dependencies:
     "@ast-grep/napi": "npm:^0.36.2"
     magic-string: "npm:^0.30.17"
@@ -2506,7 +2506,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/9d3a19c2717103f18c7ddd9d2d2440f4350dd3debc4a176d766bd73b9886021919f3ef8cd9ba8147009e11c171d6e910860a1acae8fe8750e77af46e18247328
+  checksum: 10c0/95af2fe5ea9cf3590ab3ee0642d706bf2c817d2e7932441cde8de8fc13c1a6ccf2864ea4744746878920a2282183e27f64cca1f2a7b2be7d61dde9326f7758dd
   languageName: node
   linkType: hard
 
