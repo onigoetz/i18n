@@ -25,7 +25,7 @@
     "test-cldr-data": "1.0.0-rc.2",
     "typescript": "5.8.3",
     "vitest": "3.1.2",
-    "vitest-sonar-reporter": "2.0.0"
+    "vitest-sonar-reporter": "2.0.1"
   },
   "scripts": {
     "build": "tsc --noEmit && rslib build",
