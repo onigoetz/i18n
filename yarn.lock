@@ -78,7 +78,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ast-grep/napi@npm:^0.37.0":
+"@ast-grep/napi@npm:0.37.0":
   version: 0.37.0
   resolution: "@ast-grep/napi@npm:0.37.0"
   dependencies:
@@ -681,7 +681,7 @@ __metadata:
     "@onigoetz/intl-formatters": "npm:1.0.0-rc.2"
     "@onigoetz/make-plural": "npm:1.0.0-rc.2"
     "@phensley/plurals": "npm:1.12.0"
-    "@rslib/core": "npm:^0.6.0"
+    "@rslib/core": "npm:^0.7.0"
     make-plural: "npm:7.4.0"
     speedscope: "npm:1.22.2"
   languageName: unknown
@@ -701,7 +701,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@onigoetz/i18n-types@workspace:packages/i18n-types"
   dependencies:
-    "@rslib/core": "npm:^0.6.0"
+    "@rslib/core": "npm:^0.7.0"
     typescript: "npm:5.8.3"
   languageName: unknown
   linkType: soft
@@ -712,7 +712,7 @@ __metadata:
   dependencies:
     "@onigoetz/i18n-types": "npm:1.0.0-rc.2"
     "@onigoetz/messageformat": "npm:1.0.0-rc.2"
-    "@rslib/core": "npm:^0.6.0"
+    "@rslib/core": "npm:^0.7.0"
     "@vitest/coverage-v8": "npm:3.1.3"
     full-icu: "npm:1.5.0"
     typescript: "npm:5.8.3"
@@ -725,7 +725,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@onigoetz/make-plural@workspace:packages/make-plural"
   dependencies:
-    "@rslib/core": "npm:^0.6.0"
+    "@rslib/core": "npm:^0.7.0"
     "@vitest/coverage-v8": "npm:3.1.3"
     test-cldr-data: "npm:1.0.0-rc.2"
     typescript: "npm:5.8.3"
@@ -746,7 +746,7 @@ __metadata:
     "@onigoetz/messageformat": "npm:1.0.0-rc.2"
     "@phensley/messageformat": "npm:1.12.0"
     "@phensley/plurals": "npm:1.12.0"
-    "@rslib/core": "npm:0.6.9"
+    "@rslib/core": "npm:0.7.1"
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
     globalize: "npm:1.7.0"
@@ -761,7 +761,7 @@ __metadata:
   resolution: "@onigoetz/messageformat@workspace:packages/messageformat"
   dependencies:
     "@onigoetz/i18n-types": "npm:1.0.0-rc.2"
-    "@rslib/core": "npm:^0.6.0"
+    "@rslib/core": "npm:^0.7.0"
     "@vitest/coverage-v8": "npm:3.1.3"
     typescript: "npm:5.8.3"
     vitest: "npm:3.1.3"
@@ -949,9 +949,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rsbuild/core@npm:1.3.18":
-  version: 1.3.18
-  resolution: "@rsbuild/core@npm:1.3.18"
+"@rsbuild/core@npm:1.3.19":
+  version: 1.3.19
+  resolution: "@rsbuild/core@npm:1.3.19"
   dependencies:
     "@rspack/core": "npm:1.3.9"
     "@rspack/lite-tapable": "npm:~1.0.1"
@@ -960,16 +960,16 @@ __metadata:
     jiti: "npm:^2.4.2"
   bin:
     rsbuild: bin/rsbuild.js
-  checksum: 10c0/7b91bd1c138158dd9e0a01f19eb34caa8f0b7f029cc1d5e5ff78fb67390626fe506859151cab4b5619d09da0b21d4e8a5fb02f2a8e88886de39c38658bbc0337
+  checksum: 10c0/5384f65e27042acd87c2b10e194dbf762110dadb923cfc1fbb8ca92dcd170f6a615b6377a84c130d966828236ff2b36b6ab30e7c47084f5e35e2d2f3318433cc
   languageName: node
   linkType: hard
 
-"@rslib/core@npm:0.6.9, @rslib/core@npm:^0.6.0":
-  version: 0.6.9
-  resolution: "@rslib/core@npm:0.6.9"
+"@rslib/core@npm:0.7.1, @rslib/core@npm:^0.7.0":
+  version: 0.7.1
+  resolution: "@rslib/core@npm:0.7.1"
   dependencies:
-    "@rsbuild/core": "npm:1.3.18"
-    rsbuild-plugin-dts: "npm:0.6.9"
+    "@rsbuild/core": "npm:1.3.19"
+    rsbuild-plugin-dts: "npm:0.7.1"
     tinyglobby: "npm:^0.2.13"
   peerDependencies:
     "@microsoft/api-extractor": ^7
@@ -981,7 +981,7 @@ __metadata:
       optional: true
   bin:
     rslib: bin/rslib.js
-  checksum: 10c0/2fc257e79b0c6e1928f73896418fd2cf745e678d8bfd76ca84d17af8e7a904cf2959dc144af8eb298c5003a9036af8a48bb56bf9620d9add90328ada26796cee
+  checksum: 10c0/0036372bb3151b6a8b56a9e21757e04876786437837469d7ab7208e4e83b6140bb36dcc894d5c3593272b031700af38efd91c5ff71725eb9e1e8f981bc7c9af1
   languageName: node
   linkType: hard
 
@@ -2485,11 +2485,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rsbuild-plugin-dts@npm:0.6.9":
-  version: 0.6.9
-  resolution: "rsbuild-plugin-dts@npm:0.6.9"
+"rsbuild-plugin-dts@npm:0.7.1":
+  version: 0.7.1
+  resolution: "rsbuild-plugin-dts@npm:0.7.1"
   dependencies:
-    "@ast-grep/napi": "npm:^0.37.0"
+    "@ast-grep/napi": "npm:0.37.0"
     magic-string: "npm:^0.30.17"
     picocolors: "npm:1.1.1"
     tinyglobby: "npm:^0.2.13"
@@ -2503,7 +2503,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/5fc9a81bfef136f7ed161012184721cedfce16c9289a5d3bff20d06dc36bce97846a05785858a0bb43062fa6c423b1ecce022ae159e1f63c45b58a3506987c11
+  checksum: 10c0/3a8e6a82d00c53eb1a017079c53e02f6f0e08873ffda66fb458fae97111187906e05d4e669d1bea685d511d3d5a6dab57d3f0cf3d68a9cb99a6d4ae6b85a8be8
   languageName: node
   linkType: hard
 
