@@ -6,7 +6,7 @@
     "@onigoetz/intl-formatters": "1.0.0-rc.2",
     "@onigoetz/make-plural": "1.0.0-rc.2",
     "@phensley/plurals": "1.12.0",
-    "@rslib/core": "^0.6.0",
+    "@rslib/core": "^0.7.0",
     "make-plural": "7.4.0",
     "speedscope": "1.22.2"
   },
