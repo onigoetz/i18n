@@ -19,7 +19,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "benchmark": "2.1.4",
-    "systeminformation": "5.25.11"
+    "systeminformation": "5.27.1"
   },
   "packageManager": "yarn@4.9.1"
 }
