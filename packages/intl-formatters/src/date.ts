@@ -13,9 +13,10 @@ function convertDateToIntl(
     year: "numeric",
   };
   switch (format) {
-    // biome-ignore lint/suspicious/noFallthroughSwitchClause: we want fallthrough here
     case "full":
       o.weekday = "long";
+      o.month = "long";
+      break;
     case "long":
       o.month = "long";
       break;
