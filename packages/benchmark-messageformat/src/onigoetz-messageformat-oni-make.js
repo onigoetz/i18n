@@ -1,5 +1,5 @@
-import makePlural from "@onigoetz/make-plural";
 import { dateFormatter, numberFormatter } from "@onigoetz/intl-formatters";
+import makePlural from "@onigoetz/make-plural";
 import { createRenderer, parse } from "@onigoetz/messageformat";
 
 const pluralRules = {

@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import {
+import type {
   CommonNumberFormatterOptions,
   CurrencyFormatterOptions,
   NumberFormatterOptions,
@@ -65,9 +65,7 @@ function getFormatter(
   const formatter = new Intl.NumberFormat(locale, options);
   const roundFn = numberRound(options.round);
 
-  return function (value: number): string {
-    return formatter.format(roundFn(value));
-  };
+  return (value: number): string => formatter.format(roundFn(value));
 }
 
 /**

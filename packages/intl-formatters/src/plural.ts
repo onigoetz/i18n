@@ -1,6 +1,6 @@
 /* eslint-disable @swissquote/swissquote/import/prefer-default-export */
 
-import { PluralGeneratorOptions } from "@onigoetz/i18n-types";
+import type { PluralGeneratorOptions } from "@onigoetz/i18n-types";
 
 type ValidPlurals = "zero" | "one" | "two" | "few" | "many" | "other";
 

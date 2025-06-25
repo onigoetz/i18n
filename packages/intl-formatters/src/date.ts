@@ -1,6 +1,6 @@
 /* eslint-disable @swissquote/swissquote/import/prefer-default-export */
 
-import { DateFormatterOptions } from "@onigoetz/i18n-types";
+import type { DateFormatterOptions } from "@onigoetz/i18n-types";
 
 import { objectExtend } from "./utils.js";
 
@@ -15,7 +15,8 @@ function convertDateToIntl(
   switch (format) {
     case "full":
       o.weekday = "long";
-    // eslint-disable-next-line no-fallthrough
+      o.month = "long";
+      break;
     case "long":
       o.month = "long";
       break;
@@ -80,7 +81,5 @@ export function dateFormatter(
 
   const formatter = new Intl.DateTimeFormat(locale, convertToIntl(options));
 
-  return function (value: Date) {
-    return formatter.format(value);
-  };
+  return (value: Date) => formatter.format(value);
 }
