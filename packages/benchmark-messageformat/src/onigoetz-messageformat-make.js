@@ -1,6 +1,6 @@
-import * as makePlural from "make-plural";
 import { dateFormatter, numberFormatter } from "@onigoetz/intl-formatters";
 import { createRenderer, parse } from "@onigoetz/messageformat";
+import * as makePlural from "make-plural";
 
 const renderer = createRenderer(
   { locale: "en" },

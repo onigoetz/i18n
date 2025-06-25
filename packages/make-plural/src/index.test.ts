@@ -1,9 +1,7 @@
-import { test, expect } from "vitest";
+import plurals from "test-cldr-data/supplemental_plurals.json";
+import { expect, test } from "vitest" with { type: "json" };
 
-import plurals from "test-cldr-data/supplemental_plurals.json" assert {
-  type: "json",
-};
-import makePlural, { Rules } from "./index.js";
+import makePlural, { type Rules } from "./index.js";
 
 const enCardinal = {
   "pluralRule-count-one": "i = 1 and v = 0 @integer 1",

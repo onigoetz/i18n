@@ -1,10 +1,10 @@
-import { DateFormatterOptions } from "@onigoetz/i18n-types";
+import type { DateFormatterOptions } from "@onigoetz/i18n-types";
 import {
   MessageOpType,
-  PluralToken,
-  SimpleToken,
-  Token,
-  VariableToken,
+  type PluralToken,
+  type SimpleToken,
+  type Token,
+  type VariableToken,
 } from "./types.js";
 
 type Variables = Record<string, any> | [];

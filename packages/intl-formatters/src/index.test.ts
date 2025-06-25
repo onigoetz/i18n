@@ -1,6 +1,5 @@
-import { describe, test, expect } from "vitest";
-
 import { createRenderer, parse } from "@onigoetz/messageformat";
+import { describe, expect, test } from "vitest";
 
 import { dateFormatter, numberFormatter, pluralGenerator } from "./index.js";
 

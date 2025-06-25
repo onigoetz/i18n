@@ -1,4 +1,4 @@
-import { describe, test, expect } from "vitest";
+import { describe, expect, test } from "vitest";
 
 import parse from "./parser.js";
 import createRenderer from "./runtime.js";

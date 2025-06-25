@@ -9,15 +9,15 @@ import {
   CHAR_SUB_VAR,
 } from "./chars.js";
 import {
-  Context,
+  type Context,
   MessageOpType,
-  PluralToken,
-  SelectToken,
-  SimpleToken,
-  Submessages,
-  TextToken,
-  Token,
-  VariableToken,
+  type PluralToken,
+  type SelectToken,
+  type SimpleToken,
+  type Submessages,
+  type TextToken,
+  type Token,
+  type VariableToken,
 } from "./types.js";
 
 const PLURAL = /^(?:(=\d+(\.\d+)?)|zero|one|two|few|many|other)$/;
@@ -173,7 +173,7 @@ function add(context: Context, token: Token): number {
  * @param specialHash
  */
 function parseText(context: Context, specialHash = false): string {
-  let start = context.i;
+  const start = context.i;
 
   // Stores all the escape characters to remove once we reached the end of the text
   const toRemove = [];

@@ -1,7 +1,7 @@
-import { describe, test, expect } from "vitest";
+import { describe, expect, test } from "vitest";
 
 import parse from "./parser.js";
-import { MessageOpType, Token } from "./types.js";
+import { MessageOpType, type Token } from "./types.js";
 
 describe("parse()", () => {
   test("accepts strings", () => {

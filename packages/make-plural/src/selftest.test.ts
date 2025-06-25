@@ -1,10 +1,9 @@
-import { describe, test, expect } from "vitest";
-import ordinals from "test-cldr-data/supplemental_ordinals.json" assert {
+import ordinals from "test-cldr-data/supplemental_ordinals.json";
+import plurals from "test-cldr-data/supplemental_plurals.json" with {
   type: "json",
 };
-import plurals from "test-cldr-data/supplemental_plurals.json" assert {
-  type: "json",
-};
+import { describe, expect, test } from "vitest" with { type: "json" };
+
 import makePlural from "./index.js";
 
 const combined = {

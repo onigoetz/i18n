@@ -1,4 +1,4 @@
-export function hasOwnProperty(object: object, property: string) {
+export function hasOwn(object: object, property: string) {
   return Object.prototype.hasOwnProperty.call(object, property);
 }
 
@@ -20,7 +20,7 @@ type TUnionToIntersection<U> = (
  * @param objects An array of objects
  */
 export function objectExtend<T extends IObject[]>(
-  ...objects: T
+  ..._objects: T
 ): TUnionToIntersection<T[number]> {
   // eslint-disable-next-line prefer-rest-params
   const destination = arguments[0];
@@ -29,7 +29,7 @@ export function objectExtend<T extends IObject[]>(
 
   sources.forEach((source) => {
     for (const prop in source) {
-      if (hasOwnProperty(source, prop)) {
+      if (hasOwn(source, prop)) {
         destination[prop] = source[prop];
       }
     }

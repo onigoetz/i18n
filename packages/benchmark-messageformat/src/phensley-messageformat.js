@@ -1,13 +1,13 @@
 import {
+  buildMessageMatcher,
   DefaultMessageArgConverter,
   MessageEngine,
-  buildMessageMatcher,
   parseMessagePattern,
 } from "@phensley/messageformat";
 import { pluralRules } from "@phensley/plurals";
 
 const FORMATTERS = {
-  number: (args, options) => args[0],
+  number: (args, _options) => args[0],
 };
 
 const FORMATTER_NAMES = Object.keys(FORMATTERS);
