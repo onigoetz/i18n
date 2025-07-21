@@ -720,7 +720,7 @@ __metadata:
     "@onigoetz/intl-formatters": "npm:1.0.0-rc.2"
     "@onigoetz/make-plural": "npm:1.0.0-rc.2"
     "@phensley/plurals": "npm:1.12.2"
-    "@rslib/core": "npm:^0.10.0"
+    "@rslib/core": "npm:^0.11.0"
     make-plural: "npm:7.4.0"
     speedscope: "npm:1.23.0"
   languageName: unknown
@@ -740,7 +740,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@onigoetz/i18n-types@workspace:packages/i18n-types"
   dependencies:
-    "@rslib/core": "npm:^0.10.0"
+    "@rslib/core": "npm:^0.11.0"
     typescript: "npm:5.8.3"
   languageName: unknown
   linkType: soft
@@ -751,7 +751,7 @@ __metadata:
   dependencies:
     "@onigoetz/i18n-types": "npm:1.0.0-rc.2"
     "@onigoetz/messageformat": "npm:1.0.0-rc.2"
-    "@rslib/core": "npm:^0.10.0"
+    "@rslib/core": "npm:^0.11.0"
     "@vitest/coverage-v8": "npm:3.2.4"
     full-icu: "npm:1.5.0"
     typescript: "npm:5.8.3"
@@ -764,7 +764,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@onigoetz/make-plural@workspace:packages/make-plural"
   dependencies:
-    "@rslib/core": "npm:^0.10.0"
+    "@rslib/core": "npm:^0.11.0"
     "@vitest/coverage-v8": "npm:3.2.4"
     test-cldr-data: "npm:1.0.0-rc.2"
     typescript: "npm:5.8.3"
@@ -785,7 +785,7 @@ __metadata:
     "@onigoetz/messageformat": "npm:1.0.0-rc.2"
     "@phensley/messageformat": "npm:1.12.2"
     "@phensley/plurals": "npm:1.12.2"
-    "@rslib/core": "npm:0.10.6"
+    "@rslib/core": "npm:0.11.0"
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
     globalize: "npm:1.7.0"
@@ -800,7 +800,7 @@ __metadata:
   resolution: "@onigoetz/messageformat@workspace:packages/messageformat"
   dependencies:
     "@onigoetz/i18n-types": "npm:1.0.0-rc.2"
-    "@rslib/core": "npm:^0.10.0"
+    "@rslib/core": "npm:^0.11.0"
     "@vitest/coverage-v8": "npm:3.2.4"
     typescript: "npm:5.8.3"
     vitest: "npm:3.2.4"
@@ -995,7 +995,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rsbuild/core@npm:~1.4.7":
+"@rsbuild/core@npm:~1.4.8":
   version: 1.4.8
   resolution: "@rsbuild/core@npm:1.4.8"
   dependencies:
@@ -1010,12 +1010,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rslib/core@npm:0.10.6, @rslib/core@npm:^0.10.0":
-  version: 0.10.6
-  resolution: "@rslib/core@npm:0.10.6"
+"@rslib/core@npm:0.11.0, @rslib/core@npm:^0.11.0":
+  version: 0.11.0
+  resolution: "@rslib/core@npm:0.11.0"
   dependencies:
-    "@rsbuild/core": "npm:~1.4.7"
-    rsbuild-plugin-dts: "npm:0.10.6"
+    "@rsbuild/core": "npm:~1.4.8"
+    rsbuild-plugin-dts: "npm:0.11.0"
     tinyglobby: "npm:^0.2.14"
   peerDependencies:
     "@microsoft/api-extractor": ^7
@@ -1027,7 +1027,7 @@ __metadata:
       optional: true
   bin:
     rslib: bin/rslib.js
-  checksum: 10c0/e8617d046e2ff51699f2f8cc5d99eaf23f87e033aceecca9c8ba066cbcd22985c7bb0deb157d7ae9a2a24ef51d2a21df5db73bce9733c551de168b2fed65fd1f
+  checksum: 10c0/f79483ecd95d60dc58150cb1d313692c9b0d04827b1be8f8fc62e655ec54355d6109cf4c099b00340e72b6b44753e8cdf91ac22d7b64699d41b9d664daaeac08
   languageName: node
   linkType: hard
 
@@ -2591,9 +2591,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rsbuild-plugin-dts@npm:0.10.6":
-  version: 0.10.6
-  resolution: "rsbuild-plugin-dts@npm:0.10.6"
+"rsbuild-plugin-dts@npm:0.11.0":
+  version: 0.11.0
+  resolution: "rsbuild-plugin-dts@npm:0.11.0"
   dependencies:
     "@ast-grep/napi": "npm:0.37.0"
     magic-string: "npm:^0.30.17"
@@ -2609,7 +2609,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/f11d96571d6b3b6f3b9b21deb982ed36af61837cd821fdf989008dc46aec07b64ef9c574d6e2f2837b8ee73ffb3d586d7a2ca9ea1b29f2d08f0c83f3ab4cb4cc
+  checksum: 10c0/6d41d1907e03c457be2f006db8927c622ad96b8e5f9f14ba93bf7bcd2099eb3492564009c366bb2207d8594a979a194b8d8464f133ecb3ab94505f45f10648c9
   languageName: node
   linkType: hard
 
