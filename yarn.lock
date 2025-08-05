@@ -719,7 +719,7 @@ __metadata:
   dependencies:
     "@onigoetz/intl-formatters": "npm:1.0.0-rc.2"
     "@onigoetz/make-plural": "npm:1.0.0-rc.2"
-    "@phensley/plurals": "npm:1.13.0"
+    "@phensley/plurals": "npm:1.13.1"
     "@rslib/core": "npm:^0.11.0"
     make-plural: "npm:7.4.0"
     speedscope: "npm:1.23.0"
@@ -783,8 +783,8 @@ __metadata:
     "@onigoetz/intl-formatters": "npm:1.0.0-rc.2"
     "@onigoetz/make-plural": "npm:1.0.0-rc.2"
     "@onigoetz/messageformat": "npm:1.0.0-rc.2"
-    "@phensley/messageformat": "npm:1.13.0"
-    "@phensley/plurals": "npm:1.13.0"
+    "@phensley/messageformat": "npm:1.13.1"
+    "@phensley/plurals": "npm:1.13.1"
     "@rslib/core": "npm:0.11.0"
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
@@ -808,43 +808,43 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@phensley/cldr-utils@npm:~1.13.0":
-  version: 1.13.0
-  resolution: "@phensley/cldr-utils@npm:1.13.0"
+"@phensley/cldr-utils@npm:~1.13.1":
+  version: 1.13.1
+  resolution: "@phensley/cldr-utils@npm:1.13.1"
   dependencies:
     tslib: "npm:^2.8.1"
-  checksum: 10c0/804919992f206f9cd8c40640aa85f7b163c14544254f6f2be3dd1fe7ddab914ce69f14b29f4b0ecff4df20d4f39153301e9bf48e1def357046a0fe26abe6f866
+  checksum: 10c0/bb38f55c8b792275f6a890d277e802c7b4d76b6b222d9e4c045414139ed29bb3b7adfa36c58e4303ca30eea2ddfc5f7c71ef48865901277c269e925f7ad4ff46
   languageName: node
   linkType: hard
 
-"@phensley/decimal@npm:~1.13.0":
-  version: 1.13.0
-  resolution: "@phensley/decimal@npm:1.13.0"
+"@phensley/decimal@npm:~1.13.1":
+  version: 1.13.1
+  resolution: "@phensley/decimal@npm:1.13.1"
   dependencies:
     tslib: "npm:^2.8.1"
-  checksum: 10c0/c03b2b5fcdb4847752965c5d53cff32cf0c02e41b01a4d42b2956d22f840ebdd46cb280a0bf479fe3f1b00f3473f94326060b7ef2ec289fe27c4a7f9edcd36cb
+  checksum: 10c0/1b14b802668ba12845dafe81f3039dbcb56a5c143ef519f449d9c14e50ef1f17fa68c17c4521da87ba65e8e97936fcf8281690f3e823ddcf65144d9833c66aad
   languageName: node
   linkType: hard
 
-"@phensley/messageformat@npm:1.13.0":
-  version: 1.13.0
-  resolution: "@phensley/messageformat@npm:1.13.0"
+"@phensley/messageformat@npm:1.13.1":
+  version: 1.13.1
+  resolution: "@phensley/messageformat@npm:1.13.1"
   dependencies:
-    "@phensley/cldr-utils": "npm:~1.13.0"
-    "@phensley/decimal": "npm:~1.13.0"
-    "@phensley/plurals": "npm:~1.13.0"
+    "@phensley/cldr-utils": "npm:~1.13.1"
+    "@phensley/decimal": "npm:~1.13.1"
+    "@phensley/plurals": "npm:~1.13.1"
     tslib: "npm:^2.8.1"
-  checksum: 10c0/c0cfd1c716c8dfb33f6b8d5f28fbbe323b180b06a53a5e9df83fc24f8acb34c71160441bd29ab24223284ba75a75b7339f7c25f404321c0ebcdc816949305c85
+  checksum: 10c0/68589804df08dac5b32d999cc5ca56abc6507875b6d1b14e70d1d3799a770cc4b97a9f79cb36b5e700f04a46942b918967be61dc2434819664ad5822eb82282a
   languageName: node
   linkType: hard
 
-"@phensley/plurals@npm:1.13.0, @phensley/plurals@npm:~1.13.0":
-  version: 1.13.0
-  resolution: "@phensley/plurals@npm:1.13.0"
+"@phensley/plurals@npm:1.13.1, @phensley/plurals@npm:~1.13.1":
+  version: 1.13.1
+  resolution: "@phensley/plurals@npm:1.13.1"
   dependencies:
-    "@phensley/decimal": "npm:~1.13.0"
+    "@phensley/decimal": "npm:~1.13.1"
     tslib: "npm:^2.8.1"
-  checksum: 10c0/2c9051f2237c1638623bd59910cf7c844c40ba1e67900940bb9b961e5a1ff9a620f004d8faa41760f0990a18f9addb869b9a67c0d95636ab4ccfac073c0cb40a
+  checksum: 10c0/7f1670dcf06a1ece44ff98c70a585245a96e6d372ddfcbd898a57d62da0a26ffdee2ab3eab3f7b72b708fcfc283a6bca60e8d30e6043186f534839383bf982c9
   languageName: node
   linkType: hard
 
