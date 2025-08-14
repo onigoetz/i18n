@@ -20,7 +20,7 @@ jobs:
         node-version: [18.x, 20.x]
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.repository == 'onigoetz/i18n'
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
       with:
         # Disabling shallow clone is recommended for improving relevancy of reporting
         fetch-depth: 0
