@@ -156,18 +156,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@biomejs/biome@npm:2.2.3":
-  version: 2.2.3
-  resolution: "@biomejs/biome@npm:2.2.3"
+"@biomejs/biome@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@biomejs/biome@npm:2.2.4"
   dependencies:
-    "@biomejs/cli-darwin-arm64": "npm:2.2.3"
-    "@biomejs/cli-darwin-x64": "npm:2.2.3"
-    "@biomejs/cli-linux-arm64": "npm:2.2.3"
-    "@biomejs/cli-linux-arm64-musl": "npm:2.2.3"
-    "@biomejs/cli-linux-x64": "npm:2.2.3"
-    "@biomejs/cli-linux-x64-musl": "npm:2.2.3"
-    "@biomejs/cli-win32-arm64": "npm:2.2.3"
-    "@biomejs/cli-win32-x64": "npm:2.2.3"
+    "@biomejs/cli-darwin-arm64": "npm:2.2.4"
+    "@biomejs/cli-darwin-x64": "npm:2.2.4"
+    "@biomejs/cli-linux-arm64": "npm:2.2.4"
+    "@biomejs/cli-linux-arm64-musl": "npm:2.2.4"
+    "@biomejs/cli-linux-x64": "npm:2.2.4"
+    "@biomejs/cli-linux-x64-musl": "npm:2.2.4"
+    "@biomejs/cli-win32-arm64": "npm:2.2.4"
+    "@biomejs/cli-win32-x64": "npm:2.2.4"
   dependenciesMeta:
     "@biomejs/cli-darwin-arm64":
       optional: true
@@ -187,62 +187,62 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: 10c0/2a07d8c2fbec5071c53fead7d29300c40b977d9b047f4a67051eb57549e367756d50433394b658c9a0c16a4fe2ce1548e0eb9125179f03e6a633d705620d2b17
+  checksum: 10c0/7229fcc743db48f3cfd7417fb3f33d1cd9e7dfe42a12ed3c1046cd3110718237bb71ea3fe5c8b0de9bd3df2b918d0be58027602aa3720b64904b63d9cedf53e3
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:2.2.3":
-  version: 2.2.3
-  resolution: "@biomejs/cli-darwin-arm64@npm:2.2.3"
+"@biomejs/cli-darwin-arm64@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@biomejs/cli-darwin-arm64@npm:2.2.4"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:2.2.3":
-  version: 2.2.3
-  resolution: "@biomejs/cli-darwin-x64@npm:2.2.3"
+"@biomejs/cli-darwin-x64@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@biomejs/cli-darwin-x64@npm:2.2.4"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64-musl@npm:2.2.3":
-  version: 2.2.3
-  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.2.3"
+"@biomejs/cli-linux-arm64-musl@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.2.4"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:2.2.3":
-  version: 2.2.3
-  resolution: "@biomejs/cli-linux-arm64@npm:2.2.3"
+"@biomejs/cli-linux-arm64@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@biomejs/cli-linux-arm64@npm:2.2.4"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64-musl@npm:2.2.3":
-  version: 2.2.3
-  resolution: "@biomejs/cli-linux-x64-musl@npm:2.2.3"
+"@biomejs/cli-linux-x64-musl@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@biomejs/cli-linux-x64-musl@npm:2.2.4"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:2.2.3":
-  version: 2.2.3
-  resolution: "@biomejs/cli-linux-x64@npm:2.2.3"
+"@biomejs/cli-linux-x64@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@biomejs/cli-linux-x64@npm:2.2.4"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:2.2.3":
-  version: 2.2.3
-  resolution: "@biomejs/cli-win32-arm64@npm:2.2.3"
+"@biomejs/cli-win32-arm64@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@biomejs/cli-win32-arm64@npm:2.2.4"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:2.2.3":
-  version: 2.2.3
-  resolution: "@biomejs/cli-win32-x64@npm:2.2.3"
+"@biomejs/cli-win32-x64@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@biomejs/cli-win32-x64@npm:2.2.4"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -737,9 +737,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@onigoetz/i18n-parent@workspace:."
   dependencies:
-    "@biomejs/biome": "npm:2.2.3"
+    "@biomejs/biome": "npm:2.2.4"
     benchmark: "npm:2.1.4"
-    systeminformation: "npm:5.27.8"
+    systeminformation: "npm:5.27.9"
   languageName: unknown
   linkType: soft
 
@@ -792,7 +792,7 @@ __metadata:
     "@onigoetz/messageformat": "npm:1.0.0-rc.2"
     "@phensley/messageformat": "npm:1.13.1"
     "@phensley/plurals": "npm:1.13.1"
-    "@rslib/core": "npm:0.13.0"
+    "@rslib/core": "npm:0.13.2"
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
     globalize: "npm:1.7.0"
@@ -1002,7 +1002,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rsbuild/core@npm:~1.5.4":
+"@rsbuild/core@npm:1.5.4":
   version: 1.5.4
   resolution: "@rsbuild/core@npm:1.5.4"
   dependencies:
@@ -1017,12 +1017,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rslib/core@npm:0.13.0, @rslib/core@npm:^0.13.0":
-  version: 0.13.0
-  resolution: "@rslib/core@npm:0.13.0"
+"@rslib/core@npm:0.13.2, @rslib/core@npm:^0.13.0":
+  version: 0.13.2
+  resolution: "@rslib/core@npm:0.13.2"
   dependencies:
-    "@rsbuild/core": "npm:~1.5.4"
-    rsbuild-plugin-dts: "npm:0.13.0"
+    "@rsbuild/core": "npm:1.5.4"
+    rsbuild-plugin-dts: "npm:0.13.2"
     tinyglobby: "npm:^0.2.15"
   peerDependencies:
     "@microsoft/api-extractor": ^7
@@ -1034,7 +1034,7 @@ __metadata:
       optional: true
   bin:
     rslib: bin/rslib.js
-  checksum: 10c0/dc97ef6917e39285dd49aefc8470802cb484198654861611ffbd564eeff6f947393fc5aa141ba24844a67b27451049035e5fc1bf5a342ee9486e91c512bf123f
+  checksum: 10c0/56186a6329d10f3ad84d2837b2856190b8818ee2080459120da1264492a02bb3432f154417e7e925e8a984cb0cf08c05e5001f3f5b2afae338adb7e00bd1dddf
   languageName: node
   linkType: hard
 
@@ -2093,12 +2093,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"magic-string@npm:^0.30.17, magic-string@npm:^0.30.18":
+"magic-string@npm:^0.30.17":
   version: 0.30.18
   resolution: "magic-string@npm:0.30.18"
   dependencies:
     "@jridgewell/sourcemap-codec": "npm:^1.5.5"
   checksum: 10c0/80fba01e13ce1f5c474a0498a5aa462fa158eb56567310747089a0033e432d83a2021ee2c109ac116010cd9dcf90a5231d89fbe3858165f73c00a50a74dbefcd
+  languageName: node
+  linkType: hard
+
+"magic-string@npm:^0.30.19":
+  version: 0.30.19
+  resolution: "magic-string@npm:0.30.19"
+  dependencies:
+    "@jridgewell/sourcemap-codec": "npm:^1.5.5"
+  checksum: 10c0/db23fd2e2ee98a1aeb88a4cdb2353137fcf05819b883c856dd79e4c7dfb25151e2a5a4d5dbd88add5e30ed8ae5c51bcf4accbc6becb75249d924ec7b4fbcae27
   languageName: node
   linkType: hard
 
@@ -2505,12 +2514,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rsbuild-plugin-dts@npm:0.13.0":
-  version: 0.13.0
-  resolution: "rsbuild-plugin-dts@npm:0.13.0"
+"rsbuild-plugin-dts@npm:0.13.2":
+  version: 0.13.2
+  resolution: "rsbuild-plugin-dts@npm:0.13.2"
   dependencies:
     "@ast-grep/napi": "npm:0.37.0"
-    magic-string: "npm:^0.30.18"
+    magic-string: "npm:^0.30.19"
     picocolors: "npm:1.1.1"
     tinyglobby: "npm:^0.2.15"
     tsconfig-paths: "npm:^4.2.0"
@@ -2526,7 +2535,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/13fc3a578971a86f2e7be1dc6a914fc197dfc97b08afe311ea3b1ee417e7c090a3169034f613adc06e882ea418f7394b488638bdb8d3495058206029ef5078fb
+  checksum: 10c0/d2f160b9ccf76345afcabdb13a33f84298fc0cf574ff902355c97a5dfe09675986501bf4f3555d88da853ce9c48b8c3468b47b8c9e71fa729a9fc6add633f0be
   languageName: node
   linkType: hard
 
@@ -2724,12 +2733,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"systeminformation@npm:5.27.8":
-  version: 5.27.8
-  resolution: "systeminformation@npm:5.27.8"
+"systeminformation@npm:5.27.9":
+  version: 5.27.9
+  resolution: "systeminformation@npm:5.27.9"
   bin:
     systeminformation: lib/cli.js
-  checksum: 10c0/af9db47efa923dac76f4f798582ac78ffc6fe1397a32bb99f9662d6b152b54466d05b0b02f72156a4af6c16db1b587bb7ce755dd37f415c7703494b14b21e37a
+  checksum: 10c0/d65aeb68e40d432fb1ec6e1723fa147959cbeb1b43a25c2014b768f0ee099266da6370b3f1593a6a7ca77643f58c9b754d470d225a7afd466d1108c846a67a3c
   conditions: (os=darwin | os=linux | os=win32 | os=freebsd | os=openbsd | os=netbsd | os=sunos | os=android)
   languageName: node
   linkType: hard
