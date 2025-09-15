@@ -17,9 +17,9 @@
     "publish:all": "oao publish --no-changelog --bump-dependent-reqs=exact"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.2.3",
+    "@biomejs/biome": "2.2.4",
     "benchmark": "2.1.4",
-    "systeminformation": "5.27.8"
+    "systeminformation": "5.27.9"
   },
   "packageManager": "yarn@4.9.4"
 }
