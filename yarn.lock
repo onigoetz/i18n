@@ -748,7 +748,7 @@ __metadata:
   resolution: "@onigoetz/i18n-types@workspace:packages/i18n-types"
   dependencies:
     "@rslib/core": "npm:^0.15.0"
-    typescript: "npm:5.9.2"
+    typescript: "npm:5.9.3"
   languageName: unknown
   linkType: soft
 
@@ -761,7 +761,7 @@ __metadata:
     "@rslib/core": "npm:^0.15.0"
     "@vitest/coverage-v8": "npm:3.2.4"
     full-icu: "npm:1.5.0"
-    typescript: "npm:5.9.2"
+    typescript: "npm:5.9.3"
     vitest: "npm:3.2.4"
     vitest-sonar-reporter: "npm:2.0.4"
   languageName: unknown
@@ -774,7 +774,7 @@ __metadata:
     "@rslib/core": "npm:^0.15.0"
     "@vitest/coverage-v8": "npm:3.2.4"
     test-cldr-data: "npm:1.0.0-rc.2"
-    typescript: "npm:5.9.2"
+    typescript: "npm:5.9.3"
     vitest: "npm:3.2.4"
     vitest-sonar-reporter: "npm:2.0.4"
   languageName: unknown
@@ -795,7 +795,7 @@ __metadata:
     "@rslib/core": "npm:0.15.0"
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
-    globalize: "npm:1.7.0"
+    globalize: "npm:1.7.1"
     intl-messageformat: "npm:10.7.16"
     make-plural: "npm:7.4.0"
     speedscope: "npm:1.23.1"
@@ -809,7 +809,7 @@ __metadata:
     "@onigoetz/i18n-types": "npm:1.0.0-rc.2"
     "@rslib/core": "npm:^0.15.0"
     "@vitest/coverage-v8": "npm:3.2.4"
-    typescript: "npm:5.9.2"
+    typescript: "npm:5.9.3"
     vitest: "npm:3.2.4"
     vitest-sonar-reporter: "npm:2.0.4"
   languageName: unknown
@@ -1845,12 +1845,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globalize@npm:1.7.0":
-  version: 1.7.0
-  resolution: "globalize@npm:1.7.0"
+"globalize@npm:1.7.1":
+  version: 1.7.1
+  resolution: "globalize@npm:1.7.1"
   dependencies:
     cldrjs: "npm:^0.5.4"
-  checksum: 10c0/88e831946fb604b8dea9d02fb0b3f8f1ae8707080656ce7ee3ddeabcff4c81f2b397102250da0d939f0b5aa55510b2e53f816881ba5b1c1c62ddd5640d0def96
+  checksum: 10c0/1a643a3bfc706a29eacf2d550d4c366916bcbe7165a5ecd15307ac978b69377a9cef2d41f61192aa026b2960b4a6eccc21fc9116ba63c95ba16f66df208abce4
   languageName: node
   linkType: hard
 
@@ -2789,23 +2789,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.9.2":
-  version: 5.9.2
-  resolution: "typescript@npm:5.9.2"
+"typescript@npm:5.9.3":
+  version: 5.9.3
+  resolution: "typescript@npm:5.9.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/cd635d50f02d6cf98ed42de2f76289701c1ec587a363369255f01ed15aaf22be0813226bff3c53e99d971f9b540e0b3cc7583dbe05faded49b1b0bed2f638a18
+  checksum: 10c0/6bd7552ce39f97e711db5aa048f6f9995b53f1c52f7d8667c1abdc1700c68a76a308f579cd309ce6b53646deb4e9a1be7c813a93baaf0a28ccd536a30270e1c5
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A5.9.2#optional!builtin<compat/typescript>":
-  version: 5.9.2
-  resolution: "typescript@patch:typescript@npm%3A5.9.2#optional!builtin<compat/typescript>::version=5.9.2&hash=5786d5"
+"typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>":
+  version: 5.9.3
+  resolution: "typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/34d2a8e23eb8e0d1875072064d5e1d9c102e0bdce56a10a25c0b917b8aa9001a9cf5c225df12497e99da107dc379360bc138163c66b55b95f5b105b50578067e
+  checksum: 10c0/ad09fdf7a756814dce65bc60c1657b40d44451346858eea230e10f2e95a289d9183b6e32e5c11e95acc0ccc214b4f36289dcad4bf1886b0adb84d711d336a430
   languageName: node
   linkType: hard
 
