@@ -15,7 +15,7 @@
     "format-message-interpret": "6.2.4",
     "format-message-parse": "6.2.4",
     "globalize": "1.7.1",
-    "intl-messageformat": "10.7.17",
+    "intl-messageformat": "10.7.18",
     "make-plural": "7.4.0",
     "speedscope": "1.23.1"
   },
