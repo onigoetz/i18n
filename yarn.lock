@@ -156,18 +156,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@biomejs/biome@npm:2.2.5":
-  version: 2.2.5
-  resolution: "@biomejs/biome@npm:2.2.5"
+"@biomejs/biome@npm:2.2.6":
+  version: 2.2.6
+  resolution: "@biomejs/biome@npm:2.2.6"
   dependencies:
-    "@biomejs/cli-darwin-arm64": "npm:2.2.5"
-    "@biomejs/cli-darwin-x64": "npm:2.2.5"
-    "@biomejs/cli-linux-arm64": "npm:2.2.5"
-    "@biomejs/cli-linux-arm64-musl": "npm:2.2.5"
-    "@biomejs/cli-linux-x64": "npm:2.2.5"
-    "@biomejs/cli-linux-x64-musl": "npm:2.2.5"
-    "@biomejs/cli-win32-arm64": "npm:2.2.5"
-    "@biomejs/cli-win32-x64": "npm:2.2.5"
+    "@biomejs/cli-darwin-arm64": "npm:2.2.6"
+    "@biomejs/cli-darwin-x64": "npm:2.2.6"
+    "@biomejs/cli-linux-arm64": "npm:2.2.6"
+    "@biomejs/cli-linux-arm64-musl": "npm:2.2.6"
+    "@biomejs/cli-linux-x64": "npm:2.2.6"
+    "@biomejs/cli-linux-x64-musl": "npm:2.2.6"
+    "@biomejs/cli-win32-arm64": "npm:2.2.6"
+    "@biomejs/cli-win32-x64": "npm:2.2.6"
   dependenciesMeta:
     "@biomejs/cli-darwin-arm64":
       optional: true
@@ -187,62 +187,62 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: 10c0/d9baff2b9d35f820e3e746fd4222ba1295d7648e04ececc4e1f25ed0c09dd4fd30505a7183731fc75252ea925728c276858c9f09751b7e1fd1c8378b05208de6
+  checksum: 10c0/1b99279f41acd5e9928da8c8864194642cc5d197c6517366fe159c9d8af4b6f5da1dd200264456c3dd423b6355715ba153ae6488d82ae3678a0c699d76c8a81e
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:2.2.5":
-  version: 2.2.5
-  resolution: "@biomejs/cli-darwin-arm64@npm:2.2.5"
+"@biomejs/cli-darwin-arm64@npm:2.2.6":
+  version: 2.2.6
+  resolution: "@biomejs/cli-darwin-arm64@npm:2.2.6"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:2.2.5":
-  version: 2.2.5
-  resolution: "@biomejs/cli-darwin-x64@npm:2.2.5"
+"@biomejs/cli-darwin-x64@npm:2.2.6":
+  version: 2.2.6
+  resolution: "@biomejs/cli-darwin-x64@npm:2.2.6"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64-musl@npm:2.2.5":
-  version: 2.2.5
-  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.2.5"
+"@biomejs/cli-linux-arm64-musl@npm:2.2.6":
+  version: 2.2.6
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.2.6"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:2.2.5":
-  version: 2.2.5
-  resolution: "@biomejs/cli-linux-arm64@npm:2.2.5"
+"@biomejs/cli-linux-arm64@npm:2.2.6":
+  version: 2.2.6
+  resolution: "@biomejs/cli-linux-arm64@npm:2.2.6"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64-musl@npm:2.2.5":
-  version: 2.2.5
-  resolution: "@biomejs/cli-linux-x64-musl@npm:2.2.5"
+"@biomejs/cli-linux-x64-musl@npm:2.2.6":
+  version: 2.2.6
+  resolution: "@biomejs/cli-linux-x64-musl@npm:2.2.6"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:2.2.5":
-  version: 2.2.5
-  resolution: "@biomejs/cli-linux-x64@npm:2.2.5"
+"@biomejs/cli-linux-x64@npm:2.2.6":
+  version: 2.2.6
+  resolution: "@biomejs/cli-linux-x64@npm:2.2.6"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:2.2.5":
-  version: 2.2.5
-  resolution: "@biomejs/cli-win32-arm64@npm:2.2.5"
+"@biomejs/cli-win32-arm64@npm:2.2.6":
+  version: 2.2.6
+  resolution: "@biomejs/cli-win32-arm64@npm:2.2.6"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:2.2.5":
-  version: 2.2.5
-  resolution: "@biomejs/cli-win32-x64@npm:2.2.5"
+"@biomejs/cli-win32-x64@npm:2.2.6":
+  version: 2.2.6
+  resolution: "@biomejs/cli-win32-x64@npm:2.2.6"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -737,7 +737,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@onigoetz/i18n-parent@workspace:."
   dependencies:
-    "@biomejs/biome": "npm:2.2.5"
+    "@biomejs/biome": "npm:2.2.6"
     benchmark: "npm:2.1.4"
     systeminformation: "npm:5.27.11"
   languageName: unknown
@@ -792,7 +792,7 @@ __metadata:
     "@onigoetz/messageformat": "npm:1.0.0-rc.2"
     "@phensley/messageformat": "npm:1.13.1"
     "@phensley/plurals": "npm:1.13.1"
-    "@rslib/core": "npm:0.15.0"
+    "@rslib/core": "npm:0.15.1"
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
     globalize: "npm:1.7.1"
@@ -1002,27 +1002,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rsbuild/core@npm:~1.5.13":
-  version: 1.5.13
-  resolution: "@rsbuild/core@npm:1.5.13"
+"@rsbuild/core@npm:~1.5.17":
+  version: 1.5.17
+  resolution: "@rsbuild/core@npm:1.5.17"
   dependencies:
     "@rspack/core": "npm:1.5.8"
     "@rspack/lite-tapable": "npm:~1.0.1"
     "@swc/helpers": "npm:^0.5.17"
-    core-js: "npm:~3.45.1"
-    jiti: "npm:^2.6.0"
+    core-js: "npm:~3.46.0"
+    jiti: "npm:^2.6.1"
   bin:
     rsbuild: bin/rsbuild.js
-  checksum: 10c0/f8c29c4e4c7e5f4d2bac5f5ab42537e0e97e38f6dbfd66f549b329ea1d946be4506119e9c2a9eea6864233cb6efe5d179bab6eb191cdb74e1958805835c56326
+  checksum: 10c0/c5781c808b0aebaf867bc4731823286c7a97991763660c06b1a2983cc83acaed4ef5e9163c6f0ffb7f0620c249ead9eb4a1eb1edf1868497dbaca1409529ee0a
   languageName: node
   linkType: hard
 
-"@rslib/core@npm:0.15.0, @rslib/core@npm:^0.15.0":
-  version: 0.15.0
-  resolution: "@rslib/core@npm:0.15.0"
+"@rslib/core@npm:0.15.1, @rslib/core@npm:^0.15.0":
+  version: 0.15.1
+  resolution: "@rslib/core@npm:0.15.1"
   dependencies:
-    "@rsbuild/core": "npm:~1.5.13"
-    rsbuild-plugin-dts: "npm:0.15.0"
+    "@rsbuild/core": "npm:~1.5.17"
+    rsbuild-plugin-dts: "npm:0.15.1"
   peerDependencies:
     "@microsoft/api-extractor": ^7
     typescript: ^5
@@ -1033,7 +1033,7 @@ __metadata:
       optional: true
   bin:
     rslib: bin/rslib.js
-  checksum: 10c0/558e377cc78b214be17dd92c46fdfe59f368fd2c2b2f74830987e9b643dc6e64a2096ebe15f6056299e54abb84d8f464b094b364ac32cd8b7af4e584c8f28ef3
+  checksum: 10c0/027355b926fc76cfb38f1dc85cd924a077026542a29d99f1ae29ef844342d847d6309a6e6e42f57dd3dd7ee5a15b433e444e3d0df22b6d4e2a27f3e6a10218f4
   languageName: node
   linkType: hard
 
@@ -1503,10 +1503,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:~3.45.1":
-  version: 3.45.1
-  resolution: "core-js@npm:3.45.1"
-  checksum: 10c0/c38e5fae5a05ee3a129c45e10056aafe61dbb15fd35d27e0c289f5490387541c89741185e0aeb61acb558559c6697e016c245cca738fa169a73f2b06cd30e6b6
+"core-js@npm:~3.46.0":
+  version: 3.46.0
+  resolution: "core-js@npm:3.46.0"
+  checksum: 10c0/12d559d39a58227881bc6c86c36d24dcfbe2d56e52dac42e35e8643278172596ab67f57ede98baf40b153ca1b830f37420ea32c3f7417c0c5a1fed46438ae187
   languageName: node
   linkType: hard
 
@@ -2039,12 +2039,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jiti@npm:^2.6.0":
-  version: 2.6.0
-  resolution: "jiti@npm:2.6.0"
+"jiti@npm:^2.6.1":
+  version: 2.6.1
+  resolution: "jiti@npm:2.6.1"
   bin:
     jiti: lib/jiti-cli.mjs
-  checksum: 10c0/5002ccecdb02e85413e5bfe3819a5ac458dcce12b358c556b6cf17b5b6cbedd36514f6a67d4aa2b290caa2b933406502a1985d0bfee784ece788e90a0392d534
+  checksum: 10c0/79b2e96a8e623f66c1b703b98ec1b8be4500e1d217e09b09e343471bbb9c105381b83edbb979d01cef18318cc45ce6e153571b6c83122170eefa531c64b6789b
   languageName: node
   linkType: hard
 
@@ -2488,9 +2488,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rsbuild-plugin-dts@npm:0.15.0":
-  version: 0.15.0
-  resolution: "rsbuild-plugin-dts@npm:0.15.0"
+"rsbuild-plugin-dts@npm:0.15.1":
+  version: 0.15.1
+  resolution: "rsbuild-plugin-dts@npm:0.15.1"
   dependencies:
     "@ast-grep/napi": "npm:0.37.0"
   peerDependencies:
@@ -2505,7 +2505,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/a1345c6ed5f9d619808d490a7a1bb4ef2343f0298e43fb80d1757d60529db2f0e4172d42fbd5ba1a078736beb7db7dda351514fa4459223c93445cefbbb87ae3
+  checksum: 10c0/474c7d188ccbc5085d4087af91c734ea1aafe9927e5d510b62e84220790d9235062f29e55fb54f01e841287143ee6b07e305fc66df79e368ef0ce6acab6cef4a
   languageName: node
   linkType: hard
 
