@@ -11,13 +11,13 @@
     "@onigoetz/messageformat": "1.0.0-rc.2",
     "@phensley/messageformat": "1.13.1",
     "@phensley/plurals": "1.13.1",
-    "@rslib/core": "0.15.1",
+    "@rslib/core": "0.16.0",
     "format-message-interpret": "6.2.4",
     "format-message-parse": "6.2.4",
     "globalize": "1.7.1",
     "intl-messageformat": "10.7.18",
     "make-plural": "7.4.0",
-    "speedscope": "1.23.1"
+    "speedscope": "1.24.0"
   },
   "scripts": {
     "build": "rslib build",
