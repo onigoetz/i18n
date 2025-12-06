@@ -17,7 +17,7 @@
     "globalize": "1.7.1",
     "intl-messageformat": "10.7.18",
     "make-plural": "7.4.0",
-    "speedscope": "1.24.0"
+    "speedscope": "1.25.0"
   },
   "scripts": {
     "build": "rslib build",
