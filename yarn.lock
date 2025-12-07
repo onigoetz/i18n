@@ -729,7 +729,7 @@ __metadata:
     "@phensley/plurals": "npm:1.14.0"
     "@rslib/core": "npm:^0.18.0"
     make-plural: "npm:7.4.0"
-    speedscope: "npm:1.24.0"
+    speedscope: "npm:1.25.0"
   languageName: unknown
   linkType: soft
 
@@ -798,7 +798,7 @@ __metadata:
     globalize: "npm:1.7.1"
     intl-messageformat: "npm:10.7.18"
     make-plural: "npm:7.4.0"
-    speedscope: "npm:1.24.0"
+    speedscope: "npm:1.25.0"
   languageName: unknown
   linkType: soft
 
@@ -2604,14 +2604,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"speedscope@npm:1.24.0":
-  version: 1.24.0
-  resolution: "speedscope@npm:1.24.0"
+"speedscope@npm:1.25.0":
+  version: 1.25.0
+  resolution: "speedscope@npm:1.25.0"
   dependencies:
     open: "npm:10.1.0"
   bin:
     speedscope: bin/cli.mjs
-  checksum: 10c0/5031854c9c9fa42d9056d5d06f0bbaa7a59b0079abbd5f7660fbc0ec56e2f436ccf0ca0ab0d3897eafffce5fbe5552b5af8e48072f8da11cd70ed7a62d5cc6c3
+  checksum: 10c0/88b9bf55339130e3d9f247a1b09434e0085815bfe69303039458dae1f55db3b5608ddf7748d5ca4f6987801977a35d7193f4848ccfe5be6174c82ec061ba16a0
   languageName: node
   linkType: hard
 
