@@ -181,12 +181,9 @@ I tried to compare apples with apples as much as possible, but some libraries do
 </table>
 <p><strong>Notes:</strong></p>
 <ul>
-<li>
-<code>globalize</code> comes with a bundled version of <code>messageformat</code> 0.3.0 and <code>make-plural</code> 3.0.0. Also, it requires ICU data to know how to format numbers, currencies, timezones and more. It also comes with a compiler to remove the parts that aren’t required, but for my use case I consider that we can’t know in advance what is going to be formatted.</li>
-<li>
-<code>@ffz/icu-msgparser</code> is only a parser, I added a renderer to it but did not add any number/date formatter (hence the comparatively small size).</li>
-<li>
-<code>@eo-locale/core</code> was excluded from this list as it crashes on our valid test strings. It would be a strong contender as it has a very small footprint (4.6KB).</li>
+<li><code>globalize</code> comes with a bundled version of <code>messageformat</code> 0.3.0 and <code>make-plural</code> 3.0.0. Also, it requires ICU data to know how to format numbers, currencies, timezones and more. It also comes with a compiler to remove the parts that aren’t required, but for my use case I consider that we can’t know in advance what is going to be formatted.</li>
+<li><code>@ffz/icu-msgparser</code> is only a parser, I added a renderer to it but did not add any number/date formatter (hence the comparatively small size).</li>
+<li><code>@eo-locale/core</code> was excluded from this list as it crashes on our valid test strings. It would be a strong contender as it has a very small footprint (4.6KB).</li>
 </ul>
 <h2><a id="benchmark" href="#benchmark" class="Permalink" aria-hidden="true" title="Permalink">#</a>Benchmark</h2>
 <p>To make the benchmark compareable I tried to apply the same rules to all libraries.
