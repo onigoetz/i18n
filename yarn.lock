@@ -727,8 +727,8 @@ __metadata:
     "@onigoetz/intl-formatters": "npm:1.0.0-rc.2"
     "@onigoetz/make-plural": "npm:1.0.0-rc.2"
     "@phensley/plurals": "npm:1.14.0"
-    "@rslib/core": "npm:^0.18.0"
-    make-plural: "npm:7.4.0"
+    "@rslib/core": "npm:^0.19.0"
+    make-plural: "npm:7.5.0"
     speedscope: "npm:1.25.0"
   languageName: unknown
   linkType: soft
@@ -739,7 +739,7 @@ __metadata:
   dependencies:
     "@biomejs/biome": "npm:2.3.10"
     benchmark: "npm:2.1.4"
-    systeminformation: "npm:5.28.0"
+    systeminformation: "npm:5.28.5"
   languageName: unknown
   linkType: soft
 
@@ -747,7 +747,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@onigoetz/i18n-types@workspace:packages/i18n-types"
   dependencies:
-    "@rslib/core": "npm:^0.18.0"
+    "@rslib/core": "npm:^0.19.0"
     typescript: "npm:5.9.3"
   languageName: unknown
   linkType: soft
@@ -758,7 +758,7 @@ __metadata:
   dependencies:
     "@onigoetz/i18n-types": "npm:1.0.0-rc.2"
     "@onigoetz/messageformat": "npm:1.0.0-rc.2"
-    "@rslib/core": "npm:^0.18.0"
+    "@rslib/core": "npm:^0.19.0"
     "@vitest/coverage-v8": "npm:3.2.4"
     full-icu: "npm:1.5.0"
     typescript: "npm:5.9.3"
@@ -771,7 +771,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@onigoetz/make-plural@workspace:packages/make-plural"
   dependencies:
-    "@rslib/core": "npm:^0.18.0"
+    "@rslib/core": "npm:^0.19.0"
     "@vitest/coverage-v8": "npm:3.2.4"
     test-cldr-data: "npm:1.0.0-rc.2"
     typescript: "npm:5.9.3"
@@ -792,12 +792,12 @@ __metadata:
     "@onigoetz/messageformat": "npm:1.0.0-rc.2"
     "@phensley/messageformat": "npm:1.14.0"
     "@phensley/plurals": "npm:1.14.0"
-    "@rslib/core": "npm:0.18.6"
+    "@rslib/core": "npm:0.19.0"
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
     globalize: "npm:1.7.1"
     intl-messageformat: "npm:10.7.18"
-    make-plural: "npm:7.4.0"
+    make-plural: "npm:7.5.0"
     speedscope: "npm:1.25.0"
   languageName: unknown
   linkType: soft
@@ -807,7 +807,7 @@ __metadata:
   resolution: "@onigoetz/messageformat@workspace:packages/messageformat"
   dependencies:
     "@onigoetz/i18n-types": "npm:1.0.0-rc.2"
-    "@rslib/core": "npm:^0.18.0"
+    "@rslib/core": "npm:^0.19.0"
     "@vitest/coverage-v8": "npm:3.2.4"
     typescript: "npm:5.9.3"
     vitest: "npm:3.2.4"
@@ -1002,9 +1002,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rsbuild/core@npm:~1.7.0-beta.1":
-  version: 1.7.0-beta.1
-  resolution: "@rsbuild/core@npm:1.7.0-beta.1"
+"@rsbuild/core@npm:~1.7.0-beta.2":
+  version: 1.7.0-beta.2
+  resolution: "@rsbuild/core@npm:1.7.0-beta.2"
   dependencies:
     "@rspack/core": "npm:1.7.0-beta.1"
     "@rspack/lite-tapable": "npm:~1.1.0"
@@ -1013,16 +1013,16 @@ __metadata:
     jiti: "npm:^2.6.1"
   bin:
     rsbuild: bin/rsbuild.js
-  checksum: 10c0/2d23b537bf6e9678b06c8480fd0be383dec3c0ac257d45c1e5c2ba283aa4974b857a0d939a37e8e3b1868f8079378d6c382003edf0469e4fe76fc56cc19019e9
+  checksum: 10c0/d9f6f582d6621df0e535766ac619eabdbcd708d4a3c70e119306b62b8997333127309c0f0176cb2c9fb19de08ef0e802eff99eaf8a97bc986123107844cb56ea
   languageName: node
   linkType: hard
 
-"@rslib/core@npm:0.18.6, @rslib/core@npm:^0.18.0":
-  version: 0.18.6
-  resolution: "@rslib/core@npm:0.18.6"
+"@rslib/core@npm:0.19.0, @rslib/core@npm:^0.19.0":
+  version: 0.19.0
+  resolution: "@rslib/core@npm:0.19.0"
   dependencies:
-    "@rsbuild/core": "npm:~1.7.0-beta.1"
-    rsbuild-plugin-dts: "npm:0.18.6"
+    "@rsbuild/core": "npm:~1.7.0-beta.2"
+    rsbuild-plugin-dts: "npm:0.19.0"
   peerDependencies:
     "@microsoft/api-extractor": ^7
     typescript: ^5
@@ -1033,7 +1033,7 @@ __metadata:
       optional: true
   bin:
     rslib: bin/rslib.js
-  checksum: 10c0/92cc9a408bb2617836c890935201e3a7bc16eed56bd223c2f7479dba62bec1fa3543de5d24e1164c3a06faf0531d956334e5cdbef9fc39b586b43c64e0a5e070
+  checksum: 10c0/8d98cb520ee6d25c744d44c56620c65df6b5e81515dc1dec89391c8e7fff50706842f0f1ec41d469354e3df11866fe38594849630c3b17a58a9c8a2d1698589d
   languageName: node
   linkType: hard
 
@@ -2131,10 +2131,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"make-plural@npm:7.4.0, make-plural@npm:^7.0.0":
-  version: 7.4.0
-  resolution: "make-plural@npm:7.4.0"
-  checksum: 10c0/10f24e932865c88d4cdb14d4bb809ce8e615cae7d083c63ad008b3bcaf0d22941ca0bd76acd9cdd7ae4047563501104fff3c37ce8ad2bc5671facde1818fa57f
+"make-plural@npm:7.5.0, make-plural@npm:^7.0.0":
+  version: 7.5.0
+  resolution: "make-plural@npm:7.5.0"
+  checksum: 10c0/4cfecc77301cda7d01539027de3aedbacd91555767a4afb7ec18dbb8d9648293bf712a1d968e333c448f4e13e95cfef6457b338cf562620abcc4e7b313eeca29
   languageName: node
   linkType: hard
 
@@ -2488,9 +2488,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rsbuild-plugin-dts@npm:0.18.6":
-  version: 0.18.6
-  resolution: "rsbuild-plugin-dts@npm:0.18.6"
+"rsbuild-plugin-dts@npm:0.19.0":
+  version: 0.19.0
+  resolution: "rsbuild-plugin-dts@npm:0.19.0"
   dependencies:
     "@ast-grep/napi": "npm:0.37.0"
   peerDependencies:
@@ -2505,7 +2505,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/4620e3042cfae4d6b87deb5e5a705719eae9bf1b830e0285251a4bf761398d1d91270ae2aa0df60f9eddf6624e4bef9e32d9438f23461d30985d4eb11aa0a6d4
+  checksum: 10c0/e8ecc55546ec8226807932793d886673372419c4089f9d05325fb43e031dff843a39fba8eb94a113bebcefe888c282b5acac224764dc5cdba245dc92cd65d15f
   languageName: node
   linkType: hard
 
@@ -2696,12 +2696,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"systeminformation@npm:5.28.0":
-  version: 5.28.0
-  resolution: "systeminformation@npm:5.28.0"
+"systeminformation@npm:5.28.5":
+  version: 5.28.5
+  resolution: "systeminformation@npm:5.28.5"
   bin:
     systeminformation: lib/cli.js
-  checksum: 10c0/6d1ae32cbcd8dc20d71eaaba370bec67f86a047cc9529c7bd5341d52a90f321fc333c059e0eebc693705990a89d447596165568befc452dab3c26b23114a3498
+  checksum: 10c0/0bfee2aaa4c616dc2fd26f5d4859c6e7c81733293f892f4580245bb96a79c5e9fb3e33a2566ba9d78756f0bd08902433d592ff2e54e6dd025c9431629a4213e7
   conditions: (os=darwin | os=linux | os=win32 | os=freebsd | os=openbsd | os=netbsd | os=sunos | os=android)
   languageName: node
   linkType: hard
