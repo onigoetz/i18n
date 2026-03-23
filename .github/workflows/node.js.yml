@@ -34,11 +34,11 @@ jobs:
     - run: yarn install
     - run: yarn format
     - run: yarn build
-    - run: yarn test
+    - run: yarn test:ci
     - uses: actions/upload-artifact@v6
       if: matrix.node-version == '20.x'
       with:
-        name: coverage-${{ matrix.os }}-${{ matrix.node-version }}
+        name: reports-${{ matrix.os }}-${{ matrix.node-version }}
         retention-days: 1
         path: |
           **/coverage/lcov.info
@@ -62,7 +62,8 @@ jobs:
         fetch-depth: 0
     - uses: actions/download-artifact@v8
       with:
-        pattern: coverage-*
+        pattern: reports-*
+        path: __reports
     - run: find . -name "lcov.info"
     - name: Collect Sonar report paths
       id: sonar_reports
