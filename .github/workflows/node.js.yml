@@ -6,23 +6,28 @@ name: Node.JS CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    types: [ opened, synchronize, reopened ]
+  pull_request_target:
     branches: [ master ]
 
 jobs:
+
+  # ─── Job 1: runs PR code, NO secrets, NO write permissions ───────────────
   build:
-
-    runs-on: ubuntu-latest
-
     strategy:
       matrix:
+        os: [ubuntu-latest]
         node-version: [18.x, 20.x]
 
+    runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
+
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v6
+      with:
+        ref: ${{ github.event_name == 'pull_request_target' && github.event.pull_request.head.sha || github.sha }}
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v5
+      uses: actions/setup-node@v6
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
@@ -30,25 +35,45 @@ jobs:
     - run: yarn format
     - run: yarn build
     - run: yarn test
+    - uses: actions/upload-artifact@v6
+      if: matrix.node-version == '20.x'
+      with:
+        name: coverage-${{ matrix.os }}-${{ matrix.node-version }}
+        retention-days: 1
+        path: |
+          **/coverage/lcov.info
+          **/coverage/sonar-report.xml
+          !node_modules/**
 
-  sonarcloud:
+  # ─── Job 2: uploads coverage using secrets, does NOT run PR code ─────────
+  static_analysis:
+    name: "🔬 Static Analysis"
+    needs: build
     runs-on: ubuntu-latest
-    if: github.repository == 'onigoetz/i18n'
+    if: success()
+    permissions:
+      contents: read
     steps:
-    - uses: actions/checkout@v5
+    # Commit is needed to check coverage files against content
+    - uses: actions/checkout@v6
       with:
-        # Disabling shallow clone is recommended for improving relevancy of reporting
+        ref: ${{ github.event_name == 'pull_request_target' && github.event.pull_request.head.sha || github.sha }}
+        # Disabling shallow clone is needed by SonarQube
         fetch-depth: 0
-    - name: Use Node.js 18.x
-      uses: actions/setup-node@v5
+    - uses: actions/download-artifact@v8
       with:
-        node-version: 22.x
-        cache: 'yarn'
-    - run: yarn install
-    - run: yarn build
-    - run: yarn test:ci
+        pattern: coverage-*
+    - run: find . -name "lcov.info"
+    - name: Collect Sonar report paths
+      id: sonar_reports
+      run: |
+        paths=$(find . -name "sonar-report.xml" | tr '\n' ',' | sed 's/,$//')
+        echo "paths=$paths" >> $GITHUB_OUTPUT
+
     - name: SonarCloud Scan
-      uses: sonarsource/sonarcloud-github-action@master
+      uses: SonarSource/sonarqube-scan-action@v6
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      with:
+        args: >
+          -Dsonar.testExecutionReportPaths=${{ steps.sonar_reports.outputs.paths }}

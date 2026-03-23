@@ -9,13 +9,17 @@ export default defineConfig({
         {
           outputFile: "coverage/sonar-report.xml",
           onWritePath(path: string) {
-            return `../${path}`;
+            return `packages/make-plural/${path}`;
           },
         },
       ],
     ],
     coverage: {
-      reporter: ["text", "html", "lcov"],
+      reporter: [
+        "text",
+        "html",
+        ["lcovonly", { projectRoot: "../.."}],
+      ],
     },
   },
 });
