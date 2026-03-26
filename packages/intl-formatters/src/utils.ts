@@ -25,7 +25,7 @@ export function objectExtend<T extends IObject[]>(
   // eslint-disable-next-line prefer-rest-params
   const destination = arguments[0];
   // eslint-disable-next-line prefer-rest-params
-  const sources = [].slice.call(arguments, 1);
+  const sources = Array.prototype.slice.call(arguments, 1);
 
   sources.forEach((source) => {
     for (const prop in source) {

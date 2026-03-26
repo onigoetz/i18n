@@ -1,7 +1,3 @@
-import { dateFormatter } from "./date.js";
-import { currencyFormatter, numberFormatter } from "./number.js";
-import { pluralGenerator } from "./plural.js";
-
-export { dateFormatter };
-export { numberFormatter, currencyFormatter };
-export { pluralGenerator };
+export { dateFormatter } from "./date.js";
+export { numberFormatter, currencyFormatter } from "./number.js";
+export { pluralGenerator } from "./plural.js";

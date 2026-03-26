@@ -1,5 +1,5 @@
 const benchmark = require("benchmark");
-const fs = require("fs");
+const fs = require("node:fs");
 const si = require("systeminformation");
 
 const out = [];
@@ -31,9 +31,7 @@ function run(name, args) {
       const fastest = this.filter("fastest").map("name");
       console.log("Fastest is ", fastest);
 
-      out.push("");
-      out.push(`| Name | ops/sec | MoE | Runs sampled |`);
-      out.push(`| ---- | -------:| --- | ----------- |`);
+      out.push("", `| Name | ops/sec | MoE | Runs sampled |`, `| ---- | -------:| --- | ----------- |`);
 
       const bySpeed = this.filter("successful").sort(function (a, b) {
         a = a.stats;
@@ -45,7 +43,7 @@ function run(name, args) {
       while ((result = bySpeed.pop())) {
         const shortName = result.name;
         const name =
-          fastest.indexOf(result.name) > -1 ? `**${shortName}**` : shortName;
+          fastest.includes(result.name) ? `**${shortName}**` : shortName;
         const opsPerSecond = result.hz.toLocaleString("en-US", {
           maximumFractionDigits: 0,
         });
@@ -69,10 +67,9 @@ function run(name, args) {
     );
   });
 
-  out.push(`## ${name}`);
-  out.push(`\`\`\`javascript
+  out.push(`## ${name}`, `\`\`\`javascript
 const input = [${args.map(formatValue).join(", ")}];
-  
+
 // Renders: \`${instances[0].run.default(args[0], args[1], args[2])}\`
 \`\`\``);
 
@@ -87,12 +84,7 @@ async function runAll(...suites) {
   const f = new Intl.DateTimeFormat('en-US', {
     dateStyle: "long"
   });
-  out.push(`> Benchmarks run on`);
-  out.push(`>`);
-  out.push(`> - Node.js ${process.version}`);
-  out.push(`> - ${cpu.manufacturer} ${cpu.brand} CPU`);
-  out.push(`> - ${f.format(new Date())}`);
-  out.push("");
+  out.push(`> Benchmarks run on`, `>`, `> - Node.js ${process.version}`, `> - ${cpu.manufacturer} ${cpu.brand} CPU`, `> - ${f.format(new Date())}`, "");
 
   for (const { name, args } of suites) {
     run(name, args);

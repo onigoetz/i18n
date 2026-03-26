@@ -72,7 +72,7 @@ function expected(char: string, context: Context): SyntaxError {
 }
 
 function get(context: Context): number {
-  return context.msg.charCodeAt(context.i);
+  return context.msg.codePointAt(context.i) ?? 0;
 }
 
 function isIdentifierChar(char: number): boolean {
@@ -91,7 +91,7 @@ function readIdentifier(context: Context): string {
 
   while (
     context.i < context.l &&
-    isIdentifierChar(context.msg.charCodeAt(context.i))
+    isIdentifierChar(context.msg.codePointAt(context.i) ?? 0)
   ) {
     ++context.i;
   }
@@ -124,7 +124,7 @@ export function isWhitespaceChar(code: number): boolean {
 function skipSpace(context: Context): void {
   while (
     context.i < context.l &&
-    isWhitespaceChar(context.msg.charCodeAt(context.i))
+    isWhitespaceChar(context.msg.codePointAt(context.i) ?? 0)
   ) {
     ++context.i;
   }
@@ -143,7 +143,7 @@ function skipSpace(context: Context): void {
 function skipSeparator(char: number, context: Context) {
   if (char !== CHAR_SEP) {
     throw expected(
-      `${String.fromCharCode(CHAR_SEP)} or ${String.fromCharCode(CHAR_CLOSE)}`,
+      `${String.fromCodePoint(CHAR_SEP)} or ${String.fromCodePoint(CHAR_CLOSE)}`,
       context,
     );
   }
@@ -261,7 +261,7 @@ function parseSubmessage(
   const startAt = context.nextIndex;
   skipSpace(context);
   if (get(context) !== CHAR_OPEN) {
-    throw expected(String.fromCharCode(CHAR_OPEN), context);
+    throw expected(String.fromCodePoint(CHAR_OPEN), context);
   }
 
   ++context.i;
@@ -271,7 +271,7 @@ function parseSubmessage(
   parseAST(context, parent, specialHash);
 
   if (get(context) !== CHAR_CLOSE) {
-    throw expected(String.fromCharCode(CHAR_CLOSE), context);
+    throw expected(String.fromCodePoint(CHAR_CLOSE), context);
   }
 
   ++context.i;
@@ -350,7 +350,7 @@ function parseOffset(context: Context): number {
     const start = context.i;
     while (
       context.i < context.l &&
-      isDigit(context.msg.charCodeAt(context.i))
+      isDigit(context.msg.codePointAt(context.i) ?? 0)
     ) {
       ++context.i;
     }
@@ -360,7 +360,7 @@ function parseOffset(context: Context): number {
       throw expected("offset number", context);
     }
 
-    n = parseInt(extracted, 10);
+    n = Number.parseInt(extracted, 10);
   }
 
   return n;
@@ -514,7 +514,7 @@ function parseElement(context: Context) {
 
   // At this stage, we have to be at the end of the current block
   if (get(context) !== CHAR_CLOSE) {
-    throw expected(String.fromCharCode(CHAR_CLOSE), context);
+    throw expected(String.fromCodePoint(CHAR_CLOSE), context);
   }
 
   ++context.i;
@@ -537,7 +537,7 @@ function parseAST(
 
     if (char === CHAR_CLOSE) {
       if (!parent) {
-        throw unexpected(String.fromCharCode(char), context.i);
+        throw unexpected(String.fromCodePoint(char), context.i);
       }
       break;
     }
@@ -565,7 +565,7 @@ function parseAST(
 
     // Infinite Loop Protection
     if (context.i === start) {
-      throw unexpected(String.fromCharCode(char), context.i);
+      throw unexpected(String.fromCodePoint(char), context.i);
     }
   }
 

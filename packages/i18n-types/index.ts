@@ -1,16 +1,18 @@
+type FormatSize = "full" | "long" | "medium" | "short";
+
 export interface DateFormatterOptions {
   /**
    * One of the following String values: full, long, medium, or short, eg. { date: "full" }.
    */
-  date?: "full" | "long" | "medium" | "short";
+  date?: FormatSize;
   /**
    * One of the following String values: full, long, medium, or short, eg. { time: "full" }.
    */
-  time?: "full" | "long" | "medium" | "short";
+  time?: FormatSize;
   /**
    * One of the following String values: full, long, medium, or short, eg. { datetime: "full" }
    */
-  datetime?: "full" | "long" | "medium" | "short";
+  datetime?: FormatSize;
 }
 
 export interface CommonNumberFormatterOptions {

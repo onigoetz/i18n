@@ -18,7 +18,7 @@ const validDateOptions: ("short" | "full" | "long" | "medium")[] = [
 const validNumberOptions: ("decimal" | "percent")[] = ["decimal", "percent"];
 function validOrFirst<T>(value: string[] | undefined, options: T[]): T {
   const firstParam: string | undefined = value?.[0];
-  if (options.indexOf(firstParam as unknown as T) > -1) {
+  if (options.includes(firstParam as unknown as T)) {
     return firstParam as unknown as T;
   }
 

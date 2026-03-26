@@ -57,9 +57,10 @@ function parse(cond: string, context: Context): string {
         return se + x.split(",").join(` && ${se}`);
       }
 
-      return `(${se}${x.split(",").join(` || ${se}`)})`;
+      const joined = x.split(",").join(` || ${se}`);
+      return `(${se}${joined})`;
     })
-    .replace(/(\w+) (!?)= ([0-9]+)\.\.([0-9]+)/g, (m, sym, noteq, x0, x1) => {
+    .replace(/(\w+) (!?)= (\d+)\.\.(\d+)/g, (m, sym, noteq, x0, x1) => {
       if (Number(x0) + 1 === Number(x1)) {
         return noteq
           ? `${sym} != ${x0} && ${sym} != ${x1}`
@@ -101,8 +102,8 @@ function printVars(context: Context): string {
   }
   for (const k in context) {
     if (/^.10+$/.test(k)) {
-      const k0 = k[0] === "n" ? "t0 && s[0]" : k[0];
-      vars.push(`${k} = ${k0}.slice(-${k.substr(2).length})`);
+      const k0 = k.startsWith("n") ? "t0 && s[0]" : k[0];
+      vars.push(`${k} = ${k0}.slice(-${k.slice(2).length})`);
     }
   }
   if (!vars.length) {
