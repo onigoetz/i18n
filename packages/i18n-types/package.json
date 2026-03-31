@@ -25,7 +25,6 @@
   "scripts": {
     "build": "tsc --noEmit && rslib build",
     "format": "biome format index.ts",
-    "check": "biome check index.ts",
-    "publish_to_npm": "npm publish"
+    "check": "biome check index.ts"
   }
 }

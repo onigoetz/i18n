@@ -35,7 +35,6 @@
     "test": "vitest",
     "test:ci": "vitest run --coverage",
     "format": "biome format src",
-    "check": "biome check src",
-    "publish_to_npm": "npm publish"
+    "check": "biome check src"
   }
 }
