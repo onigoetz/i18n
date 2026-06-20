@@ -706,7 +706,7 @@ __metadata:
     "@onigoetz/messageformat": "npm:1.0.0-rc.2"
     "@rslib/core": "npm:^0.23.0"
     "@vitest/coverage-v8": "npm:3.2.6"
-    full-icu: "npm:1.5.0"
+    full-icu: "npm:1.6.0"
     typescript: "npm:5.9.3"
     vitest: "npm:3.2.6"
     vitest-sonar-reporter: "npm:2.0.4"
@@ -1754,15 +1754,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"full-icu@npm:1.5.0":
-  version: 1.5.0
-  resolution: "full-icu@npm:1.5.0"
+"full-icu@npm:1.6.0":
+  version: 1.6.0
+  resolution: "full-icu@npm:1.6.0"
   dependencies:
     yauzl: "npm:^2.10.0"
   bin:
     full-icu: node-full-icu.js
     node-full-icu-path: node-icu-data.js
-  checksum: 10c0/c24ee8a27fa35629f5717364bb42d5275b13a165309aa358f6ae8cc215092bb7d9b43dae070a3b38100cfdef3271e27f86b676513c4247c5d0d42268abe6c3c1
+  checksum: 10c0/08fc90faa304faffec76813c2fcc1a36dc59e8a0cfa68e56f9faceaf64c991ac2109e5c0ebc8a50b85e8f8accab41bf70ba86da7e675f9e43ef34021a9412a58
   languageName: node
   linkType: hard
 
