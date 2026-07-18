@@ -14,14 +14,5 @@ export default defineConfig({
         },
       },
     },
-    {
-      dts: false,
-      format: "cjs",
-      output: {
-        distPath: {
-          root: "./dist/cjs"
-        },
-      },
-    },
   ],
 });

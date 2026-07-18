@@ -3,27 +3,26 @@
   "version": "1.0.0-rc.2",
   "license": "MIT",
   "source": "index.ts",
-  "main": "./dist/cjs/index.cjs",
-  "module": "./dist/esm/index.js",
   "types": "./dist/types/index.d.ts",
   "type": "module",
   "exports": {
-    "import": "./dist/esm/index.js",
-    "require": "./dist/cjs/index.cjs",
     "types": "./dist/types/index.d.ts"
   },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
   "publishConfig": {
     "access": "public"
   },
   "engines": {
-    "node": ">=20.19.0"
+    "node": ">=22.12.0"
   },
   "devDependencies": {
-    "@rslib/core": "^0.23.0",
     "typescript": "5.9.3"
   },
   "scripts": {
-    "build": "tsc --noEmit && rslib build",
+    "build": "tsc",
     "format": "biome format index.ts",
     "check": "biome check index.ts"
   }

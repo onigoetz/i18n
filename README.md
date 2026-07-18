@@ -24,6 +24,15 @@ A suite of packages to ease your translation needs.
 - ICU MessageFormat compatible
 - CLDR compatible
 
+## Module format
+
+These packages are ESM-only and require Node.js >= 22.12.
+
+That is not a barrier for CommonJS codebases: since Node.js 22.12, `require()` can
+load ESM directly, so `const { parse } = require("@onigoetz/messageformat")` works
+without a dynamic `import()`. Both paths are exercised in CI against a package
+installed from its published tarball.
+
 ## Example
 
 ```typescript
@@ -72,6 +81,10 @@ for its small size and [`@phensley/messageformat`](https://www.npmjs.com/package
 
 - `yarn build`
 - `yarn test`
+- `yarn verify:packaging` — packs each package, installs the tarball into a clean
+  fixture, and imports it from both ESM and CommonJS. Run this after changing
+  anything in a `package.json` or `rslib.config.ts`, since the unit tests run
+  against `src` and cannot see a broken published artifact.
 
 ## Linting
 - `yarn format --write`

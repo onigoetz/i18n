@@ -11,14 +11,17 @@
     "build": "yarn workspaces foreach -v -W --topological-dev run build",
     "test": "yarn workspaces foreach -W --topological-dev run test",
     "test:ci": "yarn workspaces foreach -W --topological-dev run test:ci",
+    "verify:packaging": "node scripts/verify-packaging.mjs",
     "format": "yarn workspaces foreach --all -v run format",
     "check": "yarn workspaces foreach --all -v run check",
     "publish:canary": "oao publish --no-git-commit --no-check-uncommitted --no-changelog --publish-tag canary --bump-dependent-reqs=exact",
     "publish:all": "oao publish --no-changelog --bump-dependent-reqs=exact"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
     "@biomejs/biome": "2.5.4",
     "benchmark": "2.1.4",
+    "publint": "^0.3.21",
     "systeminformation": "5.31.17"
   },
   "packageManager": "yarn@4.17.1"

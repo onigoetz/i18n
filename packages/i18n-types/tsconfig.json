@@ -2,20 +2,17 @@
   "include": [
     "index.ts"
   ],
-  "exclude": [
-    "node_modules",
-    "node",
-    "css",
-    "etc"
-  ],
   "compilerOptions": {
     "declaration": true,
-    "moduleResolution": "node",
-    "jsx": "react",
+    // This package contains no runtime code, so `tsc` emits the declarations
+    // directly instead of running them through a bundler.
+    "emitDeclarationOnly": true,
+    "outDir": "./dist/types",
+    "moduleResolution": "Bundler",
     "module": "esnext", // Using an ES6 module with an ES5 target allows to leverage tree shaking
-    "sourceMap": true,
+    "strict": true,
+    "verbatimModuleSyntax": true,
     "target": "ES2015",
-    "resolveJsonModule": true,
     "esModuleInterop": true,
     // Upgrade types to more recents of ES, although we shouldn't use them for the moment for compatibilty reasons
     // one @types dependency relies on them

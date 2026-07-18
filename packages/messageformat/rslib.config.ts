@@ -4,22 +4,16 @@ export default defineConfig({
   lib: [
     {
       dts: {
-        bundle: false,
+        // Bundled so the emitted declarations inline the types from
+        // @onigoetz/i18n-types instead of referencing it by name, which keeps
+        // this package free of runtime dependencies.
+        bundle: true,
         distPath: './dist/types',
       },
       format: "esm",
       output: {
         distPath: {
           root: "./dist/esm"
-        },
-      },
-    },
-    {
-      dts: false,
-      format: "cjs",
-      output: {
-        distPath: {
-          root: "./dist/cjs"
         },
       },
     },
