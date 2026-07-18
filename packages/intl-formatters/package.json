@@ -23,11 +23,11 @@
     "@onigoetz/i18n-types": "1.0.0-rc.2",
     "@onigoetz/messageformat": "1.0.0-rc.2",
     "@rslib/core": "^0.23.0",
-    "@vitest/coverage-v8": "3.2.7",
+    "@vitest/coverage-v8": "4.1.10",
     "full-icu": "1.6.0",
     "typescript": "5.9.3",
-    "vitest": "3.2.7",
-    "vitest-sonar-reporter": "2.0.4"
+    "vitest": "4.1.10",
+    "vitest-sonar-reporter": "3.0.0"
   },
   "scripts": {
     "build": "tsc --noEmit && rslib build",
