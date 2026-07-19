@@ -9,20 +9,20 @@ I was curious about how different they were.
 
 ## Libraries size
 
-Sources can be found in `src`, measure taken on 25/06/2020 With latest available versions
+Sources can be found in `src`, measure taken on 19/07/2026 With latest available versions
 
-| Npm Package               | Version    | Size | Comment                                                                              |
-| ------------------------- | ---------- | ---- | ------------------------------------------------------------------------------------ |
-| @onigoetz/intl-formatters | 1.0.0-rc.2 | 2.6K | Embeds the formatters in the runtime                                                 |
-| @onigoetz/make-plural     | 1.0.0-rc.2 | 3.6K | Contains only the formatter for `en` in this example, have to be shipped separately. |
-| make-plural               | 7.4.0      | 16K  | Contains all locales                                                                 |
-| @phensley/plurals         | 1.9.0      | 33K  | Contains all locales                                                                 |
+| Npm Package               | Version    | Size  | Comment                                                                              |
+| ------------------------- | ---------- | ----- | ------------------------------------------------------------------------------------ |
+| @onigoetz/intl-formatters | 1.0.0-rc.2 | 2.8K  | Embeds the formatters in the runtime                                                 |
+| @onigoetz/make-plural     | 1.0.0-rc.2 | 3.9K  | Contains only the formatter for `en` in this example, have to be shipped separately. |
+| make-plural               | 8.1.0      | 17.1K | Contains all locales                                                                 |
+| @phensley/plurals         | 1.14.0     | 34.6K | Contains all locales                                                                 |
 
 > Benchmarks run on
 >
-> - Node.js v20.9.0
+> - Node.js v24.11.1
 > - Apple M2 CPU
-> - October 17, 2024
+> - July 19, 2026
 
 ## Ordinal
 
@@ -34,12 +34,11 @@ const input = [`ordinal`, `en`, 2];
 
 | Name                        |    ops/sec | MoE     | Runs sampled |
 | --------------------------- | ---------: | ------- | ------------ |
-| **make-plural**             | 14,325,529 | ± 0.55% | 99           |
-| @phensley/plurals           | 13,854,078 | ± 0.62% | 95           |
-| @onigoetz/make-plural(memo) | 11,552,355 | ± 0.76% | 95           |
-| @onigoetz/intl              |  2,131,691 | ± 0.81% | 94           |
-| @onigoetz/make-plural       |     54,598 | ± 2.94% | 98           |
-
+| **make-plural**             | 16,589,143 | ± 0.81% | 95           |
+| @onigoetz/make-plural(memo) | 12,813,989 | ± 1.21% | 94           |
+| @phensley/plurals           | 12,256,778 | ± 0.75% | 93           |
+| @onigoetz/intl              |  2,163,325 | ± 1.99% | 93           |
+| @onigoetz/make-plural       |     53,348 | ± 1.10% | 95           |
 
 ## Choosing a library for your use case
 
