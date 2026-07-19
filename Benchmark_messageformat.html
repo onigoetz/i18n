@@ -106,7 +106,7 @@ I tried to compare apples with apples as much as possible, but some libraries do
 <p>Feel free to make a PR to help make these comparisons as fair as possible.</p>
 <p>As a final word, I made this comparison purely for fun and to learn a thing or two about performance optimization.</p>
 <h2><a id="libraries-size" href="#libraries-size" class="Permalink" aria-hidden="true" title="Permalink">#</a>Libraries size</h2>
-<p>Sources can be found in <code>src</code>, measure taken on 07/12/2023 with latest available versions</p>
+<p>Sources can be found in <code>src</code>, measure taken on 19/07/2026 with latest available versions</p>
 <table>
 <thead>
 <tr>
@@ -118,63 +118,63 @@ I tried to compare apples with apples as much as possible, but some libraries do
 </thead>
 <tbody>
 <tr>
-<td>@ffz/icu-msgparser (+ custom renderer)</td>
-<td>2.0.0</td>
-<td>9.4K</td>
+<td>@onigoetz/messageformat (+ @onigoetz/intl-formatters)</td>
+<td>1.0.0-rc.2</td>
+<td>8.6K</td>
 <td></td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat (+ @onigoetz/intl-formatters)</td>
-<td>1.0.0-rc.2</td>
-<td>8K</td>
+<td>@ffz/icu-msgparser (+ custom renderer)</td>
+<td>2.0.0</td>
+<td>9.5K</td>
 <td></td>
 </tr>
 <tr>
 <td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
 <td>1.0.0-rc.2</td>
-<td>11K</td>
+<td>11.4K</td>
 <td></td>
 </tr>
 <tr>
 <td>format-message-parse</td>
 <td>6.2.4</td>
-<td>22K</td>
+<td>22.6K</td>
 <td>Uses peg.js</td>
 </tr>
 <tr>
 <td>@onigoetz/messageformat (+ make-plural)</td>
 <td>1.0.0-rc.2</td>
-<td>23K</td>
-<td></td>
-</tr>
-<tr>
-<td>@onigoetz/messageformat (+ @phensley/plurals)</td>
-<td>1.0.0-rc.2</td>
-<td>40K</td>
+<td>24.7K</td>
 <td></td>
 </tr>
 <tr>
 <td>intl-messageformat</td>
-<td>10.5.14</td>
-<td>55K</td>
+<td>11.2.11</td>
+<td>38.9K</td>
 <td>Uses peg.js</td>
 </tr>
 <tr>
+<td>@onigoetz/messageformat (+ @phensley/plurals)</td>
+<td>1.0.0-rc.2</td>
+<td>42.1K</td>
+<td></td>
+</tr>
+<tr>
 <td>@phensley/messageformat</td>
-<td>1.9.0</td>
-<td>54K</td>
+<td>1.14.0</td>
+<td>56.1K</td>
 <td></td>
 </tr>
 <tr>
 <td>@messageformat/core</td>
 <td>3.4.0</td>
-<td>74K</td>
+<td>76.6K</td>
 <td>Uses peg.js</td>
 </tr>
 <tr>
 <td>globalize</td>
-<td>1.7.0</td>
-<td>158K</td>
+<td>1.7.1</td>
+<td>160.8K</td>
 <td>Uses peg.js</td>
 </tr>
 </tbody>
@@ -200,9 +200,9 @@ Each libraries must follow the same rules:</p>
 <blockquote>
 <p>Benchmarks run on</p>
 <ul>
-<li>Node.js v20.9.0</li>
+<li>Node.js v24.11.1</li>
 <li>Apple M2 CPU</li>
-<li>October 19, 2024</li>
+<li>July 19, 2026</li>
 </ul>
 </blockquote>
 <h2><a id="simple-string" href="#simple-string" class="Permalink" aria-hidden="true" title="Permalink">#</a>Simple String</h2>
@@ -222,63 +222,63 @@ Each libraries must follow the same rules:</p>
 <tbody>
 <tr>
 <td><strong>@onigoetz/messageformat (+ @onigoetz/make-plural)</strong></td>
-<td align="right">19,206,804</td>
-<td>± 0.10%</td>
-<td>102</td>
+<td align="right">17,590,474</td>
+<td>± 0.66%</td>
+<td>97</td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat (+ @phensley/plurals)</td>
-<td align="right">19,192,893</td>
-<td>± 0.08%</td>
+<td><strong>@onigoetz/messageformat (+ @onigoetz/intl-formatters)</strong></td>
+<td align="right">17,486,794</td>
+<td>± 0.99%</td>
 <td>99</td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat (+ @onigoetz/intl-formatters)</td>
-<td align="right">19,095,730</td>
-<td>± 0.35%</td>
-<td>97</td>
+<td><strong>@onigoetz/messageformat (+ @phensley/plurals)</strong></td>
+<td align="right">17,254,479</td>
+<td>± 1.64%</td>
+<td>93</td>
 </tr>
 <tr>
 <td>@onigoetz/messageformat (+ make-plural)</td>
-<td align="right">18,479,888</td>
-<td>± 0.13%</td>
-<td>102</td>
+<td align="right">17,191,342</td>
+<td>± 1.46%</td>
+<td>90</td>
 </tr>
 <tr>
 <td>format-message-parse</td>
-<td align="right">8,778,900</td>
-<td>± 0.18%</td>
-<td>97</td>
+<td align="right">7,954,434</td>
+<td>± 1.72%</td>
+<td>92</td>
 </tr>
 <tr>
 <td>@phensley/messageformat</td>
-<td align="right">8,086,805</td>
-<td>± 0.19%</td>
-<td>99</td>
-</tr>
-<tr>
-<td>@ffz/icu-msgparser (+ custom renderer)</td>
-<td align="right">5,719,901</td>
-<td>± 0.36%</td>
-<td>101</td>
-</tr>
-<tr>
-<td>@messageformat/core</td>
-<td align="right">1,724,418</td>
-<td>± 0.12%</td>
-<td>95</td>
-</tr>
-<tr>
-<td>intl-messageformat</td>
-<td align="right">244,193</td>
-<td>± 0.54%</td>
+<td align="right">7,946,222</td>
+<td>± 1.66%</td>
 <td>96</td>
 </tr>
 <tr>
-<td>globalize</td>
-<td align="right">37,342</td>
-<td>± 0.31%</td>
+<td>@ffz/icu-msgparser (+ custom renderer)</td>
+<td align="right">5,901,498</td>
+<td>± 0.92%</td>
 <td>97</td>
+</tr>
+<tr>
+<td>@messageformat/core</td>
+<td align="right">1,781,052</td>
+<td>± 1.37%</td>
+<td>98</td>
+</tr>
+<tr>
+<td>intl-messageformat</td>
+<td align="right">305,089</td>
+<td>± 2.04%</td>
+<td>88</td>
+</tr>
+<tr>
+<td>globalize</td>
+<td align="right">36,857</td>
+<td>± 1.69%</td>
+<td>93</td>
 </tr>
 </tbody>
 </table>
@@ -303,64 +303,64 @@ Each libraries must follow the same rules:</p>
 </thead>
 <tbody>
 <tr>
+<td><strong>@onigoetz/messageformat (+ @onigoetz/make-plural)</strong></td>
+<td align="right">6,835,933</td>
+<td>± 0.79%</td>
+<td>94</td>
+</tr>
+<tr>
 <td><strong>@onigoetz/messageformat (+ make-plural)</strong></td>
-<td align="right">7,485,310</td>
-<td>± 0.28%</td>
-<td>97</td>
-</tr>
-<tr>
-<td>@onigoetz/messageformat (+ @onigoetz/intl-formatters)</td>
-<td align="right">7,365,456</td>
-<td>± 0.18%</td>
-<td>100</td>
-</tr>
-<tr>
-<td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
-<td align="right">6,748,444</td>
-<td>± 0.45%</td>
-<td>97</td>
-</tr>
-<tr>
-<td>@onigoetz/messageformat (+ @phensley/plurals)</td>
-<td align="right">6,450,655</td>
-<td>± 0.78%</td>
-<td>100</td>
-</tr>
-<tr>
-<td>format-message-parse</td>
-<td align="right">3,966,869</td>
-<td>± 0.26%</td>
-<td>98</td>
-</tr>
-<tr>
-<td>@phensley/messageformat</td>
-<td align="right">3,368,607</td>
-<td>± 0.10%</td>
+<td align="right">6,844,375</td>
+<td>± 0.93%</td>
 <td>99</td>
 </tr>
 <tr>
+<td><strong>@onigoetz/messageformat (+ @phensley/plurals)</strong></td>
+<td align="right">6,838,621</td>
+<td>± 1.05%</td>
+<td>95</td>
+</tr>
+<tr>
+<td><strong>@onigoetz/messageformat (+ @onigoetz/intl-formatters)</strong></td>
+<td align="right">6,826,379</td>
+<td>± 1.21%</td>
+<td>95</td>
+</tr>
+<tr>
+<td>format-message-parse</td>
+<td align="right">3,919,461</td>
+<td>± 1.13%</td>
+<td>96</td>
+</tr>
+<tr>
 <td>@ffz/icu-msgparser (+ custom renderer)</td>
-<td align="right">3,346,844</td>
-<td>± 0.13%</td>
-<td>101</td>
+<td align="right">3,271,084</td>
+<td>± 0.90%</td>
+<td>93</td>
+</tr>
+<tr>
+<td>@phensley/messageformat</td>
+<td align="right">3,064,708</td>
+<td>± 2.13%</td>
+<td>93</td>
 </tr>
 <tr>
 <td>@messageformat/core</td>
-<td align="right">843,570</td>
-<td>± 0.28%</td>
-<td>101</td>
+<td align="right">875,587</td>
+<td>± 1.04%</td>
+<td>94</td>
 </tr>
 <tr>
 <td>intl-messageformat</td>
-<td align="right">213,755</td>
-<td>± 0.63%</td>
-<td>92</td>
+<td align="right">253,392</td>
+<td>± 1.30%</td>
+<td>91</td>
 </tr>
 <tr>
 <td>globalize</td>
-<td align="right">36,313</td>
-<td>± 0.16%</td>
-<td>98</td>
+<td align="right">36,145</td>
+<td>± 1.24%</td>
+<td>96</td>
 </tr>
 </tbody>
 </table>
@@ -387,64 +387,64 @@ Each libraries must follow the same rules:</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>@onigoetz/messageformat (+ @phensley/plurals)</strong></td>
-<td align="right">987,936</td>
-<td>± 0.16%</td>
-<td>98</td>
+<td><strong>@onigoetz/messageformat (+ make-plural)</strong></td>
+<td align="right">955,408</td>
+<td>± 1.24%</td>
+<td>92</td>
 </tr>
 <tr>
-<td>@onigoetz/messageformat (+ make-plural)</td>
-<td align="right">969,817</td>
-<td>± 0.09%</td>
-<td>100</td>
+<td>@onigoetz/messageformat (+ @phensley/plurals)</td>
+<td align="right">939,039</td>
+<td>± 1.53%</td>
+<td>97</td>
 </tr>
 <tr>
 <td>@onigoetz/messageformat (+ @onigoetz/intl-formatters)</td>
-<td align="right">816,703</td>
-<td>± 0.20%</td>
-<td>99</td>
+<td align="right">789,906</td>
+<td>± 1.12%</td>
+<td>97</td>
 </tr>
 <tr>
 <td>@phensley/messageformat</td>
-<td align="right">547,295</td>
-<td>± 0.09%</td>
+<td align="right">526,661</td>
+<td>± 0.52%</td>
 <td>98</td>
 </tr>
 <tr>
 <td>@messageformat/core</td>
-<td align="right">185,577</td>
-<td>± 0.11%</td>
-<td>94</td>
+<td align="right">183,568</td>
+<td>± 1.22%</td>
+<td>97</td>
 </tr>
 <tr>
 <td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
-<td align="right">154,576</td>
-<td>± 0.06%</td>
-<td>101</td>
+<td align="right">144,910</td>
+<td>± 1.06%</td>
+<td>93</td>
 </tr>
 <tr>
 <td>@ffz/icu-msgparser (+ custom renderer)</td>
-<td align="right">130,402</td>
-<td>± 0.16%</td>
-<td>100</td>
+<td align="right">123,744</td>
+<td>± 0.78%</td>
+<td>97</td>
 </tr>
 <tr>
 <td>format-message-parse</td>
-<td align="right">82,462</td>
-<td>± 0.18%</td>
-<td>98</td>
+<td align="right">86,564</td>
+<td>± 1.42%</td>
+<td>91</td>
 </tr>
 <tr>
 <td>intl-messageformat</td>
-<td align="right">48,205</td>
-<td>± 2.25%</td>
-<td>88</td>
+<td align="right">52,682</td>
+<td>± 2.13%</td>
+<td>91</td>
 </tr>
 <tr>
 <td>globalize</td>
-<td align="right">26,975</td>
-<td>± 0.22%</td>
-<td>97</td>
+<td align="right">26,716</td>
+<td>± 1.74%</td>
+<td>93</td>
 </tr>
 </tbody>
 </table>
@@ -501,63 +501,63 @@ Each libraries must follow the same rules:</p>
 <tbody>
 <tr>
 <td><strong>@onigoetz/messageformat (+ @phensley/plurals)</strong></td>
-<td align="right">181,594</td>
-<td>± 0.09%</td>
-<td>97</td>
-</tr>
-<tr>
-<td>@onigoetz/messageformat (+ make-plural)</td>
-<td align="right">180,194</td>
-<td>± 0.09%</td>
-<td>102</td>
-</tr>
-<tr>
-<td>@onigoetz/messageformat (+ @onigoetz/intl-formatters)</td>
-<td align="right">173,668</td>
-<td>± 0.46%</td>
-<td>97</td>
-</tr>
-<tr>
-<td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
-<td align="right">90,012</td>
-<td>± 0.65%</td>
-<td>99</td>
-</tr>
-<tr>
-<td>@phensley/messageformat</td>
-<td align="right">43,007</td>
-<td>± 16.74%</td>
-<td>82</td>
-</tr>
-<tr>
-<td>@messageformat/core</td>
-<td align="right">31,066</td>
-<td>± 0.07%</td>
-<td>97</td>
-</tr>
-<tr>
-<td>@ffz/icu-msgparser (+ custom renderer)</td>
-<td align="right">28,826</td>
-<td>± 1.91%</td>
-<td>94</td>
-</tr>
-<tr>
-<td>intl-messageformat</td>
-<td align="right">17,029</td>
-<td>± 0.86%</td>
-<td>93</td>
-</tr>
-<tr>
-<td>format-message-parse</td>
-<td align="right">17,317</td>
-<td>± 2.62%</td>
+<td align="right">177,525</td>
+<td>± 0.96%</td>
 <td>95</td>
 </tr>
 <tr>
+<td>@onigoetz/messageformat (+ @onigoetz/intl-formatters)</td>
+<td align="right">171,376</td>
+<td>± 1.12%</td>
+<td>93</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (+ make-plural)</td>
+<td align="right">162,572</td>
+<td>± 14.51%</td>
+<td>87</td>
+</tr>
+<tr>
+<td>@onigoetz/messageformat (+ @onigoetz/make-plural)</td>
+<td align="right">87,113</td>
+<td>± 0.60%</td>
+<td>98</td>
+</tr>
+<tr>
+<td>@phensley/messageformat</td>
+<td align="right">48,158</td>
+<td>± 5.95%</td>
+<td>89</td>
+</tr>
+<tr>
+<td>@messageformat/core</td>
+<td align="right">27,419</td>
+<td>± 1.37%</td>
+<td>93</td>
+</tr>
+<tr>
+<td>@ffz/icu-msgparser (+ custom renderer)</td>
+<td align="right">24,636</td>
+<td>± 4.05%</td>
+<td>82</td>
+</tr>
+<tr>
+<td>format-message-parse</td>
+<td align="right">16,321</td>
+<td>± 2.17%</td>
+<td>88</td>
+</tr>
+<tr>
+<td>intl-messageformat</td>
+<td align="right">13,338</td>
+<td>± 11.11%</td>
+<td>76</td>
+</tr>
+<tr>
 <td>globalize</td>
-<td align="right">8,653</td>
-<td>± 1.83%</td>
-<td>97</td>
+<td align="right">6,816</td>
+<td>± 1.80%</td>
+<td>91</td>
 </tr>
 </tbody>
 </table>

@@ -99,7 +99,92 @@
                     </div>
 
     <div class="s-content">
-            </div>
+        <p>An ICU MessageFormat parser and renderer, with no runtime dependencies.</p>
+<p>Parsing and rendering are two separate steps. <code>parse</code> turns a message into a flat
+array of plain objects, and <code>createRenderer</code> builds a renderer that applies those
+tokens to a set of variables. Because the parsed result is a plain array, it can be
+cached or serialized — you can parse once at startup (or ahead of time) and render
+many times.</p>
+<p>This package deliberately contains no date or number formatting of its own. You pass
+in the formatters you want, so it can sit on top of <code>Intl</code>, Globalize, or whatever
+your application already uses. If you don’t already have formatters,
+<a href="https://www.npmjs.com/package/@onigoetz/intl-formatters" class="Link--external" rel="noopener noreferrer"><code>@onigoetz/intl-formatters</code></a>
+provides <code>Intl</code>-based ones.</p>
+<h2><a id="usage" href="#usage" class="Permalink" aria-hidden="true" title="Permalink">#</a>Usage</h2>
+<pre><code class="hljs typescript"><span class="hljs-keyword">import</span> { parse, createRenderer } <span class="hljs-keyword">from</span> <span class="hljs-string">"@onigoetz/messageformat"</span>;
+<span class="hljs-keyword">import</span> {
+  dateFormatter,
+  numberFormatter,
+  pluralGenerator,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">"@onigoetz/intl-formatters"</span>;
+
+<span class="hljs-comment">// Parse the message once; the result is cacheable</span>
+<span class="hljs-keyword">const</span> parsed = parse(<span class="hljs-string">"{test, plural, offset:3 one{one test} other {# test} }"</span>);
+
+<span class="hljs-comment">// Create a renderer bound to a locale and a set of formatters</span>
+<span class="hljs-keyword">const</span> render = createRenderer(
+  <span class="hljs-string">"en"</span>,
+  <span class="hljs-function">(<span class="hljs-params"><span class="hljs-params">locale</span>, <span class="hljs-params">type</span></span>) =&gt;</span> pluralGenerator(locale, { <span class="hljs-keyword">type</span> }),
+  <span class="hljs-function">(<span class="hljs-params"><span class="hljs-params">locale</span>, <span class="hljs-params">options</span>, <span class="hljs-params">value</span>: <span class="hljs-params">number</span></span>) =&gt;</span> numberFormatter(locale, options)(value),
+  <span class="hljs-function">(<span class="hljs-params"><span class="hljs-params">locale</span>, <span class="hljs-params">options</span>, <span class="hljs-params">value</span>: <span class="hljs-params">Date</span></span>) =&gt;</span> dateFormatter(locale, options)(value)
+);
+
+render(parsed, { test: <span class="hljs-number">4</span> }); <span class="hljs-comment">// =&gt; "one test"</span>
+render(parsed, { test: <span class="hljs-number">7</span> }); <span class="hljs-comment">// =&gt; "4 test"</span>
+</code></pre>
+<h2><a id="supported-syntax" href="#supported-syntax" class="Permalink" aria-hidden="true" title="Permalink">#</a>Supported syntax</h2>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simple argument</td>
+<td><code>{name}</code></td>
+</tr>
+<tr>
+<td>Plural</td>
+<td><code>{count, plural, one {book} other {books}}</code></td>
+</tr>
+<tr>
+<td>Plural with offset</td>
+<td><code>{count, plural, offset:1 one {book} other {books}}</code></td>
+</tr>
+<tr>
+<td>Exact match</td>
+<td><code>{count, plural, =0 {none} other {#}}</code></td>
+</tr>
+<tr>
+<td>Ordinal</td>
+<td><code>{rank, selectordinal, one {#st} two {#nd} few {#rd} other {#th}}</code></td>
+</tr>
+<tr>
+<td>Select</td>
+<td><code>{gender, select, female {her} other {their}}</code></td>
+</tr>
+<tr>
+<td>Number</td>
+<td><code>{price, number, percent}</code></td>
+</tr>
+<tr>
+<td>Date / time</td>
+<td><code>{when, date, short}</code>, <code>{when, time, full}</code>, <code>{when, datetime, long}</code></td>
+</tr>
+</tbody>
+</table>
+<p>Inside a <code>plural</code> or <code>selectordinal</code> block, <code>#</code> renders the argument value minus the
+offset. Plural selectors are <code>zero</code>, <code>one</code>, <code>two</code>, <code>few</code>, <code>many</code>, <code>other</code>, or an
+exact <code>=N</code> match.</p>
+<p><code>number</code>, <code>date</code>, <code>time</code> and <code>datetime</code> are handed to the formatters you supplied.
+Any other argument type is passed through as an unknown formatter and renders as an
+empty string, rather than throwing.</p>
+<h2><a id="module-format" href="#module-format" class="Permalink" aria-hidden="true" title="Permalink">#</a>Module format</h2>
+<p>This package is ESM-only. It requires Node.js &gt;= 22.12, where CommonJS consumers can
+still load it with <code>require()</code> — no dynamic <code>import()</code> needed.</p>
+    </div>
 
         <nav>
         <ul class="Pager">
