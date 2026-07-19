@@ -2,6 +2,7 @@
   "name": "@onigoetz/messageformat",
   "version": "1.0.0-rc.3",
   "license": "MIT",
+  "repository": "https://github.com/onigoetz/i18n",
   "source": "src/index.ts",
   "types": "./dist/types/index.d.ts",
   "type": "module",
