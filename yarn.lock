@@ -340,12 +340,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/icu-messageformat-parser@npm:3.5.14":
-  version: 3.5.14
-  resolution: "@formatjs/icu-messageformat-parser@npm:3.5.14"
+"@formatjs/icu-messageformat-parser@npm:3.5.15":
+  version: 3.5.15
+  resolution: "@formatjs/icu-messageformat-parser@npm:3.5.15"
   dependencies:
     "@formatjs/icu-skeleton-parser": "npm:2.1.11"
-  checksum: 10c0/5cb5375fa41c0ec62dc414ba7b0740319eeb1550d5ad338cdcea0f3d8490b82d2f3114bc5a7e03b15ebe69afb426fb2ee1023cb4d9779636120eb00b7bd875f4
+  checksum: 10c0/f396742c2a5b25bd0499528528955c8ca6685f054a5339b8fddce982703b022d0bfa357239c9607938a0fa88fa9e267dec7fd2a744718715f1538450aca100a7
   languageName: node
   linkType: hard
 
@@ -623,7 +623,7 @@ __metadata:
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
     globalize: "npm:1.7.1"
-    intl-messageformat: "npm:11.2.11"
+    intl-messageformat: "npm:11.2.12"
     make-plural: "npm:8.1.0"
     speedscope: "npm:1.25.0"
   languageName: unknown
@@ -1328,14 +1328,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-regex@npm:^6.0.1":
-  version: 6.2.0
-  resolution: "ansi-regex@npm:6.2.0"
-  checksum: 10c0/20a2e55ae9816074a60e6729dbe3daad664cd967fc82acc08b02f5677db84baa688babf940d71f50acbbb184c02459453789705e079f4d521166ae66451de551
-  languageName: node
-  linkType: hard
-
-"ansi-regex@npm:^6.1.0":
+"ansi-regex@npm:^6.0.1, ansi-regex@npm:^6.1.0":
   version: 6.2.2
   resolution: "ansi-regex@npm:6.2.2"
   checksum: 10c0/05d4acb1d2f59ab2cf4b794339c7b168890d44dda4bf0ce01152a8da0213aca207802f930442ce8cd22d7a92f44907664aac6508904e75e038fa944d2601b30f
@@ -2001,13 +1994,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"intl-messageformat@npm:11.2.11":
-  version: 11.2.11
-  resolution: "intl-messageformat@npm:11.2.11"
+"intl-messageformat@npm:11.2.12":
+  version: 11.2.12
+  resolution: "intl-messageformat@npm:11.2.12"
   dependencies:
     "@formatjs/fast-memoize": "npm:3.1.7"
-    "@formatjs/icu-messageformat-parser": "npm:3.5.14"
-  checksum: 10c0/5c77af3dfc1a26f48d7cb3544d74299f6b5dd2ecac703bffff22ba2343cb87518a3a08ad9106a41a56e45e91831570b2da84f0c48f47fa7b250dc389b9bb8edf
+    "@formatjs/icu-messageformat-parser": "npm:3.5.15"
+  checksum: 10c0/8a6ef496bf857b5a1bfa667af775ab41cb78f71e24dfb83ef9b4095b9f807d6ec796392086b47ac003341e4413d87ce7b8af1f0b36717bb86714306b4ba425db
   languageName: node
   linkType: hard
 
@@ -2697,14 +2690,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picomatch@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "picomatch@npm:4.0.3"
-  checksum: 10c0/9582c951e95eebee5434f59e426cddd228a7b97a0161a375aed4be244bd3fe8e3a31b846808ea14ef2c8a2527a6eeab7b3946a67d5979e81694654f939473ae2
-  languageName: node
-  linkType: hard
-
-"picomatch@npm:^4.0.4, picomatch@npm:^4.0.5":
+"picomatch@npm:^4.0.3, picomatch@npm:^4.0.4, picomatch@npm:^4.0.5":
   version: 4.0.5
   resolution: "picomatch@npm:4.0.5"
   checksum: 10c0/947bc6b6e1ff1e6c5aaf95b107a0839d12802f4f7b867663f67d47accba939ca1cb582cf99dfc30438efa1c4648ac5990967e783e8929c36b03e8440704ef1bd
@@ -2918,16 +2904,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.3.5, semver@npm:^7.5.3":
-  version: 7.7.2
-  resolution: "semver@npm:7.7.2"
-  bin:
-    semver: bin/semver.js
-  checksum: 10c0/aca305edfbf2383c22571cb7714f48cadc7ac95371b4b52362fb8eeffdfbc0de0669368b82b2b15978f8848f01d7114da65697e56cd8c37b0dab8c58e543f9ea
-  languageName: node
-  linkType: hard
-
-"semver@npm:^7.5.4":
+"semver@npm:^7.3.5, semver@npm:^7.5.3, semver@npm:^7.5.4":
   version: 7.8.5
   resolution: "semver@npm:7.8.5"
   bin:
@@ -3211,17 +3188,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tinyglobby@npm:^0.2.12":
-  version: 0.2.15
-  resolution: "tinyglobby@npm:0.2.15"
-  dependencies:
-    fdir: "npm:^6.5.0"
-    picomatch: "npm:^4.0.3"
-  checksum: 10c0/869c31490d0d88eedb8305d178d4c75e7463e820df5a9b9d388291daf93e8b1eb5de1dad1c1e139767e4269fe75f3b10d5009b2cc14db96ff98986920a186844
-  languageName: node
-  linkType: hard
-
-"tinyglobby@npm:^0.2.15, tinyglobby@npm:^0.2.17":
+"tinyglobby@npm:^0.2.12, tinyglobby@npm:^0.2.15, tinyglobby@npm:^0.2.17":
   version: 0.2.17
   resolution: "tinyglobby@npm:0.2.17"
   dependencies:
