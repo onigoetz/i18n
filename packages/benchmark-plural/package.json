@@ -1,10 +1,10 @@
 {
   "name": "@onigoetz/benchmark-plural",
   "private": true,
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-rc.3",
   "devDependencies": {
-    "@onigoetz/intl-formatters": "1.0.0-rc.2",
-    "@onigoetz/make-plural": "1.0.0-rc.2",
+    "@onigoetz/intl-formatters": "1.0.0-rc.3",
+    "@onigoetz/make-plural": "1.0.0-rc.3",
     "@phensley/plurals": "1.14.0",
     "@rslib/core": "^0.23.0",
     "make-plural": "8.1.0",

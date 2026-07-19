@@ -1,6 +1,6 @@
 {
   "name": "@onigoetz/i18n-types",
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-rc.3",
   "license": "MIT",
   "source": "index.ts",
   "types": "./dist/types/index.d.ts",

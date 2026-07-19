@@ -1,6 +1,6 @@
 {
   "name": "@onigoetz/intl-formatters",
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-rc.3",
   "license": "MIT",
   "source": "src/index.ts",
   "types": "./dist/types/index.d.ts",
@@ -21,8 +21,8 @@
   },
   "devDependencies": {
     "@microsoft/api-extractor": "^7.58.9",
-    "@onigoetz/i18n-types": "1.0.0-rc.2",
-    "@onigoetz/messageformat": "1.0.0-rc.2",
+    "@onigoetz/i18n-types": "1.0.0-rc.3",
+    "@onigoetz/messageformat": "1.0.0-rc.3",
     "@rslib/core": "^0.23.0",
     "@vitest/coverage-v8": "4.1.10",
     "full-icu": "1.6.0",

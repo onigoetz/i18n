@@ -1,6 +1,6 @@
 {
   "name": "@onigoetz/make-plural",
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-rc.3",
   "license": "MIT",
   "source": "src/index.ts",
   "types": "./dist/types/index.d.ts",
@@ -22,7 +22,7 @@
   "devDependencies": {
     "@rslib/core": "^0.23.0",
     "@vitest/coverage-v8": "4.1.10",
-    "test-cldr-data": "1.0.0-rc.2",
+    "test-cldr-data": "1.0.0-rc.3",
     "typescript": "5.9.3",
     "vitest": "4.1.10",
     "vitest-sonar-reporter": "3.0.0"

@@ -15,13 +15,13 @@ Sources can be found in `src`, measure taken on 19/07/2026 with latest available
 
 | Npm Package                                           | Version    | Size   | Comment     |
 | ----------------------------------------------------- | ---------- | ------ | ----------- |
-| @onigoetz/messageformat (+ @onigoetz/intl-formatters) | 1.0.0-rc.2 | 8.6K   |             |
+| @onigoetz/messageformat (+ @onigoetz/intl-formatters) | 1.0.0-rc.3 | 8.6K   |             |
 | @ffz/icu-msgparser (+ custom renderer)                | 2.0.0      | 9.5K   |             |
-| @onigoetz/messageformat (+ @onigoetz/make-plural)     | 1.0.0-rc.2 | 11.4K  |             |
+| @onigoetz/messageformat (+ @onigoetz/make-plural)     | 1.0.0-rc.3 | 11.4K  |             |
 | format-message-parse                                  | 6.2.4      | 22.6K  | Uses peg.js |
-| @onigoetz/messageformat (+ make-plural)               | 1.0.0-rc.2 | 24.7K  |             |
+| @onigoetz/messageformat (+ make-plural)               | 1.0.0-rc.3 | 24.7K  |             |
 | intl-messageformat                                    | 11.2.11    | 38.9K  | Uses peg.js |
-| @onigoetz/messageformat (+ @phensley/plurals)         | 1.0.0-rc.2 | 42.1K  |             |
+| @onigoetz/messageformat (+ @phensley/plurals)         | 1.0.0-rc.3 | 42.1K  |             |
 | @phensley/messageformat                               | 1.14.0     | 56.1K  |             |
 | @messageformat/core                                   | 3.4.0      | 76.6K  | Uses peg.js |
 | globalize                                             | 1.7.1      | 160.8K | Uses peg.js |

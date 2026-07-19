@@ -549,8 +549,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@onigoetz/benchmark-plural@workspace:packages/benchmark-plural"
   dependencies:
-    "@onigoetz/intl-formatters": "npm:1.0.0-rc.2"
-    "@onigoetz/make-plural": "npm:1.0.0-rc.2"
+    "@onigoetz/intl-formatters": "npm:1.0.0-rc.3"
+    "@onigoetz/make-plural": "npm:1.0.0-rc.3"
     "@phensley/plurals": "npm:1.14.0"
     "@rslib/core": "npm:^0.23.0"
     make-plural: "npm:8.1.0"
@@ -570,7 +570,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@onigoetz/i18n-types@npm:1.0.0-rc.2, @onigoetz/i18n-types@workspace:packages/i18n-types":
+"@onigoetz/i18n-types@npm:1.0.0-rc.3, @onigoetz/i18n-types@workspace:packages/i18n-types":
   version: 0.0.0-use.local
   resolution: "@onigoetz/i18n-types@workspace:packages/i18n-types"
   dependencies:
@@ -578,13 +578,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@onigoetz/intl-formatters@npm:1.0.0-rc.2, @onigoetz/intl-formatters@workspace:packages/intl-formatters":
+"@onigoetz/intl-formatters@npm:1.0.0-rc.3, @onigoetz/intl-formatters@workspace:packages/intl-formatters":
   version: 0.0.0-use.local
   resolution: "@onigoetz/intl-formatters@workspace:packages/intl-formatters"
   dependencies:
     "@microsoft/api-extractor": "npm:^7.58.9"
-    "@onigoetz/i18n-types": "npm:1.0.0-rc.2"
-    "@onigoetz/messageformat": "npm:1.0.0-rc.2"
+    "@onigoetz/i18n-types": "npm:1.0.0-rc.3"
+    "@onigoetz/messageformat": "npm:1.0.0-rc.3"
     "@rslib/core": "npm:^0.23.0"
     "@vitest/coverage-v8": "npm:4.1.10"
     full-icu: "npm:1.6.0"
@@ -594,13 +594,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@onigoetz/make-plural@npm:1.0.0-rc.2, @onigoetz/make-plural@workspace:packages/make-plural":
+"@onigoetz/make-plural@npm:1.0.0-rc.3, @onigoetz/make-plural@workspace:packages/make-plural":
   version: 0.0.0-use.local
   resolution: "@onigoetz/make-plural@workspace:packages/make-plural"
   dependencies:
     "@rslib/core": "npm:^0.23.0"
     "@vitest/coverage-v8": "npm:4.1.10"
-    test-cldr-data: "npm:1.0.0-rc.2"
+    test-cldr-data: "npm:1.0.0-rc.3"
     typescript: "npm:5.9.3"
     vitest: "npm:4.1.10"
     vitest-sonar-reporter: "npm:3.0.0"
@@ -614,9 +614,9 @@ __metadata:
     "@eo-locale/core": "npm:1.7.2"
     "@ffz/icu-msgparser": "npm:2.0.0"
     "@messageformat/core": "npm:3.4.0"
-    "@onigoetz/intl-formatters": "npm:1.0.0-rc.2"
-    "@onigoetz/make-plural": "npm:1.0.0-rc.2"
-    "@onigoetz/messageformat": "npm:1.0.0-rc.2"
+    "@onigoetz/intl-formatters": "npm:1.0.0-rc.3"
+    "@onigoetz/make-plural": "npm:1.0.0-rc.3"
+    "@onigoetz/messageformat": "npm:1.0.0-rc.3"
     "@phensley/messageformat": "npm:1.14.0"
     "@phensley/plurals": "npm:1.14.0"
     "@rslib/core": "npm:0.23.2"
@@ -629,12 +629,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@onigoetz/messageformat@npm:1.0.0-rc.2, @onigoetz/messageformat@workspace:packages/messageformat":
+"@onigoetz/messageformat@npm:1.0.0-rc.3, @onigoetz/messageformat@workspace:packages/messageformat":
   version: 0.0.0-use.local
   resolution: "@onigoetz/messageformat@workspace:packages/messageformat"
   dependencies:
     "@microsoft/api-extractor": "npm:^7.58.9"
-    "@onigoetz/i18n-types": "npm:1.0.0-rc.2"
+    "@onigoetz/i18n-types": "npm:1.0.0-rc.3"
     "@rslib/core": "npm:^0.23.0"
     "@vitest/coverage-v8": "npm:4.1.10"
     typescript: "npm:5.9.3"
@@ -3150,7 +3150,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"test-cldr-data@npm:1.0.0-rc.2, test-cldr-data@workspace:packages/test-cldr-data":
+"test-cldr-data@npm:1.0.0-rc.3, test-cldr-data@workspace:packages/test-cldr-data":
   version: 0.0.0-use.local
   resolution: "test-cldr-data@workspace:packages/test-cldr-data"
   languageName: unknown

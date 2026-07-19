@@ -13,8 +13,8 @@ Sources can be found in `src`, measure taken on 19/07/2026 With latest available
 
 | Npm Package               | Version    | Size  | Comment                                                                              |
 | ------------------------- | ---------- | ----- | ------------------------------------------------------------------------------------ |
-| @onigoetz/intl-formatters | 1.0.0-rc.2 | 2.8K  | Embeds the formatters in the runtime                                                 |
-| @onigoetz/make-plural     | 1.0.0-rc.2 | 3.9K  | Contains only the formatter for `en` in this example, have to be shipped separately. |
+| @onigoetz/intl-formatters | 1.0.0-rc.3 | 2.8K  | Embeds the formatters in the runtime                                                 |
+| @onigoetz/make-plural     | 1.0.0-rc.3 | 3.9K  | Contains only the formatter for `en` in this example, have to be shipped separately. |
 | make-plural               | 8.1.0      | 17.1K | Contains all locales                                                                 |
 | @phensley/plurals         | 1.14.0     | 34.6K | Contains all locales                                                                 |
 
