@@ -24,4 +24,4 @@ jobs:
             --all \
             --no-private \
             --topological \
-            npm publish
+            npm publish --provenance --access public
