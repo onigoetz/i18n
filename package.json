@@ -17,10 +17,10 @@
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.5",
-    "@biomejs/biome": "2.5.4",
+    "@biomejs/biome": "2.5.5",
     "benchmark": "2.1.4",
     "publint": "^0.3.21",
-    "systeminformation": "5.31.17"
+    "systeminformation": "5.33.0"
   },
   "packageManager": "yarn@4.17.1"
 }
