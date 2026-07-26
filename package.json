@@ -20,7 +20,7 @@
     "@biomejs/biome": "2.5.5",
     "benchmark": "2.1.4",
     "publint": "^0.3.21",
-    "systeminformation": "5.33.0"
+    "systeminformation": "5.33.1"
   },
   "packageManager": "yarn@4.17.1"
 }
