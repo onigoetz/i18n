@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.5",
-    "@biomejs/biome": "2.5.7",
+    "@biomejs/biome": "2.5.8",
     "benchmark": "2.1.4",
     "publint": "^0.3.21",
     "systeminformation": "5.33.1"
