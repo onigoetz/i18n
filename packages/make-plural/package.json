@@ -22,10 +22,10 @@
   },
   "devDependencies": {
     "@rslib/core": "^0.23.0",
-    "@vitest/coverage-v8": "4.1.10",
+    "@vitest/coverage-v8": "4.1.11",
     "test-cldr-data": "1.0.0-rc.3",
     "typescript": "5.9.3",
-    "vitest": "4.1.10",
+    "vitest": "4.1.11",
     "vitest-sonar-reporter": "3.0.0"
   },
   "scripts": {
