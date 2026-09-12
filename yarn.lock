@@ -515,7 +515,7 @@ __metadata:
   dependencies:
     "@onigoetz/intl-formatters": "npm:1.0.0-rc.3"
     "@onigoetz/make-plural": "npm:1.0.0-rc.3"
-    "@phensley/plurals": "npm:1.15.0"
+    "@phensley/plurals": "npm:1.16.0"
     "@rslib/core": "npm:^0.23.0"
     make-plural: "npm:8.1.0"
     speedscope: "npm:1.25.0"
@@ -530,7 +530,7 @@ __metadata:
     "@biomejs/biome": "npm:2.5.12"
     benchmark: "npm:2.1.4"
     publint: "npm:^0.3.21"
-    systeminformation: "npm:5.33.8"
+    systeminformation: "npm:5.33.10"
   languageName: unknown
   linkType: soft
 
@@ -581,8 +581,8 @@ __metadata:
     "@onigoetz/intl-formatters": "npm:1.0.0-rc.3"
     "@onigoetz/make-plural": "npm:1.0.0-rc.3"
     "@onigoetz/messageformat": "npm:1.0.0-rc.3"
-    "@phensley/messageformat": "npm:1.15.0"
-    "@phensley/plurals": "npm:1.15.0"
+    "@phensley/messageformat": "npm:1.16.0"
+    "@phensley/plurals": "npm:1.16.0"
     "@rslib/core": "npm:0.23.2"
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
@@ -614,43 +614,43 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@phensley/cldr-utils@npm:~1.15.0":
-  version: 1.15.0
-  resolution: "@phensley/cldr-utils@npm:1.15.0"
+"@phensley/cldr-utils@npm:~1.16.0":
+  version: 1.16.0
+  resolution: "@phensley/cldr-utils@npm:1.16.0"
   dependencies:
     tslib: "npm:^2.8.1"
-  checksum: 10c0/5833c47606d2686f308150e60508f8d2f9cfaaeedc8b4d3004e5267735ea822a1b31588538ba1c1d28b8804c09450a6b38f4ad8de228b1c6995c6bc4c9ba53bf
+  checksum: 10c0/1de0aad1186cb6ee82b781f455f192b8104b52123efb8399cedab631248c086f2c3cfe34eab13b192ebf0d1e23bdedefddaf65473a36ffe8038eee45697ed0e2
   languageName: node
   linkType: hard
 
-"@phensley/decimal@npm:~1.15.0":
-  version: 1.15.0
-  resolution: "@phensley/decimal@npm:1.15.0"
+"@phensley/decimal@npm:~1.16.0":
+  version: 1.16.0
+  resolution: "@phensley/decimal@npm:1.16.0"
   dependencies:
     tslib: "npm:^2.8.1"
-  checksum: 10c0/c2f8a67fffddd0bd4d329c13a36ba762216f6faec88315a817bc4045239ef70f4fc1f5d19bcec52589c2a6f4f6d83bfcf831a064439899ff15c72a0d3207f233
+  checksum: 10c0/5529caf6108cbc8e3c23015350982f00df1aee349900c1ecf71e6433e3cbd7b5ce76817dec6ff4338000d9efa38fc73e86ec863afd77aa1bfef838990055f3d2
   languageName: node
   linkType: hard
 
-"@phensley/messageformat@npm:1.15.0":
-  version: 1.15.0
-  resolution: "@phensley/messageformat@npm:1.15.0"
+"@phensley/messageformat@npm:1.16.0":
+  version: 1.16.0
+  resolution: "@phensley/messageformat@npm:1.16.0"
   dependencies:
-    "@phensley/cldr-utils": "npm:~1.15.0"
-    "@phensley/decimal": "npm:~1.15.0"
-    "@phensley/plurals": "npm:~1.15.0"
+    "@phensley/cldr-utils": "npm:~1.16.0"
+    "@phensley/decimal": "npm:~1.16.0"
+    "@phensley/plurals": "npm:~1.16.0"
     tslib: "npm:^2.8.1"
-  checksum: 10c0/be109dfb17048cb769b50f19aa13a0d41f32b97769349d4f028a92c2343c8eb20cb50946f1bcb60ea530cdad579b46459a1b77b7ff343d66188736359abbc972
+  checksum: 10c0/424c2d15a19e70b14480fd1c172c45f14d86ce5a03fdd2f05bf2761fdcf4fa3a7f9e7efb43697edc2a84a50f3b33ab9dc7493357e8dbbf6c38169f65b395f2ad
   languageName: node
   linkType: hard
 
-"@phensley/plurals@npm:1.15.0, @phensley/plurals@npm:~1.15.0":
-  version: 1.15.0
-  resolution: "@phensley/plurals@npm:1.15.0"
+"@phensley/plurals@npm:1.16.0, @phensley/plurals@npm:~1.16.0":
+  version: 1.16.0
+  resolution: "@phensley/plurals@npm:1.16.0"
   dependencies:
-    "@phensley/decimal": "npm:~1.15.0"
+    "@phensley/decimal": "npm:~1.16.0"
     tslib: "npm:^2.8.1"
-  checksum: 10c0/3ab3028b0a0f72ae3ecd398b3fd8d3c0054ff9a0b3a97ac61d9eeae03c8dcbc11d8465ab2012b0ab02149733ffe73866b0ea223a65306bc772f7d3779c258fb0
+  checksum: 10c0/1cdef80fc52819ca58aa58c122cf2d00d5f8f5dc159a03b38144c52e025f7b80c4c4fdb35a9e16fc89c0fbbedfee62fec18537698e6218b975df7eedb21079eb
   languageName: node
   linkType: hard
 
@@ -2646,12 +2646,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"systeminformation@npm:5.33.8":
-  version: 5.33.8
-  resolution: "systeminformation@npm:5.33.8"
+"systeminformation@npm:5.33.10":
+  version: 5.33.10
+  resolution: "systeminformation@npm:5.33.10"
   bin:
     systeminformation: lib/cli.js
-  checksum: 10c0/cc1dd9f5998936b72f0c8fb61fdfe21294e1aa3818c79d3373e27ff65080414b3e93ced80b8ee59fcec8b603854bcd1cbabfdfbd52b75817b11e5056ba5d5ac8
+  checksum: 10c0/32f2aa1f7f42a8ab101b160ccb7eeb4ec4b031737ee481bdbc5b3a7784437e2b288a826d96aaa66f4f64b18cf59b997942edb67d07487b69c17ac10fe5615116
   conditions: (os=darwin | os=linux | os=win32 | os=freebsd | os=openbsd | os=netbsd | os=sunos | os=android)
   languageName: node
   linkType: hard
