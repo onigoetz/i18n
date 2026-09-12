@@ -99,12 +99,12 @@
                     </div>
 
     <div class="s-content">
-        <h1><a id="plural-benchmarks" href="#plural-benchmarks" class="Permalink" aria-hidden="true" title="Permalink">#</a>plural benchmarks</h1>
+        <h1><a id="plural-benchmarks" href="#plural-benchmarks" class="Permalink" aria-hidden="true" tabindex="-1" title="Permalink">#</a>plural benchmarks</h1>
 <p>In this benchmark we’ll look at two metrics : Library size and speed.</p>
 <p>When doing the other benchmark in this repository I saw that what was taking most of the time wasn’t the
 parsing or rendering of messageformat but the different formatters and plurals generators.</p>
 <p>I was curious about how different they were.</p>
-<h2><a id="libraries-size" href="#libraries-size" class="Permalink" aria-hidden="true" title="Permalink">#</a>Libraries size</h2>
+<h2><a id="libraries-size" href="#libraries-size" class="Permalink" aria-hidden="true" tabindex="-1" title="Permalink">#</a>Libraries size</h2>
 <p>Sources can be found in <code>src</code>, measure taken on 19/07/2026 With latest available versions</p>
 <table>
 <thead>
@@ -150,7 +150,7 @@ parsing or rendering of messageformat but the different formatters and plurals g
 <li>July 19, 2026</li>
 </ul>
 </blockquote>
-<h2><a id="ordinal" href="#ordinal" class="Permalink" aria-hidden="true" title="Permalink">#</a>Ordinal</h2>
+<h2><a id="ordinal" href="#ordinal" class="Permalink" aria-hidden="true" tabindex="-1" title="Permalink">#</a>Ordinal</h2>
 <pre><code class="hljs javascript"><span class="hljs-keyword">const</span> input = [<span class="hljs-string">`ordinal`</span>, <span class="hljs-string">`en`</span>, <span class="hljs-number">2</span>];
 
 <span class="hljs-comment">// Renders: `two`</span>
@@ -197,7 +197,7 @@ parsing or rendering of messageformat but the different formatters and plurals g
 </tr>
 </tbody>
 </table>
-<h2><a id="choosing-a-library-for-your-use-case" href="#choosing-a-library-for-your-use-case" class="Permalink" aria-hidden="true" title="Permalink">#</a>Choosing a library for your use case</h2>
+<h2><a id="choosing-a-library-for-your-use-case" href="#choosing-a-library-for-your-use-case" class="Permalink" aria-hidden="true" tabindex="-1" title="Permalink">#</a>Choosing a library for your use case</h2>
 <ul>
 <li>If you know which languages you need in advance: <code>@phensley/plurals</code> and <code>make-plural</code> both ship a pre-compiled and pre-optimized set of rules for plurals. They’re the fastest options and will be the smallest if your build system can perform Tree Shaking.</li>
 <li>If you do not know the languages in advance.

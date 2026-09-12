@@ -99,13 +99,13 @@
                     </div>
 
     <div class="s-content">
-        <h1><a id="messageformat-parse-and-render-benchmark" href="#messageformat-parse-and-render-benchmark" class="Permalink" aria-hidden="true" title="Permalink">#</a>MessageFormat parse and render benchmark</h1>
+        <h1><a id="messageformat-parse-and-render-benchmark" href="#messageformat-parse-and-render-benchmark" class="Permalink" aria-hidden="true" tabindex="-1" title="Permalink">#</a>MessageFormat parse and render benchmark</h1>
 <p>In this benchmark we’ll look at two metrics : Library size and parsing/rendering speed.</p>
 <p>Like any synthetic benchmark these should be taken with a pinch of salt.
 I tried to compare apples with apples as much as possible, but some libraries do a bit more and some others do a bit less.</p>
 <p>Feel free to make a PR to help make these comparisons as fair as possible.</p>
 <p>As a final word, I made this comparison purely for fun and to learn a thing or two about performance optimization.</p>
-<h2><a id="libraries-size" href="#libraries-size" class="Permalink" aria-hidden="true" title="Permalink">#</a>Libraries size</h2>
+<h2><a id="libraries-size" href="#libraries-size" class="Permalink" aria-hidden="true" tabindex="-1" title="Permalink">#</a>Libraries size</h2>
 <p>Sources can be found in <code>src</code>, measure taken on 19/07/2026 with latest available versions</p>
 <table>
 <thead>
@@ -185,7 +185,7 @@ I tried to compare apples with apples as much as possible, but some libraries do
 <li><code>@ffz/icu-msgparser</code> is only a parser, I added a renderer to it but did not add any number/date formatter (hence the comparatively small size).</li>
 <li><code>@eo-locale/core</code> was excluded from this list as it crashes on our valid test strings. It would be a strong contender as it has a very small footprint (4.6KB).</li>
 </ul>
-<h2><a id="benchmark" href="#benchmark" class="Permalink" aria-hidden="true" title="Permalink">#</a>Benchmark</h2>
+<h2><a id="benchmark" href="#benchmark" class="Permalink" aria-hidden="true" tabindex="-1" title="Permalink">#</a>Benchmark</h2>
 <p>To make the benchmark compareable I tried to apply the same rules to all libraries.
 Each libraries must follow the same rules:</p>
 <ul>
@@ -205,7 +205,7 @@ Each libraries must follow the same rules:</p>
 <li>July 19, 2026</li>
 </ul>
 </blockquote>
-<h2><a id="simple-string" href="#simple-string" class="Permalink" aria-hidden="true" title="Permalink">#</a>Simple String</h2>
+<h2><a id="simple-string" href="#simple-string" class="Permalink" aria-hidden="true" tabindex="-1" title="Permalink">#</a>Simple String</h2>
 <pre><code class="hljs javascript"><span class="hljs-keyword">const</span> input = [<span class="hljs-string">`Hello, world!`</span>, {}];
 
 <span class="hljs-comment">// Renders: `Hello, world!`</span>
@@ -282,7 +282,7 @@ Each libraries must follow the same rules:</p>
 </tr>
 </tbody>
 </table>
-<h2><a id="with-one-variable" href="#with-one-variable" class="Permalink" aria-hidden="true" title="Permalink">#</a>With one variable</h2>
+<h2><a id="with-one-variable" href="#with-one-variable" class="Permalink" aria-hidden="true" tabindex="-1" title="Permalink">#</a>With one variable</h2>
 <pre><code class="hljs javascript"><span class="hljs-keyword">const</span> input = [
   <span class="hljs-string">`Hello, {name}!`</span>,
   {
@@ -364,7 +364,7 @@ Each libraries must follow the same rules:</p>
 </tr>
 </tbody>
 </table>
-<h2><a id="with-plurals" href="#with-plurals" class="Permalink" aria-hidden="true" title="Permalink">#</a>With plurals</h2>
+<h2><a id="with-plurals" href="#with-plurals" class="Permalink" aria-hidden="true" tabindex="-1" title="Permalink">#</a>With plurals</h2>
 <pre><code class="hljs javascript"><span class="hljs-keyword">const</span> input = [
   <span class="hljs-string">`Yo, {firstName} {lastName} has {numBooks} {numBooks, plural, one {book} other {books}}.`</span>,
   {
@@ -448,7 +448,7 @@ Each libraries must follow the same rules:</p>
 </tr>
 </tbody>
 </table>
-<h2><a id="with-select-and-plurals" href="#with-select-and-plurals" class="Permalink" aria-hidden="true" title="Permalink">#</a>With select and plurals</h2>
+<h2><a id="with-select-and-plurals" href="#with-select-and-plurals" class="Permalink" aria-hidden="true" tabindex="-1" title="Permalink">#</a>With select and plurals</h2>
 <pre><code class="hljs javascript"><span class="hljs-keyword">const</span> input = [<span class="hljs-string">`
   {gender_of_host, select,
 	  female {
