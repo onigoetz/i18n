@@ -340,19 +340,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/icu-messageformat-parser@npm:3.5.18":
-  version: 3.5.18
-  resolution: "@formatjs/icu-messageformat-parser@npm:3.5.18"
+"@formatjs/icu-messageformat-parser@npm:3.5.20":
+  version: 3.5.20
+  resolution: "@formatjs/icu-messageformat-parser@npm:3.5.20"
   dependencies:
-    "@formatjs/icu-skeleton-parser": "npm:2.1.11"
-  checksum: 10c0/4c4ecfb9e99e4f644c934279f91f034dc607e1935d0116e7fc7524c70f2708e9847ab2b335baeb2fbecb21da6f5cb629d2d713c56cd545f189ea0f45673028e9
+    "@formatjs/icu-skeleton-parser": "npm:2.1.12"
+  checksum: 10c0/15e2f3e5ae350ce160bbe6e799f304ad532ca7e86c9e2b73b28413181c992f5c4afca5c76939c54b5e60a42a70318165407a22a68271812df549f02487106cc2
   languageName: node
   linkType: hard
 
-"@formatjs/icu-skeleton-parser@npm:2.1.11":
-  version: 2.1.11
-  resolution: "@formatjs/icu-skeleton-parser@npm:2.1.11"
-  checksum: 10c0/9224b5cbfd64dc1e22ff48d758582e2f36cb4e2cd58f7f1fcfd251527f52ed7a1be27998c800c6dec3b718e06c73f98318a8fd8550bb0bbb467168988c630d29
+"@formatjs/icu-skeleton-parser@npm:2.1.12":
+  version: 2.1.12
+  resolution: "@formatjs/icu-skeleton-parser@npm:2.1.12"
+  checksum: 10c0/56507b7b5e3e38f964e80efbece91ce80f2d33cbeb0533a66efd9bda55b9d17e3aa2e933a8ad56d8368840c80d4777cc200e83ef6c8e2d4f2e24563ac2c404fa
   languageName: node
   linkType: hard
 
@@ -594,7 +594,7 @@ __metadata:
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
     globalize: "npm:1.7.1"
-    intl-messageformat: "npm:11.2.15"
+    intl-messageformat: "npm:12.1.2"
     make-plural: "npm:8.1.0"
     speedscope: "npm:1.25.0"
   languageName: unknown
@@ -1801,13 +1801,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"intl-messageformat@npm:11.2.15":
-  version: 11.2.15
-  resolution: "intl-messageformat@npm:11.2.15"
+"intl-messageformat@npm:12.1.2":
+  version: 12.1.2
+  resolution: "intl-messageformat@npm:12.1.2"
   dependencies:
     "@formatjs/fast-memoize": "npm:3.1.7"
-    "@formatjs/icu-messageformat-parser": "npm:3.5.18"
-  checksum: 10c0/868247481c9a1bf8ae5041f2264de79ea7bb9efc7f5fdd7419ae9aad30ebd2b18e5d6f611283c9efed2409338290f2628be12685043aaff56f136cf714ebfff0
+    "@formatjs/icu-messageformat-parser": "npm:3.5.20"
+  checksum: 10c0/390b9f7415ba0a5fe88955bbde5942924b5aea7f92bcd77ad982123e8981e738436528c5fbcf545263616bb138e7e35c5ebe20f432ca8098cfa8b804abe9eb77
   languageName: node
   linkType: hard
 
