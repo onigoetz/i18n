@@ -1,6 +1,6 @@
 {
   "name": "@onigoetz/make-plural",
-  "version": "1.0.0-rc.3",
+  "version": "1.0.0",
   "license": "MIT",
   "repository": "https://github.com/onigoetz/i18n",
   "source": "src/index.ts",
@@ -23,7 +23,7 @@
   "devDependencies": {
     "@rslib/core": "^1.0.0",
     "@vitest/coverage-v8": "5.0.1",
-    "test-cldr-data": "1.0.0-rc.3",
+    "test-cldr-data": "1.0.0",
     "typescript": "5.9.3",
     "vite": "^8.0.0",
     "vitest": "5.0.1",
