@@ -537,7 +537,7 @@ __metadata:
     "@biomejs/biome": "npm:2.5.14"
     benchmark: "npm:2.1.4"
     publint: "npm:^0.3.21"
-    systeminformation: "npm:5.33.11"
+    systeminformation: "npm:5.33.13"
   languageName: unknown
   linkType: soft
 
@@ -592,7 +592,7 @@ __metadata:
     "@onigoetz/messageformat": "npm:1.0.0"
     "@phensley/messageformat": "npm:1.16.0"
     "@phensley/plurals": "npm:1.16.0"
-    "@rslib/core": "npm:1.0.1"
+    "@rslib/core": "npm:1.0.2"
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
     globalize: "npm:1.7.1"
@@ -785,11 +785,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rsbuild/core@npm:~2.2.6":
-  version: 2.2.8
-  resolution: "@rsbuild/core@npm:2.2.8"
+"@rsbuild/core@npm:~2.2.9":
+  version: 2.2.9
+  resolution: "@rsbuild/core@npm:2.2.9"
   dependencies:
-    "@rspack/core": "npm:~2.2.6"
+    "@rspack/core": "npm:~2.2.7"
     "@swc/helpers": "npm:^0.5.23"
   peerDependencies:
     core-js: ">= 3.0.0"
@@ -798,16 +798,16 @@ __metadata:
       optional: true
   bin:
     rsbuild: ./bin/rsbuild.js
-  checksum: 10c0/49ae761e2beb74c9e285f5d76e3a69fcad56db551ef4f4e651c049813a07ed6f4f6f0aff05dbe98a92e8f17f33a004cf60f2e9f372b035831ef4d5d79624fb3d
+  checksum: 10c0/6217af49cfbe80ea9db5e3ad87ec56e3e64e7f68f979793cd1af87cb0fb77879952966629f15e8317d827b5f6b59eecb4f522405a8b018526096b3eaf617f884
   languageName: node
   linkType: hard
 
-"@rslib/core@npm:1.0.1, @rslib/core@npm:^1.0.0":
-  version: 1.0.1
-  resolution: "@rslib/core@npm:1.0.1"
+"@rslib/core@npm:1.0.2, @rslib/core@npm:^1.0.0":
+  version: 1.0.2
+  resolution: "@rslib/core@npm:1.0.2"
   dependencies:
-    "@rsbuild/core": "npm:~2.2.6"
-    rsbuild-plugin-dts: "npm:1.0.1"
+    "@rsbuild/core": "npm:~2.2.9"
+    rsbuild-plugin-dts: "npm:1.0.2"
   peerDependencies:
     "@microsoft/api-extractor": ^7
     typescript: ^5 || ^6 || ^7
@@ -818,83 +818,83 @@ __metadata:
       optional: true
   bin:
     rslib: ./bin/rslib.js
-  checksum: 10c0/b896e210f518c6db6167489ce2c420c6285ce39642941a2652d1dc04f7383c616069fb4e06ff4f261a35a89eed0a11e071a1d7fb6292a89675c1cd1a06e1e653
+  checksum: 10c0/dffd0827fa2f620fd493199c5183e1cfc381b7e320b2308242d3677163dcbe9e11377552cee3b639dfee972c96b71d1645f81321692b7d4a916e79a17bf0ae4c
   languageName: node
   linkType: hard
 
-"@rspack/binding-darwin-arm64@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@rspack/binding-darwin-arm64@npm:2.2.6"
+"@rspack/binding-darwin-arm64@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@rspack/binding-darwin-arm64@npm:2.2.7"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@rspack/binding-darwin-x64@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@rspack/binding-darwin-x64@npm:2.2.6"
+"@rspack/binding-darwin-x64@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@rspack/binding-darwin-x64@npm:2.2.7"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@rspack/binding-linux-arm64-gnu@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@rspack/binding-linux-arm64-gnu@npm:2.2.6"
+"@rspack/binding-linux-arm64-gnu@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@rspack/binding-linux-arm64-gnu@npm:2.2.7"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@rspack/binding-linux-arm64-musl@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@rspack/binding-linux-arm64-musl@npm:2.2.6"
+"@rspack/binding-linux-arm64-musl@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@rspack/binding-linux-arm64-musl@npm:2.2.7"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@rspack/binding-linux-ppc64-gnu@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@rspack/binding-linux-ppc64-gnu@npm:2.2.6"
+"@rspack/binding-linux-ppc64-gnu@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@rspack/binding-linux-ppc64-gnu@npm:2.2.7"
   conditions: os=linux & cpu=ppc64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@rspack/binding-linux-riscv64-gnu@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@rspack/binding-linux-riscv64-gnu@npm:2.2.6"
+"@rspack/binding-linux-riscv64-gnu@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@rspack/binding-linux-riscv64-gnu@npm:2.2.7"
   conditions: os=linux & cpu=riscv64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@rspack/binding-linux-riscv64-musl@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@rspack/binding-linux-riscv64-musl@npm:2.2.6"
+"@rspack/binding-linux-riscv64-musl@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@rspack/binding-linux-riscv64-musl@npm:2.2.7"
   conditions: os=linux & cpu=riscv64 & libc=musl
   languageName: node
   linkType: hard
 
-"@rspack/binding-linux-s390x-gnu@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@rspack/binding-linux-s390x-gnu@npm:2.2.6"
+"@rspack/binding-linux-s390x-gnu@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@rspack/binding-linux-s390x-gnu@npm:2.2.7"
   conditions: os=linux & cpu=s390x & libc=glibc
   languageName: node
   linkType: hard
 
-"@rspack/binding-linux-x64-gnu@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@rspack/binding-linux-x64-gnu@npm:2.2.6"
+"@rspack/binding-linux-x64-gnu@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@rspack/binding-linux-x64-gnu@npm:2.2.7"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@rspack/binding-linux-x64-musl@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@rspack/binding-linux-x64-musl@npm:2.2.6"
+"@rspack/binding-linux-x64-musl@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@rspack/binding-linux-x64-musl@npm:2.2.7"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@rspack/binding-wasm32-wasi@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@rspack/binding-wasm32-wasi@npm:2.2.6"
+"@rspack/binding-wasm32-wasi@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@rspack/binding-wasm32-wasi@npm:2.2.7"
   dependencies:
     "@emnapi/core": "npm:1.11.3"
     "@emnapi/runtime": "npm:1.11.3"
@@ -903,45 +903,45 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rspack/binding-win32-arm64-msvc@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@rspack/binding-win32-arm64-msvc@npm:2.2.6"
+"@rspack/binding-win32-arm64-msvc@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@rspack/binding-win32-arm64-msvc@npm:2.2.7"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@rspack/binding-win32-ia32-msvc@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@rspack/binding-win32-ia32-msvc@npm:2.2.6"
+"@rspack/binding-win32-ia32-msvc@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@rspack/binding-win32-ia32-msvc@npm:2.2.7"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@rspack/binding-win32-x64-msvc@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@rspack/binding-win32-x64-msvc@npm:2.2.6"
+"@rspack/binding-win32-x64-msvc@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@rspack/binding-win32-x64-msvc@npm:2.2.7"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@rspack/binding@npm:2.2.6":
-  version: 2.2.6
-  resolution: "@rspack/binding@npm:2.2.6"
+"@rspack/binding@npm:2.2.7":
+  version: 2.2.7
+  resolution: "@rspack/binding@npm:2.2.7"
   dependencies:
-    "@rspack/binding-darwin-arm64": "npm:2.2.6"
-    "@rspack/binding-darwin-x64": "npm:2.2.6"
-    "@rspack/binding-linux-arm64-gnu": "npm:2.2.6"
-    "@rspack/binding-linux-arm64-musl": "npm:2.2.6"
-    "@rspack/binding-linux-ppc64-gnu": "npm:2.2.6"
-    "@rspack/binding-linux-riscv64-gnu": "npm:2.2.6"
-    "@rspack/binding-linux-riscv64-musl": "npm:2.2.6"
-    "@rspack/binding-linux-s390x-gnu": "npm:2.2.6"
-    "@rspack/binding-linux-x64-gnu": "npm:2.2.6"
-    "@rspack/binding-linux-x64-musl": "npm:2.2.6"
-    "@rspack/binding-wasm32-wasi": "npm:2.2.6"
-    "@rspack/binding-win32-arm64-msvc": "npm:2.2.6"
-    "@rspack/binding-win32-ia32-msvc": "npm:2.2.6"
-    "@rspack/binding-win32-x64-msvc": "npm:2.2.6"
+    "@rspack/binding-darwin-arm64": "npm:2.2.7"
+    "@rspack/binding-darwin-x64": "npm:2.2.7"
+    "@rspack/binding-linux-arm64-gnu": "npm:2.2.7"
+    "@rspack/binding-linux-arm64-musl": "npm:2.2.7"
+    "@rspack/binding-linux-ppc64-gnu": "npm:2.2.7"
+    "@rspack/binding-linux-riscv64-gnu": "npm:2.2.7"
+    "@rspack/binding-linux-riscv64-musl": "npm:2.2.7"
+    "@rspack/binding-linux-s390x-gnu": "npm:2.2.7"
+    "@rspack/binding-linux-x64-gnu": "npm:2.2.7"
+    "@rspack/binding-linux-x64-musl": "npm:2.2.7"
+    "@rspack/binding-wasm32-wasi": "npm:2.2.7"
+    "@rspack/binding-win32-arm64-msvc": "npm:2.2.7"
+    "@rspack/binding-win32-ia32-msvc": "npm:2.2.7"
+    "@rspack/binding-win32-x64-msvc": "npm:2.2.7"
   dependenciesMeta:
     "@rspack/binding-darwin-arm64":
       optional: true
@@ -971,15 +971,15 @@ __metadata:
       optional: true
     "@rspack/binding-win32-x64-msvc":
       optional: true
-  checksum: 10c0/acc53e04f22362585c6a0d2696ba173207f626aed025e0d8f2cebb866010b80ef7dcaaa2c02aa0c12d1be36f4e0417e3ab26a497cefad7ede289ff8bd2ac34ca
+  checksum: 10c0/4b524c593a09135b987474a42e391d1d3b6aaf69e1a44dc5bf6c75cf724935186b524eab9a26d0098005a596c869267ebab663f0185bdc0e7f5fdcee9f7e2064
   languageName: node
   linkType: hard
 
-"@rspack/core@npm:~2.2.6":
-  version: 2.2.6
-  resolution: "@rspack/core@npm:2.2.6"
+"@rspack/core@npm:~2.2.7":
+  version: 2.2.7
+  resolution: "@rspack/core@npm:2.2.7"
   dependencies:
-    "@rspack/binding": "npm:2.2.6"
+    "@rspack/binding": "npm:2.2.7"
   peerDependencies:
     "@module-federation/runtime-tools": ^0.24.1 || ^2.0.0
     "@swc/helpers": ^0.5.23
@@ -988,7 +988,7 @@ __metadata:
       optional: true
     "@swc/helpers":
       optional: true
-  checksum: 10c0/c67fbb210afe78a8ed0a0abf67888ae33544eab6c3161e687bdc187f8ef47b04e902c0e005a1423b8c2e0f458ca88daa01b75da351553c93e4d0260e249697bd
+  checksum: 10c0/bb0db3becf848f084882563c49cebad70e2926c7aed9b8212f2939cc0a583777abaa2b3a1747fc30895df246974c70b0560ba63f3db708b72afd00c11e90beae
   languageName: node
   linkType: hard
 
@@ -2364,9 +2364,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rsbuild-plugin-dts@npm:1.0.1":
-  version: 1.0.1
-  resolution: "rsbuild-plugin-dts@npm:1.0.1"
+"rsbuild-plugin-dts@npm:1.0.2":
+  version: 1.0.2
+  resolution: "rsbuild-plugin-dts@npm:1.0.2"
   dependencies:
     "@ast-grep/napi": "npm:0.45.3"
   peerDependencies:
@@ -2378,7 +2378,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/9be7ffcd8efeb07566bb32f402c8c404d054a814a80db97e8699469662947f952407b049164ce0ddf2eca0d58fbc4f1e8ef462a0227f95cbb15cde705f563b24
+  checksum: 10c0/f85289bcf337ed7ad6af1961224f1da81250d6d4886b5832216cd6c41fc4be78bed9888f3f0790935e4d3af79b9d7b470b3789a7e11373dc1f7b7e01ca25e0d6
   languageName: node
   linkType: hard
 
@@ -2547,12 +2547,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"systeminformation@npm:5.33.11":
-  version: 5.33.11
-  resolution: "systeminformation@npm:5.33.11"
+"systeminformation@npm:5.33.13":
+  version: 5.33.13
+  resolution: "systeminformation@npm:5.33.13"
   bin:
     systeminformation: lib/cli.js
-  checksum: 10c0/99ddb4c80227d2c79e47950f2178fd91eb8186208839883ab0dab4afd536569ddb349d95bccec57f315c6e516297025ff0a97f230a41d08982920fbac0c734d4
+  checksum: 10c0/477d501a058182116cb488f9d869532be0176763e5430d9495d5a72b045e377a2c33ab827d599caa928fc7aed5543ca5541dd8e46fcd061896694d9f1e5f1840
   conditions: (os=darwin | os=linux | os=win32 | os=freebsd | os=openbsd | os=netbsd | os=sunos | os=android)
   languageName: node
   linkType: hard
