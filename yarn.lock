@@ -186,20 +186,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@biomejs/biome@npm:2.6.8":
-  version: 2.6.8
-  resolution: "@biomejs/biome@npm:2.6.8"
+"@biomejs/biome@npm:2.6.9":
+  version: 2.6.9
+  resolution: "@biomejs/biome@npm:2.6.9"
   dependencies:
-    "@biomejs/cli-android-arm64": "npm:2.6.8"
-    "@biomejs/cli-android-x64": "npm:2.6.8"
-    "@biomejs/cli-darwin-arm64": "npm:2.6.8"
-    "@biomejs/cli-darwin-x64": "npm:2.6.8"
-    "@biomejs/cli-linux-arm64": "npm:2.6.8"
-    "@biomejs/cli-linux-arm64-musl": "npm:2.6.8"
-    "@biomejs/cli-linux-x64": "npm:2.6.8"
-    "@biomejs/cli-linux-x64-musl": "npm:2.6.8"
-    "@biomejs/cli-win32-arm64": "npm:2.6.8"
-    "@biomejs/cli-win32-x64": "npm:2.6.8"
+    "@biomejs/cli-android-arm64": "npm:2.6.9"
+    "@biomejs/cli-android-x64": "npm:2.6.9"
+    "@biomejs/cli-darwin-arm64": "npm:2.6.9"
+    "@biomejs/cli-darwin-x64": "npm:2.6.9"
+    "@biomejs/cli-linux-arm64": "npm:2.6.9"
+    "@biomejs/cli-linux-arm64-musl": "npm:2.6.9"
+    "@biomejs/cli-linux-x64": "npm:2.6.9"
+    "@biomejs/cli-linux-x64-musl": "npm:2.6.9"
+    "@biomejs/cli-win32-arm64": "npm:2.6.9"
+    "@biomejs/cli-win32-x64": "npm:2.6.9"
   dependenciesMeta:
     "@biomejs/cli-android-arm64":
       optional: true
@@ -223,76 +223,76 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: 10c0/0a8e2a3ec88ca75221aaeef2bd0bd9ab5e50b405e1365c41078e52af6f97f17f57934998c3cc87d3212726155c3766b10eb65c992c539a465fce6efda2fc06d0
+  checksum: 10c0/99e748a06a55f574ab321c0e693bd89b72452b9b5762fbb600fc7a1e4fd1286da5667399f0fb09da81e5fc338e3b50a7b831579376e9980ba8bbac1a0985c4b4
   languageName: node
   linkType: hard
 
-"@biomejs/cli-android-arm64@npm:2.6.8":
-  version: 2.6.8
-  resolution: "@biomejs/cli-android-arm64@npm:2.6.8"
+"@biomejs/cli-android-arm64@npm:2.6.9":
+  version: 2.6.9
+  resolution: "@biomejs/cli-android-arm64@npm:2.6.9"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-android-x64@npm:2.6.8":
-  version: 2.6.8
-  resolution: "@biomejs/cli-android-x64@npm:2.6.8"
+"@biomejs/cli-android-x64@npm:2.6.9":
+  version: 2.6.9
+  resolution: "@biomejs/cli-android-x64@npm:2.6.9"
   conditions: os=android & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:2.6.8":
-  version: 2.6.8
-  resolution: "@biomejs/cli-darwin-arm64@npm:2.6.8"
+"@biomejs/cli-darwin-arm64@npm:2.6.9":
+  version: 2.6.9
+  resolution: "@biomejs/cli-darwin-arm64@npm:2.6.9"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:2.6.8":
-  version: 2.6.8
-  resolution: "@biomejs/cli-darwin-x64@npm:2.6.8"
+"@biomejs/cli-darwin-x64@npm:2.6.9":
+  version: 2.6.9
+  resolution: "@biomejs/cli-darwin-x64@npm:2.6.9"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64-musl@npm:2.6.8":
-  version: 2.6.8
-  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.6.8"
+"@biomejs/cli-linux-arm64-musl@npm:2.6.9":
+  version: 2.6.9
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.6.9"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:2.6.8":
-  version: 2.6.8
-  resolution: "@biomejs/cli-linux-arm64@npm:2.6.8"
+"@biomejs/cli-linux-arm64@npm:2.6.9":
+  version: 2.6.9
+  resolution: "@biomejs/cli-linux-arm64@npm:2.6.9"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64-musl@npm:2.6.8":
-  version: 2.6.8
-  resolution: "@biomejs/cli-linux-x64-musl@npm:2.6.8"
+"@biomejs/cli-linux-x64-musl@npm:2.6.9":
+  version: 2.6.9
+  resolution: "@biomejs/cli-linux-x64-musl@npm:2.6.9"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:2.6.8":
-  version: 2.6.8
-  resolution: "@biomejs/cli-linux-x64@npm:2.6.8"
+"@biomejs/cli-linux-x64@npm:2.6.9":
+  version: 2.6.9
+  resolution: "@biomejs/cli-linux-x64@npm:2.6.9"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:2.6.8":
-  version: 2.6.8
-  resolution: "@biomejs/cli-win32-arm64@npm:2.6.8"
+"@biomejs/cli-win32-arm64@npm:2.6.9":
+  version: 2.6.9
+  resolution: "@biomejs/cli-win32-arm64@npm:2.6.9"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:2.6.8":
-  version: 2.6.8
-  resolution: "@biomejs/cli-win32-x64@npm:2.6.8"
+"@biomejs/cli-win32-x64@npm:2.6.9":
+  version: 2.6.9
+  resolution: "@biomejs/cli-win32-x64@npm:2.6.9"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -372,10 +372,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/fast-memoize@npm:3.1.7":
-  version: 3.1.7
-  resolution: "@formatjs/fast-memoize@npm:3.1.7"
-  checksum: 10c0/dee801f82eda1f6fdc166b0c907e8750c15e409e20b2006c215d9247fe0db720d84d53fcb2fb7559cec21a24932b69dda326c81ee2885aad2cde31bc25449fd0
+"@formatjs/fast-memoize@npm:3.1.8":
+  version: 3.1.8
+  resolution: "@formatjs/fast-memoize@npm:3.1.8"
+  checksum: 10c0/817b0b6541401bffb5d42da4bffbacd465083711aab294eee0af8da9aa8aff7ce3938e39a8267f73afb72c08c0eee8eceb74e0d35df9065edc8ec7fb3f8bbc08
   languageName: node
   linkType: hard
 
@@ -578,10 +578,10 @@ __metadata:
   resolution: "@onigoetz/i18n-parent@workspace:."
   dependencies:
     "@arethetypeswrong/cli": "npm:^0.18.5"
-    "@biomejs/biome": "npm:2.6.8"
+    "@biomejs/biome": "npm:2.6.9"
     benchmark: "npm:2.1.4"
     publint: "npm:^0.3.21"
-    systeminformation: "npm:5.33.23"
+    systeminformation: "npm:5.33.26"
   languageName: unknown
   linkType: soft
 
@@ -640,7 +640,7 @@ __metadata:
     format-message-interpret: "npm:6.2.4"
     format-message-parse: "npm:6.2.4"
     globalize: "npm:1.7.1"
-    intl-messageformat: "npm:12.2.0"
+    intl-messageformat: "npm:12.2.1"
     make-plural: "npm:8.2.0"
     speedscope: "npm:1.25.0"
   languageName: unknown
@@ -1795,13 +1795,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"intl-messageformat@npm:12.2.0":
-  version: 12.2.0
-  resolution: "intl-messageformat@npm:12.2.0"
+"intl-messageformat@npm:12.2.1":
+  version: 12.2.1
+  resolution: "intl-messageformat@npm:12.2.1"
   dependencies:
-    "@formatjs/fast-memoize": "npm:3.1.7"
+    "@formatjs/fast-memoize": "npm:3.1.8"
     "@formatjs/icu-messageformat-parser": "npm:3.5.23"
-  checksum: 10c0/ef7fd5e281e79f019a54592a5b15bd1cae2d8614af2744aa3f787cf727432018ef038fae13beedfe66be7e073a93a03ac2f1dbe5c0e2cd1c5536ceba5d0e02b8
+  checksum: 10c0/c326552ddcf219d6a0da763bfc049dcb1c64d40532dc9f6bbaf331c5ec011cf18f04c6e6210cf6cdfb7d9afa8fe5fa90b42321e61b3465c5ed54112ffbdfcb6c
   languageName: node
   linkType: hard
 
@@ -2589,12 +2589,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"systeminformation@npm:5.33.23":
-  version: 5.33.23
-  resolution: "systeminformation@npm:5.33.23"
+"systeminformation@npm:5.33.26":
+  version: 5.33.26
+  resolution: "systeminformation@npm:5.33.26"
   bin:
     systeminformation: lib/cli.js
-  checksum: 10c0/bb40b125c3d427b7c4bd09b8aa82d0022bbb6a288b4954afafe8d0653125631596da5258b104fca22c188180c1be4e08d666f7ba1109eeb0196539740e3bcefc
+  checksum: 10c0/3ec58dadc14e1e6ca8d35beaff408d722770d4f155ad7a1367689793b3591dde8dd1c7f03531086e5975053de1a5afc31473f49260f65a8b46d6b695400f5686
   conditions: (os=darwin | os=linux | os=win32 | os=freebsd | os=openbsd | os=netbsd | os=sunos | os=android)
   languageName: node
   linkType: hard
